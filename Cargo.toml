@@ -1,0 +1,15 @@
+[workspace]
+members = ["pac"]
+
+[package]
+name = "esp32-p4-example"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+pac = { path = "pac" }
+critical-section = "1.2.0"
+esp-riscv-rt = "0.14.0"
+panic-halt = "1.0.0"
+riscv = "0.16.0"
+vcell = "0.1.3"

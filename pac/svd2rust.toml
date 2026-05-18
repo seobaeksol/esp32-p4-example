@@ -1,0 +1,4 @@
+target = "riscv"
+edition = "2024"
+
+[riscv]
