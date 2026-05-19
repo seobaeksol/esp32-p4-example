@@ -1,0 +1,161 @@
+#[doc = "Register `INT_ENA` reader"]
+pub type R = crate::R<IntEnaSpec>;
+#[doc = "Register `INT_ENA` writer"]
+pub type W = crate::W<IntEnaSpec>;
+#[doc = "Field `IN_DONE` reader - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
+pub type InDoneR = crate::BitReader;
+#[doc = "Field `IN_DONE` writer - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
+pub type InDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `IN_SUC_EOF` reader - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
+pub type InSucEofR = crate::BitReader;
+#[doc = "Field `IN_SUC_EOF` writer - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
+pub type InSucEofW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `IN_ERR_EOF` reader - The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt."]
+pub type InErrEofR = crate::BitReader;
+#[doc = "Field `IN_ERR_EOF` writer - The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt."]
+pub type InErrEofW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `IN_DSCR_ERR` reader - The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt."]
+pub type InDscrErrR = crate::BitReader;
+#[doc = "Field `IN_DSCR_ERR` writer - The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt."]
+pub type InDscrErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INFIFO_OVF_L1` reader - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
+pub type InfifoOvfL1R = crate::BitReader;
+#[doc = "Field `INFIFO_OVF_L1` writer - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
+pub type InfifoOvfL1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INFIFO_UDF_L1` reader - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
+pub type InfifoUdfL1R = crate::BitReader;
+#[doc = "Field `INFIFO_UDF_L1` writer - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
+pub type InfifoUdfL1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INFIFO_OVF_L2` reader - The interrupt enable bit for the INFIFO_OVF_L2_CH_INT interrupt."]
+pub type InfifoOvfL2R = crate::BitReader;
+#[doc = "Field `INFIFO_OVF_L2` writer - The interrupt enable bit for the INFIFO_OVF_L2_CH_INT interrupt."]
+pub type InfifoOvfL2W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INFIFO_UDF_L2` reader - The interrupt enable bit for the INFIFO_UDF_L2_CH_INT interrupt."]
+pub type InfifoUdfL2R = crate::BitReader;
+#[doc = "Field `INFIFO_UDF_L2` writer - The interrupt enable bit for the INFIFO_UDF_L2_CH_INT interrupt."]
+pub type InfifoUdfL2W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `IN_DSCR_EMPTY` reader - The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
+pub type InDscrEmptyR = crate::BitReader;
+#[doc = "Field `IN_DSCR_EMPTY` writer - The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
+pub type InDscrEmptyW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `IN_DSCR_TASK_OVF` reader - The interrupt enable bit for the IN_DSCR_TASK_OVF_CH_INT interrupt."]
+pub type InDscrTaskOvfR = crate::BitReader;
+#[doc = "Field `IN_DSCR_TASK_OVF` writer - The interrupt enable bit for the IN_DSCR_TASK_OVF_CH_INT interrupt."]
+pub type InDscrTaskOvfW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_done(&self) -> InDoneR {
+        InDoneR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_suc_eof(&self) -> InSucEofR {
+        InSucEofR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_err_eof(&self) -> InErrEofR {
+        InErrEofR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_dscr_err(&self) -> InDscrErrR {
+        InDscrErrR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_ovf_l1(&self) -> InfifoOvfL1R {
+        InfifoOvfL1R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_udf_l1(&self) -> InfifoUdfL1R {
+        InfifoUdfL1R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The interrupt enable bit for the INFIFO_OVF_L2_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_ovf_l2(&self) -> InfifoOvfL2R {
+        InfifoOvfL2R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - The interrupt enable bit for the INFIFO_UDF_L2_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_udf_l2(&self) -> InfifoUdfL2R {
+        InfifoUdfL2R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_dscr_empty(&self) -> InDscrEmptyR {
+        InDscrEmptyR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The interrupt enable bit for the IN_DSCR_TASK_OVF_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_dscr_task_ovf(&self) -> InDscrTaskOvfR {
+        InDscrTaskOvfR::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_done(&mut self) -> InDoneW<'_, IntEnaSpec> {
+        InDoneW::new(self, 0)
+    }
+    #[doc = "Bit 1 - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_suc_eof(&mut self) -> InSucEofW<'_, IntEnaSpec> {
+        InSucEofW::new(self, 1)
+    }
+    #[doc = "Bit 2 - The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_err_eof(&mut self) -> InErrEofW<'_, IntEnaSpec> {
+        InErrEofW::new(self, 2)
+    }
+    #[doc = "Bit 3 - The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_dscr_err(&mut self) -> InDscrErrW<'_, IntEnaSpec> {
+        InDscrErrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_ovf_l1(&mut self) -> InfifoOvfL1W<'_, IntEnaSpec> {
+        InfifoOvfL1W::new(self, 4)
+    }
+    #[doc = "Bit 5 - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_udf_l1(&mut self) -> InfifoUdfL1W<'_, IntEnaSpec> {
+        InfifoUdfL1W::new(self, 5)
+    }
+    #[doc = "Bit 6 - The interrupt enable bit for the INFIFO_OVF_L2_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_ovf_l2(&mut self) -> InfifoOvfL2W<'_, IntEnaSpec> {
+        InfifoOvfL2W::new(self, 6)
+    }
+    #[doc = "Bit 7 - The interrupt enable bit for the INFIFO_UDF_L2_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn infifo_udf_l2(&mut self) -> InfifoUdfL2W<'_, IntEnaSpec> {
+        InfifoUdfL2W::new(self, 7)
+    }
+    #[doc = "Bit 8 - The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_dscr_empty(&mut self) -> InDscrEmptyW<'_, IntEnaSpec> {
+        InDscrEmptyW::new(self, 8)
+    }
+    #[doc = "Bit 9 - The interrupt enable bit for the IN_DSCR_TASK_OVF_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn in_dscr_task_ovf(&mut self) -> InDscrTaskOvfW<'_, IntEnaSpec> {
+        InDscrTaskOvfW::new(self, 9)
+    }
+}
+#[doc = "RX CHx interrupt ena register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntEnaSpec;
+impl crate::RegisterSpec for IntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for IntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+impl crate::Writable for IntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_ENA to value 0"]
+impl crate::Resettable for IntEnaSpec {}

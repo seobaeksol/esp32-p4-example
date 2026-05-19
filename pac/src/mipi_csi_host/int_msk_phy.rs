@@ -1,0 +1,77 @@
+#[doc = "Register `INT_MSK_PHY` reader"]
+pub type R = crate::R<IntMskPhySpec>;
+#[doc = "Register `INT_MSK_PHY` writer"]
+pub type W = crate::W<IntMskPhySpec>;
+#[doc = "Field `MASK_PHY_ERRSOTHS_0` reader - NA"]
+pub type MaskPhyErrsoths0R = crate::BitReader;
+#[doc = "Field `MASK_PHY_ERRSOTHS_0` writer - NA"]
+pub type MaskPhyErrsoths0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MASK_PHY_ERRSOTHS_1` reader - NA"]
+pub type MaskPhyErrsoths1R = crate::BitReader;
+#[doc = "Field `MASK_PHY_ERRSOTHS_1` writer - NA"]
+pub type MaskPhyErrsoths1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MASK_PHY_ERRESC_0` reader - NA"]
+pub type MaskPhyErresc0R = crate::BitReader;
+#[doc = "Field `MASK_PHY_ERRESC_0` writer - NA"]
+pub type MaskPhyErresc0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MASK_PHY_ERRESC_1` reader - NA"]
+pub type MaskPhyErresc1R = crate::BitReader;
+#[doc = "Field `MASK_PHY_ERRESC_1` writer - NA"]
+pub type MaskPhyErresc1W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_errsoths_0(&self) -> MaskPhyErrsoths0R {
+        MaskPhyErrsoths0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_errsoths_1(&self) -> MaskPhyErrsoths1R {
+        MaskPhyErrsoths1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_erresc_0(&self) -> MaskPhyErresc0R {
+        MaskPhyErresc0R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_erresc_1(&self) -> MaskPhyErresc1R {
+        MaskPhyErresc1R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_errsoths_0(&mut self) -> MaskPhyErrsoths0W<'_, IntMskPhySpec> {
+        MaskPhyErrsoths0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_errsoths_1(&mut self) -> MaskPhyErrsoths1W<'_, IntMskPhySpec> {
+        MaskPhyErrsoths1W::new(self, 1)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_erresc_0(&mut self) -> MaskPhyErresc0W<'_, IntMskPhySpec> {
+        MaskPhyErresc0W::new(self, 16)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn mask_phy_erresc_1(&mut self) -> MaskPhyErresc1W<'_, IntMskPhySpec> {
+        MaskPhyErresc1W::new(self, 17)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`int_msk_phy::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_msk_phy::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntMskPhySpec;
+impl crate::RegisterSpec for IntMskPhySpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_msk_phy::R`](R) reader structure"]
+impl crate::Readable for IntMskPhySpec {}
+#[doc = "`write(|w| ..)` method takes [`int_msk_phy::W`](W) writer structure"]
+impl crate::Writable for IntMskPhySpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_MSK_PHY to value 0"]
+impl crate::Resettable for IntMskPhySpec {}

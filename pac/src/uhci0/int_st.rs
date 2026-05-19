@@ -1,0 +1,76 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `RX_START` reader - Indicates the interrupt status of UHCI_RX_START_INT."]
+pub type RxStartR = crate::BitReader;
+#[doc = "Field `TX_START` reader - Indicates the interrupt status of UHCI_TX_START_INT."]
+pub type TxStartR = crate::BitReader;
+#[doc = "Field `RX_HUNG` reader - Indicates the interrupt status of UHCI_RX_HUNG_INT."]
+pub type RxHungR = crate::BitReader;
+#[doc = "Field `TX_HUNG` reader - Indicates the interrupt status of UHCI_TX_HUNG_INT."]
+pub type TxHungR = crate::BitReader;
+#[doc = "Field `SEND_S_REG_Q` reader - Indicates the interrupt status of UHCI_SEND_S_REG_Q_INT."]
+pub type SendSRegQR = crate::BitReader;
+#[doc = "Field `SEND_A_REG_Q` reader - Indicates the interrupt status of UHCI_SEND_A_REG_Q_INT."]
+pub type SendARegQR = crate::BitReader;
+#[doc = "Field `OUTLINK_EOF_ERR` reader - Indicates the interrupt status of UHCI_OUT_EOF_INT."]
+pub type OutlinkEofErrR = crate::BitReader;
+#[doc = "Field `APP_CTRL0` reader - Indicates the interrupt status of UHCI_APP_CTRL0_INT."]
+pub type AppCtrl0R = crate::BitReader;
+#[doc = "Field `APP_CTRL1` reader - Indicates the interrupt status of UHCI_APP_CTRL1_INT."]
+pub type AppCtrl1R = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - Indicates the interrupt status of UHCI_RX_START_INT."]
+    #[inline(always)]
+    pub fn rx_start(&self) -> RxStartR {
+        RxStartR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Indicates the interrupt status of UHCI_TX_START_INT."]
+    #[inline(always)]
+    pub fn tx_start(&self) -> TxStartR {
+        TxStartR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Indicates the interrupt status of UHCI_RX_HUNG_INT."]
+    #[inline(always)]
+    pub fn rx_hung(&self) -> RxHungR {
+        RxHungR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Indicates the interrupt status of UHCI_TX_HUNG_INT."]
+    #[inline(always)]
+    pub fn tx_hung(&self) -> TxHungR {
+        TxHungR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Indicates the interrupt status of UHCI_SEND_S_REG_Q_INT."]
+    #[inline(always)]
+    pub fn send_s_reg_q(&self) -> SendSRegQR {
+        SendSRegQR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Indicates the interrupt status of UHCI_SEND_A_REG_Q_INT."]
+    #[inline(always)]
+    pub fn send_a_reg_q(&self) -> SendARegQR {
+        SendARegQR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Indicates the interrupt status of UHCI_OUT_EOF_INT."]
+    #[inline(always)]
+    pub fn outlink_eof_err(&self) -> OutlinkEofErrR {
+        OutlinkEofErrR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Indicates the interrupt status of UHCI_APP_CTRL0_INT."]
+    #[inline(always)]
+    pub fn app_ctrl0(&self) -> AppCtrl0R {
+        AppCtrl0R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Indicates the interrupt status of UHCI_APP_CTRL1_INT."]
+    #[inline(always)]
+    pub fn app_ctrl1(&self) -> AppCtrl1R {
+        AppCtrl1R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[doc = "UHCI Interrupt Status Register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

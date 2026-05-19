@@ -1,0 +1,27 @@
+#[doc = "Register `INFIFO_STATUS1_CH0` reader"]
+pub type R = crate::R<InfifoStatus1Ch0Spec>;
+#[doc = "Field `L1INFIFO_CNT_CH0` reader - The register stores the byte number of the data in L1 Rx FIFO for Rx channel 0."]
+pub type L1infifoCntCh0R = crate::FieldReader;
+#[doc = "Field `L2INFIFO_CNT_CH0` reader - The register stores the byte number of the data in L2 Rx FIFO for Rx channel 0."]
+pub type L2infifoCntCh0R = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:5 - The register stores the byte number of the data in L1 Rx FIFO for Rx channel 0."]
+    #[inline(always)]
+    pub fn l1infifo_cnt_ch0(&self) -> L1infifoCntCh0R {
+        L1infifoCntCh0R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bits 6:9 - The register stores the byte number of the data in L2 Rx FIFO for Rx channel 0."]
+    #[inline(always)]
+    pub fn l2infifo_cnt_ch0(&self) -> L2infifoCntCh0R {
+        L2infifoCntCh0R::new(((self.bits >> 6) & 0x0f) as u8)
+    }
+}
+#[doc = "Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status1_ch0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InfifoStatus1Ch0Spec;
+impl crate::RegisterSpec for InfifoStatus1Ch0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`infifo_status1_ch0::R`](R) reader structure"]
+impl crate::Readable for InfifoStatus1Ch0Spec {}
+#[doc = "`reset()` method sets INFIFO_STATUS1_CH0 to value 0"]
+impl crate::Resettable for InfifoStatus1Ch0Spec {}

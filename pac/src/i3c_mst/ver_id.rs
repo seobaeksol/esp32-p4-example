@@ -1,0 +1,37 @@
+#[doc = "Register `VER_ID` reader"]
+pub type R = crate::R<VerIdSpec>;
+#[doc = "Register `VER_ID` writer"]
+pub type W = crate::W<VerIdSpec>;
+#[doc = "Field `REG_I3C_MST_VER_ID` reader - This field indicates the controller current release number that is read by an application."]
+pub type RegI3cMstVerIdR = crate::FieldReader<u32>;
+#[doc = "Field `REG_I3C_MST_VER_ID` writer - This field indicates the controller current release number that is read by an application."]
+pub type RegI3cMstVerIdW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - This field indicates the controller current release number that is read by an application."]
+    #[inline(always)]
+    pub fn reg_i3c_mst_ver_id(&self) -> RegI3cMstVerIdR {
+        RegI3cMstVerIdR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - This field indicates the controller current release number that is read by an application."]
+    #[inline(always)]
+    pub fn reg_i3c_mst_ver_id(&mut self) -> RegI3cMstVerIdW<'_, VerIdSpec> {
+        RegI3cMstVerIdW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ver_id::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ver_id::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VerIdSpec;
+impl crate::RegisterSpec for VerIdSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ver_id::R`](R) reader structure"]
+impl crate::Readable for VerIdSpec {}
+#[doc = "`write(|w| ..)` method takes [`ver_id::W`](W) writer structure"]
+impl crate::Writable for VerIdSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VER_ID to value 0x2023_0504"]
+impl crate::Resettable for VerIdSpec {
+    const RESET_VALUE: u32 = 0x2023_0504;
+}

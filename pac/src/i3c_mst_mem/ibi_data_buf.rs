@@ -1,0 +1,20 @@
+#[doc = "Register `IBI_DATA_BUF` reader"]
+pub type R = crate::R<IbiDataBufSpec>;
+#[doc = "Field `IBI_DATA` reader - NA"]
+pub type IbiDataR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn ibi_data(&self) -> IbiDataR {
+        IbiDataR::new(self.bits)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ibi_data_buf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IbiDataBufSpec;
+impl crate::RegisterSpec for IbiDataBufSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ibi_data_buf::R`](R) reader structure"]
+impl crate::Readable for IbiDataBufSpec {}
+#[doc = "`reset()` method sets IBI_DATA_BUF to value 0"]
+impl crate::Resettable for IbiDataBufSpec {}

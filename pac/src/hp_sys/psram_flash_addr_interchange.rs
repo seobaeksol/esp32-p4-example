@@ -1,0 +1,49 @@
+#[doc = "Register `PSRAM_FLASH_ADDR_INTERCHANGE` reader"]
+pub type R = crate::R<PsramFlashAddrInterchangeSpec>;
+#[doc = "Register `PSRAM_FLASH_ADDR_INTERCHANGE` writer"]
+pub type W = crate::W<PsramFlashAddrInterchangeSpec>;
+#[doc = "Field `CPU` reader - Set 1 to enable addr interchange between psram and flash in axi matrix when hp cpu access through cache"]
+pub type CpuR = crate::BitReader;
+#[doc = "Field `CPU` writer - Set 1 to enable addr interchange between psram and flash in axi matrix when hp cpu access through cache"]
+pub type CpuW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA` reader - Set 1 to enable addr interchange between psram and flash in axi matrix when dma device access, lp core access and hp core access through ahb"]
+pub type DmaR = crate::BitReader;
+#[doc = "Field `DMA` writer - Set 1 to enable addr interchange between psram and flash in axi matrix when dma device access, lp core access and hp core access through ahb"]
+pub type DmaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Set 1 to enable addr interchange between psram and flash in axi matrix when hp cpu access through cache"]
+    #[inline(always)]
+    pub fn cpu(&self) -> CpuR {
+        CpuR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set 1 to enable addr interchange between psram and flash in axi matrix when dma device access, lp core access and hp core access through ahb"]
+    #[inline(always)]
+    pub fn dma(&self) -> DmaR {
+        DmaR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set 1 to enable addr interchange between psram and flash in axi matrix when hp cpu access through cache"]
+    #[inline(always)]
+    pub fn cpu(&mut self) -> CpuW<'_, PsramFlashAddrInterchangeSpec> {
+        CpuW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set 1 to enable addr interchange between psram and flash in axi matrix when dma device access, lp core access and hp core access through ahb"]
+    #[inline(always)]
+    pub fn dma(&mut self) -> DmaW<'_, PsramFlashAddrInterchangeSpec> {
+        DmaW::new(self, 1)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`psram_flash_addr_interchange::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`psram_flash_addr_interchange::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PsramFlashAddrInterchangeSpec;
+impl crate::RegisterSpec for PsramFlashAddrInterchangeSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`psram_flash_addr_interchange::R`](R) reader structure"]
+impl crate::Readable for PsramFlashAddrInterchangeSpec {}
+#[doc = "`write(|w| ..)` method takes [`psram_flash_addr_interchange::W`](W) writer structure"]
+impl crate::Writable for PsramFlashAddrInterchangeSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PSRAM_FLASH_ADDR_INTERCHANGE to value 0"]
+impl crate::Resettable for PsramFlashAddrInterchangeSpec {}

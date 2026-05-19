@@ -1,0 +1,20 @@
+#[doc = "Register `RESULT` reader"]
+pub type R = crate::R<ResultSpec>;
+#[doc = "Field `OPERATION_RESULT` reader - The operation result bit of ECDSA Accelerator, only valid when ECDSA calculation is done."]
+pub type OperationResultR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - The operation result bit of ECDSA Accelerator, only valid when ECDSA calculation is done."]
+    #[inline(always)]
+    pub fn operation_result(&self) -> OperationResultR {
+        OperationResultR::new((self.bits & 1) != 0)
+    }
+}
+#[doc = "ECDSA result register\n\nYou can [`read`](crate::Reg::read) this register and get [`result::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ResultSpec;
+impl crate::RegisterSpec for ResultSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`result::R`](R) reader structure"]
+impl crate::Readable for ResultSpec {}
+#[doc = "`reset()` method sets RESULT to value 0"]
+impl crate::Resettable for ResultSpec {}

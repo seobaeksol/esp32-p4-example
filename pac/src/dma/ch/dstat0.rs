@@ -1,0 +1,20 @@
+#[doc = "Register `DSTAT0` reader"]
+pub type R = crate::R<Dstat0Spec>;
+#[doc = "Field `CH1_DSTAT` reader - NA"]
+pub type Ch1DstatR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn ch1_dstat(&self) -> Ch1DstatR {
+        Ch1DstatR::new(self.bits)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dstat0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Dstat0Spec;
+impl crate::RegisterSpec for Dstat0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dstat0::R`](R) reader structure"]
+impl crate::Readable for Dstat0Spec {}
+#[doc = "`reset()` method sets DSTAT0 to value 0"]
+impl crate::Resettable for Dstat0Spec {}

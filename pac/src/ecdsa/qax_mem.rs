@@ -1,0 +1,23 @@
+#[doc = "Register `QAX_MEM[%s]` reader"]
+pub type R = crate::R<QaxMemSpec>;
+#[doc = "Register `QAX_MEM[%s]` writer"]
+pub type W = crate::W<QaxMemSpec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl W {}
+#[doc = "The memory that stores x coordinates of QA or software written k.\n\nYou can [`read`](crate::Reg::read) this register and get [`qax_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qax_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct QaxMemSpec;
+impl crate::RegisterSpec for QaxMemSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`qax_mem::R`](R) reader structure"]
+impl crate::Readable for QaxMemSpec {}
+#[doc = "`write(|w| ..)` method takes [`qax_mem::W`](W) writer structure"]
+impl crate::Writable for QaxMemSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets QAX_MEM[%s] to value 0"]
+impl crate::Resettable for QaxMemSpec {}

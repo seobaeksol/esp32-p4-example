@@ -1,0 +1,20 @@
+#[doc = "Register `RNG_DATA` reader"]
+pub type R = crate::R<RngDataSpec>;
+#[doc = "Field `RND_DATA` reader - result of rng output"]
+pub type RndDataR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - result of rng output"]
+    #[inline(always)]
+    pub fn rnd_data(&self) -> RndDataR {
+        RndDataR::new(self.bits)
+    }
+}
+#[doc = "rng data register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RngDataSpec;
+impl crate::RegisterSpec for RngDataSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rng_data::R`](R) reader structure"]
+impl crate::Readable for RngDataSpec {}
+#[doc = "`reset()` method sets RNG_DATA to value 0"]
+impl crate::Resettable for RngDataSpec {}

@@ -1,0 +1,49 @@
+#[doc = "Register `DPI_LP_CMD_TIM` reader"]
+pub type R = crate::R<DpiLpCmdTimSpec>;
+#[doc = "Register `DPI_LP_CMD_TIM` writer"]
+pub type W = crate::W<DpiLpCmdTimSpec>;
+#[doc = "Field `INVACT_LPCMD_TIME` reader - NA"]
+pub type InvactLpcmdTimeR = crate::FieldReader;
+#[doc = "Field `INVACT_LPCMD_TIME` writer - NA"]
+pub type InvactLpcmdTimeW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `OUTVACT_LPCMD_TIME` reader - NA"]
+pub type OutvactLpcmdTimeR = crate::FieldReader;
+#[doc = "Field `OUTVACT_LPCMD_TIME` writer - NA"]
+pub type OutvactLpcmdTimeW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - NA"]
+    #[inline(always)]
+    pub fn invact_lpcmd_time(&self) -> InvactLpcmdTimeR {
+        InvactLpcmdTimeR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - NA"]
+    #[inline(always)]
+    pub fn outvact_lpcmd_time(&self) -> OutvactLpcmdTimeR {
+        OutvactLpcmdTimeR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - NA"]
+    #[inline(always)]
+    pub fn invact_lpcmd_time(&mut self) -> InvactLpcmdTimeW<'_, DpiLpCmdTimSpec> {
+        InvactLpcmdTimeW::new(self, 0)
+    }
+    #[doc = "Bits 16:23 - NA"]
+    #[inline(always)]
+    pub fn outvact_lpcmd_time(&mut self) -> OutvactLpcmdTimeW<'_, DpiLpCmdTimSpec> {
+        OutvactLpcmdTimeW::new(self, 16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_lp_cmd_tim::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpi_lp_cmd_tim::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DpiLpCmdTimSpec;
+impl crate::RegisterSpec for DpiLpCmdTimSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dpi_lp_cmd_tim::R`](R) reader structure"]
+impl crate::Readable for DpiLpCmdTimSpec {}
+#[doc = "`write(|w| ..)` method takes [`dpi_lp_cmd_tim::W`](W) writer structure"]
+impl crate::Writable for DpiLpCmdTimSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DPI_LP_CMD_TIM to value 0"]
+impl crate::Resettable for DpiLpCmdTimSpec {}

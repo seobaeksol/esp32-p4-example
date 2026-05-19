@@ -1,0 +1,107 @@
+#[doc = "Register `HP_SLEEP_DIG_POWER` reader"]
+pub type R = crate::R<HpSleepDigPowerSpec>;
+#[doc = "Register `HP_SLEEP_DIG_POWER` writer"]
+pub type W = crate::W<HpSleepDigPowerSpec>;
+#[doc = "Field `HP_SLEEP_DCDC_SWITCH_PD_EN` reader - need_des"]
+pub type HpSleepDcdcSwitchPdEnR = crate::BitReader;
+#[doc = "Field `HP_SLEEP_DCDC_SWITCH_PD_EN` writer - need_des"]
+pub type HpSleepDcdcSwitchPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_SLEEP_HP_MEM_DSLP` reader - need_des"]
+pub type HpSleepHpMemDslpR = crate::BitReader;
+#[doc = "Field `HP_SLEEP_HP_MEM_DSLP` writer - need_des"]
+pub type HpSleepHpMemDslpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_SLEEP_PD_HP_MEM_PD_EN` reader - need_des"]
+pub type HpSleepPdHpMemPdEnR = crate::BitReader;
+#[doc = "Field `HP_SLEEP_PD_HP_MEM_PD_EN` writer - need_des"]
+pub type HpSleepPdHpMemPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_SLEEP_PD_HP_CPU_PD_EN` reader - need_des"]
+pub type HpSleepPdHpCpuPdEnR = crate::BitReader;
+#[doc = "Field `HP_SLEEP_PD_HP_CPU_PD_EN` writer - need_des"]
+pub type HpSleepPdHpCpuPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_SLEEP_PD_CNNT_PD_EN` reader - need_des"]
+pub type HpSleepPdCnntPdEnR = crate::BitReader;
+#[doc = "Field `HP_SLEEP_PD_CNNT_PD_EN` writer - need_des"]
+pub type HpSleepPdCnntPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_SLEEP_PD_TOP_PD_EN` reader - need_des"]
+pub type HpSleepPdTopPdEnR = crate::BitReader;
+#[doc = "Field `HP_SLEEP_PD_TOP_PD_EN` writer - need_des"]
+pub type HpSleepPdTopPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 21 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_dcdc_switch_pd_en(&self) -> HpSleepDcdcSwitchPdEnR {
+        HpSleepDcdcSwitchPdEnR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_hp_mem_dslp(&self) -> HpSleepHpMemDslpR {
+        HpSleepHpMemDslpR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_hp_mem_pd_en(&self) -> HpSleepPdHpMemPdEnR {
+        HpSleepPdHpMemPdEnR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_hp_cpu_pd_en(&self) -> HpSleepPdHpCpuPdEnR {
+        HpSleepPdHpCpuPdEnR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_cnnt_pd_en(&self) -> HpSleepPdCnntPdEnR {
+        HpSleepPdCnntPdEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_top_pd_en(&self) -> HpSleepPdTopPdEnR {
+        HpSleepPdTopPdEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 21 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_dcdc_switch_pd_en(
+        &mut self,
+    ) -> HpSleepDcdcSwitchPdEnW<'_, HpSleepDigPowerSpec> {
+        HpSleepDcdcSwitchPdEnW::new(self, 21)
+    }
+    #[doc = "Bit 22 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_hp_mem_dslp(&mut self) -> HpSleepHpMemDslpW<'_, HpSleepDigPowerSpec> {
+        HpSleepHpMemDslpW::new(self, 22)
+    }
+    #[doc = "Bit 23 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_hp_mem_pd_en(&mut self) -> HpSleepPdHpMemPdEnW<'_, HpSleepDigPowerSpec> {
+        HpSleepPdHpMemPdEnW::new(self, 23)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_hp_cpu_pd_en(&mut self) -> HpSleepPdHpCpuPdEnW<'_, HpSleepDigPowerSpec> {
+        HpSleepPdHpCpuPdEnW::new(self, 29)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_cnnt_pd_en(&mut self) -> HpSleepPdCnntPdEnW<'_, HpSleepDigPowerSpec> {
+        HpSleepPdCnntPdEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_top_pd_en(&mut self) -> HpSleepPdTopPdEnW<'_, HpSleepDigPowerSpec> {
+        HpSleepPdTopPdEnW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_sleep_dig_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_sleep_dig_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HpSleepDigPowerSpec;
+impl crate::RegisterSpec for HpSleepDigPowerSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hp_sleep_dig_power::R`](R) reader structure"]
+impl crate::Readable for HpSleepDigPowerSpec {}
+#[doc = "`write(|w| ..)` method takes [`hp_sleep_dig_power::W`](W) writer structure"]
+impl crate::Writable for HpSleepDigPowerSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HP_SLEEP_DIG_POWER to value 0"]
+impl crate::Resettable for HpSleepDigPowerSpec {}

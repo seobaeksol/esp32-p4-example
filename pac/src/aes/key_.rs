@@ -1,0 +1,35 @@
+#[doc = "Register `KEY_%s` reader"]
+pub type R = crate::R<Key_Spec>;
+#[doc = "Register `KEY_%s` writer"]
+pub type W = crate::W<Key_Spec>;
+#[doc = "Field `KEY_0` reader - This bits stores key_0 that is a part of key material."]
+pub type Key0R = crate::FieldReader<u32>;
+#[doc = "Field `KEY_0` writer - This bits stores key_0 that is a part of key material."]
+pub type Key0W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - This bits stores key_0 that is a part of key material."]
+    #[inline(always)]
+    pub fn key_0(&self) -> Key0R {
+        Key0R::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - This bits stores key_0 that is a part of key material."]
+    #[inline(always)]
+    pub fn key_0(&mut self) -> Key0W<'_, Key_Spec> {
+        Key0W::new(self, 0)
+    }
+}
+#[doc = "AES key data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`key_::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Key_Spec;
+impl crate::RegisterSpec for Key_Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`key_::R`](R) reader structure"]
+impl crate::Readable for Key_Spec {}
+#[doc = "`write(|w| ..)` method takes [`key_::W`](W) writer structure"]
+impl crate::Writable for Key_Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets KEY_%s to value 0"]
+impl crate::Resettable for Key_Spec {}

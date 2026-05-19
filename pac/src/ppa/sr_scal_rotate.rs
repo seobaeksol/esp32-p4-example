@@ -1,0 +1,142 @@
+#[doc = "Register `SR_SCAL_ROTATE` reader"]
+pub type R = crate::R<SrScalRotateSpec>;
+#[doc = "Register `SR_SCAL_ROTATE` writer"]
+pub type W = crate::W<SrScalRotateSpec>;
+#[doc = "Field `SR_SCAL_X_INT` reader - The integrated part of scaling coefficient in X direction."]
+pub type SrScalXIntR = crate::FieldReader;
+#[doc = "Field `SR_SCAL_X_INT` writer - The integrated part of scaling coefficient in X direction."]
+pub type SrScalXIntW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SR_SCAL_X_FRAG` reader - The fragment part of scaling coefficient in X direction."]
+pub type SrScalXFragR = crate::FieldReader;
+#[doc = "Field `SR_SCAL_X_FRAG` writer - The fragment part of scaling coefficient in X direction."]
+pub type SrScalXFragW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SR_SCAL_Y_INT` reader - The integrated part of scaling coefficient in Y direction."]
+pub type SrScalYIntR = crate::FieldReader;
+#[doc = "Field `SR_SCAL_Y_INT` writer - The integrated part of scaling coefficient in Y direction."]
+pub type SrScalYIntW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SR_SCAL_Y_FRAG` reader - The fragment part of scaling coefficient in Y direction."]
+pub type SrScalYFragR = crate::FieldReader;
+#[doc = "Field `SR_SCAL_Y_FRAG` writer - The fragment part of scaling coefficient in Y direction."]
+pub type SrScalYFragW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SR_ROTATE_ANGLE` reader - The rotate angle. 0: 0 degree. 1: 90 degree. 2: 180 degree. 3: 270 degree."]
+pub type SrRotateAngleR = crate::FieldReader;
+#[doc = "Field `SR_ROTATE_ANGLE` writer - The rotate angle. 0: 0 degree. 1: 90 degree. 2: 180 degree. 3: 270 degree."]
+pub type SrRotateAngleW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SCAL_ROTATE_RST` reader - Write 1 then write 0 to this bit to reset scaling and rotating engine."]
+pub type ScalRotateRstR = crate::BitReader;
+#[doc = "Field `SCAL_ROTATE_RST` writer - Write 1 then write 0 to this bit to reset scaling and rotating engine."]
+pub type ScalRotateRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SCAL_ROTATE_START` writer - Write 1 to enable scaling and rotating engine after parameter is configured."]
+pub type ScalRotateStartW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SR_MIRROR_X` reader - Image mirror in X direction. 0: disable, 1: enable"]
+pub type SrMirrorXR = crate::BitReader;
+#[doc = "Field `SR_MIRROR_X` writer - Image mirror in X direction. 0: disable, 1: enable"]
+pub type SrMirrorXW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SR_MIRROR_Y` reader - Image mirror in Y direction. 0: disable, 1: enable"]
+pub type SrMirrorYR = crate::BitReader;
+#[doc = "Field `SR_MIRROR_Y` writer - Image mirror in Y direction. 0: disable, 1: enable"]
+pub type SrMirrorYW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - The integrated part of scaling coefficient in X direction."]
+    #[inline(always)]
+    pub fn sr_scal_x_int(&self) -> SrScalXIntR {
+        SrScalXIntR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:11 - The fragment part of scaling coefficient in X direction."]
+    #[inline(always)]
+    pub fn sr_scal_x_frag(&self) -> SrScalXFragR {
+        SrScalXFragR::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:19 - The integrated part of scaling coefficient in Y direction."]
+    #[inline(always)]
+    pub fn sr_scal_y_int(&self) -> SrScalYIntR {
+        SrScalYIntR::new(((self.bits >> 12) & 0xff) as u8)
+    }
+    #[doc = "Bits 20:23 - The fragment part of scaling coefficient in Y direction."]
+    #[inline(always)]
+    pub fn sr_scal_y_frag(&self) -> SrScalYFragR {
+        SrScalYFragR::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:25 - The rotate angle. 0: 0 degree. 1: 90 degree. 2: 180 degree. 3: 270 degree."]
+    #[inline(always)]
+    pub fn sr_rotate_angle(&self) -> SrRotateAngleR {
+        SrRotateAngleR::new(((self.bits >> 24) & 3) as u8)
+    }
+    #[doc = "Bit 26 - Write 1 then write 0 to this bit to reset scaling and rotating engine."]
+    #[inline(always)]
+    pub fn scal_rotate_rst(&self) -> ScalRotateRstR {
+        ScalRotateRstR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Image mirror in X direction. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn sr_mirror_x(&self) -> SrMirrorXR {
+        SrMirrorXR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Image mirror in Y direction. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn sr_mirror_y(&self) -> SrMirrorYR {
+        SrMirrorYR::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - The integrated part of scaling coefficient in X direction."]
+    #[inline(always)]
+    pub fn sr_scal_x_int(&mut self) -> SrScalXIntW<'_, SrScalRotateSpec> {
+        SrScalXIntW::new(self, 0)
+    }
+    #[doc = "Bits 8:11 - The fragment part of scaling coefficient in X direction."]
+    #[inline(always)]
+    pub fn sr_scal_x_frag(&mut self) -> SrScalXFragW<'_, SrScalRotateSpec> {
+        SrScalXFragW::new(self, 8)
+    }
+    #[doc = "Bits 12:19 - The integrated part of scaling coefficient in Y direction."]
+    #[inline(always)]
+    pub fn sr_scal_y_int(&mut self) -> SrScalYIntW<'_, SrScalRotateSpec> {
+        SrScalYIntW::new(self, 12)
+    }
+    #[doc = "Bits 20:23 - The fragment part of scaling coefficient in Y direction."]
+    #[inline(always)]
+    pub fn sr_scal_y_frag(&mut self) -> SrScalYFragW<'_, SrScalRotateSpec> {
+        SrScalYFragW::new(self, 20)
+    }
+    #[doc = "Bits 24:25 - The rotate angle. 0: 0 degree. 1: 90 degree. 2: 180 degree. 3: 270 degree."]
+    #[inline(always)]
+    pub fn sr_rotate_angle(&mut self) -> SrRotateAngleW<'_, SrScalRotateSpec> {
+        SrRotateAngleW::new(self, 24)
+    }
+    #[doc = "Bit 26 - Write 1 then write 0 to this bit to reset scaling and rotating engine."]
+    #[inline(always)]
+    pub fn scal_rotate_rst(&mut self) -> ScalRotateRstW<'_, SrScalRotateSpec> {
+        ScalRotateRstW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Write 1 to enable scaling and rotating engine after parameter is configured."]
+    #[inline(always)]
+    pub fn scal_rotate_start(&mut self) -> ScalRotateStartW<'_, SrScalRotateSpec> {
+        ScalRotateStartW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Image mirror in X direction. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn sr_mirror_x(&mut self) -> SrMirrorXW<'_, SrScalRotateSpec> {
+        SrMirrorXW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Image mirror in Y direction. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn sr_mirror_y(&mut self) -> SrMirrorYW<'_, SrScalRotateSpec> {
+        SrMirrorYW::new(self, 29)
+    }
+}
+#[doc = "Scaling and rotating coefficient register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_scal_rotate::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_scal_rotate::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SrScalRotateSpec;
+impl crate::RegisterSpec for SrScalRotateSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sr_scal_rotate::R`](R) reader structure"]
+impl crate::Readable for SrScalRotateSpec {}
+#[doc = "`write(|w| ..)` method takes [`sr_scal_rotate::W`](W) writer structure"]
+impl crate::Writable for SrScalRotateSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SR_SCAL_ROTATE to value 0x1001"]
+impl crate::Resettable for SrScalRotateSpec {
+    const RESET_VALUE: u32 = 0x1001;
+}

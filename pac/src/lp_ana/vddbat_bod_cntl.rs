@@ -1,0 +1,88 @@
+#[doc = "Register `VDDBAT_BOD_CNTL` reader"]
+pub type R = crate::R<VddbatBodCntlSpec>;
+#[doc = "Register `VDDBAT_BOD_CNTL` writer"]
+pub type W = crate::W<VddbatBodCntlSpec>;
+#[doc = "Field `VDDBAT_UNDERVOLTAGE_FLAG` reader - need_des"]
+pub type VddbatUndervoltageFlagR = crate::BitReader;
+#[doc = "Field `VDDBAT_CHARGER` reader - need_des"]
+pub type VddbatChargerR = crate::BitReader;
+#[doc = "Field `VDDBAT_CHARGER` writer - need_des"]
+pub type VddbatChargerW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VDDBAT_CNT_CLR` reader - need_des"]
+pub type VddbatCntClrR = crate::BitReader;
+#[doc = "Field `VDDBAT_CNT_CLR` writer - need_des"]
+pub type VddbatCntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VDDBAT_UPVOLTAGE_TARGET` reader - need_des"]
+pub type VddbatUpvoltageTargetR = crate::FieldReader<u16>;
+#[doc = "Field `VDDBAT_UPVOLTAGE_TARGET` writer - need_des"]
+pub type VddbatUpvoltageTargetW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `VDDBAT_UNDERVOLTAGE_TARGET` reader - need_des"]
+pub type VddbatUndervoltageTargetR = crate::FieldReader<u16>;
+#[doc = "Field `VDDBAT_UNDERVOLTAGE_TARGET` writer - need_des"]
+pub type VddbatUndervoltageTargetW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_undervoltage_flag(&self) -> VddbatUndervoltageFlagR {
+        VddbatUndervoltageFlagR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 10 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_charger(&self) -> VddbatChargerR {
+        VddbatChargerR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_cnt_clr(&self) -> VddbatCntClrR {
+        VddbatCntClrR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bits 12:21 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_upvoltage_target(&self) -> VddbatUpvoltageTargetR {
+        VddbatUpvoltageTargetR::new(((self.bits >> 12) & 0x03ff) as u16)
+    }
+    #[doc = "Bits 22:31 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_undervoltage_target(&self) -> VddbatUndervoltageTargetR {
+        VddbatUndervoltageTargetR::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bit 10 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_charger(&mut self) -> VddbatChargerW<'_, VddbatBodCntlSpec> {
+        VddbatChargerW::new(self, 10)
+    }
+    #[doc = "Bit 11 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_cnt_clr(&mut self) -> VddbatCntClrW<'_, VddbatBodCntlSpec> {
+        VddbatCntClrW::new(self, 11)
+    }
+    #[doc = "Bits 12:21 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_upvoltage_target(&mut self) -> VddbatUpvoltageTargetW<'_, VddbatBodCntlSpec> {
+        VddbatUpvoltageTargetW::new(self, 12)
+    }
+    #[doc = "Bits 22:31 - need_des"]
+    #[inline(always)]
+    pub fn vddbat_undervoltage_target(
+        &mut self,
+    ) -> VddbatUndervoltageTargetW<'_, VddbatBodCntlSpec> {
+        VddbatUndervoltageTargetW::new(self, 22)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`vddbat_bod_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vddbat_bod_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VddbatBodCntlSpec;
+impl crate::RegisterSpec for VddbatBodCntlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vddbat_bod_cntl::R`](R) reader structure"]
+impl crate::Readable for VddbatBodCntlSpec {}
+#[doc = "`write(|w| ..)` method takes [`vddbat_bod_cntl::W`](W) writer structure"]
+impl crate::Writable for VddbatBodCntlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VDDBAT_BOD_CNTL to value 0xffc0_0000"]
+impl crate::Resettable for VddbatBodCntlSpec {
+    const RESET_VALUE: u32 = 0xffc0_0000;
+}

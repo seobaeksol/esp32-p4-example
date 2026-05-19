@@ -1,0 +1,49 @@
+#[doc = "Register `SCL_HIGH_PERIOD` reader"]
+pub type R = crate::R<SclHighPeriodSpec>;
+#[doc = "Register `SCL_HIGH_PERIOD` writer"]
+pub type W = crate::W<SclHighPeriodSpec>;
+#[doc = "Field `SCL_HIGH_PERIOD` reader - Configures for how long SCL remains high in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type SclHighPeriodR = crate::FieldReader<u16>;
+#[doc = "Field `SCL_HIGH_PERIOD` writer - Configures for how long SCL remains high in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type SclHighPeriodW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `SCL_WAIT_HIGH_PERIOD` reader - Configures the SCL_FSM's waiting period for SCL high level in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type SclWaitHighPeriodR = crate::FieldReader;
+#[doc = "Field `SCL_WAIT_HIGH_PERIOD` writer - Configures the SCL_FSM's waiting period for SCL high level in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type SclWaitHighPeriodW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+impl R {
+    #[doc = "Bits 0:8 - Configures for how long SCL remains high in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn scl_high_period(&self) -> SclHighPeriodR {
+        SclHighPeriodR::new((self.bits & 0x01ff) as u16)
+    }
+    #[doc = "Bits 9:15 - Configures the SCL_FSM's waiting period for SCL high level in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn scl_wait_high_period(&self) -> SclWaitHighPeriodR {
+        SclWaitHighPeriodR::new(((self.bits >> 9) & 0x7f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:8 - Configures for how long SCL remains high in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn scl_high_period(&mut self) -> SclHighPeriodW<'_, SclHighPeriodSpec> {
+        SclHighPeriodW::new(self, 0)
+    }
+    #[doc = "Bits 9:15 - Configures the SCL_FSM's waiting period for SCL high level in master mode.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn scl_wait_high_period(&mut self) -> SclWaitHighPeriodW<'_, SclHighPeriodSpec> {
+        SclWaitHighPeriodW::new(self, 9)
+    }
+}
+#[doc = "Configures the high level width of SCL\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_high_period::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_high_period::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SclHighPeriodSpec;
+impl crate::RegisterSpec for SclHighPeriodSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`scl_high_period::R`](R) reader structure"]
+impl crate::Readable for SclHighPeriodSpec {}
+#[doc = "`write(|w| ..)` method takes [`scl_high_period::W`](W) writer structure"]
+impl crate::Writable for SclHighPeriodSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SCL_HIGH_PERIOD to value 0"]
+impl crate::Resettable for SclHighPeriodSpec {}

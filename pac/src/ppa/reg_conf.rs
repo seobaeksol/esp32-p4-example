@@ -1,0 +1,35 @@
+#[doc = "Register `REG_CONF` reader"]
+pub type R = crate::R<RegConfSpec>;
+#[doc = "Register `REG_CONF` writer"]
+pub type W = crate::W<RegConfSpec>;
+#[doc = "Field `CLK_EN` reader - PPA register clock gate enable signal."]
+pub type ClkEnR = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - PPA register clock gate enable signal."]
+pub type ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - PPA register clock gate enable signal."]
+    #[inline(always)]
+    pub fn clk_en(&self) -> ClkEnR {
+        ClkEnR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - PPA register clock gate enable signal."]
+    #[inline(always)]
+    pub fn clk_en(&mut self) -> ClkEnW<'_, RegConfSpec> {
+        ClkEnW::new(self, 0)
+    }
+}
+#[doc = "Register clock enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RegConfSpec;
+impl crate::RegisterSpec for RegConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`reg_conf::R`](R) reader structure"]
+impl crate::Readable for RegConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`reg_conf::W`](W) writer structure"]
+impl crate::Writable for RegConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets REG_CONF to value 0"]
+impl crate::Resettable for RegConfSpec {}

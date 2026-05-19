@@ -1,0 +1,35 @@
+#[doc = "Register `IDEXT` reader"]
+pub type R = crate::R<IdextSpec>;
+#[doc = "Register `IDEXT` writer"]
+pub type W = crate::W<IdextSpec>;
+#[doc = "Field `IDEXT` reader - NA"]
+pub type IdextR = crate::FieldReader<u32>;
+#[doc = "Field `IDEXT` writer - NA"]
+pub type IdextW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn idext(&self) -> IdextR {
+        IdextR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn idext(&mut self) -> IdextW<'_, IdextSpec> {
+        IdextW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`idext::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`idext::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IdextSpec;
+impl crate::RegisterSpec for IdextSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`idext::R`](R) reader structure"]
+impl crate::Readable for IdextSpec {}
+#[doc = "`write(|w| ..)` method takes [`idext::W`](W) writer structure"]
+impl crate::Writable for IdextSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IDEXT to value 0"]
+impl crate::Resettable for IdextSpec {}

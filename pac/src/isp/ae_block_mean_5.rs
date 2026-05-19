@@ -1,0 +1,41 @@
+#[doc = "Register `AE_BLOCK_MEAN_5` reader"]
+pub type R = crate::R<AeBlockMean5Spec>;
+#[doc = "Field `AE_B43_MEAN` reader - this field configures block43 Y mean data"]
+pub type AeB43MeanR = crate::FieldReader;
+#[doc = "Field `AE_B42_MEAN` reader - this field configures block42 Y mean data"]
+pub type AeB42MeanR = crate::FieldReader;
+#[doc = "Field `AE_B41_MEAN` reader - this field configures block41 Y mean data"]
+pub type AeB41MeanR = crate::FieldReader;
+#[doc = "Field `AE_B40_MEAN` reader - this field configures block40 Y mean data"]
+pub type AeB40MeanR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - this field configures block43 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b43_mean(&self) -> AeB43MeanR {
+        AeB43MeanR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field configures block42 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b42_mean(&self) -> AeB42MeanR {
+        AeB42MeanR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field configures block41 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b41_mean(&self) -> AeB41MeanR {
+        AeB41MeanR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - this field configures block40 Y mean data"]
+    #[inline(always)]
+    pub fn ae_b40_mean(&self) -> AeB40MeanR {
+        AeB40MeanR::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[doc = "ae statistic result register 5\n\nYou can [`read`](crate::Reg::read) this register and get [`ae_block_mean_5::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AeBlockMean5Spec;
+impl crate::RegisterSpec for AeBlockMean5Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ae_block_mean_5::R`](R) reader structure"]
+impl crate::Readable for AeBlockMean5Spec {}
+#[doc = "`reset()` method sets AE_BLOCK_MEAN_5 to value 0"]
+impl crate::Resettable for AeBlockMean5Spec {}

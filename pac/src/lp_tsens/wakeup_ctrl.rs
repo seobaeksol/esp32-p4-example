@@ -1,0 +1,86 @@
+#[doc = "Register `WAKEUP_CTRL` reader"]
+pub type R = crate::R<WakeupCtrlSpec>;
+#[doc = "Register `WAKEUP_CTRL` writer"]
+pub type W = crate::W<WakeupCtrlSpec>;
+#[doc = "Field `WAKEUP_TH_LOW` reader - Lower threshold."]
+pub type WakeupThLowR = crate::FieldReader;
+#[doc = "Field `WAKEUP_TH_LOW` writer - Lower threshold."]
+pub type WakeupThLowW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `WAKEUP_TH_HIGH` reader - Upper threshold."]
+pub type WakeupThHighR = crate::FieldReader;
+#[doc = "Field `WAKEUP_TH_HIGH` writer - Upper threshold."]
+pub type WakeupThHighW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `WAKEUP_OVER_UPPER_TH` reader - Indicates that this wakeup event arose from exceeding upper threshold."]
+pub type WakeupOverUpperThR = crate::BitReader;
+#[doc = "Field `WAKEUP_EN` reader - Tsens wakeup enable."]
+pub type WakeupEnR = crate::BitReader;
+#[doc = "Field `WAKEUP_EN` writer - Tsens wakeup enable."]
+pub type WakeupEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WAKEUP_MODE` reader - 0:absolute value comparison mode. 1: relative value comparison mode."]
+pub type WakeupModeR = crate::BitReader;
+#[doc = "Field `WAKEUP_MODE` writer - 0:absolute value comparison mode. 1: relative value comparison mode."]
+pub type WakeupModeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - Lower threshold."]
+    #[inline(always)]
+    pub fn wakeup_th_low(&self) -> WakeupThLowR {
+        WakeupThLowR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 14:21 - Upper threshold."]
+    #[inline(always)]
+    pub fn wakeup_th_high(&self) -> WakeupThHighR {
+        WakeupThHighR::new(((self.bits >> 14) & 0xff) as u8)
+    }
+    #[doc = "Bit 29 - Indicates that this wakeup event arose from exceeding upper threshold."]
+    #[inline(always)]
+    pub fn wakeup_over_upper_th(&self) -> WakeupOverUpperThR {
+        WakeupOverUpperThR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Tsens wakeup enable."]
+    #[inline(always)]
+    pub fn wakeup_en(&self) -> WakeupEnR {
+        WakeupEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - 0:absolute value comparison mode. 1: relative value comparison mode."]
+    #[inline(always)]
+    pub fn wakeup_mode(&self) -> WakeupModeR {
+        WakeupModeR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Lower threshold."]
+    #[inline(always)]
+    pub fn wakeup_th_low(&mut self) -> WakeupThLowW<'_, WakeupCtrlSpec> {
+        WakeupThLowW::new(self, 0)
+    }
+    #[doc = "Bits 14:21 - Upper threshold."]
+    #[inline(always)]
+    pub fn wakeup_th_high(&mut self) -> WakeupThHighW<'_, WakeupCtrlSpec> {
+        WakeupThHighW::new(self, 14)
+    }
+    #[doc = "Bit 30 - Tsens wakeup enable."]
+    #[inline(always)]
+    pub fn wakeup_en(&mut self) -> WakeupEnW<'_, WakeupCtrlSpec> {
+        WakeupEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - 0:absolute value comparison mode. 1: relative value comparison mode."]
+    #[inline(always)]
+    pub fn wakeup_mode(&mut self) -> WakeupModeW<'_, WakeupCtrlSpec> {
+        WakeupModeW::new(self, 31)
+    }
+}
+#[doc = "Tsens wakeup control registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`wakeup_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakeup_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct WakeupCtrlSpec;
+impl crate::RegisterSpec for WakeupCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`wakeup_ctrl::R`](R) reader structure"]
+impl crate::Readable for WakeupCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`wakeup_ctrl::W`](W) writer structure"]
+impl crate::Writable for WakeupCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets WAKEUP_CTRL to value 0x003f_c000"]
+impl crate::Resettable for WakeupCtrlSpec {
+    const RESET_VALUE: u32 = 0x003f_c000;
+}

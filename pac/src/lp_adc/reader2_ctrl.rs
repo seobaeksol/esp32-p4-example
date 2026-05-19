@@ -1,0 +1,121 @@
+#[doc = "Register `READER2_CTRL` reader"]
+pub type R = crate::R<Reader2CtrlSpec>;
+#[doc = "Register `READER2_CTRL` writer"]
+pub type W = crate::W<Reader2CtrlSpec>;
+#[doc = "Field `SAR2_CLK_DIV` reader - Clock divider."]
+pub type Sar2ClkDivR = crate::FieldReader;
+#[doc = "Field `SAR2_CLK_DIV` writer - Clock divider."]
+pub type Sar2ClkDivW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SAR2_WAIT_ARB_CYCLE` reader - Wait arbit stable after sar_done."]
+pub type Sar2WaitArbCycleR = crate::FieldReader;
+#[doc = "Field `SAR2_WAIT_ARB_CYCLE` writer - Wait arbit stable after sar_done."]
+pub type Sar2WaitArbCycleW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SAR2_CLK_GATED` reader - N/A"]
+pub type Sar2ClkGatedR = crate::BitReader;
+#[doc = "Field `SAR2_CLK_GATED` writer - N/A"]
+pub type Sar2ClkGatedW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SAR2_SAMPLE_NUM` reader - N/A"]
+pub type Sar2SampleNumR = crate::FieldReader;
+#[doc = "Field `SAR2_SAMPLE_NUM` writer - N/A"]
+pub type Sar2SampleNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SAR2_EN_PAD_FORCE_ENABLE` reader - Force enable adc en_pad to analog circuit 2'b11: force enable ."]
+pub type Sar2EnPadForceEnableR = crate::FieldReader;
+#[doc = "Field `SAR2_EN_PAD_FORCE_ENABLE` writer - Force enable adc en_pad to analog circuit 2'b11: force enable ."]
+pub type Sar2EnPadForceEnableW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SAR2_DATA_INV` reader - Invert SAR ADC2 data."]
+pub type Sar2DataInvR = crate::BitReader;
+#[doc = "Field `SAR2_DATA_INV` writer - Invert SAR ADC2 data."]
+pub type Sar2DataInvW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SAR2_INT_EN` reader - Enable saradc2 to send out interrupt."]
+pub type Sar2IntEnR = crate::BitReader;
+#[doc = "Field `SAR2_INT_EN` writer - Enable saradc2 to send out interrupt."]
+pub type Sar2IntEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - Clock divider."]
+    #[inline(always)]
+    pub fn sar2_clk_div(&self) -> Sar2ClkDivR {
+        Sar2ClkDivR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 16:17 - Wait arbit stable after sar_done."]
+    #[inline(always)]
+    pub fn sar2_wait_arb_cycle(&self) -> Sar2WaitArbCycleR {
+        Sar2WaitArbCycleR::new(((self.bits >> 16) & 3) as u8)
+    }
+    #[doc = "Bit 18 - N/A"]
+    #[inline(always)]
+    pub fn sar2_clk_gated(&self) -> Sar2ClkGatedR {
+        Sar2ClkGatedR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bits 19:26 - N/A"]
+    #[inline(always)]
+    pub fn sar2_sample_num(&self) -> Sar2SampleNumR {
+        Sar2SampleNumR::new(((self.bits >> 19) & 0xff) as u8)
+    }
+    #[doc = "Bits 27:28 - Force enable adc en_pad to analog circuit 2'b11: force enable ."]
+    #[inline(always)]
+    pub fn sar2_en_pad_force_enable(&self) -> Sar2EnPadForceEnableR {
+        Sar2EnPadForceEnableR::new(((self.bits >> 27) & 3) as u8)
+    }
+    #[doc = "Bit 29 - Invert SAR ADC2 data."]
+    #[inline(always)]
+    pub fn sar2_data_inv(&self) -> Sar2DataInvR {
+        Sar2DataInvR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Enable saradc2 to send out interrupt."]
+    #[inline(always)]
+    pub fn sar2_int_en(&self) -> Sar2IntEnR {
+        Sar2IntEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Clock divider."]
+    #[inline(always)]
+    pub fn sar2_clk_div(&mut self) -> Sar2ClkDivW<'_, Reader2CtrlSpec> {
+        Sar2ClkDivW::new(self, 0)
+    }
+    #[doc = "Bits 16:17 - Wait arbit stable after sar_done."]
+    #[inline(always)]
+    pub fn sar2_wait_arb_cycle(&mut self) -> Sar2WaitArbCycleW<'_, Reader2CtrlSpec> {
+        Sar2WaitArbCycleW::new(self, 16)
+    }
+    #[doc = "Bit 18 - N/A"]
+    #[inline(always)]
+    pub fn sar2_clk_gated(&mut self) -> Sar2ClkGatedW<'_, Reader2CtrlSpec> {
+        Sar2ClkGatedW::new(self, 18)
+    }
+    #[doc = "Bits 19:26 - N/A"]
+    #[inline(always)]
+    pub fn sar2_sample_num(&mut self) -> Sar2SampleNumW<'_, Reader2CtrlSpec> {
+        Sar2SampleNumW::new(self, 19)
+    }
+    #[doc = "Bits 27:28 - Force enable adc en_pad to analog circuit 2'b11: force enable ."]
+    #[inline(always)]
+    pub fn sar2_en_pad_force_enable(&mut self) -> Sar2EnPadForceEnableW<'_, Reader2CtrlSpec> {
+        Sar2EnPadForceEnableW::new(self, 27)
+    }
+    #[doc = "Bit 29 - Invert SAR ADC2 data."]
+    #[inline(always)]
+    pub fn sar2_data_inv(&mut self) -> Sar2DataInvW<'_, Reader2CtrlSpec> {
+        Sar2DataInvW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Enable saradc2 to send out interrupt."]
+    #[inline(always)]
+    pub fn sar2_int_en(&mut self) -> Sar2IntEnW<'_, Reader2CtrlSpec> {
+        Sar2IntEnW::new(self, 30)
+    }
+}
+#[doc = "Control the read operation of ADC2.\n\nYou can [`read`](crate::Reg::read) this register and get [`reader2_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reader2_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Reader2CtrlSpec;
+impl crate::RegisterSpec for Reader2CtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`reader2_ctrl::R`](R) reader structure"]
+impl crate::Readable for Reader2CtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`reader2_ctrl::W`](W) writer structure"]
+impl crate::Writable for Reader2CtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets READER2_CTRL to value 0x4005_0002"]
+impl crate::Resettable for Reader2CtrlSpec {
+    const RESET_VALUE: u32 = 0x4005_0002;
+}

@@ -1,0 +1,77 @@
+#[doc = "Register `DMAMISSEDFR` reader"]
+pub type R = crate::R<DmamissedfrSpec>;
+#[doc = "Register `DMAMISSEDFR` writer"]
+pub type W = crate::W<DmamissedfrSpec>;
+#[doc = "Field `MISSED_FC` reader - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
+pub type MissedFcR = crate::FieldReader<u16>;
+#[doc = "Field `MISSED_FC` writer - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
+pub type MissedFcW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `OVERFLOW_BMFC` reader - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+pub type OverflowBmfcR = crate::BitReader;
+#[doc = "Field `OVERFLOW_BMFC` writer - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+pub type OverflowBmfcW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVERFLOW_FC` reader - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
+pub type OverflowFcR = crate::FieldReader<u16>;
+#[doc = "Field `OVERFLOW_FC` writer - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
+pub type OverflowFcW<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
+#[doc = "Field `OVERFLOW_BFOC` reader - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+pub type OverflowBfocR = crate::BitReader;
+#[doc = "Field `OVERFLOW_BFOC` writer - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+pub type OverflowBfocW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:15 - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
+    #[inline(always)]
+    pub fn missed_fc(&self) -> MissedFcR {
+        MissedFcR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bit 16 - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+    #[inline(always)]
+    pub fn overflow_bmfc(&self) -> OverflowBmfcR {
+        OverflowBmfcR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bits 17:27 - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
+    #[inline(always)]
+    pub fn overflow_fc(&self) -> OverflowFcR {
+        OverflowFcR::new(((self.bits >> 17) & 0x07ff) as u16)
+    }
+    #[doc = "Bit 28 - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+    #[inline(always)]
+    pub fn overflow_bfoc(&self) -> OverflowBfocR {
+        OverflowBfocR::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
+    #[inline(always)]
+    pub fn missed_fc(&mut self) -> MissedFcW<'_, DmamissedfrSpec> {
+        MissedFcW::new(self, 0)
+    }
+    #[doc = "Bit 16 - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+    #[inline(always)]
+    pub fn overflow_bmfc(&mut self) -> OverflowBmfcW<'_, DmamissedfrSpec> {
+        OverflowBmfcW::new(self, 16)
+    }
+    #[doc = "Bits 17:27 - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
+    #[inline(always)]
+    pub fn overflow_fc(&mut self) -> OverflowFcW<'_, DmamissedfrSpec> {
+        OverflowFcW::new(self, 17)
+    }
+    #[doc = "Bit 28 - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
+    #[inline(always)]
+    pub fn overflow_bfoc(&mut self) -> OverflowBfocW<'_, DmamissedfrSpec> {
+        OverflowBfocW::new(self, 28)
+    }
+}
+#[doc = "Missed Frame and Buffer Overflow Counter Register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmamissedfr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmamissedfr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmamissedfrSpec;
+impl crate::RegisterSpec for DmamissedfrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dmamissedfr::R`](R) reader structure"]
+impl crate::Readable for DmamissedfrSpec {}
+#[doc = "`write(|w| ..)` method takes [`dmamissedfr::W`](W) writer structure"]
+impl crate::Writable for DmamissedfrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DMAMISSEDFR to value 0"]
+impl crate::Resettable for DmamissedfrSpec {}

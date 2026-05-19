@@ -1,0 +1,35 @@
+#[doc = "Register `MOSI_DLEN` reader"]
+pub type R = crate::R<MosiDlenSpec>;
+#[doc = "Register `MOSI_DLEN` writer"]
+pub type W = crate::W<MosiDlenSpec>;
+#[doc = "Field `USR_MOSI_DBITLEN` reader - The length in bits of write-data. The register value shall be (bit_num-1)."]
+pub type UsrMosiDbitlenR = crate::FieldReader<u16>;
+#[doc = "Field `USR_MOSI_DBITLEN` writer - The length in bits of write-data. The register value shall be (bit_num-1)."]
+pub type UsrMosiDbitlenW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+impl R {
+    #[doc = "Bits 0:9 - The length in bits of write-data. The register value shall be (bit_num-1)."]
+    #[inline(always)]
+    pub fn usr_mosi_dbitlen(&self) -> UsrMosiDbitlenR {
+        UsrMosiDbitlenR::new((self.bits & 0x03ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:9 - The length in bits of write-data. The register value shall be (bit_num-1)."]
+    #[inline(always)]
+    pub fn usr_mosi_dbitlen(&mut self) -> UsrMosiDbitlenW<'_, MosiDlenSpec> {
+        UsrMosiDbitlenW::new(self, 0)
+    }
+}
+#[doc = "SPI1 send data bit length control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mosi_dlen::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mosi_dlen::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MosiDlenSpec;
+impl crate::RegisterSpec for MosiDlenSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`mosi_dlen::R`](R) reader structure"]
+impl crate::Readable for MosiDlenSpec {}
+#[doc = "`write(|w| ..)` method takes [`mosi_dlen::W`](W) writer structure"]
+impl crate::Writable for MosiDlenSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets MOSI_DLEN to value 0"]
+impl crate::Resettable for MosiDlenSpec {}

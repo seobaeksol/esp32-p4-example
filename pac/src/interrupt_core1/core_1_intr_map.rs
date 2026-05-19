@@ -1,0 +1,23 @@
+#[doc = "Register `CORE_1_INTR_MAP%s` reader"]
+pub type R = crate::R<Core1IntrMapSpec>;
+#[doc = "Register `CORE_1_INTR_MAP%s` writer"]
+pub type W = crate::W<Core1IntrMapSpec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl W {}
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_intr_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_1_intr_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core1IntrMapSpec;
+impl crate::RegisterSpec for Core1IntrMapSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_1_intr_map::R`](R) reader structure"]
+impl crate::Readable for Core1IntrMapSpec {}
+#[doc = "`write(|w| ..)` method takes [`core_1_intr_map::W`](W) writer structure"]
+impl crate::Writable for Core1IntrMapSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CORE_1_INTR_MAP%s to value 0"]
+impl crate::Resettable for Core1IntrMapSpec {}

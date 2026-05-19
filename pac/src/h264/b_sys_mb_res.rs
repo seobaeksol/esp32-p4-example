@@ -1,0 +1,49 @@
+#[doc = "Register `B_SYS_MB_RES` reader"]
+pub type R = crate::R<BSysMbResSpec>;
+#[doc = "Register `B_SYS_MB_RES` writer"]
+pub type W = crate::W<BSysMbResSpec>;
+#[doc = "Field `B_SYS_TOTAL_MB_Y` reader - Configures video B vertical MB resolution."]
+pub type BSysTotalMbYR = crate::FieldReader;
+#[doc = "Field `B_SYS_TOTAL_MB_Y` writer - Configures video B vertical MB resolution."]
+pub type BSysTotalMbYW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `B_SYS_TOTAL_MB_X` reader - Configures video B horizontal MB resolution."]
+pub type BSysTotalMbXR = crate::FieldReader;
+#[doc = "Field `B_SYS_TOTAL_MB_X` writer - Configures video B horizontal MB resolution."]
+pub type BSysTotalMbXW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+impl R {
+    #[doc = "Bits 0:6 - Configures video B vertical MB resolution."]
+    #[inline(always)]
+    pub fn b_sys_total_mb_y(&self) -> BSysTotalMbYR {
+        BSysTotalMbYR::new((self.bits & 0x7f) as u8)
+    }
+    #[doc = "Bits 7:13 - Configures video B horizontal MB resolution."]
+    #[inline(always)]
+    pub fn b_sys_total_mb_x(&self) -> BSysTotalMbXR {
+        BSysTotalMbXR::new(((self.bits >> 7) & 0x7f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - Configures video B vertical MB resolution."]
+    #[inline(always)]
+    pub fn b_sys_total_mb_y(&mut self) -> BSysTotalMbYW<'_, BSysMbResSpec> {
+        BSysTotalMbYW::new(self, 0)
+    }
+    #[doc = "Bits 7:13 - Configures video B horizontal MB resolution."]
+    #[inline(always)]
+    pub fn b_sys_total_mb_x(&mut self) -> BSysTotalMbXW<'_, BSysMbResSpec> {
+        BSysTotalMbXW::new(self, 7)
+    }
+}
+#[doc = "Video B horizontal and vertical MB resolution register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_sys_mb_res::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_sys_mb_res::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BSysMbResSpec;
+impl crate::RegisterSpec for BSysMbResSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`b_sys_mb_res::R`](R) reader structure"]
+impl crate::Readable for BSysMbResSpec {}
+#[doc = "`write(|w| ..)` method takes [`b_sys_mb_res::W`](W) writer structure"]
+impl crate::Writable for BSysMbResSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets B_SYS_MB_RES to value 0"]
+impl crate::Resettable for BSysMbResSpec {}

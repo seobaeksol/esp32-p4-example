@@ -1,0 +1,35 @@
+#[doc = "Register `LP_STORE13` reader"]
+pub type R = crate::R<LpStore13Spec>;
+#[doc = "Register `LP_STORE13` writer"]
+pub type W = crate::W<LpStore13Spec>;
+#[doc = "Field `LP_SCRATCH13` reader - need_des"]
+pub type LpScratch13R = crate::FieldReader<u32>;
+#[doc = "Field `LP_SCRATCH13` writer - need_des"]
+pub type LpScratch13W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn lp_scratch13(&self) -> LpScratch13R {
+        LpScratch13R::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn lp_scratch13(&mut self) -> LpScratch13W<'_, LpStore13Spec> {
+        LpScratch13W::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_store13::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_store13::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpStore13Spec;
+impl crate::RegisterSpec for LpStore13Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_store13::R`](R) reader structure"]
+impl crate::Readable for LpStore13Spec {}
+#[doc = "`write(|w| ..)` method takes [`lp_store13::W`](W) writer structure"]
+impl crate::Writable for LpStore13Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_STORE13 to value 0"]
+impl crate::Resettable for LpStore13Spec {}

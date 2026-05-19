@@ -1,0 +1,158 @@
+#[doc = "Register `EXT_LDO_P0_0P2A` reader"]
+pub type R = crate::R<ExtLdoP0_0p2aSpec>;
+#[doc = "Register `EXT_LDO_P0_0P2A` writer"]
+pub type W = crate::W<ExtLdoP0_0p2aSpec>;
+#[doc = "Field `_0P2A_CNT_CLR_0` writer - need_des"]
+pub type _0p2aCntClr0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_FORCE_TIEH_SEL_0` reader - need_des"]
+pub type _0p2aForceTiehSel0R = crate::BitReader;
+#[doc = "Field `_0P2A_FORCE_TIEH_SEL_0` writer - need_des"]
+pub type _0p2aForceTiehSel0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_XPD_0` reader - need_des"]
+pub type _0p2aXpd0R = crate::BitReader;
+#[doc = "Field `_0P2A_XPD_0` writer - need_des"]
+pub type _0p2aXpd0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_TIEH_SEL_0` reader - need_des"]
+pub type _0p2aTiehSel0R = crate::FieldReader;
+#[doc = "Field `_0P2A_TIEH_SEL_0` writer - need_des"]
+pub type _0p2aTiehSel0W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `_0P2A_TIEH_POS_EN_0` reader - need_des"]
+pub type _0p2aTiehPosEn0R = crate::BitReader;
+#[doc = "Field `_0P2A_TIEH_POS_EN_0` writer - need_des"]
+pub type _0p2aTiehPosEn0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_TIEH_NEG_EN_0` reader - need_des"]
+pub type _0p2aTiehNegEn0R = crate::BitReader;
+#[doc = "Field `_0P2A_TIEH_NEG_EN_0` writer - need_des"]
+pub type _0p2aTiehNegEn0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_TIEH_0` reader - need_des"]
+pub type _0p2aTieh0R = crate::BitReader;
+#[doc = "Field `_0P2A_TIEH_0` writer - need_des"]
+pub type _0p2aTieh0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_TARGET1_0` reader - need_des"]
+pub type _0p2aTarget1_0R = crate::FieldReader;
+#[doc = "Field `_0P2A_TARGET1_0` writer - need_des"]
+pub type _0p2aTarget1_0W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `_0P2A_TARGET0_0` reader - need_des"]
+pub type _0p2aTarget0_0R = crate::FieldReader;
+#[doc = "Field `_0P2A_TARGET0_0` writer - need_des"]
+pub type _0p2aTarget0_0W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `_0P2A_LDO_CNT_PRESCALER_SEL_0` reader - need_des"]
+pub type _0p2aLdoCntPrescalerSel0R = crate::BitReader;
+#[doc = "Field `_0P2A_LDO_CNT_PRESCALER_SEL_0` writer - need_des"]
+pub type _0p2aLdoCntPrescalerSel0W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 7 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_force_tieh_sel_0(&self) -> _0p2aForceTiehSel0R {
+        _0p2aForceTiehSel0R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_xpd_0(&self) -> _0p2aXpd0R {
+        _0p2aXpd0R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bits 9:11 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_sel_0(&self) -> _0p2aTiehSel0R {
+        _0p2aTiehSel0R::new(((self.bits >> 9) & 7) as u8)
+    }
+    #[doc = "Bit 12 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_pos_en_0(&self) -> _0p2aTiehPosEn0R {
+        _0p2aTiehPosEn0R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_neg_en_0(&self) -> _0p2aTiehNegEn0R {
+        _0p2aTiehNegEn0R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_0(&self) -> _0p2aTieh0R {
+        _0p2aTieh0R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bits 15:22 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_target1_0(&self) -> _0p2aTarget1_0R {
+        _0p2aTarget1_0R::new(((self.bits >> 15) & 0xff) as u8)
+    }
+    #[doc = "Bits 23:30 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_target0_0(&self) -> _0p2aTarget0_0R {
+        _0p2aTarget0_0R::new(((self.bits >> 23) & 0xff) as u8)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_ldo_cnt_prescaler_sel_0(&self) -> _0p2aLdoCntPrescalerSel0R {
+        _0p2aLdoCntPrescalerSel0R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_clr_0(&mut self) -> _0p2aCntClr0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aCntClr0W::new(self, 6)
+    }
+    #[doc = "Bit 7 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_force_tieh_sel_0(&mut self) -> _0p2aForceTiehSel0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aForceTiehSel0W::new(self, 7)
+    }
+    #[doc = "Bit 8 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_xpd_0(&mut self) -> _0p2aXpd0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aXpd0W::new(self, 8)
+    }
+    #[doc = "Bits 9:11 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_sel_0(&mut self) -> _0p2aTiehSel0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aTiehSel0W::new(self, 9)
+    }
+    #[doc = "Bit 12 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_pos_en_0(&mut self) -> _0p2aTiehPosEn0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aTiehPosEn0W::new(self, 12)
+    }
+    #[doc = "Bit 13 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_neg_en_0(&mut self) -> _0p2aTiehNegEn0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aTiehNegEn0W::new(self, 13)
+    }
+    #[doc = "Bit 14 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_tieh_0(&mut self) -> _0p2aTieh0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aTieh0W::new(self, 14)
+    }
+    #[doc = "Bits 15:22 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_target1_0(&mut self) -> _0p2aTarget1_0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aTarget1_0W::new(self, 15)
+    }
+    #[doc = "Bits 23:30 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_target0_0(&mut self) -> _0p2aTarget0_0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aTarget0_0W::new(self, 23)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_ldo_cnt_prescaler_sel_0(
+        &mut self,
+    ) -> _0p2aLdoCntPrescalerSel0W<'_, ExtLdoP0_0p2aSpec> {
+        _0p2aLdoCntPrescalerSel0W::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ext_ldo_p0_0p2a::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext_ldo_p0_0p2a::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ExtLdoP0_0p2aSpec;
+impl crate::RegisterSpec for ExtLdoP0_0p2aSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ext_ldo_p0_0p2a::R`](R) reader structure"]
+impl crate::Readable for ExtLdoP0_0p2aSpec {}
+#[doc = "`write(|w| ..)` method takes [`ext_ldo_p0_0p2a::W`](W) writer structure"]
+impl crate::Writable for ExtLdoP0_0p2aSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets EXT_LDO_P0_0P2A to value 0x4020_0000"]
+impl crate::Resettable for ExtLdoP0_0p2aSpec {
+    const RESET_VALUE: u32 = 0x4020_0000;
+}

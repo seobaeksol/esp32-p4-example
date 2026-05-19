@@ -1,0 +1,288 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    sigmadelta: [Sigmadelta; 8],
+    clock_gate: ClockGate,
+    sigmadelta_misc: SigmadeltaMisc,
+    _reserved3: [u8; 0x08],
+    glitch_filter_ch: [GlitchFilterCh; 8],
+    _reserved4: [u8; 0x10],
+    etm_event_ch_cfg: [EtmEventChCfg; 8],
+    _reserved5: [u8; 0x20],
+    etm_task_p0_cfg: EtmTaskP0Cfg,
+    etm_task_p1_cfg: EtmTaskP1Cfg,
+    etm_task_p2_cfg: EtmTaskP2Cfg,
+    etm_task_p3_cfg: EtmTaskP3Cfg,
+    etm_task_p4_cfg: EtmTaskP4Cfg,
+    etm_task_p5_cfg: EtmTaskP5Cfg,
+    etm_task_p6_cfg: EtmTaskP6Cfg,
+    etm_task_p7_cfg: EtmTaskP7Cfg,
+    etm_task_p8_cfg: EtmTaskP8Cfg,
+    etm_task_p9_cfg: EtmTaskP9Cfg,
+    etm_task_p10_cfg: EtmTaskP10Cfg,
+    etm_task_p11_cfg: EtmTaskP11Cfg,
+    etm_task_p12_cfg: EtmTaskP12Cfg,
+    etm_task_p13_cfg: EtmTaskP13Cfg,
+    _reserved19: [u8; 0x24],
+    version: Version,
+}
+impl RegisterBlock {
+    #[doc = "0x00..0x20 - Duty Cycle Configure Register of SDM%s"]
+    #[inline(always)]
+    pub const fn sigmadelta(&self, n: usize) -> &Sigmadelta {
+        &self.sigmadelta[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Duty Cycle Configure Register of SDM%s"]
+    #[inline(always)]
+    pub fn sigmadelta_iter(&self) -> impl Iterator<Item = &Sigmadelta> {
+        self.sigmadelta.iter()
+    }
+    #[doc = "0x20 - Clock Gating Configure Register"]
+    #[inline(always)]
+    pub const fn clock_gate(&self) -> &ClockGate {
+        &self.clock_gate
+    }
+    #[doc = "0x24 - MISC Register"]
+    #[inline(always)]
+    pub const fn sigmadelta_misc(&self) -> &SigmadeltaMisc {
+        &self.sigmadelta_misc
+    }
+    #[doc = "0x30..0x50 - Glitch Filter Configure Register of Channel%s"]
+    #[inline(always)]
+    pub const fn glitch_filter_ch(&self, n: usize) -> &GlitchFilterCh {
+        &self.glitch_filter_ch[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x50 - Glitch Filter Configure Register of Channel%s"]
+    #[inline(always)]
+    pub fn glitch_filter_ch_iter(&self) -> impl Iterator<Item = &GlitchFilterCh> {
+        self.glitch_filter_ch.iter()
+    }
+    #[doc = "0x60..0x80 - Etm Config register of Channel%s"]
+    #[inline(always)]
+    pub const fn etm_event_ch_cfg(&self, n: usize) -> &EtmEventChCfg {
+        &self.etm_event_ch_cfg[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x80 - Etm Config register of Channel%s"]
+    #[inline(always)]
+    pub fn etm_event_ch_cfg_iter(&self) -> impl Iterator<Item = &EtmEventChCfg> {
+        self.etm_event_ch_cfg.iter()
+    }
+    #[doc = "0x60 - Etm Config register of Channel0"]
+    #[inline(always)]
+    pub const fn etm_event_ch0_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(0)
+    }
+    #[doc = "0x64 - Etm Config register of Channel1"]
+    #[inline(always)]
+    pub const fn etm_event_ch1_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(1)
+    }
+    #[doc = "0x68 - Etm Config register of Channel2"]
+    #[inline(always)]
+    pub const fn etm_event_ch2_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(2)
+    }
+    #[doc = "0x6c - Etm Config register of Channel3"]
+    #[inline(always)]
+    pub const fn etm_event_ch3_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(3)
+    }
+    #[doc = "0x70 - Etm Config register of Channel4"]
+    #[inline(always)]
+    pub const fn etm_event_ch4_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(4)
+    }
+    #[doc = "0x74 - Etm Config register of Channel5"]
+    #[inline(always)]
+    pub const fn etm_event_ch5_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(5)
+    }
+    #[doc = "0x78 - Etm Config register of Channel6"]
+    #[inline(always)]
+    pub const fn etm_event_ch6_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(6)
+    }
+    #[doc = "0x7c - Etm Config register of Channel7"]
+    #[inline(always)]
+    pub const fn etm_event_ch7_cfg(&self) -> &EtmEventChCfg {
+        self.etm_event_ch_cfg(7)
+    }
+    #[doc = "0xa0 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p0_cfg(&self) -> &EtmTaskP0Cfg {
+        &self.etm_task_p0_cfg
+    }
+    #[doc = "0xa4 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p1_cfg(&self) -> &EtmTaskP1Cfg {
+        &self.etm_task_p1_cfg
+    }
+    #[doc = "0xa8 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p2_cfg(&self) -> &EtmTaskP2Cfg {
+        &self.etm_task_p2_cfg
+    }
+    #[doc = "0xac - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p3_cfg(&self) -> &EtmTaskP3Cfg {
+        &self.etm_task_p3_cfg
+    }
+    #[doc = "0xb0 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p4_cfg(&self) -> &EtmTaskP4Cfg {
+        &self.etm_task_p4_cfg
+    }
+    #[doc = "0xb4 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p5_cfg(&self) -> &EtmTaskP5Cfg {
+        &self.etm_task_p5_cfg
+    }
+    #[doc = "0xb8 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p6_cfg(&self) -> &EtmTaskP6Cfg {
+        &self.etm_task_p6_cfg
+    }
+    #[doc = "0xbc - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p7_cfg(&self) -> &EtmTaskP7Cfg {
+        &self.etm_task_p7_cfg
+    }
+    #[doc = "0xc0 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p8_cfg(&self) -> &EtmTaskP8Cfg {
+        &self.etm_task_p8_cfg
+    }
+    #[doc = "0xc4 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p9_cfg(&self) -> &EtmTaskP9Cfg {
+        &self.etm_task_p9_cfg
+    }
+    #[doc = "0xc8 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p10_cfg(&self) -> &EtmTaskP10Cfg {
+        &self.etm_task_p10_cfg
+    }
+    #[doc = "0xcc - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p11_cfg(&self) -> &EtmTaskP11Cfg {
+        &self.etm_task_p11_cfg
+    }
+    #[doc = "0xd0 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p12_cfg(&self) -> &EtmTaskP12Cfg {
+        &self.etm_task_p12_cfg
+    }
+    #[doc = "0xd4 - Etm Configure Register to decide which GPIO been chosen"]
+    #[inline(always)]
+    pub const fn etm_task_p13_cfg(&self) -> &EtmTaskP13Cfg {
+        &self.etm_task_p13_cfg
+    }
+    #[doc = "0xfc - Version Control Register"]
+    #[inline(always)]
+    pub const fn version(&self) -> &Version {
+        &self.version
+    }
+}
+#[doc = "SIGMADELTA (rw) register accessor: Duty Cycle Configure Register of SDM%s\n\nYou can [`read`](crate::Reg::read) this register and get [`sigmadelta::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sigmadelta::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sigmadelta`] module"]
+#[doc(alias = "SIGMADELTA")]
+pub type Sigmadelta = crate::Reg<sigmadelta::SigmadeltaSpec>;
+#[doc = "Duty Cycle Configure Register of SDM%s"]
+pub mod sigmadelta;
+#[doc = "CLOCK_GATE (rw) register accessor: Clock Gating Configure Register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
+#[doc(alias = "CLOCK_GATE")]
+pub type ClockGate = crate::Reg<clock_gate::ClockGateSpec>;
+#[doc = "Clock Gating Configure Register"]
+pub mod clock_gate;
+#[doc = "SIGMADELTA_MISC (rw) register accessor: MISC Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sigmadelta_misc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sigmadelta_misc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sigmadelta_misc`] module"]
+#[doc(alias = "SIGMADELTA_MISC")]
+pub type SigmadeltaMisc = crate::Reg<sigmadelta_misc::SigmadeltaMiscSpec>;
+#[doc = "MISC Register"]
+pub mod sigmadelta_misc;
+#[doc = "GLITCH_FILTER_CH (rw) register accessor: Glitch Filter Configure Register of Channel%s\n\nYou can [`read`](crate::Reg::read) this register and get [`glitch_filter_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`glitch_filter_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@glitch_filter_ch`] module"]
+#[doc(alias = "GLITCH_FILTER_CH")]
+pub type GlitchFilterCh = crate::Reg<glitch_filter_ch::GlitchFilterChSpec>;
+#[doc = "Glitch Filter Configure Register of Channel%s"]
+pub mod glitch_filter_ch;
+#[doc = "ETM_EVENT_CH_CFG (rw) register accessor: Etm Config register of Channel%s\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_event_ch_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_event_ch_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_event_ch_cfg`] module"]
+#[doc(alias = "ETM_EVENT_CH_CFG")]
+pub type EtmEventChCfg = crate::Reg<etm_event_ch_cfg::EtmEventChCfgSpec>;
+#[doc = "Etm Config register of Channel%s"]
+pub mod etm_event_ch_cfg;
+#[doc = "ETM_TASK_P0_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p0_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p0_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p0_cfg`] module"]
+#[doc(alias = "ETM_TASK_P0_CFG")]
+pub type EtmTaskP0Cfg = crate::Reg<etm_task_p0_cfg::EtmTaskP0CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p0_cfg;
+#[doc = "ETM_TASK_P1_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p1_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p1_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p1_cfg`] module"]
+#[doc(alias = "ETM_TASK_P1_CFG")]
+pub type EtmTaskP1Cfg = crate::Reg<etm_task_p1_cfg::EtmTaskP1CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p1_cfg;
+#[doc = "ETM_TASK_P2_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p2_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p2_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p2_cfg`] module"]
+#[doc(alias = "ETM_TASK_P2_CFG")]
+pub type EtmTaskP2Cfg = crate::Reg<etm_task_p2_cfg::EtmTaskP2CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p2_cfg;
+#[doc = "ETM_TASK_P3_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p3_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p3_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p3_cfg`] module"]
+#[doc(alias = "ETM_TASK_P3_CFG")]
+pub type EtmTaskP3Cfg = crate::Reg<etm_task_p3_cfg::EtmTaskP3CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p3_cfg;
+#[doc = "ETM_TASK_P4_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p4_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p4_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p4_cfg`] module"]
+#[doc(alias = "ETM_TASK_P4_CFG")]
+pub type EtmTaskP4Cfg = crate::Reg<etm_task_p4_cfg::EtmTaskP4CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p4_cfg;
+#[doc = "ETM_TASK_P5_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p5_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p5_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p5_cfg`] module"]
+#[doc(alias = "ETM_TASK_P5_CFG")]
+pub type EtmTaskP5Cfg = crate::Reg<etm_task_p5_cfg::EtmTaskP5CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p5_cfg;
+#[doc = "ETM_TASK_P6_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p6_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p6_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p6_cfg`] module"]
+#[doc(alias = "ETM_TASK_P6_CFG")]
+pub type EtmTaskP6Cfg = crate::Reg<etm_task_p6_cfg::EtmTaskP6CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p6_cfg;
+#[doc = "ETM_TASK_P7_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p7_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p7_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p7_cfg`] module"]
+#[doc(alias = "ETM_TASK_P7_CFG")]
+pub type EtmTaskP7Cfg = crate::Reg<etm_task_p7_cfg::EtmTaskP7CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p7_cfg;
+#[doc = "ETM_TASK_P8_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p8_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p8_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p8_cfg`] module"]
+#[doc(alias = "ETM_TASK_P8_CFG")]
+pub type EtmTaskP8Cfg = crate::Reg<etm_task_p8_cfg::EtmTaskP8CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p8_cfg;
+#[doc = "ETM_TASK_P9_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p9_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p9_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p9_cfg`] module"]
+#[doc(alias = "ETM_TASK_P9_CFG")]
+pub type EtmTaskP9Cfg = crate::Reg<etm_task_p9_cfg::EtmTaskP9CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p9_cfg;
+#[doc = "ETM_TASK_P10_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p10_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p10_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p10_cfg`] module"]
+#[doc(alias = "ETM_TASK_P10_CFG")]
+pub type EtmTaskP10Cfg = crate::Reg<etm_task_p10_cfg::EtmTaskP10CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p10_cfg;
+#[doc = "ETM_TASK_P11_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p11_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p11_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p11_cfg`] module"]
+#[doc(alias = "ETM_TASK_P11_CFG")]
+pub type EtmTaskP11Cfg = crate::Reg<etm_task_p11_cfg::EtmTaskP11CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p11_cfg;
+#[doc = "ETM_TASK_P12_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p12_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p12_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p12_cfg`] module"]
+#[doc(alias = "ETM_TASK_P12_CFG")]
+pub type EtmTaskP12Cfg = crate::Reg<etm_task_p12_cfg::EtmTaskP12CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p12_cfg;
+#[doc = "ETM_TASK_P13_CFG (rw) register accessor: Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p13_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p13_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_task_p13_cfg`] module"]
+#[doc(alias = "ETM_TASK_P13_CFG")]
+pub type EtmTaskP13Cfg = crate::Reg<etm_task_p13_cfg::EtmTaskP13CfgSpec>;
+#[doc = "Etm Configure Register to decide which GPIO been chosen"]
+pub mod etm_task_p13_cfg;
+#[doc = "VERSION (rw) register accessor: Version Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`version::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`version::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@version`] module"]
+#[doc(alias = "VERSION")]
+pub type Version = crate::Reg<version::VersionSpec>;
+#[doc = "Version Control Register"]
+pub mod version;

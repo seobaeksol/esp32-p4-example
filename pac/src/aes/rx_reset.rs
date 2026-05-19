@@ -1,0 +1,22 @@
+#[doc = "Register `RX_RESET` writer"]
+pub type W = crate::W<RxResetSpec>;
+#[doc = "Field `RX_RESET` writer - Set this bit to reset rx_fifo under dma_aes working mode."]
+pub type RxResetW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Set this bit to reset rx_fifo under dma_aes working mode."]
+    #[inline(always)]
+    pub fn rx_reset(&mut self) -> RxResetW<'_, RxResetSpec> {
+        RxResetW::new(self, 0)
+    }
+}
+#[doc = "AES-DMA reset rx-fifo register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_reset::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RxResetSpec;
+impl crate::RegisterSpec for RxResetSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`rx_reset::W`](W) writer structure"]
+impl crate::Writable for RxResetSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RX_RESET to value 0"]
+impl crate::Resettable for RxResetSpec {}

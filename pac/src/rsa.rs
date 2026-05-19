@@ -1,0 +1,221 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    m_mem: [MMem; 4],
+    _reserved1: [u8; 0x01f0],
+    z_mem: [ZMem; 4],
+    _reserved2: [u8; 0x01f0],
+    y_mem: [YMem; 4],
+    _reserved3: [u8; 0x01f0],
+    x_mem: [XMem; 4],
+    _reserved4: [u8; 0x01f0],
+    m_prime: MPrime,
+    mode: Mode,
+    query_clean: QueryClean,
+    set_start_modexp: SetStartModexp,
+    set_start_modmult: SetStartModmult,
+    set_start_mult: SetStartMult,
+    query_idle: QueryIdle,
+    int_clr: IntClr,
+    constant_time: ConstantTime,
+    search_enable: SearchEnable,
+    search_pos: SearchPos,
+    int_ena: IntEna,
+    date: Date,
+}
+impl RegisterBlock {
+    #[doc = "0x00..0x10 - Represents M"]
+    #[inline(always)]
+    pub const fn m_mem(&self, n: usize) -> &MMem {
+        &self.m_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x10 - Represents M"]
+    #[inline(always)]
+    pub fn m_mem_iter(&self) -> impl Iterator<Item = &MMem> {
+        self.m_mem.iter()
+    }
+    #[doc = "0x200..0x210 - Represents Z"]
+    #[inline(always)]
+    pub const fn z_mem(&self, n: usize) -> &ZMem {
+        &self.z_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x200..0x210 - Represents Z"]
+    #[inline(always)]
+    pub fn z_mem_iter(&self) -> impl Iterator<Item = &ZMem> {
+        self.z_mem.iter()
+    }
+    #[doc = "0x400..0x410 - Represents Y"]
+    #[inline(always)]
+    pub const fn y_mem(&self, n: usize) -> &YMem {
+        &self.y_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x410 - Represents Y"]
+    #[inline(always)]
+    pub fn y_mem_iter(&self) -> impl Iterator<Item = &YMem> {
+        self.y_mem.iter()
+    }
+    #[doc = "0x600..0x610 - Represents X"]
+    #[inline(always)]
+    pub const fn x_mem(&self, n: usize) -> &XMem {
+        &self.x_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x600..0x610 - Represents X"]
+    #[inline(always)]
+    pub fn x_mem_iter(&self) -> impl Iterator<Item = &XMem> {
+        self.x_mem.iter()
+    }
+    #[doc = "0x800 - Represents M'"]
+    #[inline(always)]
+    pub const fn m_prime(&self) -> &MPrime {
+        &self.m_prime
+    }
+    #[doc = "0x804 - Configures RSA length"]
+    #[inline(always)]
+    pub const fn mode(&self) -> &Mode {
+        &self.mode
+    }
+    #[doc = "0x808 - RSA initialization status"]
+    #[inline(always)]
+    pub const fn query_clean(&self) -> &QueryClean {
+        &self.query_clean
+    }
+    #[doc = "0x80c - Starts modular exponentiation"]
+    #[inline(always)]
+    pub const fn set_start_modexp(&self) -> &SetStartModexp {
+        &self.set_start_modexp
+    }
+    #[doc = "0x810 - Starts modular multiplication"]
+    #[inline(always)]
+    pub const fn set_start_modmult(&self) -> &SetStartModmult {
+        &self.set_start_modmult
+    }
+    #[doc = "0x814 - Starts multiplication"]
+    #[inline(always)]
+    pub const fn set_start_mult(&self) -> &SetStartMult {
+        &self.set_start_mult
+    }
+    #[doc = "0x818 - Represents the RSA status"]
+    #[inline(always)]
+    pub const fn query_idle(&self) -> &QueryIdle {
+        &self.query_idle
+    }
+    #[doc = "0x81c - Clears RSA interrupt"]
+    #[inline(always)]
+    pub const fn int_clr(&self) -> &IntClr {
+        &self.int_clr
+    }
+    #[doc = "0x820 - Configures the constant_time option"]
+    #[inline(always)]
+    pub const fn constant_time(&self) -> &ConstantTime {
+        &self.constant_time
+    }
+    #[doc = "0x824 - Configures the search option"]
+    #[inline(always)]
+    pub const fn search_enable(&self) -> &SearchEnable {
+        &self.search_enable
+    }
+    #[doc = "0x828 - Configures the search position"]
+    #[inline(always)]
+    pub const fn search_pos(&self) -> &SearchPos {
+        &self.search_pos
+    }
+    #[doc = "0x82c - Enables the RSA interrupt"]
+    #[inline(always)]
+    pub const fn int_ena(&self) -> &IntEna {
+        &self.int_ena
+    }
+    #[doc = "0x830 - Version control register"]
+    #[inline(always)]
+    pub const fn date(&self) -> &Date {
+        &self.date
+    }
+}
+#[doc = "M_MEM (rw) register accessor: Represents M\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
+#[doc(alias = "M_MEM")]
+pub type MMem = crate::Reg<m_mem::MMemSpec>;
+#[doc = "Represents M"]
+pub mod m_mem;
+#[doc = "Z_MEM (rw) register accessor: Represents Z\n\nYou can [`read`](crate::Reg::read) this register and get [`z_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`z_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@z_mem`] module"]
+#[doc(alias = "Z_MEM")]
+pub type ZMem = crate::Reg<z_mem::ZMemSpec>;
+#[doc = "Represents Z"]
+pub mod z_mem;
+#[doc = "Y_MEM (rw) register accessor: Represents Y\n\nYou can [`read`](crate::Reg::read) this register and get [`y_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`y_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@y_mem`] module"]
+#[doc(alias = "Y_MEM")]
+pub type YMem = crate::Reg<y_mem::YMemSpec>;
+#[doc = "Represents Y"]
+pub mod y_mem;
+#[doc = "X_MEM (rw) register accessor: Represents X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
+#[doc(alias = "X_MEM")]
+pub type XMem = crate::Reg<x_mem::XMemSpec>;
+#[doc = "Represents X"]
+pub mod x_mem;
+#[doc = "M_PRIME (rw) register accessor: Represents M'\n\nYou can [`read`](crate::Reg::read) this register and get [`m_prime::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_prime::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_prime`] module"]
+#[doc(alias = "M_PRIME")]
+pub type MPrime = crate::Reg<m_prime::MPrimeSpec>;
+#[doc = "Represents M'"]
+pub mod m_prime;
+#[doc = "MODE (rw) register accessor: Configures RSA length\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]
+#[doc(alias = "MODE")]
+pub type Mode = crate::Reg<mode::ModeSpec>;
+#[doc = "Configures RSA length"]
+pub mod mode;
+#[doc = "QUERY_CLEAN (r) register accessor: RSA initialization status\n\nYou can [`read`](crate::Reg::read) this register and get [`query_clean::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_clean`] module"]
+#[doc(alias = "QUERY_CLEAN")]
+pub type QueryClean = crate::Reg<query_clean::QueryCleanSpec>;
+#[doc = "RSA initialization status"]
+pub mod query_clean;
+#[doc = "SET_START_MODEXP (w) register accessor: Starts modular exponentiation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start_modexp::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start_modexp`] module"]
+#[doc(alias = "SET_START_MODEXP")]
+pub type SetStartModexp = crate::Reg<set_start_modexp::SetStartModexpSpec>;
+#[doc = "Starts modular exponentiation"]
+pub mod set_start_modexp;
+#[doc = "SET_START_MODMULT (w) register accessor: Starts modular multiplication\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start_modmult::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start_modmult`] module"]
+#[doc(alias = "SET_START_MODMULT")]
+pub type SetStartModmult = crate::Reg<set_start_modmult::SetStartModmultSpec>;
+#[doc = "Starts modular multiplication"]
+pub mod set_start_modmult;
+#[doc = "SET_START_MULT (w) register accessor: Starts multiplication\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start_mult::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start_mult`] module"]
+#[doc(alias = "SET_START_MULT")]
+pub type SetStartMult = crate::Reg<set_start_mult::SetStartMultSpec>;
+#[doc = "Starts multiplication"]
+pub mod set_start_mult;
+#[doc = "QUERY_IDLE (r) register accessor: Represents the RSA status\n\nYou can [`read`](crate::Reg::read) this register and get [`query_idle::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_idle`] module"]
+#[doc(alias = "QUERY_IDLE")]
+pub type QueryIdle = crate::Reg<query_idle::QueryIdleSpec>;
+#[doc = "Represents the RSA status"]
+pub mod query_idle;
+#[doc = "INT_CLR (w) register accessor: Clears RSA interrupt\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc(alias = "INT_CLR")]
+pub type IntClr = crate::Reg<int_clr::IntClrSpec>;
+#[doc = "Clears RSA interrupt"]
+pub mod int_clr;
+#[doc = "CONSTANT_TIME (rw) register accessor: Configures the constant_time option\n\nYou can [`read`](crate::Reg::read) this register and get [`constant_time::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`constant_time::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@constant_time`] module"]
+#[doc(alias = "CONSTANT_TIME")]
+pub type ConstantTime = crate::Reg<constant_time::ConstantTimeSpec>;
+#[doc = "Configures the constant_time option"]
+pub mod constant_time;
+#[doc = "SEARCH_ENABLE (rw) register accessor: Configures the search option\n\nYou can [`read`](crate::Reg::read) this register and get [`search_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`search_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@search_enable`] module"]
+#[doc(alias = "SEARCH_ENABLE")]
+pub type SearchEnable = crate::Reg<search_enable::SearchEnableSpec>;
+#[doc = "Configures the search option"]
+pub mod search_enable;
+#[doc = "SEARCH_POS (rw) register accessor: Configures the search position\n\nYou can [`read`](crate::Reg::read) this register and get [`search_pos::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`search_pos::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@search_pos`] module"]
+#[doc(alias = "SEARCH_POS")]
+pub type SearchPos = crate::Reg<search_pos::SearchPosSpec>;
+#[doc = "Configures the search position"]
+pub mod search_pos;
+#[doc = "INT_ENA (rw) register accessor: Enables the RSA interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc(alias = "INT_ENA")]
+pub type IntEna = crate::Reg<int_ena::IntEnaSpec>;
+#[doc = "Enables the RSA interrupt"]
+pub mod int_ena;
+#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc(alias = "DATE")]
+pub type Date = crate::Reg<date::DateSpec>;
+#[doc = "Version control register"]
+pub mod date;

@@ -1,0 +1,35 @@
+#[doc = "Register `SLICE_HEADER_BYTE0` reader"]
+pub type R = crate::R<SliceHeaderByte0Spec>;
+#[doc = "Register `SLICE_HEADER_BYTE0` writer"]
+pub type W = crate::W<SliceHeaderByte0Spec>;
+#[doc = "Field `SLICE_BYTE_LSB` reader - Configures Slice Header low 32 bit"]
+pub type SliceByteLsbR = crate::FieldReader<u32>;
+#[doc = "Field `SLICE_BYTE_LSB` writer - Configures Slice Header low 32 bit"]
+pub type SliceByteLsbW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Configures Slice Header low 32 bit"]
+    #[inline(always)]
+    pub fn slice_byte_lsb(&self) -> SliceByteLsbR {
+        SliceByteLsbR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Configures Slice Header low 32 bit"]
+    #[inline(always)]
+    pub fn slice_byte_lsb(&mut self) -> SliceByteLsbW<'_, SliceHeaderByte0Spec> {
+        SliceByteLsbW::new(self, 0)
+    }
+}
+#[doc = "Frame Slice Header byte low 32 bit register.\n\nYou can [`read`](crate::Reg::read) this register and get [`slice_header_byte0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slice_header_byte0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SliceHeaderByte0Spec;
+impl crate::RegisterSpec for SliceHeaderByte0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`slice_header_byte0::R`](R) reader structure"]
+impl crate::Readable for SliceHeaderByte0Spec {}
+#[doc = "`write(|w| ..)` method takes [`slice_header_byte0::W`](W) writer structure"]
+impl crate::Writable for SliceHeaderByte0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SLICE_HEADER_BYTE0 to value 0"]
+impl crate::Resettable for SliceHeaderByte0Spec {}

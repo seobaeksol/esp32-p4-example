@@ -1,0 +1,37 @@
+#[doc = "Register `HSYNC_CNT` reader"]
+pub type R = crate::R<HsyncCntSpec>;
+#[doc = "Register `HSYNC_CNT` writer"]
+pub type W = crate::W<HsyncCntSpec>;
+#[doc = "Field `HSYNC_CNT` reader - this field configures the number of clock before hsync and after vsync and line_end when decodes pix data from idi to isp"]
+pub type HsyncCntR = crate::FieldReader;
+#[doc = "Field `HSYNC_CNT` writer - this field configures the number of clock before hsync and after vsync and line_end when decodes pix data from idi to isp"]
+pub type HsyncCntW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - this field configures the number of clock before hsync and after vsync and line_end when decodes pix data from idi to isp"]
+    #[inline(always)]
+    pub fn hsync_cnt(&self) -> HsyncCntR {
+        HsyncCntR::new((self.bits & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - this field configures the number of clock before hsync and after vsync and line_end when decodes pix data from idi to isp"]
+    #[inline(always)]
+    pub fn hsync_cnt(&mut self) -> HsyncCntW<'_, HsyncCntSpec> {
+        HsyncCntW::new(self, 0)
+    }
+}
+#[doc = "header hsync interval control register\n\nYou can [`read`](crate::Reg::read) this register and get [`hsync_cnt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hsync_cnt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HsyncCntSpec;
+impl crate::RegisterSpec for HsyncCntSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hsync_cnt::R`](R) reader structure"]
+impl crate::Readable for HsyncCntSpec {}
+#[doc = "`write(|w| ..)` method takes [`hsync_cnt::W`](W) writer structure"]
+impl crate::Writable for HsyncCntSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HSYNC_CNT to value 0x07"]
+impl crate::Resettable for HsyncCntSpec {
+    const RESET_VALUE: u32 = 0x07;
+}

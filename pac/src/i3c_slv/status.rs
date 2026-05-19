@@ -1,0 +1,175 @@
+#[doc = "Register `STATUS` reader"]
+pub type R = crate::R<StatusSpec>;
+#[doc = "Register `STATUS` writer"]
+pub type W = crate::W<StatusSpec>;
+#[doc = "Field `STNOTSTOP` reader - Is 1 if bus is busy(activity) and 0 when in a STOP condition. Other bits may also set when busy. Note that this can also be true from an S0 or S1 error, which waits for an Exit Pattern."]
+pub type StnotstopR = crate::BitReader;
+#[doc = "Field `STMSG` reader - Is 1 if this bus Slave is listening to the bus traffic or repsonding, If STNOSTOP=1, then this will be 0 when a non-matching address seen until next respeated START it STOP."]
+pub type StmsgR = crate::BitReader;
+#[doc = "Field `STCCCH` reader - Is 1 if a CCC message is being handled automatically."]
+pub type StccchR = crate::BitReader;
+#[doc = "Field `STREQRD` reader - 1 if the req in process is an sdr read from this slave or an IBI is being pushed out,"]
+pub type StreqrdR = crate::BitReader;
+#[doc = "Field `STREQWR` reader - NA"]
+pub type StreqwrR = crate::BitReader;
+#[doc = "Field `STDAA` reader - NA"]
+pub type StdaaR = crate::BitReader;
+#[doc = "Field `STHDR` reader - NA"]
+pub type SthdrR = crate::BitReader;
+#[doc = "Field `START` reader - NA"]
+pub type StartR = crate::BitReader;
+#[doc = "Field `START` writer - NA"]
+pub type StartW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MATCHED` reader - NA"]
+pub type MatchedR = crate::BitReader;
+#[doc = "Field `MATCHED` writer - NA"]
+pub type MatchedW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `STOP` reader - NA"]
+pub type StopR = crate::BitReader;
+#[doc = "Field `STOP` writer - NA"]
+pub type StopW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RXPEND` reader - Receiving a message from master,which is not being handled by block(not a CCC internally processed). For all but External FIFO, this uses DATACTRL RXTRIG, which defaults to not-empty. If DMA is enabled for RX, DMA will be signaled as well. Will self-clear if data is read(FIFO and non-FIFO)"]
+pub type RxpendR = crate::BitReader;
+#[doc = "Field `TXNOTFULL` reader - Is 1 when the To-bus buffer/FIFO can accept more data to go out. Defau:1. For all but External FIFO, this uses DATACTRL TXTRIG,which defaults to not-full. If DMA is enabled for TX, it will also be signaled to provide more."]
+pub type TxnotfullR = crate::BitReader;
+#[doc = "Field `DACHG` reader - The Slv Dynamic Address has been assigned, reassigned, or reset(lost) and is now in that state of being valid or none. Actual DA can be seen in the DYNADDR register. Note that this will also be used when MAP Auto feature is configured. This will be changing one or more MAP items. See DYNADDR and/or MAPCTRLn. DYNAADDR for the main DA(0) will indicate if last change was due to Auto MAP."]
+pub type DachgR = crate::BitReader;
+#[doc = "Field `DACHG` writer - The Slv Dynamic Address has been assigned, reassigned, or reset(lost) and is now in that state of being valid or none. Actual DA can be seen in the DYNADDR register. Note that this will also be used when MAP Auto feature is configured. This will be changing one or more MAP items. See DYNADDR and/or MAPCTRLn. DYNAADDR for the main DA(0) will indicate if last change was due to Auto MAP."]
+pub type DachgW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CCC` reader - A common -command-code(CCC), not handled by block, has been received. This acts differently between: *Broadcasted ones, which will then also correspond with RXPEND and the 1st byte will be the CCC(command) . *Direct ones, which may never be directed to this device. If it is, then the TXSEND or RXPEND will be triggered with this end the RXPEND will contain the command."]
+pub type CccR = crate::BitReader;
+#[doc = "Field `CCC` writer - A common -command-code(CCC), not handled by block, has been received. This acts differently between: *Broadcasted ones, which will then also correspond with RXPEND and the 1st byte will be the CCC(command) . *Direct ones, which may never be directed to this device. If it is, then the TXSEND or RXPEND will be triggered with this end the RXPEND will contain the command."]
+pub type CccW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ERRWARN` reader - NA"]
+pub type ErrwarnR = crate::BitReader;
+#[doc = "Field `HDRMATCH` reader - NA"]
+pub type HdrmatchR = crate::BitReader;
+#[doc = "Field `HDRMATCH` writer - NA"]
+pub type HdrmatchW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Is 1 if bus is busy(activity) and 0 when in a STOP condition. Other bits may also set when busy. Note that this can also be true from an S0 or S1 error, which waits for an Exit Pattern."]
+    #[inline(always)]
+    pub fn stnotstop(&self) -> StnotstopR {
+        StnotstopR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Is 1 if this bus Slave is listening to the bus traffic or repsonding, If STNOSTOP=1, then this will be 0 when a non-matching address seen until next respeated START it STOP."]
+    #[inline(always)]
+    pub fn stmsg(&self) -> StmsgR {
+        StmsgR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Is 1 if a CCC message is being handled automatically."]
+    #[inline(always)]
+    pub fn stccch(&self) -> StccchR {
+        StccchR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - 1 if the req in process is an sdr read from this slave or an IBI is being pushed out,"]
+    #[inline(always)]
+    pub fn streqrd(&self) -> StreqrdR {
+        StreqrdR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn streqwr(&self) -> StreqwrR {
+        StreqwrR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn stdaa(&self) -> StdaaR {
+        StdaaR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn sthdr(&self) -> SthdrR {
+        SthdrR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn start(&self) -> StartR {
+        StartR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn matched(&self) -> MatchedR {
+        MatchedR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn stop(&self) -> StopR {
+        StopR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Receiving a message from master,which is not being handled by block(not a CCC internally processed). For all but External FIFO, this uses DATACTRL RXTRIG, which defaults to not-empty. If DMA is enabled for RX, DMA will be signaled as well. Will self-clear if data is read(FIFO and non-FIFO)"]
+    #[inline(always)]
+    pub fn rxpend(&self) -> RxpendR {
+        RxpendR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Is 1 when the To-bus buffer/FIFO can accept more data to go out. Defau:1. For all but External FIFO, this uses DATACTRL TXTRIG,which defaults to not-full. If DMA is enabled for TX, it will also be signaled to provide more."]
+    #[inline(always)]
+    pub fn txnotfull(&self) -> TxnotfullR {
+        TxnotfullR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - The Slv Dynamic Address has been assigned, reassigned, or reset(lost) and is now in that state of being valid or none. Actual DA can be seen in the DYNADDR register. Note that this will also be used when MAP Auto feature is configured. This will be changing one or more MAP items. See DYNADDR and/or MAPCTRLn. DYNAADDR for the main DA(0) will indicate if last change was due to Auto MAP."]
+    #[inline(always)]
+    pub fn dachg(&self) -> DachgR {
+        DachgR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - A common -command-code(CCC), not handled by block, has been received. This acts differently between: *Broadcasted ones, which will then also correspond with RXPEND and the 1st byte will be the CCC(command) . *Direct ones, which may never be directed to this device. If it is, then the TXSEND or RXPEND will be triggered with this end the RXPEND will contain the command."]
+    #[inline(always)]
+    pub fn ccc(&self) -> CccR {
+        CccR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - NA"]
+    #[inline(always)]
+    pub fn errwarn(&self) -> ErrwarnR {
+        ErrwarnR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn hdrmatch(&self) -> HdrmatchR {
+        HdrmatchR::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn start(&mut self) -> StartW<'_, StatusSpec> {
+        StartW::new(self, 8)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn matched(&mut self) -> MatchedW<'_, StatusSpec> {
+        MatchedW::new(self, 9)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn stop(&mut self) -> StopW<'_, StatusSpec> {
+        StopW::new(self, 10)
+    }
+    #[doc = "Bit 13 - The Slv Dynamic Address has been assigned, reassigned, or reset(lost) and is now in that state of being valid or none. Actual DA can be seen in the DYNADDR register. Note that this will also be used when MAP Auto feature is configured. This will be changing one or more MAP items. See DYNADDR and/or MAPCTRLn. DYNAADDR for the main DA(0) will indicate if last change was due to Auto MAP."]
+    #[inline(always)]
+    pub fn dachg(&mut self) -> DachgW<'_, StatusSpec> {
+        DachgW::new(self, 13)
+    }
+    #[doc = "Bit 14 - A common -command-code(CCC), not handled by block, has been received. This acts differently between: *Broadcasted ones, which will then also correspond with RXPEND and the 1st byte will be the CCC(command) . *Direct ones, which may never be directed to this device. If it is, then the TXSEND or RXPEND will be triggered with this end the RXPEND will contain the command."]
+    #[inline(always)]
+    pub fn ccc(&mut self) -> CccW<'_, StatusSpec> {
+        CccW::new(self, 14)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn hdrmatch(&mut self) -> HdrmatchW<'_, StatusSpec> {
+        HdrmatchW::new(self, 16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct StatusSpec;
+impl crate::RegisterSpec for StatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status::R`](R) reader structure"]
+impl crate::Readable for StatusSpec {}
+#[doc = "`write(|w| ..)` method takes [`status::W`](W) writer structure"]
+impl crate::Writable for StatusSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets STATUS to value 0"]
+impl crate::Resettable for StatusSpec {}

@@ -1,0 +1,91 @@
+#[doc = "Register `A_ROI_REGION3` reader"]
+pub type R = crate::R<ARoiRegion3Spec>;
+#[doc = "Register `A_ROI_REGION3` writer"]
+pub type W = crate::W<ARoiRegion3Spec>;
+#[doc = "Field `X` reader - Configures the horizontal start macroblocks of region 3 in Video A."]
+pub type XR = crate::FieldReader;
+#[doc = "Field `X` writer - Configures the horizontal start macroblocks of region 3 in Video A."]
+pub type XW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `Y` reader - Configures the vertical start macroblocks of region 3 in Video A."]
+pub type YR = crate::FieldReader;
+#[doc = "Field `Y` writer - Configures the vertical start macroblocks of region 3 in Video A."]
+pub type YW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `X_LEN` reader - Configures the number of macroblocks in horizontal direction of the region 3 in video A."]
+pub type XLenR = crate::FieldReader;
+#[doc = "Field `X_LEN` writer - Configures the number of macroblocks in horizontal direction of the region 3 in video A."]
+pub type XLenW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `Y_LEN` reader - Configures the number of macroblocks in vertical direction of the region 3 in video A."]
+pub type YLenR = crate::FieldReader;
+#[doc = "Field `Y_LEN` writer - Configures the number of macroblocks in vertical direction of the region 3 in video A."]
+pub type YLenW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `EN` reader - Configures whether or not to open Video A ROI of region 3 .\\\\0:Close ROI\\\\1:Open ROI."]
+pub type EnR = crate::BitReader;
+#[doc = "Field `EN` writer - Configures whether or not to open Video A ROI of region 3 .\\\\0:Close ROI\\\\1:Open ROI."]
+pub type EnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:6 - Configures the horizontal start macroblocks of region 3 in Video A."]
+    #[inline(always)]
+    pub fn x(&self) -> XR {
+        XR::new((self.bits & 0x7f) as u8)
+    }
+    #[doc = "Bits 7:13 - Configures the vertical start macroblocks of region 3 in Video A."]
+    #[inline(always)]
+    pub fn y(&self) -> YR {
+        YR::new(((self.bits >> 7) & 0x7f) as u8)
+    }
+    #[doc = "Bits 14:20 - Configures the number of macroblocks in horizontal direction of the region 3 in video A."]
+    #[inline(always)]
+    pub fn x_len(&self) -> XLenR {
+        XLenR::new(((self.bits >> 14) & 0x7f) as u8)
+    }
+    #[doc = "Bits 21:27 - Configures the number of macroblocks in vertical direction of the region 3 in video A."]
+    #[inline(always)]
+    pub fn y_len(&self) -> YLenR {
+        YLenR::new(((self.bits >> 21) & 0x7f) as u8)
+    }
+    #[doc = "Bit 28 - Configures whether or not to open Video A ROI of region 3 .\\\\0:Close ROI\\\\1:Open ROI."]
+    #[inline(always)]
+    pub fn en(&self) -> EnR {
+        EnR::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - Configures the horizontal start macroblocks of region 3 in Video A."]
+    #[inline(always)]
+    pub fn x(&mut self) -> XW<'_, ARoiRegion3Spec> {
+        XW::new(self, 0)
+    }
+    #[doc = "Bits 7:13 - Configures the vertical start macroblocks of region 3 in Video A."]
+    #[inline(always)]
+    pub fn y(&mut self) -> YW<'_, ARoiRegion3Spec> {
+        YW::new(self, 7)
+    }
+    #[doc = "Bits 14:20 - Configures the number of macroblocks in horizontal direction of the region 3 in video A."]
+    #[inline(always)]
+    pub fn x_len(&mut self) -> XLenW<'_, ARoiRegion3Spec> {
+        XLenW::new(self, 14)
+    }
+    #[doc = "Bits 21:27 - Configures the number of macroblocks in vertical direction of the region 3 in video A."]
+    #[inline(always)]
+    pub fn y_len(&mut self) -> YLenW<'_, ARoiRegion3Spec> {
+        YLenW::new(self, 21)
+    }
+    #[doc = "Bit 28 - Configures whether or not to open Video A ROI of region 3 .\\\\0:Close ROI\\\\1:Open ROI."]
+    #[inline(always)]
+    pub fn en(&mut self) -> EnW<'_, ARoiRegion3Spec> {
+        EnW::new(self, 28)
+    }
+}
+#[doc = "Video A H264 ROI region3 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ARoiRegion3Spec;
+impl crate::RegisterSpec for ARoiRegion3Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`a_roi_region3::R`](R) reader structure"]
+impl crate::Readable for ARoiRegion3Spec {}
+#[doc = "`write(|w| ..)` method takes [`a_roi_region3::W`](W) writer structure"]
+impl crate::Writable for ARoiRegion3Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets A_ROI_REGION3 to value 0"]
+impl crate::Resettable for ARoiRegion3Spec {}

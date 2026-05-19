@@ -1,0 +1,475 @@
+#[doc = "Register `TASK_ST4` reader"]
+pub type R = crate::R<TaskSt4Spec>;
+#[doc = "Register `TASK_ST4` writer"]
+pub type W = crate::W<TaskSt4Spec>;
+#[doc = "Field `MCPWM0_TASK_CLR0_OST_ST` reader - Represents MCPWM0_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskClr0OstStR = crate::BitReader;
+#[doc = "Field `MCPWM0_TASK_CLR0_OST_ST` writer - Represents MCPWM0_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskClr0OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM0_TASK_CLR1_OST_ST` reader - Represents MCPWM0_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskClr1OstStR = crate::BitReader;
+#[doc = "Field `MCPWM0_TASK_CLR1_OST_ST` writer - Represents MCPWM0_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskClr1OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM0_TASK_CLR2_OST_ST` reader - Represents MCPWM0_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskClr2OstStR = crate::BitReader;
+#[doc = "Field `MCPWM0_TASK_CLR2_OST_ST` writer - Represents MCPWM0_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskClr2OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM0_TASK_CAP0_ST` reader - Represents MCPWM0_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskCap0StR = crate::BitReader;
+#[doc = "Field `MCPWM0_TASK_CAP0_ST` writer - Represents MCPWM0_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskCap0StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM0_TASK_CAP1_ST` reader - Represents MCPWM0_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskCap1StR = crate::BitReader;
+#[doc = "Field `MCPWM0_TASK_CAP1_ST` writer - Represents MCPWM0_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskCap1StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM0_TASK_CAP2_ST` reader - Represents MCPWM0_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskCap2StR = crate::BitReader;
+#[doc = "Field `MCPWM0_TASK_CAP2_ST` writer - Represents MCPWM0_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm0TaskCap2StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CMPR0_A_UP_ST` reader - Represents MCPWM1_task_cmpr0_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr0AUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CMPR0_A_UP_ST` writer - Represents MCPWM1_task_cmpr0_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr0AUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CMPR1_A_UP_ST` reader - Represents MCPWM1_task_cmpr1_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr1AUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CMPR1_A_UP_ST` writer - Represents MCPWM1_task_cmpr1_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr1AUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CMPR2_A_UP_ST` reader - Represents MCPWM1_task_cmpr2_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr2AUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CMPR2_A_UP_ST` writer - Represents MCPWM1_task_cmpr2_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr2AUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CMPR0_B_UP_ST` reader - Represents MCPWM1_task_cmpr0_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr0BUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CMPR0_B_UP_ST` writer - Represents MCPWM1_task_cmpr0_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr0BUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CMPR1_B_UP_ST` reader - Represents MCPWM1_task_cmpr1_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr1BUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CMPR1_B_UP_ST` writer - Represents MCPWM1_task_cmpr1_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr1BUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CMPR2_B_UP_ST` reader - Represents MCPWM1_task_cmpr2_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr2BUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CMPR2_B_UP_ST` writer - Represents MCPWM1_task_cmpr2_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCmpr2BUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_GEN_STOP_ST` reader - Represents MCPWM1_task_gen_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskGenStopStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_GEN_STOP_ST` writer - Represents MCPWM1_task_gen_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskGenStopStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TIMER0_SYN_ST` reader - Represents MCPWM1_task_timer0_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer0SynStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TIMER0_SYN_ST` writer - Represents MCPWM1_task_timer0_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer0SynStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TIMER1_SYN_ST` reader - Represents MCPWM1_task_timer1_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer1SynStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TIMER1_SYN_ST` writer - Represents MCPWM1_task_timer1_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer1SynStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TIMER2_SYN_ST` reader - Represents MCPWM1_task_timer2_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer2SynStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TIMER2_SYN_ST` writer - Represents MCPWM1_task_timer2_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer2SynStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TIMER0_PERIOD_UP_ST` reader - Represents MCPWM1_task_timer0_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer0PeriodUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TIMER0_PERIOD_UP_ST` writer - Represents MCPWM1_task_timer0_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer0PeriodUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TIMER1_PERIOD_UP_ST` reader - Represents MCPWM1_task_timer1_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer1PeriodUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TIMER1_PERIOD_UP_ST` writer - Represents MCPWM1_task_timer1_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer1PeriodUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TIMER2_PERIOD_UP_ST` reader - Represents MCPWM1_task_timer2_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer2PeriodUpStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TIMER2_PERIOD_UP_ST` writer - Represents MCPWM1_task_timer2_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTimer2PeriodUpStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TZ0_OST_ST` reader - Represents MCPWM1_task_tz0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTz0OstStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TZ0_OST_ST` writer - Represents MCPWM1_task_tz0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTz0OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TZ1_OST_ST` reader - Represents MCPWM1_task_tz1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTz1OstStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TZ1_OST_ST` writer - Represents MCPWM1_task_tz1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTz1OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_TZ2_OST_ST` reader - Represents MCPWM1_task_tz2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTz2OstStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_TZ2_OST_ST` writer - Represents MCPWM1_task_tz2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskTz2OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CLR0_OST_ST` reader - Represents MCPWM1_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskClr0OstStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CLR0_OST_ST` writer - Represents MCPWM1_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskClr0OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CLR1_OST_ST` reader - Represents MCPWM1_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskClr1OstStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CLR1_OST_ST` writer - Represents MCPWM1_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskClr1OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CLR2_OST_ST` reader - Represents MCPWM1_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskClr2OstStR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CLR2_OST_ST` writer - Represents MCPWM1_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskClr2OstStW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CAP0_ST` reader - Represents MCPWM1_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCap0StR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CAP0_ST` writer - Represents MCPWM1_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCap0StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CAP1_ST` reader - Represents MCPWM1_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCap1StR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CAP1_ST` writer - Represents MCPWM1_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCap1StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_TASK_CAP2_ST` reader - Represents MCPWM1_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCap2StR = crate::BitReader;
+#[doc = "Field `MCPWM1_TASK_CAP2_ST` writer - Represents MCPWM1_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type Mcpwm1TaskCap2StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_TASK_SAMPLE0_ST` reader - Represents ADC_task_sample0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskSample0StR = crate::BitReader;
+#[doc = "Field `ADC_TASK_SAMPLE0_ST` writer - Represents ADC_task_sample0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskSample0StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_TASK_SAMPLE1_ST` reader - Represents ADC_task_sample1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskSample1StR = crate::BitReader;
+#[doc = "Field `ADC_TASK_SAMPLE1_ST` writer - Represents ADC_task_sample1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskSample1StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_TASK_START0_ST` reader - Represents ADC_task_start0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskStart0StR = crate::BitReader;
+#[doc = "Field `ADC_TASK_START0_ST` writer - Represents ADC_task_start0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskStart0StW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_TASK_STOP0_ST` reader - Represents ADC_task_stop0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskStop0StR = crate::BitReader;
+#[doc = "Field `ADC_TASK_STOP0_ST` writer - Represents ADC_task_stop0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+pub type AdcTaskStop0StW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Represents MCPWM0_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_clr0_ost_st(&self) -> Mcpwm0TaskClr0OstStR {
+        Mcpwm0TaskClr0OstStR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Represents MCPWM0_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_clr1_ost_st(&self) -> Mcpwm0TaskClr1OstStR {
+        Mcpwm0TaskClr1OstStR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Represents MCPWM0_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_clr2_ost_st(&self) -> Mcpwm0TaskClr2OstStR {
+        Mcpwm0TaskClr2OstStR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Represents MCPWM0_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_cap0_st(&self) -> Mcpwm0TaskCap0StR {
+        Mcpwm0TaskCap0StR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Represents MCPWM0_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_cap1_st(&self) -> Mcpwm0TaskCap1StR {
+        Mcpwm0TaskCap1StR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Represents MCPWM0_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_cap2_st(&self) -> Mcpwm0TaskCap2StR {
+        Mcpwm0TaskCap2StR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Represents MCPWM1_task_cmpr0_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr0_a_up_st(&self) -> Mcpwm1TaskCmpr0AUpStR {
+        Mcpwm1TaskCmpr0AUpStR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Represents MCPWM1_task_cmpr1_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr1_a_up_st(&self) -> Mcpwm1TaskCmpr1AUpStR {
+        Mcpwm1TaskCmpr1AUpStR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Represents MCPWM1_task_cmpr2_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr2_a_up_st(&self) -> Mcpwm1TaskCmpr2AUpStR {
+        Mcpwm1TaskCmpr2AUpStR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Represents MCPWM1_task_cmpr0_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr0_b_up_st(&self) -> Mcpwm1TaskCmpr0BUpStR {
+        Mcpwm1TaskCmpr0BUpStR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Represents MCPWM1_task_cmpr1_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr1_b_up_st(&self) -> Mcpwm1TaskCmpr1BUpStR {
+        Mcpwm1TaskCmpr1BUpStR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Represents MCPWM1_task_cmpr2_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr2_b_up_st(&self) -> Mcpwm1TaskCmpr2BUpStR {
+        Mcpwm1TaskCmpr2BUpStR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Represents MCPWM1_task_gen_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_gen_stop_st(&self) -> Mcpwm1TaskGenStopStR {
+        Mcpwm1TaskGenStopStR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Represents MCPWM1_task_timer0_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer0_syn_st(&self) -> Mcpwm1TaskTimer0SynStR {
+        Mcpwm1TaskTimer0SynStR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Represents MCPWM1_task_timer1_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer1_syn_st(&self) -> Mcpwm1TaskTimer1SynStR {
+        Mcpwm1TaskTimer1SynStR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Represents MCPWM1_task_timer2_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer2_syn_st(&self) -> Mcpwm1TaskTimer2SynStR {
+        Mcpwm1TaskTimer2SynStR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Represents MCPWM1_task_timer0_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer0_period_up_st(&self) -> Mcpwm1TaskTimer0PeriodUpStR {
+        Mcpwm1TaskTimer0PeriodUpStR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Represents MCPWM1_task_timer1_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer1_period_up_st(&self) -> Mcpwm1TaskTimer1PeriodUpStR {
+        Mcpwm1TaskTimer1PeriodUpStR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Represents MCPWM1_task_timer2_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer2_period_up_st(&self) -> Mcpwm1TaskTimer2PeriodUpStR {
+        Mcpwm1TaskTimer2PeriodUpStR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Represents MCPWM1_task_tz0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_tz0_ost_st(&self) -> Mcpwm1TaskTz0OstStR {
+        Mcpwm1TaskTz0OstStR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Represents MCPWM1_task_tz1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_tz1_ost_st(&self) -> Mcpwm1TaskTz1OstStR {
+        Mcpwm1TaskTz1OstStR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Represents MCPWM1_task_tz2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_tz2_ost_st(&self) -> Mcpwm1TaskTz2OstStR {
+        Mcpwm1TaskTz2OstStR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Represents MCPWM1_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_clr0_ost_st(&self) -> Mcpwm1TaskClr0OstStR {
+        Mcpwm1TaskClr0OstStR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - Represents MCPWM1_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_clr1_ost_st(&self) -> Mcpwm1TaskClr1OstStR {
+        Mcpwm1TaskClr1OstStR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Represents MCPWM1_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_clr2_ost_st(&self) -> Mcpwm1TaskClr2OstStR {
+        Mcpwm1TaskClr2OstStR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Represents MCPWM1_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cap0_st(&self) -> Mcpwm1TaskCap0StR {
+        Mcpwm1TaskCap0StR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Represents MCPWM1_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cap1_st(&self) -> Mcpwm1TaskCap1StR {
+        Mcpwm1TaskCap1StR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Represents MCPWM1_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cap2_st(&self) -> Mcpwm1TaskCap2StR {
+        Mcpwm1TaskCap2StR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Represents ADC_task_sample0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_sample0_st(&self) -> AdcTaskSample0StR {
+        AdcTaskSample0StR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Represents ADC_task_sample1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_sample1_st(&self) -> AdcTaskSample1StR {
+        AdcTaskSample1StR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Represents ADC_task_start0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_start0_st(&self) -> AdcTaskStart0StR {
+        AdcTaskStart0StR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Represents ADC_task_stop0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_stop0_st(&self) -> AdcTaskStop0StR {
+        AdcTaskStop0StR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Represents MCPWM0_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_clr0_ost_st(&mut self) -> Mcpwm0TaskClr0OstStW<'_, TaskSt4Spec> {
+        Mcpwm0TaskClr0OstStW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Represents MCPWM0_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_clr1_ost_st(&mut self) -> Mcpwm0TaskClr1OstStW<'_, TaskSt4Spec> {
+        Mcpwm0TaskClr1OstStW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Represents MCPWM0_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_clr2_ost_st(&mut self) -> Mcpwm0TaskClr2OstStW<'_, TaskSt4Spec> {
+        Mcpwm0TaskClr2OstStW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Represents MCPWM0_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_cap0_st(&mut self) -> Mcpwm0TaskCap0StW<'_, TaskSt4Spec> {
+        Mcpwm0TaskCap0StW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Represents MCPWM0_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_cap1_st(&mut self) -> Mcpwm0TaskCap1StW<'_, TaskSt4Spec> {
+        Mcpwm0TaskCap1StW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Represents MCPWM0_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm0_task_cap2_st(&mut self) -> Mcpwm0TaskCap2StW<'_, TaskSt4Spec> {
+        Mcpwm0TaskCap2StW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Represents MCPWM1_task_cmpr0_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr0_a_up_st(&mut self) -> Mcpwm1TaskCmpr0AUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCmpr0AUpStW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Represents MCPWM1_task_cmpr1_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr1_a_up_st(&mut self) -> Mcpwm1TaskCmpr1AUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCmpr1AUpStW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Represents MCPWM1_task_cmpr2_a_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr2_a_up_st(&mut self) -> Mcpwm1TaskCmpr2AUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCmpr2AUpStW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Represents MCPWM1_task_cmpr0_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr0_b_up_st(&mut self) -> Mcpwm1TaskCmpr0BUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCmpr0BUpStW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Represents MCPWM1_task_cmpr1_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr1_b_up_st(&mut self) -> Mcpwm1TaskCmpr1BUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCmpr1BUpStW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Represents MCPWM1_task_cmpr2_b_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cmpr2_b_up_st(&mut self) -> Mcpwm1TaskCmpr2BUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCmpr2BUpStW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Represents MCPWM1_task_gen_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_gen_stop_st(&mut self) -> Mcpwm1TaskGenStopStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskGenStopStW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Represents MCPWM1_task_timer0_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer0_syn_st(&mut self) -> Mcpwm1TaskTimer0SynStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTimer0SynStW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Represents MCPWM1_task_timer1_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer1_syn_st(&mut self) -> Mcpwm1TaskTimer1SynStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTimer1SynStW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Represents MCPWM1_task_timer2_syn trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer2_syn_st(&mut self) -> Mcpwm1TaskTimer2SynStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTimer2SynStW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Represents MCPWM1_task_timer0_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer0_period_up_st(
+        &mut self,
+    ) -> Mcpwm1TaskTimer0PeriodUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTimer0PeriodUpStW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Represents MCPWM1_task_timer1_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer1_period_up_st(
+        &mut self,
+    ) -> Mcpwm1TaskTimer1PeriodUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTimer1PeriodUpStW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Represents MCPWM1_task_timer2_period_up trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_timer2_period_up_st(
+        &mut self,
+    ) -> Mcpwm1TaskTimer2PeriodUpStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTimer2PeriodUpStW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Represents MCPWM1_task_tz0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_tz0_ost_st(&mut self) -> Mcpwm1TaskTz0OstStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTz0OstStW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Represents MCPWM1_task_tz1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_tz1_ost_st(&mut self) -> Mcpwm1TaskTz1OstStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTz1OstStW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Represents MCPWM1_task_tz2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_tz2_ost_st(&mut self) -> Mcpwm1TaskTz2OstStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskTz2OstStW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Represents MCPWM1_task_clr0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_clr0_ost_st(&mut self) -> Mcpwm1TaskClr0OstStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskClr0OstStW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Represents MCPWM1_task_clr1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_clr1_ost_st(&mut self) -> Mcpwm1TaskClr1OstStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskClr1OstStW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Represents MCPWM1_task_clr2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_clr2_ost_st(&mut self) -> Mcpwm1TaskClr2OstStW<'_, TaskSt4Spec> {
+        Mcpwm1TaskClr2OstStW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Represents MCPWM1_task_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cap0_st(&mut self) -> Mcpwm1TaskCap0StW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCap0StW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Represents MCPWM1_task_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cap1_st(&mut self) -> Mcpwm1TaskCap1StW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCap1StW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Represents MCPWM1_task_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn mcpwm1_task_cap2_st(&mut self) -> Mcpwm1TaskCap2StW<'_, TaskSt4Spec> {
+        Mcpwm1TaskCap2StW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Represents ADC_task_sample0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_sample0_st(&mut self) -> AdcTaskSample0StW<'_, TaskSt4Spec> {
+        AdcTaskSample0StW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Represents ADC_task_sample1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_sample1_st(&mut self) -> AdcTaskSample1StW<'_, TaskSt4Spec> {
+        AdcTaskSample1StW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Represents ADC_task_start0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_start0_st(&mut self) -> AdcTaskStart0StW<'_, TaskSt4Spec> {
+        AdcTaskStart0StW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Represents ADC_task_stop0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
+    #[inline(always)]
+    pub fn adc_task_stop0_st(&mut self) -> AdcTaskStop0StW<'_, TaskSt4Spec> {
+        AdcTaskStop0StW::new(self, 31)
+    }
+}
+#[doc = "Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TaskSt4Spec;
+impl crate::RegisterSpec for TaskSt4Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`task_st4::R`](R) reader structure"]
+impl crate::Readable for TaskSt4Spec {}
+#[doc = "`write(|w| ..)` method takes [`task_st4::W`](W) writer structure"]
+impl crate::Writable for TaskSt4Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TASK_ST4 to value 0"]
+impl crate::Resettable for TaskSt4Spec {}

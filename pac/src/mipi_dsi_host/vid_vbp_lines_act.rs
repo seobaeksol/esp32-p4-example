@@ -1,0 +1,20 @@
+#[doc = "Register `VID_VBP_LINES_ACT` reader"]
+pub type R = crate::R<VidVbpLinesActSpec>;
+#[doc = "Field `VBP_LINES_ACT` reader - NA"]
+pub type VbpLinesActR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:9 - NA"]
+    #[inline(always)]
+    pub fn vbp_lines_act(&self) -> VbpLinesActR {
+        VbpLinesActR::new((self.bits & 0x03ff) as u16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vid_vbp_lines_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VidVbpLinesActSpec;
+impl crate::RegisterSpec for VidVbpLinesActSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vid_vbp_lines_act::R`](R) reader structure"]
+impl crate::Readable for VidVbpLinesActSpec {}
+#[doc = "`reset()` method sets VID_VBP_LINES_ACT to value 0"]
+impl crate::Resettable for VidVbpLinesActSpec {}

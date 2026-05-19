@@ -1,0 +1,22 @@
+#[doc = "Register `SLP_WAKEUP_CNTL4` writer"]
+pub type W = crate::W<SlpWakeupCntl4Spec>;
+#[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - need_des"]
+pub type SlpRejectCauseClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn slp_reject_cause_clr(&mut self) -> SlpRejectCauseClrW<'_, SlpWakeupCntl4Spec> {
+        SlpRejectCauseClrW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slp_wakeup_cntl4::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SlpWakeupCntl4Spec;
+impl crate::RegisterSpec for SlpWakeupCntl4Spec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`slp_wakeup_cntl4::W`](W) writer structure"]
+impl crate::Writable for SlpWakeupCntl4Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SLP_WAKEUP_CNTL4 to value 0"]
+impl crate::Resettable for SlpWakeupCntl4Spec {}

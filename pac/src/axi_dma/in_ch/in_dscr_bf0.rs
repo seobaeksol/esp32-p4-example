@@ -1,0 +1,20 @@
+#[doc = "Register `IN_DSCR_BF0` reader"]
+pub type R = crate::R<InDscrBf0Spec>;
+#[doc = "Field `INLINK_DSCR_BF0` reader - The address of the last inlink descriptor x-1."]
+pub type InlinkDscrBf0R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - The address of the last inlink descriptor x-1."]
+    #[inline(always)]
+    pub fn inlink_dscr_bf0(&self) -> InlinkDscrBf0R {
+        InlinkDscrBf0R::new(self.bits)
+    }
+}
+#[doc = "The last inlink descriptor address of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr_bf0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InDscrBf0Spec;
+impl crate::RegisterSpec for InDscrBf0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_dscr_bf0::R`](R) reader structure"]
+impl crate::Readable for InDscrBf0Spec {}
+#[doc = "`reset()` method sets IN_DSCR_BF0 to value 0"]
+impl crate::Resettable for InDscrBf0Spec {}

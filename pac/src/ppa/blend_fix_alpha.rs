@@ -1,0 +1,107 @@
+#[doc = "Register `BLEND_FIX_ALPHA` reader"]
+pub type R = crate::R<BlendFixAlphaSpec>;
+#[doc = "Register `BLEND_FIX_ALPHA` writer"]
+pub type W = crate::W<BlendFixAlphaSpec>;
+#[doc = "Field `BLEND0_RX_FIX_ALPHA` reader - The value would replace the alpha value in received pixel for background plane of blender when PPA_BLEND0_RX_ALPHA_CONF_EN is enabled."]
+pub type Blend0RxFixAlphaR = crate::FieldReader;
+#[doc = "Field `BLEND0_RX_FIX_ALPHA` writer - The value would replace the alpha value in received pixel for background plane of blender when PPA_BLEND0_RX_ALPHA_CONF_EN is enabled."]
+pub type Blend0RxFixAlphaW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `BLEND1_RX_FIX_ALPHA` reader - The value would replace the alpha value in received pixel for foreground plane of blender when PPA_BLEND1_RX_ALPHA_CONF_EN is enabled."]
+pub type Blend1RxFixAlphaR = crate::FieldReader;
+#[doc = "Field `BLEND1_RX_FIX_ALPHA` writer - The value would replace the alpha value in received pixel for foreground plane of blender when PPA_BLEND1_RX_ALPHA_CONF_EN is enabled."]
+pub type Blend1RxFixAlphaW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `BLEND0_RX_ALPHA_MOD` reader - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND0_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+pub type Blend0RxAlphaModR = crate::FieldReader;
+#[doc = "Field `BLEND0_RX_ALPHA_MOD` writer - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND0_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+pub type Blend0RxAlphaModW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `BLEND1_RX_ALPHA_MOD` reader - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND1_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+pub type Blend1RxAlphaModR = crate::FieldReader;
+#[doc = "Field `BLEND1_RX_ALPHA_MOD` writer - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND1_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+pub type Blend1RxAlphaModW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `BLEND0_RX_ALPHA_INV` reader - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+pub type Blend0RxAlphaInvR = crate::BitReader;
+#[doc = "Field `BLEND0_RX_ALPHA_INV` writer - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+pub type Blend0RxAlphaInvW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND1_RX_ALPHA_INV` reader - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+pub type Blend1RxAlphaInvR = crate::BitReader;
+#[doc = "Field `BLEND1_RX_ALPHA_INV` writer - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+pub type Blend1RxAlphaInvW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - The value would replace the alpha value in received pixel for background plane of blender when PPA_BLEND0_RX_ALPHA_CONF_EN is enabled."]
+    #[inline(always)]
+    pub fn blend0_rx_fix_alpha(&self) -> Blend0RxFixAlphaR {
+        Blend0RxFixAlphaR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - The value would replace the alpha value in received pixel for foreground plane of blender when PPA_BLEND1_RX_ALPHA_CONF_EN is enabled."]
+    #[inline(always)]
+    pub fn blend1_rx_fix_alpha(&self) -> Blend1RxFixAlphaR {
+        Blend1RxFixAlphaR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:17 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND0_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+    #[inline(always)]
+    pub fn blend0_rx_alpha_mod(&self) -> Blend0RxAlphaModR {
+        Blend0RxAlphaModR::new(((self.bits >> 16) & 3) as u8)
+    }
+    #[doc = "Bits 18:19 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND1_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+    #[inline(always)]
+    pub fn blend1_rx_alpha_mod(&self) -> Blend1RxAlphaModR {
+        Blend1RxAlphaModR::new(((self.bits >> 18) & 3) as u8)
+    }
+    #[doc = "Bit 20 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+    #[inline(always)]
+    pub fn blend0_rx_alpha_inv(&self) -> Blend0RxAlphaInvR {
+        Blend0RxAlphaInvR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+    #[inline(always)]
+    pub fn blend1_rx_alpha_inv(&self) -> Blend1RxAlphaInvR {
+        Blend1RxAlphaInvR::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - The value would replace the alpha value in received pixel for background plane of blender when PPA_BLEND0_RX_ALPHA_CONF_EN is enabled."]
+    #[inline(always)]
+    pub fn blend0_rx_fix_alpha(&mut self) -> Blend0RxFixAlphaW<'_, BlendFixAlphaSpec> {
+        Blend0RxFixAlphaW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - The value would replace the alpha value in received pixel for foreground plane of blender when PPA_BLEND1_RX_ALPHA_CONF_EN is enabled."]
+    #[inline(always)]
+    pub fn blend1_rx_fix_alpha(&mut self) -> Blend1RxFixAlphaW<'_, BlendFixAlphaSpec> {
+        Blend1RxFixAlphaW::new(self, 8)
+    }
+    #[doc = "Bits 16:17 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND0_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+    #[inline(always)]
+    pub fn blend0_rx_alpha_mod(&mut self) -> Blend0RxAlphaModW<'_, BlendFixAlphaSpec> {
+        Blend0RxAlphaModW::new(self, 16)
+    }
+    #[doc = "Bits 18:19 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_BLEND1_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+    #[inline(always)]
+    pub fn blend1_rx_alpha_mod(&mut self) -> Blend1RxAlphaModW<'_, BlendFixAlphaSpec> {
+        Blend1RxAlphaModW::new(self, 18)
+    }
+    #[doc = "Bit 20 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+    #[inline(always)]
+    pub fn blend0_rx_alpha_inv(&mut self) -> Blend0RxAlphaInvW<'_, BlendFixAlphaSpec> {
+        Blend0RxAlphaInvW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+    #[inline(always)]
+    pub fn blend1_rx_alpha_inv(&mut self) -> Blend1RxAlphaInvW<'_, BlendFixAlphaSpec> {
+        Blend1RxAlphaInvW::new(self, 21)
+    }
+}
+#[doc = "Blending engine alpha override register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_fix_alpha::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blend_fix_alpha::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BlendFixAlphaSpec;
+impl crate::RegisterSpec for BlendFixAlphaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`blend_fix_alpha::R`](R) reader structure"]
+impl crate::Readable for BlendFixAlphaSpec {}
+#[doc = "`write(|w| ..)` method takes [`blend_fix_alpha::W`](W) writer structure"]
+impl crate::Writable for BlendFixAlphaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BLEND_FIX_ALPHA to value 0x8080"]
+impl crate::Resettable for BlendFixAlphaSpec {
+    const RESET_VALUE: u32 = 0x8080;
+}

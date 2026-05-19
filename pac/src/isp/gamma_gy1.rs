@@ -1,0 +1,79 @@
+#[doc = "Register `GAMMA_GY1` reader"]
+pub type R = crate::R<GammaGy1Spec>;
+#[doc = "Register `GAMMA_GY1` writer"]
+pub type W = crate::W<GammaGy1Spec>;
+#[doc = "Field `GAMMA_G_Y03` reader - this field configures the point 3 of Y-axis of g channel gamma curve"]
+pub type GammaGY03R = crate::FieldReader;
+#[doc = "Field `GAMMA_G_Y03` writer - this field configures the point 3 of Y-axis of g channel gamma curve"]
+pub type GammaGY03W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GAMMA_G_Y02` reader - this field configures the point 2 of Y-axis of g channel gamma curve"]
+pub type GammaGY02R = crate::FieldReader;
+#[doc = "Field `GAMMA_G_Y02` writer - this field configures the point 2 of Y-axis of g channel gamma curve"]
+pub type GammaGY02W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GAMMA_G_Y01` reader - this field configures the point 1 of Y-axis of g channel gamma curve"]
+pub type GammaGY01R = crate::FieldReader;
+#[doc = "Field `GAMMA_G_Y01` writer - this field configures the point 1 of Y-axis of g channel gamma curve"]
+pub type GammaGY01W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GAMMA_G_Y00` reader - this field configures the point 0 of Y-axis of g channel gamma curve"]
+pub type GammaGY00R = crate::FieldReader;
+#[doc = "Field `GAMMA_G_Y00` writer - this field configures the point 0 of Y-axis of g channel gamma curve"]
+pub type GammaGY00W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - this field configures the point 3 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y03(&self) -> GammaGY03R {
+        GammaGY03R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field configures the point 2 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y02(&self) -> GammaGY02R {
+        GammaGY02R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field configures the point 1 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y01(&self) -> GammaGY01R {
+        GammaGY01R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - this field configures the point 0 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y00(&self) -> GammaGY00R {
+        GammaGY00R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - this field configures the point 3 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y03(&mut self) -> GammaGY03W<'_, GammaGy1Spec> {
+        GammaGY03W::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - this field configures the point 2 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y02(&mut self) -> GammaGY02W<'_, GammaGy1Spec> {
+        GammaGY02W::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - this field configures the point 1 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y01(&mut self) -> GammaGY01W<'_, GammaGy1Spec> {
+        GammaGY01W::new(self, 16)
+    }
+    #[doc = "Bits 24:31 - this field configures the point 0 of Y-axis of g channel gamma curve"]
+    #[inline(always)]
+    pub fn gamma_g_y00(&mut self) -> GammaGY00W<'_, GammaGy1Spec> {
+        GammaGY00W::new(self, 24)
+    }
+}
+#[doc = "point of Y-axis of g channel gamma curve register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`gamma_gy1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gamma_gy1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GammaGy1Spec;
+impl crate::RegisterSpec for GammaGy1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`gamma_gy1::R`](R) reader structure"]
+impl crate::Readable for GammaGy1Spec {}
+#[doc = "`write(|w| ..)` method takes [`gamma_gy1::W`](W) writer structure"]
+impl crate::Writable for GammaGy1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets GAMMA_GY1 to value 0x1020_3040"]
+impl crate::Resettable for GammaGy1Spec {
+    const RESET_VALUE: u32 = 0x1020_3040;
+}

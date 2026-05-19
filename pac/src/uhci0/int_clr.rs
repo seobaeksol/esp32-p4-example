@@ -1,0 +1,79 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<IntClrSpec>;
+#[doc = "Field `RX_START` writer - Set this bit to clear the raw interrupt of UHCI_RX_START_INT."]
+pub type RxStartW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TX_START` writer - Set this bit to clear the raw interrupt of UHCI_TX_START_INT."]
+pub type TxStartW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `RX_HUNG` writer - Set this bit to clear the raw interrupt of UHCI_RX_HUNG_INT."]
+pub type RxHungW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TX_HUNG` writer - Set this bit to clear the raw interrupt of UHCI_TX_HUNG_INT."]
+pub type TxHungW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SEND_S_REG_Q` writer - Set this bit to clear the raw interrupt of UHCI_SEND_S_REG_Q_INT."]
+pub type SendSRegQW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SEND_A_REG_Q` writer - Set this bit to clear the raw interrupt of UHCI_SEND_A_REG_Q_INT."]
+pub type SendARegQW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `OUTLINK_EOF_ERR` writer - Set this bit to clear the raw interrupt of UHCI_OUT_EOF_INT."]
+pub type OutlinkEofErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `APP_CTRL0` writer - Set this bit to clear the raw interrupt of UHCI_APP_CTRL0_INT."]
+pub type AppCtrl0W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `APP_CTRL1` writer - Set this bit to clear the raw interrupt of UHCI_APP_CTRL1_INT."]
+pub type AppCtrl1W<'a, REG> = crate::BitWriter1C<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Set this bit to clear the raw interrupt of UHCI_RX_START_INT."]
+    #[inline(always)]
+    pub fn rx_start(&mut self) -> RxStartW<'_, IntClrSpec> {
+        RxStartW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to clear the raw interrupt of UHCI_TX_START_INT."]
+    #[inline(always)]
+    pub fn tx_start(&mut self) -> TxStartW<'_, IntClrSpec> {
+        TxStartW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Set this bit to clear the raw interrupt of UHCI_RX_HUNG_INT."]
+    #[inline(always)]
+    pub fn rx_hung(&mut self) -> RxHungW<'_, IntClrSpec> {
+        RxHungW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Set this bit to clear the raw interrupt of UHCI_TX_HUNG_INT."]
+    #[inline(always)]
+    pub fn tx_hung(&mut self) -> TxHungW<'_, IntClrSpec> {
+        TxHungW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Set this bit to clear the raw interrupt of UHCI_SEND_S_REG_Q_INT."]
+    #[inline(always)]
+    pub fn send_s_reg_q(&mut self) -> SendSRegQW<'_, IntClrSpec> {
+        SendSRegQW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Set this bit to clear the raw interrupt of UHCI_SEND_A_REG_Q_INT."]
+    #[inline(always)]
+    pub fn send_a_reg_q(&mut self) -> SendARegQW<'_, IntClrSpec> {
+        SendARegQW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Set this bit to clear the raw interrupt of UHCI_OUT_EOF_INT."]
+    #[inline(always)]
+    pub fn outlink_eof_err(&mut self) -> OutlinkEofErrW<'_, IntClrSpec> {
+        OutlinkEofErrW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Set this bit to clear the raw interrupt of UHCI_APP_CTRL0_INT."]
+    #[inline(always)]
+    pub fn app_ctrl0(&mut self) -> AppCtrl0W<'_, IntClrSpec> {
+        AppCtrl0W::new(self, 7)
+    }
+    #[doc = "Bit 8 - Set this bit to clear the raw interrupt of UHCI_APP_CTRL1_INT."]
+    #[inline(always)]
+    pub fn app_ctrl1(&mut self) -> AppCtrl1W<'_, IntClrSpec> {
+        AppCtrl1W::new(self, 8)
+    }
+}
+#[doc = "UHCI Interrupt Clear Register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntClrSpec;
+impl crate::RegisterSpec for IntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for IntClrSpec {
+    type Safety = crate::Unsafe;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01ff;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for IntClrSpec {}

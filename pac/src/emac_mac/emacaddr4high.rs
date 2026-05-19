@@ -1,0 +1,77 @@
+#[doc = "Register `EMACADDR4HIGH` reader"]
+pub type R = crate::R<Emacaddr4highSpec>;
+#[doc = "Register `EMACADDR4HIGH` writer"]
+pub type W = crate::W<Emacaddr4highSpec>;
+#[doc = "Field `MAC_ADDRESS4_HI` reader - This field contains the upper 16 bits Bits\\[47:32\\] of the fifth 6-byte MAC address."]
+pub type MacAddress4HiR = crate::FieldReader<u16>;
+#[doc = "Field `MAC_ADDRESS4_HI` writer - This field contains the upper 16 bits Bits\\[47:32\\] of the fifth 6-byte MAC address."]
+pub type MacAddress4HiW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `MASK_BYTE_CONTROL4` reader - These bits are mask control bits for comparison of each of the EMACADDR4 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR4 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR4 High \\[15:8\\]. Bit\\[28\\]: EMACADDR4 High \\[7:0\\]. Bit\\[27\\]: EMACADDR4 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR4 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
+pub type MaskByteControl4R = crate::FieldReader;
+#[doc = "Field `MASK_BYTE_CONTROL4` writer - These bits are mask control bits for comparison of each of the EMACADDR4 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR4 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR4 High \\[15:8\\]. Bit\\[28\\]: EMACADDR4 High \\[7:0\\]. Bit\\[27\\]: EMACADDR4 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR4 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
+pub type MaskByteControl4W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SOURCE_ADDRESS4` reader - When this bit is set the EMACADDR4\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR4\\[47:0\\] is used to compare with the DA fields of the received frame."]
+pub type SourceAddress4R = crate::BitReader;
+#[doc = "Field `SOURCE_ADDRESS4` writer - When this bit is set the EMACADDR4\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR4\\[47:0\\] is used to compare with the DA fields of the received frame."]
+pub type SourceAddress4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADDRESS_ENABLE4` reader - When this bit is set the address filter module uses the fifth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
+pub type AddressEnable4R = crate::BitReader;
+#[doc = "Field `ADDRESS_ENABLE4` writer - When this bit is set the address filter module uses the fifth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
+pub type AddressEnable4W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:15 - This field contains the upper 16 bits Bits\\[47:32\\] of the fifth 6-byte MAC address."]
+    #[inline(always)]
+    pub fn mac_address4_hi(&self) -> MacAddress4HiR {
+        MacAddress4HiR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 24:29 - These bits are mask control bits for comparison of each of the EMACADDR4 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR4 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR4 High \\[15:8\\]. Bit\\[28\\]: EMACADDR4 High \\[7:0\\]. Bit\\[27\\]: EMACADDR4 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR4 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
+    #[inline(always)]
+    pub fn mask_byte_control4(&self) -> MaskByteControl4R {
+        MaskByteControl4R::new(((self.bits >> 24) & 0x3f) as u8)
+    }
+    #[doc = "Bit 30 - When this bit is set the EMACADDR4\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR4\\[47:0\\] is used to compare with the DA fields of the received frame."]
+    #[inline(always)]
+    pub fn source_address4(&self) -> SourceAddress4R {
+        SourceAddress4R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - When this bit is set the address filter module uses the fifth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
+    #[inline(always)]
+    pub fn address_enable4(&self) -> AddressEnable4R {
+        AddressEnable4R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - This field contains the upper 16 bits Bits\\[47:32\\] of the fifth 6-byte MAC address."]
+    #[inline(always)]
+    pub fn mac_address4_hi(&mut self) -> MacAddress4HiW<'_, Emacaddr4highSpec> {
+        MacAddress4HiW::new(self, 0)
+    }
+    #[doc = "Bits 24:29 - These bits are mask control bits for comparison of each of the EMACADDR4 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR4 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR4 High \\[15:8\\]. Bit\\[28\\]: EMACADDR4 High \\[7:0\\]. Bit\\[27\\]: EMACADDR4 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR4 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
+    #[inline(always)]
+    pub fn mask_byte_control4(&mut self) -> MaskByteControl4W<'_, Emacaddr4highSpec> {
+        MaskByteControl4W::new(self, 24)
+    }
+    #[doc = "Bit 30 - When this bit is set the EMACADDR4\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR4\\[47:0\\] is used to compare with the DA fields of the received frame."]
+    #[inline(always)]
+    pub fn source_address4(&mut self) -> SourceAddress4W<'_, Emacaddr4highSpec> {
+        SourceAddress4W::new(self, 30)
+    }
+    #[doc = "Bit 31 - When this bit is set the address filter module uses the fifth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
+    #[inline(always)]
+    pub fn address_enable4(&mut self) -> AddressEnable4W<'_, Emacaddr4highSpec> {
+        AddressEnable4W::new(self, 31)
+    }
+}
+#[doc = "Upper 16 bits of the fifth 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`emacaddr4high::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`emacaddr4high::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Emacaddr4highSpec;
+impl crate::RegisterSpec for Emacaddr4highSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`emacaddr4high::R`](R) reader structure"]
+impl crate::Readable for Emacaddr4highSpec {}
+#[doc = "`write(|w| ..)` method takes [`emacaddr4high::W`](W) writer structure"]
+impl crate::Writable for Emacaddr4highSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets EMACADDR4HIGH to value 0"]
+impl crate::Resettable for Emacaddr4highSpec {}

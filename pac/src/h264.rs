@@ -1,0 +1,776 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    sys_ctrl: SysCtrl,
+    gop_conf: GopConf,
+    a_sys_mb_res: ASysMbRes,
+    a_sys_conf: ASysConf,
+    a_deci_score: ADeciScore,
+    a_deci_score_offset: ADeciScoreOffset,
+    a_rc_conf0: ARcConf0,
+    a_rc_conf1: ARcConf1,
+    a_db_bypass: ADbBypass,
+    a_roi_region0: ARoiRegion0,
+    a_roi_region1: ARoiRegion1,
+    a_roi_region2: ARoiRegion2,
+    a_roi_region3: ARoiRegion3,
+    a_roi_region4: ARoiRegion4,
+    a_roi_region5: ARoiRegion5,
+    a_roi_region6: ARoiRegion6,
+    a_roi_region7: ARoiRegion7,
+    a_roi_region0_3_qp: ARoiRegion0_3Qp,
+    a_roi_region4_7_qp: ARoiRegion4_7Qp,
+    a_no_roi_region_qp_offset: ANoRoiRegionQpOffset,
+    a_roi_config: ARoiConfig,
+    b_sys_mb_res: BSysMbRes,
+    b_sys_conf: BSysConf,
+    b_deci_score: BDeciScore,
+    b_deci_score_offset: BDeciScoreOffset,
+    b_rc_conf0: BRcConf0,
+    b_rc_conf1: BRcConf1,
+    b_db_bypass: BDbBypass,
+    b_roi_region0: BRoiRegion0,
+    b_roi_region1: BRoiRegion1,
+    b_roi_region2: BRoiRegion2,
+    b_roi_region3: BRoiRegion3,
+    b_roi_region4: BRoiRegion4,
+    b_roi_region5: BRoiRegion5,
+    b_roi_region6: BRoiRegion6,
+    b_roi_region7: BRoiRegion7,
+    b_roi_region0_3_qp: BRoiRegion0_3Qp,
+    b_roi_region4_7_qp: BRoiRegion4_7Qp,
+    b_no_roi_region_qp_offset: BNoRoiRegionQpOffset,
+    b_roi_config: BRoiConfig,
+    rc_status0: RcStatus0,
+    rc_status1: RcStatus1,
+    rc_status2: RcStatus2,
+    slice_header_remain: SliceHeaderRemain,
+    slice_header_byte_length: SliceHeaderByteLength,
+    bs_threshold: BsThreshold,
+    slice_header_byte0: SliceHeaderByte0,
+    slice_header_byte1: SliceHeaderByte1,
+    int_raw: IntRaw,
+    int_st: IntSt,
+    int_ena: IntEna,
+    int_clr: IntClr,
+    conf: Conf,
+    mv_merge_config: MvMergeConfig,
+    debug_dma_sel: DebugDmaSel,
+    sys_status: SysStatus,
+    frame_code_length: FrameCodeLength,
+    debug_info0: DebugInfo0,
+    debug_info1: DebugInfo1,
+    debug_info2: DebugInfo2,
+    date: Date,
+    a_ori_conf: AOriConf,
+    b_ori_conf: BOriConf,
+    ori_debug_conf: OriDebugConf,
+    mv_merge_debug_conf: MvMergeDebugConf,
+    bs_debug_cong: BsDebugCong,
+    db_wr_temp_debug_cong: DbWrTempDebugCong,
+    db_rd_temp_debug_cong: DbRdTempDebugCong,
+    db_wr_debug_cong: DbWrDebugCong,
+    ref_debug_cong: RefDebugCong,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - H264 system level control register."]
+    #[inline(always)]
+    pub const fn sys_ctrl(&self) -> &SysCtrl {
+        &self.sys_ctrl
+    }
+    #[doc = "0x04 - GOP related configuration register."]
+    #[inline(always)]
+    pub const fn gop_conf(&self) -> &GopConf {
+        &self.gop_conf
+    }
+    #[doc = "0x08 - Video A horizontal and vertical MB resolution register."]
+    #[inline(always)]
+    pub const fn a_sys_mb_res(&self) -> &ASysMbRes {
+        &self.a_sys_mb_res
+    }
+    #[doc = "0x0c - Video A system level configuration register."]
+    #[inline(always)]
+    pub const fn a_sys_conf(&self) -> &ASysConf {
+        &self.a_sys_conf
+    }
+    #[doc = "0x10 - Video A luma and chroma MB decimate score Register."]
+    #[inline(always)]
+    pub const fn a_deci_score(&self) -> &ADeciScore {
+        &self.a_deci_score
+    }
+    #[doc = "0x14 - Video A luma and chroma MB decimate score offset Register."]
+    #[inline(always)]
+    pub const fn a_deci_score_offset(&self) -> &ADeciScoreOffset {
+        &self.a_deci_score_offset
+    }
+    #[doc = "0x18 - Video A rate control configuration register0."]
+    #[inline(always)]
+    pub const fn a_rc_conf0(&self) -> &ARcConf0 {
+        &self.a_rc_conf0
+    }
+    #[doc = "0x1c - Video A rate control configuration register1."]
+    #[inline(always)]
+    pub const fn a_rc_conf1(&self) -> &ARcConf1 {
+        &self.a_rc_conf1
+    }
+    #[doc = "0x20 - Video A Deblocking bypass register"]
+    #[inline(always)]
+    pub const fn a_db_bypass(&self) -> &ADbBypass {
+        &self.a_db_bypass
+    }
+    #[doc = "0x24 - Video A H264 ROI region0 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region0(&self) -> &ARoiRegion0 {
+        &self.a_roi_region0
+    }
+    #[doc = "0x28 - Video A H264 ROI region1 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region1(&self) -> &ARoiRegion1 {
+        &self.a_roi_region1
+    }
+    #[doc = "0x2c - Video A H264 ROI region2 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region2(&self) -> &ARoiRegion2 {
+        &self.a_roi_region2
+    }
+    #[doc = "0x30 - Video A H264 ROI region3 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region3(&self) -> &ARoiRegion3 {
+        &self.a_roi_region3
+    }
+    #[doc = "0x34 - Video A H264 ROI region4 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region4(&self) -> &ARoiRegion4 {
+        &self.a_roi_region4
+    }
+    #[doc = "0x38 - Video A H264 ROI region5 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region5(&self) -> &ARoiRegion5 {
+        &self.a_roi_region5
+    }
+    #[doc = "0x3c - Video A H264 ROI region6 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region6(&self) -> &ARoiRegion6 {
+        &self.a_roi_region6
+    }
+    #[doc = "0x40 - Video A H264 ROI region7 range configure register."]
+    #[inline(always)]
+    pub const fn a_roi_region7(&self) -> &ARoiRegion7 {
+        &self.a_roi_region7
+    }
+    #[doc = "0x44 - Video A H264 ROI region0, region1,region2,region3 QP register."]
+    #[inline(always)]
+    pub const fn a_roi_region0_3_qp(&self) -> &ARoiRegion0_3Qp {
+        &self.a_roi_region0_3_qp
+    }
+    #[doc = "0x48 - Video A H264 ROI region4, region5,region6,region7 QP register."]
+    #[inline(always)]
+    pub const fn a_roi_region4_7_qp(&self) -> &ARoiRegion4_7Qp {
+        &self.a_roi_region4_7_qp
+    }
+    #[doc = "0x4c - Video A H264 no roi region QP register."]
+    #[inline(always)]
+    pub const fn a_no_roi_region_qp_offset(&self) -> &ANoRoiRegionQpOffset {
+        &self.a_no_roi_region_qp_offset
+    }
+    #[doc = "0x50 - Video A H264 ROI configure register."]
+    #[inline(always)]
+    pub const fn a_roi_config(&self) -> &ARoiConfig {
+        &self.a_roi_config
+    }
+    #[doc = "0x54 - Video B horizontal and vertical MB resolution register."]
+    #[inline(always)]
+    pub const fn b_sys_mb_res(&self) -> &BSysMbRes {
+        &self.b_sys_mb_res
+    }
+    #[doc = "0x58 - Video B system level configuration register."]
+    #[inline(always)]
+    pub const fn b_sys_conf(&self) -> &BSysConf {
+        &self.b_sys_conf
+    }
+    #[doc = "0x5c - Video B luma and chroma MB decimate score Register."]
+    #[inline(always)]
+    pub const fn b_deci_score(&self) -> &BDeciScore {
+        &self.b_deci_score
+    }
+    #[doc = "0x60 - Video B luma and chroma MB decimate score offset Register."]
+    #[inline(always)]
+    pub const fn b_deci_score_offset(&self) -> &BDeciScoreOffset {
+        &self.b_deci_score_offset
+    }
+    #[doc = "0x64 - Video B rate control configuration register0."]
+    #[inline(always)]
+    pub const fn b_rc_conf0(&self) -> &BRcConf0 {
+        &self.b_rc_conf0
+    }
+    #[doc = "0x68 - Video B rate control configuration register1."]
+    #[inline(always)]
+    pub const fn b_rc_conf1(&self) -> &BRcConf1 {
+        &self.b_rc_conf1
+    }
+    #[doc = "0x6c - Video B Deblocking bypass register"]
+    #[inline(always)]
+    pub const fn b_db_bypass(&self) -> &BDbBypass {
+        &self.b_db_bypass
+    }
+    #[doc = "0x70 - Video B H264 ROI region0 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region0(&self) -> &BRoiRegion0 {
+        &self.b_roi_region0
+    }
+    #[doc = "0x74 - Video B H264 ROI region1 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region1(&self) -> &BRoiRegion1 {
+        &self.b_roi_region1
+    }
+    #[doc = "0x78 - Video B H264 ROI region2 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region2(&self) -> &BRoiRegion2 {
+        &self.b_roi_region2
+    }
+    #[doc = "0x7c - Video B H264 ROI region3 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region3(&self) -> &BRoiRegion3 {
+        &self.b_roi_region3
+    }
+    #[doc = "0x80 - Video B H264 ROI region4 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region4(&self) -> &BRoiRegion4 {
+        &self.b_roi_region4
+    }
+    #[doc = "0x84 - Video B H264 ROI region5 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region5(&self) -> &BRoiRegion5 {
+        &self.b_roi_region5
+    }
+    #[doc = "0x88 - Video B H264 ROI region6 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region6(&self) -> &BRoiRegion6 {
+        &self.b_roi_region6
+    }
+    #[doc = "0x8c - Video B H264 ROI region7 range configure register."]
+    #[inline(always)]
+    pub const fn b_roi_region7(&self) -> &BRoiRegion7 {
+        &self.b_roi_region7
+    }
+    #[doc = "0x90 - Video B H264 ROI region0, region1,region2,region3 QP register."]
+    #[inline(always)]
+    pub const fn b_roi_region0_3_qp(&self) -> &BRoiRegion0_3Qp {
+        &self.b_roi_region0_3_qp
+    }
+    #[doc = "0x94 - Video B H264 ROI region4, region5,region6,region7 QP register."]
+    #[inline(always)]
+    pub const fn b_roi_region4_7_qp(&self) -> &BRoiRegion4_7Qp {
+        &self.b_roi_region4_7_qp
+    }
+    #[doc = "0x98 - Video B H264 no roi region QP register."]
+    #[inline(always)]
+    pub const fn b_no_roi_region_qp_offset(&self) -> &BNoRoiRegionQpOffset {
+        &self.b_no_roi_region_qp_offset
+    }
+    #[doc = "0x9c - Video B H264 ROI configure register."]
+    #[inline(always)]
+    pub const fn b_roi_config(&self) -> &BRoiConfig {
+        &self.b_roi_config
+    }
+    #[doc = "0xa0 - Rate control status register0."]
+    #[inline(always)]
+    pub const fn rc_status0(&self) -> &RcStatus0 {
+        &self.rc_status0
+    }
+    #[doc = "0xa4 - Rate control status register1."]
+    #[inline(always)]
+    pub const fn rc_status1(&self) -> &RcStatus1 {
+        &self.rc_status1
+    }
+    #[doc = "0xa8 - Rate control status register2."]
+    #[inline(always)]
+    pub const fn rc_status2(&self) -> &RcStatus2 {
+        &self.rc_status2
+    }
+    #[doc = "0xac - Frame Slice Header remain bit register."]
+    #[inline(always)]
+    pub const fn slice_header_remain(&self) -> &SliceHeaderRemain {
+        &self.slice_header_remain
+    }
+    #[doc = "0xb0 - Frame Slice Header byte length register."]
+    #[inline(always)]
+    pub const fn slice_header_byte_length(&self) -> &SliceHeaderByteLength {
+        &self.slice_header_byte_length
+    }
+    #[doc = "0xb4 - Bitstream buffer overflow threshold register"]
+    #[inline(always)]
+    pub const fn bs_threshold(&self) -> &BsThreshold {
+        &self.bs_threshold
+    }
+    #[doc = "0xb8 - Frame Slice Header byte low 32 bit register."]
+    #[inline(always)]
+    pub const fn slice_header_byte0(&self) -> &SliceHeaderByte0 {
+        &self.slice_header_byte0
+    }
+    #[doc = "0xbc - Frame Slice Header byte high 32 bit register."]
+    #[inline(always)]
+    pub const fn slice_header_byte1(&self) -> &SliceHeaderByte1 {
+        &self.slice_header_byte1
+    }
+    #[doc = "0xc0 - Interrupt raw status register"]
+    #[inline(always)]
+    pub const fn int_raw(&self) -> &IntRaw {
+        &self.int_raw
+    }
+    #[doc = "0xc4 - Interrupt masked status register"]
+    #[inline(always)]
+    pub const fn int_st(&self) -> &IntSt {
+        &self.int_st
+    }
+    #[doc = "0xc8 - Interrupt enable register"]
+    #[inline(always)]
+    pub const fn int_ena(&self) -> &IntEna {
+        &self.int_ena
+    }
+    #[doc = "0xcc - Interrupt clear register"]
+    #[inline(always)]
+    pub const fn int_clr(&self) -> &IntClr {
+        &self.int_clr
+    }
+    #[doc = "0xd0 - General configuration register."]
+    #[inline(always)]
+    pub const fn conf(&self) -> &Conf {
+        &self.conf
+    }
+    #[doc = "0xd4 - Mv merge configuration register."]
+    #[inline(always)]
+    pub const fn mv_merge_config(&self) -> &MvMergeConfig {
+        &self.mv_merge_config
+    }
+    #[doc = "0xd8 - Debug H264 DMA select register"]
+    #[inline(always)]
+    pub const fn debug_dma_sel(&self) -> &DebugDmaSel {
+        &self.debug_dma_sel
+    }
+    #[doc = "0xdc - System status register."]
+    #[inline(always)]
+    pub const fn sys_status(&self) -> &SysStatus {
+        &self.sys_status
+    }
+    #[doc = "0xe0 - Frame code byte length register."]
+    #[inline(always)]
+    pub const fn frame_code_length(&self) -> &FrameCodeLength {
+        &self.frame_code_length
+    }
+    #[doc = "0xe4 - Debug information register0."]
+    #[inline(always)]
+    pub const fn debug_info0(&self) -> &DebugInfo0 {
+        &self.debug_info0
+    }
+    #[doc = "0xe8 - Debug information register1."]
+    #[inline(always)]
+    pub const fn debug_info1(&self) -> &DebugInfo1 {
+        &self.debug_info1
+    }
+    #[doc = "0xec - Debug information register2."]
+    #[inline(always)]
+    pub const fn debug_info2(&self) -> &DebugInfo2 {
+        &self.debug_info2
+    }
+    #[doc = "0xf0 - Version control register"]
+    #[inline(always)]
+    pub const fn date(&self) -> &Date {
+        &self.date
+    }
+    #[doc = "0xf4 - Video A original picture configuration register."]
+    #[inline(always)]
+    pub const fn a_ori_conf(&self) -> &AOriConf {
+        &self.a_ori_conf
+    }
+    #[doc = "0xf8 - Video B original picture configuration register."]
+    #[inline(always)]
+    pub const fn b_ori_conf(&self) -> &BOriConf {
+        &self.b_ori_conf
+    }
+    #[doc = "0xfc - Original picture debug configuration register."]
+    #[inline(always)]
+    pub const fn ori_debug_conf(&self) -> &OriDebugConf {
+        &self.ori_debug_conf
+    }
+    #[doc = "0x100 - Original picture debug configuration register."]
+    #[inline(always)]
+    pub const fn mv_merge_debug_conf(&self) -> &MvMergeDebugConf {
+        &self.mv_merge_debug_conf
+    }
+    #[doc = "0x104 - Encode bitstream debug configuration register"]
+    #[inline(always)]
+    pub const fn bs_debug_cong(&self) -> &BsDebugCong {
+        &self.bs_debug_cong
+    }
+    #[doc = "0x108 - Deblocking filter write temp debug configuration register"]
+    #[inline(always)]
+    pub const fn db_wr_temp_debug_cong(&self) -> &DbWrTempDebugCong {
+        &self.db_wr_temp_debug_cong
+    }
+    #[doc = "0x10c - Deblocking filter read temp debug configuration register"]
+    #[inline(always)]
+    pub const fn db_rd_temp_debug_cong(&self) -> &DbRdTempDebugCong {
+        &self.db_rd_temp_debug_cong
+    }
+    #[doc = "0x110 - Deblocking filter final data debug configuration register"]
+    #[inline(always)]
+    pub const fn db_wr_debug_cong(&self) -> &DbWrDebugCong {
+        &self.db_wr_debug_cong
+    }
+    #[doc = "0x114 - Deblocking filter final data debug configuration register"]
+    #[inline(always)]
+    pub const fn ref_debug_cong(&self) -> &RefDebugCong {
+        &self.ref_debug_cong
+    }
+}
+#[doc = "SYS_CTRL (rw) register accessor: H264 system level control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`sys_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sys_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sys_ctrl`] module"]
+#[doc(alias = "SYS_CTRL")]
+pub type SysCtrl = crate::Reg<sys_ctrl::SysCtrlSpec>;
+#[doc = "H264 system level control register."]
+pub mod sys_ctrl;
+#[doc = "GOP_CONF (rw) register accessor: GOP related configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`gop_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gop_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gop_conf`] module"]
+#[doc(alias = "GOP_CONF")]
+pub type GopConf = crate::Reg<gop_conf::GopConfSpec>;
+#[doc = "GOP related configuration register."]
+pub mod gop_conf;
+#[doc = "A_SYS_MB_RES (rw) register accessor: Video A horizontal and vertical MB resolution register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_sys_mb_res::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_sys_mb_res::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_sys_mb_res`] module"]
+#[doc(alias = "A_SYS_MB_RES")]
+pub type ASysMbRes = crate::Reg<a_sys_mb_res::ASysMbResSpec>;
+#[doc = "Video A horizontal and vertical MB resolution register."]
+pub mod a_sys_mb_res;
+#[doc = "A_SYS_CONF (rw) register accessor: Video A system level configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_sys_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_sys_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_sys_conf`] module"]
+#[doc(alias = "A_SYS_CONF")]
+pub type ASysConf = crate::Reg<a_sys_conf::ASysConfSpec>;
+#[doc = "Video A system level configuration register."]
+pub mod a_sys_conf;
+#[doc = "A_DECI_SCORE (rw) register accessor: Video A luma and chroma MB decimate score Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_deci_score::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_deci_score::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_deci_score`] module"]
+#[doc(alias = "A_DECI_SCORE")]
+pub type ADeciScore = crate::Reg<a_deci_score::ADeciScoreSpec>;
+#[doc = "Video A luma and chroma MB decimate score Register."]
+pub mod a_deci_score;
+#[doc = "A_DECI_SCORE_OFFSET (rw) register accessor: Video A luma and chroma MB decimate score offset Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_deci_score_offset::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_deci_score_offset::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_deci_score_offset`] module"]
+#[doc(alias = "A_DECI_SCORE_OFFSET")]
+pub type ADeciScoreOffset = crate::Reg<a_deci_score_offset::ADeciScoreOffsetSpec>;
+#[doc = "Video A luma and chroma MB decimate score offset Register."]
+pub mod a_deci_score_offset;
+#[doc = "A_RC_CONF0 (rw) register accessor: Video A rate control configuration register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_rc_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_rc_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_rc_conf0`] module"]
+#[doc(alias = "A_RC_CONF0")]
+pub type ARcConf0 = crate::Reg<a_rc_conf0::ARcConf0Spec>;
+#[doc = "Video A rate control configuration register0."]
+pub mod a_rc_conf0;
+#[doc = "A_RC_CONF1 (rw) register accessor: Video A rate control configuration register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_rc_conf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_rc_conf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_rc_conf1`] module"]
+#[doc(alias = "A_RC_CONF1")]
+pub type ARcConf1 = crate::Reg<a_rc_conf1::ARcConf1Spec>;
+#[doc = "Video A rate control configuration register1."]
+pub mod a_rc_conf1;
+#[doc = "A_DB_BYPASS (rw) register accessor: Video A Deblocking bypass register\n\nYou can [`read`](crate::Reg::read) this register and get [`a_db_bypass::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_db_bypass::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_db_bypass`] module"]
+#[doc(alias = "A_DB_BYPASS")]
+pub type ADbBypass = crate::Reg<a_db_bypass::ADbBypassSpec>;
+#[doc = "Video A Deblocking bypass register"]
+pub mod a_db_bypass;
+#[doc = "A_ROI_REGION0 (rw) register accessor: Video A H264 ROI region0 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region0`] module"]
+#[doc(alias = "A_ROI_REGION0")]
+pub type ARoiRegion0 = crate::Reg<a_roi_region0::ARoiRegion0Spec>;
+#[doc = "Video A H264 ROI region0 range configure register."]
+pub mod a_roi_region0;
+#[doc = "A_ROI_REGION1 (rw) register accessor: Video A H264 ROI region1 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region1`] module"]
+#[doc(alias = "A_ROI_REGION1")]
+pub type ARoiRegion1 = crate::Reg<a_roi_region1::ARoiRegion1Spec>;
+#[doc = "Video A H264 ROI region1 range configure register."]
+pub mod a_roi_region1;
+#[doc = "A_ROI_REGION2 (rw) register accessor: Video A H264 ROI region2 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region2`] module"]
+#[doc(alias = "A_ROI_REGION2")]
+pub type ARoiRegion2 = crate::Reg<a_roi_region2::ARoiRegion2Spec>;
+#[doc = "Video A H264 ROI region2 range configure register."]
+pub mod a_roi_region2;
+#[doc = "A_ROI_REGION3 (rw) register accessor: Video A H264 ROI region3 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region3`] module"]
+#[doc(alias = "A_ROI_REGION3")]
+pub type ARoiRegion3 = crate::Reg<a_roi_region3::ARoiRegion3Spec>;
+#[doc = "Video A H264 ROI region3 range configure register."]
+pub mod a_roi_region3;
+#[doc = "A_ROI_REGION4 (rw) register accessor: Video A H264 ROI region4 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region4`] module"]
+#[doc(alias = "A_ROI_REGION4")]
+pub type ARoiRegion4 = crate::Reg<a_roi_region4::ARoiRegion4Spec>;
+#[doc = "Video A H264 ROI region4 range configure register."]
+pub mod a_roi_region4;
+#[doc = "A_ROI_REGION5 (rw) register accessor: Video A H264 ROI region5 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region5`] module"]
+#[doc(alias = "A_ROI_REGION5")]
+pub type ARoiRegion5 = crate::Reg<a_roi_region5::ARoiRegion5Spec>;
+#[doc = "Video A H264 ROI region5 range configure register."]
+pub mod a_roi_region5;
+#[doc = "A_ROI_REGION6 (rw) register accessor: Video A H264 ROI region6 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region6`] module"]
+#[doc(alias = "A_ROI_REGION6")]
+pub type ARoiRegion6 = crate::Reg<a_roi_region6::ARoiRegion6Spec>;
+#[doc = "Video A H264 ROI region6 range configure register."]
+pub mod a_roi_region6;
+#[doc = "A_ROI_REGION7 (rw) register accessor: Video A H264 ROI region7 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region7`] module"]
+#[doc(alias = "A_ROI_REGION7")]
+pub type ARoiRegion7 = crate::Reg<a_roi_region7::ARoiRegion7Spec>;
+#[doc = "Video A H264 ROI region7 range configure register."]
+pub mod a_roi_region7;
+#[doc = "A_ROI_REGION0_3_QP (rw) register accessor: Video A H264 ROI region0, region1,region2,region3 QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region0_3_qp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region0_3_qp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region0_3_qp`] module"]
+#[doc(alias = "A_ROI_REGION0_3_QP")]
+pub type ARoiRegion0_3Qp = crate::Reg<a_roi_region0_3_qp::ARoiRegion0_3QpSpec>;
+#[doc = "Video A H264 ROI region0, region1,region2,region3 QP register."]
+pub mod a_roi_region0_3_qp;
+#[doc = "A_ROI_REGION4_7_QP (rw) register accessor: Video A H264 ROI region4, region5,region6,region7 QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_region4_7_qp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_region4_7_qp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_region4_7_qp`] module"]
+#[doc(alias = "A_ROI_REGION4_7_QP")]
+pub type ARoiRegion4_7Qp = crate::Reg<a_roi_region4_7_qp::ARoiRegion4_7QpSpec>;
+#[doc = "Video A H264 ROI region4, region5,region6,region7 QP register."]
+pub mod a_roi_region4_7_qp;
+#[doc = "A_NO_ROI_REGION_QP_OFFSET (rw) register accessor: Video A H264 no roi region QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_no_roi_region_qp_offset::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_no_roi_region_qp_offset::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_no_roi_region_qp_offset`] module"]
+#[doc(alias = "A_NO_ROI_REGION_QP_OFFSET")]
+pub type ANoRoiRegionQpOffset = crate::Reg<a_no_roi_region_qp_offset::ANoRoiRegionQpOffsetSpec>;
+#[doc = "Video A H264 no roi region QP register."]
+pub mod a_no_roi_region_qp_offset;
+#[doc = "A_ROI_CONFIG (rw) register accessor: Video A H264 ROI configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_roi_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_roi_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_roi_config`] module"]
+#[doc(alias = "A_ROI_CONFIG")]
+pub type ARoiConfig = crate::Reg<a_roi_config::ARoiConfigSpec>;
+#[doc = "Video A H264 ROI configure register."]
+pub mod a_roi_config;
+#[doc = "B_SYS_MB_RES (rw) register accessor: Video B horizontal and vertical MB resolution register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_sys_mb_res::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_sys_mb_res::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_sys_mb_res`] module"]
+#[doc(alias = "B_SYS_MB_RES")]
+pub type BSysMbRes = crate::Reg<b_sys_mb_res::BSysMbResSpec>;
+#[doc = "Video B horizontal and vertical MB resolution register."]
+pub mod b_sys_mb_res;
+#[doc = "B_SYS_CONF (rw) register accessor: Video B system level configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_sys_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_sys_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_sys_conf`] module"]
+#[doc(alias = "B_SYS_CONF")]
+pub type BSysConf = crate::Reg<b_sys_conf::BSysConfSpec>;
+#[doc = "Video B system level configuration register."]
+pub mod b_sys_conf;
+#[doc = "B_DECI_SCORE (rw) register accessor: Video B luma and chroma MB decimate score Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_deci_score::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_deci_score::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_deci_score`] module"]
+#[doc(alias = "B_DECI_SCORE")]
+pub type BDeciScore = crate::Reg<b_deci_score::BDeciScoreSpec>;
+#[doc = "Video B luma and chroma MB decimate score Register."]
+pub mod b_deci_score;
+#[doc = "B_DECI_SCORE_OFFSET (rw) register accessor: Video B luma and chroma MB decimate score offset Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_deci_score_offset::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_deci_score_offset::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_deci_score_offset`] module"]
+#[doc(alias = "B_DECI_SCORE_OFFSET")]
+pub type BDeciScoreOffset = crate::Reg<b_deci_score_offset::BDeciScoreOffsetSpec>;
+#[doc = "Video B luma and chroma MB decimate score offset Register."]
+pub mod b_deci_score_offset;
+#[doc = "B_RC_CONF0 (rw) register accessor: Video B rate control configuration register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_rc_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_rc_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_rc_conf0`] module"]
+#[doc(alias = "B_RC_CONF0")]
+pub type BRcConf0 = crate::Reg<b_rc_conf0::BRcConf0Spec>;
+#[doc = "Video B rate control configuration register0."]
+pub mod b_rc_conf0;
+#[doc = "B_RC_CONF1 (rw) register accessor: Video B rate control configuration register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_rc_conf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_rc_conf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_rc_conf1`] module"]
+#[doc(alias = "B_RC_CONF1")]
+pub type BRcConf1 = crate::Reg<b_rc_conf1::BRcConf1Spec>;
+#[doc = "Video B rate control configuration register1."]
+pub mod b_rc_conf1;
+#[doc = "B_DB_BYPASS (rw) register accessor: Video B Deblocking bypass register\n\nYou can [`read`](crate::Reg::read) this register and get [`b_db_bypass::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_db_bypass::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_db_bypass`] module"]
+#[doc(alias = "B_DB_BYPASS")]
+pub type BDbBypass = crate::Reg<b_db_bypass::BDbBypassSpec>;
+#[doc = "Video B Deblocking bypass register"]
+pub mod b_db_bypass;
+#[doc = "B_ROI_REGION0 (rw) register accessor: Video B H264 ROI region0 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region0`] module"]
+#[doc(alias = "B_ROI_REGION0")]
+pub type BRoiRegion0 = crate::Reg<b_roi_region0::BRoiRegion0Spec>;
+#[doc = "Video B H264 ROI region0 range configure register."]
+pub mod b_roi_region0;
+#[doc = "B_ROI_REGION1 (rw) register accessor: Video B H264 ROI region1 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region1`] module"]
+#[doc(alias = "B_ROI_REGION1")]
+pub type BRoiRegion1 = crate::Reg<b_roi_region1::BRoiRegion1Spec>;
+#[doc = "Video B H264 ROI region1 range configure register."]
+pub mod b_roi_region1;
+#[doc = "B_ROI_REGION2 (rw) register accessor: Video B H264 ROI region2 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region2`] module"]
+#[doc(alias = "B_ROI_REGION2")]
+pub type BRoiRegion2 = crate::Reg<b_roi_region2::BRoiRegion2Spec>;
+#[doc = "Video B H264 ROI region2 range configure register."]
+pub mod b_roi_region2;
+#[doc = "B_ROI_REGION3 (rw) register accessor: Video B H264 ROI region3 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region3`] module"]
+#[doc(alias = "B_ROI_REGION3")]
+pub type BRoiRegion3 = crate::Reg<b_roi_region3::BRoiRegion3Spec>;
+#[doc = "Video B H264 ROI region3 range configure register."]
+pub mod b_roi_region3;
+#[doc = "B_ROI_REGION4 (rw) register accessor: Video B H264 ROI region4 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region4`] module"]
+#[doc(alias = "B_ROI_REGION4")]
+pub type BRoiRegion4 = crate::Reg<b_roi_region4::BRoiRegion4Spec>;
+#[doc = "Video B H264 ROI region4 range configure register."]
+pub mod b_roi_region4;
+#[doc = "B_ROI_REGION5 (rw) register accessor: Video B H264 ROI region5 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region5`] module"]
+#[doc(alias = "B_ROI_REGION5")]
+pub type BRoiRegion5 = crate::Reg<b_roi_region5::BRoiRegion5Spec>;
+#[doc = "Video B H264 ROI region5 range configure register."]
+pub mod b_roi_region5;
+#[doc = "B_ROI_REGION6 (rw) register accessor: Video B H264 ROI region6 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region6`] module"]
+#[doc(alias = "B_ROI_REGION6")]
+pub type BRoiRegion6 = crate::Reg<b_roi_region6::BRoiRegion6Spec>;
+#[doc = "Video B H264 ROI region6 range configure register."]
+pub mod b_roi_region6;
+#[doc = "B_ROI_REGION7 (rw) register accessor: Video B H264 ROI region7 range configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region7`] module"]
+#[doc(alias = "B_ROI_REGION7")]
+pub type BRoiRegion7 = crate::Reg<b_roi_region7::BRoiRegion7Spec>;
+#[doc = "Video B H264 ROI region7 range configure register."]
+pub mod b_roi_region7;
+#[doc = "B_ROI_REGION0_3_QP (rw) register accessor: Video B H264 ROI region0, region1,region2,region3 QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region0_3_qp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region0_3_qp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region0_3_qp`] module"]
+#[doc(alias = "B_ROI_REGION0_3_QP")]
+pub type BRoiRegion0_3Qp = crate::Reg<b_roi_region0_3_qp::BRoiRegion0_3QpSpec>;
+#[doc = "Video B H264 ROI region0, region1,region2,region3 QP register."]
+pub mod b_roi_region0_3_qp;
+#[doc = "B_ROI_REGION4_7_QP (rw) register accessor: Video B H264 ROI region4, region5,region6,region7 QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_region4_7_qp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_region4_7_qp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_region4_7_qp`] module"]
+#[doc(alias = "B_ROI_REGION4_7_QP")]
+pub type BRoiRegion4_7Qp = crate::Reg<b_roi_region4_7_qp::BRoiRegion4_7QpSpec>;
+#[doc = "Video B H264 ROI region4, region5,region6,region7 QP register."]
+pub mod b_roi_region4_7_qp;
+#[doc = "B_NO_ROI_REGION_QP_OFFSET (rw) register accessor: Video B H264 no roi region QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_no_roi_region_qp_offset::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_no_roi_region_qp_offset::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_no_roi_region_qp_offset`] module"]
+#[doc(alias = "B_NO_ROI_REGION_QP_OFFSET")]
+pub type BNoRoiRegionQpOffset = crate::Reg<b_no_roi_region_qp_offset::BNoRoiRegionQpOffsetSpec>;
+#[doc = "Video B H264 no roi region QP register."]
+pub mod b_no_roi_region_qp_offset;
+#[doc = "B_ROI_CONFIG (rw) register accessor: Video B H264 ROI configure register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_roi_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_roi_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_roi_config`] module"]
+#[doc(alias = "B_ROI_CONFIG")]
+pub type BRoiConfig = crate::Reg<b_roi_config::BRoiConfigSpec>;
+#[doc = "Video B H264 ROI configure register."]
+pub mod b_roi_config;
+#[doc = "RC_STATUS0 (r) register accessor: Rate control status register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`rc_status0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rc_status0`] module"]
+#[doc(alias = "RC_STATUS0")]
+pub type RcStatus0 = crate::Reg<rc_status0::RcStatus0Spec>;
+#[doc = "Rate control status register0."]
+pub mod rc_status0;
+#[doc = "RC_STATUS1 (r) register accessor: Rate control status register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`rc_status1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rc_status1`] module"]
+#[doc(alias = "RC_STATUS1")]
+pub type RcStatus1 = crate::Reg<rc_status1::RcStatus1Spec>;
+#[doc = "Rate control status register1."]
+pub mod rc_status1;
+#[doc = "RC_STATUS2 (r) register accessor: Rate control status register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`rc_status2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rc_status2`] module"]
+#[doc(alias = "RC_STATUS2")]
+pub type RcStatus2 = crate::Reg<rc_status2::RcStatus2Spec>;
+#[doc = "Rate control status register2."]
+pub mod rc_status2;
+#[doc = "SLICE_HEADER_REMAIN (rw) register accessor: Frame Slice Header remain bit register.\n\nYou can [`read`](crate::Reg::read) this register and get [`slice_header_remain::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slice_header_remain::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slice_header_remain`] module"]
+#[doc(alias = "SLICE_HEADER_REMAIN")]
+pub type SliceHeaderRemain = crate::Reg<slice_header_remain::SliceHeaderRemainSpec>;
+#[doc = "Frame Slice Header remain bit register."]
+pub mod slice_header_remain;
+#[doc = "SLICE_HEADER_BYTE_LENGTH (rw) register accessor: Frame Slice Header byte length register.\n\nYou can [`read`](crate::Reg::read) this register and get [`slice_header_byte_length::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slice_header_byte_length::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slice_header_byte_length`] module"]
+#[doc(alias = "SLICE_HEADER_BYTE_LENGTH")]
+pub type SliceHeaderByteLength = crate::Reg<slice_header_byte_length::SliceHeaderByteLengthSpec>;
+#[doc = "Frame Slice Header byte length register."]
+pub mod slice_header_byte_length;
+#[doc = "BS_THRESHOLD (rw) register accessor: Bitstream buffer overflow threshold register\n\nYou can [`read`](crate::Reg::read) this register and get [`bs_threshold::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bs_threshold::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bs_threshold`] module"]
+#[doc(alias = "BS_THRESHOLD")]
+pub type BsThreshold = crate::Reg<bs_threshold::BsThresholdSpec>;
+#[doc = "Bitstream buffer overflow threshold register"]
+pub mod bs_threshold;
+#[doc = "SLICE_HEADER_BYTE0 (rw) register accessor: Frame Slice Header byte low 32 bit register.\n\nYou can [`read`](crate::Reg::read) this register and get [`slice_header_byte0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slice_header_byte0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slice_header_byte0`] module"]
+#[doc(alias = "SLICE_HEADER_BYTE0")]
+pub type SliceHeaderByte0 = crate::Reg<slice_header_byte0::SliceHeaderByte0Spec>;
+#[doc = "Frame Slice Header byte low 32 bit register."]
+pub mod slice_header_byte0;
+#[doc = "SLICE_HEADER_BYTE1 (rw) register accessor: Frame Slice Header byte high 32 bit register.\n\nYou can [`read`](crate::Reg::read) this register and get [`slice_header_byte1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slice_header_byte1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slice_header_byte1`] module"]
+#[doc(alias = "SLICE_HEADER_BYTE1")]
+pub type SliceHeaderByte1 = crate::Reg<slice_header_byte1::SliceHeaderByte1Spec>;
+#[doc = "Frame Slice Header byte high 32 bit register."]
+pub mod slice_header_byte1;
+#[doc = "INT_RAW (rw) register accessor: Interrupt raw status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc(alias = "INT_RAW")]
+pub type IntRaw = crate::Reg<int_raw::IntRawSpec>;
+#[doc = "Interrupt raw status register"]
+pub mod int_raw;
+#[doc = "INT_ST (r) register accessor: Interrupt masked status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc(alias = "INT_ST")]
+pub type IntSt = crate::Reg<int_st::IntStSpec>;
+#[doc = "Interrupt masked status register"]
+pub mod int_st;
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc(alias = "INT_ENA")]
+pub type IntEna = crate::Reg<int_ena::IntEnaSpec>;
+#[doc = "Interrupt enable register"]
+pub mod int_ena;
+#[doc = "INT_CLR (w) register accessor: Interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc(alias = "INT_CLR")]
+pub type IntClr = crate::Reg<int_clr::IntClrSpec>;
+#[doc = "Interrupt clear register"]
+pub mod int_clr;
+#[doc = "CONF (rw) register accessor: General configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
+#[doc(alias = "CONF")]
+pub type Conf = crate::Reg<conf::ConfSpec>;
+#[doc = "General configuration register."]
+pub mod conf;
+#[doc = "MV_MERGE_CONFIG (rw) register accessor: Mv merge configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mv_merge_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mv_merge_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mv_merge_config`] module"]
+#[doc(alias = "MV_MERGE_CONFIG")]
+pub type MvMergeConfig = crate::Reg<mv_merge_config::MvMergeConfigSpec>;
+#[doc = "Mv merge configuration register."]
+pub mod mv_merge_config;
+#[doc = "DEBUG_DMA_SEL (rw) register accessor: Debug H264 DMA select register\n\nYou can [`read`](crate::Reg::read) this register and get [`debug_dma_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`debug_dma_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@debug_dma_sel`] module"]
+#[doc(alias = "DEBUG_DMA_SEL")]
+pub type DebugDmaSel = crate::Reg<debug_dma_sel::DebugDmaSelSpec>;
+#[doc = "Debug H264 DMA select register"]
+pub mod debug_dma_sel;
+#[doc = "SYS_STATUS (r) register accessor: System status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`sys_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sys_status`] module"]
+#[doc(alias = "SYS_STATUS")]
+pub type SysStatus = crate::Reg<sys_status::SysStatusSpec>;
+#[doc = "System status register."]
+pub mod sys_status;
+#[doc = "FRAME_CODE_LENGTH (r) register accessor: Frame code byte length register.\n\nYou can [`read`](crate::Reg::read) this register and get [`frame_code_length::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@frame_code_length`] module"]
+#[doc(alias = "FRAME_CODE_LENGTH")]
+pub type FrameCodeLength = crate::Reg<frame_code_length::FrameCodeLengthSpec>;
+#[doc = "Frame code byte length register."]
+pub mod frame_code_length;
+#[doc = "DEBUG_INFO0 (r) register accessor: Debug information register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`debug_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@debug_info0`] module"]
+#[doc(alias = "DEBUG_INFO0")]
+pub type DebugInfo0 = crate::Reg<debug_info0::DebugInfo0Spec>;
+#[doc = "Debug information register0."]
+pub mod debug_info0;
+#[doc = "DEBUG_INFO1 (r) register accessor: Debug information register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`debug_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@debug_info1`] module"]
+#[doc(alias = "DEBUG_INFO1")]
+pub type DebugInfo1 = crate::Reg<debug_info1::DebugInfo1Spec>;
+#[doc = "Debug information register1."]
+pub mod debug_info1;
+#[doc = "DEBUG_INFO2 (r) register accessor: Debug information register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`debug_info2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@debug_info2`] module"]
+#[doc(alias = "DEBUG_INFO2")]
+pub type DebugInfo2 = crate::Reg<debug_info2::DebugInfo2Spec>;
+#[doc = "Debug information register2."]
+pub mod debug_info2;
+#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc(alias = "DATE")]
+pub type Date = crate::Reg<date::DateSpec>;
+#[doc = "Version control register"]
+pub mod date;
+#[doc = "A_ORI_CONF (rw) register accessor: Video A original picture configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_ori_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_ori_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_ori_conf`] module"]
+#[doc(alias = "A_ORI_CONF")]
+pub type AOriConf = crate::Reg<a_ori_conf::AOriConfSpec>;
+#[doc = "Video A original picture configuration register."]
+pub mod a_ori_conf;
+#[doc = "B_ORI_CONF (rw) register accessor: Video B original picture configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_ori_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_ori_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_ori_conf`] module"]
+#[doc(alias = "B_ORI_CONF")]
+pub type BOriConf = crate::Reg<b_ori_conf::BOriConfSpec>;
+#[doc = "Video B original picture configuration register."]
+pub mod b_ori_conf;
+#[doc = "ORI_DEBUG_CONF (rw) register accessor: Original picture debug configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`ori_debug_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ori_debug_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ori_debug_conf`] module"]
+#[doc(alias = "ORI_DEBUG_CONF")]
+pub type OriDebugConf = crate::Reg<ori_debug_conf::OriDebugConfSpec>;
+#[doc = "Original picture debug configuration register."]
+pub mod ori_debug_conf;
+#[doc = "MV_MERGE_DEBUG_CONF (rw) register accessor: Original picture debug configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mv_merge_debug_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mv_merge_debug_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mv_merge_debug_conf`] module"]
+#[doc(alias = "MV_MERGE_DEBUG_CONF")]
+pub type MvMergeDebugConf = crate::Reg<mv_merge_debug_conf::MvMergeDebugConfSpec>;
+#[doc = "Original picture debug configuration register."]
+pub mod mv_merge_debug_conf;
+#[doc = "BS_DEBUG_CONG (rw) register accessor: Encode bitstream debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`bs_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bs_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bs_debug_cong`] module"]
+#[doc(alias = "BS_DEBUG_CONG")]
+pub type BsDebugCong = crate::Reg<bs_debug_cong::BsDebugCongSpec>;
+#[doc = "Encode bitstream debug configuration register"]
+pub mod bs_debug_cong;
+#[doc = "DB_WR_TEMP_DEBUG_CONG (rw) register accessor: Deblocking filter write temp debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`db_wr_temp_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_wr_temp_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_wr_temp_debug_cong`] module"]
+#[doc(alias = "DB_WR_TEMP_DEBUG_CONG")]
+pub type DbWrTempDebugCong = crate::Reg<db_wr_temp_debug_cong::DbWrTempDebugCongSpec>;
+#[doc = "Deblocking filter write temp debug configuration register"]
+pub mod db_wr_temp_debug_cong;
+#[doc = "DB_RD_TEMP_DEBUG_CONG (rw) register accessor: Deblocking filter read temp debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`db_rd_temp_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_rd_temp_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_rd_temp_debug_cong`] module"]
+#[doc(alias = "DB_RD_TEMP_DEBUG_CONG")]
+pub type DbRdTempDebugCong = crate::Reg<db_rd_temp_debug_cong::DbRdTempDebugCongSpec>;
+#[doc = "Deblocking filter read temp debug configuration register"]
+pub mod db_rd_temp_debug_cong;
+#[doc = "DB_WR_DEBUG_CONG (rw) register accessor: Deblocking filter final data debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`db_wr_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_wr_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_wr_debug_cong`] module"]
+#[doc(alias = "DB_WR_DEBUG_CONG")]
+pub type DbWrDebugCong = crate::Reg<db_wr_debug_cong::DbWrDebugCongSpec>;
+#[doc = "Deblocking filter final data debug configuration register"]
+pub mod db_wr_debug_cong;
+#[doc = "REF_DEBUG_CONG (rw) register accessor: Deblocking filter final data debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`ref_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ref_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ref_debug_cong`] module"]
+#[doc(alias = "REF_DEBUG_CONG")]
+pub type RefDebugCong = crate::Reg<ref_debug_cong::RefDebugCongSpec>;
+#[doc = "Deblocking filter final data debug configuration register"]
+pub mod ref_debug_cong;

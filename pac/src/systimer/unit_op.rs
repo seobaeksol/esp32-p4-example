@@ -1,0 +1,35 @@
+#[doc = "Register `UNIT%s_OP` reader"]
+pub type R = crate::R<UnitOpSpec>;
+#[doc = "Register `UNIT%s_OP` writer"]
+pub type W = crate::W<UnitOpSpec>;
+#[doc = "Field `VALUE_VALID` reader - timer value is sync and valid"]
+pub type ValueValidR = crate::BitReader;
+#[doc = "Field `UPDATE` writer - update timer_unit0"]
+pub type UpdateW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 29 - timer value is sync and valid"]
+    #[inline(always)]
+    pub fn value_valid(&self) -> ValueValidR {
+        ValueValidR::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 30 - update timer_unit0"]
+    #[inline(always)]
+    pub fn update(&mut self) -> UpdateW<'_, UnitOpSpec> {
+        UpdateW::new(self, 30)
+    }
+}
+#[doc = "system timer unit%s value update register\n\nYou can [`read`](crate::Reg::read) this register and get [`unit_op::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit_op::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct UnitOpSpec;
+impl crate::RegisterSpec for UnitOpSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`unit_op::R`](R) reader structure"]
+impl crate::Readable for UnitOpSpec {}
+#[doc = "`write(|w| ..)` method takes [`unit_op::W`](W) writer structure"]
+impl crate::Writable for UnitOpSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets UNIT%s_OP to value 0"]
+impl crate::Resettable for UnitOpSpec {}

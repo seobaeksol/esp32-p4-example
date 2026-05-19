@@ -1,0 +1,77 @@
+#[doc = "Register `YUV_CFG` reader"]
+pub type R = crate::R<YuvCfgSpec>;
+#[doc = "Register `YUV_CFG` writer"]
+pub type W = crate::W<YuvCfgSpec>;
+#[doc = "Field `PROTOCAL` reader - this bit configures yuv protoocl, 0: bt.601, 1: bt.709"]
+pub type ProtocalR = crate::BitReader;
+#[doc = "Field `PROTOCAL` writer - this bit configures yuv protoocl, 0: bt.601, 1: bt.709"]
+pub type ProtocalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `YUV_PIX_ENDIAN` reader - this bit configures yuv pixel endian, 0: y0u0y1v1y2u2y3v3, 1: y3u3y2v2y1u1y0v0"]
+pub type YuvPixEndianR = crate::BitReader;
+#[doc = "Field `YUV_PIX_ENDIAN` writer - this bit configures yuv pixel endian, 0: y0u0y1v1y2u2y3v3, 1: y3u3y2v2y1u1y0v0"]
+pub type YuvPixEndianW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `YUV422_FORMAT` reader - this field configures yuv422 store format, 0: yuyv, 1: yvyu, 2: uyvy, 3: vyuy"]
+pub type Yuv422FormatR = crate::FieldReader;
+#[doc = "Field `YUV422_FORMAT` writer - this field configures yuv422 store format, 0: yuyv, 1: yvyu, 2: uyvy, 3: vyuy"]
+pub type Yuv422FormatW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `YUV_RANGE` reader - Configures yuv pixel range, 0: limit range, 1: full range"]
+pub type YuvRangeR = crate::BitReader;
+#[doc = "Field `YUV_RANGE` writer - Configures yuv pixel range, 0: limit range, 1: full range"]
+pub type YuvRangeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - this bit configures yuv protoocl, 0: bt.601, 1: bt.709"]
+    #[inline(always)]
+    pub fn protocal(&self) -> ProtocalR {
+        ProtocalR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - this bit configures yuv pixel endian, 0: y0u0y1v1y2u2y3v3, 1: y3u3y2v2y1u1y0v0"]
+    #[inline(always)]
+    pub fn yuv_pix_endian(&self) -> YuvPixEndianR {
+        YuvPixEndianR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:3 - this field configures yuv422 store format, 0: yuyv, 1: yvyu, 2: uyvy, 3: vyuy"]
+    #[inline(always)]
+    pub fn yuv422_format(&self) -> Yuv422FormatR {
+        Yuv422FormatR::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bit 4 - Configures yuv pixel range, 0: limit range, 1: full range"]
+    #[inline(always)]
+    pub fn yuv_range(&self) -> YuvRangeR {
+        YuvRangeR::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - this bit configures yuv protoocl, 0: bt.601, 1: bt.709"]
+    #[inline(always)]
+    pub fn protocal(&mut self) -> ProtocalW<'_, YuvCfgSpec> {
+        ProtocalW::new(self, 0)
+    }
+    #[doc = "Bit 1 - this bit configures yuv pixel endian, 0: y0u0y1v1y2u2y3v3, 1: y3u3y2v2y1u1y0v0"]
+    #[inline(always)]
+    pub fn yuv_pix_endian(&mut self) -> YuvPixEndianW<'_, YuvCfgSpec> {
+        YuvPixEndianW::new(self, 1)
+    }
+    #[doc = "Bits 2:3 - this field configures yuv422 store format, 0: yuyv, 1: yvyu, 2: uyvy, 3: vyuy"]
+    #[inline(always)]
+    pub fn yuv422_format(&mut self) -> Yuv422FormatW<'_, YuvCfgSpec> {
+        Yuv422FormatW::new(self, 2)
+    }
+    #[doc = "Bit 4 - Configures yuv pixel range, 0: limit range, 1: full range"]
+    #[inline(always)]
+    pub fn yuv_range(&mut self) -> YuvRangeW<'_, YuvCfgSpec> {
+        YuvRangeW::new(self, 4)
+    }
+}
+#[doc = "dsi_bridge yuv format config register\n\nYou can [`read`](crate::Reg::read) this register and get [`yuv_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`yuv_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct YuvCfgSpec;
+impl crate::RegisterSpec for YuvCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`yuv_cfg::R`](R) reader structure"]
+impl crate::Readable for YuvCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`yuv_cfg::W`](W) writer structure"]
+impl crate::Writable for YuvCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets YUV_CFG to value 0"]
+impl crate::Resettable for YuvCfgSpec {}

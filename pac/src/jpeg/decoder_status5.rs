@@ -1,0 +1,84 @@
+#[doc = "Register `DECODER_STATUS5` reader"]
+pub type R = crate::R<DecoderStatus5Spec>;
+#[doc = "Register `DECODER_STATUS5` writer"]
+pub type W = crate::W<DecoderStatus5Spec>;
+#[doc = "Field `IDCT_HFM_DATA` reader - Reserved"]
+pub type IdctHfmDataR = crate::FieldReader<u16>;
+#[doc = "Field `NS0` reader - Reserved"]
+pub type Ns0R = crate::FieldReader;
+#[doc = "Field `NS1` reader - Reserved"]
+pub type Ns1R = crate::FieldReader;
+#[doc = "Field `NS2` reader - Reserved"]
+pub type Ns2R = crate::FieldReader;
+#[doc = "Field `NS3` reader - Reserved"]
+pub type Ns3R = crate::FieldReader;
+#[doc = "Field `DATA_LAST_O` reader - Reserved"]
+pub type DataLastOR = crate::BitReader;
+#[doc = "Field `RDN_RESULT` reader - redundant registers for jpeg"]
+pub type RdnResultR = crate::BitReader;
+#[doc = "Field `RDN_ENA` reader - redundant control registers for jpeg"]
+pub type RdnEnaR = crate::BitReader;
+#[doc = "Field `RDN_ENA` writer - redundant control registers for jpeg"]
+pub type RdnEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:15 - Reserved"]
+    #[inline(always)]
+    pub fn idct_hfm_data(&self) -> IdctHfmDataR {
+        IdctHfmDataR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:18 - Reserved"]
+    #[inline(always)]
+    pub fn ns0(&self) -> Ns0R {
+        Ns0R::new(((self.bits >> 16) & 7) as u8)
+    }
+    #[doc = "Bits 19:21 - Reserved"]
+    #[inline(always)]
+    pub fn ns1(&self) -> Ns1R {
+        Ns1R::new(((self.bits >> 19) & 7) as u8)
+    }
+    #[doc = "Bits 22:24 - Reserved"]
+    #[inline(always)]
+    pub fn ns2(&self) -> Ns2R {
+        Ns2R::new(((self.bits >> 22) & 7) as u8)
+    }
+    #[doc = "Bits 25:27 - Reserved"]
+    #[inline(always)]
+    pub fn ns3(&self) -> Ns3R {
+        Ns3R::new(((self.bits >> 25) & 7) as u8)
+    }
+    #[doc = "Bit 28 - Reserved"]
+    #[inline(always)]
+    pub fn data_last_o(&self) -> DataLastOR {
+        DataLastOR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - redundant registers for jpeg"]
+    #[inline(always)]
+    pub fn rdn_result(&self) -> RdnResultR {
+        RdnResultR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - redundant control registers for jpeg"]
+    #[inline(always)]
+    pub fn rdn_ena(&self) -> RdnEnaR {
+        RdnEnaR::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 30 - redundant control registers for jpeg"]
+    #[inline(always)]
+    pub fn rdn_ena(&mut self) -> RdnEnaW<'_, DecoderStatus5Spec> {
+        RdnEnaW::new(self, 30)
+    }
+}
+#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`decoder_status5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DecoderStatus5Spec;
+impl crate::RegisterSpec for DecoderStatus5Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`decoder_status5::R`](R) reader structure"]
+impl crate::Readable for DecoderStatus5Spec {}
+#[doc = "`write(|w| ..)` method takes [`decoder_status5::W`](W) writer structure"]
+impl crate::Writable for DecoderStatus5Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DECODER_STATUS5 to value 0"]
+impl crate::Resettable for DecoderStatus5Spec {}

@@ -1,0 +1,35 @@
+#[doc = "Register `TX_DATA_PORT` reader"]
+pub type R = crate::R<TxDataPortSpec>;
+#[doc = "Register `TX_DATA_PORT` writer"]
+pub type W = crate::W<TxDataPortSpec>;
+#[doc = "Field `REG_TX_DATA_PORT` reader - Transmit Data Port. Transmit data is mapped to the Tx-data buffer and transmit data is always packed in 4-byte aligned data words. If the length of data transfer is not aligned to 4-bytes boundary, then there will be extra(unused) bytes(the additional data bytes have to be ignored) at the end of the transferred data. The valid data must be identified using the DATA_LENGTH filed in the Response Descriptor."]
+pub type RegTxDataPortR = crate::FieldReader<u32>;
+#[doc = "Field `REG_TX_DATA_PORT` writer - Transmit Data Port. Transmit data is mapped to the Tx-data buffer and transmit data is always packed in 4-byte aligned data words. If the length of data transfer is not aligned to 4-bytes boundary, then there will be extra(unused) bytes(the additional data bytes have to be ignored) at the end of the transferred data. The valid data must be identified using the DATA_LENGTH filed in the Response Descriptor."]
+pub type RegTxDataPortW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Transmit Data Port. Transmit data is mapped to the Tx-data buffer and transmit data is always packed in 4-byte aligned data words. If the length of data transfer is not aligned to 4-bytes boundary, then there will be extra(unused) bytes(the additional data bytes have to be ignored) at the end of the transferred data. The valid data must be identified using the DATA_LENGTH filed in the Response Descriptor."]
+    #[inline(always)]
+    pub fn reg_tx_data_port(&self) -> RegTxDataPortR {
+        RegTxDataPortR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Transmit Data Port. Transmit data is mapped to the Tx-data buffer and transmit data is always packed in 4-byte aligned data words. If the length of data transfer is not aligned to 4-bytes boundary, then there will be extra(unused) bytes(the additional data bytes have to be ignored) at the end of the transferred data. The valid data must be identified using the DATA_LENGTH filed in the Response Descriptor."]
+    #[inline(always)]
+    pub fn reg_tx_data_port(&mut self) -> RegTxDataPortW<'_, TxDataPortSpec> {
+        RegTxDataPortW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_data_port::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_data_port::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TxDataPortSpec;
+impl crate::RegisterSpec for TxDataPortSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tx_data_port::R`](R) reader structure"]
+impl crate::Readable for TxDataPortSpec {}
+#[doc = "`write(|w| ..)` method takes [`tx_data_port::W`](W) writer structure"]
+impl crate::Writable for TxDataPortSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TX_DATA_PORT to value 0"]
+impl crate::Resettable for TxDataPortSpec {}

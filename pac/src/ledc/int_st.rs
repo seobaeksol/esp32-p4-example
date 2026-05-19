@@ -1,0 +1,164 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `TIMER_OVF(0-3)` reader - This is the masked interrupt status bit for the TIMER%s_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+pub type TimerOvfR = crate::BitReader;
+#[doc = "Field `DUTY_CHNG_END_CH(0-7)` reader - This is the masked interrupt status bit for the DUTY_CHNG_END_CH%s interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+pub type DutyChngEndChR = crate::BitReader;
+#[doc = "Field `OVF_CNT_CH(0-7)` reader - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH%s interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+pub type OvfCntChR = crate::BitReader;
+impl R {
+    #[doc = "This is the masked interrupt status bit for the TIMER(0-3)_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
+    #[inline(always)]
+    pub fn timer_ovf(&self, n: u8) -> TimerOvfR {
+        #[allow(clippy::no_effect)]
+        [(); 4][n as usize];
+        TimerOvfR::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "This is the masked interrupt status bit for the TIMER(0-3)_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+    #[inline(always)]
+    pub fn timer_ovf_iter(&self) -> impl Iterator<Item = TimerOvfR> + '_ {
+        (0..4).map(move |n| TimerOvfR::new(((self.bits >> n) & 1) != 0))
+    }
+    #[doc = "Bit 0 - This is the masked interrupt status bit for the TIMER0_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+    #[inline(always)]
+    pub fn timer0_ovf(&self) -> TimerOvfR {
+        TimerOvfR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - This is the masked interrupt status bit for the TIMER1_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+    #[inline(always)]
+    pub fn timer1_ovf(&self) -> TimerOvfR {
+        TimerOvfR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - This is the masked interrupt status bit for the TIMER2_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+    #[inline(always)]
+    pub fn timer2_ovf(&self) -> TimerOvfR {
+        TimerOvfR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - This is the masked interrupt status bit for the TIMER3_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
+    #[inline(always)]
+    pub fn timer3_ovf(&self) -> TimerOvfR {
+        TimerOvfR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "This is the masked interrupt status bit for the DUTY_CHNG_END_CH(0-7) interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
+    #[inline(always)]
+    pub fn duty_chng_end_ch(&self, n: u8) -> DutyChngEndChR {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
+        DutyChngEndChR::new(((self.bits >> (n + 4)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "This is the masked interrupt status bit for the DUTY_CHNG_END_CH(0-7) interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch_iter(&self) -> impl Iterator<Item = DutyChngEndChR> + '_ {
+        (0..8).map(move |n| DutyChngEndChR::new(((self.bits >> (n + 4)) & 1) != 0))
+    }
+    #[doc = "Bit 4 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH0 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch0(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH1 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch1(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH2 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch2(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH3 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch3(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH4 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch4(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH5 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch5(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH6 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch6(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - This is the masked interrupt status bit for the DUTY_CHNG_END_CH7 interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
+    #[inline(always)]
+    pub fn duty_chng_end_ch7(&self) -> DutyChngEndChR {
+        DutyChngEndChR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH(0-7) interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
+    #[inline(always)]
+    pub fn ovf_cnt_ch(&self, n: u8) -> OvfCntChR {
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
+        OvfCntChR::new(((self.bits >> (n + 12)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH(0-7) interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch_iter(&self) -> impl Iterator<Item = OvfCntChR> + '_ {
+        (0..8).map(move |n| OvfCntChR::new(((self.bits >> (n + 12)) & 1) != 0))
+    }
+    #[doc = "Bit 12 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH0 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch0(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH1 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch1(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH2 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch2(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH3 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch3(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH4 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch4(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH5 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch5(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH6 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch6(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH7 interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
+    #[inline(always)]
+    pub fn ovf_cnt_ch7(&self) -> OvfCntChR {
+        OvfCntChR::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[doc = "Interrupt masked status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

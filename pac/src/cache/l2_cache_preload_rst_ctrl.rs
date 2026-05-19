@@ -1,0 +1,35 @@
+#[doc = "Register `L2_CACHE_PRELOAD_RST_CTRL` reader"]
+pub type R = crate::R<L2CachePreloadRstCtrlSpec>;
+#[doc = "Register `L2_CACHE_PRELOAD_RST_CTRL` writer"]
+pub type W = crate::W<L2CachePreloadRstCtrlSpec>;
+#[doc = "Field `L2_CACHE_PLD_RST` reader - set this bit to reset preload-logic inside L2-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
+pub type L2CachePldRstR = crate::BitReader;
+#[doc = "Field `L2_CACHE_PLD_RST` writer - set this bit to reset preload-logic inside L2-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
+pub type L2CachePldRstW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 5 - set this bit to reset preload-logic inside L2-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
+    #[inline(always)]
+    pub fn l2_cache_pld_rst(&self) -> L2CachePldRstR {
+        L2CachePldRstR::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 5 - set this bit to reset preload-logic inside L2-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
+    #[inline(always)]
+    pub fn l2_cache_pld_rst(&mut self) -> L2CachePldRstW<'_, L2CachePreloadRstCtrlSpec> {
+        L2CachePldRstW::new(self, 5)
+    }
+}
+#[doc = "Cache Preload Reset control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_preload_rst_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_preload_rst_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CachePreloadRstCtrlSpec;
+impl crate::RegisterSpec for L2CachePreloadRstCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_preload_rst_ctrl::R`](R) reader structure"]
+impl crate::Readable for L2CachePreloadRstCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_cache_preload_rst_ctrl::W`](W) writer structure"]
+impl crate::Writable for L2CachePreloadRstCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_CACHE_PRELOAD_RST_CTRL to value 0"]
+impl crate::Resettable for L2CachePreloadRstCtrlSpec {}

@@ -1,0 +1,105 @@
+#[doc = "Register `CHEN1` reader"]
+pub type R = crate::R<Chen1Spec>;
+#[doc = "Register `CHEN1` writer"]
+pub type W = crate::W<Chen1Spec>;
+#[doc = "Field `CH1_ABORT` reader - NA"]
+pub type Ch1AbortR = crate::BitReader;
+#[doc = "Field `CH1_ABORT` writer - NA"]
+pub type Ch1AbortW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_ABORT` reader - NA"]
+pub type Ch2AbortR = crate::BitReader;
+#[doc = "Field `CH2_ABORT` writer - NA"]
+pub type Ch2AbortW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_ABORT` reader - NA"]
+pub type Ch3AbortR = crate::BitReader;
+#[doc = "Field `CH3_ABORT` writer - NA"]
+pub type Ch3AbortW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4_ABORT` reader - NA"]
+pub type Ch4AbortR = crate::BitReader;
+#[doc = "Field `CH4_ABORT` writer - NA"]
+pub type Ch4AbortW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ABORT_WE` writer - NA"]
+pub type Ch1AbortWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_ABORT_WE` writer - NA"]
+pub type Ch2AbortWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_ABORT_WE` writer - NA"]
+pub type Ch3AbortWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4_ABORT_WE` writer - NA"]
+pub type Ch4AbortWeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_abort(&self) -> Ch1AbortR {
+        Ch1AbortR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch2_abort(&self) -> Ch2AbortR {
+        Ch2AbortR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch3_abort(&self) -> Ch3AbortR {
+        Ch3AbortR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch4_abort(&self) -> Ch4AbortR {
+        Ch4AbortR::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_abort(&mut self) -> Ch1AbortW<'_, Chen1Spec> {
+        Ch1AbortW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch2_abort(&mut self) -> Ch2AbortW<'_, Chen1Spec> {
+        Ch2AbortW::new(self, 1)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch3_abort(&mut self) -> Ch3AbortW<'_, Chen1Spec> {
+        Ch3AbortW::new(self, 2)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch4_abort(&mut self) -> Ch4AbortW<'_, Chen1Spec> {
+        Ch4AbortW::new(self, 3)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn ch1_abort_we(&mut self) -> Ch1AbortWeW<'_, Chen1Spec> {
+        Ch1AbortWeW::new(self, 8)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn ch2_abort_we(&mut self) -> Ch2AbortWeW<'_, Chen1Spec> {
+        Ch2AbortWeW::new(self, 9)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn ch3_abort_we(&mut self) -> Ch3AbortWeW<'_, Chen1Spec> {
+        Ch3AbortWeW::new(self, 10)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn ch4_abort_we(&mut self) -> Ch4AbortWeW<'_, Chen1Spec> {
+        Ch4AbortWeW::new(self, 11)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`chen1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chen1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Chen1Spec;
+impl crate::RegisterSpec for Chen1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`chen1::R`](R) reader structure"]
+impl crate::Readable for Chen1Spec {}
+#[doc = "`write(|w| ..)` method takes [`chen1::W`](W) writer structure"]
+impl crate::Writable for Chen1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CHEN1 to value 0"]
+impl crate::Resettable for Chen1Spec {}

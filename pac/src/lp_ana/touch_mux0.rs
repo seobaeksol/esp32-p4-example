@@ -1,0 +1,135 @@
+#[doc = "Register `TOUCH_MUX0` reader"]
+pub type R = crate::R<TouchMux0Spec>;
+#[doc = "Register `TOUCH_MUX0` writer"]
+pub type W = crate::W<TouchMux0Spec>;
+#[doc = "Field `TOUCH_DATA_SEL` reader - need_des"]
+pub type TouchDataSelR = crate::FieldReader;
+#[doc = "Field `TOUCH_DATA_SEL` writer - need_des"]
+pub type TouchDataSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `TOUCH_FREQ_SEL` reader - need_des"]
+pub type TouchFreqSelR = crate::FieldReader;
+#[doc = "Field `TOUCH_FREQ_SEL` writer - need_des"]
+pub type TouchFreqSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `TOUCH_BUFSEL` reader - need_des"]
+pub type TouchBufselR = crate::FieldReader<u16>;
+#[doc = "Field `TOUCH_BUFSEL` writer - need_des"]
+pub type TouchBufselW<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
+#[doc = "Field `TOUCH_DONE_EN` reader - need_des"]
+pub type TouchDoneEnR = crate::BitReader;
+#[doc = "Field `TOUCH_DONE_EN` writer - need_des"]
+pub type TouchDoneEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_DONE_FORCE` reader - need_des"]
+pub type TouchDoneForceR = crate::BitReader;
+#[doc = "Field `TOUCH_DONE_FORCE` writer - need_des"]
+pub type TouchDoneForceW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_FSM_EN` reader - need_des"]
+pub type TouchFsmEnR = crate::BitReader;
+#[doc = "Field `TOUCH_FSM_EN` writer - need_des"]
+pub type TouchFsmEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_START_EN` reader - need_des"]
+pub type TouchStartEnR = crate::BitReader;
+#[doc = "Field `TOUCH_START_EN` writer - need_des"]
+pub type TouchStartEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_START_FORCE` reader - need_des"]
+pub type TouchStartForceR = crate::BitReader;
+#[doc = "Field `TOUCH_START_FORCE` writer - need_des"]
+pub type TouchStartForceW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 8:9 - need_des"]
+    #[inline(always)]
+    pub fn touch_data_sel(&self) -> TouchDataSelR {
+        TouchDataSelR::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bits 10:11 - need_des"]
+    #[inline(always)]
+    pub fn touch_freq_sel(&self) -> TouchFreqSelR {
+        TouchFreqSelR::new(((self.bits >> 10) & 3) as u8)
+    }
+    #[doc = "Bits 12:26 - need_des"]
+    #[inline(always)]
+    pub fn touch_bufsel(&self) -> TouchBufselR {
+        TouchBufselR::new(((self.bits >> 12) & 0x7fff) as u16)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn touch_done_en(&self) -> TouchDoneEnR {
+        TouchDoneEnR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn touch_done_force(&self) -> TouchDoneForceR {
+        TouchDoneForceR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn touch_fsm_en(&self) -> TouchFsmEnR {
+        TouchFsmEnR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn touch_start_en(&self) -> TouchStartEnR {
+        TouchStartEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn touch_start_force(&self) -> TouchStartForceR {
+        TouchStartForceR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 8:9 - need_des"]
+    #[inline(always)]
+    pub fn touch_data_sel(&mut self) -> TouchDataSelW<'_, TouchMux0Spec> {
+        TouchDataSelW::new(self, 8)
+    }
+    #[doc = "Bits 10:11 - need_des"]
+    #[inline(always)]
+    pub fn touch_freq_sel(&mut self) -> TouchFreqSelW<'_, TouchMux0Spec> {
+        TouchFreqSelW::new(self, 10)
+    }
+    #[doc = "Bits 12:26 - need_des"]
+    #[inline(always)]
+    pub fn touch_bufsel(&mut self) -> TouchBufselW<'_, TouchMux0Spec> {
+        TouchBufselW::new(self, 12)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn touch_done_en(&mut self) -> TouchDoneEnW<'_, TouchMux0Spec> {
+        TouchDoneEnW::new(self, 27)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn touch_done_force(&mut self) -> TouchDoneForceW<'_, TouchMux0Spec> {
+        TouchDoneForceW::new(self, 28)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn touch_fsm_en(&mut self) -> TouchFsmEnW<'_, TouchMux0Spec> {
+        TouchFsmEnW::new(self, 29)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn touch_start_en(&mut self) -> TouchStartEnW<'_, TouchMux0Spec> {
+        TouchStartEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn touch_start_force(&mut self) -> TouchStartForceW<'_, TouchMux0Spec> {
+        TouchStartForceW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_mux0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_mux0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TouchMux0Spec;
+impl crate::RegisterSpec for TouchMux0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`touch_mux0::R`](R) reader structure"]
+impl crate::Readable for TouchMux0Spec {}
+#[doc = "`write(|w| ..)` method takes [`touch_mux0::W`](W) writer structure"]
+impl crate::Writable for TouchMux0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TOUCH_MUX0 to value 0x2000_0000"]
+impl crate::Resettable for TouchMux0Spec {
+    const RESET_VALUE: u32 = 0x2000_0000;
+}

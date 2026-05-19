@@ -1,0 +1,65 @@
+#[doc = "Register `ARB` reader"]
+pub type R = crate::R<ArbSpec>;
+#[doc = "Register `ARB` writer"]
+pub type W = crate::W<ArbSpec>;
+#[doc = "Field `OUT_ARB_TOKEN_NUM` reader - Set the max number of token count of arbiter"]
+pub type OutArbTokenNumR = crate::FieldReader;
+#[doc = "Field `OUT_ARB_TOKEN_NUM` writer - Set the max number of token count of arbiter"]
+pub type OutArbTokenNumW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `EXTER_OUT_ARB_PRIORITY` reader - Set the priority of channel"]
+pub type ExterOutArbPriorityR = crate::FieldReader;
+#[doc = "Field `EXTER_OUT_ARB_PRIORITY` writer - Set the priority of channel"]
+pub type ExterOutArbPriorityW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `INTER_OUT_ARB_PRIORITY` reader - Set the priority of channel"]
+pub type InterOutArbPriorityR = crate::BitReader;
+#[doc = "Field `INTER_OUT_ARB_PRIORITY` writer - Set the priority of channel"]
+pub type InterOutArbPriorityW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:3 - Set the max number of token count of arbiter"]
+    #[inline(always)]
+    pub fn out_arb_token_num(&self) -> OutArbTokenNumR {
+        OutArbTokenNumR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:5 - Set the priority of channel"]
+    #[inline(always)]
+    pub fn exter_out_arb_priority(&self) -> ExterOutArbPriorityR {
+        ExterOutArbPriorityR::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bit 6 - Set the priority of channel"]
+    #[inline(always)]
+    pub fn inter_out_arb_priority(&self) -> InterOutArbPriorityR {
+        InterOutArbPriorityR::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - Set the max number of token count of arbiter"]
+    #[inline(always)]
+    pub fn out_arb_token_num(&mut self) -> OutArbTokenNumW<'_, ArbSpec> {
+        OutArbTokenNumW::new(self, 0)
+    }
+    #[doc = "Bits 4:5 - Set the priority of channel"]
+    #[inline(always)]
+    pub fn exter_out_arb_priority(&mut self) -> ExterOutArbPriorityW<'_, ArbSpec> {
+        ExterOutArbPriorityW::new(self, 4)
+    }
+    #[doc = "Bit 6 - Set the priority of channel"]
+    #[inline(always)]
+    pub fn inter_out_arb_priority(&mut self) -> InterOutArbPriorityW<'_, ArbSpec> {
+        InterOutArbPriorityW::new(self, 6)
+    }
+}
+#[doc = "TX CHx arb register\n\nYou can [`read`](crate::Reg::read) this register and get [`arb::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`arb::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ArbSpec;
+impl crate::RegisterSpec for ArbSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`arb::R`](R) reader structure"]
+impl crate::Readable for ArbSpec {}
+#[doc = "`write(|w| ..)` method takes [`arb::W`](W) writer structure"]
+impl crate::Writable for ArbSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ARB to value 0x11"]
+impl crate::Resettable for ArbSpec {
+    const RESET_VALUE: u32 = 0x11;
+}

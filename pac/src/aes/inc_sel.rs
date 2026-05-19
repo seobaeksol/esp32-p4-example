@@ -1,0 +1,35 @@
+#[doc = "Register `INC_SEL` reader"]
+pub type R = crate::R<IncSelSpec>;
+#[doc = "Register `INC_SEL` writer"]
+pub type W = crate::W<IncSelSpec>;
+#[doc = "Field `INC_SEL` reader - Configures the Standard Incrementing Function for CTR block operation. \\\\ 0: INC<SUB>32</SUB>\\\\ 1: INC<SUB>128</SUB>\\\\"]
+pub type IncSelR = crate::BitReader;
+#[doc = "Field `INC_SEL` writer - Configures the Standard Incrementing Function for CTR block operation. \\\\ 0: INC<SUB>32</SUB>\\\\ 1: INC<SUB>128</SUB>\\\\"]
+pub type IncSelW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Configures the Standard Incrementing Function for CTR block operation. \\\\ 0: INC<SUB>32</SUB>\\\\ 1: INC<SUB>128</SUB>\\\\"]
+    #[inline(always)]
+    pub fn inc_sel(&self) -> IncSelR {
+        IncSelR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Configures the Standard Incrementing Function for CTR block operation. \\\\ 0: INC<SUB>32</SUB>\\\\ 1: INC<SUB>128</SUB>\\\\"]
+    #[inline(always)]
+    pub fn inc_sel(&mut self) -> IncSelW<'_, IncSelSpec> {
+        IncSelW::new(self, 0)
+    }
+}
+#[doc = "Standard incrementing function register\n\nYou can [`read`](crate::Reg::read) this register and get [`inc_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inc_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IncSelSpec;
+impl crate::RegisterSpec for IncSelSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`inc_sel::R`](R) reader structure"]
+impl crate::Readable for IncSelSpec {}
+#[doc = "`write(|w| ..)` method takes [`inc_sel::W`](W) writer structure"]
+impl crate::Writable for IncSelSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INC_SEL to value 0"]
+impl crate::Resettable for IncSelSpec {}

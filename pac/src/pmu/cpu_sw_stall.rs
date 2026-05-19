@@ -1,0 +1,49 @@
+#[doc = "Register `CPU_SW_STALL` reader"]
+pub type R = crate::R<CpuSwStallSpec>;
+#[doc = "Register `CPU_SW_STALL` writer"]
+pub type W = crate::W<CpuSwStallSpec>;
+#[doc = "Field `HPCORE1_SW_STALL_CODE` reader - need_des"]
+pub type Hpcore1SwStallCodeR = crate::FieldReader;
+#[doc = "Field `HPCORE1_SW_STALL_CODE` writer - need_des"]
+pub type Hpcore1SwStallCodeW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HPCORE0_SW_STALL_CODE` reader - need_des"]
+pub type Hpcore0SwStallCodeR = crate::FieldReader;
+#[doc = "Field `HPCORE0_SW_STALL_CODE` writer - need_des"]
+pub type Hpcore0SwStallCodeW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 16:23 - need_des"]
+    #[inline(always)]
+    pub fn hpcore1_sw_stall_code(&self) -> Hpcore1SwStallCodeR {
+        Hpcore1SwStallCodeR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - need_des"]
+    #[inline(always)]
+    pub fn hpcore0_sw_stall_code(&self) -> Hpcore0SwStallCodeR {
+        Hpcore0SwStallCodeR::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 16:23 - need_des"]
+    #[inline(always)]
+    pub fn hpcore1_sw_stall_code(&mut self) -> Hpcore1SwStallCodeW<'_, CpuSwStallSpec> {
+        Hpcore1SwStallCodeW::new(self, 16)
+    }
+    #[doc = "Bits 24:31 - need_des"]
+    #[inline(always)]
+    pub fn hpcore0_sw_stall_code(&mut self) -> Hpcore0SwStallCodeW<'_, CpuSwStallSpec> {
+        Hpcore0SwStallCodeW::new(self, 24)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_sw_stall::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_sw_stall::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CpuSwStallSpec;
+impl crate::RegisterSpec for CpuSwStallSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cpu_sw_stall::R`](R) reader structure"]
+impl crate::Readable for CpuSwStallSpec {}
+#[doc = "`write(|w| ..)` method takes [`cpu_sw_stall::W`](W) writer structure"]
+impl crate::Writable for CpuSwStallSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CPU_SW_STALL to value 0"]
+impl crate::Resettable for CpuSwStallSpec {}

@@ -1,0 +1,34 @@
+#[doc = "Register `OUT_EP0_ST` reader"]
+pub type R = crate::R<OutEp0StSpec>;
+#[doc = "Field `OUT_EP0_STATE` reader - State of OUT Endpoint 0."]
+pub type OutEp0StateR = crate::FieldReader;
+#[doc = "Field `OUT_EP0_WR_ADDR` reader - Write data address of OUT endpoint 0. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is detected, there are USB_DEVICE_OUT_EP0_WR_ADDR-2 bytes data in OUT EP0."]
+pub type OutEp0WrAddrR = crate::FieldReader;
+#[doc = "Field `OUT_EP0_RD_ADDR` reader - Read data address of OUT endpoint 0."]
+pub type OutEp0RdAddrR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:1 - State of OUT Endpoint 0."]
+    #[inline(always)]
+    pub fn out_ep0_state(&self) -> OutEp0StateR {
+        OutEp0StateR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:8 - Write data address of OUT endpoint 0. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is detected, there are USB_DEVICE_OUT_EP0_WR_ADDR-2 bytes data in OUT EP0."]
+    #[inline(always)]
+    pub fn out_ep0_wr_addr(&self) -> OutEp0WrAddrR {
+        OutEp0WrAddrR::new(((self.bits >> 2) & 0x7f) as u8)
+    }
+    #[doc = "Bits 9:15 - Read data address of OUT endpoint 0."]
+    #[inline(always)]
+    pub fn out_ep0_rd_addr(&self) -> OutEp0RdAddrR {
+        OutEp0RdAddrR::new(((self.bits >> 9) & 0x7f) as u8)
+    }
+}
+#[doc = "Control OUT endpoint status information.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ep0_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutEp0StSpec;
+impl crate::RegisterSpec for OutEp0StSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_ep0_st::R`](R) reader structure"]
+impl crate::Readable for OutEp0StSpec {}
+#[doc = "`reset()` method sets OUT_EP0_ST to value 0"]
+impl crate::Resettable for OutEp0StSpec {}

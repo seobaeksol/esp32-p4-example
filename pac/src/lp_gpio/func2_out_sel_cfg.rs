@@ -1,0 +1,79 @@
+#[doc = "Register `FUNC2_OUT_SEL_CFG` reader"]
+pub type R = crate::R<Func2OutSelCfgSpec>;
+#[doc = "Register `FUNC2_OUT_SEL_CFG` writer"]
+pub type W = crate::W<Func2OutSelCfgSpec>;
+#[doc = "Field `REG_GPIO_FUNC2_OE_INV_SEL` reader - Reserved"]
+pub type RegGpioFunc2OeInvSelR = crate::BitReader;
+#[doc = "Field `REG_GPIO_FUNC2_OE_INV_SEL` writer - Reserved"]
+pub type RegGpioFunc2OeInvSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_FUNC2_OE_SEL` reader - Reserved"]
+pub type RegGpioFunc2OeSelR = crate::BitReader;
+#[doc = "Field `REG_GPIO_FUNC2_OE_SEL` writer - Reserved"]
+pub type RegGpioFunc2OeSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_FUNC2_OUT_INV_SEL` reader - Reserved"]
+pub type RegGpioFunc2OutInvSelR = crate::BitReader;
+#[doc = "Field `REG_GPIO_FUNC2_OUT_INV_SEL` writer - Reserved"]
+pub type RegGpioFunc2OutInvSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_FUNC2_OUT_SEL` reader - Reserved"]
+pub type RegGpioFunc2OutSelR = crate::FieldReader;
+#[doc = "Field `REG_GPIO_FUNC2_OUT_SEL` writer - Reserved"]
+pub type RegGpioFunc2OutSelW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_oe_inv_sel(&self) -> RegGpioFunc2OeInvSelR {
+        RegGpioFunc2OeInvSelR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_oe_sel(&self) -> RegGpioFunc2OeSelR {
+        RegGpioFunc2OeSelR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_out_inv_sel(&self) -> RegGpioFunc2OutInvSelR {
+        RegGpioFunc2OutInvSelR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:8 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_out_sel(&self) -> RegGpioFunc2OutSelR {
+        RegGpioFunc2OutSelR::new(((self.bits >> 3) & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_oe_inv_sel(&mut self) -> RegGpioFunc2OeInvSelW<'_, Func2OutSelCfgSpec> {
+        RegGpioFunc2OeInvSelW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_oe_sel(&mut self) -> RegGpioFunc2OeSelW<'_, Func2OutSelCfgSpec> {
+        RegGpioFunc2OeSelW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_out_inv_sel(&mut self) -> RegGpioFunc2OutInvSelW<'_, Func2OutSelCfgSpec> {
+        RegGpioFunc2OutInvSelW::new(self, 2)
+    }
+    #[doc = "Bits 3:8 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func2_out_sel(&mut self) -> RegGpioFunc2OutSelW<'_, Func2OutSelCfgSpec> {
+        RegGpioFunc2OutSelW::new(self, 3)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func2_out_sel_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func2_out_sel_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Func2OutSelCfgSpec;
+impl crate::RegisterSpec for Func2OutSelCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`func2_out_sel_cfg::R`](R) reader structure"]
+impl crate::Readable for Func2OutSelCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`func2_out_sel_cfg::W`](W) writer structure"]
+impl crate::Writable for Func2OutSelCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets FUNC2_OUT_SEL_CFG to value 0x0100"]
+impl crate::Resettable for Func2OutSelCfgSpec {
+    const RESET_VALUE: u32 = 0x0100;
+}

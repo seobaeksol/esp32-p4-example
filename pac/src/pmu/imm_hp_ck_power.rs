@@ -1,0 +1,133 @@
+#[doc = "Register `IMM_HP_CK_POWER` reader"]
+pub type R = crate::R<ImmHpCkPowerSpec>;
+#[doc = "Register `IMM_HP_CK_POWER` writer"]
+pub type W = crate::W<ImmHpCkPowerSpec>;
+#[doc = "Field `TIE_LOW_CALI_XTAL_ICG` reader - need_des"]
+pub type TieLowCaliXtalIcgR = crate::BitReader;
+#[doc = "Field `TIE_LOW_CALI_XTAL_ICG` writer - need_des"]
+pub type TieLowCaliXtalIcgW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_LOW_GLOBAL_PLL_ICG` writer - need_des"]
+pub type TieLowGlobalPllIcgW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `TIE_LOW_GLOBAL_XTAL_ICG` writer - need_des"]
+pub type TieLowGlobalXtalIcgW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_LOW_I2C_RETENTION` writer - need_des"]
+pub type TieLowI2cRetentionW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_LOW_XPD_PLL_I2C` writer - need_des"]
+pub type TieLowXpdPllI2cW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `TIE_LOW_XPD_PLL` writer - need_des"]
+pub type TieLowXpdPllW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `TIE_LOW_XPD_XTAL` writer - need_des"]
+pub type TieLowXpdXtalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_HIGH_CALI_XTAL_ICG` reader - need_des"]
+pub type TieHighCaliXtalIcgR = crate::BitReader;
+#[doc = "Field `TIE_HIGH_CALI_XTAL_ICG` writer - need_des"]
+pub type TieHighCaliXtalIcgW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_HIGH_GLOBAL_PLL_ICG` writer - need_des"]
+pub type TieHighGlobalPllIcgW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `TIE_HIGH_GLOBAL_XTAL_ICG` writer - need_des"]
+pub type TieHighGlobalXtalIcgW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_HIGH_I2C_RETENTION` writer - need_des"]
+pub type TieHighI2cRetentionW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIE_HIGH_XPD_PLL_I2C` writer - need_des"]
+pub type TieHighXpdPllI2cW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `TIE_HIGH_XPD_PLL` writer - need_des"]
+pub type TieHighXpdPllW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `TIE_HIGH_XPD_XTAL` writer - need_des"]
+pub type TieHighXpdXtalW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_cali_xtal_icg(&self) -> TieLowCaliXtalIcgR {
+        TieLowCaliXtalIcgR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 16 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_cali_xtal_icg(&self) -> TieHighCaliXtalIcgR {
+        TieHighCaliXtalIcgR::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_cali_xtal_icg(&mut self) -> TieLowCaliXtalIcgW<'_, ImmHpCkPowerSpec> {
+        TieLowCaliXtalIcgW::new(self, 0)
+    }
+    #[doc = "Bits 1:4 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_global_pll_icg(&mut self) -> TieLowGlobalPllIcgW<'_, ImmHpCkPowerSpec> {
+        TieLowGlobalPllIcgW::new(self, 1)
+    }
+    #[doc = "Bit 5 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_global_xtal_icg(&mut self) -> TieLowGlobalXtalIcgW<'_, ImmHpCkPowerSpec> {
+        TieLowGlobalXtalIcgW::new(self, 5)
+    }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_i2c_retention(&mut self) -> TieLowI2cRetentionW<'_, ImmHpCkPowerSpec> {
+        TieLowI2cRetentionW::new(self, 6)
+    }
+    #[doc = "Bits 7:10 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_xpd_pll_i2c(&mut self) -> TieLowXpdPllI2cW<'_, ImmHpCkPowerSpec> {
+        TieLowXpdPllI2cW::new(self, 7)
+    }
+    #[doc = "Bits 11:14 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_xpd_pll(&mut self) -> TieLowXpdPllW<'_, ImmHpCkPowerSpec> {
+        TieLowXpdPllW::new(self, 11)
+    }
+    #[doc = "Bit 15 - need_des"]
+    #[inline(always)]
+    pub fn tie_low_xpd_xtal(&mut self) -> TieLowXpdXtalW<'_, ImmHpCkPowerSpec> {
+        TieLowXpdXtalW::new(self, 15)
+    }
+    #[doc = "Bit 16 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_cali_xtal_icg(&mut self) -> TieHighCaliXtalIcgW<'_, ImmHpCkPowerSpec> {
+        TieHighCaliXtalIcgW::new(self, 16)
+    }
+    #[doc = "Bits 17:20 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_global_pll_icg(&mut self) -> TieHighGlobalPllIcgW<'_, ImmHpCkPowerSpec> {
+        TieHighGlobalPllIcgW::new(self, 17)
+    }
+    #[doc = "Bit 21 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_global_xtal_icg(&mut self) -> TieHighGlobalXtalIcgW<'_, ImmHpCkPowerSpec> {
+        TieHighGlobalXtalIcgW::new(self, 21)
+    }
+    #[doc = "Bit 22 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_i2c_retention(&mut self) -> TieHighI2cRetentionW<'_, ImmHpCkPowerSpec> {
+        TieHighI2cRetentionW::new(self, 22)
+    }
+    #[doc = "Bits 23:26 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_xpd_pll_i2c(&mut self) -> TieHighXpdPllI2cW<'_, ImmHpCkPowerSpec> {
+        TieHighXpdPllI2cW::new(self, 23)
+    }
+    #[doc = "Bits 27:30 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_xpd_pll(&mut self) -> TieHighXpdPllW<'_, ImmHpCkPowerSpec> {
+        TieHighXpdPllW::new(self, 27)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn tie_high_xpd_xtal(&mut self) -> TieHighXpdXtalW<'_, ImmHpCkPowerSpec> {
+        TieHighXpdXtalW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`imm_hp_ck_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ImmHpCkPowerSpec;
+impl crate::RegisterSpec for ImmHpCkPowerSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`imm_hp_ck_power::R`](R) reader structure"]
+impl crate::Readable for ImmHpCkPowerSpec {}
+#[doc = "`write(|w| ..)` method takes [`imm_hp_ck_power::W`](W) writer structure"]
+impl crate::Writable for ImmHpCkPowerSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IMM_HP_CK_POWER to value 0"]
+impl crate::Resettable for ImmHpCkPowerSpec {}

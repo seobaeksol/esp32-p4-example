@@ -1,0 +1,62 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `SCAN_DONE` reader - need_des"]
+pub type ScanDoneR = crate::BitReader;
+#[doc = "Field `DONE` reader - need_des"]
+pub type DoneR = crate::BitReader;
+#[doc = "Field `ACTIVE` reader - need_des"]
+pub type ActiveR = crate::BitReader;
+#[doc = "Field `INACTIVE` reader - need_des"]
+pub type InactiveR = crate::BitReader;
+#[doc = "Field `TIMEOUT` reader - need_des"]
+pub type TimeoutR = crate::BitReader;
+#[doc = "Field `APPROACH_LOOP_DONE` reader - need_des"]
+pub type ApproachLoopDoneR = crate::BitReader;
+#[doc = "Field `BASELINE_UPDATE` reader - need_des"]
+pub type BaselineUpdateR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn scan_done(&self) -> ScanDoneR {
+        ScanDoneR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn done(&self) -> DoneR {
+        DoneR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - need_des"]
+    #[inline(always)]
+    pub fn active(&self) -> ActiveR {
+        ActiveR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn inactive(&self) -> InactiveR {
+        InactiveR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - need_des"]
+    #[inline(always)]
+    pub fn timeout(&self) -> TimeoutR {
+        TimeoutR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - need_des"]
+    #[inline(always)]
+    pub fn approach_loop_done(&self) -> ApproachLoopDoneR {
+        ApproachLoopDoneR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn baseline_update(&self) -> BaselineUpdateR {
+        BaselineUpdateR::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

@@ -1,0 +1,226 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<IntClrSpec>;
+#[doc = "Field `TIMER0_STOP` writer - Clear bit: Write 1 to clear the interrupt triggered when the timer 0 stops."]
+pub type Timer0StopW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER1_STOP` writer - Clear bit: Write 1 to clear the interrupt triggered when the timer 1 stops."]
+pub type Timer1StopW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER2_STOP` writer - Clear bit: Write 1 to clear the interrupt triggered when the timer 2 stops."]
+pub type Timer2StopW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER0_TEZ` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 0 TEZ event."]
+pub type Timer0TezW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER1_TEZ` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 1 TEZ event."]
+pub type Timer1TezW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER2_TEZ` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 2 TEZ event."]
+pub type Timer2TezW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER0_TEP` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 0 TEP event."]
+pub type Timer0TepW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER1_TEP` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 1 TEP event."]
+pub type Timer1TepW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TIMER2_TEP` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 2 TEP event."]
+pub type Timer2TepW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FAULT0` writer - Clear bit: Write 1 to clear the interrupt triggered when event_f0 starts."]
+pub type Fault0W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FAULT1` writer - Clear bit: Write 1 to clear the interrupt triggered when event_f1 starts."]
+pub type Fault1W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FAULT2` writer - Clear bit: Write 1 to clear the interrupt triggered when event_f2 starts."]
+pub type Fault2W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FAULT0_CLR` writer - Clear bit: Write 1 to clear the interrupt triggered when event_f0 clears."]
+pub type Fault0ClrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FAULT1_CLR` writer - Clear bit: Write 1 to clear the interrupt triggered when event_f1 clears."]
+pub type Fault1ClrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FAULT2_CLR` writer - Clear bit: Write 1 to clear the interrupt triggered when event_f2 clears."]
+pub type Fault2ClrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR0_TEA` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 0 TEA event"]
+pub type Cmpr0TeaW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR1_TEA` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 1 TEA event"]
+pub type Cmpr1TeaW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR2_TEA` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 2 TEA event"]
+pub type Cmpr2TeaW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR0_TEB` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 0 TEB event"]
+pub type Cmpr0TebW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR1_TEB` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 1 TEB event"]
+pub type Cmpr1TebW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR2_TEB` writer - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 2 TEB event"]
+pub type Cmpr2TebW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ0_CBC` writer - Clear bit: Write 1 to clear the interrupt triggered by a cycle-by-cycle mode action on PWM0."]
+pub type Tz0CbcW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ1_CBC` writer - Clear bit: Write 1 to clear the interrupt triggered by a cycle-by-cycle mode action on PWM1."]
+pub type Tz1CbcW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ2_CBC` writer - Clear bit: Write 1 to clear the interrupt triggered by a cycle-by-cycle mode action on PWM2."]
+pub type Tz2CbcW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ0_OST` writer - Clear bit: Write 1 to clear the interrupt triggered by a one-shot mode action on PWM0."]
+pub type Tz0OstW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ1_OST` writer - Clear bit: Write 1 to clear the interrupt triggered by a one-shot mode action on PWM1."]
+pub type Tz1OstW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ2_OST` writer - Clear bit: Write 1 to clear the interrupt triggered by a one-shot mode action on PWM2."]
+pub type Tz2OstW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CAP0` writer - Clear bit: Write 1 to clear the interrupt triggered by capture on CAP0."]
+pub type Cap0W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CAP1` writer - Clear bit: Write 1 to clear the interrupt triggered by capture on CAP1."]
+pub type Cap1W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CAP2` writer - Clear bit: Write 1 to clear the interrupt triggered by capture on CAP2."]
+pub type Cap2W<'a, REG> = crate::BitWriter1C<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Clear bit: Write 1 to clear the interrupt triggered when the timer 0 stops."]
+    #[inline(always)]
+    pub fn timer0_stop(&mut self) -> Timer0StopW<'_, IntClrSpec> {
+        Timer0StopW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Clear bit: Write 1 to clear the interrupt triggered when the timer 1 stops."]
+    #[inline(always)]
+    pub fn timer1_stop(&mut self) -> Timer1StopW<'_, IntClrSpec> {
+        Timer1StopW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Clear bit: Write 1 to clear the interrupt triggered when the timer 2 stops."]
+    #[inline(always)]
+    pub fn timer2_stop(&mut self) -> Timer2StopW<'_, IntClrSpec> {
+        Timer2StopW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 0 TEZ event."]
+    #[inline(always)]
+    pub fn timer0_tez(&mut self) -> Timer0TezW<'_, IntClrSpec> {
+        Timer0TezW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 1 TEZ event."]
+    #[inline(always)]
+    pub fn timer1_tez(&mut self) -> Timer1TezW<'_, IntClrSpec> {
+        Timer1TezW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 2 TEZ event."]
+    #[inline(always)]
+    pub fn timer2_tez(&mut self) -> Timer2TezW<'_, IntClrSpec> {
+        Timer2TezW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 0 TEP event."]
+    #[inline(always)]
+    pub fn timer0_tep(&mut self) -> Timer0TepW<'_, IntClrSpec> {
+        Timer0TepW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 1 TEP event."]
+    #[inline(always)]
+    pub fn timer1_tep(&mut self) -> Timer1TepW<'_, IntClrSpec> {
+        Timer1TepW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Clear bit: Write 1 to clear the interrupt triggered by a PWM timer 2 TEP event."]
+    #[inline(always)]
+    pub fn timer2_tep(&mut self) -> Timer2TepW<'_, IntClrSpec> {
+        Timer2TepW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Clear bit: Write 1 to clear the interrupt triggered when event_f0 starts."]
+    #[inline(always)]
+    pub fn fault0(&mut self) -> Fault0W<'_, IntClrSpec> {
+        Fault0W::new(self, 9)
+    }
+    #[doc = "Bit 10 - Clear bit: Write 1 to clear the interrupt triggered when event_f1 starts."]
+    #[inline(always)]
+    pub fn fault1(&mut self) -> Fault1W<'_, IntClrSpec> {
+        Fault1W::new(self, 10)
+    }
+    #[doc = "Bit 11 - Clear bit: Write 1 to clear the interrupt triggered when event_f2 starts."]
+    #[inline(always)]
+    pub fn fault2(&mut self) -> Fault2W<'_, IntClrSpec> {
+        Fault2W::new(self, 11)
+    }
+    #[doc = "Bit 12 - Clear bit: Write 1 to clear the interrupt triggered when event_f0 clears."]
+    #[inline(always)]
+    pub fn fault0_clr(&mut self) -> Fault0ClrW<'_, IntClrSpec> {
+        Fault0ClrW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Clear bit: Write 1 to clear the interrupt triggered when event_f1 clears."]
+    #[inline(always)]
+    pub fn fault1_clr(&mut self) -> Fault1ClrW<'_, IntClrSpec> {
+        Fault1ClrW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Clear bit: Write 1 to clear the interrupt triggered when event_f2 clears."]
+    #[inline(always)]
+    pub fn fault2_clr(&mut self) -> Fault2ClrW<'_, IntClrSpec> {
+        Fault2ClrW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 0 TEA event"]
+    #[inline(always)]
+    pub fn cmpr0_tea(&mut self) -> Cmpr0TeaW<'_, IntClrSpec> {
+        Cmpr0TeaW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 1 TEA event"]
+    #[inline(always)]
+    pub fn cmpr1_tea(&mut self) -> Cmpr1TeaW<'_, IntClrSpec> {
+        Cmpr1TeaW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 2 TEA event"]
+    #[inline(always)]
+    pub fn cmpr2_tea(&mut self) -> Cmpr2TeaW<'_, IntClrSpec> {
+        Cmpr2TeaW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 0 TEB event"]
+    #[inline(always)]
+    pub fn cmpr0_teb(&mut self) -> Cmpr0TebW<'_, IntClrSpec> {
+        Cmpr0TebW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 1 TEB event"]
+    #[inline(always)]
+    pub fn cmpr1_teb(&mut self) -> Cmpr1TebW<'_, IntClrSpec> {
+        Cmpr1TebW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Clear bit: Write 1 to clear the interrupt triggered by a PWM operator 2 TEB event"]
+    #[inline(always)]
+    pub fn cmpr2_teb(&mut self) -> Cmpr2TebW<'_, IntClrSpec> {
+        Cmpr2TebW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Clear bit: Write 1 to clear the interrupt triggered by a cycle-by-cycle mode action on PWM0."]
+    #[inline(always)]
+    pub fn tz0_cbc(&mut self) -> Tz0CbcW<'_, IntClrSpec> {
+        Tz0CbcW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Clear bit: Write 1 to clear the interrupt triggered by a cycle-by-cycle mode action on PWM1."]
+    #[inline(always)]
+    pub fn tz1_cbc(&mut self) -> Tz1CbcW<'_, IntClrSpec> {
+        Tz1CbcW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Clear bit: Write 1 to clear the interrupt triggered by a cycle-by-cycle mode action on PWM2."]
+    #[inline(always)]
+    pub fn tz2_cbc(&mut self) -> Tz2CbcW<'_, IntClrSpec> {
+        Tz2CbcW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Clear bit: Write 1 to clear the interrupt triggered by a one-shot mode action on PWM0."]
+    #[inline(always)]
+    pub fn tz0_ost(&mut self) -> Tz0OstW<'_, IntClrSpec> {
+        Tz0OstW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Clear bit: Write 1 to clear the interrupt triggered by a one-shot mode action on PWM1."]
+    #[inline(always)]
+    pub fn tz1_ost(&mut self) -> Tz1OstW<'_, IntClrSpec> {
+        Tz1OstW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Clear bit: Write 1 to clear the interrupt triggered by a one-shot mode action on PWM2."]
+    #[inline(always)]
+    pub fn tz2_ost(&mut self) -> Tz2OstW<'_, IntClrSpec> {
+        Tz2OstW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Clear bit: Write 1 to clear the interrupt triggered by capture on CAP0."]
+    #[inline(always)]
+    pub fn cap0(&mut self) -> Cap0W<'_, IntClrSpec> {
+        Cap0W::new(self, 27)
+    }
+    #[doc = "Bit 28 - Clear bit: Write 1 to clear the interrupt triggered by capture on CAP1."]
+    #[inline(always)]
+    pub fn cap1(&mut self) -> Cap1W<'_, IntClrSpec> {
+        Cap1W::new(self, 28)
+    }
+    #[doc = "Bit 29 - Clear bit: Write 1 to clear the interrupt triggered by capture on CAP2."]
+    #[inline(always)]
+    pub fn cap2(&mut self) -> Cap2W<'_, IntClrSpec> {
+        Cap2W::new(self, 29)
+    }
+}
+#[doc = "Interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntClrSpec;
+impl crate::RegisterSpec for IntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for IntClrSpec {
+    type Safety = crate::Unsafe;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x3fff_ffff;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for IntClrSpec {}

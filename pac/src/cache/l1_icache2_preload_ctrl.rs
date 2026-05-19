@@ -1,0 +1,50 @@
+#[doc = "Register `L1_ICACHE2_PRELOAD_CTRL` reader"]
+pub type R = crate::R<L1Icache2PreloadCtrlSpec>;
+#[doc = "Field `L1_ICACHE2_PRELOAD_ENA` reader - The bit is used to enable preload operation on L1-ICache2. It will be cleared by hardware automatically after preload operation is done."]
+pub type L1Icache2PreloadEnaR = crate::BitReader;
+#[doc = "Field `L1_ICACHE2_PRELOAD_DONE` reader - The bit is used to indicate whether preload operation is finished or not. 0: not finished. 1: finished."]
+pub type L1Icache2PreloadDoneR = crate::BitReader;
+#[doc = "Field `L1_ICACHE2_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
+pub type L1Icache2PreloadOrderR = crate::BitReader;
+#[doc = "Field `L1_ICACHE2_PRELOAD_RGID` reader - The bit is used to set the gid of l1 icache2 preload."]
+pub type L1Icache2PreloadRgidR = crate::FieldReader;
+#[doc = "Field `L1_ICACHE2_PRELOAD_MODE` reader - The bit is used to configure the mode of l1 icache2 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+pub type L1Icache2PreloadModeR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - The bit is used to enable preload operation on L1-ICache2. It will be cleared by hardware automatically after preload operation is done."]
+    #[inline(always)]
+    pub fn l1_icache2_preload_ena(&self) -> L1Icache2PreloadEnaR {
+        L1Icache2PreloadEnaR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The bit is used to indicate whether preload operation is finished or not. 0: not finished. 1: finished."]
+    #[inline(always)]
+    pub fn l1_icache2_preload_done(&self) -> L1Icache2PreloadDoneR {
+        L1Icache2PreloadDoneR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
+    #[inline(always)]
+    pub fn l1_icache2_preload_order(&self) -> L1Icache2PreloadOrderR {
+        L1Icache2PreloadOrderR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:6 - The bit is used to set the gid of l1 icache2 preload."]
+    #[inline(always)]
+    pub fn l1_icache2_preload_rgid(&self) -> L1Icache2PreloadRgidR {
+        L1Icache2PreloadRgidR::new(((self.bits >> 3) & 0x0f) as u8)
+    }
+    #[doc = "Bit 7 - The bit is used to configure the mode of l1 icache2 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+    #[inline(always)]
+    pub fn l1_icache2_preload_mode(&self) -> L1Icache2PreloadModeR {
+        L1Icache2PreloadModeR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[doc = "L1 instruction Cache 2 preload-operation control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache2_preload_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1Icache2PreloadCtrlSpec;
+impl crate::RegisterSpec for L1Icache2PreloadCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_icache2_preload_ctrl::R`](R) reader structure"]
+impl crate::Readable for L1Icache2PreloadCtrlSpec {}
+#[doc = "`reset()` method sets L1_ICACHE2_PRELOAD_CTRL to value 0x02"]
+impl crate::Resettable for L1Icache2PreloadCtrlSpec {
+    const RESET_VALUE: u32 = 0x02;
+}

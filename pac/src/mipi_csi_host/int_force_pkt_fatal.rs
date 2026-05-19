@@ -1,0 +1,49 @@
+#[doc = "Register `INT_FORCE_PKT_FATAL` reader"]
+pub type R = crate::R<IntForcePktFatalSpec>;
+#[doc = "Register `INT_FORCE_PKT_FATAL` writer"]
+pub type W = crate::W<IntForcePktFatalSpec>;
+#[doc = "Field `FORCE_ERR_ECC_DOUBLE` reader - NA"]
+pub type ForceErrEccDoubleR = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ECC_DOUBLE` writer - NA"]
+pub type ForceErrEccDoubleW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_SHORTER_PAYLOAD` reader - NA"]
+pub type ForceShorterPayloadR = crate::BitReader;
+#[doc = "Field `FORCE_SHORTER_PAYLOAD` writer - NA"]
+pub type ForceShorterPayloadW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn force_err_ecc_double(&self) -> ForceErrEccDoubleR {
+        ForceErrEccDoubleR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn force_shorter_payload(&self) -> ForceShorterPayloadR {
+        ForceShorterPayloadR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn force_err_ecc_double(&mut self) -> ForceErrEccDoubleW<'_, IntForcePktFatalSpec> {
+        ForceErrEccDoubleW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn force_shorter_payload(&mut self) -> ForceShorterPayloadW<'_, IntForcePktFatalSpec> {
+        ForceShorterPayloadW::new(self, 1)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`int_force_pkt_fatal::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_force_pkt_fatal::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntForcePktFatalSpec;
+impl crate::RegisterSpec for IntForcePktFatalSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_force_pkt_fatal::R`](R) reader structure"]
+impl crate::Readable for IntForcePktFatalSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_force_pkt_fatal::W`](W) writer structure"]
+impl crate::Writable for IntForcePktFatalSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_FORCE_PKT_FATAL to value 0"]
+impl crate::Resettable for IntForcePktFatalSpec {}

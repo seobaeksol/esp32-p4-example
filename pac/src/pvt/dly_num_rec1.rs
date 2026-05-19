@@ -1,0 +1,41 @@
+#[doc = "Register `DLY_NUM_REC1` reader"]
+pub type R = crate::R<DlyNumRec1Spec>;
+#[doc = "Field `SITE1_DELAY_NUM_VT0_MAX_RECORD` reader - needs field desc"]
+pub type Site1DelayNumVt0MaxRecordR = crate::FieldReader;
+#[doc = "Field `SITE1_DELAY_NUM_VT1_MAX_RECORD` reader - needs field desc"]
+pub type Site1DelayNumVt1MaxRecordR = crate::FieldReader;
+#[doc = "Field `SITE1_DELAY_NUM_VT2_MAX_RECORD` reader - needs field desc"]
+pub type Site1DelayNumVt2MaxRecordR = crate::FieldReader;
+#[doc = "Field `SITE1_DELAY_NUM_VT3_MAX_RECORD` reader - needs field desc"]
+pub type Site1DelayNumVt3MaxRecordR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - needs field desc"]
+    #[inline(always)]
+    pub fn site1_delay_num_vt0_max_record(&self) -> Site1DelayNumVt0MaxRecordR {
+        Site1DelayNumVt0MaxRecordR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - needs field desc"]
+    #[inline(always)]
+    pub fn site1_delay_num_vt1_max_record(&self) -> Site1DelayNumVt1MaxRecordR {
+        Site1DelayNumVt1MaxRecordR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - needs field desc"]
+    #[inline(always)]
+    pub fn site1_delay_num_vt2_max_record(&self) -> Site1DelayNumVt2MaxRecordR {
+        Site1DelayNumVt2MaxRecordR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - needs field desc"]
+    #[inline(always)]
+    pub fn site1_delay_num_vt3_max_record(&self) -> Site1DelayNumVt3MaxRecordR {
+        Site1DelayNumVt3MaxRecordR::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[doc = "needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DlyNumRec1Spec;
+impl crate::RegisterSpec for DlyNumRec1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dly_num_rec1::R`](R) reader structure"]
+impl crate::Readable for DlyNumRec1Spec {}
+#[doc = "`reset()` method sets DLY_NUM_REC1 to value 0"]
+impl crate::Resettable for DlyNumRec1Spec {}

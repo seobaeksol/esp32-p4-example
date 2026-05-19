@@ -1,0 +1,22 @@
+#[doc = "Register `PUSH_BYTECNT` reader"]
+pub type R = crate::R<PushBytecntSpec>;
+#[doc = "Field `OUT_CMDFIFO_PUSH_BYTECNT` reader - only for debug"]
+pub type OutCmdfifoPushBytecntR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - only for debug"]
+    #[inline(always)]
+    pub fn out_cmdfifo_push_bytecnt(&self) -> OutCmdfifoPushBytecntR {
+        OutCmdfifoPushBytecntR::new((self.bits & 0xff) as u8)
+    }
+}
+#[doc = "TX CHx push byte cnt register\n\nYou can [`read`](crate::Reg::read) this register and get [`push_bytecnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PushBytecntSpec;
+impl crate::RegisterSpec for PushBytecntSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`push_bytecnt::R`](R) reader structure"]
+impl crate::Readable for PushBytecntSpec {}
+#[doc = "`reset()` method sets PUSH_BYTECNT to value 0xff"]
+impl crate::Resettable for PushBytecntSpec {
+    const RESET_VALUE: u32 = 0xff;
+}

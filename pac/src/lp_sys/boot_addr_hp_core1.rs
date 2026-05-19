@@ -1,0 +1,35 @@
+#[doc = "Register `BOOT_ADDR_HP_CORE1` reader"]
+pub type R = crate::R<BootAddrHpCore1Spec>;
+#[doc = "Register `BOOT_ADDR_HP_CORE1` writer"]
+pub type W = crate::W<BootAddrHpCore1Spec>;
+#[doc = "Field `BOOT_ADDR_HP_CORE1` reader - need_des"]
+pub type BootAddrHpCore1R = crate::FieldReader<u32>;
+#[doc = "Field `BOOT_ADDR_HP_CORE1` writer - need_des"]
+pub type BootAddrHpCore1W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn boot_addr_hp_core1(&self) -> BootAddrHpCore1R {
+        BootAddrHpCore1R::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn boot_addr_hp_core1(&mut self) -> BootAddrHpCore1W<'_, BootAddrHpCore1Spec> {
+        BootAddrHpCore1W::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`boot_addr_hp_core1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`boot_addr_hp_core1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BootAddrHpCore1Spec;
+impl crate::RegisterSpec for BootAddrHpCore1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`boot_addr_hp_core1::R`](R) reader structure"]
+impl crate::Readable for BootAddrHpCore1Spec {}
+#[doc = "`write(|w| ..)` method takes [`boot_addr_hp_core1::W`](W) writer structure"]
+impl crate::Writable for BootAddrHpCore1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BOOT_ADDR_HP_CORE1 to value 0"]
+impl crate::Resettable for BootAddrHpCore1Spec {}

@@ -1,0 +1,287 @@
+#[doc = "Register `TASK_ST1_CLR` writer"]
+pub type W = crate::W<TaskSt1ClrSpec>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH4_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh4StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH5_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh5StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH6_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh6StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH7_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh7StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER0_CAP_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer0_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer0CapStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER1_CAP_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer1_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer1CapStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER2_CAP_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer2_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer2CapStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER3_CAP_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer3_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer3CapStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH0_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh0StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH1_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH2_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh2StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH3_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh3StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH4_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh4StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH5_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh5StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH6_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh6StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_SIG_OUT_DIS_CH7_ST_CLR` writer - Configures whether or not to clear LEDC_task_sig_out_dis_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskSigOutDisCh7StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH0_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh0StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH1_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH2_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh2StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH3_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh3StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH4_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh4StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH5_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh5StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH6_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh6StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_OVF_CNT_RST_CH7_ST_CLR` writer - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskOvfCntRstCh7StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER0_RST_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer0_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer0RstStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER1_RST_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer1_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer1RstStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER2_RST_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer2_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer2RstStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER3_RST_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer3_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer3RstStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER0_RESUME_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer0_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer0ResumeStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER1_RESUME_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer1_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer1ResumeStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER2_RESUME_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer2_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer2ResumeStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER3_RESUME_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer3_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer3ResumeStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to clear LEDC_task_duty_scale_update_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch4_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh4StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskDutyScaleUpdateCh4StClrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Configures whether or not to clear LEDC_task_duty_scale_update_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch5_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh5StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskDutyScaleUpdateCh5StClrW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Configures whether or not to clear LEDC_task_duty_scale_update_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch6_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh6StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskDutyScaleUpdateCh6StClrW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Configures whether or not to clear LEDC_task_duty_scale_update_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch7_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh7StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskDutyScaleUpdateCh7StClrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Configures whether or not to clear LEDC_task_timer0_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer0_cap_st_clr(&mut self) -> LedcTaskTimer0CapStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer0CapStClrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Configures whether or not to clear LEDC_task_timer1_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer1_cap_st_clr(&mut self) -> LedcTaskTimer1CapStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer1CapStClrW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Configures whether or not to clear LEDC_task_timer2_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer2_cap_st_clr(&mut self) -> LedcTaskTimer2CapStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer2CapStClrW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Configures whether or not to clear LEDC_task_timer3_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer3_cap_st_clr(&mut self) -> LedcTaskTimer3CapStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer3CapStClrW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Configures whether or not to clear LEDC_task_sig_out_dis_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch0_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh0StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh0StClrW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Configures whether or not to clear LEDC_task_sig_out_dis_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch1_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh1StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh1StClrW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Configures whether or not to clear LEDC_task_sig_out_dis_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch2_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh2StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh2StClrW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Configures whether or not to clear LEDC_task_sig_out_dis_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch3_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh3StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh3StClrW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Configures whether or not to clear LEDC_task_sig_out_dis_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch4_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh4StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh4StClrW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Configures whether or not to clear LEDC_task_sig_out_dis_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch5_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh5StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh5StClrW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Configures whether or not to clear LEDC_task_sig_out_dis_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch6_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh6StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh6StClrW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Configures whether or not to clear LEDC_task_sig_out_dis_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_sig_out_dis_ch7_st_clr(
+        &mut self,
+    ) -> LedcTaskSigOutDisCh7StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskSigOutDisCh7StClrW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch0_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh0StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh0StClrW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch1_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh1StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh1StClrW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch2_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh2StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh2StClrW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch3_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh3StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh3StClrW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch4_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh4StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh4StClrW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch5_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh5StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh5StClrW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch6_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh6StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh6StClrW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_ovf_cnt_rst_ch7_st_clr(
+        &mut self,
+    ) -> LedcTaskOvfCntRstCh7StClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskOvfCntRstCh7StClrW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Configures whether or not to clear LEDC_task_timer0_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer0_rst_st_clr(&mut self) -> LedcTaskTimer0RstStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer0RstStClrW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Configures whether or not to clear LEDC_task_timer1_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer1_rst_st_clr(&mut self) -> LedcTaskTimer1RstStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer1RstStClrW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Configures whether or not to clear LEDC_task_timer2_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer2_rst_st_clr(&mut self) -> LedcTaskTimer2RstStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer2RstStClrW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Configures whether or not to clear LEDC_task_timer3_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer3_rst_st_clr(&mut self) -> LedcTaskTimer3RstStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer3RstStClrW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Configures whether or not to clear LEDC_task_timer0_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer0_resume_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer0ResumeStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer0ResumeStClrW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Configures whether or not to clear LEDC_task_timer1_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer1_resume_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer1ResumeStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer1ResumeStClrW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Configures whether or not to clear LEDC_task_timer2_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer2_resume_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer2ResumeStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer2ResumeStClrW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Configures whether or not to clear LEDC_task_timer3_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer3_resume_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer3ResumeStClrW<'_, TaskSt1ClrSpec> {
+        LedcTaskTimer3ResumeStClrW::new(self, 31)
+    }
+}
+#[doc = "Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st1_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TaskSt1ClrSpec;
+impl crate::RegisterSpec for TaskSt1ClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`task_st1_clr::W`](W) writer structure"]
+impl crate::Writable for TaskSt1ClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TASK_ST1_CLR to value 0"]
+impl crate::Resettable for TaskSt1ClrSpec {}

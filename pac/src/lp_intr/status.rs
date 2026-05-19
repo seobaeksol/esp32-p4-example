@@ -1,0 +1,167 @@
+#[doc = "Register `STATUS` reader"]
+pub type R = crate::R<StatusSpec>;
+#[doc = "Field `LP_HUK_INTR_ST` reader - need_des"]
+pub type LpHukIntrStR = crate::BitReader;
+#[doc = "Field `SYSREG_INTR_ST` reader - need_des"]
+pub type SysregIntrStR = crate::BitReader;
+#[doc = "Field `LP_SW_INTR_ST` reader - need_des"]
+pub type LpSwIntrStR = crate::BitReader;
+#[doc = "Field `LP_EFUSE_INTR_ST` reader - need_des"]
+pub type LpEfuseIntrStR = crate::BitReader;
+#[doc = "Field `LP_UART_INTR_ST` reader - need_des"]
+pub type LpUartIntrStR = crate::BitReader;
+#[doc = "Field `LP_TSENS_INTR_ST` reader - need_des"]
+pub type LpTsensIntrStR = crate::BitReader;
+#[doc = "Field `LP_TOUCH_INTR_ST` reader - need_des"]
+pub type LpTouchIntrStR = crate::BitReader;
+#[doc = "Field `LP_SPI_INTR_ST` reader - need_des"]
+pub type LpSpiIntrStR = crate::BitReader;
+#[doc = "Field `LP_I2S_INTR_ST` reader - need_des"]
+pub type LpI2sIntrStR = crate::BitReader;
+#[doc = "Field `LP_I2C_INTR_ST` reader - need_des"]
+pub type LpI2cIntrStR = crate::BitReader;
+#[doc = "Field `LP_GPIO_INTR_ST` reader - need_des"]
+pub type LpGpioIntrStR = crate::BitReader;
+#[doc = "Field `LP_ADC_INTR_ST` reader - need_des"]
+pub type LpAdcIntrStR = crate::BitReader;
+#[doc = "Field `ANAPERI_INTR_ST` reader - need_des"]
+pub type AnaperiIntrStR = crate::BitReader;
+#[doc = "Field `PMU_REG_1_INTR_ST` reader - need_des"]
+pub type PmuReg1IntrStR = crate::BitReader;
+#[doc = "Field `PMU_REG_0_INTR_ST` reader - need_des"]
+pub type PmuReg0IntrStR = crate::BitReader;
+#[doc = "Field `MB_LP_INTR_ST` reader - need_des"]
+pub type MbLpIntrStR = crate::BitReader;
+#[doc = "Field `MB_HP_INTR_ST` reader - need_des"]
+pub type MbHpIntrStR = crate::BitReader;
+#[doc = "Field `LP_TIMER_REG_1_INTR_ST` reader - need_des"]
+pub type LpTimerReg1IntrStR = crate::BitReader;
+#[doc = "Field `LP_TIMER_REG_0_INTR_ST` reader - need_des"]
+pub type LpTimerReg0IntrStR = crate::BitReader;
+#[doc = "Field `LP_WDT_INTR_ST` reader - need_des"]
+pub type LpWdtIntrStR = crate::BitReader;
+#[doc = "Field `LP_RTC_INTR_ST` reader - need_des"]
+pub type LpRtcIntrStR = crate::BitReader;
+#[doc = "Field `HP_INTR_ST` reader - need_des"]
+pub type HpIntrStR = crate::BitReader;
+impl R {
+    #[doc = "Bit 10 - need_des"]
+    #[inline(always)]
+    pub fn lp_huk_intr_st(&self) -> LpHukIntrStR {
+        LpHukIntrStR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - need_des"]
+    #[inline(always)]
+    pub fn sysreg_intr_st(&self) -> SysregIntrStR {
+        SysregIntrStR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - need_des"]
+    #[inline(always)]
+    pub fn lp_sw_intr_st(&self) -> LpSwIntrStR {
+        LpSwIntrStR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - need_des"]
+    #[inline(always)]
+    pub fn lp_efuse_intr_st(&self) -> LpEfuseIntrStR {
+        LpEfuseIntrStR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - need_des"]
+    #[inline(always)]
+    pub fn lp_uart_intr_st(&self) -> LpUartIntrStR {
+        LpUartIntrStR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - need_des"]
+    #[inline(always)]
+    pub fn lp_tsens_intr_st(&self) -> LpTsensIntrStR {
+        LpTsensIntrStR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - need_des"]
+    #[inline(always)]
+    pub fn lp_touch_intr_st(&self) -> LpTouchIntrStR {
+        LpTouchIntrStR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - need_des"]
+    #[inline(always)]
+    pub fn lp_spi_intr_st(&self) -> LpSpiIntrStR {
+        LpSpiIntrStR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - need_des"]
+    #[inline(always)]
+    pub fn lp_i2s_intr_st(&self) -> LpI2sIntrStR {
+        LpI2sIntrStR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - need_des"]
+    #[inline(always)]
+    pub fn lp_i2c_intr_st(&self) -> LpI2cIntrStR {
+        LpI2cIntrStR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - need_des"]
+    #[inline(always)]
+    pub fn lp_gpio_intr_st(&self) -> LpGpioIntrStR {
+        LpGpioIntrStR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - need_des"]
+    #[inline(always)]
+    pub fn lp_adc_intr_st(&self) -> LpAdcIntrStR {
+        LpAdcIntrStR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - need_des"]
+    #[inline(always)]
+    pub fn anaperi_intr_st(&self) -> AnaperiIntrStR {
+        AnaperiIntrStR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - need_des"]
+    #[inline(always)]
+    pub fn pmu_reg_1_intr_st(&self) -> PmuReg1IntrStR {
+        PmuReg1IntrStR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - need_des"]
+    #[inline(always)]
+    pub fn pmu_reg_0_intr_st(&self) -> PmuReg0IntrStR {
+        PmuReg0IntrStR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - need_des"]
+    #[inline(always)]
+    pub fn mb_lp_intr_st(&self) -> MbLpIntrStR {
+        MbLpIntrStR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - need_des"]
+    #[inline(always)]
+    pub fn mb_hp_intr_st(&self) -> MbHpIntrStR {
+        MbHpIntrStR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn lp_timer_reg_1_intr_st(&self) -> LpTimerReg1IntrStR {
+        LpTimerReg1IntrStR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn lp_timer_reg_0_intr_st(&self) -> LpTimerReg0IntrStR {
+        LpTimerReg0IntrStR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn lp_wdt_intr_st(&self) -> LpWdtIntrStR {
+        LpWdtIntrStR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_rtc_intr_st(&self) -> LpRtcIntrStR {
+        LpRtcIntrStR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn hp_intr_st(&self) -> HpIntrStR {
+        HpIntrStR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct StatusSpec;
+impl crate::RegisterSpec for StatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status::R`](R) reader structure"]
+impl crate::Readable for StatusSpec {}
+#[doc = "`reset()` method sets STATUS to value 0"]
+impl crate::Resettable for StatusSpec {}

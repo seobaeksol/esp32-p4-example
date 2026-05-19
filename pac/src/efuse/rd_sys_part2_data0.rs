@@ -1,0 +1,20 @@
+#[doc = "Register `RD_SYS_PART2_DATA0` reader"]
+pub type R = crate::R<RdSysPart2Data0Spec>;
+#[doc = "Field `SYS_DATA_PART2_0` reader - Represents the first 32-bit of second part of system data."]
+pub type SysDataPart2_0R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Represents the first 32-bit of second part of system data."]
+    #[inline(always)]
+    pub fn sys_data_part2_0(&self) -> SysDataPart2_0R {
+        SysDataPart2_0R::new(self.bits)
+    }
+}
+#[doc = "Represents rd_sys_part2_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_sys_part2_data0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdSysPart2Data0Spec;
+impl crate::RegisterSpec for RdSysPart2Data0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rd_sys_part2_data0::R`](R) reader structure"]
+impl crate::Readable for RdSysPart2Data0Spec {}
+#[doc = "`reset()` method sets RD_SYS_PART2_DATA0 to value 0"]
+impl crate::Resettable for RdSysPart2Data0Spec {}

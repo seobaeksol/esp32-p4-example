@@ -1,0 +1,34 @@
+#[doc = "Register `IBI_STATUS_BUF` reader"]
+pub type R = crate::R<IbiStatusBufSpec>;
+#[doc = "Field `DATA_LENGTH` reader - This field represents the length of data received along with IBI, in bytes."]
+pub type DataLengthR = crate::FieldReader;
+#[doc = "Field `IBI_ID` reader - IBI Identifier. The byte received after START which includes the address the R/W bit: Device address and R/W bit in case of Slave Interrupt or Master Request."]
+pub type IbiIdR = crate::FieldReader;
+#[doc = "Field `IBI_STS` reader - IBI received data/status. IBI Data register is mapped to the IBI Buffer. The IBI Data is always packed in4-byte aligned and put to the IBI Buffer. This register When read from, reads the data from the IBI buffer. IBI Status register when read from, returns the data from the IBI Buffer and indicates how the controller responded to incoming IBI(SIR, MR and HJ)."]
+pub type IbiStsR = crate::BitReader;
+impl R {
+    #[doc = "Bits 0:7 - This field represents the length of data received along with IBI, in bytes."]
+    #[inline(always)]
+    pub fn data_length(&self) -> DataLengthR {
+        DataLengthR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - IBI Identifier. The byte received after START which includes the address the R/W bit: Device address and R/W bit in case of Slave Interrupt or Master Request."]
+    #[inline(always)]
+    pub fn ibi_id(&self) -> IbiIdR {
+        IbiIdR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bit 28 - IBI received data/status. IBI Data register is mapped to the IBI Buffer. The IBI Data is always packed in4-byte aligned and put to the IBI Buffer. This register When read from, reads the data from the IBI buffer. IBI Status register when read from, returns the data from the IBI Buffer and indicates how the controller responded to incoming IBI(SIR, MR and HJ)."]
+    #[inline(always)]
+    pub fn ibi_sts(&self) -> IbiStsR {
+        IbiStsR::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[doc = "In-Band Interrupt Buffer Status/Data Register. When receiving an IBI, IBI_PORT is used to both: Read the IBI Status Read the IBI Data(which is raw/opaque data)\n\nYou can [`read`](crate::Reg::read) this register and get [`ibi_status_buf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IbiStatusBufSpec;
+impl crate::RegisterSpec for IbiStatusBufSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ibi_status_buf::R`](R) reader structure"]
+impl crate::Readable for IbiStatusBufSpec {}
+#[doc = "`reset()` method sets IBI_STATUS_BUF to value 0"]
+impl crate::Resettable for IbiStatusBufSpec {}

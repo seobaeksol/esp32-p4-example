@@ -1,0 +1,79 @@
+#[doc = "Register `BACKUP_DMA_CFG0` reader"]
+pub type R = crate::R<BackupDmaCfg0Spec>;
+#[doc = "Register `BACKUP_DMA_CFG0` writer"]
+pub type W = crate::W<BackupDmaCfg0Spec>;
+#[doc = "Field `BURST_LIMIT_AON` reader - need_des"]
+pub type BurstLimitAonR = crate::FieldReader;
+#[doc = "Field `BURST_LIMIT_AON` writer - need_des"]
+pub type BurstLimitAonW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `READ_INTERVAL_AON` reader - need_des"]
+pub type ReadIntervalAonR = crate::FieldReader;
+#[doc = "Field `READ_INTERVAL_AON` writer - need_des"]
+pub type ReadIntervalAonW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `LINK_BACKUP_TOUT_THRES_AON` reader - need_des"]
+pub type LinkBackupToutThresAonR = crate::FieldReader<u16>;
+#[doc = "Field `LINK_BACKUP_TOUT_THRES_AON` writer - need_des"]
+pub type LinkBackupToutThresAonW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `LINK_TOUT_THRES_AON` reader - need_des"]
+pub type LinkToutThresAonR = crate::FieldReader<u16>;
+#[doc = "Field `LINK_TOUT_THRES_AON` writer - need_des"]
+pub type LinkToutThresAonW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+impl R {
+    #[doc = "Bits 0:4 - need_des"]
+    #[inline(always)]
+    pub fn burst_limit_aon(&self) -> BurstLimitAonR {
+        BurstLimitAonR::new((self.bits & 0x1f) as u8)
+    }
+    #[doc = "Bits 5:11 - need_des"]
+    #[inline(always)]
+    pub fn read_interval_aon(&self) -> ReadIntervalAonR {
+        ReadIntervalAonR::new(((self.bits >> 5) & 0x7f) as u8)
+    }
+    #[doc = "Bits 12:21 - need_des"]
+    #[inline(always)]
+    pub fn link_backup_tout_thres_aon(&self) -> LinkBackupToutThresAonR {
+        LinkBackupToutThresAonR::new(((self.bits >> 12) & 0x03ff) as u16)
+    }
+    #[doc = "Bits 22:31 - need_des"]
+    #[inline(always)]
+    pub fn link_tout_thres_aon(&self) -> LinkToutThresAonR {
+        LinkToutThresAonR::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - need_des"]
+    #[inline(always)]
+    pub fn burst_limit_aon(&mut self) -> BurstLimitAonW<'_, BackupDmaCfg0Spec> {
+        BurstLimitAonW::new(self, 0)
+    }
+    #[doc = "Bits 5:11 - need_des"]
+    #[inline(always)]
+    pub fn read_interval_aon(&mut self) -> ReadIntervalAonW<'_, BackupDmaCfg0Spec> {
+        ReadIntervalAonW::new(self, 5)
+    }
+    #[doc = "Bits 12:21 - need_des"]
+    #[inline(always)]
+    pub fn link_backup_tout_thres_aon(&mut self) -> LinkBackupToutThresAonW<'_, BackupDmaCfg0Spec> {
+        LinkBackupToutThresAonW::new(self, 12)
+    }
+    #[doc = "Bits 22:31 - need_des"]
+    #[inline(always)]
+    pub fn link_tout_thres_aon(&mut self) -> LinkToutThresAonW<'_, BackupDmaCfg0Spec> {
+        LinkToutThresAonW::new(self, 22)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`backup_dma_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`backup_dma_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BackupDmaCfg0Spec;
+impl crate::RegisterSpec for BackupDmaCfg0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`backup_dma_cfg0::R`](R) reader structure"]
+impl crate::Readable for BackupDmaCfg0Spec {}
+#[doc = "`write(|w| ..)` method takes [`backup_dma_cfg0::W`](W) writer structure"]
+impl crate::Writable for BackupDmaCfg0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BACKUP_DMA_CFG0 to value 0x1906_414a"]
+impl crate::Resettable for BackupDmaCfg0Spec {
+    const RESET_VALUE: u32 = 0x1906_414a;
+}

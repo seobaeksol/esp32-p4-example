@@ -1,0 +1,106 @@
+#[doc = "Register `L1_DCACHE_CACHESIZE_CONF` reader"]
+pub type R = crate::R<L1DcacheCachesizeConfSpec>;
+#[doc = "Field `L1_DCACHE_CACHESIZE_256` reader - The field is used to configure cachesize of L1-DCache as 256 bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize256R = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_512` reader - The field is used to configure cachesize of L1-DCache as 512 bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize512R = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_1K` reader - The field is used to configure cachesize of L1-DCache as 1k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize1kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_2K` reader - The field is used to configure cachesize of L1-DCache as 2k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize2kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_4K` reader - The field is used to configure cachesize of L1-DCache as 4k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize4kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_8K` reader - The field is used to configure cachesize of L1-DCache as 8k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize8kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_16K` reader - The field is used to configure cachesize of L1-DCache as 16k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize16kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_32K` reader - The field is used to configure cachesize of L1-DCache as 32k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize32kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_64K` reader - The field is used to configure cachesize of L1-DCache as 64k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize64kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_128K` reader - The field is used to configure cachesize of L1-DCache as 128k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize128kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_256K` reader - The field is used to configure cachesize of L1-DCache as 256k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize256kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_512K` reader - The field is used to configure cachesize of L1-DCache as 512k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize512kR = crate::BitReader;
+#[doc = "Field `L1_DCACHE_CACHESIZE_1024K` reader - The field is used to configure cachesize of L1-DCache as 1024k bytes. This field and all other fields within this register is onehot."]
+pub type L1DcacheCachesize1024kR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - The field is used to configure cachesize of L1-DCache as 256 bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_256(&self) -> L1DcacheCachesize256R {
+        L1DcacheCachesize256R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The field is used to configure cachesize of L1-DCache as 512 bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_512(&self) -> L1DcacheCachesize512R {
+        L1DcacheCachesize512R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The field is used to configure cachesize of L1-DCache as 1k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_1k(&self) -> L1DcacheCachesize1kR {
+        L1DcacheCachesize1kR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - The field is used to configure cachesize of L1-DCache as 2k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_2k(&self) -> L1DcacheCachesize2kR {
+        L1DcacheCachesize2kR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - The field is used to configure cachesize of L1-DCache as 4k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_4k(&self) -> L1DcacheCachesize4kR {
+        L1DcacheCachesize4kR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - The field is used to configure cachesize of L1-DCache as 8k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_8k(&self) -> L1DcacheCachesize8kR {
+        L1DcacheCachesize8kR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The field is used to configure cachesize of L1-DCache as 16k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_16k(&self) -> L1DcacheCachesize16kR {
+        L1DcacheCachesize16kR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - The field is used to configure cachesize of L1-DCache as 32k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_32k(&self) -> L1DcacheCachesize32kR {
+        L1DcacheCachesize32kR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - The field is used to configure cachesize of L1-DCache as 64k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_64k(&self) -> L1DcacheCachesize64kR {
+        L1DcacheCachesize64kR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The field is used to configure cachesize of L1-DCache as 128k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_128k(&self) -> L1DcacheCachesize128kR {
+        L1DcacheCachesize128kR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - The field is used to configure cachesize of L1-DCache as 256k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_256k(&self) -> L1DcacheCachesize256kR {
+        L1DcacheCachesize256kR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - The field is used to configure cachesize of L1-DCache as 512k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_512k(&self) -> L1DcacheCachesize512kR {
+        L1DcacheCachesize512kR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - The field is used to configure cachesize of L1-DCache as 1024k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l1_dcache_cachesize_1024k(&self) -> L1DcacheCachesize1024kR {
+        L1DcacheCachesize1024kR::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[doc = "L1 data Cache CacheSize mode configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_dcache_cachesize_conf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1DcacheCachesizeConfSpec;
+impl crate::RegisterSpec for L1DcacheCachesizeConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_dcache_cachesize_conf::R`](R) reader structure"]
+impl crate::Readable for L1DcacheCachesizeConfSpec {}
+#[doc = "`reset()` method sets L1_DCACHE_CACHESIZE_CONF to value 0x0100"]
+impl crate::Resettable for L1DcacheCachesizeConfSpec {
+    const RESET_VALUE: u32 = 0x0100;
+}

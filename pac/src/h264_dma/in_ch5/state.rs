@@ -1,0 +1,29 @@
+#[doc = "Register `STATE` reader"]
+pub type R = crate::R<StateSpec>;
+#[doc = "Field `IN_STATE` reader - This register stores the current control module state machine state."]
+pub type InStateR = crate::FieldReader;
+#[doc = "Field `IN_RESET_AVAIL` reader - This register indicate that if the channel reset is safety."]
+pub type InResetAvailR = crate::BitReader;
+impl R {
+    #[doc = "Bits 0:2 - This register stores the current control module state machine state."]
+    #[inline(always)]
+    pub fn in_state(&self) -> InStateR {
+        InStateR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3 - This register indicate that if the channel reset is safety."]
+    #[inline(always)]
+    pub fn in_reset_avail(&self) -> InResetAvailR {
+        InResetAvailR::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[doc = "RX CH5 state register\n\nYou can [`read`](crate::Reg::read) this register and get [`state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct StateSpec;
+impl crate::RegisterSpec for StateSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`state::R`](R) reader structure"]
+impl crate::Readable for StateSpec {}
+#[doc = "`reset()` method sets STATE to value 0x08"]
+impl crate::Resettable for StateSpec {
+    const RESET_VALUE: u32 = 0x08;
+}

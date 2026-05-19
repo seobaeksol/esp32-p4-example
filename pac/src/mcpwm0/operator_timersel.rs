@@ -1,0 +1,63 @@
+#[doc = "Register `OPERATOR_TIMERSEL` reader"]
+pub type R = crate::R<OperatorTimerselSpec>;
+#[doc = "Register `OPERATOR_TIMERSEL` writer"]
+pub type W = crate::W<OperatorTimerselSpec>;
+#[doc = "Field `OPERATOR0_TIMERSEL` reader - Configures which PWM timer will be the timing reference for PWM operator0.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+pub type Operator0TimerselR = crate::FieldReader;
+#[doc = "Field `OPERATOR0_TIMERSEL` writer - Configures which PWM timer will be the timing reference for PWM operator0.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+pub type Operator0TimerselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `OPERATOR1_TIMERSEL` reader - Configures which PWM timer will be the timing reference for PWM operator1.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+pub type Operator1TimerselR = crate::FieldReader;
+#[doc = "Field `OPERATOR1_TIMERSEL` writer - Configures which PWM timer will be the timing reference for PWM operator1.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+pub type Operator1TimerselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `OPERATOR2_TIMERSEL` reader - Configures which PWM timer will be the timing reference for PWM operator2.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+pub type Operator2TimerselR = crate::FieldReader;
+#[doc = "Field `OPERATOR2_TIMERSEL` writer - Configures which PWM timer will be the timing reference for PWM operator2.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+pub type Operator2TimerselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+impl R {
+    #[doc = "Bits 0:1 - Configures which PWM timer will be the timing reference for PWM operator0.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+    #[inline(always)]
+    pub fn operator0_timersel(&self) -> Operator0TimerselR {
+        Operator0TimerselR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3 - Configures which PWM timer will be the timing reference for PWM operator1.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+    #[inline(always)]
+    pub fn operator1_timersel(&self) -> Operator1TimerselR {
+        Operator1TimerselR::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5 - Configures which PWM timer will be the timing reference for PWM operator2.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+    #[inline(always)]
+    pub fn operator2_timersel(&self) -> Operator2TimerselR {
+        Operator2TimerselR::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:1 - Configures which PWM timer will be the timing reference for PWM operator0.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+    #[inline(always)]
+    pub fn operator0_timersel(&mut self) -> Operator0TimerselW<'_, OperatorTimerselSpec> {
+        Operator0TimerselW::new(self, 0)
+    }
+    #[doc = "Bits 2:3 - Configures which PWM timer will be the timing reference for PWM operator1.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+    #[inline(always)]
+    pub fn operator1_timersel(&mut self) -> Operator1TimerselW<'_, OperatorTimerselSpec> {
+        Operator1TimerselW::new(self, 2)
+    }
+    #[doc = "Bits 4:5 - Configures which PWM timer will be the timing reference for PWM operator2.\\\\0: Timer0\\\\1: Timer1\\\\2: Timer2\\\\3: Invalid, will select timer2"]
+    #[inline(always)]
+    pub fn operator2_timersel(&mut self) -> Operator2TimerselW<'_, OperatorTimerselSpec> {
+        Operator2TimerselW::new(self, 4)
+    }
+}
+#[doc = "PWM operator's timer select register\n\nYou can [`read`](crate::Reg::read) this register and get [`operator_timersel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`operator_timersel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OperatorTimerselSpec;
+impl crate::RegisterSpec for OperatorTimerselSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`operator_timersel::R`](R) reader structure"]
+impl crate::Readable for OperatorTimerselSpec {}
+#[doc = "`write(|w| ..)` method takes [`operator_timersel::W`](W) writer structure"]
+impl crate::Writable for OperatorTimerselSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets OPERATOR_TIMERSEL to value 0"]
+impl crate::Resettable for OperatorTimerselSpec {}

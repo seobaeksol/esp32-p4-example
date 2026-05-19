@@ -1,0 +1,37 @@
+#[doc = "Register `BF_SIGMA` reader"]
+pub type R = crate::R<BfSigmaSpec>;
+#[doc = "Register `BF_SIGMA` writer"]
+pub type W = crate::W<BfSigmaSpec>;
+#[doc = "Field `SIGMA` reader - this field configures the bayer denoising level, valid data from 2 to 20"]
+pub type SigmaR = crate::FieldReader;
+#[doc = "Field `SIGMA` writer - this field configures the bayer denoising level, valid data from 2 to 20"]
+pub type SigmaW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bits 0:5 - this field configures the bayer denoising level, valid data from 2 to 20"]
+    #[inline(always)]
+    pub fn sigma(&self) -> SigmaR {
+        SigmaR::new((self.bits & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - this field configures the bayer denoising level, valid data from 2 to 20"]
+    #[inline(always)]
+    pub fn sigma(&mut self) -> SigmaW<'_, BfSigmaSpec> {
+        SigmaW::new(self, 0)
+    }
+}
+#[doc = "bf denoising level control register\n\nYou can [`read`](crate::Reg::read) this register and get [`bf_sigma::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bf_sigma::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BfSigmaSpec;
+impl crate::RegisterSpec for BfSigmaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`bf_sigma::R`](R) reader structure"]
+impl crate::Readable for BfSigmaSpec {}
+#[doc = "`write(|w| ..)` method takes [`bf_sigma::W`](W) writer structure"]
+impl crate::Writable for BfSigmaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BF_SIGMA to value 0x02"]
+impl crate::Resettable for BfSigmaSpec {
+    const RESET_VALUE: u32 = 0x02;
+}

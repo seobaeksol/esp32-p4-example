@@ -1,0 +1,35 @@
+#[doc = "Register `OUT1` reader"]
+pub type R = crate::R<Out1Spec>;
+#[doc = "Register `OUT1` writer"]
+pub type W = crate::W<Out1Spec>;
+#[doc = "Field `DATA_ORIG` reader - GPIO output register for GPIO32-56"]
+pub type DataOrigR = crate::FieldReader<u32>;
+#[doc = "Field `DATA_ORIG` writer - GPIO output register for GPIO32-56"]
+pub type DataOrigW<'a, REG> = crate::FieldWriter<'a, REG, 25, u32>;
+impl R {
+    #[doc = "Bits 0:24 - GPIO output register for GPIO32-56"]
+    #[inline(always)]
+    pub fn data_orig(&self) -> DataOrigR {
+        DataOrigR::new(self.bits & 0x01ff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:24 - GPIO output register for GPIO32-56"]
+    #[inline(always)]
+    pub fn data_orig(&mut self) -> DataOrigW<'_, Out1Spec> {
+        DataOrigW::new(self, 0)
+    }
+}
+#[doc = "GPIO output register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`out1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Out1Spec;
+impl crate::RegisterSpec for Out1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out1::R`](R) reader structure"]
+impl crate::Readable for Out1Spec {}
+#[doc = "`write(|w| ..)` method takes [`out1::W`](W) writer structure"]
+impl crate::Writable for Out1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets OUT1 to value 0"]
+impl crate::Resettable for Out1Spec {}

@@ -1,0 +1,193 @@
+#[doc = "Register `CORE_0_INTR_ENA` reader"]
+pub type R = crate::R<Core0IntrEnaSpec>;
+#[doc = "Register `CORE_0_INTR_ENA` writer"]
+pub type W = crate::W<Core0IntrEnaSpec>;
+#[doc = "Field `CORE_0_AREA_DRAM0_0_RD_ENA` reader - Core0 dram0 area0 read monitor enable"]
+pub type Core0AreaDram0_0RdEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_0_RD_ENA` writer - Core0 dram0 area0 read monitor enable"]
+pub type Core0AreaDram0_0RdEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_DRAM0_0_WR_ENA` reader - Core0 dram0 area0 write monitor enable"]
+pub type Core0AreaDram0_0WrEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_0_WR_ENA` writer - Core0 dram0 area0 write monitor enable"]
+pub type Core0AreaDram0_0WrEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_DRAM0_1_RD_ENA` reader - Core0 dram0 area1 read monitor enable"]
+pub type Core0AreaDram0_1RdEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_1_RD_ENA` writer - Core0 dram0 area1 read monitor enable"]
+pub type Core0AreaDram0_1RdEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_DRAM0_1_WR_ENA` reader - Core0 dram0 area1 write monitor enable"]
+pub type Core0AreaDram0_1WrEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_1_WR_ENA` writer - Core0 dram0 area1 write monitor enable"]
+pub type Core0AreaDram0_1WrEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_PIF_0_RD_ENA` reader - Core0 PIF area0 read monitor enable"]
+pub type Core0AreaPif0RdEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_0_RD_ENA` writer - Core0 PIF area0 read monitor enable"]
+pub type Core0AreaPif0RdEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_PIF_0_WR_ENA` reader - Core0 PIF area0 write monitor enable"]
+pub type Core0AreaPif0WrEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_0_WR_ENA` writer - Core0 PIF area0 write monitor enable"]
+pub type Core0AreaPif0WrEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_PIF_1_RD_ENA` reader - Core0 PIF area1 read monitor enable"]
+pub type Core0AreaPif1RdEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_1_RD_ENA` writer - Core0 PIF area1 read monitor enable"]
+pub type Core0AreaPif1RdEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_AREA_PIF_1_WR_ENA` reader - Core0 PIF area1 write monitor enable"]
+pub type Core0AreaPif1WrEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_1_WR_ENA` writer - Core0 PIF area1 write monitor enable"]
+pub type Core0AreaPif1WrEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` reader - Core0 stackpoint underflow monitor enable"]
+pub type Core0SpSpillMinEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` writer - Core0 stackpoint underflow monitor enable"]
+pub type Core0SpSpillMinEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` reader - Core0 stackpoint overflow monitor enable"]
+pub type Core0SpSpillMaxEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` writer - Core0 stackpoint overflow monitor enable"]
+pub type Core0SpSpillMaxEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_IRAM0_EXCEPTION_MONITOR_ENA` reader - IBUS busy monitor enable"]
+pub type Core0Iram0ExceptionMonitorEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_IRAM0_EXCEPTION_MONITOR_ENA` writer - IBUS busy monitor enable"]
+pub type Core0Iram0ExceptionMonitorEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_DRAM0_EXCEPTION_MONITOR_ENA` reader - DBUS busy monitor enbale"]
+pub type Core0Dram0ExceptionMonitorEnaR = crate::BitReader;
+#[doc = "Field `CORE_0_DRAM0_EXCEPTION_MONITOR_ENA` writer - DBUS busy monitor enbale"]
+pub type Core0Dram0ExceptionMonitorEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Core0 dram0 area0 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_0_rd_ena(&self) -> Core0AreaDram0_0RdEnaR {
+        Core0AreaDram0_0RdEnaR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Core0 dram0 area0 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_0_wr_ena(&self) -> Core0AreaDram0_0WrEnaR {
+        Core0AreaDram0_0WrEnaR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Core0 dram0 area1 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_1_rd_ena(&self) -> Core0AreaDram0_1RdEnaR {
+        Core0AreaDram0_1RdEnaR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Core0 dram0 area1 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_1_wr_ena(&self) -> Core0AreaDram0_1WrEnaR {
+        Core0AreaDram0_1WrEnaR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Core0 PIF area0 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_0_rd_ena(&self) -> Core0AreaPif0RdEnaR {
+        Core0AreaPif0RdEnaR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Core0 PIF area0 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_0_wr_ena(&self) -> Core0AreaPif0WrEnaR {
+        Core0AreaPif0WrEnaR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Core0 PIF area1 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_1_rd_ena(&self) -> Core0AreaPif1RdEnaR {
+        Core0AreaPif1RdEnaR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Core0 PIF area1 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_1_wr_ena(&self) -> Core0AreaPif1WrEnaR {
+        Core0AreaPif1WrEnaR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Core0 stackpoint underflow monitor enable"]
+    #[inline(always)]
+    pub fn core_0_sp_spill_min_ena(&self) -> Core0SpSpillMinEnaR {
+        Core0SpSpillMinEnaR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Core0 stackpoint overflow monitor enable"]
+    #[inline(always)]
+    pub fn core_0_sp_spill_max_ena(&self) -> Core0SpSpillMaxEnaR {
+        Core0SpSpillMaxEnaR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - IBUS busy monitor enable"]
+    #[inline(always)]
+    pub fn core_0_iram0_exception_monitor_ena(&self) -> Core0Iram0ExceptionMonitorEnaR {
+        Core0Iram0ExceptionMonitorEnaR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - DBUS busy monitor enbale"]
+    #[inline(always)]
+    pub fn core_0_dram0_exception_monitor_ena(&self) -> Core0Dram0ExceptionMonitorEnaR {
+        Core0Dram0ExceptionMonitorEnaR::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Core0 dram0 area0 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_0_rd_ena(&mut self) -> Core0AreaDram0_0RdEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaDram0_0RdEnaW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Core0 dram0 area0 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_0_wr_ena(&mut self) -> Core0AreaDram0_0WrEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaDram0_0WrEnaW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Core0 dram0 area1 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_1_rd_ena(&mut self) -> Core0AreaDram0_1RdEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaDram0_1RdEnaW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Core0 dram0 area1 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_1_wr_ena(&mut self) -> Core0AreaDram0_1WrEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaDram0_1WrEnaW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Core0 PIF area0 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_0_rd_ena(&mut self) -> Core0AreaPif0RdEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaPif0RdEnaW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Core0 PIF area0 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_0_wr_ena(&mut self) -> Core0AreaPif0WrEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaPif0WrEnaW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Core0 PIF area1 read monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_1_rd_ena(&mut self) -> Core0AreaPif1RdEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaPif1RdEnaW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Core0 PIF area1 write monitor enable"]
+    #[inline(always)]
+    pub fn core_0_area_pif_1_wr_ena(&mut self) -> Core0AreaPif1WrEnaW<'_, Core0IntrEnaSpec> {
+        Core0AreaPif1WrEnaW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Core0 stackpoint underflow monitor enable"]
+    #[inline(always)]
+    pub fn core_0_sp_spill_min_ena(&mut self) -> Core0SpSpillMinEnaW<'_, Core0IntrEnaSpec> {
+        Core0SpSpillMinEnaW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Core0 stackpoint overflow monitor enable"]
+    #[inline(always)]
+    pub fn core_0_sp_spill_max_ena(&mut self) -> Core0SpSpillMaxEnaW<'_, Core0IntrEnaSpec> {
+        Core0SpSpillMaxEnaW::new(self, 9)
+    }
+    #[doc = "Bit 10 - IBUS busy monitor enable"]
+    #[inline(always)]
+    pub fn core_0_iram0_exception_monitor_ena(
+        &mut self,
+    ) -> Core0Iram0ExceptionMonitorEnaW<'_, Core0IntrEnaSpec> {
+        Core0Iram0ExceptionMonitorEnaW::new(self, 10)
+    }
+    #[doc = "Bit 11 - DBUS busy monitor enbale"]
+    #[inline(always)]
+    pub fn core_0_dram0_exception_monitor_ena(
+        &mut self,
+    ) -> Core0Dram0ExceptionMonitorEnaW<'_, Core0IntrEnaSpec> {
+        Core0Dram0ExceptionMonitorEnaW::new(self, 11)
+    }
+}
+#[doc = "core0 monitor enable configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_0_intr_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core0IntrEnaSpec;
+impl crate::RegisterSpec for Core0IntrEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_0_intr_ena::R`](R) reader structure"]
+impl crate::Readable for Core0IntrEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`core_0_intr_ena::W`](W) writer structure"]
+impl crate::Writable for Core0IntrEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CORE_0_INTR_ENA to value 0"]
+impl crate::Resettable for Core0IntrEnaSpec {}

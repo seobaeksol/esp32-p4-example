@@ -1,0 +1,20 @@
+#[doc = "Register `PRESENT_STATE1` reader"]
+pub type R = crate::R<PresentState1Spec>;
+#[doc = "Field `DATA_BYTE_CNT` reader - Present transfer data byte cnt: tx data byte cnt if write rx data byte cnt if read ibi data byte cnt if IBI handle."]
+pub type DataByteCntR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:15 - Present transfer data byte cnt: tx data byte cnt if write rx data byte cnt if read ibi data byte cnt if IBI handle."]
+    #[inline(always)]
+    pub fn data_byte_cnt(&self) -> DataByteCntR {
+        DataByteCntR::new((self.bits & 0xffff) as u16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`present_state1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PresentState1Spec;
+impl crate::RegisterSpec for PresentState1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`present_state1::R`](R) reader structure"]
+impl crate::Readable for PresentState1Spec {}
+#[doc = "`reset()` method sets PRESENT_STATE1 to value 0"]
+impl crate::Resettable for PresentState1Spec {}

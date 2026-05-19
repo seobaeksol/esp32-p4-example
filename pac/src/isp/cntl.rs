@@ -1,0 +1,359 @@
+#[doc = "Register `CNTL` reader"]
+pub type R = crate::R<CntlSpec>;
+#[doc = "Register `CNTL` writer"]
+pub type W = crate::W<CntlSpec>;
+#[doc = "Field `MIPI_DATA_EN` reader - this bit configures mipi input data enable. 0: disable, 1: enable"]
+pub type MipiDataEnR = crate::BitReader;
+#[doc = "Field `MIPI_DATA_EN` writer - this bit configures mipi input data enable. 0: disable, 1: enable"]
+pub type MipiDataEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ISP_EN` reader - this bit configures isp global enable. 0: disable, 1: enable"]
+pub type IspEnR = crate::BitReader;
+#[doc = "Field `ISP_EN` writer - this bit configures isp global enable. 0: disable, 1: enable"]
+pub type IspEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLC_EN` reader - this bit configures blc enable. 0: disable, 1: enable"]
+pub type BlcEnR = crate::BitReader;
+#[doc = "Field `BLC_EN` writer - this bit configures blc enable. 0: disable, 1: enable"]
+pub type BlcEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DPC_EN` reader - this bit configures dpc enable. 0: disable, 1: enable"]
+pub type DpcEnR = crate::BitReader;
+#[doc = "Field `DPC_EN` writer - this bit configures dpc enable. 0: disable, 1: enable"]
+pub type DpcEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BF_EN` reader - this bit configures bf enable. 0: disable, 1: enable"]
+pub type BfEnR = crate::BitReader;
+#[doc = "Field `BF_EN` writer - this bit configures bf enable. 0: disable, 1: enable"]
+pub type BfEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LSC_EN` reader - this bit configures lsc enable. 0: disable, 1: enable"]
+pub type LscEnR = crate::BitReader;
+#[doc = "Field `LSC_EN` writer - this bit configures lsc enable. 0: disable, 1: enable"]
+pub type LscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DEMOSAIC_EN` reader - this bit configures demosaic enable. 0: disable, 1: enable"]
+pub type DemosaicEnR = crate::BitReader;
+#[doc = "Field `DEMOSAIC_EN` writer - this bit configures demosaic enable. 0: disable, 1: enable"]
+pub type DemosaicEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MEDIAN_EN` reader - this bit configures median enable. 0: disable, 1: enable"]
+pub type MedianEnR = crate::BitReader;
+#[doc = "Field `MEDIAN_EN` writer - this bit configures median enable. 0: disable, 1: enable"]
+pub type MedianEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CCM_EN` reader - this bit configures ccm enable. 0: disable, 1: enable"]
+pub type CcmEnR = crate::BitReader;
+#[doc = "Field `CCM_EN` writer - this bit configures ccm enable. 0: disable, 1: enable"]
+pub type CcmEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GAMMA_EN` reader - this bit configures gamma enable. 0: disable, 1: enable"]
+pub type GammaEnR = crate::BitReader;
+#[doc = "Field `GAMMA_EN` writer - this bit configures gamma enable. 0: disable, 1: enable"]
+pub type GammaEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RGB2YUV_EN` reader - this bit configures rgb2yuv enable. 0: disable, 1: enable"]
+pub type Rgb2yuvEnR = crate::BitReader;
+#[doc = "Field `RGB2YUV_EN` writer - this bit configures rgb2yuv enable. 0: disable, 1: enable"]
+pub type Rgb2yuvEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHARP_EN` reader - this bit configures sharp enable. 0: disable, 1: enable"]
+pub type SharpEnR = crate::BitReader;
+#[doc = "Field `SHARP_EN` writer - this bit configures sharp enable. 0: disable, 1: enable"]
+pub type SharpEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COLOR_EN` reader - this bit configures color enable. 0: disable, 1: enable"]
+pub type ColorEnR = crate::BitReader;
+#[doc = "Field `COLOR_EN` writer - this bit configures color enable. 0: disable, 1: enable"]
+pub type ColorEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `YUV2RGB_EN` reader - this bit configures yuv2rgb enable. 0: disable, 1: enable"]
+pub type Yuv2rgbEnR = crate::BitReader;
+#[doc = "Field `YUV2RGB_EN` writer - this bit configures yuv2rgb enable. 0: disable, 1: enable"]
+pub type Yuv2rgbEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AE_EN` reader - this bit configures ae enable. 0: disable, 1: enable"]
+pub type AeEnR = crate::BitReader;
+#[doc = "Field `AE_EN` writer - this bit configures ae enable. 0: disable, 1: enable"]
+pub type AeEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AF_EN` reader - this bit configures af enable. 0: disable, 1: enable"]
+pub type AfEnR = crate::BitReader;
+#[doc = "Field `AF_EN` writer - this bit configures af enable. 0: disable, 1: enable"]
+pub type AfEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AWB_EN` reader - this bit configures awb enable. 0: disable, 1: enable"]
+pub type AwbEnR = crate::BitReader;
+#[doc = "Field `AWB_EN` writer - this bit configures awb enable. 0: disable, 1: enable"]
+pub type AwbEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HIST_EN` reader - this bit configures hist enable. 0: disable, 1: enable"]
+pub type HistEnR = crate::BitReader;
+#[doc = "Field `HIST_EN` writer - this bit configures hist enable. 0: disable, 1: enable"]
+pub type HistEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CROP_EN` reader - this bit configures crop enable. 0: disable, 1: enable"]
+pub type CropEnR = crate::BitReader;
+#[doc = "Field `CROP_EN` writer - this bit configures crop enable. 0: disable, 1: enable"]
+pub type CropEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WBG_EN` reader - this bit configures wbg enable. 0: disable, 1: enable"]
+pub type WbgEnR = crate::BitReader;
+#[doc = "Field `WBG_EN` writer - this bit configures wbg enable. 0: disable, 1: enable"]
+pub type WbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BYTE_ENDIAN_ORDER` reader - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
+pub type ByteEndianOrderR = crate::BitReader;
+#[doc = "Field `BYTE_ENDIAN_ORDER` writer - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
+pub type ByteEndianOrderW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ISP_DATA_TYPE` reader - this field configures input data type, 0:RAW8 1:RAW10 2:RAW12"]
+pub type IspDataTypeR = crate::FieldReader;
+#[doc = "Field `ISP_DATA_TYPE` writer - this field configures input data type, 0:RAW8 1:RAW10 2:RAW12"]
+pub type IspDataTypeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `ISP_IN_SRC` reader - this field configures input data source, 0:CSI HOST 1:CAM 2:DMA"]
+pub type IspInSrcR = crate::FieldReader;
+#[doc = "Field `ISP_IN_SRC` writer - this field configures input data source, 0:CSI HOST 1:CAM 2:DMA"]
+pub type IspInSrcW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `ISP_OUT_TYPE` reader - this field configures pixel output type, 0: RAW8 1: YUV422 2: RGB888 3: YUV420 4: RGB565"]
+pub type IspOutTypeR = crate::FieldReader;
+#[doc = "Field `ISP_OUT_TYPE` writer - this field configures pixel output type, 0: RAW8 1: YUV422 2: RGB888 3: YUV420 4: RGB565"]
+pub type IspOutTypeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+impl R {
+    #[doc = "Bit 0 - this bit configures mipi input data enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn mipi_data_en(&self) -> MipiDataEnR {
+        MipiDataEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - this bit configures isp global enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn isp_en(&self) -> IspEnR {
+        IspEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - this bit configures blc enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn blc_en(&self) -> BlcEnR {
+        BlcEnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - this bit configures dpc enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn dpc_en(&self) -> DpcEnR {
+        DpcEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - this bit configures bf enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn bf_en(&self) -> BfEnR {
+        BfEnR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - this bit configures lsc enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn lsc_en(&self) -> LscEnR {
+        LscEnR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - this bit configures demosaic enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn demosaic_en(&self) -> DemosaicEnR {
+        DemosaicEnR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - this bit configures median enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn median_en(&self) -> MedianEnR {
+        MedianEnR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - this bit configures ccm enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn ccm_en(&self) -> CcmEnR {
+        CcmEnR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - this bit configures gamma enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn gamma_en(&self) -> GammaEnR {
+        GammaEnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - this bit configures rgb2yuv enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn rgb2yuv_en(&self) -> Rgb2yuvEnR {
+        Rgb2yuvEnR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - this bit configures sharp enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn sharp_en(&self) -> SharpEnR {
+        SharpEnR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - this bit configures color enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn color_en(&self) -> ColorEnR {
+        ColorEnR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - this bit configures yuv2rgb enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn yuv2rgb_en(&self) -> Yuv2rgbEnR {
+        Yuv2rgbEnR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - this bit configures ae enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn ae_en(&self) -> AeEnR {
+        AeEnR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - this bit configures af enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn af_en(&self) -> AfEnR {
+        AfEnR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - this bit configures awb enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn awb_en(&self) -> AwbEnR {
+        AwbEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - this bit configures hist enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn hist_en(&self) -> HistEnR {
+        HistEnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - this bit configures crop enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn crop_en(&self) -> CropEnR {
+        CropEnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - this bit configures wbg enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn wbg_en(&self) -> WbgEnR {
+        WbgEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 24 - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
+    #[inline(always)]
+    pub fn byte_endian_order(&self) -> ByteEndianOrderR {
+        ByteEndianOrderR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bits 25:26 - this field configures input data type, 0:RAW8 1:RAW10 2:RAW12"]
+    #[inline(always)]
+    pub fn isp_data_type(&self) -> IspDataTypeR {
+        IspDataTypeR::new(((self.bits >> 25) & 3) as u8)
+    }
+    #[doc = "Bits 27:28 - this field configures input data source, 0:CSI HOST 1:CAM 2:DMA"]
+    #[inline(always)]
+    pub fn isp_in_src(&self) -> IspInSrcR {
+        IspInSrcR::new(((self.bits >> 27) & 3) as u8)
+    }
+    #[doc = "Bits 29:31 - this field configures pixel output type, 0: RAW8 1: YUV422 2: RGB888 3: YUV420 4: RGB565"]
+    #[inline(always)]
+    pub fn isp_out_type(&self) -> IspOutTypeR {
+        IspOutTypeR::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - this bit configures mipi input data enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn mipi_data_en(&mut self) -> MipiDataEnW<'_, CntlSpec> {
+        MipiDataEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - this bit configures isp global enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn isp_en(&mut self) -> IspEnW<'_, CntlSpec> {
+        IspEnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - this bit configures blc enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn blc_en(&mut self) -> BlcEnW<'_, CntlSpec> {
+        BlcEnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - this bit configures dpc enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn dpc_en(&mut self) -> DpcEnW<'_, CntlSpec> {
+        DpcEnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - this bit configures bf enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn bf_en(&mut self) -> BfEnW<'_, CntlSpec> {
+        BfEnW::new(self, 4)
+    }
+    #[doc = "Bit 5 - this bit configures lsc enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn lsc_en(&mut self) -> LscEnW<'_, CntlSpec> {
+        LscEnW::new(self, 5)
+    }
+    #[doc = "Bit 6 - this bit configures demosaic enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn demosaic_en(&mut self) -> DemosaicEnW<'_, CntlSpec> {
+        DemosaicEnW::new(self, 6)
+    }
+    #[doc = "Bit 7 - this bit configures median enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn median_en(&mut self) -> MedianEnW<'_, CntlSpec> {
+        MedianEnW::new(self, 7)
+    }
+    #[doc = "Bit 8 - this bit configures ccm enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn ccm_en(&mut self) -> CcmEnW<'_, CntlSpec> {
+        CcmEnW::new(self, 8)
+    }
+    #[doc = "Bit 9 - this bit configures gamma enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn gamma_en(&mut self) -> GammaEnW<'_, CntlSpec> {
+        GammaEnW::new(self, 9)
+    }
+    #[doc = "Bit 10 - this bit configures rgb2yuv enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn rgb2yuv_en(&mut self) -> Rgb2yuvEnW<'_, CntlSpec> {
+        Rgb2yuvEnW::new(self, 10)
+    }
+    #[doc = "Bit 11 - this bit configures sharp enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn sharp_en(&mut self) -> SharpEnW<'_, CntlSpec> {
+        SharpEnW::new(self, 11)
+    }
+    #[doc = "Bit 12 - this bit configures color enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn color_en(&mut self) -> ColorEnW<'_, CntlSpec> {
+        ColorEnW::new(self, 12)
+    }
+    #[doc = "Bit 13 - this bit configures yuv2rgb enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn yuv2rgb_en(&mut self) -> Yuv2rgbEnW<'_, CntlSpec> {
+        Yuv2rgbEnW::new(self, 13)
+    }
+    #[doc = "Bit 14 - this bit configures ae enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn ae_en(&mut self) -> AeEnW<'_, CntlSpec> {
+        AeEnW::new(self, 14)
+    }
+    #[doc = "Bit 15 - this bit configures af enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn af_en(&mut self) -> AfEnW<'_, CntlSpec> {
+        AfEnW::new(self, 15)
+    }
+    #[doc = "Bit 16 - this bit configures awb enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn awb_en(&mut self) -> AwbEnW<'_, CntlSpec> {
+        AwbEnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - this bit configures hist enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn hist_en(&mut self) -> HistEnW<'_, CntlSpec> {
+        HistEnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - this bit configures crop enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn crop_en(&mut self) -> CropEnW<'_, CntlSpec> {
+        CropEnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - this bit configures wbg enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn wbg_en(&mut self) -> WbgEnW<'_, CntlSpec> {
+        WbgEnW::new(self, 19)
+    }
+    #[doc = "Bit 24 - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
+    #[inline(always)]
+    pub fn byte_endian_order(&mut self) -> ByteEndianOrderW<'_, CntlSpec> {
+        ByteEndianOrderW::new(self, 24)
+    }
+    #[doc = "Bits 25:26 - this field configures input data type, 0:RAW8 1:RAW10 2:RAW12"]
+    #[inline(always)]
+    pub fn isp_data_type(&mut self) -> IspDataTypeW<'_, CntlSpec> {
+        IspDataTypeW::new(self, 25)
+    }
+    #[doc = "Bits 27:28 - this field configures input data source, 0:CSI HOST 1:CAM 2:DMA"]
+    #[inline(always)]
+    pub fn isp_in_src(&mut self) -> IspInSrcW<'_, CntlSpec> {
+        IspInSrcW::new(self, 27)
+    }
+    #[doc = "Bits 29:31 - this field configures pixel output type, 0: RAW8 1: YUV422 2: RGB888 3: YUV420 4: RGB565"]
+    #[inline(always)]
+    pub fn isp_out_type(&mut self) -> IspOutTypeW<'_, CntlSpec> {
+        IspOutTypeW::new(self, 29)
+    }
+}
+#[doc = "isp module enable control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CntlSpec;
+impl crate::RegisterSpec for CntlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cntl::R`](R) reader structure"]
+impl crate::Readable for CntlSpec {}
+#[doc = "`write(|w| ..)` method takes [`cntl::W`](W) writer structure"]
+impl crate::Writable for CntlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CNTL to value 0x4000_2442"]
+impl crate::Resettable for CntlSpec {
+    const RESET_VALUE: u32 = 0x4000_2442;
+}

@@ -1,0 +1,49 @@
+#[doc = "Register `INT_ENA` reader"]
+pub type R = crate::R<IntEnaSpec>;
+#[doc = "Register `INT_ENA` writer"]
+pub type W = crate::W<IntEnaSpec>;
+#[doc = "Field `DONE` reader - backup done flag"]
+pub type DoneR = crate::BitReader;
+#[doc = "Field `DONE` writer - backup done flag"]
+pub type DoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ERROR` reader - error flag"]
+pub type ErrorR = crate::BitReader;
+#[doc = "Field `ERROR` writer - error flag"]
+pub type ErrorW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - backup done flag"]
+    #[inline(always)]
+    pub fn done(&self) -> DoneR {
+        DoneR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - error flag"]
+    #[inline(always)]
+    pub fn error(&self) -> ErrorR {
+        ErrorR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - backup done flag"]
+    #[inline(always)]
+    pub fn done(&mut self) -> DoneW<'_, IntEnaSpec> {
+        DoneW::new(self, 0)
+    }
+    #[doc = "Bit 1 - error flag"]
+    #[inline(always)]
+    pub fn error(&mut self) -> ErrorW<'_, IntEnaSpec> {
+        ErrorW::new(self, 1)
+    }
+}
+#[doc = "Read only register for error and done\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntEnaSpec;
+impl crate::RegisterSpec for IntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for IntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+impl crate::Writable for IntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_ENA to value 0"]
+impl crate::Resettable for IntEnaSpec {}

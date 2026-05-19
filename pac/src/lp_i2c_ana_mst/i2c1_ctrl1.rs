@@ -1,0 +1,51 @@
+#[doc = "Register `I2C1_CTRL1` reader"]
+pub type R = crate::R<I2c1Ctrl1Spec>;
+#[doc = "Register `I2C1_CTRL1` writer"]
+pub type W = crate::W<I2c1Ctrl1Spec>;
+#[doc = "Field `I2C1_SCL_PULSE_DUR` reader - need des"]
+pub type I2c1SclPulseDurR = crate::FieldReader;
+#[doc = "Field `I2C1_SCL_PULSE_DUR` writer - need des"]
+pub type I2c1SclPulseDurW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `I2C1_SDA_SIDE_GUARD` reader - need des"]
+pub type I2c1SdaSideGuardR = crate::FieldReader;
+#[doc = "Field `I2C1_SDA_SIDE_GUARD` writer - need des"]
+pub type I2c1SdaSideGuardW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+impl R {
+    #[doc = "Bits 0:5 - need des"]
+    #[inline(always)]
+    pub fn i2c1_scl_pulse_dur(&self) -> I2c1SclPulseDurR {
+        I2c1SclPulseDurR::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bits 6:10 - need des"]
+    #[inline(always)]
+    pub fn i2c1_sda_side_guard(&self) -> I2c1SdaSideGuardR {
+        I2c1SdaSideGuardR::new(((self.bits >> 6) & 0x1f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - need des"]
+    #[inline(always)]
+    pub fn i2c1_scl_pulse_dur(&mut self) -> I2c1SclPulseDurW<'_, I2c1Ctrl1Spec> {
+        I2c1SclPulseDurW::new(self, 0)
+    }
+    #[doc = "Bits 6:10 - need des"]
+    #[inline(always)]
+    pub fn i2c1_sda_side_guard(&mut self) -> I2c1SdaSideGuardW<'_, I2c1Ctrl1Spec> {
+        I2c1SdaSideGuardW::new(self, 6)
+    }
+}
+#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct I2c1Ctrl1Spec;
+impl crate::RegisterSpec for I2c1Ctrl1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`i2c1_ctrl1::R`](R) reader structure"]
+impl crate::Readable for I2c1Ctrl1Spec {}
+#[doc = "`write(|w| ..)` method takes [`i2c1_ctrl1::W`](W) writer structure"]
+impl crate::Writable for I2c1Ctrl1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets I2C1_CTRL1 to value 0x42"]
+impl crate::Resettable for I2c1Ctrl1Spec {
+    const RESET_VALUE: u32 = 0x42;
+}

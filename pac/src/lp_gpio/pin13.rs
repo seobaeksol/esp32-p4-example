@@ -1,0 +1,70 @@
+#[doc = "Register `PIN13` reader"]
+pub type R = crate::R<Pin13Spec>;
+#[doc = "Register `PIN13` writer"]
+pub type W = crate::W<Pin13Spec>;
+#[doc = "Field `REG_GPIO_PIN13_WAKEUP_ENABLE` reader - Reserved"]
+pub type RegGpioPin13WakeupEnableR = crate::BitReader;
+#[doc = "Field `REG_GPIO_PIN13_WAKEUP_ENABLE` writer - Reserved"]
+pub type RegGpioPin13WakeupEnableW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_PIN13_INT_TYPE` reader - Reserved"]
+pub type RegGpioPin13IntTypeR = crate::FieldReader;
+#[doc = "Field `REG_GPIO_PIN13_INT_TYPE` writer - Reserved"]
+pub type RegGpioPin13IntTypeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `REG_GPIO_PIN13_PAD_DRIVER` reader - Reserved"]
+pub type RegGpioPin13PadDriverR = crate::BitReader;
+#[doc = "Field `REG_GPIO_PIN13_PAD_DRIVER` writer - Reserved"]
+pub type RegGpioPin13PadDriverW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPI13_PIN0_EDGE_WAKEUP_CLR` writer - need des"]
+pub type RegGpi13Pin0EdgeWakeupClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin13_wakeup_enable(&self) -> RegGpioPin13WakeupEnableR {
+        RegGpioPin13WakeupEnableR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin13_int_type(&self) -> RegGpioPin13IntTypeR {
+        RegGpioPin13IntTypeR::new(((self.bits >> 1) & 7) as u8)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin13_pad_driver(&self) -> RegGpioPin13PadDriverR {
+        RegGpioPin13PadDriverR::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin13_wakeup_enable(&mut self) -> RegGpioPin13WakeupEnableW<'_, Pin13Spec> {
+        RegGpioPin13WakeupEnableW::new(self, 0)
+    }
+    #[doc = "Bits 1:3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin13_int_type(&mut self) -> RegGpioPin13IntTypeW<'_, Pin13Spec> {
+        RegGpioPin13IntTypeW::new(self, 1)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin13_pad_driver(&mut self) -> RegGpioPin13PadDriverW<'_, Pin13Spec> {
+        RegGpioPin13PadDriverW::new(self, 4)
+    }
+    #[doc = "Bit 5 - need des"]
+    #[inline(always)]
+    pub fn reg_gpi13_pin0_edge_wakeup_clr(&mut self) -> RegGpi13Pin0EdgeWakeupClrW<'_, Pin13Spec> {
+        RegGpi13Pin0EdgeWakeupClrW::new(self, 5)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin13::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin13::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pin13Spec;
+impl crate::RegisterSpec for Pin13Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`pin13::R`](R) reader structure"]
+impl crate::Readable for Pin13Spec {}
+#[doc = "`write(|w| ..)` method takes [`pin13::W`](W) writer structure"]
+impl crate::Writable for Pin13Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PIN13 to value 0"]
+impl crate::Resettable for Pin13Spec {}

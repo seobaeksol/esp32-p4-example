@@ -1,0 +1,37 @@
+#[doc = "Register `TIMESTAMP_PRESCALER` reader"]
+pub type R = crate::R<TimestampPrescalerSpec>;
+#[doc = "Register `TIMESTAMP_PRESCALER` writer"]
+pub type W = crate::W<TimestampPrescalerSpec>;
+#[doc = "Field `TS_DIV_NUM` reader - Configures the clock division number of timestamp counter."]
+pub type TsDivNumR = crate::FieldReader<u16>;
+#[doc = "Field `TS_DIV_NUM` writer - Configures the clock division number of timestamp counter."]
+pub type TsDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - Configures the clock division number of timestamp counter."]
+    #[inline(always)]
+    pub fn ts_div_num(&self) -> TsDivNumR {
+        TsDivNumR::new((self.bits & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Configures the clock division number of timestamp counter."]
+    #[inline(always)]
+    pub fn ts_div_num(&mut self) -> TsDivNumW<'_, TimestampPrescalerSpec> {
+        TsDivNumW::new(self, 0)
+    }
+}
+#[doc = "Timestamp configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timestamp_prescaler::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timestamp_prescaler::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TimestampPrescalerSpec;
+impl crate::RegisterSpec for TimestampPrescalerSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`timestamp_prescaler::R`](R) reader structure"]
+impl crate::Readable for TimestampPrescalerSpec {}
+#[doc = "`write(|w| ..)` method takes [`timestamp_prescaler::W`](W) writer structure"]
+impl crate::Writable for TimestampPrescalerSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TIMESTAMP_PRESCALER to value 0x1f"]
+impl crate::Resettable for TimestampPrescalerSpec {
+    const RESET_VALUE: u32 = 0x1f;
+}

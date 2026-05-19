@@ -1,0 +1,113 @@
+#[doc = "Register `SPI_SMEM_PMS3_ATTR` reader"]
+pub type R = crate::R<SpiSmemPms3AttrSpec>;
+#[doc = "Register `SPI_SMEM_PMS3_ATTR` writer"]
+pub type W = crate::W<SpiSmemPms3AttrSpec>;
+#[doc = "Field `SPI_SMEM_PMS3_RD_ATTR` reader - 1: SPI1 external RAM PMS section 3 read accessible. 0: Not allowed."]
+pub type SpiSmemPms3RdAttrR = crate::BitReader;
+#[doc = "Field `SPI_SMEM_PMS3_RD_ATTR` writer - 1: SPI1 external RAM PMS section 3 read accessible. 0: Not allowed."]
+pub type SpiSmemPms3RdAttrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_SMEM_PMS3_WR_ATTR` reader - 1: SPI1 external RAM PMS section 3 write accessible. 0: Not allowed."]
+pub type SpiSmemPms3WrAttrR = crate::BitReader;
+#[doc = "Field `SPI_SMEM_PMS3_WR_ATTR` writer - 1: SPI1 external RAM PMS section 3 write accessible. 0: Not allowed."]
+pub type SpiSmemPms3WrAttrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_SMEM_PMS3_ECC` reader - SPI1 external RAM PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+pub type SpiSmemPms3EccR = crate::BitReader;
+#[doc = "Field `SPI_SMEM_PMS3_ECC` writer - SPI1 external RAM PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+pub type SpiSmemPms3EccW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_SMEM_PMS3_NONSECURE_RD_ATTR` reader - 1: SPI1 external RAM non-secure PMS section 3 read accessible. 0: Not allowed."]
+pub type SpiSmemPms3NonsecureRdAttrR = crate::BitReader;
+#[doc = "Field `SPI_SMEM_PMS3_NONSECURE_RD_ATTR` writer - 1: SPI1 external RAM non-secure PMS section 3 read accessible. 0: Not allowed."]
+pub type SpiSmemPms3NonsecureRdAttrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_SMEM_PMS3_NONSECURE_WR_ATTR` reader - 1: SPI1 external RAM non-secure PMS section 3 write accessible. 0: Not allowed."]
+pub type SpiSmemPms3NonsecureWrAttrR = crate::BitReader;
+#[doc = "Field `SPI_SMEM_PMS3_NONSECURE_WR_ATTR` writer - 1: SPI1 external RAM non-secure PMS section 3 write accessible. 0: Not allowed."]
+pub type SpiSmemPms3NonsecureWrAttrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_SMEM_PMS3_NONSECURE_ECC` reader - SPI1 external RAM non-secure PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+pub type SpiSmemPms3NonsecureEccR = crate::BitReader;
+#[doc = "Field `SPI_SMEM_PMS3_NONSECURE_ECC` writer - SPI1 external RAM non-secure PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+pub type SpiSmemPms3NonsecureEccW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - 1: SPI1 external RAM PMS section 3 read accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_rd_attr(&self) -> SpiSmemPms3RdAttrR {
+        SpiSmemPms3RdAttrR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - 1: SPI1 external RAM PMS section 3 write accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_wr_attr(&self) -> SpiSmemPms3WrAttrR {
+        SpiSmemPms3WrAttrR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - SPI1 external RAM PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_ecc(&self) -> SpiSmemPms3EccR {
+        SpiSmemPms3EccR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - 1: SPI1 external RAM non-secure PMS section 3 read accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_nonsecure_rd_attr(&self) -> SpiSmemPms3NonsecureRdAttrR {
+        SpiSmemPms3NonsecureRdAttrR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - 1: SPI1 external RAM non-secure PMS section 3 write accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_nonsecure_wr_attr(&self) -> SpiSmemPms3NonsecureWrAttrR {
+        SpiSmemPms3NonsecureWrAttrR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - SPI1 external RAM non-secure PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_nonsecure_ecc(&self) -> SpiSmemPms3NonsecureEccR {
+        SpiSmemPms3NonsecureEccR::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - 1: SPI1 external RAM PMS section 3 read accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_rd_attr(&mut self) -> SpiSmemPms3RdAttrW<'_, SpiSmemPms3AttrSpec> {
+        SpiSmemPms3RdAttrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - 1: SPI1 external RAM PMS section 3 write accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_wr_attr(&mut self) -> SpiSmemPms3WrAttrW<'_, SpiSmemPms3AttrSpec> {
+        SpiSmemPms3WrAttrW::new(self, 1)
+    }
+    #[doc = "Bit 2 - SPI1 external RAM PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_ecc(&mut self) -> SpiSmemPms3EccW<'_, SpiSmemPms3AttrSpec> {
+        SpiSmemPms3EccW::new(self, 2)
+    }
+    #[doc = "Bit 3 - 1: SPI1 external RAM non-secure PMS section 3 read accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_nonsecure_rd_attr(
+        &mut self,
+    ) -> SpiSmemPms3NonsecureRdAttrW<'_, SpiSmemPms3AttrSpec> {
+        SpiSmemPms3NonsecureRdAttrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - 1: SPI1 external RAM non-secure PMS section 3 write accessible. 0: Not allowed."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_nonsecure_wr_attr(
+        &mut self,
+    ) -> SpiSmemPms3NonsecureWrAttrW<'_, SpiSmemPms3AttrSpec> {
+        SpiSmemPms3NonsecureWrAttrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - SPI1 external RAM non-secure PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
+    #[inline(always)]
+    pub fn spi_smem_pms3_nonsecure_ecc(
+        &mut self,
+    ) -> SpiSmemPms3NonsecureEccW<'_, SpiSmemPms3AttrSpec> {
+        SpiSmemPms3NonsecureEccW::new(self, 5)
+    }
+}
+#[doc = "SPI1 external RAM PMS section $n attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms3_attr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms3_attr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SpiSmemPms3AttrSpec;
+impl crate::RegisterSpec for SpiSmemPms3AttrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`spi_smem_pms3_attr::R`](R) reader structure"]
+impl crate::Readable for SpiSmemPms3AttrSpec {}
+#[doc = "`write(|w| ..)` method takes [`spi_smem_pms3_attr::W`](W) writer structure"]
+impl crate::Writable for SpiSmemPms3AttrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SPI_SMEM_PMS3_ATTR to value 0x1b"]
+impl crate::Resettable for SpiSmemPms3AttrSpec {
+    const RESET_VALUE: u32 = 0x1b;
+}

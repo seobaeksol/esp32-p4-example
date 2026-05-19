@@ -1,0 +1,37 @@
+#[doc = "Register `RDN_ECO_HIGH` reader"]
+pub type R = crate::R<RdnEcoHighSpec>;
+#[doc = "Register `RDN_ECO_HIGH` writer"]
+pub type W = crate::W<RdnEcoHighSpec>;
+#[doc = "Field `RDN_ECO_HIGH` reader - rdn_eco_high"]
+pub type RdnEcoHighR = crate::FieldReader<u32>;
+#[doc = "Field `RDN_ECO_HIGH` writer - rdn_eco_high"]
+pub type RdnEcoHighW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - rdn_eco_high"]
+    #[inline(always)]
+    pub fn rdn_eco_high(&self) -> RdnEcoHighR {
+        RdnEcoHighR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - rdn_eco_high"]
+    #[inline(always)]
+    pub fn rdn_eco_high(&mut self) -> RdnEcoHighW<'_, RdnEcoHighSpec> {
+        RdnEcoHighW::new(self, 0)
+    }
+}
+#[doc = "dsi_bridge rdn eco all high register\n\nYou can [`read`](crate::Reg::read) this register and get [`rdn_eco_high::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rdn_eco_high::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdnEcoHighSpec;
+impl crate::RegisterSpec for RdnEcoHighSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rdn_eco_high::R`](R) reader structure"]
+impl crate::Readable for RdnEcoHighSpec {}
+#[doc = "`write(|w| ..)` method takes [`rdn_eco_high::W`](W) writer structure"]
+impl crate::Writable for RdnEcoHighSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RDN_ECO_HIGH to value 0xffff_ffff"]
+impl crate::Resettable for RdnEcoHighSpec {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

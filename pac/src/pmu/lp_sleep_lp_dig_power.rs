@@ -1,0 +1,91 @@
+#[doc = "Register `LP_SLEEP_LP_DIG_POWER` reader"]
+pub type R = crate::R<LpSleepLpDigPowerSpec>;
+#[doc = "Register `LP_SLEEP_LP_DIG_POWER` writer"]
+pub type W = crate::W<LpSleepLpDigPowerSpec>;
+#[doc = "Field `LP_SLEEP_LP_PAD_SLP_SEL` reader - need_des"]
+pub type LpSleepLpPadSlpSelR = crate::BitReader;
+#[doc = "Field `LP_SLEEP_LP_PAD_SLP_SEL` writer - need_des"]
+pub type LpSleepLpPadSlpSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_SLEEP_BOD_SOURCE_SEL` reader - need_des"]
+pub type LpSleepBodSourceSelR = crate::BitReader;
+#[doc = "Field `LP_SLEEP_BOD_SOURCE_SEL` writer - need_des"]
+pub type LpSleepBodSourceSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_SLEEP_VDDBAT_MODE` reader - need_des"]
+pub type LpSleepVddbatModeR = crate::FieldReader;
+#[doc = "Field `LP_SLEEP_VDDBAT_MODE` writer - need_des"]
+pub type LpSleepVddbatModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `LP_SLEEP_LP_MEM_DSLP` reader - need_des"]
+pub type LpSleepLpMemDslpR = crate::BitReader;
+#[doc = "Field `LP_SLEEP_LP_MEM_DSLP` writer - need_des"]
+pub type LpSleepLpMemDslpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_SLEEP_PD_LP_PERI_PD_EN` reader - need_des"]
+pub type LpSleepPdLpPeriPdEnR = crate::BitReader;
+#[doc = "Field `LP_SLEEP_PD_LP_PERI_PD_EN` writer - need_des"]
+pub type LpSleepPdLpPeriPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 26 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_lp_pad_slp_sel(&self) -> LpSleepLpPadSlpSelR {
+        LpSleepLpPadSlpSelR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_bod_source_sel(&self) -> LpSleepBodSourceSelR {
+        LpSleepBodSourceSelR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bits 28:29 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_vddbat_mode(&self) -> LpSleepVddbatModeR {
+        LpSleepVddbatModeR::new(((self.bits >> 28) & 3) as u8)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_lp_mem_dslp(&self) -> LpSleepLpMemDslpR {
+        LpSleepLpMemDslpR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_pd_lp_peri_pd_en(&self) -> LpSleepPdLpPeriPdEnR {
+        LpSleepPdLpPeriPdEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 26 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_lp_pad_slp_sel(&mut self) -> LpSleepLpPadSlpSelW<'_, LpSleepLpDigPowerSpec> {
+        LpSleepLpPadSlpSelW::new(self, 26)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_bod_source_sel(&mut self) -> LpSleepBodSourceSelW<'_, LpSleepLpDigPowerSpec> {
+        LpSleepBodSourceSelW::new(self, 27)
+    }
+    #[doc = "Bits 28:29 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_vddbat_mode(&mut self) -> LpSleepVddbatModeW<'_, LpSleepLpDigPowerSpec> {
+        LpSleepVddbatModeW::new(self, 28)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_lp_mem_dslp(&mut self) -> LpSleepLpMemDslpW<'_, LpSleepLpDigPowerSpec> {
+        LpSleepLpMemDslpW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_pd_lp_peri_pd_en(&mut self) -> LpSleepPdLpPeriPdEnW<'_, LpSleepLpDigPowerSpec> {
+        LpSleepPdLpPeriPdEnW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_sleep_lp_dig_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_sleep_lp_dig_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpSleepLpDigPowerSpec;
+impl crate::RegisterSpec for LpSleepLpDigPowerSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_sleep_lp_dig_power::R`](R) reader structure"]
+impl crate::Readable for LpSleepLpDigPowerSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_sleep_lp_dig_power::W`](W) writer structure"]
+impl crate::Writable for LpSleepLpDigPowerSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_SLEEP_LP_DIG_POWER to value 0"]
+impl crate::Resettable for LpSleepLpDigPowerSpec {}

@@ -1,0 +1,22 @@
+#[doc = "Register `OUT_W1TC` writer"]
+pub type W = crate::W<OutW1tcSpec>;
+#[doc = "Field `REG_GPIO_OUT_DATA_W1TC` writer - Reserved"]
+pub type RegGpioOutDataW1tcW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl W {
+    #[doc = "Bits 0:15 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_out_data_w1tc(&mut self) -> RegGpioOutDataW1tcW<'_, OutW1tcSpec> {
+        RegGpioOutDataW1tcW::new(self, 0)
+    }
+}
+#[doc = "Reserved\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutW1tcSpec;
+impl crate::RegisterSpec for OutW1tcSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`out_w1tc::W`](W) writer structure"]
+impl crate::Writable for OutW1tcSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets OUT_W1TC to value 0"]
+impl crate::Resettable for OutW1tcSpec {}

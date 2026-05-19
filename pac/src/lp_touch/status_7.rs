@@ -1,0 +1,34 @@
+#[doc = "Register `STATUS_7` reader"]
+pub type R = crate::R<Status7Spec>;
+#[doc = "Field `PAD7_DATA` reader - need_des"]
+pub type Pad7DataR = crate::FieldReader<u16>;
+#[doc = "Field `PAD7_DEBOUNCE_CNT` reader - need_des"]
+pub type Pad7DebounceCntR = crate::FieldReader;
+#[doc = "Field `PAD7_NEG_NOISE_CNT` reader - need_des"]
+pub type Pad7NegNoiseCntR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:15 - need_des"]
+    #[inline(always)]
+    pub fn pad7_data(&self) -> Pad7DataR {
+        Pad7DataR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:18 - need_des"]
+    #[inline(always)]
+    pub fn pad7_debounce_cnt(&self) -> Pad7DebounceCntR {
+        Pad7DebounceCntR::new(((self.bits >> 16) & 7) as u8)
+    }
+    #[doc = "Bits 19:22 - need_des"]
+    #[inline(always)]
+    pub fn pad7_neg_noise_cnt(&self) -> Pad7NegNoiseCntR {
+        Pad7NegNoiseCntR::new(((self.bits >> 19) & 0x0f) as u8)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_7::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Status7Spec;
+impl crate::RegisterSpec for Status7Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status_7::R`](R) reader structure"]
+impl crate::Readable for Status7Spec {}
+#[doc = "`reset()` method sets STATUS_7 to value 0"]
+impl crate::Resettable for Status7Spec {}

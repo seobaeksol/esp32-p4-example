@@ -1,0 +1,37 @@
+#[doc = "Register `XTS_PHYSICAL_ADDRESS` reader"]
+pub type R = crate::R<XtsPhysicalAddressSpec>;
+#[doc = "Register `XTS_PHYSICAL_ADDRESS` writer"]
+pub type W = crate::W<XtsPhysicalAddressSpec>;
+#[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` reader - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
+pub type SpiXtsPhysicalAddressR = crate::FieldReader<u32>;
+#[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` writer - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
+pub type SpiXtsPhysicalAddressW<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
+impl R {
+    #[doc = "Bits 0:29 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
+    #[inline(always)]
+    pub fn spi_xts_physical_address(&self) -> SpiXtsPhysicalAddressR {
+        SpiXtsPhysicalAddressR::new(self.bits & 0x3fff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:29 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
+    #[inline(always)]
+    pub fn spi_xts_physical_address(
+        &mut self,
+    ) -> SpiXtsPhysicalAddressW<'_, XtsPhysicalAddressSpec> {
+        SpiXtsPhysicalAddressW::new(self, 0)
+    }
+}
+#[doc = "Manual Encryption physical address register\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_physical_address::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_physical_address::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct XtsPhysicalAddressSpec;
+impl crate::RegisterSpec for XtsPhysicalAddressSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`xts_physical_address::R`](R) reader structure"]
+impl crate::Readable for XtsPhysicalAddressSpec {}
+#[doc = "`write(|w| ..)` method takes [`xts_physical_address::W`](W) writer structure"]
+impl crate::Writable for XtsPhysicalAddressSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets XTS_PHYSICAL_ADDRESS to value 0"]
+impl crate::Resettable for XtsPhysicalAddressSpec {}

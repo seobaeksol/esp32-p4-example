@@ -1,0 +1,65 @@
+#[doc = "Register `SR_FIX_ALPHA` reader"]
+pub type R = crate::R<SrFixAlphaSpec>;
+#[doc = "Register `SR_FIX_ALPHA` writer"]
+pub type W = crate::W<SrFixAlphaSpec>;
+#[doc = "Field `SR_RX_FIX_ALPHA` reader - The value would replace the alpha value in received pixel for Scaling and Rotating engine when PPA_SR_RX_ALPHA_CONF_EN is enabled."]
+pub type SrRxFixAlphaR = crate::FieldReader;
+#[doc = "Field `SR_RX_FIX_ALPHA` writer - The value would replace the alpha value in received pixel for Scaling and Rotating engine when PPA_SR_RX_ALPHA_CONF_EN is enabled."]
+pub type SrRxFixAlphaW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SR_RX_ALPHA_MOD` reader - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_SR_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+pub type SrRxAlphaModR = crate::FieldReader;
+#[doc = "Field `SR_RX_ALPHA_MOD` writer - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_SR_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+pub type SrRxAlphaModW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SR_RX_ALPHA_INV` reader - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+pub type SrRxAlphaInvR = crate::BitReader;
+#[doc = "Field `SR_RX_ALPHA_INV` writer - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+pub type SrRxAlphaInvW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - The value would replace the alpha value in received pixel for Scaling and Rotating engine when PPA_SR_RX_ALPHA_CONF_EN is enabled."]
+    #[inline(always)]
+    pub fn sr_rx_fix_alpha(&self) -> SrRxFixAlphaR {
+        SrRxFixAlphaR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:9 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_SR_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+    #[inline(always)]
+    pub fn sr_rx_alpha_mod(&self) -> SrRxAlphaModR {
+        SrRxAlphaModR::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bit 10 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+    #[inline(always)]
+    pub fn sr_rx_alpha_inv(&self) -> SrRxAlphaInvR {
+        SrRxAlphaInvR::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - The value would replace the alpha value in received pixel for Scaling and Rotating engine when PPA_SR_RX_ALPHA_CONF_EN is enabled."]
+    #[inline(always)]
+    pub fn sr_rx_fix_alpha(&mut self) -> SrRxFixAlphaW<'_, SrFixAlphaSpec> {
+        SrRxFixAlphaW::new(self, 0)
+    }
+    #[doc = "Bits 8:9 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_SR_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
+    #[inline(always)]
+    pub fn sr_rx_alpha_mod(&mut self) -> SrRxAlphaModW<'_, SrFixAlphaSpec> {
+        SrRxAlphaModW::new(self, 8)
+    }
+    #[doc = "Bit 10 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
+    #[inline(always)]
+    pub fn sr_rx_alpha_inv(&mut self) -> SrRxAlphaInvW<'_, SrFixAlphaSpec> {
+        SrRxAlphaInvW::new(self, 10)
+    }
+}
+#[doc = "Scaling and rotating engine alpha override register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_fix_alpha::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_fix_alpha::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SrFixAlphaSpec;
+impl crate::RegisterSpec for SrFixAlphaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sr_fix_alpha::R`](R) reader structure"]
+impl crate::Readable for SrFixAlphaSpec {}
+#[doc = "`write(|w| ..)` method takes [`sr_fix_alpha::W`](W) writer structure"]
+impl crate::Writable for SrFixAlphaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SR_FIX_ALPHA to value 0x80"]
+impl crate::Resettable for SrFixAlphaSpec {
+    const RESET_VALUE: u32 = 0x80;
+}

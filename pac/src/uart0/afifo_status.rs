@@ -1,0 +1,43 @@
+#[doc = "Register `AFIFO_STATUS` reader"]
+pub type R = crate::R<AfifoStatusSpec>;
+#[doc = "Field `TX_AFIFO_FULL` reader - Full signal of APB TX AFIFO."]
+pub type TxAfifoFullR = crate::BitReader;
+#[doc = "Field `TX_AFIFO_EMPTY` reader - Empty signal of APB TX AFIFO."]
+pub type TxAfifoEmptyR = crate::BitReader;
+#[doc = "Field `RX_AFIFO_FULL` reader - Full signal of APB RX AFIFO."]
+pub type RxAfifoFullR = crate::BitReader;
+#[doc = "Field `RX_AFIFO_EMPTY` reader - Empty signal of APB RX AFIFO."]
+pub type RxAfifoEmptyR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - Full signal of APB TX AFIFO."]
+    #[inline(always)]
+    pub fn tx_afifo_full(&self) -> TxAfifoFullR {
+        TxAfifoFullR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Empty signal of APB TX AFIFO."]
+    #[inline(always)]
+    pub fn tx_afifo_empty(&self) -> TxAfifoEmptyR {
+        TxAfifoEmptyR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Full signal of APB RX AFIFO."]
+    #[inline(always)]
+    pub fn rx_afifo_full(&self) -> RxAfifoFullR {
+        RxAfifoFullR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Empty signal of APB RX AFIFO."]
+    #[inline(always)]
+    pub fn rx_afifo_empty(&self) -> RxAfifoEmptyR {
+        RxAfifoEmptyR::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[doc = "UART AFIFO Status\n\nYou can [`read`](crate::Reg::read) this register and get [`afifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AfifoStatusSpec;
+impl crate::RegisterSpec for AfifoStatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`afifo_status::R`](R) reader structure"]
+impl crate::Readable for AfifoStatusSpec {}
+#[doc = "`reset()` method sets AFIFO_STATUS to value 0x0a"]
+impl crate::Resettable for AfifoStatusSpec {
+    const RESET_VALUE: u32 = 0x0a;
+}

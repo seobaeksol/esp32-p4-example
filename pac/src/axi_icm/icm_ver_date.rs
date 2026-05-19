@@ -1,0 +1,35 @@
+#[doc = "Register `ICM_VER_DATE` reader"]
+pub type R = crate::R<IcmVerDateSpec>;
+#[doc = "Register `ICM_VER_DATE` writer"]
+pub type W = crate::W<IcmVerDateSpec>;
+#[doc = "Field `VER_DATE` reader - "]
+pub type VerDateR = crate::FieldReader<u32>;
+#[doc = "Field `VER_DATE` writer - "]
+pub type VerDateW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn ver_date(&self) -> VerDateR {
+        VerDateR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn ver_date(&mut self) -> VerDateW<'_, IcmVerDateSpec> {
+        VerDateW::new(self, 0)
+    }
+}
+#[doc = "ICM version / date\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IcmVerDateSpec;
+impl crate::RegisterSpec for IcmVerDateSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`icm_ver_date::R`](R) reader structure"]
+impl crate::Readable for IcmVerDateSpec {}
+#[doc = "`write(|w| ..)` method takes [`icm_ver_date::W`](W) writer structure"]
+impl crate::Writable for IcmVerDateSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ICM_VER_DATE to value 0"]
+impl crate::Resettable for IcmVerDateSpec {}

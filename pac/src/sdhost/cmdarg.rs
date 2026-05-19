@@ -1,0 +1,35 @@
+#[doc = "Register `CMDARG` reader"]
+pub type R = crate::R<CmdargSpec>;
+#[doc = "Register `CMDARG` writer"]
+pub type W = crate::W<CmdargSpec>;
+#[doc = "Field `CMDARG` reader - Value indicates command argument to be passed to the card."]
+pub type CmdargR = crate::FieldReader<u32>;
+#[doc = "Field `CMDARG` writer - Value indicates command argument to be passed to the card."]
+pub type CmdargW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Value indicates command argument to be passed to the card."]
+    #[inline(always)]
+    pub fn cmdarg(&self) -> CmdargR {
+        CmdargR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Value indicates command argument to be passed to the card."]
+    #[inline(always)]
+    pub fn cmdarg(&mut self) -> CmdargW<'_, CmdargSpec> {
+        CmdargW::new(self, 0)
+    }
+}
+#[doc = "Command argument data register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdarg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdarg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CmdargSpec;
+impl crate::RegisterSpec for CmdargSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cmdarg::R`](R) reader structure"]
+impl crate::Readable for CmdargSpec {}
+#[doc = "`write(|w| ..)` method takes [`cmdarg::W`](W) writer structure"]
+impl crate::Writable for CmdargSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CMDARG to value 0"]
+impl crate::Resettable for CmdargSpec {}

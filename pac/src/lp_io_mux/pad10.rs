@@ -1,0 +1,163 @@
+#[doc = "Register `PAD10` reader"]
+pub type R = crate::R<Pad10Spec>;
+#[doc = "Register `PAD10` writer"]
+pub type W = crate::W<Pad10Spec>;
+#[doc = "Field `REG_PAD10_DRV` reader - Reserved"]
+pub type RegPad10DrvR = crate::FieldReader;
+#[doc = "Field `REG_PAD10_DRV` writer - Reserved"]
+pub type RegPad10DrvW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `REG_PAD10_RDE` reader - Reserved"]
+pub type RegPad10RdeR = crate::BitReader;
+#[doc = "Field `REG_PAD10_RDE` writer - Reserved"]
+pub type RegPad10RdeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_RUE` reader - Reserved"]
+pub type RegPad10RueR = crate::BitReader;
+#[doc = "Field `REG_PAD10_RUE` writer - Reserved"]
+pub type RegPad10RueW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_MUX_SEL` reader - 1:use LP GPIO,0: use digital GPIO"]
+pub type RegPad10MuxSelR = crate::BitReader;
+#[doc = "Field `REG_PAD10_MUX_SEL` writer - 1:use LP GPIO,0: use digital GPIO"]
+pub type RegPad10MuxSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_FUN_SEL` reader - function sel"]
+pub type RegPad10FunSelR = crate::FieldReader;
+#[doc = "Field `REG_PAD10_FUN_SEL` writer - function sel"]
+pub type RegPad10FunSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `REG_PAD10_SLP_SEL` reader - 1: enable sleep mode during sleep,0: no sleep mode"]
+pub type RegPad10SlpSelR = crate::BitReader;
+#[doc = "Field `REG_PAD10_SLP_SEL` writer - 1: enable sleep mode during sleep,0: no sleep mode"]
+pub type RegPad10SlpSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_SLP_IE` reader - input enable in sleep mode"]
+pub type RegPad10SlpIeR = crate::BitReader;
+#[doc = "Field `REG_PAD10_SLP_IE` writer - input enable in sleep mode"]
+pub type RegPad10SlpIeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_SLP_OE` reader - output enable in sleep mode"]
+pub type RegPad10SlpOeR = crate::BitReader;
+#[doc = "Field `REG_PAD10_SLP_OE` writer - output enable in sleep mode"]
+pub type RegPad10SlpOeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_FUN_IE` reader - input enable in work mode"]
+pub type RegPad10FunIeR = crate::BitReader;
+#[doc = "Field `REG_PAD10_FUN_IE` writer - input enable in work mode"]
+pub type RegPad10FunIeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_PAD10_FILTER_EN` reader - need des"]
+pub type RegPad10FilterEnR = crate::BitReader;
+#[doc = "Field `REG_PAD10_FILTER_EN` writer - need des"]
+pub type RegPad10FilterEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:1 - Reserved"]
+    #[inline(always)]
+    pub fn reg_pad10_drv(&self) -> RegPad10DrvR {
+        RegPad10DrvR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn reg_pad10_rde(&self) -> RegPad10RdeR {
+        RegPad10RdeR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_pad10_rue(&self) -> RegPad10RueR {
+        RegPad10RueR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - 1:use LP GPIO,0: use digital GPIO"]
+    #[inline(always)]
+    pub fn reg_pad10_mux_sel(&self) -> RegPad10MuxSelR {
+        RegPad10MuxSelR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 5:6 - function sel"]
+    #[inline(always)]
+    pub fn reg_pad10_fun_sel(&self) -> RegPad10FunSelR {
+        RegPad10FunSelR::new(((self.bits >> 5) & 3) as u8)
+    }
+    #[doc = "Bit 7 - 1: enable sleep mode during sleep,0: no sleep mode"]
+    #[inline(always)]
+    pub fn reg_pad10_slp_sel(&self) -> RegPad10SlpSelR {
+        RegPad10SlpSelR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - input enable in sleep mode"]
+    #[inline(always)]
+    pub fn reg_pad10_slp_ie(&self) -> RegPad10SlpIeR {
+        RegPad10SlpIeR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - output enable in sleep mode"]
+    #[inline(always)]
+    pub fn reg_pad10_slp_oe(&self) -> RegPad10SlpOeR {
+        RegPad10SlpOeR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - input enable in work mode"]
+    #[inline(always)]
+    pub fn reg_pad10_fun_ie(&self) -> RegPad10FunIeR {
+        RegPad10FunIeR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - need des"]
+    #[inline(always)]
+    pub fn reg_pad10_filter_en(&self) -> RegPad10FilterEnR {
+        RegPad10FilterEnR::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:1 - Reserved"]
+    #[inline(always)]
+    pub fn reg_pad10_drv(&mut self) -> RegPad10DrvW<'_, Pad10Spec> {
+        RegPad10DrvW::new(self, 0)
+    }
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn reg_pad10_rde(&mut self) -> RegPad10RdeW<'_, Pad10Spec> {
+        RegPad10RdeW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_pad10_rue(&mut self) -> RegPad10RueW<'_, Pad10Spec> {
+        RegPad10RueW::new(self, 3)
+    }
+    #[doc = "Bit 4 - 1:use LP GPIO,0: use digital GPIO"]
+    #[inline(always)]
+    pub fn reg_pad10_mux_sel(&mut self) -> RegPad10MuxSelW<'_, Pad10Spec> {
+        RegPad10MuxSelW::new(self, 4)
+    }
+    #[doc = "Bits 5:6 - function sel"]
+    #[inline(always)]
+    pub fn reg_pad10_fun_sel(&mut self) -> RegPad10FunSelW<'_, Pad10Spec> {
+        RegPad10FunSelW::new(self, 5)
+    }
+    #[doc = "Bit 7 - 1: enable sleep mode during sleep,0: no sleep mode"]
+    #[inline(always)]
+    pub fn reg_pad10_slp_sel(&mut self) -> RegPad10SlpSelW<'_, Pad10Spec> {
+        RegPad10SlpSelW::new(self, 7)
+    }
+    #[doc = "Bit 8 - input enable in sleep mode"]
+    #[inline(always)]
+    pub fn reg_pad10_slp_ie(&mut self) -> RegPad10SlpIeW<'_, Pad10Spec> {
+        RegPad10SlpIeW::new(self, 8)
+    }
+    #[doc = "Bit 9 - output enable in sleep mode"]
+    #[inline(always)]
+    pub fn reg_pad10_slp_oe(&mut self) -> RegPad10SlpOeW<'_, Pad10Spec> {
+        RegPad10SlpOeW::new(self, 9)
+    }
+    #[doc = "Bit 10 - input enable in work mode"]
+    #[inline(always)]
+    pub fn reg_pad10_fun_ie(&mut self) -> RegPad10FunIeW<'_, Pad10Spec> {
+        RegPad10FunIeW::new(self, 10)
+    }
+    #[doc = "Bit 11 - need des"]
+    #[inline(always)]
+    pub fn reg_pad10_filter_en(&mut self) -> RegPad10FilterEnW<'_, Pad10Spec> {
+        RegPad10FilterEnW::new(self, 11)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pad10::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pad10::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pad10Spec;
+impl crate::RegisterSpec for Pad10Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`pad10::R`](R) reader structure"]
+impl crate::Readable for Pad10Spec {}
+#[doc = "`write(|w| ..)` method takes [`pad10::W`](W) writer structure"]
+impl crate::Writable for Pad10Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PAD10 to value 0x02"]
+impl crate::Resettable for Pad10Spec {
+    const RESET_VALUE: u32 = 0x02;
+}

@@ -1,0 +1,86 @@
+#[doc = "Register `DMA_CNTL` reader"]
+pub type R = crate::R<DmaCntlSpec>;
+#[doc = "Register `DMA_CNTL` writer"]
+pub type W = crate::W<DmaCntlSpec>;
+#[doc = "Field `DMA_EN` writer - write 1 to triger dma to get 1 frame"]
+pub type DmaEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA_UPDATE` reader - write 1 to update reg_dma_burst_len & reg_dma_data_type"]
+pub type DmaUpdateR = crate::BitReader;
+#[doc = "Field `DMA_UPDATE` writer - write 1 to update reg_dma_burst_len & reg_dma_data_type"]
+pub type DmaUpdateW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA_DATA_TYPE` reader - this field configures the idi data type for image data"]
+pub type DmaDataTypeR = crate::FieldReader;
+#[doc = "Field `DMA_DATA_TYPE` writer - this field configures the idi data type for image data"]
+pub type DmaDataTypeW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `DMA_BURST_LEN` reader - this field configures dma burst len when data source is dma. set according to dma_msize, it is the number of 64bits in a dma transfer"]
+pub type DmaBurstLenR = crate::FieldReader<u16>;
+#[doc = "Field `DMA_BURST_LEN` writer - this field configures dma burst len when data source is dma. set according to dma_msize, it is the number of 64bits in a dma transfer"]
+pub type DmaBurstLenW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `DMA_INTERVAL` reader - this field configures dma req interval, 12'b1: 1 cycle, 12'b11 2 cycle ..."]
+pub type DmaIntervalR = crate::FieldReader<u16>;
+#[doc = "Field `DMA_INTERVAL` writer - this field configures dma req interval, 12'b1: 1 cycle, 12'b11 2 cycle ..."]
+pub type DmaIntervalW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+impl R {
+    #[doc = "Bit 1 - write 1 to update reg_dma_burst_len & reg_dma_data_type"]
+    #[inline(always)]
+    pub fn dma_update(&self) -> DmaUpdateR {
+        DmaUpdateR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:7 - this field configures the idi data type for image data"]
+    #[inline(always)]
+    pub fn dma_data_type(&self) -> DmaDataTypeR {
+        DmaDataTypeR::new(((self.bits >> 2) & 0x3f) as u8)
+    }
+    #[doc = "Bits 8:19 - this field configures dma burst len when data source is dma. set according to dma_msize, it is the number of 64bits in a dma transfer"]
+    #[inline(always)]
+    pub fn dma_burst_len(&self) -> DmaBurstLenR {
+        DmaBurstLenR::new(((self.bits >> 8) & 0x0fff) as u16)
+    }
+    #[doc = "Bits 20:31 - this field configures dma req interval, 12'b1: 1 cycle, 12'b11 2 cycle ..."]
+    #[inline(always)]
+    pub fn dma_interval(&self) -> DmaIntervalR {
+        DmaIntervalR::new(((self.bits >> 20) & 0x0fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - write 1 to triger dma to get 1 frame"]
+    #[inline(always)]
+    pub fn dma_en(&mut self) -> DmaEnW<'_, DmaCntlSpec> {
+        DmaEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - write 1 to update reg_dma_burst_len & reg_dma_data_type"]
+    #[inline(always)]
+    pub fn dma_update(&mut self) -> DmaUpdateW<'_, DmaCntlSpec> {
+        DmaUpdateW::new(self, 1)
+    }
+    #[doc = "Bits 2:7 - this field configures the idi data type for image data"]
+    #[inline(always)]
+    pub fn dma_data_type(&mut self) -> DmaDataTypeW<'_, DmaCntlSpec> {
+        DmaDataTypeW::new(self, 2)
+    }
+    #[doc = "Bits 8:19 - this field configures dma burst len when data source is dma. set according to dma_msize, it is the number of 64bits in a dma transfer"]
+    #[inline(always)]
+    pub fn dma_burst_len(&mut self) -> DmaBurstLenW<'_, DmaCntlSpec> {
+        DmaBurstLenW::new(self, 8)
+    }
+    #[doc = "Bits 20:31 - this field configures dma req interval, 12'b1: 1 cycle, 12'b11 2 cycle ..."]
+    #[inline(always)]
+    pub fn dma_interval(&mut self) -> DmaIntervalW<'_, DmaCntlSpec> {
+        DmaIntervalW::new(self, 20)
+    }
+}
+#[doc = "isp dma source trans control register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmaCntlSpec;
+impl crate::RegisterSpec for DmaCntlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dma_cntl::R`](R) reader structure"]
+impl crate::Readable for DmaCntlSpec {}
+#[doc = "`write(|w| ..)` method takes [`dma_cntl::W`](W) writer structure"]
+impl crate::Writable for DmaCntlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DMA_CNTL to value 0x0010_80a8"]
+impl crate::Resettable for DmaCntlSpec {
+    const RESET_VALUE: u32 = 0x0010_80a8;
+}

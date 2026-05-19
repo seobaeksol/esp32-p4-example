@@ -1,0 +1,51 @@
+#[doc = "Register `LP_CORE_IBUS_TIMEOUT` reader"]
+pub type R = crate::R<LpCoreIbusTimeoutSpec>;
+#[doc = "Register `LP_CORE_IBUS_TIMEOUT` writer"]
+pub type W = crate::W<LpCoreIbusTimeoutSpec>;
+#[doc = "Field `EN` reader - set this field to 1 to enable lp core ibus timeout handle"]
+pub type EnR = crate::BitReader;
+#[doc = "Field `EN` writer - set this field to 1 to enable lp core ibus timeout handle"]
+pub type EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `THRES` reader - This field used to set lp core ibus timeout threshold"]
+pub type ThresR = crate::FieldReader<u16>;
+#[doc = "Field `THRES` writer - This field used to set lp core ibus timeout threshold"]
+pub type ThresW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bit 0 - set this field to 1 to enable lp core ibus timeout handle"]
+    #[inline(always)]
+    pub fn en(&self) -> EnR {
+        EnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:16 - This field used to set lp core ibus timeout threshold"]
+    #[inline(always)]
+    pub fn thres(&self) -> ThresR {
+        ThresR::new(((self.bits >> 1) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - set this field to 1 to enable lp core ibus timeout handle"]
+    #[inline(always)]
+    pub fn en(&mut self) -> EnW<'_, LpCoreIbusTimeoutSpec> {
+        EnW::new(self, 0)
+    }
+    #[doc = "Bits 1:16 - This field used to set lp core ibus timeout threshold"]
+    #[inline(always)]
+    pub fn thres(&mut self) -> ThresW<'_, LpCoreIbusTimeoutSpec> {
+        ThresW::new(self, 1)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_core_ibus_timeout::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_core_ibus_timeout::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpCoreIbusTimeoutSpec;
+impl crate::RegisterSpec for LpCoreIbusTimeoutSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_core_ibus_timeout::R`](R) reader structure"]
+impl crate::Readable for LpCoreIbusTimeoutSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_core_ibus_timeout::W`](W) writer structure"]
+impl crate::Writable for LpCoreIbusTimeoutSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_CORE_IBUS_TIMEOUT to value 0x0001_ffff"]
+impl crate::Resettable for LpCoreIbusTimeoutSpec {
+    const RESET_VALUE: u32 = 0x0001_ffff;
+}

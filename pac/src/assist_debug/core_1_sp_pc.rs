@@ -1,0 +1,20 @@
+#[doc = "Register `CORE_1_SP_PC` reader"]
+pub type R = crate::R<Core1SpPcSpec>;
+#[doc = "Field `CORE_1_SP_PC` reader - This regsiter stores the PC when trigger stack monitor."]
+pub type Core1SpPcR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - This regsiter stores the PC when trigger stack monitor."]
+    #[inline(always)]
+    pub fn core_1_sp_pc(&self) -> Core1SpPcR {
+        Core1SpPcR::new(self.bits)
+    }
+}
+#[doc = "stack monitor pc status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_sp_pc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core1SpPcSpec;
+impl crate::RegisterSpec for Core1SpPcSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_1_sp_pc::R`](R) reader structure"]
+impl crate::Readable for Core1SpPcSpec {}
+#[doc = "`reset()` method sets CORE_1_SP_PC to value 0"]
+impl crate::Resettable for Core1SpPcSpec {}

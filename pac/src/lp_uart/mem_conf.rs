@@ -1,0 +1,49 @@
+#[doc = "Register `MEM_CONF` reader"]
+pub type R = crate::R<MemConfSpec>;
+#[doc = "Register `MEM_CONF` writer"]
+pub type W = crate::W<MemConfSpec>;
+#[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force power down UART memory."]
+pub type MemForcePdR = crate::BitReader;
+#[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force power down UART memory."]
+pub type MemForcePdW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force power up UART memory."]
+pub type MemForcePuR = crate::BitReader;
+#[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force power up UART memory."]
+pub type MemForcePuW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 25 - Set this bit to force power down UART memory."]
+    #[inline(always)]
+    pub fn mem_force_pd(&self) -> MemForcePdR {
+        MemForcePdR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Set this bit to force power up UART memory."]
+    #[inline(always)]
+    pub fn mem_force_pu(&self) -> MemForcePuR {
+        MemForcePuR::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 25 - Set this bit to force power down UART memory."]
+    #[inline(always)]
+    pub fn mem_force_pd(&mut self) -> MemForcePdW<'_, MemConfSpec> {
+        MemForcePdW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Set this bit to force power up UART memory."]
+    #[inline(always)]
+    pub fn mem_force_pu(&mut self) -> MemForcePuW<'_, MemConfSpec> {
+        MemForcePuW::new(self, 26)
+    }
+}
+#[doc = "UART memory power configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`mem_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mem_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MemConfSpec;
+impl crate::RegisterSpec for MemConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`mem_conf::R`](R) reader structure"]
+impl crate::Readable for MemConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`mem_conf::W`](W) writer structure"]
+impl crate::Writable for MemConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets MEM_CONF to value 0"]
+impl crate::Resettable for MemConfSpec {}

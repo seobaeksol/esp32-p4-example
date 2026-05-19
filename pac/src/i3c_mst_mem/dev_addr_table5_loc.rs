@@ -1,0 +1,81 @@
+#[doc = "Register `DEV_ADDR_TABLE5_LOC` reader"]
+pub type R = crate::R<DevAddrTable5LocSpec>;
+#[doc = "Register `DEV_ADDR_TABLE5_LOC` writer"]
+pub type W = crate::W<DevAddrTable5LocSpec>;
+#[doc = "Field `REG_DAT_DEV5_STATIC_ADDR` reader - NA"]
+pub type RegDatDev5StaticAddrR = crate::FieldReader;
+#[doc = "Field `REG_DAT_DEV5_STATIC_ADDR` writer - NA"]
+pub type RegDatDev5StaticAddrW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `REG_DAT_DEV5_DYNAMIC_ADDR` reader - Device Dynamic Address with parity, The MSB,bit\\[23\\], should be programmed with parity of dynamic address."]
+pub type RegDatDev5DynamicAddrR = crate::FieldReader;
+#[doc = "Field `REG_DAT_DEV5_DYNAMIC_ADDR` writer - Device Dynamic Address with parity, The MSB,bit\\[23\\], should be programmed with parity of dynamic address."]
+pub type RegDatDev5DynamicAddrW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REG_DAT_DEV5_NACK_RETRY_CNT` reader - This field is used to set the Device NACK Retry count for the particular device. If the Device NACK's for the device address, the controller automatically retries the same device until this count expires. If the Slave does not ACK for the mentioned number of retries, then controller generates an error response and move to the Halt state."]
+pub type RegDatDev5NackRetryCntR = crate::FieldReader;
+#[doc = "Field `REG_DAT_DEV5_NACK_RETRY_CNT` writer - This field is used to set the Device NACK Retry count for the particular device. If the Device NACK's for the device address, the controller automatically retries the same device until this count expires. If the Slave does not ACK for the mentioned number of retries, then controller generates an error response and move to the Halt state."]
+pub type RegDatDev5NackRetryCntW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `REG_DAT_DEV5_I2C` reader - Legacy I2C device or not. This bit should be set to 1 if the device is a legacy I2C device."]
+pub type RegDatDev5I2cR = crate::BitReader;
+#[doc = "Field `REG_DAT_DEV5_I2C` writer - Legacy I2C device or not. This bit should be set to 1 if the device is a legacy I2C device."]
+pub type RegDatDev5I2cW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:6 - NA"]
+    #[inline(always)]
+    pub fn reg_dat_dev5_static_addr(&self) -> RegDatDev5StaticAddrR {
+        RegDatDev5StaticAddrR::new((self.bits & 0x7f) as u8)
+    }
+    #[doc = "Bits 16:23 - Device Dynamic Address with parity, The MSB,bit\\[23\\], should be programmed with parity of dynamic address."]
+    #[inline(always)]
+    pub fn reg_dat_dev5_dynamic_addr(&self) -> RegDatDev5DynamicAddrR {
+        RegDatDev5DynamicAddrR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 29:30 - This field is used to set the Device NACK Retry count for the particular device. If the Device NACK's for the device address, the controller automatically retries the same device until this count expires. If the Slave does not ACK for the mentioned number of retries, then controller generates an error response and move to the Halt state."]
+    #[inline(always)]
+    pub fn reg_dat_dev5_nack_retry_cnt(&self) -> RegDatDev5NackRetryCntR {
+        RegDatDev5NackRetryCntR::new(((self.bits >> 29) & 3) as u8)
+    }
+    #[doc = "Bit 31 - Legacy I2C device or not. This bit should be set to 1 if the device is a legacy I2C device."]
+    #[inline(always)]
+    pub fn reg_dat_dev5_i2c(&self) -> RegDatDev5I2cR {
+        RegDatDev5I2cR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - NA"]
+    #[inline(always)]
+    pub fn reg_dat_dev5_static_addr(&mut self) -> RegDatDev5StaticAddrW<'_, DevAddrTable5LocSpec> {
+        RegDatDev5StaticAddrW::new(self, 0)
+    }
+    #[doc = "Bits 16:23 - Device Dynamic Address with parity, The MSB,bit\\[23\\], should be programmed with parity of dynamic address."]
+    #[inline(always)]
+    pub fn reg_dat_dev5_dynamic_addr(
+        &mut self,
+    ) -> RegDatDev5DynamicAddrW<'_, DevAddrTable5LocSpec> {
+        RegDatDev5DynamicAddrW::new(self, 16)
+    }
+    #[doc = "Bits 29:30 - This field is used to set the Device NACK Retry count for the particular device. If the Device NACK's for the device address, the controller automatically retries the same device until this count expires. If the Slave does not ACK for the mentioned number of retries, then controller generates an error response and move to the Halt state."]
+    #[inline(always)]
+    pub fn reg_dat_dev5_nack_retry_cnt(
+        &mut self,
+    ) -> RegDatDev5NackRetryCntW<'_, DevAddrTable5LocSpec> {
+        RegDatDev5NackRetryCntW::new(self, 29)
+    }
+    #[doc = "Bit 31 - Legacy I2C device or not. This bit should be set to 1 if the device is a legacy I2C device."]
+    #[inline(always)]
+    pub fn reg_dat_dev5_i2c(&mut self) -> RegDatDev5I2cW<'_, DevAddrTable5LocSpec> {
+        RegDatDev5I2cW::new(self, 31)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dev_addr_table5_loc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dev_addr_table5_loc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DevAddrTable5LocSpec;
+impl crate::RegisterSpec for DevAddrTable5LocSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dev_addr_table5_loc::R`](R) reader structure"]
+impl crate::Readable for DevAddrTable5LocSpec {}
+#[doc = "`write(|w| ..)` method takes [`dev_addr_table5_loc::W`](W) writer structure"]
+impl crate::Writable for DevAddrTable5LocSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DEV_ADDR_TABLE5_LOC to value 0"]
+impl crate::Resettable for DevAddrTable5LocSpec {}

@@ -1,0 +1,35 @@
+#[doc = "Register `NOUSE` reader"]
+pub type R = crate::R<NouseSpec>;
+#[doc = "Register `NOUSE` writer"]
+pub type W = crate::W<NouseSpec>;
+#[doc = "Field `I2C_MST_NOUSE` reader - need des"]
+pub type I2cMstNouseR = crate::FieldReader<u32>;
+#[doc = "Field `I2C_MST_NOUSE` writer - need des"]
+pub type I2cMstNouseW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need des"]
+    #[inline(always)]
+    pub fn i2c_mst_nouse(&self) -> I2cMstNouseR {
+        I2cMstNouseR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need des"]
+    #[inline(always)]
+    pub fn i2c_mst_nouse(&mut self) -> I2cMstNouseW<'_, NouseSpec> {
+        I2cMstNouseW::new(self, 0)
+    }
+}
+#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`nouse::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`nouse::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct NouseSpec;
+impl crate::RegisterSpec for NouseSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`nouse::R`](R) reader structure"]
+impl crate::Readable for NouseSpec {}
+#[doc = "`write(|w| ..)` method takes [`nouse::W`](W) writer structure"]
+impl crate::Writable for NouseSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets NOUSE to value 0"]
+impl crate::Resettable for NouseSpec {}

@@ -1,0 +1,86 @@
+#[doc = "Register `L2_CACHE_PRELOAD_CTRL` reader"]
+pub type R = crate::R<L2CachePreloadCtrlSpec>;
+#[doc = "Register `L2_CACHE_PRELOAD_CTRL` writer"]
+pub type W = crate::W<L2CachePreloadCtrlSpec>;
+#[doc = "Field `L2_CACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
+pub type L2CachePreloadEnaR = crate::BitReader;
+#[doc = "Field `L2_CACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
+pub type L2CachePreloadEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_CACHE_PRELOAD_DONE` reader - The bit is used to indicate whether preload operation is finished or not. 0: not finished. 1: finished."]
+pub type L2CachePreloadDoneR = crate::BitReader;
+#[doc = "Field `L2_CACHE_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
+pub type L2CachePreloadOrderR = crate::BitReader;
+#[doc = "Field `L2_CACHE_PRELOAD_ORDER` writer - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
+pub type L2CachePreloadOrderW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_CACHE_PRELOAD_RGID` reader - The bit is used to set the gid of l2 cache preload."]
+pub type L2CachePreloadRgidR = crate::FieldReader;
+#[doc = "Field `L2_CACHE_PRELOAD_RGID` writer - The bit is used to set the gid of l2 cache preload."]
+pub type L2CachePreloadRgidW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `L2_CACHE_PRELOAD_MODE` reader - The bit is used to configure the mode of l2 cache preload, 0: load data from next level memory, 1: not load data from next level memory."]
+pub type L2CachePreloadModeR = crate::BitReader;
+#[doc = "Field `L2_CACHE_PRELOAD_MODE` writer - The bit is used to configure the mode of l2 cache preload, 0: load data from next level memory, 1: not load data from next level memory."]
+pub type L2CachePreloadModeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
+    #[inline(always)]
+    pub fn l2_cache_preload_ena(&self) -> L2CachePreloadEnaR {
+        L2CachePreloadEnaR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The bit is used to indicate whether preload operation is finished or not. 0: not finished. 1: finished."]
+    #[inline(always)]
+    pub fn l2_cache_preload_done(&self) -> L2CachePreloadDoneR {
+        L2CachePreloadDoneR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
+    #[inline(always)]
+    pub fn l2_cache_preload_order(&self) -> L2CachePreloadOrderR {
+        L2CachePreloadOrderR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:6 - The bit is used to set the gid of l2 cache preload."]
+    #[inline(always)]
+    pub fn l2_cache_preload_rgid(&self) -> L2CachePreloadRgidR {
+        L2CachePreloadRgidR::new(((self.bits >> 3) & 0x0f) as u8)
+    }
+    #[doc = "Bit 7 - The bit is used to configure the mode of l2 cache preload, 0: load data from next level memory, 1: not load data from next level memory."]
+    #[inline(always)]
+    pub fn l2_cache_preload_mode(&self) -> L2CachePreloadModeR {
+        L2CachePreloadModeR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
+    #[inline(always)]
+    pub fn l2_cache_preload_ena(&mut self) -> L2CachePreloadEnaW<'_, L2CachePreloadCtrlSpec> {
+        L2CachePreloadEnaW::new(self, 0)
+    }
+    #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
+    #[inline(always)]
+    pub fn l2_cache_preload_order(&mut self) -> L2CachePreloadOrderW<'_, L2CachePreloadCtrlSpec> {
+        L2CachePreloadOrderW::new(self, 2)
+    }
+    #[doc = "Bits 3:6 - The bit is used to set the gid of l2 cache preload."]
+    #[inline(always)]
+    pub fn l2_cache_preload_rgid(&mut self) -> L2CachePreloadRgidW<'_, L2CachePreloadCtrlSpec> {
+        L2CachePreloadRgidW::new(self, 3)
+    }
+    #[doc = "Bit 7 - The bit is used to configure the mode of l2 cache preload, 0: load data from next level memory, 1: not load data from next level memory."]
+    #[inline(always)]
+    pub fn l2_cache_preload_mode(&mut self) -> L2CachePreloadModeW<'_, L2CachePreloadCtrlSpec> {
+        L2CachePreloadModeW::new(self, 7)
+    }
+}
+#[doc = "L2 Cache preload-operation control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_preload_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_preload_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CachePreloadCtrlSpec;
+impl crate::RegisterSpec for L2CachePreloadCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_preload_ctrl::R`](R) reader structure"]
+impl crate::Readable for L2CachePreloadCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_cache_preload_ctrl::W`](W) writer structure"]
+impl crate::Writable for L2CachePreloadCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_CACHE_PRELOAD_CTRL to value 0x02"]
+impl crate::Resettable for L2CachePreloadCtrlSpec {
+    const RESET_VALUE: u32 = 0x02;
+}

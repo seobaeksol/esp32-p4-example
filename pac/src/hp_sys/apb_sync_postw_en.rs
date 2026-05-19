@@ -1,0 +1,79 @@
+#[doc = "Register `APB_SYNC_POSTW_EN` reader"]
+pub type R = crate::R<ApbSyncPostwEnSpec>;
+#[doc = "Register `APB_SYNC_POSTW_EN` writer"]
+pub type W = crate::W<ApbSyncPostwEnSpec>;
+#[doc = "Field `GMAC_APB_POSTW_EN` reader - N/A"]
+pub type GmacApbPostwEnR = crate::BitReader;
+#[doc = "Field `GMAC_APB_POSTW_EN` writer - N/A"]
+pub type GmacApbPostwEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DSI_HOST_APB_POSTW_EN` reader - N/A"]
+pub type DsiHostApbPostwEnR = crate::BitReader;
+#[doc = "Field `DSI_HOST_APB_POSTW_EN` writer - N/A"]
+pub type DsiHostApbPostwEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CSI_HOST_APB_SYNC_POSTW_EN` reader - N/A"]
+pub type CsiHostApbSyncPostwEnR = crate::BitReader;
+#[doc = "Field `CSI_HOST_APB_SYNC_POSTW_EN` writer - N/A"]
+pub type CsiHostApbSyncPostwEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CSI_HOST_APB_ASYNC_POSTW_EN` reader - N/A"]
+pub type CsiHostApbAsyncPostwEnR = crate::BitReader;
+#[doc = "Field `CSI_HOST_APB_ASYNC_POSTW_EN` writer - N/A"]
+pub type CsiHostApbAsyncPostwEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - N/A"]
+    #[inline(always)]
+    pub fn gmac_apb_postw_en(&self) -> GmacApbPostwEnR {
+        GmacApbPostwEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - N/A"]
+    #[inline(always)]
+    pub fn dsi_host_apb_postw_en(&self) -> DsiHostApbPostwEnR {
+        DsiHostApbPostwEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - N/A"]
+    #[inline(always)]
+    pub fn csi_host_apb_sync_postw_en(&self) -> CsiHostApbSyncPostwEnR {
+        CsiHostApbSyncPostwEnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - N/A"]
+    #[inline(always)]
+    pub fn csi_host_apb_async_postw_en(&self) -> CsiHostApbAsyncPostwEnR {
+        CsiHostApbAsyncPostwEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - N/A"]
+    #[inline(always)]
+    pub fn gmac_apb_postw_en(&mut self) -> GmacApbPostwEnW<'_, ApbSyncPostwEnSpec> {
+        GmacApbPostwEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - N/A"]
+    #[inline(always)]
+    pub fn dsi_host_apb_postw_en(&mut self) -> DsiHostApbPostwEnW<'_, ApbSyncPostwEnSpec> {
+        DsiHostApbPostwEnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - N/A"]
+    #[inline(always)]
+    pub fn csi_host_apb_sync_postw_en(&mut self) -> CsiHostApbSyncPostwEnW<'_, ApbSyncPostwEnSpec> {
+        CsiHostApbSyncPostwEnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - N/A"]
+    #[inline(always)]
+    pub fn csi_host_apb_async_postw_en(
+        &mut self,
+    ) -> CsiHostApbAsyncPostwEnW<'_, ApbSyncPostwEnSpec> {
+        CsiHostApbAsyncPostwEnW::new(self, 3)
+    }
+}
+#[doc = "N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`apb_sync_postw_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb_sync_postw_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ApbSyncPostwEnSpec;
+impl crate::RegisterSpec for ApbSyncPostwEnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`apb_sync_postw_en::R`](R) reader structure"]
+impl crate::Readable for ApbSyncPostwEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`apb_sync_postw_en::W`](W) writer structure"]
+impl crate::Writable for ApbSyncPostwEnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets APB_SYNC_POSTW_EN to value 0"]
+impl crate::Resettable for ApbSyncPostwEnSpec {}

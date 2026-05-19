@@ -1,0 +1,22 @@
+#[doc = "Register `SOFT_JTAG_CTRL` writer"]
+pub type W = crate::W<SoftJtagCtrlSpec>;
+#[doc = "Field `SOFT_JTAG_CTRL` writer - Configures whether or not to enable JTAG authentication mode. \\\\0: Disable \\\\1: Enable \\\\"]
+pub type SoftJtagCtrlW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to enable JTAG authentication mode. \\\\0: Disable \\\\1: Enable \\\\"]
+    #[inline(always)]
+    pub fn soft_jtag_ctrl(&mut self) -> SoftJtagCtrlW<'_, SoftJtagCtrlSpec> {
+        SoftJtagCtrlW::new(self, 0)
+    }
+}
+#[doc = "Jtag register 0.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`soft_jtag_ctrl::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SoftJtagCtrlSpec;
+impl crate::RegisterSpec for SoftJtagCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`soft_jtag_ctrl::W`](W) writer structure"]
+impl crate::Writable for SoftJtagCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SOFT_JTAG_CTRL to value 0"]
+impl crate::Resettable for SoftJtagCtrlSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `TIMER%s_CNT_CAP` reader"]
+pub type R = crate::R<TimerCntCapSpec>;
+#[doc = "Field `TIMER_CNT_CAP` reader - Represents the captured LEDC timer%s count value."]
+pub type TimerCntCapR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:19 - Represents the captured LEDC timer%s count value."]
+    #[inline(always)]
+    pub fn timer_cnt_cap(&self) -> TimerCntCapR {
+        TimerCntCapR::new(self.bits & 0x000f_ffff)
+    }
+}
+#[doc = "Ledc timer%s captured count value register.\n\nYou can [`read`](crate::Reg::read) this register and get [`timer_cnt_cap::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TimerCntCapSpec;
+impl crate::RegisterSpec for TimerCntCapSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`timer_cnt_cap::R`](R) reader structure"]
+impl crate::Readable for TimerCntCapSpec {}
+#[doc = "`reset()` method sets TIMER%s_CNT_CAP to value 0"]
+impl crate::Resettable for TimerCntCapSpec {}

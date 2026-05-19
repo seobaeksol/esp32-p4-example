@@ -1,0 +1,65 @@
+#[doc = "Register `FUNC10_IN_SEL_CFG` reader"]
+pub type R = crate::R<Func10InSelCfgSpec>;
+#[doc = "Register `FUNC10_IN_SEL_CFG` writer"]
+pub type W = crate::W<Func10InSelCfgSpec>;
+#[doc = "Field `REG_GPIO_FUNC10_IN_INV_SEL` reader - Reserved"]
+pub type RegGpioFunc10InInvSelR = crate::BitReader;
+#[doc = "Field `REG_GPIO_FUNC10_IN_INV_SEL` writer - Reserved"]
+pub type RegGpioFunc10InInvSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_SIG10_IN_SEL` reader - Reserved"]
+pub type RegGpioSig10InSelR = crate::BitReader;
+#[doc = "Field `REG_GPIO_SIG10_IN_SEL` writer - Reserved"]
+pub type RegGpioSig10InSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_FUNC10_IN_SEL` reader - Reserved"]
+pub type RegGpioFunc10InSelR = crate::FieldReader;
+#[doc = "Field `REG_GPIO_FUNC10_IN_SEL` writer - Reserved"]
+pub type RegGpioFunc10InSelW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func10_in_inv_sel(&self) -> RegGpioFunc10InInvSelR {
+        RegGpioFunc10InInvSelR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_sig10_in_sel(&self) -> RegGpioSig10InSelR {
+        RegGpioSig10InSelR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:7 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func10_in_sel(&self) -> RegGpioFunc10InSelR {
+        RegGpioFunc10InSelR::new(((self.bits >> 2) & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func10_in_inv_sel(&mut self) -> RegGpioFunc10InInvSelW<'_, Func10InSelCfgSpec> {
+        RegGpioFunc10InInvSelW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_sig10_in_sel(&mut self) -> RegGpioSig10InSelW<'_, Func10InSelCfgSpec> {
+        RegGpioSig10InSelW::new(self, 1)
+    }
+    #[doc = "Bits 2:7 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_func10_in_sel(&mut self) -> RegGpioFunc10InSelW<'_, Func10InSelCfgSpec> {
+        RegGpioFunc10InSelW::new(self, 2)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func10_in_sel_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func10_in_sel_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Func10InSelCfgSpec;
+impl crate::RegisterSpec for Func10InSelCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`func10_in_sel_cfg::R`](R) reader structure"]
+impl crate::Readable for Func10InSelCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`func10_in_sel_cfg::W`](W) writer structure"]
+impl crate::Writable for Func10InSelCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets FUNC10_IN_SEL_CFG to value 0x80"]
+impl crate::Resettable for Func10InSelCfgSpec {
+    const RESET_VALUE: u32 = 0x80;
+}

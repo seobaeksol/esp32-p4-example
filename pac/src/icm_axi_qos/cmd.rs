@@ -1,0 +1,112 @@
+#[doc = "Register `CMD` reader"]
+pub type R = crate::R<CmdSpec>;
+#[doc = "Register `CMD` writer"]
+pub type W = crate::W<CmdSpec>;
+#[doc = "Field `AXI_CMD` reader - "]
+pub type AxiCmdR = crate::FieldReader;
+#[doc = "Field `AXI_CMD` writer - "]
+pub type AxiCmdW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `RD_WR_CHAN` reader - "]
+pub type RdWrChanR = crate::BitReader;
+#[doc = "Field `RD_WR_CHAN` writer - "]
+pub type RdWrChanW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AXI_MASTER_PORT` reader - "]
+pub type AxiMasterPortR = crate::FieldReader;
+#[doc = "Field `AXI_MASTER_PORT` writer - "]
+pub type AxiMasterPortW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `AXI_ERR_BIT` reader - "]
+pub type AxiErrBitR = crate::BitReader;
+#[doc = "Field `AXI_SOFT_RESET_BIT` reader - "]
+pub type AxiSoftResetBitR = crate::BitReader;
+#[doc = "Field `AXI_SOFT_RESET_BIT` writer - "]
+pub type AxiSoftResetBitW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AXI_RD_WR_CMD` reader - "]
+pub type AxiRdWrCmdR = crate::BitReader;
+#[doc = "Field `AXI_RD_WR_CMD` writer - "]
+pub type AxiRdWrCmdW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AXI_CMD_EN` reader - "]
+pub type AxiCmdEnR = crate::BitReader;
+#[doc = "Field `AXI_CMD_EN` writer - "]
+pub type AxiCmdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:2"]
+    #[inline(always)]
+    pub fn axi_cmd(&self) -> AxiCmdR {
+        AxiCmdR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn rd_wr_chan(&self) -> RdWrChanR {
+        RdWrChanR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bits 8:11"]
+    #[inline(always)]
+    pub fn axi_master_port(&self) -> AxiMasterPortR {
+        AxiMasterPortR::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn axi_err_bit(&self) -> AxiErrBitR {
+        AxiErrBitR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn axi_soft_reset_bit(&self) -> AxiSoftResetBitR {
+        AxiSoftResetBitR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn axi_rd_wr_cmd(&self) -> AxiRdWrCmdR {
+        AxiRdWrCmdR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn axi_cmd_en(&self) -> AxiCmdEnR {
+        AxiCmdEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2"]
+    #[inline(always)]
+    pub fn axi_cmd(&mut self) -> AxiCmdW<'_, CmdSpec> {
+        AxiCmdW::new(self, 0)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn rd_wr_chan(&mut self) -> RdWrChanW<'_, CmdSpec> {
+        RdWrChanW::new(self, 7)
+    }
+    #[doc = "Bits 8:11"]
+    #[inline(always)]
+    pub fn axi_master_port(&mut self) -> AxiMasterPortW<'_, CmdSpec> {
+        AxiMasterPortW::new(self, 8)
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn axi_soft_reset_bit(&mut self) -> AxiSoftResetBitW<'_, CmdSpec> {
+        AxiSoftResetBitW::new(self, 29)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn axi_rd_wr_cmd(&mut self) -> AxiRdWrCmdW<'_, CmdSpec> {
+        AxiRdWrCmdW::new(self, 30)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn axi_cmd_en(&mut self) -> AxiCmdEnW<'_, CmdSpec> {
+        AxiCmdEnW::new(self, 31)
+    }
+}
+#[doc = "QoS indirect command\n\nYou can [`read`](crate::Reg::read) this register and get [`cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CmdSpec;
+impl crate::RegisterSpec for CmdSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cmd::R`](R) reader structure"]
+impl crate::Readable for CmdSpec {}
+#[doc = "`write(|w| ..)` method takes [`cmd::W`](W) writer structure"]
+impl crate::Writable for CmdSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CMD to value 0"]
+impl crate::Resettable for CmdSpec {}

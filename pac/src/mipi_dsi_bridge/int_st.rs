@@ -1,0 +1,27 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `UNDERRUN` reader - the masked interrupt status of dpi_underrun"]
+pub type UnderrunR = crate::BitReader;
+#[doc = "Field `VSYNC` reader - the masked interrupt status of dpi_vsync"]
+pub type VsyncR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - the masked interrupt status of dpi_underrun"]
+    #[inline(always)]
+    pub fn underrun(&self) -> UnderrunR {
+        UnderrunR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - the masked interrupt status of dpi_vsync"]
+    #[inline(always)]
+    pub fn vsync(&self) -> VsyncR {
+        VsyncR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[doc = "dsi_bridge masked interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

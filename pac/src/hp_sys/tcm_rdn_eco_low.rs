@@ -1,0 +1,35 @@
+#[doc = "Register `TCM_RDN_ECO_LOW` reader"]
+pub type R = crate::R<TcmRdnEcoLowSpec>;
+#[doc = "Register `TCM_RDN_ECO_LOW` writer"]
+pub type W = crate::W<TcmRdnEcoLowSpec>;
+#[doc = "Field `REG_HP_TCM_RDN_ECO_LOW` reader - NA"]
+pub type RegHpTcmRdnEcoLowR = crate::FieldReader<u32>;
+#[doc = "Field `REG_HP_TCM_RDN_ECO_LOW` writer - NA"]
+pub type RegHpTcmRdnEcoLowW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn reg_hp_tcm_rdn_eco_low(&self) -> RegHpTcmRdnEcoLowR {
+        RegHpTcmRdnEcoLowR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn reg_hp_tcm_rdn_eco_low(&mut self) -> RegHpTcmRdnEcoLowW<'_, TcmRdnEcoLowSpec> {
+        RegHpTcmRdnEcoLowW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_rdn_eco_low::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcm_rdn_eco_low::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TcmRdnEcoLowSpec;
+impl crate::RegisterSpec for TcmRdnEcoLowSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tcm_rdn_eco_low::R`](R) reader structure"]
+impl crate::Readable for TcmRdnEcoLowSpec {}
+#[doc = "`write(|w| ..)` method takes [`tcm_rdn_eco_low::W`](W) writer structure"]
+impl crate::Writable for TcmRdnEcoLowSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TCM_RDN_ECO_LOW to value 0"]
+impl crate::Resettable for TcmRdnEcoLowSpec {}

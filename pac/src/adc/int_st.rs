@@ -1,0 +1,55 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `THRES1_LOW` reader - need_des"]
+pub type Thres1LowR = crate::BitReader;
+#[doc = "Field `THRES0_LOW` reader - need_des"]
+pub type Thres0LowR = crate::BitReader;
+#[doc = "Field `THRES1_HIGH` reader - need_des"]
+pub type Thres1HighR = crate::BitReader;
+#[doc = "Field `THRES0_HIGH` reader - need_des"]
+pub type Thres0HighR = crate::BitReader;
+#[doc = "Field `ADC2_DONE` reader - need_des"]
+pub type Adc2DoneR = crate::BitReader;
+#[doc = "Field `ADC1_DONE` reader - need_des"]
+pub type Adc1DoneR = crate::BitReader;
+impl R {
+    #[doc = "Bit 26 - need_des"]
+    #[inline(always)]
+    pub fn thres1_low(&self) -> Thres1LowR {
+        Thres1LowR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn thres0_low(&self) -> Thres0LowR {
+        Thres0LowR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn thres1_high(&self) -> Thres1HighR {
+        Thres1HighR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn thres0_high(&self) -> Thres0HighR {
+        Thres0HighR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn adc2_done(&self) -> Adc2DoneR {
+        Adc2DoneR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn adc1_done(&self) -> Adc1DoneR {
+        Adc1DoneR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[doc = "Register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

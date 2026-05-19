@@ -1,0 +1,30 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<IntClrSpec>;
+#[doc = "Field `READ_DONE` writer - The clear signal for read_done interrupt."]
+pub type ReadDoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `PGM_DONE` writer - The clear signal for pgm_done interrupt."]
+pub type PgmDoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - The clear signal for read_done interrupt."]
+    #[inline(always)]
+    pub fn read_done(&mut self) -> ReadDoneW<'_, IntClrSpec> {
+        ReadDoneW::new(self, 0)
+    }
+    #[doc = "Bit 1 - The clear signal for pgm_done interrupt."]
+    #[inline(always)]
+    pub fn pgm_done(&mut self) -> PgmDoneW<'_, IntClrSpec> {
+        PgmDoneW::new(self, 1)
+    }
+}
+#[doc = "eFuse interrupt clear register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntClrSpec;
+impl crate::RegisterSpec for IntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for IntClrSpec {
+    type Safety = crate::Unsafe;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x03;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for IntClrSpec {}

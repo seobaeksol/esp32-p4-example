@@ -1,0 +1,49 @@
+#[doc = "Register `CLK_SEL_CTRL` reader"]
+pub type R = crate::R<ClkSelCtrlSpec>;
+#[doc = "Register `CLK_SEL_CTRL` writer"]
+pub type W = crate::W<ClkSelCtrlSpec>;
+#[doc = "Field `ENA_SW_SEL_SYS_CLK` reader - reserved"]
+pub type EnaSwSelSysClkR = crate::BitReader;
+#[doc = "Field `ENA_SW_SEL_SYS_CLK` writer - reserved"]
+pub type EnaSwSelSysClkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SW_SYS_CLK_SRC_SEL` reader - reserved"]
+pub type SwSysClkSrcSelR = crate::BitReader;
+#[doc = "Field `SW_SYS_CLK_SRC_SEL` writer - reserved"]
+pub type SwSysClkSrcSelW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 16 - reserved"]
+    #[inline(always)]
+    pub fn ena_sw_sel_sys_clk(&self) -> EnaSwSelSysClkR {
+        EnaSwSelSysClkR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - reserved"]
+    #[inline(always)]
+    pub fn sw_sys_clk_src_sel(&self) -> SwSysClkSrcSelR {
+        SwSysClkSrcSelR::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 16 - reserved"]
+    #[inline(always)]
+    pub fn ena_sw_sel_sys_clk(&mut self) -> EnaSwSelSysClkW<'_, ClkSelCtrlSpec> {
+        EnaSwSelSysClkW::new(self, 16)
+    }
+    #[doc = "Bit 17 - reserved"]
+    #[inline(always)]
+    pub fn sw_sys_clk_src_sel(&mut self) -> SwSysClkSrcSelW<'_, ClkSelCtrlSpec> {
+        SwSysClkSrcSelW::new(self, 17)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_sel_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_sel_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClkSelCtrlSpec;
+impl crate::RegisterSpec for ClkSelCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clk_sel_ctrl::R`](R) reader structure"]
+impl crate::Readable for ClkSelCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`clk_sel_ctrl::W`](W) writer structure"]
+impl crate::Writable for ClkSelCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CLK_SEL_CTRL to value 0"]
+impl crate::Resettable for ClkSelCtrlSpec {}

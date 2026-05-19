@@ -1,0 +1,77 @@
+#[doc = "Register `PHY_RSTZ` reader"]
+pub type R = crate::R<PhyRstzSpec>;
+#[doc = "Register `PHY_RSTZ` writer"]
+pub type W = crate::W<PhyRstzSpec>;
+#[doc = "Field `PHY_SHUTDOWNZ` reader - NA"]
+pub type PhyShutdownzR = crate::BitReader;
+#[doc = "Field `PHY_SHUTDOWNZ` writer - NA"]
+pub type PhyShutdownzW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_RSTZ` reader - NA"]
+pub type PhyRstzR = crate::BitReader;
+#[doc = "Field `PHY_RSTZ` writer - NA"]
+pub type PhyRstzW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_ENABLECLK` reader - NA"]
+pub type PhyEnableclkR = crate::BitReader;
+#[doc = "Field `PHY_ENABLECLK` writer - NA"]
+pub type PhyEnableclkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_FORCEPLL` reader - NA"]
+pub type PhyForcepllR = crate::BitReader;
+#[doc = "Field `PHY_FORCEPLL` writer - NA"]
+pub type PhyForcepllW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn phy_shutdownz(&self) -> PhyShutdownzR {
+        PhyShutdownzR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn phy_rstz(&self) -> PhyRstzR {
+        PhyRstzR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn phy_enableclk(&self) -> PhyEnableclkR {
+        PhyEnableclkR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn phy_forcepll(&self) -> PhyForcepllR {
+        PhyForcepllR::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn phy_shutdownz(&mut self) -> PhyShutdownzW<'_, PhyRstzSpec> {
+        PhyShutdownzW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn phy_rstz(&mut self) -> PhyRstzW<'_, PhyRstzSpec> {
+        PhyRstzW::new(self, 1)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn phy_enableclk(&mut self) -> PhyEnableclkW<'_, PhyRstzSpec> {
+        PhyEnableclkW::new(self, 2)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn phy_forcepll(&mut self) -> PhyForcepllW<'_, PhyRstzSpec> {
+        PhyForcepllW::new(self, 3)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`phy_rstz::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`phy_rstz::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PhyRstzSpec;
+impl crate::RegisterSpec for PhyRstzSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`phy_rstz::R`](R) reader structure"]
+impl crate::Readable for PhyRstzSpec {}
+#[doc = "`write(|w| ..)` method takes [`phy_rstz::W`](W) writer structure"]
+impl crate::Writable for PhyRstzSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PHY_RSTZ to value 0"]
+impl crate::Resettable for PhyRstzSpec {}

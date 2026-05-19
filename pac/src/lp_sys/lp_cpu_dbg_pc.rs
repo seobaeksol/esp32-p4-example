@@ -1,0 +1,20 @@
+#[doc = "Register `LP_CPU_DBG_PC` reader"]
+pub type R = crate::R<LpCpuDbgPcSpec>;
+#[doc = "Field `LP_CPU_DBG_PC` reader - need_des"]
+pub type LpCpuDbgPcR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_dbg_pc(&self) -> LpCpuDbgPcR {
+        LpCpuDbgPcR::new(self.bits)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_cpu_dbg_pc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpCpuDbgPcSpec;
+impl crate::RegisterSpec for LpCpuDbgPcSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_cpu_dbg_pc::R`](R) reader structure"]
+impl crate::Readable for LpCpuDbgPcSpec {}
+#[doc = "`reset()` method sets LP_CPU_DBG_PC to value 0"]
+impl crate::Resettable for LpCpuDbgPcSpec {}

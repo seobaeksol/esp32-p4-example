@@ -1,0 +1,20 @@
+#[doc = "Register `CH%sDATA` reader"]
+pub type R = crate::R<ChdataSpec>;
+#[doc = "Field `CHDATA` reader - Read and write data for channel %s via APB FIFO."]
+pub type ChdataR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Read and write data for channel %s via APB FIFO."]
+    #[inline(always)]
+    pub fn chdata(&self) -> ChdataR {
+        ChdataR::new(self.bits)
+    }
+}
+#[doc = "The read and write data register for CHANNEL%s by apb fifo access.\n\nYou can [`read`](crate::Reg::read) this register and get [`chdata::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChdataSpec;
+impl crate::RegisterSpec for ChdataSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`chdata::R`](R) reader structure"]
+impl crate::Readable for ChdataSpec {}
+#[doc = "`reset()` method sets CH%sDATA to value 0"]
+impl crate::Resettable for ChdataSpec {}

@@ -1,0 +1,35 @@
+#[doc = "Register `TAR0_LOW` reader"]
+pub type R = crate::R<Tar0LowSpec>;
+#[doc = "Register `TAR0_LOW` writer"]
+pub type W = crate::W<Tar0LowSpec>;
+#[doc = "Field `MAIN_TIMER_TAR_LOW0` reader - need_des"]
+pub type MainTimerTarLow0R = crate::FieldReader<u32>;
+#[doc = "Field `MAIN_TIMER_TAR_LOW0` writer - need_des"]
+pub type MainTimerTarLow0W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn main_timer_tar_low0(&self) -> MainTimerTarLow0R {
+        MainTimerTarLow0R::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn main_timer_tar_low0(&mut self) -> MainTimerTarLow0W<'_, Tar0LowSpec> {
+        MainTimerTarLow0W::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`tar0_low::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tar0_low::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Tar0LowSpec;
+impl crate::RegisterSpec for Tar0LowSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tar0_low::R`](R) reader structure"]
+impl crate::Readable for Tar0LowSpec {}
+#[doc = "`write(|w| ..)` method takes [`tar0_low::W`](W) writer structure"]
+impl crate::Writable for Tar0LowSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TAR0_LOW to value 0"]
+impl crate::Resettable for Tar0LowSpec {}

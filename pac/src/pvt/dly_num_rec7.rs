@@ -1,0 +1,41 @@
+#[doc = "Register `DLY_NUM_REC7` reader"]
+pub type R = crate::R<DlyNumRec7Spec>;
+#[doc = "Field `SITE3_DELAY_NUM_VT0_MIN_RECORD` reader - needs field desc"]
+pub type Site3DelayNumVt0MinRecordR = crate::FieldReader;
+#[doc = "Field `SITE3_DELAY_NUM_VT1_MIN_RECORD` reader - needs field desc"]
+pub type Site3DelayNumVt1MinRecordR = crate::FieldReader;
+#[doc = "Field `SITE3_DELAY_NUM_VT2_MIN_RECORD` reader - needs field desc"]
+pub type Site3DelayNumVt2MinRecordR = crate::FieldReader;
+#[doc = "Field `SITE3_DELAY_NUM_VT3_MIN_RECORD` reader - needs field desc"]
+pub type Site3DelayNumVt3MinRecordR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - needs field desc"]
+    #[inline(always)]
+    pub fn site3_delay_num_vt0_min_record(&self) -> Site3DelayNumVt0MinRecordR {
+        Site3DelayNumVt0MinRecordR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - needs field desc"]
+    #[inline(always)]
+    pub fn site3_delay_num_vt1_min_record(&self) -> Site3DelayNumVt1MinRecordR {
+        Site3DelayNumVt1MinRecordR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - needs field desc"]
+    #[inline(always)]
+    pub fn site3_delay_num_vt2_min_record(&self) -> Site3DelayNumVt2MinRecordR {
+        Site3DelayNumVt2MinRecordR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - needs field desc"]
+    #[inline(always)]
+    pub fn site3_delay_num_vt3_min_record(&self) -> Site3DelayNumVt3MinRecordR {
+        Site3DelayNumVt3MinRecordR::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[doc = "needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec7::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DlyNumRec7Spec;
+impl crate::RegisterSpec for DlyNumRec7Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dly_num_rec7::R`](R) reader structure"]
+impl crate::Readable for DlyNumRec7Spec {}
+#[doc = "`reset()` method sets DLY_NUM_REC7 to value 0"]
+impl crate::Resettable for DlyNumRec7Spec {}

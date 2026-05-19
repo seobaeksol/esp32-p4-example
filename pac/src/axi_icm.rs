@@ -1,0 +1,220 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    icm_ver_date: IcmVerDate,
+    icm_clk_en: IcmClkEn,
+    icm_dlock_status: IcmDlockStatus,
+    icm_int_raw: IcmIntRaw,
+    icm_int_st: IcmIntSt,
+    icm_int_ena: IcmIntEna,
+    icm_int_clr: IcmIntClr,
+    icm_mst_arb_priority: IcmMstArbPriority,
+    _reserved8: [u8; 0x04],
+    icm_slv_arb_priority: IcmSlvArbPriority,
+    icm_mst_arqos: IcmMstArqos,
+    _reserved10: [u8; 0x04],
+    icm_mst_awqos: IcmMstAwqos,
+    _reserved11: [u8; 0x08],
+    icm_sys_addrhole_info: IcmSysAddrholeInfo,
+    icm_cpu_addrhole_addr: IcmCpuAddrholeAddr,
+    icm_cpu_addrhole_info: IcmCpuAddrholeInfo,
+    icm_dlock_timeout: IcmDlockTimeout,
+    _reserved15: [u8; 0x04],
+    icm_rdn_eco_cs: IcmRdnEcoCs,
+    icm_rdn_eco_low: IcmRdnEcoLow,
+    icm_rdn_eco_high: IcmRdnEcoHigh,
+    _reserved18: [u8; 0x0333],
+    icm_sys_addrhole_addr: IcmSysAddrholeAddr,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - ICM version / date"]
+    #[inline(always)]
+    pub const fn icm_ver_date(&self) -> &IcmVerDate {
+        &self.icm_ver_date
+    }
+    #[doc = "0x04 - ICM clock enable"]
+    #[inline(always)]
+    pub const fn icm_clk_en(&self) -> &IcmClkEn {
+        &self.icm_clk_en
+    }
+    #[doc = "0x08 - Deadlock status"]
+    #[inline(always)]
+    pub const fn icm_dlock_status(&self) -> &IcmDlockStatus {
+        &self.icm_dlock_status
+    }
+    #[doc = "0x0c - ICM interrupt raw"]
+    #[inline(always)]
+    pub const fn icm_int_raw(&self) -> &IcmIntRaw {
+        &self.icm_int_raw
+    }
+    #[doc = "0x10 - ICM interrupt status"]
+    #[inline(always)]
+    pub const fn icm_int_st(&self) -> &IcmIntSt {
+        &self.icm_int_st
+    }
+    #[doc = "0x14 - ICM interrupt enable"]
+    #[inline(always)]
+    pub const fn icm_int_ena(&self) -> &IcmIntEna {
+        &self.icm_int_ena
+    }
+    #[doc = "0x18 - ICM interrupt clear"]
+    #[inline(always)]
+    pub const fn icm_int_clr(&self) -> &IcmIntClr {
+        &self.icm_int_clr
+    }
+    #[doc = "0x1c - Master arbitration priority"]
+    #[inline(always)]
+    pub const fn icm_mst_arb_priority(&self) -> &IcmMstArbPriority {
+        &self.icm_mst_arb_priority
+    }
+    #[doc = "0x24 - Slave arbitration priority"]
+    #[inline(always)]
+    pub const fn icm_slv_arb_priority(&self) -> &IcmSlvArbPriority {
+        &self.icm_slv_arb_priority
+    }
+    #[doc = "0x28 - Master read QoS"]
+    #[inline(always)]
+    pub const fn icm_mst_arqos(&self) -> &IcmMstArqos {
+        &self.icm_mst_arqos
+    }
+    #[doc = "0x30 - Master write QoS"]
+    #[inline(always)]
+    pub const fn icm_mst_awqos(&self) -> &IcmMstAwqos {
+        &self.icm_mst_awqos
+    }
+    #[doc = "0x3c - SYS address hole info"]
+    #[inline(always)]
+    pub const fn icm_sys_addrhole_info(&self) -> &IcmSysAddrholeInfo {
+        &self.icm_sys_addrhole_info
+    }
+    #[doc = "0x40 - CPU address hole address"]
+    #[inline(always)]
+    pub const fn icm_cpu_addrhole_addr(&self) -> &IcmCpuAddrholeAddr {
+        &self.icm_cpu_addrhole_addr
+    }
+    #[doc = "0x44 - CPU address hole info"]
+    #[inline(always)]
+    pub const fn icm_cpu_addrhole_info(&self) -> &IcmCpuAddrholeInfo {
+        &self.icm_cpu_addrhole_info
+    }
+    #[doc = "0x48 - Deadlock timeout"]
+    #[inline(always)]
+    pub const fn icm_dlock_timeout(&self) -> &IcmDlockTimeout {
+        &self.icm_dlock_timeout
+    }
+    #[doc = "0x50 - RDN ECO control/status"]
+    #[inline(always)]
+    pub const fn icm_rdn_eco_cs(&self) -> &IcmRdnEcoCs {
+        &self.icm_rdn_eco_cs
+    }
+    #[doc = "0x54 - RDN ECO low"]
+    #[inline(always)]
+    pub const fn icm_rdn_eco_low(&self) -> &IcmRdnEcoLow {
+        &self.icm_rdn_eco_low
+    }
+    #[doc = "0x58 - RDN ECO high"]
+    #[inline(always)]
+    pub const fn icm_rdn_eco_high(&self) -> &IcmRdnEcoHigh {
+        &self.icm_rdn_eco_high
+    }
+    #[doc = "0x38f - SYS address hole address"]
+    #[inline(always)]
+    pub const fn icm_sys_addrhole_addr(&self) -> &IcmSysAddrholeAddr {
+        &self.icm_sys_addrhole_addr
+    }
+}
+#[doc = "ICM_VER_DATE (rw) register accessor: ICM version / date\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_ver_date`] module"]
+#[doc(alias = "ICM_VER_DATE")]
+pub type IcmVerDate = crate::Reg<icm_ver_date::IcmVerDateSpec>;
+#[doc = "ICM version / date"]
+pub mod icm_ver_date;
+#[doc = "ICM_CLK_EN (rw) register accessor: ICM clock enable\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_clk_en`] module"]
+#[doc(alias = "ICM_CLK_EN")]
+pub type IcmClkEn = crate::Reg<icm_clk_en::IcmClkEnSpec>;
+#[doc = "ICM clock enable"]
+pub mod icm_clk_en;
+#[doc = "ICM_DLOCK_STATUS (r) register accessor: Deadlock status\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_dlock_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_dlock_status`] module"]
+#[doc(alias = "ICM_DLOCK_STATUS")]
+pub type IcmDlockStatus = crate::Reg<icm_dlock_status::IcmDlockStatusSpec>;
+#[doc = "Deadlock status"]
+pub mod icm_dlock_status;
+#[doc = "ICM_INT_RAW (rw) register accessor: ICM interrupt raw\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_int_raw`] module"]
+#[doc(alias = "ICM_INT_RAW")]
+pub type IcmIntRaw = crate::Reg<icm_int_raw::IcmIntRawSpec>;
+#[doc = "ICM interrupt raw"]
+pub mod icm_int_raw;
+#[doc = "ICM_INT_ST (r) register accessor: ICM interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_int_st`] module"]
+#[doc(alias = "ICM_INT_ST")]
+pub type IcmIntSt = crate::Reg<icm_int_st::IcmIntStSpec>;
+#[doc = "ICM interrupt status"]
+pub mod icm_int_st;
+#[doc = "ICM_INT_ENA (rw) register accessor: ICM interrupt enable\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_int_ena`] module"]
+#[doc(alias = "ICM_INT_ENA")]
+pub type IcmIntEna = crate::Reg<icm_int_ena::IcmIntEnaSpec>;
+#[doc = "ICM interrupt enable"]
+pub mod icm_int_ena;
+#[doc = "ICM_INT_CLR (w) register accessor: ICM interrupt clear\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_int_clr`] module"]
+#[doc(alias = "ICM_INT_CLR")]
+pub type IcmIntClr = crate::Reg<icm_int_clr::IcmIntClrSpec>;
+#[doc = "ICM interrupt clear"]
+pub mod icm_int_clr;
+#[doc = "ICM_MST_ARB_PRIORITY (rw) register accessor: Master arbitration priority\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arb_priority::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arb_priority::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_arb_priority`] module"]
+#[doc(alias = "ICM_MST_ARB_PRIORITY")]
+pub type IcmMstArbPriority = crate::Reg<icm_mst_arb_priority::IcmMstArbPrioritySpec>;
+#[doc = "Master arbitration priority"]
+pub mod icm_mst_arb_priority;
+#[doc = "ICM_SLV_ARB_PRIORITY (rw) register accessor: Slave arbitration priority\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_slv_arb_priority::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_slv_arb_priority::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_slv_arb_priority`] module"]
+#[doc(alias = "ICM_SLV_ARB_PRIORITY")]
+pub type IcmSlvArbPriority = crate::Reg<icm_slv_arb_priority::IcmSlvArbPrioritySpec>;
+#[doc = "Slave arbitration priority"]
+pub mod icm_slv_arb_priority;
+#[doc = "ICM_MST_ARQOS (rw) register accessor: Master read QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arqos::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arqos::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_arqos`] module"]
+#[doc(alias = "ICM_MST_ARQOS")]
+pub type IcmMstArqos = crate::Reg<icm_mst_arqos::IcmMstArqosSpec>;
+#[doc = "Master read QoS"]
+pub mod icm_mst_arqos;
+#[doc = "ICM_MST_AWQOS (rw) register accessor: Master write QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_awqos::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_awqos::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_awqos`] module"]
+#[doc(alias = "ICM_MST_AWQOS")]
+pub type IcmMstAwqos = crate::Reg<icm_mst_awqos::IcmMstAwqosSpec>;
+#[doc = "Master write QoS"]
+pub mod icm_mst_awqos;
+#[doc = "ICM_SYS_ADDRHOLE_INFO (r) register accessor: SYS address hole info\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_info::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_info`] module"]
+#[doc(alias = "ICM_SYS_ADDRHOLE_INFO")]
+pub type IcmSysAddrholeInfo = crate::Reg<icm_sys_addrhole_info::IcmSysAddrholeInfoSpec>;
+#[doc = "SYS address hole info"]
+pub mod icm_sys_addrhole_info;
+#[doc = "ICM_CPU_ADDRHOLE_ADDR (r) register accessor: CPU address hole address\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_cpu_addrhole_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_cpu_addrhole_addr`] module"]
+#[doc(alias = "ICM_CPU_ADDRHOLE_ADDR")]
+pub type IcmCpuAddrholeAddr = crate::Reg<icm_cpu_addrhole_addr::IcmCpuAddrholeAddrSpec>;
+#[doc = "CPU address hole address"]
+pub mod icm_cpu_addrhole_addr;
+#[doc = "ICM_CPU_ADDRHOLE_INFO (r) register accessor: CPU address hole info\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_cpu_addrhole_info::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_cpu_addrhole_info`] module"]
+#[doc(alias = "ICM_CPU_ADDRHOLE_INFO")]
+pub type IcmCpuAddrholeInfo = crate::Reg<icm_cpu_addrhole_info::IcmCpuAddrholeInfoSpec>;
+#[doc = "CPU address hole info"]
+pub mod icm_cpu_addrhole_info;
+#[doc = "ICM_DLOCK_TIMEOUT (rw) register accessor: Deadlock timeout\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_dlock_timeout::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_dlock_timeout::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_dlock_timeout`] module"]
+#[doc(alias = "ICM_DLOCK_TIMEOUT")]
+pub type IcmDlockTimeout = crate::Reg<icm_dlock_timeout::IcmDlockTimeoutSpec>;
+#[doc = "Deadlock timeout"]
+pub mod icm_dlock_timeout;
+#[doc = "ICM_RDN_ECO_CS (rw) register accessor: RDN ECO control/status\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_rdn_eco_cs::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_rdn_eco_cs::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_rdn_eco_cs`] module"]
+#[doc(alias = "ICM_RDN_ECO_CS")]
+pub type IcmRdnEcoCs = crate::Reg<icm_rdn_eco_cs::IcmRdnEcoCsSpec>;
+#[doc = "RDN ECO control/status"]
+pub mod icm_rdn_eco_cs;
+#[doc = "ICM_RDN_ECO_LOW (rw) register accessor: RDN ECO low\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_rdn_eco_low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_rdn_eco_low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_rdn_eco_low`] module"]
+#[doc(alias = "ICM_RDN_ECO_LOW")]
+pub type IcmRdnEcoLow = crate::Reg<icm_rdn_eco_low::IcmRdnEcoLowSpec>;
+#[doc = "RDN ECO low"]
+pub mod icm_rdn_eco_low;
+#[doc = "ICM_RDN_ECO_HIGH (rw) register accessor: RDN ECO high\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_rdn_eco_high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_rdn_eco_high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_rdn_eco_high`] module"]
+#[doc(alias = "ICM_RDN_ECO_HIGH")]
+pub type IcmRdnEcoHigh = crate::Reg<icm_rdn_eco_high::IcmRdnEcoHighSpec>;
+#[doc = "RDN ECO high"]
+pub mod icm_rdn_eco_high;
+#[doc = "ICM_SYS_ADDRHOLE_ADDR (r) register accessor: SYS address hole address\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_addr`] module"]
+#[doc(alias = "ICM_SYS_ADDRHOLE_ADDR")]
+pub type IcmSysAddrholeAddr = crate::Reg<icm_sys_addrhole_addr::IcmSysAddrholeAddrSpec>;
+#[doc = "SYS address hole address"]
+pub mod icm_sys_addrhole_addr;

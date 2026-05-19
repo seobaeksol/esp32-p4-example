@@ -1,0 +1,20 @@
+#[doc = "Register `OUT_DSCR_BF1` reader"]
+pub type R = crate::R<OutDscrBf1Spec>;
+#[doc = "Field `OUTLINK_DSCR_BF1` reader - The address of the second-to-last outlink descriptor x-2."]
+pub type OutlinkDscrBf1R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - The address of the second-to-last outlink descriptor x-2."]
+    #[inline(always)]
+    pub fn outlink_dscr_bf1(&self) -> OutlinkDscrBf1R {
+        OutlinkDscrBf1R::new(self.bits)
+    }
+}
+#[doc = "The second-to-last outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_dscr_bf1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutDscrBf1Spec;
+impl crate::RegisterSpec for OutDscrBf1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_dscr_bf1::R`](R) reader structure"]
+impl crate::Readable for OutDscrBf1Spec {}
+#[doc = "`reset()` method sets OUT_DSCR_BF1 to value 0"]
+impl crate::Resettable for OutDscrBf1Spec {}

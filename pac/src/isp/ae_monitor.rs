@@ -1,0 +1,63 @@
+#[doc = "Register `AE_MONITOR` reader"]
+pub type R = crate::R<AeMonitorSpec>;
+#[doc = "Register `AE_MONITOR` writer"]
+pub type W = crate::W<AeMonitorSpec>;
+#[doc = "Field `TL` reader - this field configures the lower lum threshold of ae monitor"]
+pub type TlR = crate::FieldReader;
+#[doc = "Field `TL` writer - this field configures the lower lum threshold of ae monitor"]
+pub type TlW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `TH` reader - this field configures the higher lum threshold of ae monitor"]
+pub type ThR = crate::FieldReader;
+#[doc = "Field `TH` writer - this field configures the higher lum threshold of ae monitor"]
+pub type ThW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PERIOD` reader - this field cnfigures ae monitor frame period"]
+pub type PeriodR = crate::FieldReader;
+#[doc = "Field `PERIOD` writer - this field cnfigures ae monitor frame period"]
+pub type PeriodW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bits 0:7 - this field configures the lower lum threshold of ae monitor"]
+    #[inline(always)]
+    pub fn tl(&self) -> TlR {
+        TlR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field configures the higher lum threshold of ae monitor"]
+    #[inline(always)]
+    pub fn th(&self) -> ThR {
+        ThR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:21 - this field cnfigures ae monitor frame period"]
+    #[inline(always)]
+    pub fn period(&self) -> PeriodR {
+        PeriodR::new(((self.bits >> 16) & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - this field configures the lower lum threshold of ae monitor"]
+    #[inline(always)]
+    pub fn tl(&mut self) -> TlW<'_, AeMonitorSpec> {
+        TlW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - this field configures the higher lum threshold of ae monitor"]
+    #[inline(always)]
+    pub fn th(&mut self) -> ThW<'_, AeMonitorSpec> {
+        ThW::new(self, 8)
+    }
+    #[doc = "Bits 16:21 - this field cnfigures ae monitor frame period"]
+    #[inline(always)]
+    pub fn period(&mut self) -> PeriodW<'_, AeMonitorSpec> {
+        PeriodW::new(self, 16)
+    }
+}
+#[doc = "ae monitor control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ae_monitor::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ae_monitor::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AeMonitorSpec;
+impl crate::RegisterSpec for AeMonitorSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ae_monitor::R`](R) reader structure"]
+impl crate::Readable for AeMonitorSpec {}
+#[doc = "`write(|w| ..)` method takes [`ae_monitor::W`](W) writer structure"]
+impl crate::Writable for AeMonitorSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AE_MONITOR to value 0"]
+impl crate::Resettable for AeMonitorSpec {}

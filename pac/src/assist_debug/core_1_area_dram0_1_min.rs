@@ -1,0 +1,37 @@
+#[doc = "Register `CORE_1_AREA_DRAM0_1_MIN` reader"]
+pub type R = crate::R<Core1AreaDram0_1MinSpec>;
+#[doc = "Register `CORE_1_AREA_DRAM0_1_MIN` writer"]
+pub type W = crate::W<Core1AreaDram0_1MinSpec>;
+#[doc = "Field `CORE_1_AREA_DRAM0_1_MIN` reader - Core1 dram0 region1 start addr"]
+pub type Core1AreaDram0_1MinR = crate::FieldReader<u32>;
+#[doc = "Field `CORE_1_AREA_DRAM0_1_MIN` writer - Core1 dram0 region1 start addr"]
+pub type Core1AreaDram0_1MinW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Core1 dram0 region1 start addr"]
+    #[inline(always)]
+    pub fn core_1_area_dram0_1_min(&self) -> Core1AreaDram0_1MinR {
+        Core1AreaDram0_1MinR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Core1 dram0 region1 start addr"]
+    #[inline(always)]
+    pub fn core_1_area_dram0_1_min(&mut self) -> Core1AreaDram0_1MinW<'_, Core1AreaDram0_1MinSpec> {
+        Core1AreaDram0_1MinW::new(self, 0)
+    }
+}
+#[doc = "core1 dram0 region1 addr configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_area_dram0_1_min::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_1_area_dram0_1_min::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core1AreaDram0_1MinSpec;
+impl crate::RegisterSpec for Core1AreaDram0_1MinSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_1_area_dram0_1_min::R`](R) reader structure"]
+impl crate::Readable for Core1AreaDram0_1MinSpec {}
+#[doc = "`write(|w| ..)` method takes [`core_1_area_dram0_1_min::W`](W) writer structure"]
+impl crate::Writable for Core1AreaDram0_1MinSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CORE_1_AREA_DRAM0_1_MIN to value 0xffff_ffff"]
+impl crate::Resettable for Core1AreaDram0_1MinSpec {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

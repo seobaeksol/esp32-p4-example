@@ -1,0 +1,35 @@
+#[doc = "Register `VID_NUM_CHUNKS` reader"]
+pub type R = crate::R<VidNumChunksSpec>;
+#[doc = "Register `VID_NUM_CHUNKS` writer"]
+pub type W = crate::W<VidNumChunksSpec>;
+#[doc = "Field `VID_NUM_CHUNKS` reader - NA"]
+pub type VidNumChunksR = crate::FieldReader<u16>;
+#[doc = "Field `VID_NUM_CHUNKS` writer - NA"]
+pub type VidNumChunksW<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+impl R {
+    #[doc = "Bits 0:12 - NA"]
+    #[inline(always)]
+    pub fn vid_num_chunks(&self) -> VidNumChunksR {
+        VidNumChunksR::new((self.bits & 0x1fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:12 - NA"]
+    #[inline(always)]
+    pub fn vid_num_chunks(&mut self) -> VidNumChunksW<'_, VidNumChunksSpec> {
+        VidNumChunksW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vid_num_chunks::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vid_num_chunks::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VidNumChunksSpec;
+impl crate::RegisterSpec for VidNumChunksSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vid_num_chunks::R`](R) reader structure"]
+impl crate::Readable for VidNumChunksSpec {}
+#[doc = "`write(|w| ..)` method takes [`vid_num_chunks::W`](W) writer structure"]
+impl crate::Writable for VidNumChunksSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VID_NUM_CHUNKS to value 0"]
+impl crate::Resettable for VidNumChunksSpec {}

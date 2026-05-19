@@ -1,0 +1,36 @@
+#[doc = "Register `INTCLR` writer"]
+pub type W = crate::W<IntclrSpec>;
+#[doc = "Field `STOP_CLR` writer - Interrupt on STOP state on the bus. See Start as the preferred interrupt when needed. This interrupt may not trigger for quick STOP/START combination, as it relates to the state of being stopped."]
+pub type StopClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RXPEND_CLR` writer - Interrupt when receiving a message from Master, which is not being handled by the block (excludes CCCs being handled automatically). If FIFO, then RX fullness trigger. If DMA, then message end."]
+pub type RxpendClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TXSEND_CLR` writer - NA"]
+pub type TxsendClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 10 - Interrupt on STOP state on the bus. See Start as the preferred interrupt when needed. This interrupt may not trigger for quick STOP/START combination, as it relates to the state of being stopped."]
+    #[inline(always)]
+    pub fn stop_clr(&mut self) -> StopClrW<'_, IntclrSpec> {
+        StopClrW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Interrupt when receiving a message from Master, which is not being handled by the block (excludes CCCs being handled automatically). If FIFO, then RX fullness trigger. If DMA, then message end."]
+    #[inline(always)]
+    pub fn rxpend_clr(&mut self) -> RxpendClrW<'_, IntclrSpec> {
+        RxpendClrW::new(self, 11)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn txsend_clr(&mut self) -> TxsendClrW<'_, IntclrSpec> {
+        TxsendClrW::new(self, 12)
+    }
+}
+#[doc = "NA\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntclrSpec;
+impl crate::RegisterSpec for IntclrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`intclr::W`](W) writer structure"]
+impl crate::Writable for IntclrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INTCLR to value 0"]
+impl crate::Resettable for IntclrSpec {}

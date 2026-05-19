@@ -1,0 +1,63 @@
+#[doc = "Register `TOUCH_ANA_PARA` reader"]
+pub type R = crate::R<TouchAnaParaSpec>;
+#[doc = "Register `TOUCH_ANA_PARA` writer"]
+pub type W = crate::W<TouchAnaParaSpec>;
+#[doc = "Field `TOUCH_TOUCH_BUF_DRV` reader - need_des"]
+pub type TouchTouchBufDrvR = crate::FieldReader;
+#[doc = "Field `TOUCH_TOUCH_BUF_DRV` writer - need_des"]
+pub type TouchTouchBufDrvW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `TOUCH_TOUCH_EN_CAL` reader - need_des"]
+pub type TouchTouchEnCalR = crate::BitReader;
+#[doc = "Field `TOUCH_TOUCH_EN_CAL` writer - need_des"]
+pub type TouchTouchEnCalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_TOUCH_DCAP_CAL` reader - need_des"]
+pub type TouchTouchDcapCalR = crate::FieldReader;
+#[doc = "Field `TOUCH_TOUCH_DCAP_CAL` writer - need_des"]
+pub type TouchTouchDcapCalW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+impl R {
+    #[doc = "Bits 0:2 - need_des"]
+    #[inline(always)]
+    pub fn touch_touch_buf_drv(&self) -> TouchTouchBufDrvR {
+        TouchTouchBufDrvR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn touch_touch_en_cal(&self) -> TouchTouchEnCalR {
+        TouchTouchEnCalR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:10 - need_des"]
+    #[inline(always)]
+    pub fn touch_touch_dcap_cal(&self) -> TouchTouchDcapCalR {
+        TouchTouchDcapCalR::new(((self.bits >> 4) & 0x7f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - need_des"]
+    #[inline(always)]
+    pub fn touch_touch_buf_drv(&mut self) -> TouchTouchBufDrvW<'_, TouchAnaParaSpec> {
+        TouchTouchBufDrvW::new(self, 0)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn touch_touch_en_cal(&mut self) -> TouchTouchEnCalW<'_, TouchAnaParaSpec> {
+        TouchTouchEnCalW::new(self, 3)
+    }
+    #[doc = "Bits 4:10 - need_des"]
+    #[inline(always)]
+    pub fn touch_touch_dcap_cal(&mut self) -> TouchTouchDcapCalW<'_, TouchAnaParaSpec> {
+        TouchTouchDcapCalW::new(self, 4)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_ana_para::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_ana_para::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TouchAnaParaSpec;
+impl crate::RegisterSpec for TouchAnaParaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`touch_ana_para::R`](R) reader structure"]
+impl crate::Readable for TouchAnaParaSpec {}
+#[doc = "`write(|w| ..)` method takes [`touch_ana_para::W`](W) writer structure"]
+impl crate::Writable for TouchAnaParaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TOUCH_ANA_PARA to value 0"]
+impl crate::Resettable for TouchAnaParaSpec {}

@@ -1,0 +1,51 @@
+#[doc = "Register `DPI_V_CFG0` reader"]
+pub type R = crate::R<DpiVCfg0Spec>;
+#[doc = "Register `DPI_V_CFG0` writer"]
+pub type W = crate::W<DpiVCfg0Spec>;
+#[doc = "Field `VTOTAL` reader - this field configures the total length of one frame (by line) for dpi output, must meet: reg_vtotal > reg_vdisp+reg_vsync+reg_vbank"]
+pub type VtotalR = crate::FieldReader<u16>;
+#[doc = "Field `VTOTAL` writer - this field configures the total length of one frame (by line) for dpi output, must meet: reg_vtotal > reg_vdisp+reg_vsync+reg_vbank"]
+pub type VtotalW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `VDISP` reader - this field configures the length of valid line (by line) for dpi output"]
+pub type VdispR = crate::FieldReader<u16>;
+#[doc = "Field `VDISP` writer - this field configures the length of valid line (by line) for dpi output"]
+pub type VdispW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+impl R {
+    #[doc = "Bits 0:11 - this field configures the total length of one frame (by line) for dpi output, must meet: reg_vtotal > reg_vdisp+reg_vsync+reg_vbank"]
+    #[inline(always)]
+    pub fn vtotal(&self) -> VtotalR {
+        VtotalR::new((self.bits & 0x0fff) as u16)
+    }
+    #[doc = "Bits 16:27 - this field configures the length of valid line (by line) for dpi output"]
+    #[inline(always)]
+    pub fn vdisp(&self) -> VdispR {
+        VdispR::new(((self.bits >> 16) & 0x0fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:11 - this field configures the total length of one frame (by line) for dpi output, must meet: reg_vtotal > reg_vdisp+reg_vsync+reg_vbank"]
+    #[inline(always)]
+    pub fn vtotal(&mut self) -> VtotalW<'_, DpiVCfg0Spec> {
+        VtotalW::new(self, 0)
+    }
+    #[doc = "Bits 16:27 - this field configures the length of valid line (by line) for dpi output"]
+    #[inline(always)]
+    pub fn vdisp(&mut self) -> VdispW<'_, DpiVCfg0Spec> {
+        VdispW::new(self, 16)
+    }
+}
+#[doc = "dsi bridge dpi v config register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_v_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpi_v_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DpiVCfg0Spec;
+impl crate::RegisterSpec for DpiVCfg0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dpi_v_cfg0::R`](R) reader structure"]
+impl crate::Readable for DpiVCfg0Spec {}
+#[doc = "`write(|w| ..)` method takes [`dpi_v_cfg0::W`](W) writer structure"]
+impl crate::Writable for DpiVCfg0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DPI_V_CFG0 to value 0x01e0_020d"]
+impl crate::Resettable for DpiVCfg0Spec {
+    const RESET_VALUE: u32 = 0x01e0_020d;
+}

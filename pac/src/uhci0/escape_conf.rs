@@ -1,0 +1,135 @@
+#[doc = "Register `ESCAPE_CONF` reader"]
+pub type R = crate::R<EscapeConfSpec>;
+#[doc = "Register `ESCAPE_CONF` writer"]
+pub type W = crate::W<EscapeConfSpec>;
+#[doc = "Field `TX_C0_ESC_EN` reader - Set this bit to enable resolve char 0xC0 when DMA receiving data."]
+pub type TxC0EscEnR = crate::BitReader;
+#[doc = "Field `TX_C0_ESC_EN` writer - Set this bit to enable resolve char 0xC0 when DMA receiving data."]
+pub type TxC0EscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_DB_ESC_EN` reader - Set this bit to enable resolve char 0xDB when DMA receiving data."]
+pub type TxDbEscEnR = crate::BitReader;
+#[doc = "Field `TX_DB_ESC_EN` writer - Set this bit to enable resolve char 0xDB when DMA receiving data."]
+pub type TxDbEscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_11_ESC_EN` reader - Set this bit to enable resolve flow control char 0x11 when DMA receiving data."]
+pub type Tx11EscEnR = crate::BitReader;
+#[doc = "Field `TX_11_ESC_EN` writer - Set this bit to enable resolve flow control char 0x11 when DMA receiving data."]
+pub type Tx11EscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_13_ESC_EN` reader - Set this bit to enable resolve flow control char 0x13 when DMA receiving data."]
+pub type Tx13EscEnR = crate::BitReader;
+#[doc = "Field `TX_13_ESC_EN` writer - Set this bit to enable resolve flow control char 0x13 when DMA receiving data."]
+pub type Tx13EscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_C0_ESC_EN` reader - Set this bit to enable replacing 0xC0 with special char when DMA receiving data."]
+pub type RxC0EscEnR = crate::BitReader;
+#[doc = "Field `RX_C0_ESC_EN` writer - Set this bit to enable replacing 0xC0 with special char when DMA receiving data."]
+pub type RxC0EscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_DB_ESC_EN` reader - Set this bit to enable replacing 0xDB with special char when DMA receiving data."]
+pub type RxDbEscEnR = crate::BitReader;
+#[doc = "Field `RX_DB_ESC_EN` writer - Set this bit to enable replacing 0xDB with special char when DMA receiving data."]
+pub type RxDbEscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_11_ESC_EN` reader - Set this bit to enable replacing 0x11 with special char when DMA receiving data."]
+pub type Rx11EscEnR = crate::BitReader;
+#[doc = "Field `RX_11_ESC_EN` writer - Set this bit to enable replacing 0x11 with special char when DMA receiving data."]
+pub type Rx11EscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_13_ESC_EN` reader - Set this bit to enable replacing 0x13 with special char when DMA receiving data."]
+pub type Rx13EscEnR = crate::BitReader;
+#[doc = "Field `RX_13_ESC_EN` writer - Set this bit to enable replacing 0x13 with special char when DMA receiving data."]
+pub type Rx13EscEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Set this bit to enable resolve char 0xC0 when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_c0_esc_en(&self) -> TxC0EscEnR {
+        TxC0EscEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set this bit to enable resolve char 0xDB when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_db_esc_en(&self) -> TxDbEscEnR {
+        TxDbEscEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Set this bit to enable resolve flow control char 0x11 when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_11_esc_en(&self) -> Tx11EscEnR {
+        Tx11EscEnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Set this bit to enable resolve flow control char 0x13 when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_13_esc_en(&self) -> Tx13EscEnR {
+        Tx13EscEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Set this bit to enable replacing 0xC0 with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_c0_esc_en(&self) -> RxC0EscEnR {
+        RxC0EscEnR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Set this bit to enable replacing 0xDB with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_db_esc_en(&self) -> RxDbEscEnR {
+        RxDbEscEnR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Set this bit to enable replacing 0x11 with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_11_esc_en(&self) -> Rx11EscEnR {
+        Rx11EscEnR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Set this bit to enable replacing 0x13 with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_13_esc_en(&self) -> Rx13EscEnR {
+        Rx13EscEnR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set this bit to enable resolve char 0xC0 when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_c0_esc_en(&mut self) -> TxC0EscEnW<'_, EscapeConfSpec> {
+        TxC0EscEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to enable resolve char 0xDB when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_db_esc_en(&mut self) -> TxDbEscEnW<'_, EscapeConfSpec> {
+        TxDbEscEnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Set this bit to enable resolve flow control char 0x11 when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_11_esc_en(&mut self) -> Tx11EscEnW<'_, EscapeConfSpec> {
+        Tx11EscEnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Set this bit to enable resolve flow control char 0x13 when DMA receiving data."]
+    #[inline(always)]
+    pub fn tx_13_esc_en(&mut self) -> Tx13EscEnW<'_, EscapeConfSpec> {
+        Tx13EscEnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Set this bit to enable replacing 0xC0 with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_c0_esc_en(&mut self) -> RxC0EscEnW<'_, EscapeConfSpec> {
+        RxC0EscEnW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Set this bit to enable replacing 0xDB with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_db_esc_en(&mut self) -> RxDbEscEnW<'_, EscapeConfSpec> {
+        RxDbEscEnW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Set this bit to enable replacing 0x11 with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_11_esc_en(&mut self) -> Rx11EscEnW<'_, EscapeConfSpec> {
+        Rx11EscEnW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Set this bit to enable replacing 0x13 with special char when DMA receiving data."]
+    #[inline(always)]
+    pub fn rx_13_esc_en(&mut self) -> Rx13EscEnW<'_, EscapeConfSpec> {
+        Rx13EscEnW::new(self, 7)
+    }
+}
+#[doc = "UHCI Escapes Configuration Register0\n\nYou can [`read`](crate::Reg::read) this register and get [`escape_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`escape_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EscapeConfSpec;
+impl crate::RegisterSpec for EscapeConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`escape_conf::R`](R) reader structure"]
+impl crate::Readable for EscapeConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`escape_conf::W`](W) writer structure"]
+impl crate::Writable for EscapeConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ESCAPE_CONF to value 0x33"]
+impl crate::Resettable for EscapeConfSpec {
+    const RESET_VALUE: u32 = 0x33;
+}

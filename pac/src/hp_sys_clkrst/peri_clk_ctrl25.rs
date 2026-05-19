@@ -1,0 +1,261 @@
+#[doc = "Register `PERI_CLK_CTRL25` reader"]
+pub type R = crate::R<PeriClkCtrl25Spec>;
+#[doc = "Register `PERI_CLK_CTRL25` writer"]
+pub type W = crate::W<PeriClkCtrl25Spec>;
+#[doc = "Field `PVT_PERI_GROUP_CLK_DIV_NUM` reader - Reserved"]
+pub type PvtPeriGroupClkDivNumR = crate::FieldReader;
+#[doc = "Field `PVT_PERI_GROUP_CLK_DIV_NUM` writer - Reserved"]
+pub type PvtPeriGroupClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PVT_PERI_GROUP1_CLK_EN` reader - Reserved"]
+pub type PvtPeriGroup1ClkEnR = crate::BitReader;
+#[doc = "Field `PVT_PERI_GROUP1_CLK_EN` writer - Reserved"]
+pub type PvtPeriGroup1ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PVT_PERI_GROUP2_CLK_EN` reader - Reserved"]
+pub type PvtPeriGroup2ClkEnR = crate::BitReader;
+#[doc = "Field `PVT_PERI_GROUP2_CLK_EN` writer - Reserved"]
+pub type PvtPeriGroup2ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PVT_PERI_GROUP3_CLK_EN` reader - Reserved"]
+pub type PvtPeriGroup3ClkEnR = crate::BitReader;
+#[doc = "Field `PVT_PERI_GROUP3_CLK_EN` writer - Reserved"]
+pub type PvtPeriGroup3ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PVT_PERI_GROUP4_CLK_EN` reader - Reserved"]
+pub type PvtPeriGroup4ClkEnR = crate::BitReader;
+#[doc = "Field `PVT_PERI_GROUP4_CLK_EN` writer - Reserved"]
+pub type PvtPeriGroup4ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_CLK_SRC_SEL` reader - Reserved"]
+pub type CryptoClkSrcSelR = crate::FieldReader;
+#[doc = "Field `CRYPTO_CLK_SRC_SEL` writer - Reserved"]
+pub type CryptoClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `CRYPTO_AES_CLK_EN` reader - Reserved"]
+pub type CryptoAesClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_AES_CLK_EN` writer - Reserved"]
+pub type CryptoAesClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_DS_CLK_EN` reader - Reserved"]
+pub type CryptoDsClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_DS_CLK_EN` writer - Reserved"]
+pub type CryptoDsClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_ECC_CLK_EN` reader - Reserved"]
+pub type CryptoEccClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_ECC_CLK_EN` writer - Reserved"]
+pub type CryptoEccClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_HMAC_CLK_EN` reader - Reserved"]
+pub type CryptoHmacClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_HMAC_CLK_EN` writer - Reserved"]
+pub type CryptoHmacClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_RSA_CLK_EN` reader - Reserved"]
+pub type CryptoRsaClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_RSA_CLK_EN` writer - Reserved"]
+pub type CryptoRsaClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_SEC_CLK_EN` reader - Reserved"]
+pub type CryptoSecClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_SEC_CLK_EN` writer - Reserved"]
+pub type CryptoSecClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_SHA_CLK_EN` reader - Reserved"]
+pub type CryptoShaClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_SHA_CLK_EN` writer - Reserved"]
+pub type CryptoShaClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_ECDSA_CLK_EN` reader - Reserved"]
+pub type CryptoEcdsaClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_ECDSA_CLK_EN` writer - Reserved"]
+pub type CryptoEcdsaClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRYPTO_KM_CLK_EN` reader - Reserved"]
+pub type CryptoKmClkEnR = crate::BitReader;
+#[doc = "Field `CRYPTO_KM_CLK_EN` writer - Reserved"]
+pub type CryptoKmClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ISP_CLK_SRC_SEL` reader - Reserved"]
+pub type IspClkSrcSelR = crate::FieldReader;
+#[doc = "Field `ISP_CLK_SRC_SEL` writer - Reserved"]
+pub type IspClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `ISP_CLK_EN` reader - Reserved"]
+pub type IspClkEnR = crate::BitReader;
+#[doc = "Field `ISP_CLK_EN` writer - Reserved"]
+pub type IspClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group_clk_div_num(&self) -> PvtPeriGroupClkDivNumR {
+        PvtPeriGroupClkDivNumR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bit 8 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group1_clk_en(&self) -> PvtPeriGroup1ClkEnR {
+        PvtPeriGroup1ClkEnR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group2_clk_en(&self) -> PvtPeriGroup2ClkEnR {
+        PvtPeriGroup2ClkEnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group3_clk_en(&self) -> PvtPeriGroup3ClkEnR {
+        PvtPeriGroup3ClkEnR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group4_clk_en(&self) -> PvtPeriGroup4ClkEnR {
+        PvtPeriGroup4ClkEnR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bits 12:13 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_clk_src_sel(&self) -> CryptoClkSrcSelR {
+        CryptoClkSrcSelR::new(((self.bits >> 12) & 3) as u8)
+    }
+    #[doc = "Bit 14 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_aes_clk_en(&self) -> CryptoAesClkEnR {
+        CryptoAesClkEnR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_ds_clk_en(&self) -> CryptoDsClkEnR {
+        CryptoDsClkEnR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_ecc_clk_en(&self) -> CryptoEccClkEnR {
+        CryptoEccClkEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_hmac_clk_en(&self) -> CryptoHmacClkEnR {
+        CryptoHmacClkEnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_rsa_clk_en(&self) -> CryptoRsaClkEnR {
+        CryptoRsaClkEnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_sec_clk_en(&self) -> CryptoSecClkEnR {
+        CryptoSecClkEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_sha_clk_en(&self) -> CryptoShaClkEnR {
+        CryptoShaClkEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_ecdsa_clk_en(&self) -> CryptoEcdsaClkEnR {
+        CryptoEcdsaClkEnR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_km_clk_en(&self) -> CryptoKmClkEnR {
+        CryptoKmClkEnR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bits 23:24 - Reserved"]
+    #[inline(always)]
+    pub fn isp_clk_src_sel(&self) -> IspClkSrcSelR {
+        IspClkSrcSelR::new(((self.bits >> 23) & 3) as u8)
+    }
+    #[doc = "Bit 25 - Reserved"]
+    #[inline(always)]
+    pub fn isp_clk_en(&self) -> IspClkEnR {
+        IspClkEnR::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group_clk_div_num(&mut self) -> PvtPeriGroupClkDivNumW<'_, PeriClkCtrl25Spec> {
+        PvtPeriGroupClkDivNumW::new(self, 0)
+    }
+    #[doc = "Bit 8 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group1_clk_en(&mut self) -> PvtPeriGroup1ClkEnW<'_, PeriClkCtrl25Spec> {
+        PvtPeriGroup1ClkEnW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group2_clk_en(&mut self) -> PvtPeriGroup2ClkEnW<'_, PeriClkCtrl25Spec> {
+        PvtPeriGroup2ClkEnW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group3_clk_en(&mut self) -> PvtPeriGroup3ClkEnW<'_, PeriClkCtrl25Spec> {
+        PvtPeriGroup3ClkEnW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Reserved"]
+    #[inline(always)]
+    pub fn pvt_peri_group4_clk_en(&mut self) -> PvtPeriGroup4ClkEnW<'_, PeriClkCtrl25Spec> {
+        PvtPeriGroup4ClkEnW::new(self, 11)
+    }
+    #[doc = "Bits 12:13 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_clk_src_sel(&mut self) -> CryptoClkSrcSelW<'_, PeriClkCtrl25Spec> {
+        CryptoClkSrcSelW::new(self, 12)
+    }
+    #[doc = "Bit 14 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_aes_clk_en(&mut self) -> CryptoAesClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoAesClkEnW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_ds_clk_en(&mut self) -> CryptoDsClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoDsClkEnW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_ecc_clk_en(&mut self) -> CryptoEccClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoEccClkEnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_hmac_clk_en(&mut self) -> CryptoHmacClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoHmacClkEnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_rsa_clk_en(&mut self) -> CryptoRsaClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoRsaClkEnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_sec_clk_en(&mut self) -> CryptoSecClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoSecClkEnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_sha_clk_en(&mut self) -> CryptoShaClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoShaClkEnW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_ecdsa_clk_en(&mut self) -> CryptoEcdsaClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoEcdsaClkEnW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Reserved"]
+    #[inline(always)]
+    pub fn crypto_km_clk_en(&mut self) -> CryptoKmClkEnW<'_, PeriClkCtrl25Spec> {
+        CryptoKmClkEnW::new(self, 22)
+    }
+    #[doc = "Bits 23:24 - Reserved"]
+    #[inline(always)]
+    pub fn isp_clk_src_sel(&mut self) -> IspClkSrcSelW<'_, PeriClkCtrl25Spec> {
+        IspClkSrcSelW::new(self, 23)
+    }
+    #[doc = "Bit 25 - Reserved"]
+    #[inline(always)]
+    pub fn isp_clk_en(&mut self) -> IspClkEnW<'_, PeriClkCtrl25Spec> {
+        IspClkEnW::new(self, 25)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl25::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl25::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PeriClkCtrl25Spec;
+impl crate::RegisterSpec for PeriClkCtrl25Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri_clk_ctrl25::R`](R) reader structure"]
+impl crate::Readable for PeriClkCtrl25Spec {}
+#[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl25::W`](W) writer structure"]
+impl crate::Writable for PeriClkCtrl25Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI_CLK_CTRL25 to value 0x007f_c000"]
+impl crate::Resettable for PeriClkCtrl25Spec {
+    const RESET_VALUE: u32 = 0x007f_c000;
+}

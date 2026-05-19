@@ -1,0 +1,35 @@
+#[doc = "Register `IBI_SIR_REQ_PAYLOAD` reader"]
+pub type R = crate::R<IbiSirReqPayloadSpec>;
+#[doc = "Register `IBI_SIR_REQ_PAYLOAD` writer"]
+pub type W = crate::W<IbiSirReqPayloadSpec>;
+#[doc = "Field `REG_SIR_REQ_PAYLOAD` reader - NA"]
+pub type RegSirReqPayloadR = crate::FieldReader<u32>;
+#[doc = "Field `REG_SIR_REQ_PAYLOAD` writer - NA"]
+pub type RegSirReqPayloadW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn reg_sir_req_payload(&self) -> RegSirReqPayloadR {
+        RegSirReqPayloadR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn reg_sir_req_payload(&mut self) -> RegSirReqPayloadW<'_, IbiSirReqPayloadSpec> {
+        RegSirReqPayloadW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ibi_sir_req_payload::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ibi_sir_req_payload::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IbiSirReqPayloadSpec;
+impl crate::RegisterSpec for IbiSirReqPayloadSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ibi_sir_req_payload::R`](R) reader structure"]
+impl crate::Readable for IbiSirReqPayloadSpec {}
+#[doc = "`write(|w| ..)` method takes [`ibi_sir_req_payload::W`](W) writer structure"]
+impl crate::Writable for IbiSirReqPayloadSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IBI_SIR_REQ_PAYLOAD to value 0"]
+impl crate::Resettable for IbiSirReqPayloadSpec {}

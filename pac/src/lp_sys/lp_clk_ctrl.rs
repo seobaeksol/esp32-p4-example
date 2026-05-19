@@ -1,0 +1,51 @@
+#[doc = "Register `LP_CLK_CTRL` reader"]
+pub type R = crate::R<LpClkCtrlSpec>;
+#[doc = "Register `LP_CLK_CTRL` writer"]
+pub type W = crate::W<LpClkCtrlSpec>;
+#[doc = "Field `CLK_EN` reader - need_des"]
+pub type ClkEnR = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - need_des"]
+pub type ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_FOSC_HP_CKEN` reader - reserved"]
+pub type LpFoscHpCkenR = crate::BitReader;
+#[doc = "Field `LP_FOSC_HP_CKEN` writer - reserved"]
+pub type LpFoscHpCkenW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn clk_en(&self) -> ClkEnR {
+        ClkEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 14 - reserved"]
+    #[inline(always)]
+    pub fn lp_fosc_hp_cken(&self) -> LpFoscHpCkenR {
+        LpFoscHpCkenR::new(((self.bits >> 14) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn clk_en(&mut self) -> ClkEnW<'_, LpClkCtrlSpec> {
+        ClkEnW::new(self, 0)
+    }
+    #[doc = "Bit 14 - reserved"]
+    #[inline(always)]
+    pub fn lp_fosc_hp_cken(&mut self) -> LpFoscHpCkenW<'_, LpClkCtrlSpec> {
+        LpFoscHpCkenW::new(self, 14)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_clk_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_clk_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpClkCtrlSpec;
+impl crate::RegisterSpec for LpClkCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_clk_ctrl::R`](R) reader structure"]
+impl crate::Readable for LpClkCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_clk_ctrl::W`](W) writer structure"]
+impl crate::Writable for LpClkCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_CLK_CTRL to value 0x4001"]
+impl crate::Resettable for LpClkCtrlSpec {
+    const RESET_VALUE: u32 = 0x4001;
+}

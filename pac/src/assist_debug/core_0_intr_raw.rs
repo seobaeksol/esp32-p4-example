@@ -1,0 +1,97 @@
+#[doc = "Register `CORE_0_INTR_RAW` reader"]
+pub type R = crate::R<Core0IntrRawSpec>;
+#[doc = "Field `CORE_0_AREA_DRAM0_0_RD_RAW` reader - Core0 dram0 area0 read monitor interrupt status"]
+pub type Core0AreaDram0_0RdRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_0_WR_RAW` reader - Core0 dram0 area0 write monitor interrupt status"]
+pub type Core0AreaDram0_0WrRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_1_RD_RAW` reader - Core0 dram0 area1 read monitor interrupt status"]
+pub type Core0AreaDram0_1RdRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_DRAM0_1_WR_RAW` reader - Core0 dram0 area1 write monitor interrupt status"]
+pub type Core0AreaDram0_1WrRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_0_RD_RAW` reader - Core0 PIF area0 read monitor interrupt status"]
+pub type Core0AreaPif0RdRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_0_WR_RAW` reader - Core0 PIF area0 write monitor interrupt status"]
+pub type Core0AreaPif0WrRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_1_RD_RAW` reader - Core0 PIF area1 read monitor interrupt status"]
+pub type Core0AreaPif1RdRawR = crate::BitReader;
+#[doc = "Field `CORE_0_AREA_PIF_1_WR_RAW` reader - Core0 PIF area1 write monitor interrupt status"]
+pub type Core0AreaPif1WrRawR = crate::BitReader;
+#[doc = "Field `CORE_0_SP_SPILL_MIN_RAW` reader - Core0 stackpoint underflow monitor interrupt status"]
+pub type Core0SpSpillMinRawR = crate::BitReader;
+#[doc = "Field `CORE_0_SP_SPILL_MAX_RAW` reader - Core0 stackpoint overflow monitor interrupt status"]
+pub type Core0SpSpillMaxRawR = crate::BitReader;
+#[doc = "Field `CORE_0_IRAM0_EXCEPTION_MONITOR_RAW` reader - IBUS busy monitor interrupt status"]
+pub type Core0Iram0ExceptionMonitorRawR = crate::BitReader;
+#[doc = "Field `CORE_0_DRAM0_EXCEPTION_MONITOR_RAW` reader - DBUS busy monitor initerrupt status"]
+pub type Core0Dram0ExceptionMonitorRawR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - Core0 dram0 area0 read monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_0_rd_raw(&self) -> Core0AreaDram0_0RdRawR {
+        Core0AreaDram0_0RdRawR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Core0 dram0 area0 write monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_0_wr_raw(&self) -> Core0AreaDram0_0WrRawR {
+        Core0AreaDram0_0WrRawR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Core0 dram0 area1 read monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_1_rd_raw(&self) -> Core0AreaDram0_1RdRawR {
+        Core0AreaDram0_1RdRawR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Core0 dram0 area1 write monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_dram0_1_wr_raw(&self) -> Core0AreaDram0_1WrRawR {
+        Core0AreaDram0_1WrRawR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Core0 PIF area0 read monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_pif_0_rd_raw(&self) -> Core0AreaPif0RdRawR {
+        Core0AreaPif0RdRawR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Core0 PIF area0 write monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_pif_0_wr_raw(&self) -> Core0AreaPif0WrRawR {
+        Core0AreaPif0WrRawR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Core0 PIF area1 read monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_pif_1_rd_raw(&self) -> Core0AreaPif1RdRawR {
+        Core0AreaPif1RdRawR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Core0 PIF area1 write monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_area_pif_1_wr_raw(&self) -> Core0AreaPif1WrRawR {
+        Core0AreaPif1WrRawR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Core0 stackpoint underflow monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_sp_spill_min_raw(&self) -> Core0SpSpillMinRawR {
+        Core0SpSpillMinRawR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Core0 stackpoint overflow monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_sp_spill_max_raw(&self) -> Core0SpSpillMaxRawR {
+        Core0SpSpillMaxRawR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - IBUS busy monitor interrupt status"]
+    #[inline(always)]
+    pub fn core_0_iram0_exception_monitor_raw(&self) -> Core0Iram0ExceptionMonitorRawR {
+        Core0Iram0ExceptionMonitorRawR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - DBUS busy monitor initerrupt status"]
+    #[inline(always)]
+    pub fn core_0_dram0_exception_monitor_raw(&self) -> Core0Dram0ExceptionMonitorRawR {
+        Core0Dram0ExceptionMonitorRawR::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[doc = "core0 monitor interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core0IntrRawSpec;
+impl crate::RegisterSpec for Core0IntrRawSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_0_intr_raw::R`](R) reader structure"]
+impl crate::Readable for Core0IntrRawSpec {}
+#[doc = "`reset()` method sets CORE_0_INTR_RAW to value 0"]
+impl crate::Resettable for Core0IntrRawSpec {}

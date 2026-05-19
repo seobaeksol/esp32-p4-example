@@ -1,0 +1,135 @@
+#[doc = "Register `LP_CPU_PWR0` reader"]
+pub type R = crate::R<LpCpuPwr0Spec>;
+#[doc = "Register `LP_CPU_PWR0` writer"]
+pub type W = crate::W<LpCpuPwr0Spec>;
+#[doc = "Field `LP_CPU_WAITI_RDY` reader - need_des"]
+pub type LpCpuWaitiRdyR = crate::BitReader;
+#[doc = "Field `LP_CPU_STALL_RDY` reader - need_des"]
+pub type LpCpuStallRdyR = crate::BitReader;
+#[doc = "Field `LP_CPU_FORCE_STALL` reader - need_des"]
+pub type LpCpuForceStallR = crate::BitReader;
+#[doc = "Field `LP_CPU_FORCE_STALL` writer - need_des"]
+pub type LpCpuForceStallW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_CPU_SLP_WAITI_FLAG_EN` reader - need_des"]
+pub type LpCpuSlpWaitiFlagEnR = crate::BitReader;
+#[doc = "Field `LP_CPU_SLP_WAITI_FLAG_EN` writer - need_des"]
+pub type LpCpuSlpWaitiFlagEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_CPU_SLP_STALL_FLAG_EN` reader - need_des"]
+pub type LpCpuSlpStallFlagEnR = crate::BitReader;
+#[doc = "Field `LP_CPU_SLP_STALL_FLAG_EN` writer - need_des"]
+pub type LpCpuSlpStallFlagEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_CPU_SLP_STALL_WAIT` reader - need_des"]
+pub type LpCpuSlpStallWaitR = crate::FieldReader;
+#[doc = "Field `LP_CPU_SLP_STALL_WAIT` writer - need_des"]
+pub type LpCpuSlpStallWaitW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `LP_CPU_SLP_STALL_EN` reader - need_des"]
+pub type LpCpuSlpStallEnR = crate::BitReader;
+#[doc = "Field `LP_CPU_SLP_STALL_EN` writer - need_des"]
+pub type LpCpuSlpStallEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_CPU_SLP_RESET_EN` reader - need_des"]
+pub type LpCpuSlpResetEnR = crate::BitReader;
+#[doc = "Field `LP_CPU_SLP_RESET_EN` writer - need_des"]
+pub type LpCpuSlpResetEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_CPU_SLP_BYPASS_INTR_EN` reader - need_des"]
+pub type LpCpuSlpBypassIntrEnR = crate::BitReader;
+#[doc = "Field `LP_CPU_SLP_BYPASS_INTR_EN` writer - need_des"]
+pub type LpCpuSlpBypassIntrEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_waiti_rdy(&self) -> LpCpuWaitiRdyR {
+        LpCpuWaitiRdyR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_stall_rdy(&self) -> LpCpuStallRdyR {
+        LpCpuStallRdyR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 18 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_force_stall(&self) -> LpCpuForceStallR {
+        LpCpuForceStallR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_waiti_flag_en(&self) -> LpCpuSlpWaitiFlagEnR {
+        LpCpuSlpWaitiFlagEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_stall_flag_en(&self) -> LpCpuSlpStallFlagEnR {
+        LpCpuSlpStallFlagEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bits 21:28 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_stall_wait(&self) -> LpCpuSlpStallWaitR {
+        LpCpuSlpStallWaitR::new(((self.bits >> 21) & 0xff) as u8)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_stall_en(&self) -> LpCpuSlpStallEnR {
+        LpCpuSlpStallEnR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_reset_en(&self) -> LpCpuSlpResetEnR {
+        LpCpuSlpResetEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_bypass_intr_en(&self) -> LpCpuSlpBypassIntrEnR {
+        LpCpuSlpBypassIntrEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 18 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_force_stall(&mut self) -> LpCpuForceStallW<'_, LpCpuPwr0Spec> {
+        LpCpuForceStallW::new(self, 18)
+    }
+    #[doc = "Bit 19 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_waiti_flag_en(&mut self) -> LpCpuSlpWaitiFlagEnW<'_, LpCpuPwr0Spec> {
+        LpCpuSlpWaitiFlagEnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_stall_flag_en(&mut self) -> LpCpuSlpStallFlagEnW<'_, LpCpuPwr0Spec> {
+        LpCpuSlpStallFlagEnW::new(self, 20)
+    }
+    #[doc = "Bits 21:28 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_stall_wait(&mut self) -> LpCpuSlpStallWaitW<'_, LpCpuPwr0Spec> {
+        LpCpuSlpStallWaitW::new(self, 21)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_stall_en(&mut self) -> LpCpuSlpStallEnW<'_, LpCpuPwr0Spec> {
+        LpCpuSlpStallEnW::new(self, 29)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_reset_en(&mut self) -> LpCpuSlpResetEnW<'_, LpCpuPwr0Spec> {
+        LpCpuSlpResetEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_slp_bypass_intr_en(&mut self) -> LpCpuSlpBypassIntrEnW<'_, LpCpuPwr0Spec> {
+        LpCpuSlpBypassIntrEnW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_cpu_pwr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_cpu_pwr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpCpuPwr0Spec;
+impl crate::RegisterSpec for LpCpuPwr0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_cpu_pwr0::R`](R) reader structure"]
+impl crate::Readable for LpCpuPwr0Spec {}
+#[doc = "`write(|w| ..)` method takes [`lp_cpu_pwr0::W`](W) writer structure"]
+impl crate::Writable for LpCpuPwr0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_CPU_PWR0 to value 0x1ff0_0000"]
+impl crate::Resettable for LpCpuPwr0Spec {
+    const RESET_VALUE: u32 = 0x1ff0_0000;
+}

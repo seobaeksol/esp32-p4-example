@@ -1,0 +1,27 @@
+#[doc = "Register `RD_MAC_SYS2` reader"]
+pub type R = crate::R<RdMacSys2Spec>;
+#[doc = "Field `MAC_RESERVED_0` reader - Reserved."]
+pub type MacReserved0R = crate::FieldReader<u16>;
+#[doc = "Field `MAC_RESERVED_1` reader - Reserved."]
+pub type MacReserved1R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:13 - Reserved."]
+    #[inline(always)]
+    pub fn mac_reserved_0(&self) -> MacReserved0R {
+        MacReserved0R::new((self.bits & 0x3fff) as u16)
+    }
+    #[doc = "Bits 14:31 - Reserved."]
+    #[inline(always)]
+    pub fn mac_reserved_1(&self) -> MacReserved1R {
+        MacReserved1R::new((self.bits >> 14) & 0x0003_ffff)
+    }
+}
+#[doc = "Represents rd_mac_sys\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_mac_sys2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdMacSys2Spec;
+impl crate::RegisterSpec for RdMacSys2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rd_mac_sys2::R`](R) reader structure"]
+impl crate::Readable for RdMacSys2Spec {}
+#[doc = "`reset()` method sets RD_MAC_SYS2 to value 0"]
+impl crate::Resettable for RdMacSys2Spec {}

@@ -1,0 +1,177 @@
+#[doc = "Register `CTL0` reader"]
+pub type R = crate::R<Ctl0Spec>;
+#[doc = "Register `CTL0` writer"]
+pub type W = crate::W<Ctl0Spec>;
+#[doc = "Field `CH1_SMS` reader - NA"]
+pub type Ch1SmsR = crate::BitReader;
+#[doc = "Field `CH1_SMS` writer - NA"]
+pub type Ch1SmsW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_DMS` reader - NA"]
+pub type Ch1DmsR = crate::BitReader;
+#[doc = "Field `CH1_DMS` writer - NA"]
+pub type Ch1DmsW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SINC` reader - NA"]
+pub type Ch1SincR = crate::BitReader;
+#[doc = "Field `CH1_SINC` writer - NA"]
+pub type Ch1SincW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_DINC` reader - NA"]
+pub type Ch1DincR = crate::BitReader;
+#[doc = "Field `CH1_DINC` writer - NA"]
+pub type Ch1DincW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SRC_TR_WIDTH` reader - NA"]
+pub type Ch1SrcTrWidthR = crate::FieldReader;
+#[doc = "Field `CH1_SRC_TR_WIDTH` writer - NA"]
+pub type Ch1SrcTrWidthW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `CH1_DST_TR_WIDTH` reader - NA"]
+pub type Ch1DstTrWidthR = crate::FieldReader;
+#[doc = "Field `CH1_DST_TR_WIDTH` writer - NA"]
+pub type Ch1DstTrWidthW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `CH1_SRC_MSIZE` reader - NA"]
+pub type Ch1SrcMsizeR = crate::FieldReader;
+#[doc = "Field `CH1_SRC_MSIZE` writer - NA"]
+pub type Ch1SrcMsizeW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CH1_DST_MSIZE` reader - NA"]
+pub type Ch1DstMsizeR = crate::FieldReader;
+#[doc = "Field `CH1_DST_MSIZE` writer - NA"]
+pub type Ch1DstMsizeW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CH1_AR_CACHE` reader - NA"]
+pub type Ch1ArCacheR = crate::FieldReader;
+#[doc = "Field `CH1_AR_CACHE` writer - NA"]
+pub type Ch1ArCacheW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CH1_AW_CACHE` reader - NA"]
+pub type Ch1AwCacheR = crate::FieldReader;
+#[doc = "Field `CH1_AW_CACHE` writer - NA"]
+pub type Ch1AwCacheW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CH1_NONPOSTED_LASTWRITE_EN` reader - NA"]
+pub type Ch1NonpostedLastwriteEnR = crate::BitReader;
+#[doc = "Field `CH1_NONPOSTED_LASTWRITE_EN` writer - NA"]
+pub type Ch1NonpostedLastwriteEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_sms(&self) -> Ch1SmsR {
+        Ch1SmsR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch1_dms(&self) -> Ch1DmsR {
+        Ch1DmsR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_sinc(&self) -> Ch1SincR {
+        Ch1SincR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ch1_dinc(&self) -> Ch1DincR {
+        Ch1DincR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bits 8:10 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_tr_width(&self) -> Ch1SrcTrWidthR {
+        Ch1SrcTrWidthR::new(((self.bits >> 8) & 7) as u8)
+    }
+    #[doc = "Bits 11:13 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_tr_width(&self) -> Ch1DstTrWidthR {
+        Ch1DstTrWidthR::new(((self.bits >> 11) & 7) as u8)
+    }
+    #[doc = "Bits 14:17 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_msize(&self) -> Ch1SrcMsizeR {
+        Ch1SrcMsizeR::new(((self.bits >> 14) & 0x0f) as u8)
+    }
+    #[doc = "Bits 18:21 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_msize(&self) -> Ch1DstMsizeR {
+        Ch1DstMsizeR::new(((self.bits >> 18) & 0x0f) as u8)
+    }
+    #[doc = "Bits 22:25 - NA"]
+    #[inline(always)]
+    pub fn ch1_ar_cache(&self) -> Ch1ArCacheR {
+        Ch1ArCacheR::new(((self.bits >> 22) & 0x0f) as u8)
+    }
+    #[doc = "Bits 26:29 - NA"]
+    #[inline(always)]
+    pub fn ch1_aw_cache(&self) -> Ch1AwCacheR {
+        Ch1AwCacheR::new(((self.bits >> 26) & 0x0f) as u8)
+    }
+    #[doc = "Bit 30 - NA"]
+    #[inline(always)]
+    pub fn ch1_nonposted_lastwrite_en(&self) -> Ch1NonpostedLastwriteEnR {
+        Ch1NonpostedLastwriteEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_sms(&mut self) -> Ch1SmsW<'_, Ctl0Spec> {
+        Ch1SmsW::new(self, 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch1_dms(&mut self) -> Ch1DmsW<'_, Ctl0Spec> {
+        Ch1DmsW::new(self, 2)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_sinc(&mut self) -> Ch1SincW<'_, Ctl0Spec> {
+        Ch1SincW::new(self, 4)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ch1_dinc(&mut self) -> Ch1DincW<'_, Ctl0Spec> {
+        Ch1DincW::new(self, 6)
+    }
+    #[doc = "Bits 8:10 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_tr_width(&mut self) -> Ch1SrcTrWidthW<'_, Ctl0Spec> {
+        Ch1SrcTrWidthW::new(self, 8)
+    }
+    #[doc = "Bits 11:13 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_tr_width(&mut self) -> Ch1DstTrWidthW<'_, Ctl0Spec> {
+        Ch1DstTrWidthW::new(self, 11)
+    }
+    #[doc = "Bits 14:17 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_msize(&mut self) -> Ch1SrcMsizeW<'_, Ctl0Spec> {
+        Ch1SrcMsizeW::new(self, 14)
+    }
+    #[doc = "Bits 18:21 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_msize(&mut self) -> Ch1DstMsizeW<'_, Ctl0Spec> {
+        Ch1DstMsizeW::new(self, 18)
+    }
+    #[doc = "Bits 22:25 - NA"]
+    #[inline(always)]
+    pub fn ch1_ar_cache(&mut self) -> Ch1ArCacheW<'_, Ctl0Spec> {
+        Ch1ArCacheW::new(self, 22)
+    }
+    #[doc = "Bits 26:29 - NA"]
+    #[inline(always)]
+    pub fn ch1_aw_cache(&mut self) -> Ch1AwCacheW<'_, Ctl0Spec> {
+        Ch1AwCacheW::new(self, 26)
+    }
+    #[doc = "Bit 30 - NA"]
+    #[inline(always)]
+    pub fn ch1_nonposted_lastwrite_en(&mut self) -> Ch1NonpostedLastwriteEnW<'_, Ctl0Spec> {
+        Ch1NonpostedLastwriteEnW::new(self, 30)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ctl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Ctl0Spec;
+impl crate::RegisterSpec for Ctl0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ctl0::R`](R) reader structure"]
+impl crate::Readable for Ctl0Spec {}
+#[doc = "`write(|w| ..)` method takes [`ctl0::W`](W) writer structure"]
+impl crate::Writable for Ctl0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CTL0 to value 0x1200"]
+impl crate::Resettable for Ctl0Spec {
+    const RESET_VALUE: u32 = 0x1200;
+}

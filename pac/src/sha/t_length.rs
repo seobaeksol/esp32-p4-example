@@ -1,0 +1,35 @@
+#[doc = "Register `T_LENGTH` reader"]
+pub type R = crate::R<TLengthSpec>;
+#[doc = "Register `T_LENGTH` writer"]
+pub type W = crate::W<TLengthSpec>;
+#[doc = "Field `T_LENGTH` reader - Sha t_length (used if and only if mode == SHA_512/t)."]
+pub type TLengthR = crate::FieldReader;
+#[doc = "Field `T_LENGTH` writer - Sha t_length (used if and only if mode == SHA_512/t)."]
+pub type TLengthW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+impl R {
+    #[doc = "Bits 0:6 - Sha t_length (used if and only if mode == SHA_512/t)."]
+    #[inline(always)]
+    pub fn t_length(&self) -> TLengthR {
+        TLengthR::new((self.bits & 0x7f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - Sha t_length (used if and only if mode == SHA_512/t)."]
+    #[inline(always)]
+    pub fn t_length(&mut self) -> TLengthW<'_, TLengthSpec> {
+        TLengthW::new(self, 0)
+    }
+}
+#[doc = "SHA 512/t configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`t_length::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t_length::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TLengthSpec;
+impl crate::RegisterSpec for TLengthSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`t_length::R`](R) reader structure"]
+impl crate::Readable for TLengthSpec {}
+#[doc = "`write(|w| ..)` method takes [`t_length::W`](W) writer structure"]
+impl crate::Writable for TLengthSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets T_LENGTH to value 0"]
+impl crate::Resettable for TLengthSpec {}

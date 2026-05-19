@@ -1,0 +1,20 @@
+#[doc = "Register `INTR_1` reader"]
+pub type R = crate::R<Intr1Spec>;
+#[doc = "Field `INT_1` reader - GPIO interrupt 1 status register for GPIO0-31"]
+pub type Int1R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - GPIO interrupt 1 status register for GPIO0-31"]
+    #[inline(always)]
+    pub fn int_1(&self) -> Int1R {
+        Int1R::new(self.bits)
+    }
+}
+#[doc = "GPIO interrupt 1 status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Intr1Spec;
+impl crate::RegisterSpec for Intr1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`intr_1::R`](R) reader structure"]
+impl crate::Readable for Intr1Spec {}
+#[doc = "`reset()` method sets INTR_1 to value 0"]
+impl crate::Resettable for Intr1Spec {}

@@ -1,0 +1,41 @@
+#[doc = "Register `ICM_DLOCK_STATUS` reader"]
+pub type R = crate::R<IcmDlockStatusSpec>;
+#[doc = "Field `DLOCK_MST` reader - "]
+pub type DlockMstR = crate::FieldReader;
+#[doc = "Field `DLOCK_SLV` reader - "]
+pub type DlockSlvR = crate::FieldReader;
+#[doc = "Field `DLOCK_ID` reader - "]
+pub type DlockIdR = crate::FieldReader;
+#[doc = "Field `DLOCK_WR` reader - "]
+pub type DlockWrR = crate::BitReader;
+impl R {
+    #[doc = "Bits 0:3"]
+    #[inline(always)]
+    pub fn dlock_mst(&self) -> DlockMstR {
+        DlockMstR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:6"]
+    #[inline(always)]
+    pub fn dlock_slv(&self) -> DlockSlvR {
+        DlockSlvR::new(((self.bits >> 4) & 7) as u8)
+    }
+    #[doc = "Bits 7:10"]
+    #[inline(always)]
+    pub fn dlock_id(&self) -> DlockIdR {
+        DlockIdR::new(((self.bits >> 7) & 0x0f) as u8)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn dlock_wr(&self) -> DlockWrR {
+        DlockWrR::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[doc = "Deadlock status\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_dlock_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IcmDlockStatusSpec;
+impl crate::RegisterSpec for IcmDlockStatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`icm_dlock_status::R`](R) reader structure"]
+impl crate::Readable for IcmDlockStatusSpec {}
+#[doc = "`reset()` method sets ICM_DLOCK_STATUS to value 0"]
+impl crate::Resettable for IcmDlockStatusSpec {}

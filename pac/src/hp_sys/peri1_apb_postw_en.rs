@@ -1,0 +1,35 @@
+#[doc = "Register `PERI1_APB_POSTW_EN` reader"]
+pub type R = crate::R<Peri1ApbPostwEnSpec>;
+#[doc = "Register `PERI1_APB_POSTW_EN` writer"]
+pub type W = crate::W<Peri1ApbPostwEnSpec>;
+#[doc = "Field `PERI1_APB_POSTW_EN` reader - hp_peri1 apb register interface post write enable, 1 will speed up write, but will take some time to update value to register"]
+pub type Peri1ApbPostwEnR = crate::BitReader;
+#[doc = "Field `PERI1_APB_POSTW_EN` writer - hp_peri1 apb register interface post write enable, 1 will speed up write, but will take some time to update value to register"]
+pub type Peri1ApbPostwEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - hp_peri1 apb register interface post write enable, 1 will speed up write, but will take some time to update value to register"]
+    #[inline(always)]
+    pub fn peri1_apb_postw_en(&self) -> Peri1ApbPostwEnR {
+        Peri1ApbPostwEnR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - hp_peri1 apb register interface post write enable, 1 will speed up write, but will take some time to update value to register"]
+    #[inline(always)]
+    pub fn peri1_apb_postw_en(&mut self) -> Peri1ApbPostwEnW<'_, Peri1ApbPostwEnSpec> {
+        Peri1ApbPostwEnW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`peri1_apb_postw_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri1_apb_postw_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Peri1ApbPostwEnSpec;
+impl crate::RegisterSpec for Peri1ApbPostwEnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri1_apb_postw_en::R`](R) reader structure"]
+impl crate::Readable for Peri1ApbPostwEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`peri1_apb_postw_en::W`](W) writer structure"]
+impl crate::Writable for Peri1ApbPostwEnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI1_APB_POSTW_EN to value 0"]
+impl crate::Resettable for Peri1ApbPostwEnSpec {}

@@ -1,0 +1,65 @@
+#[doc = "Register `CTRL2` reader"]
+pub type R = crate::R<Ctrl2Spec>;
+#[doc = "Register `CTRL2` writer"]
+pub type W = crate::W<Ctrl2Spec>;
+#[doc = "Field `XPD_WAIT` reader - N/A"]
+pub type XpdWaitR = crate::FieldReader<u16>;
+#[doc = "Field `XPD_WAIT` writer - N/A"]
+pub type XpdWaitW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `XPD_FORCE` reader - N/A"]
+pub type XpdForceR = crate::FieldReader;
+#[doc = "Field `XPD_FORCE` writer - N/A"]
+pub type XpdForceW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `CLK_INV` reader - N/A"]
+pub type ClkInvR = crate::BitReader;
+#[doc = "Field `CLK_INV` writer - N/A"]
+pub type ClkInvW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:11 - N/A"]
+    #[inline(always)]
+    pub fn xpd_wait(&self) -> XpdWaitR {
+        XpdWaitR::new((self.bits & 0x0fff) as u16)
+    }
+    #[doc = "Bits 12:13 - N/A"]
+    #[inline(always)]
+    pub fn xpd_force(&self) -> XpdForceR {
+        XpdForceR::new(((self.bits >> 12) & 3) as u8)
+    }
+    #[doc = "Bit 14 - N/A"]
+    #[inline(always)]
+    pub fn clk_inv(&self) -> ClkInvR {
+        ClkInvR::new(((self.bits >> 14) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:11 - N/A"]
+    #[inline(always)]
+    pub fn xpd_wait(&mut self) -> XpdWaitW<'_, Ctrl2Spec> {
+        XpdWaitW::new(self, 0)
+    }
+    #[doc = "Bits 12:13 - N/A"]
+    #[inline(always)]
+    pub fn xpd_force(&mut self) -> XpdForceW<'_, Ctrl2Spec> {
+        XpdForceW::new(self, 12)
+    }
+    #[doc = "Bit 14 - N/A"]
+    #[inline(always)]
+    pub fn clk_inv(&mut self) -> ClkInvW<'_, Ctrl2Spec> {
+        ClkInvW::new(self, 14)
+    }
+}
+#[doc = "Tsens configuration.\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Ctrl2Spec;
+impl crate::RegisterSpec for Ctrl2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ctrl2::R`](R) reader structure"]
+impl crate::Readable for Ctrl2Spec {}
+#[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
+impl crate::Writable for Ctrl2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CTRL2 to value 0x4002"]
+impl crate::Resettable for Ctrl2Spec {
+    const RESET_VALUE: u32 = 0x4002;
+}

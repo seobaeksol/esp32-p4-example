@@ -1,0 +1,63 @@
+#[doc = "Register `DEVICE_TABLE` reader"]
+pub type R = crate::R<DeviceTableSpec>;
+#[doc = "Register `DEVICE_TABLE` writer"]
+pub type W = crate::W<DeviceTableSpec>;
+#[doc = "Field `REG_DCT_DAA_INIT_INDEX` reader - Reserved"]
+pub type RegDctDaaInitIndexR = crate::FieldReader;
+#[doc = "Field `REG_DCT_DAA_INIT_INDEX` writer - Reserved"]
+pub type RegDctDaaInitIndexW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `REG_DAT_DAA_INIT_INDEX` reader - NA"]
+pub type RegDatDaaInitIndexR = crate::FieldReader;
+#[doc = "Field `REG_DAT_DAA_INIT_INDEX` writer - NA"]
+pub type RegDatDaaInitIndexW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `PRESENT_DCT_INDEX` reader - NA"]
+pub type PresentDctIndexR = crate::FieldReader;
+#[doc = "Field `PRESENT_DAT_INDEX` reader - NA"]
+pub type PresentDatIndexR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_dct_daa_init_index(&self) -> RegDctDaaInitIndexR {
+        RegDctDaaInitIndexR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:7 - NA"]
+    #[inline(always)]
+    pub fn reg_dat_daa_init_index(&self) -> RegDatDaaInitIndexR {
+        RegDatDaaInitIndexR::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+    #[doc = "Bits 8:11 - NA"]
+    #[inline(always)]
+    pub fn present_dct_index(&self) -> PresentDctIndexR {
+        PresentDctIndexR::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:15 - NA"]
+    #[inline(always)]
+    pub fn present_dat_index(&self) -> PresentDatIndexR {
+        PresentDatIndexR::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_dct_daa_init_index(&mut self) -> RegDctDaaInitIndexW<'_, DeviceTableSpec> {
+        RegDctDaaInitIndexW::new(self, 0)
+    }
+    #[doc = "Bits 4:7 - NA"]
+    #[inline(always)]
+    pub fn reg_dat_daa_init_index(&mut self) -> RegDatDaaInitIndexW<'_, DeviceTableSpec> {
+        RegDatDaaInitIndexW::new(self, 4)
+    }
+}
+#[doc = "Pointer for Device Address Table\n\nYou can [`read`](crate::Reg::read) this register and get [`device_table::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`device_table::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DeviceTableSpec;
+impl crate::RegisterSpec for DeviceTableSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`device_table::R`](R) reader structure"]
+impl crate::Readable for DeviceTableSpec {}
+#[doc = "`write(|w| ..)` method takes [`device_table::W`](W) writer structure"]
+impl crate::Writable for DeviceTableSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DEVICE_TABLE to value 0"]
+impl crate::Resettable for DeviceTableSpec {}

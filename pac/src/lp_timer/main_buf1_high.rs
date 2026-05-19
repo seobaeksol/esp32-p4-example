@@ -1,0 +1,20 @@
+#[doc = "Register `MAIN_BUF1_HIGH` reader"]
+pub type R = crate::R<MainBuf1HighSpec>;
+#[doc = "Field `MAIN_TIMER_BUF1_HIGH` reader - need_des"]
+pub type MainTimerBuf1HighR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:15 - need_des"]
+    #[inline(always)]
+    pub fn main_timer_buf1_high(&self) -> MainTimerBuf1HighR {
+        MainTimerBuf1HighR::new((self.bits & 0xffff) as u16)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`main_buf1_high::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MainBuf1HighSpec;
+impl crate::RegisterSpec for MainBuf1HighSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`main_buf1_high::R`](R) reader structure"]
+impl crate::Readable for MainBuf1HighSpec {}
+#[doc = "`reset()` method sets MAIN_BUF1_HIGH to value 0"]
+impl crate::Resettable for MainBuf1HighSpec {}

@@ -1,0 +1,22 @@
+#[doc = "Register `SET_INVALIDATE_DS` writer"]
+pub type W = crate::W<SetInvalidateDsSpec>;
+#[doc = "Field `SET_INVALIDATE_DS` writer - Configures whether or not to clear calculation results of the DS module in downstream mode. \\\\0: Not clear \\\\1: Clear calculation results"]
+pub type SetInvalidateDsW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to clear calculation results of the DS module in downstream mode. \\\\0: Not clear \\\\1: Clear calculation results"]
+    #[inline(always)]
+    pub fn set_invalidate_ds(&mut self) -> SetInvalidateDsW<'_, SetInvalidateDsSpec> {
+        SetInvalidateDsW::new(self, 0)
+    }
+}
+#[doc = "Invalidate digital signature result register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_invalidate_ds::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SetInvalidateDsSpec;
+impl crate::RegisterSpec for SetInvalidateDsSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`set_invalidate_ds::W`](W) writer structure"]
+impl crate::Writable for SetInvalidateDsSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SET_INVALIDATE_DS to value 0"]
+impl crate::Resettable for SetInvalidateDsSpec {}

@@ -1,0 +1,261 @@
+#[doc = "Register `MISC` reader"]
+pub type R = crate::R<MiscSpec>;
+#[doc = "Register `MISC` writer"]
+pub type W = crate::W<MiscSpec>;
+#[doc = "Field `CS0_DIS` reader - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
+pub type Cs0DisR = crate::BitReader;
+#[doc = "Field `CS0_DIS` writer - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
+pub type Cs0DisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS1_DIS` reader - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
+pub type Cs1DisR = crate::BitReader;
+#[doc = "Field `CS1_DIS` writer - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
+pub type Cs1DisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS2_DIS` reader - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
+pub type Cs2DisR = crate::BitReader;
+#[doc = "Field `CS2_DIS` writer - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
+pub type Cs2DisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS3_DIS` reader - SPI CS3 pin enable, 1: disable CS3, 0: spi_cs3 signal is from/to CS3 pin. Can be configured in CONF state."]
+pub type Cs3DisR = crate::BitReader;
+#[doc = "Field `CS3_DIS` writer - SPI CS3 pin enable, 1: disable CS3, 0: spi_cs3 signal is from/to CS3 pin. Can be configured in CONF state."]
+pub type Cs3DisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS4_DIS` reader - SPI CS4 pin enable, 1: disable CS4, 0: spi_cs4 signal is from/to CS4 pin. Can be configured in CONF state."]
+pub type Cs4DisR = crate::BitReader;
+#[doc = "Field `CS4_DIS` writer - SPI CS4 pin enable, 1: disable CS4, 0: spi_cs4 signal is from/to CS4 pin. Can be configured in CONF state."]
+pub type Cs4DisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS5_DIS` reader - SPI CS5 pin enable, 1: disable CS5, 0: spi_cs5 signal is from/to CS5 pin. Can be configured in CONF state."]
+pub type Cs5DisR = crate::BitReader;
+#[doc = "Field `CS5_DIS` writer - SPI CS5 pin enable, 1: disable CS5, 0: spi_cs5 signal is from/to CS5 pin. Can be configured in CONF state."]
+pub type Cs5DisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CK_DIS` reader - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
+pub type CkDisR = crate::BitReader;
+#[doc = "Field `CK_DIS` writer - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
+pub type CkDisW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MASTER_CS_POL` reader - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
+pub type MasterCsPolR = crate::FieldReader;
+#[doc = "Field `MASTER_CS_POL` writer - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
+pub type MasterCsPolW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `CLK_DATA_DTR_EN` reader - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
+pub type ClkDataDtrEnR = crate::BitReader;
+#[doc = "Field `CLK_DATA_DTR_EN` writer - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
+pub type ClkDataDtrEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DATA_DTR_EN` reader - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
+pub type DataDtrEnR = crate::BitReader;
+#[doc = "Field `DATA_DTR_EN` writer - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
+pub type DataDtrEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADDR_DTR_EN` reader - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
+pub type AddrDtrEnR = crate::BitReader;
+#[doc = "Field `ADDR_DTR_EN` writer - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
+pub type AddrDtrEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMD_DTR_EN` reader - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
+pub type CmdDtrEnR = crate::BitReader;
+#[doc = "Field `CMD_DTR_EN` writer - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
+pub type CmdDtrEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLAVE_CS_POL` reader - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
+pub type SlaveCsPolR = crate::BitReader;
+#[doc = "Field `SLAVE_CS_POL` writer - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
+pub type SlaveCsPolW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DQS_IDLE_EDGE` reader - The default value of spi_dqs. Can be configured in CONF state."]
+pub type DqsIdleEdgeR = crate::BitReader;
+#[doc = "Field `DQS_IDLE_EDGE` writer - The default value of spi_dqs. Can be configured in CONF state."]
+pub type DqsIdleEdgeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
+pub type CkIdleEdgeR = crate::BitReader;
+#[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
+pub type CkIdleEdgeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set. Can be configured in CONF state."]
+pub type CsKeepActiveR = crate::BitReader;
+#[doc = "Field `CS_KEEP_ACTIVE` writer - spi cs line keep low when the bit is set. Can be configured in CONF state."]
+pub type CsKeepActiveW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `QUAD_DIN_PIN_SWAP` reader - 1: SPI quad input swap enable, swap FSPID with FSPIQ, swap FSPIWP with FSPIHD. 0: spi quad input swap disable. Can be configured in CONF state."]
+pub type QuadDinPinSwapR = crate::BitReader;
+#[doc = "Field `QUAD_DIN_PIN_SWAP` writer - 1: SPI quad input swap enable, swap FSPID with FSPIQ, swap FSPIWP with FSPIHD. 0: spi quad input swap disable. Can be configured in CONF state."]
+pub type QuadDinPinSwapW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs0_dis(&self) -> Cs0DisR {
+        Cs0DisR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs1_dis(&self) -> Cs1DisR {
+        Cs1DisR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs2_dis(&self) -> Cs2DisR {
+        Cs2DisR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - SPI CS3 pin enable, 1: disable CS3, 0: spi_cs3 signal is from/to CS3 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs3_dis(&self) -> Cs3DisR {
+        Cs3DisR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - SPI CS4 pin enable, 1: disable CS4, 0: spi_cs4 signal is from/to CS4 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs4_dis(&self) -> Cs4DisR {
+        Cs4DisR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - SPI CS5 pin enable, 1: disable CS5, 0: spi_cs5 signal is from/to CS5 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs5_dis(&self) -> Cs5DisR {
+        Cs5DisR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn ck_dis(&self) -> CkDisR {
+        CkDisR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bits 7:12 - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn master_cs_pol(&self) -> MasterCsPolR {
+        MasterCsPolR::new(((self.bits >> 7) & 0x3f) as u8)
+    }
+    #[doc = "Bit 16 - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
+    #[inline(always)]
+    pub fn clk_data_dtr_en(&self) -> ClkDataDtrEnR {
+        ClkDataDtrEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn data_dtr_en(&self) -> DataDtrEnR {
+        DataDtrEnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn addr_dtr_en(&self) -> AddrDtrEnR {
+        AddrDtrEnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cmd_dtr_en(&self) -> CmdDtrEnR {
+        CmdDtrEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 23 - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn slave_cs_pol(&self) -> SlaveCsPolR {
+        SlaveCsPolR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - The default value of spi_dqs. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn dqs_idle_edge(&self) -> DqsIdleEdgeR {
+        DqsIdleEdgeR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn ck_idle_edge(&self) -> CkIdleEdgeR {
+        CkIdleEdgeR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - spi cs line keep low when the bit is set. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs_keep_active(&self) -> CsKeepActiveR {
+        CsKeepActiveR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - 1: SPI quad input swap enable, swap FSPID with FSPIQ, swap FSPIWP with FSPIHD. 0: spi quad input swap disable. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn quad_din_pin_swap(&self) -> QuadDinPinSwapR {
+        QuadDinPinSwapR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs0_dis(&mut self) -> Cs0DisW<'_, MiscSpec> {
+        Cs0DisW::new(self, 0)
+    }
+    #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs1_dis(&mut self) -> Cs1DisW<'_, MiscSpec> {
+        Cs1DisW::new(self, 1)
+    }
+    #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs2_dis(&mut self) -> Cs2DisW<'_, MiscSpec> {
+        Cs2DisW::new(self, 2)
+    }
+    #[doc = "Bit 3 - SPI CS3 pin enable, 1: disable CS3, 0: spi_cs3 signal is from/to CS3 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs3_dis(&mut self) -> Cs3DisW<'_, MiscSpec> {
+        Cs3DisW::new(self, 3)
+    }
+    #[doc = "Bit 4 - SPI CS4 pin enable, 1: disable CS4, 0: spi_cs4 signal is from/to CS4 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs4_dis(&mut self) -> Cs4DisW<'_, MiscSpec> {
+        Cs4DisW::new(self, 4)
+    }
+    #[doc = "Bit 5 - SPI CS5 pin enable, 1: disable CS5, 0: spi_cs5 signal is from/to CS5 pin. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs5_dis(&mut self) -> Cs5DisW<'_, MiscSpec> {
+        Cs5DisW::new(self, 5)
+    }
+    #[doc = "Bit 6 - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn ck_dis(&mut self) -> CkDisW<'_, MiscSpec> {
+        CkDisW::new(self, 6)
+    }
+    #[doc = "Bits 7:12 - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn master_cs_pol(&mut self) -> MasterCsPolW<'_, MiscSpec> {
+        MasterCsPolW::new(self, 7)
+    }
+    #[doc = "Bit 16 - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
+    #[inline(always)]
+    pub fn clk_data_dtr_en(&mut self) -> ClkDataDtrEnW<'_, MiscSpec> {
+        ClkDataDtrEnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn data_dtr_en(&mut self) -> DataDtrEnW<'_, MiscSpec> {
+        DataDtrEnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn addr_dtr_en(&mut self) -> AddrDtrEnW<'_, MiscSpec> {
+        AddrDtrEnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cmd_dtr_en(&mut self) -> CmdDtrEnW<'_, MiscSpec> {
+        CmdDtrEnW::new(self, 19)
+    }
+    #[doc = "Bit 23 - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn slave_cs_pol(&mut self) -> SlaveCsPolW<'_, MiscSpec> {
+        SlaveCsPolW::new(self, 23)
+    }
+    #[doc = "Bit 24 - The default value of spi_dqs. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn dqs_idle_edge(&mut self) -> DqsIdleEdgeW<'_, MiscSpec> {
+        DqsIdleEdgeW::new(self, 24)
+    }
+    #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn ck_idle_edge(&mut self) -> CkIdleEdgeW<'_, MiscSpec> {
+        CkIdleEdgeW::new(self, 29)
+    }
+    #[doc = "Bit 30 - spi cs line keep low when the bit is set. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn cs_keep_active(&mut self) -> CsKeepActiveW<'_, MiscSpec> {
+        CsKeepActiveW::new(self, 30)
+    }
+    #[doc = "Bit 31 - 1: SPI quad input swap enable, swap FSPID with FSPIQ, swap FSPIWP with FSPIHD. 0: spi quad input swap disable. Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn quad_din_pin_swap(&mut self) -> QuadDinPinSwapW<'_, MiscSpec> {
+        QuadDinPinSwapW::new(self, 31)
+    }
+}
+#[doc = "SPI misc register\n\nYou can [`read`](crate::Reg::read) this register and get [`misc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`misc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MiscSpec;
+impl crate::RegisterSpec for MiscSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`misc::R`](R) reader structure"]
+impl crate::Readable for MiscSpec {}
+#[doc = "`write(|w| ..)` method takes [`misc::W`](W) writer structure"]
+impl crate::Writable for MiscSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets MISC to value 0x3e"]
+impl crate::Resettable for MiscSpec {
+    const RESET_VALUE: u32 = 0x3e;
+}

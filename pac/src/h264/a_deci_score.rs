@@ -1,0 +1,49 @@
+#[doc = "Register `A_DECI_SCORE` reader"]
+pub type R = crate::R<ADeciScoreSpec>;
+#[doc = "Register `A_DECI_SCORE` writer"]
+pub type W = crate::W<ADeciScoreSpec>;
+#[doc = "Field `A_C_DECI_SCORE` reader - Configures video A chroma MB decimate score. When chroma score is smaller than it, chroma decimate will be enable."]
+pub type ACDeciScoreR = crate::FieldReader<u16>;
+#[doc = "Field `A_C_DECI_SCORE` writer - Configures video A chroma MB decimate score. When chroma score is smaller than it, chroma decimate will be enable."]
+pub type ACDeciScoreW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `A_L_DECI_SCORE` reader - Configures video A luma MB decimate score. When luma score is smaller than it, luma decimate will be enable."]
+pub type ALDeciScoreR = crate::FieldReader<u16>;
+#[doc = "Field `A_L_DECI_SCORE` writer - Configures video A luma MB decimate score. When luma score is smaller than it, luma decimate will be enable."]
+pub type ALDeciScoreW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+impl R {
+    #[doc = "Bits 0:9 - Configures video A chroma MB decimate score. When chroma score is smaller than it, chroma decimate will be enable."]
+    #[inline(always)]
+    pub fn a_c_deci_score(&self) -> ACDeciScoreR {
+        ACDeciScoreR::new((self.bits & 0x03ff) as u16)
+    }
+    #[doc = "Bits 10:19 - Configures video A luma MB decimate score. When luma score is smaller than it, luma decimate will be enable."]
+    #[inline(always)]
+    pub fn a_l_deci_score(&self) -> ALDeciScoreR {
+        ALDeciScoreR::new(((self.bits >> 10) & 0x03ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:9 - Configures video A chroma MB decimate score. When chroma score is smaller than it, chroma decimate will be enable."]
+    #[inline(always)]
+    pub fn a_c_deci_score(&mut self) -> ACDeciScoreW<'_, ADeciScoreSpec> {
+        ACDeciScoreW::new(self, 0)
+    }
+    #[doc = "Bits 10:19 - Configures video A luma MB decimate score. When luma score is smaller than it, luma decimate will be enable."]
+    #[inline(always)]
+    pub fn a_l_deci_score(&mut self) -> ALDeciScoreW<'_, ADeciScoreSpec> {
+        ALDeciScoreW::new(self, 10)
+    }
+}
+#[doc = "Video A luma and chroma MB decimate score Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_deci_score::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_deci_score::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ADeciScoreSpec;
+impl crate::RegisterSpec for ADeciScoreSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`a_deci_score::R`](R) reader structure"]
+impl crate::Readable for ADeciScoreSpec {}
+#[doc = "`write(|w| ..)` method takes [`a_deci_score::W`](W) writer structure"]
+impl crate::Writable for ADeciScoreSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets A_DECI_SCORE to value 0"]
+impl crate::Resettable for ADeciScoreSpec {}

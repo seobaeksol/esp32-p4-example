@@ -1,0 +1,35 @@
+#[doc = "Register `CK_GLITCH_CNTL` reader"]
+pub type R = crate::R<CkGlitchCntlSpec>;
+#[doc = "Register `CK_GLITCH_CNTL` writer"]
+pub type W = crate::W<CkGlitchCntlSpec>;
+#[doc = "Field `CK_GLITCH_RESET_ENA` reader - need_des"]
+pub type CkGlitchResetEnaR = crate::BitReader;
+#[doc = "Field `CK_GLITCH_RESET_ENA` writer - need_des"]
+pub type CkGlitchResetEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn ck_glitch_reset_ena(&self) -> CkGlitchResetEnaR {
+        CkGlitchResetEnaR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn ck_glitch_reset_ena(&mut self) -> CkGlitchResetEnaW<'_, CkGlitchCntlSpec> {
+        CkGlitchResetEnaW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ck_glitch_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ck_glitch_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CkGlitchCntlSpec;
+impl crate::RegisterSpec for CkGlitchCntlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ck_glitch_cntl::R`](R) reader structure"]
+impl crate::Readable for CkGlitchCntlSpec {}
+#[doc = "`write(|w| ..)` method takes [`ck_glitch_cntl::W`](W) writer structure"]
+impl crate::Writable for CkGlitchCntlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CK_GLITCH_CNTL to value 0"]
+impl crate::Resettable for CkGlitchCntlSpec {}

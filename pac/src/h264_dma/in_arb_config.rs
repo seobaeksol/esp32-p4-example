@@ -1,0 +1,49 @@
+#[doc = "Register `IN_ARB_CONFIG` reader"]
+pub type R = crate::R<InArbConfigSpec>;
+#[doc = "Register `IN_ARB_CONFIG` writer"]
+pub type W = crate::W<InArbConfigSpec>;
+#[doc = "Field `IN_ARB_TIMEOUT_NUM` reader - Set the max number of timeout count of arbiter"]
+pub type InArbTimeoutNumR = crate::FieldReader<u16>;
+#[doc = "Field `IN_ARB_TIMEOUT_NUM` writer - Set the max number of timeout count of arbiter"]
+pub type InArbTimeoutNumW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `IN_WEIGHT_EN` reader - reserved"]
+pub type InWeightEnR = crate::BitReader;
+#[doc = "Field `IN_WEIGHT_EN` writer - reserved"]
+pub type InWeightEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:15 - Set the max number of timeout count of arbiter"]
+    #[inline(always)]
+    pub fn in_arb_timeout_num(&self) -> InArbTimeoutNumR {
+        InArbTimeoutNumR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bit 16 - reserved"]
+    #[inline(always)]
+    pub fn in_weight_en(&self) -> InWeightEnR {
+        InWeightEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Set the max number of timeout count of arbiter"]
+    #[inline(always)]
+    pub fn in_arb_timeout_num(&mut self) -> InArbTimeoutNumW<'_, InArbConfigSpec> {
+        InArbTimeoutNumW::new(self, 0)
+    }
+    #[doc = "Bit 16 - reserved"]
+    #[inline(always)]
+    pub fn in_weight_en(&mut self) -> InWeightEnW<'_, InArbConfigSpec> {
+        InWeightEnW::new(self, 16)
+    }
+}
+#[doc = "reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`in_arb_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_arb_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InArbConfigSpec;
+impl crate::RegisterSpec for InArbConfigSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_arb_config::R`](R) reader structure"]
+impl crate::Readable for InArbConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`in_arb_config::W`](W) writer structure"]
+impl crate::Writable for InArbConfigSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IN_ARB_CONFIG to value 0"]
+impl crate::Resettable for InArbConfigSpec {}

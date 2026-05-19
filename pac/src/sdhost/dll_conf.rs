@@ -1,0 +1,42 @@
+#[doc = "Register `DLL_CONF` reader"]
+pub type R = crate::R<DllConfSpec>;
+#[doc = "Register `DLL_CONF` writer"]
+pub type W = crate::W<DllConfSpec>;
+#[doc = "Field `DLL_CAL_STOP` reader - Set 1 to stop calibration."]
+pub type DllCalStopR = crate::BitReader;
+#[doc = "Field `DLL_CAL_STOP` writer - Set 1 to stop calibration."]
+pub type DllCalStopW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DLL_CAL_END` reader - 1 means calibration finished."]
+pub type DllCalEndR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - Set 1 to stop calibration."]
+    #[inline(always)]
+    pub fn dll_cal_stop(&self) -> DllCalStopR {
+        DllCalStopR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - 1 means calibration finished."]
+    #[inline(always)]
+    pub fn dll_cal_end(&self) -> DllCalEndR {
+        DllCalEndR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set 1 to stop calibration."]
+    #[inline(always)]
+    pub fn dll_cal_stop(&mut self) -> DllCalStopW<'_, DllConfSpec> {
+        DllCalStopW::new(self, 0)
+    }
+}
+#[doc = "SDIO DLL configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`dll_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dll_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DllConfSpec;
+impl crate::RegisterSpec for DllConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dll_conf::R`](R) reader structure"]
+impl crate::Readable for DllConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`dll_conf::W`](W) writer structure"]
+impl crate::Writable for DllConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DLL_CONF to value 0"]
+impl crate::Resettable for DllConfSpec {}

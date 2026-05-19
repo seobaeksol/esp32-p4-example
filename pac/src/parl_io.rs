@@ -1,0 +1,250 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    rx_mode_cfg: RxModeCfg,
+    rx_data_cfg: RxDataCfg,
+    rx_genrl_cfg: RxGenrlCfg,
+    rx_start_cfg: RxStartCfg,
+    tx_data_cfg: TxDataCfg,
+    tx_start_cfg: TxStartCfg,
+    tx_genrl_cfg: TxGenrlCfg,
+    fifo_cfg: FifoCfg,
+    reg_update: RegUpdate,
+    st: St,
+    int_ena: IntEna,
+    int_raw: IntRaw,
+    int_st: IntSt,
+    int_clr: IntClr,
+    rx_st0: RxSt0,
+    rx_st1: RxSt1,
+    tx_st0: TxSt0,
+    rx_clk_cfg: RxClkCfg,
+    tx_clk_cfg: TxClkCfg,
+    tx_cs_cfg: TxCsCfg,
+    _reserved20: [u8; 0xd0],
+    clk: Clk,
+    _reserved21: [u8; 0x02d8],
+    version: Version,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Parallel RX Sampling mode configuration register."]
+    #[inline(always)]
+    pub const fn rx_mode_cfg(&self) -> &RxModeCfg {
+        &self.rx_mode_cfg
+    }
+    #[doc = "0x04 - Parallel RX data configuration register."]
+    #[inline(always)]
+    pub const fn rx_data_cfg(&self) -> &RxDataCfg {
+        &self.rx_data_cfg
+    }
+    #[doc = "0x08 - Parallel RX general configuration register."]
+    #[inline(always)]
+    pub const fn rx_genrl_cfg(&self) -> &RxGenrlCfg {
+        &self.rx_genrl_cfg
+    }
+    #[doc = "0x0c - Parallel RX Start configuration register."]
+    #[inline(always)]
+    pub const fn rx_start_cfg(&self) -> &RxStartCfg {
+        &self.rx_start_cfg
+    }
+    #[doc = "0x10 - Parallel TX data configuration register."]
+    #[inline(always)]
+    pub const fn tx_data_cfg(&self) -> &TxDataCfg {
+        &self.tx_data_cfg
+    }
+    #[doc = "0x14 - Parallel TX Start configuration register."]
+    #[inline(always)]
+    pub const fn tx_start_cfg(&self) -> &TxStartCfg {
+        &self.tx_start_cfg
+    }
+    #[doc = "0x18 - Parallel TX general configuration register."]
+    #[inline(always)]
+    pub const fn tx_genrl_cfg(&self) -> &TxGenrlCfg {
+        &self.tx_genrl_cfg
+    }
+    #[doc = "0x1c - Parallel IO FIFO configuration register."]
+    #[inline(always)]
+    pub const fn fifo_cfg(&self) -> &FifoCfg {
+        &self.fifo_cfg
+    }
+    #[doc = "0x20 - Parallel IO FIFO configuration register."]
+    #[inline(always)]
+    pub const fn reg_update(&self) -> &RegUpdate {
+        &self.reg_update
+    }
+    #[doc = "0x24 - Parallel IO module status register0."]
+    #[inline(always)]
+    pub const fn st(&self) -> &St {
+        &self.st
+    }
+    #[doc = "0x28 - Parallel IO interrupt enable singal configuration register."]
+    #[inline(always)]
+    pub const fn int_ena(&self) -> &IntEna {
+        &self.int_ena
+    }
+    #[doc = "0x2c - Parallel IO interrupt raw singal status register."]
+    #[inline(always)]
+    pub const fn int_raw(&self) -> &IntRaw {
+        &self.int_raw
+    }
+    #[doc = "0x30 - Parallel IO interrupt singal status register."]
+    #[inline(always)]
+    pub const fn int_st(&self) -> &IntSt {
+        &self.int_st
+    }
+    #[doc = "0x34 - Parallel IO interrupt clear singal configuration register."]
+    #[inline(always)]
+    pub const fn int_clr(&self) -> &IntClr {
+        &self.int_clr
+    }
+    #[doc = "0x38 - Parallel IO RX status register0"]
+    #[inline(always)]
+    pub const fn rx_st0(&self) -> &RxSt0 {
+        &self.rx_st0
+    }
+    #[doc = "0x3c - Parallel IO RX status register1"]
+    #[inline(always)]
+    pub const fn rx_st1(&self) -> &RxSt1 {
+        &self.rx_st1
+    }
+    #[doc = "0x40 - Parallel IO TX status register0"]
+    #[inline(always)]
+    pub const fn tx_st0(&self) -> &TxSt0 {
+        &self.tx_st0
+    }
+    #[doc = "0x44 - Parallel IO RX clk configuration register"]
+    #[inline(always)]
+    pub const fn rx_clk_cfg(&self) -> &RxClkCfg {
+        &self.rx_clk_cfg
+    }
+    #[doc = "0x48 - Parallel IO TX clk configuration register"]
+    #[inline(always)]
+    pub const fn tx_clk_cfg(&self) -> &TxClkCfg {
+        &self.tx_clk_cfg
+    }
+    #[doc = "0x4c - Parallel IO tx_cs_o generate configuration"]
+    #[inline(always)]
+    pub const fn tx_cs_cfg(&self) -> &TxCsCfg {
+        &self.tx_cs_cfg
+    }
+    #[doc = "0x120 - Parallel IO clk configuration register"]
+    #[inline(always)]
+    pub const fn clk(&self) -> &Clk {
+        &self.clk
+    }
+    #[doc = "0x3fc - Version register."]
+    #[inline(always)]
+    pub const fn version(&self) -> &Version {
+        &self.version
+    }
+}
+#[doc = "RX_MODE_CFG (rw) register accessor: Parallel RX Sampling mode configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_mode_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_mode_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_mode_cfg`] module"]
+#[doc(alias = "RX_MODE_CFG")]
+pub type RxModeCfg = crate::Reg<rx_mode_cfg::RxModeCfgSpec>;
+#[doc = "Parallel RX Sampling mode configuration register."]
+pub mod rx_mode_cfg;
+#[doc = "RX_DATA_CFG (rw) register accessor: Parallel RX data configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_data_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_data_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_data_cfg`] module"]
+#[doc(alias = "RX_DATA_CFG")]
+pub type RxDataCfg = crate::Reg<rx_data_cfg::RxDataCfgSpec>;
+#[doc = "Parallel RX data configuration register."]
+pub mod rx_data_cfg;
+#[doc = "RX_GENRL_CFG (rw) register accessor: Parallel RX general configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_genrl_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_genrl_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_genrl_cfg`] module"]
+#[doc(alias = "RX_GENRL_CFG")]
+pub type RxGenrlCfg = crate::Reg<rx_genrl_cfg::RxGenrlCfgSpec>;
+#[doc = "Parallel RX general configuration register."]
+pub mod rx_genrl_cfg;
+#[doc = "RX_START_CFG (rw) register accessor: Parallel RX Start configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_start_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_start_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_start_cfg`] module"]
+#[doc(alias = "RX_START_CFG")]
+pub type RxStartCfg = crate::Reg<rx_start_cfg::RxStartCfgSpec>;
+#[doc = "Parallel RX Start configuration register."]
+pub mod rx_start_cfg;
+#[doc = "TX_DATA_CFG (rw) register accessor: Parallel TX data configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_data_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_data_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_data_cfg`] module"]
+#[doc(alias = "TX_DATA_CFG")]
+pub type TxDataCfg = crate::Reg<tx_data_cfg::TxDataCfgSpec>;
+#[doc = "Parallel TX data configuration register."]
+pub mod tx_data_cfg;
+#[doc = "TX_START_CFG (rw) register accessor: Parallel TX Start configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_start_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_start_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_start_cfg`] module"]
+#[doc(alias = "TX_START_CFG")]
+pub type TxStartCfg = crate::Reg<tx_start_cfg::TxStartCfgSpec>;
+#[doc = "Parallel TX Start configuration register."]
+pub mod tx_start_cfg;
+#[doc = "TX_GENRL_CFG (rw) register accessor: Parallel TX general configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_genrl_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_genrl_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_genrl_cfg`] module"]
+#[doc(alias = "TX_GENRL_CFG")]
+pub type TxGenrlCfg = crate::Reg<tx_genrl_cfg::TxGenrlCfgSpec>;
+#[doc = "Parallel TX general configuration register."]
+pub mod tx_genrl_cfg;
+#[doc = "FIFO_CFG (rw) register accessor: Parallel IO FIFO configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fifo_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo_cfg`] module"]
+#[doc(alias = "FIFO_CFG")]
+pub type FifoCfg = crate::Reg<fifo_cfg::FifoCfgSpec>;
+#[doc = "Parallel IO FIFO configuration register."]
+pub mod fifo_cfg;
+#[doc = "REG_UPDATE (w) register accessor: Parallel IO FIFO configuration register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_update::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_update`] module"]
+#[doc(alias = "REG_UPDATE")]
+pub type RegUpdate = crate::Reg<reg_update::RegUpdateSpec>;
+#[doc = "Parallel IO FIFO configuration register."]
+pub mod reg_update;
+#[doc = "ST (r) register accessor: Parallel IO module status register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st`] module"]
+#[doc(alias = "ST")]
+pub type St = crate::Reg<st::StSpec>;
+#[doc = "Parallel IO module status register0."]
+pub mod st;
+#[doc = "INT_ENA (rw) register accessor: Parallel IO interrupt enable singal configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc(alias = "INT_ENA")]
+pub type IntEna = crate::Reg<int_ena::IntEnaSpec>;
+#[doc = "Parallel IO interrupt enable singal configuration register."]
+pub mod int_ena;
+#[doc = "INT_RAW (r) register accessor: Parallel IO interrupt raw singal status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc(alias = "INT_RAW")]
+pub type IntRaw = crate::Reg<int_raw::IntRawSpec>;
+#[doc = "Parallel IO interrupt raw singal status register."]
+pub mod int_raw;
+#[doc = "INT_ST (r) register accessor: Parallel IO interrupt singal status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc(alias = "INT_ST")]
+pub type IntSt = crate::Reg<int_st::IntStSpec>;
+#[doc = "Parallel IO interrupt singal status register."]
+pub mod int_st;
+#[doc = "INT_CLR (w) register accessor: Parallel IO interrupt clear singal configuration register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc(alias = "INT_CLR")]
+pub type IntClr = crate::Reg<int_clr::IntClrSpec>;
+#[doc = "Parallel IO interrupt clear singal configuration register."]
+pub mod int_clr;
+#[doc = "RX_ST0 (r) register accessor: Parallel IO RX status register0\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_st0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_st0`] module"]
+#[doc(alias = "RX_ST0")]
+pub type RxSt0 = crate::Reg<rx_st0::RxSt0Spec>;
+#[doc = "Parallel IO RX status register0"]
+pub mod rx_st0;
+#[doc = "RX_ST1 (r) register accessor: Parallel IO RX status register1\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_st1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_st1`] module"]
+#[doc(alias = "RX_ST1")]
+pub type RxSt1 = crate::Reg<rx_st1::RxSt1Spec>;
+#[doc = "Parallel IO RX status register1"]
+pub mod rx_st1;
+#[doc = "TX_ST0 (r) register accessor: Parallel IO TX status register0\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_st0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_st0`] module"]
+#[doc(alias = "TX_ST0")]
+pub type TxSt0 = crate::Reg<tx_st0::TxSt0Spec>;
+#[doc = "Parallel IO TX status register0"]
+pub mod tx_st0;
+#[doc = "RX_CLK_CFG (rw) register accessor: Parallel IO RX clk configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_clk_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_clk_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_clk_cfg`] module"]
+#[doc(alias = "RX_CLK_CFG")]
+pub type RxClkCfg = crate::Reg<rx_clk_cfg::RxClkCfgSpec>;
+#[doc = "Parallel IO RX clk configuration register"]
+pub mod rx_clk_cfg;
+#[doc = "TX_CLK_CFG (rw) register accessor: Parallel IO TX clk configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_clk_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_clk_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_clk_cfg`] module"]
+#[doc(alias = "TX_CLK_CFG")]
+pub type TxClkCfg = crate::Reg<tx_clk_cfg::TxClkCfgSpec>;
+#[doc = "Parallel IO TX clk configuration register"]
+pub mod tx_clk_cfg;
+#[doc = "TX_CS_CFG (rw) register accessor: Parallel IO tx_cs_o generate configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_cs_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_cs_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_cs_cfg`] module"]
+#[doc(alias = "TX_CS_CFG")]
+pub type TxCsCfg = crate::Reg<tx_cs_cfg::TxCsCfgSpec>;
+#[doc = "Parallel IO tx_cs_o generate configuration"]
+pub mod tx_cs_cfg;
+#[doc = "CLK (rw) register accessor: Parallel IO clk configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
+#[doc(alias = "CLK")]
+pub type Clk = crate::Reg<clk::ClkSpec>;
+#[doc = "Parallel IO clk configuration register"]
+pub mod clk;
+#[doc = "VERSION (rw) register accessor: Version register.\n\nYou can [`read`](crate::Reg::read) this register and get [`version::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`version::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@version`] module"]
+#[doc(alias = "VERSION")]
+pub type Version = crate::Reg<version::VersionSpec>;
+#[doc = "Version register."]
+pub mod version;

@@ -1,0 +1,149 @@
+#[doc = "Register `PERI_CLK_CTRL115` reader"]
+pub type R = crate::R<PeriClkCtrl115Spec>;
+#[doc = "Register `PERI_CLK_CTRL115` writer"]
+pub type W = crate::W<PeriClkCtrl115Spec>;
+#[doc = "Field `UART4_SCLK_DIV_NUM` reader - Reserved"]
+pub type Uart4SclkDivNumR = crate::FieldReader;
+#[doc = "Field `UART4_SCLK_DIV_NUM` writer - Reserved"]
+pub type Uart4SclkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `UART4_SCLK_DIV_NUMERATOR` reader - Reserved"]
+pub type Uart4SclkDivNumeratorR = crate::FieldReader;
+#[doc = "Field `UART4_SCLK_DIV_NUMERATOR` writer - Reserved"]
+pub type Uart4SclkDivNumeratorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `UART4_SCLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type Uart4SclkDivDenominatorR = crate::FieldReader;
+#[doc = "Field `UART4_SCLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type Uart4SclkDivDenominatorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `TWAI0_CLK_SRC_SEL` reader - Reserved"]
+pub type Twai0ClkSrcSelR = crate::BitReader;
+#[doc = "Field `TWAI0_CLK_SRC_SEL` writer - Reserved"]
+pub type Twai0ClkSrcSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI0_CLK_EN` reader - Reserved"]
+pub type Twai0ClkEnR = crate::BitReader;
+#[doc = "Field `TWAI0_CLK_EN` writer - Reserved"]
+pub type Twai0ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI1_CLK_SRC_SEL` reader - Reserved"]
+pub type Twai1ClkSrcSelR = crate::BitReader;
+#[doc = "Field `TWAI1_CLK_SRC_SEL` writer - Reserved"]
+pub type Twai1ClkSrcSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI1_CLK_EN` reader - Reserved"]
+pub type Twai1ClkEnR = crate::BitReader;
+#[doc = "Field `TWAI1_CLK_EN` writer - Reserved"]
+pub type Twai1ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI2_CLK_SRC_SEL` reader - Reserved"]
+pub type Twai2ClkSrcSelR = crate::BitReader;
+#[doc = "Field `TWAI2_CLK_SRC_SEL` writer - Reserved"]
+pub type Twai2ClkSrcSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI2_CLK_EN` reader - Reserved"]
+pub type Twai2ClkEnR = crate::BitReader;
+#[doc = "Field `TWAI2_CLK_EN` writer - Reserved"]
+pub type Twai2ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_sclk_div_num(&self) -> Uart4SclkDivNumR {
+        Uart4SclkDivNumR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_sclk_div_numerator(&self) -> Uart4SclkDivNumeratorR {
+        Uart4SclkDivNumeratorR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_sclk_div_denominator(&self) -> Uart4SclkDivDenominatorR {
+        Uart4SclkDivDenominatorR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bit 24 - Reserved"]
+    #[inline(always)]
+    pub fn twai0_clk_src_sel(&self) -> Twai0ClkSrcSelR {
+        Twai0ClkSrcSelR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Reserved"]
+    #[inline(always)]
+    pub fn twai0_clk_en(&self) -> Twai0ClkEnR {
+        Twai0ClkEnR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Reserved"]
+    #[inline(always)]
+    pub fn twai1_clk_src_sel(&self) -> Twai1ClkSrcSelR {
+        Twai1ClkSrcSelR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Reserved"]
+    #[inline(always)]
+    pub fn twai1_clk_en(&self) -> Twai1ClkEnR {
+        Twai1ClkEnR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Reserved"]
+    #[inline(always)]
+    pub fn twai2_clk_src_sel(&self) -> Twai2ClkSrcSelR {
+        Twai2ClkSrcSelR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Reserved"]
+    #[inline(always)]
+    pub fn twai2_clk_en(&self) -> Twai2ClkEnR {
+        Twai2ClkEnR::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_sclk_div_num(&mut self) -> Uart4SclkDivNumW<'_, PeriClkCtrl115Spec> {
+        Uart4SclkDivNumW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_sclk_div_numerator(&mut self) -> Uart4SclkDivNumeratorW<'_, PeriClkCtrl115Spec> {
+        Uart4SclkDivNumeratorW::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_sclk_div_denominator(
+        &mut self,
+    ) -> Uart4SclkDivDenominatorW<'_, PeriClkCtrl115Spec> {
+        Uart4SclkDivDenominatorW::new(self, 16)
+    }
+    #[doc = "Bit 24 - Reserved"]
+    #[inline(always)]
+    pub fn twai0_clk_src_sel(&mut self) -> Twai0ClkSrcSelW<'_, PeriClkCtrl115Spec> {
+        Twai0ClkSrcSelW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Reserved"]
+    #[inline(always)]
+    pub fn twai0_clk_en(&mut self) -> Twai0ClkEnW<'_, PeriClkCtrl115Spec> {
+        Twai0ClkEnW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Reserved"]
+    #[inline(always)]
+    pub fn twai1_clk_src_sel(&mut self) -> Twai1ClkSrcSelW<'_, PeriClkCtrl115Spec> {
+        Twai1ClkSrcSelW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Reserved"]
+    #[inline(always)]
+    pub fn twai1_clk_en(&mut self) -> Twai1ClkEnW<'_, PeriClkCtrl115Spec> {
+        Twai1ClkEnW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Reserved"]
+    #[inline(always)]
+    pub fn twai2_clk_src_sel(&mut self) -> Twai2ClkSrcSelW<'_, PeriClkCtrl115Spec> {
+        Twai2ClkSrcSelW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Reserved"]
+    #[inline(always)]
+    pub fn twai2_clk_en(&mut self) -> Twai2ClkEnW<'_, PeriClkCtrl115Spec> {
+        Twai2ClkEnW::new(self, 29)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl115::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl115::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PeriClkCtrl115Spec;
+impl crate::RegisterSpec for PeriClkCtrl115Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri_clk_ctrl115::R`](R) reader structure"]
+impl crate::Readable for PeriClkCtrl115Spec {}
+#[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl115::W`](W) writer structure"]
+impl crate::Writable for PeriClkCtrl115Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI_CLK_CTRL115 to value 0"]
+impl crate::Resettable for PeriClkCtrl115Spec {}

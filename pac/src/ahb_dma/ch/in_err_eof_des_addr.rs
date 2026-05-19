@@ -1,0 +1,20 @@
+#[doc = "Register `IN_ERR_EOF_DES_ADDR` reader"]
+pub type R = crate::R<InErrEofDesAddrSpec>;
+#[doc = "Field `IN_ERR_EOF_DES_ADDR_CH0` reader - Represents the address of the receive descriptor when there are some errors in the currently received data."]
+pub type InErrEofDesAddrCh0R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Represents the address of the receive descriptor when there are some errors in the currently received data."]
+    #[inline(always)]
+    pub fn in_err_eof_des_addr_ch0(&self) -> InErrEofDesAddrCh0R {
+        InErrEofDesAddrCh0R::new(self.bits)
+    }
+}
+#[doc = "Receive descriptor address when errors occur of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_err_eof_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InErrEofDesAddrSpec;
+impl crate::RegisterSpec for InErrEofDesAddrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_err_eof_des_addr::R`](R) reader structure"]
+impl crate::Readable for InErrEofDesAddrSpec {}
+#[doc = "`reset()` method sets IN_ERR_EOF_DES_ADDR to value 0"]
+impl crate::Resettable for InErrEofDesAddrSpec {}

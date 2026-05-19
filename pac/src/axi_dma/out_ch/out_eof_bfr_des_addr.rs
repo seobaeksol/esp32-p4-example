@@ -1,0 +1,20 @@
+#[doc = "Register `OUT_EOF_BFR_DES_ADDR` reader"]
+pub type R = crate::R<OutEofBfrDesAddrSpec>;
+#[doc = "Field `OUT_EOF_BFR_DES_ADDR` reader - This register stores the address of the outlink descriptor before the last outlink descriptor."]
+pub type OutEofBfrDesAddrR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - This register stores the address of the outlink descriptor before the last outlink descriptor."]
+    #[inline(always)]
+    pub fn out_eof_bfr_des_addr(&self) -> OutEofBfrDesAddrR {
+        OutEofBfrDesAddrR::new(self.bits)
+    }
+}
+#[doc = "The last outlink descriptor address when EOF occurs of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_bfr_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutEofBfrDesAddrSpec;
+impl crate::RegisterSpec for OutEofBfrDesAddrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_eof_bfr_des_addr::R`](R) reader structure"]
+impl crate::Readable for OutEofBfrDesAddrSpec {}
+#[doc = "`reset()` method sets OUT_EOF_BFR_DES_ADDR to value 0"]
+impl crate::Resettable for OutEofBfrDesAddrSpec {}

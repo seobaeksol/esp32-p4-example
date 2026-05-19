@@ -1,0 +1,50 @@
+#[doc = "Register `CMD` writer"]
+pub type W = crate::W<CmdSpec>;
+#[doc = "Field `TX_REQUEST` writer - 1: present, a message shall be transmitted. 0: absent"]
+pub type TxRequestW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ABORT_TX` writer - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
+pub type AbortTxW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RELEASE_BUFFER` writer - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
+pub type ReleaseBufferW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLEAR_DATA_OVERRUN` writer - 1: clear, the data overrun status bit is cleared. 0: no action."]
+pub type ClearDataOverrunW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SELF_RX_REQUEST` writer - 1: present, a message shall be transmitted and received simultaneously. 0: absent."]
+pub type SelfRxRequestW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - 1: present, a message shall be transmitted. 0: absent"]
+    #[inline(always)]
+    pub fn tx_request(&mut self) -> TxRequestW<'_, CmdSpec> {
+        TxRequestW::new(self, 0)
+    }
+    #[doc = "Bit 1 - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
+    #[inline(always)]
+    pub fn abort_tx(&mut self) -> AbortTxW<'_, CmdSpec> {
+        AbortTxW::new(self, 1)
+    }
+    #[doc = "Bit 2 - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
+    #[inline(always)]
+    pub fn release_buffer(&mut self) -> ReleaseBufferW<'_, CmdSpec> {
+        ReleaseBufferW::new(self, 2)
+    }
+    #[doc = "Bit 3 - 1: clear, the data overrun status bit is cleared. 0: no action."]
+    #[inline(always)]
+    pub fn clear_data_overrun(&mut self) -> ClearDataOverrunW<'_, CmdSpec> {
+        ClearDataOverrunW::new(self, 3)
+    }
+    #[doc = "Bit 4 - 1: present, a message shall be transmitted and received simultaneously. 0: absent."]
+    #[inline(always)]
+    pub fn self_rx_request(&mut self) -> SelfRxRequestW<'_, CmdSpec> {
+        SelfRxRequestW::new(self, 4)
+    }
+}
+#[doc = "TWAI command register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmd::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CmdSpec;
+impl crate::RegisterSpec for CmdSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`cmd::W`](W) writer structure"]
+impl crate::Writable for CmdSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CMD to value 0"]
+impl crate::Resettable for CmdSpec {}

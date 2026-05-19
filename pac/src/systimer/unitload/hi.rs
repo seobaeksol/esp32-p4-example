@@ -1,0 +1,35 @@
+#[doc = "Register `HI` reader"]
+pub type R = crate::R<HiSpec>;
+#[doc = "Register `HI` writer"]
+pub type W = crate::W<HiSpec>;
+#[doc = "Field `LOAD_HI` reader - timer unit0 load high 20 bits"]
+pub type LoadHiR = crate::FieldReader<u32>;
+#[doc = "Field `LOAD_HI` writer - timer unit0 load high 20 bits"]
+pub type LoadHiW<'a, REG> = crate::FieldWriter<'a, REG, 20, u32, crate::Safe>;
+impl R {
+    #[doc = "Bits 0:19 - timer unit0 load high 20 bits"]
+    #[inline(always)]
+    pub fn load_hi(&self) -> LoadHiR {
+        LoadHiR::new(self.bits & 0x000f_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:19 - timer unit0 load high 20 bits"]
+    #[inline(always)]
+    pub fn load_hi(&mut self) -> LoadHiW<'_, HiSpec> {
+        LoadHiW::new(self, 0)
+    }
+}
+#[doc = "system timer unit0 value high load register\n\nYou can [`read`](crate::Reg::read) this register and get [`hi::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hi::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HiSpec;
+impl crate::RegisterSpec for HiSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hi::R`](R) reader structure"]
+impl crate::Readable for HiSpec {}
+#[doc = "`write(|w| ..)` method takes [`hi::W`](W) writer structure"]
+impl crate::Writable for HiSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HI to value 0"]
+impl crate::Resettable for HiSpec {}

@@ -1,3 +1,4 @@
+/* External interrupt sources */
 PROVIDE(LP_WDT = DefaultHandler);
 PROVIDE(LP_TIMER0 = DefaultHandler);
 PROVIDE(LP_TIMER1 = DefaultHandler);

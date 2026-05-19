@@ -1,0 +1,77 @@
+#[doc = "Register `BF_MATRIX_CTRL` reader"]
+pub type R = crate::R<BfMatrixCtrlSpec>;
+#[doc = "Register `BF_MATRIX_CTRL` writer"]
+pub type W = crate::W<BfMatrixCtrlSpec>;
+#[doc = "Field `BF_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+pub type BfTailPixenPulseTlR = crate::FieldReader;
+#[doc = "Field `BF_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+pub type BfTailPixenPulseTlW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `BF_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must < hnum-1, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+pub type BfTailPixenPulseThR = crate::FieldReader;
+#[doc = "Field `BF_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must < hnum-1, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+pub type BfTailPixenPulseThW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `BF_PADDING_DATA` reader - this field configures bf matrix padding data"]
+pub type BfPaddingDataR = crate::FieldReader;
+#[doc = "Field `BF_PADDING_DATA` writer - this field configures bf matrix padding data"]
+pub type BfPaddingDataW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `BF_PADDING_MODE` reader - this bit configures the padding mode of bf matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
+pub type BfPaddingModeR = crate::BitReader;
+#[doc = "Field `BF_PADDING_MODE` writer - this bit configures the padding mode of bf matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
+pub type BfPaddingModeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[inline(always)]
+    pub fn bf_tail_pixen_pulse_tl(&self) -> BfTailPixenPulseTlR {
+        BfTailPixenPulseTlR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[inline(always)]
+    pub fn bf_tail_pixen_pulse_th(&self) -> BfTailPixenPulseThR {
+        BfTailPixenPulseThR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field configures bf matrix padding data"]
+    #[inline(always)]
+    pub fn bf_padding_data(&self) -> BfPaddingDataR {
+        BfPaddingDataR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bit 24 - this bit configures the padding mode of bf matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
+    #[inline(always)]
+    pub fn bf_padding_mode(&self) -> BfPaddingModeR {
+        BfPaddingModeR::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[inline(always)]
+    pub fn bf_tail_pixen_pulse_tl(&mut self) -> BfTailPixenPulseTlW<'_, BfMatrixCtrlSpec> {
+        BfTailPixenPulseTlW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_bf_tail_pixen_pulse_th!=0 and reg_bf_tail_pixen_pulse_tl!=0 and reg_bf_tail_pixen_pulse_th < reg_bf_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[inline(always)]
+    pub fn bf_tail_pixen_pulse_th(&mut self) -> BfTailPixenPulseThW<'_, BfMatrixCtrlSpec> {
+        BfTailPixenPulseThW::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - this field configures bf matrix padding data"]
+    #[inline(always)]
+    pub fn bf_padding_data(&mut self) -> BfPaddingDataW<'_, BfMatrixCtrlSpec> {
+        BfPaddingDataW::new(self, 16)
+    }
+    #[doc = "Bit 24 - this bit configures the padding mode of bf matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
+    #[inline(always)]
+    pub fn bf_padding_mode(&mut self) -> BfPaddingModeW<'_, BfMatrixCtrlSpec> {
+        BfPaddingModeW::new(self, 24)
+    }
+}
+#[doc = "bf pix2matrix ctrl\n\nYou can [`read`](crate::Reg::read) this register and get [`bf_matrix_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bf_matrix_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BfMatrixCtrlSpec;
+impl crate::RegisterSpec for BfMatrixCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`bf_matrix_ctrl::R`](R) reader structure"]
+impl crate::Readable for BfMatrixCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`bf_matrix_ctrl::W`](W) writer structure"]
+impl crate::Writable for BfMatrixCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BF_MATRIX_CTRL to value 0"]
+impl crate::Resettable for BfMatrixCtrlSpec {}

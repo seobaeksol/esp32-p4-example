@@ -1,0 +1,20 @@
+#[doc = "Register `OUT_DSCR` reader"]
+pub type R = crate::R<OutDscrSpec>;
+#[doc = "Field `OUTLINK_DSCR` reader - The address of the current outlink descriptor y."]
+pub type OutlinkDscrR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - The address of the current outlink descriptor y."]
+    #[inline(always)]
+    pub fn outlink_dscr(&self) -> OutlinkDscrR {
+        OutlinkDscrR::new(self.bits)
+    }
+}
+#[doc = "Current outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_dscr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutDscrSpec;
+impl crate::RegisterSpec for OutDscrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_dscr::R`](R) reader structure"]
+impl crate::Readable for OutDscrSpec {}
+#[doc = "`reset()` method sets OUT_DSCR to value 0"]
+impl crate::Resettable for OutDscrSpec {}

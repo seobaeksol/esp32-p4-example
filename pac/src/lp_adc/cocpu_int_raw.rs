@@ -1,0 +1,105 @@
+#[doc = "Register `COCPU_INT_RAW` reader"]
+pub type R = crate::R<CocpuIntRawSpec>;
+#[doc = "Register `COCPU_INT_RAW` writer"]
+pub type W = crate::W<CocpuIntRawSpec>;
+#[doc = "Field `COCPU_SARADC1_INT_RAW` reader - ADC1 Conversion is done, int raw."]
+pub type CocpuSaradc1IntRawR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC1_INT_RAW` writer - ADC1 Conversion is done, int raw."]
+pub type CocpuSaradc1IntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_INT_RAW` reader - ADC2 Conversion is done, int raw."]
+pub type CocpuSaradc2IntRawR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC2_INT_RAW` writer - ADC2 Conversion is done, int raw."]
+pub type CocpuSaradc2IntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC1_ERROR_INT_RAW` reader - An errro occurs from ADC1, int raw."]
+pub type CocpuSaradc1ErrorIntRawR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC1_ERROR_INT_RAW` writer - An errro occurs from ADC1, int raw."]
+pub type CocpuSaradc1ErrorIntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_ERROR_INT_RAW` reader - An errro occurs from ADC2, int raw."]
+pub type CocpuSaradc2ErrorIntRawR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC2_ERROR_INT_RAW` writer - An errro occurs from ADC2, int raw."]
+pub type CocpuSaradc2ErrorIntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC1_WAKE_INT_RAW` reader - A wakeup event is triggered from ADC1, int raw."]
+pub type CocpuSaradc1WakeIntRawR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC1_WAKE_INT_RAW` writer - A wakeup event is triggered from ADC1, int raw."]
+pub type CocpuSaradc1WakeIntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_WAKE_INT_RAW` reader - A wakeup event is triggered from ADC2, int raw."]
+pub type CocpuSaradc2WakeIntRawR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC2_WAKE_INT_RAW` writer - A wakeup event is triggered from ADC2, int raw."]
+pub type CocpuSaradc2WakeIntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - ADC1 Conversion is done, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_int_raw(&self) -> CocpuSaradc1IntRawR {
+        CocpuSaradc1IntRawR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - ADC2 Conversion is done, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_int_raw(&self) -> CocpuSaradc2IntRawR {
+        CocpuSaradc2IntRawR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - An errro occurs from ADC1, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_error_int_raw(&self) -> CocpuSaradc1ErrorIntRawR {
+        CocpuSaradc1ErrorIntRawR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - An errro occurs from ADC2, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_error_int_raw(&self) -> CocpuSaradc2ErrorIntRawR {
+        CocpuSaradc2ErrorIntRawR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_wake_int_raw(&self) -> CocpuSaradc1WakeIntRawR {
+        CocpuSaradc1WakeIntRawR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_wake_int_raw(&self) -> CocpuSaradc2WakeIntRawR {
+        CocpuSaradc2WakeIntRawR::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - ADC1 Conversion is done, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_int_raw(&mut self) -> CocpuSaradc1IntRawW<'_, CocpuIntRawSpec> {
+        CocpuSaradc1IntRawW::new(self, 0)
+    }
+    #[doc = "Bit 1 - ADC2 Conversion is done, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_int_raw(&mut self) -> CocpuSaradc2IntRawW<'_, CocpuIntRawSpec> {
+        CocpuSaradc2IntRawW::new(self, 1)
+    }
+    #[doc = "Bit 2 - An errro occurs from ADC1, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_error_int_raw(&mut self) -> CocpuSaradc1ErrorIntRawW<'_, CocpuIntRawSpec> {
+        CocpuSaradc1ErrorIntRawW::new(self, 2)
+    }
+    #[doc = "Bit 3 - An errro occurs from ADC2, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_error_int_raw(&mut self) -> CocpuSaradc2ErrorIntRawW<'_, CocpuIntRawSpec> {
+        CocpuSaradc2ErrorIntRawW::new(self, 3)
+    }
+    #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_wake_int_raw(&mut self) -> CocpuSaradc1WakeIntRawW<'_, CocpuIntRawSpec> {
+        CocpuSaradc1WakeIntRawW::new(self, 4)
+    }
+    #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int raw."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_wake_int_raw(&mut self) -> CocpuSaradc2WakeIntRawW<'_, CocpuIntRawSpec> {
+        CocpuSaradc2WakeIntRawW::new(self, 5)
+    }
+}
+#[doc = "Interrupt raw registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`cocpu_int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cocpu_int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CocpuIntRawSpec;
+impl crate::RegisterSpec for CocpuIntRawSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cocpu_int_raw::R`](R) reader structure"]
+impl crate::Readable for CocpuIntRawSpec {}
+#[doc = "`write(|w| ..)` method takes [`cocpu_int_raw::W`](W) writer structure"]
+impl crate::Writable for CocpuIntRawSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets COCPU_INT_RAW to value 0"]
+impl crate::Resettable for CocpuIntRawSpec {}

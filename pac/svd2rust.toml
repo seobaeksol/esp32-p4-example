@@ -1,4 +1,6 @@
 target = "riscv"
 edition = "2024"
 
-[riscv]
+[settings.riscv_config]
+base_isa = "rv32i"
+singletones = true

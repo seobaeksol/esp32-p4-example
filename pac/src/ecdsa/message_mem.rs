@@ -1,0 +1,23 @@
+#[doc = "Register `MESSAGE_MEM[%s]` reader"]
+pub type R = crate::R<MessageMemSpec>;
+#[doc = "Register `MESSAGE_MEM[%s]` writer"]
+pub type W = crate::W<MessageMemSpec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl W {}
+#[doc = "The memory that stores message.\n\nYou can [`read`](crate::Reg::read) this register and get [`message_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`message_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MessageMemSpec;
+impl crate::RegisterSpec for MessageMemSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`message_mem::R`](R) reader structure"]
+impl crate::Readable for MessageMemSpec {}
+#[doc = "`write(|w| ..)` method takes [`message_mem::W`](W) writer structure"]
+impl crate::Writable for MessageMemSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets MESSAGE_MEM[%s] to value 0"]
+impl crate::Resettable for MessageMemSpec {}

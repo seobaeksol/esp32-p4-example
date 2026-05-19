@@ -1,0 +1,141 @@
+#[doc = "Register `L2_CACHE_CACHESIZE_CONF` reader"]
+pub type R = crate::R<L2CacheCachesizeConfSpec>;
+#[doc = "Register `L2_CACHE_CACHESIZE_CONF` writer"]
+pub type W = crate::W<L2CacheCachesizeConfSpec>;
+#[doc = "Field `L2_CACHE_CACHESIZE_256` reader - The field is used to configure cachesize of L2-Cache as 256 bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize256R = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_512` reader - The field is used to configure cachesize of L2-Cache as 512 bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize512R = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_1K` reader - The field is used to configure cachesize of L2-Cache as 1k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize1kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_2K` reader - The field is used to configure cachesize of L2-Cache as 2k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize2kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_4K` reader - The field is used to configure cachesize of L2-Cache as 4k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize4kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_8K` reader - The field is used to configure cachesize of L2-Cache as 8k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize8kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_16K` reader - The field is used to configure cachesize of L2-Cache as 16k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize16kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_32K` reader - The field is used to configure cachesize of L2-Cache as 32k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize32kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_64K` reader - The field is used to configure cachesize of L2-Cache as 64k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize64kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_128K` reader - The field is used to configure cachesize of L2-Cache as 128k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize128kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_128K` writer - The field is used to configure cachesize of L2-Cache as 128k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize128kW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_CACHE_CACHESIZE_256K` reader - The field is used to configure cachesize of L2-Cache as 256k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize256kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_256K` writer - The field is used to configure cachesize of L2-Cache as 256k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize256kW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_CACHE_CACHESIZE_512K` reader - The field is used to configure cachesize of L2-Cache as 512k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize512kR = crate::BitReader;
+#[doc = "Field `L2_CACHE_CACHESIZE_512K` writer - The field is used to configure cachesize of L2-Cache as 512k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize512kW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_CACHE_CACHESIZE_1024K` reader - The field is used to configure cachesize of L2-Cache as 1024k bytes. This field and all other fields within this register is onehot."]
+pub type L2CacheCachesize1024kR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - The field is used to configure cachesize of L2-Cache as 256 bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_256(&self) -> L2CacheCachesize256R {
+        L2CacheCachesize256R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The field is used to configure cachesize of L2-Cache as 512 bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_512(&self) -> L2CacheCachesize512R {
+        L2CacheCachesize512R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The field is used to configure cachesize of L2-Cache as 1k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_1k(&self) -> L2CacheCachesize1kR {
+        L2CacheCachesize1kR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - The field is used to configure cachesize of L2-Cache as 2k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_2k(&self) -> L2CacheCachesize2kR {
+        L2CacheCachesize2kR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - The field is used to configure cachesize of L2-Cache as 4k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_4k(&self) -> L2CacheCachesize4kR {
+        L2CacheCachesize4kR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - The field is used to configure cachesize of L2-Cache as 8k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_8k(&self) -> L2CacheCachesize8kR {
+        L2CacheCachesize8kR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The field is used to configure cachesize of L2-Cache as 16k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_16k(&self) -> L2CacheCachesize16kR {
+        L2CacheCachesize16kR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - The field is used to configure cachesize of L2-Cache as 32k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_32k(&self) -> L2CacheCachesize32kR {
+        L2CacheCachesize32kR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - The field is used to configure cachesize of L2-Cache as 64k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_64k(&self) -> L2CacheCachesize64kR {
+        L2CacheCachesize64kR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The field is used to configure cachesize of L2-Cache as 128k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_128k(&self) -> L2CacheCachesize128kR {
+        L2CacheCachesize128kR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - The field is used to configure cachesize of L2-Cache as 256k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_256k(&self) -> L2CacheCachesize256kR {
+        L2CacheCachesize256kR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - The field is used to configure cachesize of L2-Cache as 512k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_512k(&self) -> L2CacheCachesize512kR {
+        L2CacheCachesize512kR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - The field is used to configure cachesize of L2-Cache as 1024k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_1024k(&self) -> L2CacheCachesize1024kR {
+        L2CacheCachesize1024kR::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 9 - The field is used to configure cachesize of L2-Cache as 128k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_128k(
+        &mut self,
+    ) -> L2CacheCachesize128kW<'_, L2CacheCachesizeConfSpec> {
+        L2CacheCachesize128kW::new(self, 9)
+    }
+    #[doc = "Bit 10 - The field is used to configure cachesize of L2-Cache as 256k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_256k(
+        &mut self,
+    ) -> L2CacheCachesize256kW<'_, L2CacheCachesizeConfSpec> {
+        L2CacheCachesize256kW::new(self, 10)
+    }
+    #[doc = "Bit 11 - The field is used to configure cachesize of L2-Cache as 512k bytes. This field and all other fields within this register is onehot."]
+    #[inline(always)]
+    pub fn l2_cache_cachesize_512k(
+        &mut self,
+    ) -> L2CacheCachesize512kW<'_, L2CacheCachesizeConfSpec> {
+        L2CacheCachesize512kW::new(self, 11)
+    }
+}
+#[doc = "L2 Cache CacheSize mode configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_cachesize_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_cachesize_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CacheCachesizeConfSpec;
+impl crate::RegisterSpec for L2CacheCachesizeConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_cachesize_conf::R`](R) reader structure"]
+impl crate::Readable for L2CacheCachesizeConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_cache_cachesize_conf::W`](W) writer structure"]
+impl crate::Writable for L2CacheCachesizeConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_CACHE_CACHESIZE_CONF to value 0x0200"]
+impl crate::Resettable for L2CacheCachesizeConfSpec {
+    const RESET_VALUE: u32 = 0x0200;
+}

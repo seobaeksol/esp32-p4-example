@@ -1,0 +1,35 @@
+#[doc = "Register `BOD_MODE1_CNTL` reader"]
+pub type R = crate::R<BodMode1CntlSpec>;
+#[doc = "Register `BOD_MODE1_CNTL` writer"]
+pub type W = crate::W<BodMode1CntlSpec>;
+#[doc = "Field `BOD_MODE1_RESET_ENA` reader - need_des"]
+pub type BodMode1ResetEnaR = crate::BitReader;
+#[doc = "Field `BOD_MODE1_RESET_ENA` writer - need_des"]
+pub type BodMode1ResetEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn bod_mode1_reset_ena(&self) -> BodMode1ResetEnaR {
+        BodMode1ResetEnaR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn bod_mode1_reset_ena(&mut self) -> BodMode1ResetEnaW<'_, BodMode1CntlSpec> {
+        BodMode1ResetEnaW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`bod_mode1_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bod_mode1_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BodMode1CntlSpec;
+impl crate::RegisterSpec for BodMode1CntlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`bod_mode1_cntl::R`](R) reader structure"]
+impl crate::Readable for BodMode1CntlSpec {}
+#[doc = "`write(|w| ..)` method takes [`bod_mode1_cntl::W`](W) writer structure"]
+impl crate::Writable for BodMode1CntlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BOD_MODE1_CNTL to value 0"]
+impl crate::Resettable for BodMode1CntlSpec {}

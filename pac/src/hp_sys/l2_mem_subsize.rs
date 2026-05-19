@@ -1,0 +1,35 @@
+#[doc = "Register `L2_MEM_SUBSIZE` reader"]
+pub type R = crate::R<L2MemSubsizeSpec>;
+#[doc = "Register `L2_MEM_SUBSIZE` writer"]
+pub type W = crate::W<L2MemSubsizeSpec>;
+#[doc = "Field `REG_L2_MEM_SUB_BLKSIZE` reader - l2mem sub block size 00=>32 01=>64 10=>128 11=>256"]
+pub type RegL2MemSubBlksizeR = crate::FieldReader;
+#[doc = "Field `REG_L2_MEM_SUB_BLKSIZE` writer - l2mem sub block size 00=>32 01=>64 10=>128 11=>256"]
+pub type RegL2MemSubBlksizeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+impl R {
+    #[doc = "Bits 0:1 - l2mem sub block size 00=>32 01=>64 10=>128 11=>256"]
+    #[inline(always)]
+    pub fn reg_l2_mem_sub_blksize(&self) -> RegL2MemSubBlksizeR {
+        RegL2MemSubBlksizeR::new((self.bits & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:1 - l2mem sub block size 00=>32 01=>64 10=>128 11=>256"]
+    #[inline(always)]
+    pub fn reg_l2_mem_sub_blksize(&mut self) -> RegL2MemSubBlksizeW<'_, L2MemSubsizeSpec> {
+        RegL2MemSubBlksizeW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_mem_subsize::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_mem_subsize::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2MemSubsizeSpec;
+impl crate::RegisterSpec for L2MemSubsizeSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_mem_subsize::R`](R) reader structure"]
+impl crate::Readable for L2MemSubsizeSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_mem_subsize::W`](W) writer structure"]
+impl crate::Writable for L2MemSubsizeSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_MEM_SUBSIZE to value 0"]
+impl crate::Resettable for L2MemSubsizeSpec {}

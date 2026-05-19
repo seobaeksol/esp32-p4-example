@@ -1,0 +1,49 @@
+#[doc = "Register `INT_ENA` reader"]
+pub type R = crate::R<IntEnaSpec>;
+#[doc = "Register `INT_ENA` writer"]
+pub type W = crate::W<IntEnaSpec>;
+#[doc = "Field `SUPER_WDT` reader - need_des"]
+pub type SuperWdtR = crate::BitReader;
+#[doc = "Field `SUPER_WDT` writer - need_des"]
+pub type SuperWdtW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_WDT` reader - need_des"]
+pub type LpWdtR = crate::BitReader;
+#[doc = "Field `LP_WDT` writer - need_des"]
+pub type LpWdtW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn super_wdt(&self) -> SuperWdtR {
+        SuperWdtR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_wdt(&self) -> LpWdtR {
+        LpWdtR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn super_wdt(&mut self) -> SuperWdtW<'_, IntEnaSpec> {
+        SuperWdtW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_wdt(&mut self) -> LpWdtW<'_, IntEnaSpec> {
+        LpWdtW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntEnaSpec;
+impl crate::RegisterSpec for IntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for IntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+impl crate::Writable for IntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_ENA to value 0"]
+impl crate::Resettable for IntEnaSpec {}

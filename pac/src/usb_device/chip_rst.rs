@@ -1,0 +1,49 @@
+#[doc = "Register `CHIP_RST` reader"]
+pub type R = crate::R<ChipRstSpec>;
+#[doc = "Register `CHIP_RST` writer"]
+pub type W = crate::W<ChipRstSpec>;
+#[doc = "Field `RTS` reader - 1: Chip reset is detected from usb serial channel. Software write 1 to clear it."]
+pub type RtsR = crate::BitReader;
+#[doc = "Field `DTR` reader - 1: Chip reset is detected from usb jtag channel. Software write 1 to clear it."]
+pub type DtrR = crate::BitReader;
+#[doc = "Field `USB_UART_CHIP_RST_DIS` reader - Set this bit to disable chip reset from usb serial channel to reset chip."]
+pub type UsbUartChipRstDisR = crate::BitReader;
+#[doc = "Field `USB_UART_CHIP_RST_DIS` writer - Set this bit to disable chip reset from usb serial channel to reset chip."]
+pub type UsbUartChipRstDisW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - 1: Chip reset is detected from usb serial channel. Software write 1 to clear it."]
+    #[inline(always)]
+    pub fn rts(&self) -> RtsR {
+        RtsR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - 1: Chip reset is detected from usb jtag channel. Software write 1 to clear it."]
+    #[inline(always)]
+    pub fn dtr(&self) -> DtrR {
+        DtrR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Set this bit to disable chip reset from usb serial channel to reset chip."]
+    #[inline(always)]
+    pub fn usb_uart_chip_rst_dis(&self) -> UsbUartChipRstDisR {
+        UsbUartChipRstDisR::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 2 - Set this bit to disable chip reset from usb serial channel to reset chip."]
+    #[inline(always)]
+    pub fn usb_uart_chip_rst_dis(&mut self) -> UsbUartChipRstDisW<'_, ChipRstSpec> {
+        UsbUartChipRstDisW::new(self, 2)
+    }
+}
+#[doc = "CDC-ACM chip reset control.\n\nYou can [`read`](crate::Reg::read) this register and get [`chip_rst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chip_rst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChipRstSpec;
+impl crate::RegisterSpec for ChipRstSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`chip_rst::R`](R) reader structure"]
+impl crate::Readable for ChipRstSpec {}
+#[doc = "`write(|w| ..)` method takes [`chip_rst::W`](W) writer structure"]
+impl crate::Writable for ChipRstSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CHIP_RST to value 0"]
+impl crate::Resettable for ChipRstSpec {}

@@ -1,0 +1,63 @@
+#[doc = "Register `PERI_CLK_CTRL120` reader"]
+pub type R = crate::R<PeriClkCtrl120Spec>;
+#[doc = "Register `PERI_CLK_CTRL120` writer"]
+pub type W = crate::W<PeriClkCtrl120Spec>;
+#[doc = "Field `CAM_CLK_DIV_NUM` reader - Reserved"]
+pub type CamClkDivNumR = crate::FieldReader;
+#[doc = "Field `CAM_CLK_DIV_NUM` writer - Reserved"]
+pub type CamClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `CAM_CLK_DIV_NUMERATOR` reader - Reserved"]
+pub type CamClkDivNumeratorR = crate::FieldReader;
+#[doc = "Field `CAM_CLK_DIV_NUMERATOR` writer - Reserved"]
+pub type CamClkDivNumeratorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `CAM_CLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type CamClkDivDenominatorR = crate::FieldReader;
+#[doc = "Field `CAM_CLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type CamClkDivDenominatorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn cam_clk_div_num(&self) -> CamClkDivNumR {
+        CamClkDivNumR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn cam_clk_div_numerator(&self) -> CamClkDivNumeratorR {
+        CamClkDivNumeratorR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - Reserved"]
+    #[inline(always)]
+    pub fn cam_clk_div_denominator(&self) -> CamClkDivDenominatorR {
+        CamClkDivDenominatorR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn cam_clk_div_num(&mut self) -> CamClkDivNumW<'_, PeriClkCtrl120Spec> {
+        CamClkDivNumW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn cam_clk_div_numerator(&mut self) -> CamClkDivNumeratorW<'_, PeriClkCtrl120Spec> {
+        CamClkDivNumeratorW::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - Reserved"]
+    #[inline(always)]
+    pub fn cam_clk_div_denominator(&mut self) -> CamClkDivDenominatorW<'_, PeriClkCtrl120Spec> {
+        CamClkDivDenominatorW::new(self, 16)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl120::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl120::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PeriClkCtrl120Spec;
+impl crate::RegisterSpec for PeriClkCtrl120Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri_clk_ctrl120::R`](R) reader structure"]
+impl crate::Readable for PeriClkCtrl120Spec {}
+#[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl120::W`](W) writer structure"]
+impl crate::Writable for PeriClkCtrl120Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI_CLK_CTRL120 to value 0"]
+impl crate::Resettable for PeriClkCtrl120Spec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `L1_IBUS1_ACS_HIT_CNT` reader"]
+pub type R = crate::R<L1Ibus1AcsHitCntSpec>;
+#[doc = "Field `L1_IBUS1_HIT_CNT` reader - The register records the number of hits when bus1 accesses L1-ICache1."]
+pub type L1Ibus1HitCntR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - The register records the number of hits when bus1 accesses L1-ICache1."]
+    #[inline(always)]
+    pub fn l1_ibus1_hit_cnt(&self) -> L1Ibus1HitCntR {
+        L1Ibus1HitCntR::new(self.bits)
+    }
+}
+#[doc = "L1-ICache bus1 Hit-Access Counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_ibus1_acs_hit_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1Ibus1AcsHitCntSpec;
+impl crate::RegisterSpec for L1Ibus1AcsHitCntSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_ibus1_acs_hit_cnt::R`](R) reader structure"]
+impl crate::Readable for L1Ibus1AcsHitCntSpec {}
+#[doc = "`reset()` method sets L1_IBUS1_ACS_HIT_CNT to value 0"]
+impl crate::Resettable for L1Ibus1AcsHitCntSpec {}

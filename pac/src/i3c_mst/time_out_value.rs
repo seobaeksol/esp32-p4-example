@@ -1,0 +1,135 @@
+#[doc = "Register `TIME_OUT_VALUE` reader"]
+pub type R = crate::R<TimeOutValueSpec>;
+#[doc = "Register `TIME_OUT_VALUE` writer"]
+pub type W = crate::W<TimeOutValueSpec>;
+#[doc = "Field `REG_RESP_BUF_TO_VALUE` reader - NA"]
+pub type RegRespBufToValueR = crate::FieldReader;
+#[doc = "Field `REG_RESP_BUF_TO_VALUE` writer - NA"]
+pub type RegRespBufToValueW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `REG_RESP_BUF_TO_EN` reader - NA"]
+pub type RegRespBufToEnR = crate::BitReader;
+#[doc = "Field `REG_RESP_BUF_TO_EN` writer - NA"]
+pub type RegRespBufToEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_IBI_DATA_BUF_TO_VALUE` reader - NA"]
+pub type RegIbiDataBufToValueR = crate::FieldReader;
+#[doc = "Field `REG_IBI_DATA_BUF_TO_VALUE` writer - NA"]
+pub type RegIbiDataBufToValueW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `REG_IBI_DATA_BUF_TO_EN` reader - NA"]
+pub type RegIbiDataBufToEnR = crate::BitReader;
+#[doc = "Field `REG_IBI_DATA_BUF_TO_EN` writer - NA"]
+pub type RegIbiDataBufToEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_IBI_STATUS_BUF_TO_VALUE` reader - NA"]
+pub type RegIbiStatusBufToValueR = crate::FieldReader;
+#[doc = "Field `REG_IBI_STATUS_BUF_TO_VALUE` writer - NA"]
+pub type RegIbiStatusBufToValueW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `REG_IBI_STATUS_BUF_TO_EN` reader - NA"]
+pub type RegIbiStatusBufToEnR = crate::BitReader;
+#[doc = "Field `REG_IBI_STATUS_BUF_TO_EN` writer - NA"]
+pub type RegIbiStatusBufToEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_RX_DATA_BUF_TO_VALUE` reader - NA"]
+pub type RegRxDataBufToValueR = crate::FieldReader;
+#[doc = "Field `REG_RX_DATA_BUF_TO_VALUE` writer - NA"]
+pub type RegRxDataBufToValueW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `REG_RX_DATA_BUF_TO_EN` reader - NA"]
+pub type RegRxDataBufToEnR = crate::BitReader;
+#[doc = "Field `REG_RX_DATA_BUF_TO_EN` writer - NA"]
+pub type RegRxDataBufToEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:4 - NA"]
+    #[inline(always)]
+    pub fn reg_resp_buf_to_value(&self) -> RegRespBufToValueR {
+        RegRespBufToValueR::new((self.bits & 0x1f) as u8)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn reg_resp_buf_to_en(&self) -> RegRespBufToEnR {
+        RegRespBufToEnR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bits 6:10 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_data_buf_to_value(&self) -> RegIbiDataBufToValueR {
+        RegIbiDataBufToValueR::new(((self.bits >> 6) & 0x1f) as u8)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_data_buf_to_en(&self) -> RegIbiDataBufToEnR {
+        RegIbiDataBufToEnR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bits 12:16 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_status_buf_to_value(&self) -> RegIbiStatusBufToValueR {
+        RegIbiStatusBufToValueR::new(((self.bits >> 12) & 0x1f) as u8)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_status_buf_to_en(&self) -> RegIbiStatusBufToEnR {
+        RegIbiStatusBufToEnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bits 18:22 - NA"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_to_value(&self) -> RegRxDataBufToValueR {
+        RegRxDataBufToValueR::new(((self.bits >> 18) & 0x1f) as u8)
+    }
+    #[doc = "Bit 23 - NA"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_to_en(&self) -> RegRxDataBufToEnR {
+        RegRxDataBufToEnR::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - NA"]
+    #[inline(always)]
+    pub fn reg_resp_buf_to_value(&mut self) -> RegRespBufToValueW<'_, TimeOutValueSpec> {
+        RegRespBufToValueW::new(self, 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn reg_resp_buf_to_en(&mut self) -> RegRespBufToEnW<'_, TimeOutValueSpec> {
+        RegRespBufToEnW::new(self, 5)
+    }
+    #[doc = "Bits 6:10 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_data_buf_to_value(&mut self) -> RegIbiDataBufToValueW<'_, TimeOutValueSpec> {
+        RegIbiDataBufToValueW::new(self, 6)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_data_buf_to_en(&mut self) -> RegIbiDataBufToEnW<'_, TimeOutValueSpec> {
+        RegIbiDataBufToEnW::new(self, 11)
+    }
+    #[doc = "Bits 12:16 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_status_buf_to_value(&mut self) -> RegIbiStatusBufToValueW<'_, TimeOutValueSpec> {
+        RegIbiStatusBufToValueW::new(self, 12)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_status_buf_to_en(&mut self) -> RegIbiStatusBufToEnW<'_, TimeOutValueSpec> {
+        RegIbiStatusBufToEnW::new(self, 17)
+    }
+    #[doc = "Bits 18:22 - NA"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_to_value(&mut self) -> RegRxDataBufToValueW<'_, TimeOutValueSpec> {
+        RegRxDataBufToValueW::new(self, 18)
+    }
+    #[doc = "Bit 23 - NA"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_to_en(&mut self) -> RegRxDataBufToEnW<'_, TimeOutValueSpec> {
+        RegRxDataBufToEnW::new(self, 23)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`time_out_value::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`time_out_value::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TimeOutValueSpec;
+impl crate::RegisterSpec for TimeOutValueSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`time_out_value::R`](R) reader structure"]
+impl crate::Readable for TimeOutValueSpec {}
+#[doc = "`write(|w| ..)` method takes [`time_out_value::W`](W) writer structure"]
+impl crate::Writable for TimeOutValueSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TIME_OUT_VALUE to value 0x0041_0410"]
+impl crate::Resettable for TimeOutValueSpec {
+    const RESET_VALUE: u32 = 0x0041_0410;
+}

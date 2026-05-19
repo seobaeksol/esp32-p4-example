@@ -1,0 +1,34 @@
+#[doc = "Register `SYS_STATUS` reader"]
+pub type R = crate::R<SysStatusSpec>;
+#[doc = "Field `FRAME_NUM` reader - Represents current frame number."]
+pub type FrameNumR = crate::FieldReader<u16>;
+#[doc = "Field `DUAL_STREAM_SEL` reader - Represents which register group is used for cur frame.\\\\0: Register group A is used\\\\1: Register group B is used."]
+pub type DualStreamSelR = crate::BitReader;
+#[doc = "Field `INTRA_FLAG` reader - Represents the type of current encoding frame.\\\\0: P frame\\\\1: I frame."]
+pub type IntraFlagR = crate::BitReader;
+impl R {
+    #[doc = "Bits 0:8 - Represents current frame number."]
+    #[inline(always)]
+    pub fn frame_num(&self) -> FrameNumR {
+        FrameNumR::new((self.bits & 0x01ff) as u16)
+    }
+    #[doc = "Bit 9 - Represents which register group is used for cur frame.\\\\0: Register group A is used\\\\1: Register group B is used."]
+    #[inline(always)]
+    pub fn dual_stream_sel(&self) -> DualStreamSelR {
+        DualStreamSelR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Represents the type of current encoding frame.\\\\0: P frame\\\\1: I frame."]
+    #[inline(always)]
+    pub fn intra_flag(&self) -> IntraFlagR {
+        IntraFlagR::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[doc = "System status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`sys_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SysStatusSpec;
+impl crate::RegisterSpec for SysStatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sys_status::R`](R) reader structure"]
+impl crate::Readable for SysStatusSpec {}
+#[doc = "`reset()` method sets SYS_STATUS to value 0"]
+impl crate::Resettable for SysStatusSpec {}

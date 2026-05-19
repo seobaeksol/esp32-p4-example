@@ -1,0 +1,35 @@
+#[doc = "Register `AE_WIN_RECIPROCAL` reader"]
+pub type R = crate::R<AeWinReciprocalSpec>;
+#[doc = "Register `AE_WIN_RECIPROCAL` writer"]
+pub type W = crate::W<AeWinReciprocalSpec>;
+#[doc = "Field `AE_SUBWIN_RECIP` reader - this field configures the reciprocal of each subwin_pixnum, 20bit fraction"]
+pub type AeSubwinRecipR = crate::FieldReader<u32>;
+#[doc = "Field `AE_SUBWIN_RECIP` writer - this field configures the reciprocal of each subwin_pixnum, 20bit fraction"]
+pub type AeSubwinRecipW<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
+impl R {
+    #[doc = "Bits 0:19 - this field configures the reciprocal of each subwin_pixnum, 20bit fraction"]
+    #[inline(always)]
+    pub fn ae_subwin_recip(&self) -> AeSubwinRecipR {
+        AeSubwinRecipR::new(self.bits & 0x000f_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:19 - this field configures the reciprocal of each subwin_pixnum, 20bit fraction"]
+    #[inline(always)]
+    pub fn ae_subwin_recip(&mut self) -> AeSubwinRecipW<'_, AeWinReciprocalSpec> {
+        AeSubwinRecipW::new(self, 0)
+    }
+}
+#[doc = "reciprocal of ae sub-window pixel number\n\nYou can [`read`](crate::Reg::read) this register and get [`ae_win_reciprocal::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ae_win_reciprocal::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AeWinReciprocalSpec;
+impl crate::RegisterSpec for AeWinReciprocalSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ae_win_reciprocal::R`](R) reader structure"]
+impl crate::Readable for AeWinReciprocalSpec {}
+#[doc = "`write(|w| ..)` method takes [`ae_win_reciprocal::W`](W) writer structure"]
+impl crate::Writable for AeWinReciprocalSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AE_WIN_RECIPROCAL to value 0"]
+impl crate::Resettable for AeWinReciprocalSpec {}

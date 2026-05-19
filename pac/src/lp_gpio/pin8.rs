@@ -1,0 +1,70 @@
+#[doc = "Register `PIN8` reader"]
+pub type R = crate::R<Pin8Spec>;
+#[doc = "Register `PIN8` writer"]
+pub type W = crate::W<Pin8Spec>;
+#[doc = "Field `REG_GPIO_PIN8_WAKEUP_ENABLE` reader - Reserved"]
+pub type RegGpioPin8WakeupEnableR = crate::BitReader;
+#[doc = "Field `REG_GPIO_PIN8_WAKEUP_ENABLE` writer - Reserved"]
+pub type RegGpioPin8WakeupEnableW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPIO_PIN8_INT_TYPE` reader - Reserved"]
+pub type RegGpioPin8IntTypeR = crate::FieldReader;
+#[doc = "Field `REG_GPIO_PIN8_INT_TYPE` writer - Reserved"]
+pub type RegGpioPin8IntTypeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `REG_GPIO_PIN8_PAD_DRIVER` reader - Reserved"]
+pub type RegGpioPin8PadDriverR = crate::BitReader;
+#[doc = "Field `REG_GPIO_PIN8_PAD_DRIVER` writer - Reserved"]
+pub type RegGpioPin8PadDriverW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_GPI8_PIN0_EDGE_WAKEUP_CLR` writer - need des"]
+pub type RegGpi8Pin0EdgeWakeupClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin8_wakeup_enable(&self) -> RegGpioPin8WakeupEnableR {
+        RegGpioPin8WakeupEnableR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin8_int_type(&self) -> RegGpioPin8IntTypeR {
+        RegGpioPin8IntTypeR::new(((self.bits >> 1) & 7) as u8)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin8_pad_driver(&self) -> RegGpioPin8PadDriverR {
+        RegGpioPin8PadDriverR::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin8_wakeup_enable(&mut self) -> RegGpioPin8WakeupEnableW<'_, Pin8Spec> {
+        RegGpioPin8WakeupEnableW::new(self, 0)
+    }
+    #[doc = "Bits 1:3 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin8_int_type(&mut self) -> RegGpioPin8IntTypeW<'_, Pin8Spec> {
+        RegGpioPin8IntTypeW::new(self, 1)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_pin8_pad_driver(&mut self) -> RegGpioPin8PadDriverW<'_, Pin8Spec> {
+        RegGpioPin8PadDriverW::new(self, 4)
+    }
+    #[doc = "Bit 5 - need des"]
+    #[inline(always)]
+    pub fn reg_gpi8_pin0_edge_wakeup_clr(&mut self) -> RegGpi8Pin0EdgeWakeupClrW<'_, Pin8Spec> {
+        RegGpi8Pin0EdgeWakeupClrW::new(self, 5)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin8::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin8::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pin8Spec;
+impl crate::RegisterSpec for Pin8Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`pin8::R`](R) reader structure"]
+impl crate::Readable for Pin8Spec {}
+#[doc = "`write(|w| ..)` method takes [`pin8::W`](W) writer structure"]
+impl crate::Writable for Pin8Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PIN8 to value 0"]
+impl crate::Resettable for Pin8Spec {}

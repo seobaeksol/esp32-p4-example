@@ -1,0 +1,35 @@
+#[doc = "Register `IN_CH3_DBG_DATA_L` reader"]
+pub type R = crate::R<InCh3DbgDataLSpec>;
+#[doc = "Register `IN_CH3_DBG_DATA_L` writer"]
+pub type W = crate::W<InCh3DbgDataLSpec>;
+#[doc = "Field `H264_IN_CH3_DBG_DATA_L` reader - configures in channel 3 debug data bit 31-0"]
+pub type H264InCh3DbgDataLR = crate::FieldReader<u32>;
+#[doc = "Field `H264_IN_CH3_DBG_DATA_L` writer - configures in channel 3 debug data bit 31-0"]
+pub type H264InCh3DbgDataLW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - configures in channel 3 debug data bit 31-0"]
+    #[inline(always)]
+    pub fn h264_in_ch3_dbg_data_l(&self) -> H264InCh3DbgDataLR {
+        H264InCh3DbgDataLR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - configures in channel 3 debug data bit 31-0"]
+    #[inline(always)]
+    pub fn h264_in_ch3_dbg_data_l(&mut self) -> H264InCh3DbgDataLW<'_, InCh3DbgDataLSpec> {
+        H264InCh3DbgDataLW::new(self, 0)
+    }
+}
+#[doc = "in channel 3 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch3_dbg_data_l::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch3_dbg_data_l::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InCh3DbgDataLSpec;
+impl crate::RegisterSpec for InCh3DbgDataLSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_ch3_dbg_data_l::R`](R) reader structure"]
+impl crate::Readable for InCh3DbgDataLSpec {}
+#[doc = "`write(|w| ..)` method takes [`in_ch3_dbg_data_l::W`](W) writer structure"]
+impl crate::Writable for InCh3DbgDataLSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IN_CH3_DBG_DATA_L to value 0"]
+impl crate::Resettable for InCh3DbgDataLSpec {}

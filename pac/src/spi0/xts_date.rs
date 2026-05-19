@@ -1,0 +1,37 @@
+#[doc = "Register `XTS_DATE` reader"]
+pub type R = crate::R<XtsDateSpec>;
+#[doc = "Register `XTS_DATE` writer"]
+pub type W = crate::W<XtsDateSpec>;
+#[doc = "Field `SPI_XTS_DATE` reader - This bits stores the last modified-time of manual encryption feature."]
+pub type SpiXtsDateR = crate::FieldReader<u32>;
+#[doc = "Field `SPI_XTS_DATE` writer - This bits stores the last modified-time of manual encryption feature."]
+pub type SpiXtsDateW<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
+impl R {
+    #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
+    #[inline(always)]
+    pub fn spi_xts_date(&self) -> SpiXtsDateR {
+        SpiXtsDateR::new(self.bits & 0x3fff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
+    #[inline(always)]
+    pub fn spi_xts_date(&mut self) -> SpiXtsDateW<'_, XtsDateSpec> {
+        SpiXtsDateW::new(self, 0)
+    }
+}
+#[doc = "Manual Encryption version register\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct XtsDateSpec;
+impl crate::RegisterSpec for XtsDateSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`xts_date::R`](R) reader structure"]
+impl crate::Readable for XtsDateSpec {}
+#[doc = "`write(|w| ..)` method takes [`xts_date::W`](W) writer structure"]
+impl crate::Writable for XtsDateSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets XTS_DATE to value 0x2021_0907"]
+impl crate::Resettable for XtsDateSpec {
+    const RESET_VALUE: u32 = 0x2021_0907;
+}

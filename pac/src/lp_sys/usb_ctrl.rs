@@ -1,0 +1,84 @@
+#[doc = "Register `USB_CTRL` reader"]
+pub type R = crate::R<UsbCtrlSpec>;
+#[doc = "Register `USB_CTRL` writer"]
+pub type W = crate::W<UsbCtrlSpec>;
+#[doc = "Field `SW_HW_USB_PHY_SEL` reader - need_des"]
+pub type SwHwUsbPhySelR = crate::BitReader;
+#[doc = "Field `SW_HW_USB_PHY_SEL` writer - need_des"]
+pub type SwHwUsbPhySelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SW_USB_PHY_SEL` reader - need_des"]
+pub type SwUsbPhySelR = crate::BitReader;
+#[doc = "Field `SW_USB_PHY_SEL` writer - need_des"]
+pub type SwUsbPhySelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USBOTG20_WAKEUP_CLR` writer - clear usb wakeup to PMU."]
+pub type Usbotg20WakeupClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USBOTG20_IN_SUSPEND` reader - indicate usb otg2.0 is in suspend state."]
+pub type Usbotg20InSuspendR = crate::BitReader;
+#[doc = "Field `USBOTG20_IN_SUSPEND` writer - indicate usb otg2.0 is in suspend state."]
+pub type Usbotg20InSuspendW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USBOTG20_LS_MODE` reader - indicate current mode of usb otg2.0."]
+pub type Usbotg20LsModeR = crate::BitReader;
+#[doc = "Field `USBOTG20_LS_MODE` writer - indicate current mode of usb otg2.0."]
+pub type Usbotg20LsModeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn sw_hw_usb_phy_sel(&self) -> SwHwUsbPhySelR {
+        SwHwUsbPhySelR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn sw_usb_phy_sel(&self) -> SwUsbPhySelR {
+        SwUsbPhySelR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 3 - indicate usb otg2.0 is in suspend state."]
+    #[inline(always)]
+    pub fn usbotg20_in_suspend(&self) -> Usbotg20InSuspendR {
+        Usbotg20InSuspendR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - indicate current mode of usb otg2.0."]
+    #[inline(always)]
+    pub fn usbotg20_ls_mode(&self) -> Usbotg20LsModeR {
+        Usbotg20LsModeR::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn sw_hw_usb_phy_sel(&mut self) -> SwHwUsbPhySelW<'_, UsbCtrlSpec> {
+        SwHwUsbPhySelW::new(self, 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn sw_usb_phy_sel(&mut self) -> SwUsbPhySelW<'_, UsbCtrlSpec> {
+        SwUsbPhySelW::new(self, 1)
+    }
+    #[doc = "Bit 2 - clear usb wakeup to PMU."]
+    #[inline(always)]
+    pub fn usbotg20_wakeup_clr(&mut self) -> Usbotg20WakeupClrW<'_, UsbCtrlSpec> {
+        Usbotg20WakeupClrW::new(self, 2)
+    }
+    #[doc = "Bit 3 - indicate usb otg2.0 is in suspend state."]
+    #[inline(always)]
+    pub fn usbotg20_in_suspend(&mut self) -> Usbotg20InSuspendW<'_, UsbCtrlSpec> {
+        Usbotg20InSuspendW::new(self, 3)
+    }
+    #[doc = "Bit 4 - indicate current mode of usb otg2.0."]
+    #[inline(always)]
+    pub fn usbotg20_ls_mode(&mut self) -> Usbotg20LsModeW<'_, UsbCtrlSpec> {
+        Usbotg20LsModeW::new(self, 4)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`usb_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usb_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct UsbCtrlSpec;
+impl crate::RegisterSpec for UsbCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`usb_ctrl::R`](R) reader structure"]
+impl crate::Readable for UsbCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`usb_ctrl::W`](W) writer structure"]
+impl crate::Writable for UsbCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets USB_CTRL to value 0"]
+impl crate::Resettable for UsbCtrlSpec {}

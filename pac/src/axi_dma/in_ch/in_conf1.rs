@@ -1,0 +1,35 @@
+#[doc = "Register `IN_CONF1` reader"]
+pub type R = crate::R<InConf1Spec>;
+#[doc = "Register `IN_CONF1` writer"]
+pub type W = crate::W<InConf1Spec>;
+#[doc = "Field `IN_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type InCheckOwnerR = crate::BitReader;
+#[doc = "Field `IN_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type InCheckOwnerW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
+    #[inline(always)]
+    pub fn in_check_owner(&self) -> InCheckOwnerR {
+        InCheckOwnerR::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
+    #[inline(always)]
+    pub fn in_check_owner(&mut self) -> InCheckOwnerW<'_, InConf1Spec> {
+        InCheckOwnerW::new(self, 12)
+    }
+}
+#[doc = "Configure 1 register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_conf1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_conf1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InConf1Spec;
+impl crate::RegisterSpec for InConf1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_conf1::R`](R) reader structure"]
+impl crate::Readable for InConf1Spec {}
+#[doc = "`write(|w| ..)` method takes [`in_conf1::W`](W) writer structure"]
+impl crate::Writable for InConf1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IN_CONF1 to value 0"]
+impl crate::Resettable for InConf1Spec {}

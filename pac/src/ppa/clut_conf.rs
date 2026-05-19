@@ -1,0 +1,133 @@
+#[doc = "Register `CLUT_CONF` reader"]
+pub type R = crate::R<ClutConfSpec>;
+#[doc = "Register `CLUT_CONF` writer"]
+pub type W = crate::W<ClutConfSpec>;
+#[doc = "Field `APB_FIFO_MASK` reader - 1'b0: fifo mode to wr/rd clut0/clut1 RAM through register PPA_SR_CLUT_DATA_REG/PPA_BLEND0_CLUT_DATA_REG/PPA_BLEND1_CLUT_DATA_REG. 1'b1: memory mode to wr/rd sr/blend0/blend1 clut RAM. The bit 11 and 10 of the waddr should be 01 to access sr clut and should be 10 to access blend0 clut and should be 11 to access blend 1 clut in memory mode."]
+pub type ApbFifoMaskR = crate::BitReader;
+#[doc = "Field `APB_FIFO_MASK` writer - 1'b0: fifo mode to wr/rd clut0/clut1 RAM through register PPA_SR_CLUT_DATA_REG/PPA_BLEND0_CLUT_DATA_REG/PPA_BLEND1_CLUT_DATA_REG. 1'b1: memory mode to wr/rd sr/blend0/blend1 clut RAM. The bit 11 and 10 of the waddr should be 01 to access sr clut and should be 10 to access blend0 clut and should be 11 to access blend 1 clut in memory mode."]
+pub type ApbFifoMaskW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND0_CLUT_MEM_RST` reader - Write 1 then write 0 to this bit to reset BLEND0 CLUT."]
+pub type Blend0ClutMemRstR = crate::BitReader;
+#[doc = "Field `BLEND0_CLUT_MEM_RST` writer - Write 1 then write 0 to this bit to reset BLEND0 CLUT."]
+pub type Blend0ClutMemRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND1_CLUT_MEM_RST` reader - Write 1 then write 0 to this bit to reset BLEND1 CLUT."]
+pub type Blend1ClutMemRstR = crate::BitReader;
+#[doc = "Field `BLEND1_CLUT_MEM_RST` writer - Write 1 then write 0 to this bit to reset BLEND1 CLUT."]
+pub type Blend1ClutMemRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND0_CLUT_MEM_RDADDR_RST` reader - Write 1 then write 0 to reset the read address of BLEND0 CLUT in fifo mode."]
+pub type Blend0ClutMemRdaddrRstR = crate::BitReader;
+#[doc = "Field `BLEND0_CLUT_MEM_RDADDR_RST` writer - Write 1 then write 0 to reset the read address of BLEND0 CLUT in fifo mode."]
+pub type Blend0ClutMemRdaddrRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND1_CLUT_MEM_RDADDR_RST` reader - Write 1 then write 0 to reset the read address of BLEND1 CLUT in fifo mode."]
+pub type Blend1ClutMemRdaddrRstR = crate::BitReader;
+#[doc = "Field `BLEND1_CLUT_MEM_RDADDR_RST` writer - Write 1 then write 0 to reset the read address of BLEND1 CLUT in fifo mode."]
+pub type Blend1ClutMemRdaddrRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND0_CLUT_MEM_FORCE_PD` reader - 1: force power down BLEND CLUT memory."]
+pub type Blend0ClutMemForcePdR = crate::BitReader;
+#[doc = "Field `BLEND0_CLUT_MEM_FORCE_PD` writer - 1: force power down BLEND CLUT memory."]
+pub type Blend0ClutMemForcePdW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND0_CLUT_MEM_FORCE_PU` reader - 1: force power up BLEND CLUT memory."]
+pub type Blend0ClutMemForcePuR = crate::BitReader;
+#[doc = "Field `BLEND0_CLUT_MEM_FORCE_PU` writer - 1: force power up BLEND CLUT memory."]
+pub type Blend0ClutMemForcePuW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND0_CLUT_MEM_CLK_ENA` reader - 1: Force clock on for BLEND CLUT memory."]
+pub type Blend0ClutMemClkEnaR = crate::BitReader;
+#[doc = "Field `BLEND0_CLUT_MEM_CLK_ENA` writer - 1: Force clock on for BLEND CLUT memory."]
+pub type Blend0ClutMemClkEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - 1'b0: fifo mode to wr/rd clut0/clut1 RAM through register PPA_SR_CLUT_DATA_REG/PPA_BLEND0_CLUT_DATA_REG/PPA_BLEND1_CLUT_DATA_REG. 1'b1: memory mode to wr/rd sr/blend0/blend1 clut RAM. The bit 11 and 10 of the waddr should be 01 to access sr clut and should be 10 to access blend0 clut and should be 11 to access blend 1 clut in memory mode."]
+    #[inline(always)]
+    pub fn apb_fifo_mask(&self) -> ApbFifoMaskR {
+        ApbFifoMaskR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Write 1 then write 0 to this bit to reset BLEND0 CLUT."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_rst(&self) -> Blend0ClutMemRstR {
+        Blend0ClutMemRstR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Write 1 then write 0 to this bit to reset BLEND1 CLUT."]
+    #[inline(always)]
+    pub fn blend1_clut_mem_rst(&self) -> Blend1ClutMemRstR {
+        Blend1ClutMemRstR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Write 1 then write 0 to reset the read address of BLEND0 CLUT in fifo mode."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_rdaddr_rst(&self) -> Blend0ClutMemRdaddrRstR {
+        Blend0ClutMemRdaddrRstR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Write 1 then write 0 to reset the read address of BLEND1 CLUT in fifo mode."]
+    #[inline(always)]
+    pub fn blend1_clut_mem_rdaddr_rst(&self) -> Blend1ClutMemRdaddrRstR {
+        Blend1ClutMemRdaddrRstR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - 1: force power down BLEND CLUT memory."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_force_pd(&self) -> Blend0ClutMemForcePdR {
+        Blend0ClutMemForcePdR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - 1: force power up BLEND CLUT memory."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_force_pu(&self) -> Blend0ClutMemForcePuR {
+        Blend0ClutMemForcePuR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - 1: Force clock on for BLEND CLUT memory."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_clk_ena(&self) -> Blend0ClutMemClkEnaR {
+        Blend0ClutMemClkEnaR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - 1'b0: fifo mode to wr/rd clut0/clut1 RAM through register PPA_SR_CLUT_DATA_REG/PPA_BLEND0_CLUT_DATA_REG/PPA_BLEND1_CLUT_DATA_REG. 1'b1: memory mode to wr/rd sr/blend0/blend1 clut RAM. The bit 11 and 10 of the waddr should be 01 to access sr clut and should be 10 to access blend0 clut and should be 11 to access blend 1 clut in memory mode."]
+    #[inline(always)]
+    pub fn apb_fifo_mask(&mut self) -> ApbFifoMaskW<'_, ClutConfSpec> {
+        ApbFifoMaskW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Write 1 then write 0 to this bit to reset BLEND0 CLUT."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_rst(&mut self) -> Blend0ClutMemRstW<'_, ClutConfSpec> {
+        Blend0ClutMemRstW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Write 1 then write 0 to this bit to reset BLEND1 CLUT."]
+    #[inline(always)]
+    pub fn blend1_clut_mem_rst(&mut self) -> Blend1ClutMemRstW<'_, ClutConfSpec> {
+        Blend1ClutMemRstW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Write 1 then write 0 to reset the read address of BLEND0 CLUT in fifo mode."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_rdaddr_rst(&mut self) -> Blend0ClutMemRdaddrRstW<'_, ClutConfSpec> {
+        Blend0ClutMemRdaddrRstW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Write 1 then write 0 to reset the read address of BLEND1 CLUT in fifo mode."]
+    #[inline(always)]
+    pub fn blend1_clut_mem_rdaddr_rst(&mut self) -> Blend1ClutMemRdaddrRstW<'_, ClutConfSpec> {
+        Blend1ClutMemRdaddrRstW::new(self, 4)
+    }
+    #[doc = "Bit 5 - 1: force power down BLEND CLUT memory."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_force_pd(&mut self) -> Blend0ClutMemForcePdW<'_, ClutConfSpec> {
+        Blend0ClutMemForcePdW::new(self, 5)
+    }
+    #[doc = "Bit 6 - 1: force power up BLEND CLUT memory."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_force_pu(&mut self) -> Blend0ClutMemForcePuW<'_, ClutConfSpec> {
+        Blend0ClutMemForcePuW::new(self, 6)
+    }
+    #[doc = "Bit 7 - 1: Force clock on for BLEND CLUT memory."]
+    #[inline(always)]
+    pub fn blend0_clut_mem_clk_ena(&mut self) -> Blend0ClutMemClkEnaW<'_, ClutConfSpec> {
+        Blend0ClutMemClkEnaW::new(self, 7)
+    }
+}
+#[doc = "CLUT configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`clut_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clut_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClutConfSpec;
+impl crate::RegisterSpec for ClutConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clut_conf::R`](R) reader structure"]
+impl crate::Readable for ClutConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`clut_conf::W`](W) writer structure"]
+impl crate::Writable for ClutConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CLUT_CONF to value 0"]
+impl crate::Resettable for ClutConfSpec {}

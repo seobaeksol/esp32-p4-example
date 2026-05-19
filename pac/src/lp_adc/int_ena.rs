@@ -1,0 +1,105 @@
+#[doc = "Register `INT_ENA` reader"]
+pub type R = crate::R<IntEnaSpec>;
+#[doc = "Register `INT_ENA` writer"]
+pub type W = crate::W<IntEnaSpec>;
+#[doc = "Field `COCPU_SARADC1_INT_ENA` reader - ADC1 Conversion is done, int enable."]
+pub type CocpuSaradc1IntEnaR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC1_INT_ENA` writer - ADC1 Conversion is done, int enable."]
+pub type CocpuSaradc1IntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_INT_ENA` reader - ADC2 Conversion is done, int enable."]
+pub type CocpuSaradc2IntEnaR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC2_INT_ENA` writer - ADC2 Conversion is done, int enable."]
+pub type CocpuSaradc2IntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC1_ERROR_INT_ENA` reader - An errro occurs from ADC1, int enable."]
+pub type CocpuSaradc1ErrorIntEnaR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC1_ERROR_INT_ENA` writer - An errro occurs from ADC1, int enable."]
+pub type CocpuSaradc1ErrorIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_ERROR_INT_ENA` reader - An errro occurs from ADC2, int enable."]
+pub type CocpuSaradc2ErrorIntEnaR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC2_ERROR_INT_ENA` writer - An errro occurs from ADC2, int enable."]
+pub type CocpuSaradc2ErrorIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC1_WAKE_INT_ENA` reader - A wakeup event is triggered from ADC1, int enable."]
+pub type CocpuSaradc1WakeIntEnaR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC1_WAKE_INT_ENA` writer - A wakeup event is triggered from ADC1, int enable."]
+pub type CocpuSaradc1WakeIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_WAKE_INT_ENA` reader - A wakeup event is triggered from ADC2, int enable."]
+pub type CocpuSaradc2WakeIntEnaR = crate::BitReader;
+#[doc = "Field `COCPU_SARADC2_WAKE_INT_ENA` writer - A wakeup event is triggered from ADC2, int enable."]
+pub type CocpuSaradc2WakeIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - ADC1 Conversion is done, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_int_ena(&self) -> CocpuSaradc1IntEnaR {
+        CocpuSaradc1IntEnaR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - ADC2 Conversion is done, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_int_ena(&self) -> CocpuSaradc2IntEnaR {
+        CocpuSaradc2IntEnaR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - An errro occurs from ADC1, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_error_int_ena(&self) -> CocpuSaradc1ErrorIntEnaR {
+        CocpuSaradc1ErrorIntEnaR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - An errro occurs from ADC2, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_error_int_ena(&self) -> CocpuSaradc2ErrorIntEnaR {
+        CocpuSaradc2ErrorIntEnaR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_wake_int_ena(&self) -> CocpuSaradc1WakeIntEnaR {
+        CocpuSaradc1WakeIntEnaR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_wake_int_ena(&self) -> CocpuSaradc2WakeIntEnaR {
+        CocpuSaradc2WakeIntEnaR::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - ADC1 Conversion is done, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_int_ena(&mut self) -> CocpuSaradc1IntEnaW<'_, IntEnaSpec> {
+        CocpuSaradc1IntEnaW::new(self, 0)
+    }
+    #[doc = "Bit 1 - ADC2 Conversion is done, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_int_ena(&mut self) -> CocpuSaradc2IntEnaW<'_, IntEnaSpec> {
+        CocpuSaradc2IntEnaW::new(self, 1)
+    }
+    #[doc = "Bit 2 - An errro occurs from ADC1, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_error_int_ena(&mut self) -> CocpuSaradc1ErrorIntEnaW<'_, IntEnaSpec> {
+        CocpuSaradc1ErrorIntEnaW::new(self, 2)
+    }
+    #[doc = "Bit 3 - An errro occurs from ADC2, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_error_int_ena(&mut self) -> CocpuSaradc2ErrorIntEnaW<'_, IntEnaSpec> {
+        CocpuSaradc2ErrorIntEnaW::new(self, 3)
+    }
+    #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_wake_int_ena(&mut self) -> CocpuSaradc1WakeIntEnaW<'_, IntEnaSpec> {
+        CocpuSaradc1WakeIntEnaW::new(self, 4)
+    }
+    #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int enable."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_wake_int_ena(&mut self) -> CocpuSaradc2WakeIntEnaW<'_, IntEnaSpec> {
+        CocpuSaradc2WakeIntEnaW::new(self, 5)
+    }
+}
+#[doc = "Interrupt enable registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntEnaSpec;
+impl crate::RegisterSpec for IntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for IntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+impl crate::Writable for IntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_ENA to value 0"]
+impl crate::Resettable for IntEnaSpec {}

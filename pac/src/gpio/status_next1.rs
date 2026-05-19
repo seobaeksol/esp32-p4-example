@@ -1,0 +1,20 @@
+#[doc = "Register `STATUS_NEXT1` reader"]
+pub type R = crate::R<StatusNext1Spec>;
+#[doc = "Field `STATUS_INTERRUPT_NEXT1` reader - GPIO interrupt source register for GPIO32-56"]
+pub type StatusInterruptNext1R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:24 - GPIO interrupt source register for GPIO32-56"]
+    #[inline(always)]
+    pub fn status_interrupt_next1(&self) -> StatusInterruptNext1R {
+        StatusInterruptNext1R::new(self.bits & 0x01ff_ffff)
+    }
+}
+#[doc = "GPIO interrupt source register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct StatusNext1Spec;
+impl crate::RegisterSpec for StatusNext1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status_next1::R`](R) reader structure"]
+impl crate::Readable for StatusNext1Spec {}
+#[doc = "`reset()` method sets STATUS_NEXT1 to value 0"]
+impl crate::Resettable for StatusNext1Spec {}

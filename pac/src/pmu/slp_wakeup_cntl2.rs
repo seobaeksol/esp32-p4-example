@@ -1,0 +1,35 @@
+#[doc = "Register `SLP_WAKEUP_CNTL2` reader"]
+pub type R = crate::R<SlpWakeupCntl2Spec>;
+#[doc = "Register `SLP_WAKEUP_CNTL2` writer"]
+pub type W = crate::W<SlpWakeupCntl2Spec>;
+#[doc = "Field `WAKEUP_ENA` reader - need_des"]
+pub type WakeupEnaR = crate::FieldReader<u32>;
+#[doc = "Field `WAKEUP_ENA` writer - need_des"]
+pub type WakeupEnaW<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
+impl R {
+    #[doc = "Bits 0:30 - need_des"]
+    #[inline(always)]
+    pub fn wakeup_ena(&self) -> WakeupEnaR {
+        WakeupEnaR::new(self.bits & 0x7fff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:30 - need_des"]
+    #[inline(always)]
+    pub fn wakeup_ena(&mut self) -> WakeupEnaW<'_, SlpWakeupCntl2Spec> {
+        WakeupEnaW::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`slp_wakeup_cntl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slp_wakeup_cntl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SlpWakeupCntl2Spec;
+impl crate::RegisterSpec for SlpWakeupCntl2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`slp_wakeup_cntl2::R`](R) reader structure"]
+impl crate::Readable for SlpWakeupCntl2Spec {}
+#[doc = "`write(|w| ..)` method takes [`slp_wakeup_cntl2::W`](W) writer structure"]
+impl crate::Writable for SlpWakeupCntl2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SLP_WAKEUP_CNTL2 to value 0"]
+impl crate::Resettable for SlpWakeupCntl2Spec {}

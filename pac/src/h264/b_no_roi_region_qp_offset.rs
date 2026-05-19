@@ -1,0 +1,35 @@
+#[doc = "Register `B_NO_ROI_REGION_QP_OFFSET` reader"]
+pub type R = crate::R<BNoRoiRegionQpOffsetSpec>;
+#[doc = "Register `B_NO_ROI_REGION_QP_OFFSET` writer"]
+pub type W = crate::W<BNoRoiRegionQpOffsetSpec>;
+#[doc = "Field `B_NO_ROI_REGION_QP` reader - Configure H264 no region qp in video B, delta qp."]
+pub type BNoRoiRegionQpR = crate::FieldReader;
+#[doc = "Field `B_NO_ROI_REGION_QP` writer - Configure H264 no region qp in video B, delta qp."]
+pub type BNoRoiRegionQpW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+impl R {
+    #[doc = "Bits 0:6 - Configure H264 no region qp in video B, delta qp."]
+    #[inline(always)]
+    pub fn b_no_roi_region_qp(&self) -> BNoRoiRegionQpR {
+        BNoRoiRegionQpR::new((self.bits & 0x7f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - Configure H264 no region qp in video B, delta qp."]
+    #[inline(always)]
+    pub fn b_no_roi_region_qp(&mut self) -> BNoRoiRegionQpW<'_, BNoRoiRegionQpOffsetSpec> {
+        BNoRoiRegionQpW::new(self, 0)
+    }
+}
+#[doc = "Video B H264 no roi region QP register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_no_roi_region_qp_offset::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_no_roi_region_qp_offset::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BNoRoiRegionQpOffsetSpec;
+impl crate::RegisterSpec for BNoRoiRegionQpOffsetSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`b_no_roi_region_qp_offset::R`](R) reader structure"]
+impl crate::Readable for BNoRoiRegionQpOffsetSpec {}
+#[doc = "`write(|w| ..)` method takes [`b_no_roi_region_qp_offset::W`](W) writer structure"]
+impl crate::Writable for BNoRoiRegionQpOffsetSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets B_NO_ROI_REGION_QP_OFFSET to value 0"]
+impl crate::Resettable for BNoRoiRegionQpOffsetSpec {}

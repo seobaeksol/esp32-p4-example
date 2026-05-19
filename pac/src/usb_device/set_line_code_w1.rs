@@ -1,0 +1,34 @@
+#[doc = "Register `SET_LINE_CODE_W1` reader"]
+pub type R = crate::R<SetLineCodeW1Spec>;
+#[doc = "Field `BCHAR_FORMAT` reader - The value of bCharFormat set by host through SET_LINE_CODING command."]
+pub type BcharFormatR = crate::FieldReader;
+#[doc = "Field `BPARITY_TYPE` reader - The value of bParityTpye set by host through SET_LINE_CODING command."]
+pub type BparityTypeR = crate::FieldReader;
+#[doc = "Field `BDATA_BITS` reader - The value of bDataBits set by host through SET_LINE_CODING command."]
+pub type BdataBitsR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - The value of bCharFormat set by host through SET_LINE_CODING command."]
+    #[inline(always)]
+    pub fn bchar_format(&self) -> BcharFormatR {
+        BcharFormatR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - The value of bParityTpye set by host through SET_LINE_CODING command."]
+    #[inline(always)]
+    pub fn bparity_type(&self) -> BparityTypeR {
+        BparityTypeR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - The value of bDataBits set by host through SET_LINE_CODING command."]
+    #[inline(always)]
+    pub fn bdata_bits(&self) -> BdataBitsR {
+        BdataBitsR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[doc = "W1 of SET_LINE_CODING command.\n\nYou can [`read`](crate::Reg::read) this register and get [`set_line_code_w1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SetLineCodeW1Spec;
+impl crate::RegisterSpec for SetLineCodeW1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`set_line_code_w1::R`](R) reader structure"]
+impl crate::Readable for SetLineCodeW1Spec {}
+#[doc = "`reset()` method sets SET_LINE_CODE_W1 to value 0"]
+impl crate::Resettable for SetLineCodeW1Spec {}

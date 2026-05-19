@@ -1,0 +1,121 @@
+#[doc = "Register `CH%sCONF1` reader"]
+pub type R = crate::R<Chconf1Spec>;
+#[doc = "Register `CH%sCONF1` writer"]
+pub type W = crate::W<Chconf1Spec>;
+#[doc = "Field `RX_EN_CH4` reader - Set this bit to enable receiver to receive data on CHANNEL%s."]
+pub type RxEnCh4R = crate::BitReader;
+#[doc = "Field `RX_EN_CH4` writer - Set this bit to enable receiver to receive data on CHANNEL%s."]
+pub type RxEnCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MEM_WR_RST_CH4` writer - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
+pub type MemWrRstCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_MEM_RST_CH4` writer - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
+pub type ApbMemRstCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MEM_OWNER_CH4` reader - This register marks the ownership of CHANNEL%s's ram block.1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
+pub type MemOwnerCh4R = crate::BitReader;
+#[doc = "Field `MEM_OWNER_CH4` writer - This register marks the ownership of CHANNEL%s's ram block.1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
+pub type MemOwnerCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_FILTER_EN_CH4` reader - This is the receive filter's enable bit for CHANNEL%s."]
+pub type RxFilterEnCh4R = crate::BitReader;
+#[doc = "Field `RX_FILTER_EN_CH4` writer - This is the receive filter's enable bit for CHANNEL%s."]
+pub type RxFilterEnCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_FILTER_THRES_CH4` reader - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
+pub type RxFilterThresCh4R = crate::FieldReader;
+#[doc = "Field `RX_FILTER_THRES_CH4` writer - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
+pub type RxFilterThresCh4W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `MEM_RX_WRAP_EN_CH4` reader - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
+pub type MemRxWrapEnCh4R = crate::BitReader;
+#[doc = "Field `MEM_RX_WRAP_EN_CH4` writer - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
+pub type MemRxWrapEnCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AFIFO_RST_CH4` writer - Reserved"]
+pub type AfifoRstCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CONF_UPDATE_CH4` writer - synchronization bit for CHANNEL%s"]
+pub type ConfUpdateCh4W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
+    #[inline(always)]
+    pub fn rx_en_ch4(&self) -> RxEnCh4R {
+        RxEnCh4R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 3 - This register marks the ownership of CHANNEL%s's ram block.1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
+    #[inline(always)]
+    pub fn mem_owner_ch4(&self) -> MemOwnerCh4R {
+        MemOwnerCh4R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - This is the receive filter's enable bit for CHANNEL%s."]
+    #[inline(always)]
+    pub fn rx_filter_en_ch4(&self) -> RxFilterEnCh4R {
+        RxFilterEnCh4R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 5:12 - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
+    #[inline(always)]
+    pub fn rx_filter_thres_ch4(&self) -> RxFilterThresCh4R {
+        RxFilterThresCh4R::new(((self.bits >> 5) & 0xff) as u8)
+    }
+    #[doc = "Bit 13 - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
+    #[inline(always)]
+    pub fn mem_rx_wrap_en_ch4(&self) -> MemRxWrapEnCh4R {
+        MemRxWrapEnCh4R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
+    #[inline(always)]
+    pub fn rx_en_ch4(&mut self) -> RxEnCh4W<'_, Chconf1Spec> {
+        RxEnCh4W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
+    #[inline(always)]
+    pub fn mem_wr_rst_ch4(&mut self) -> MemWrRstCh4W<'_, Chconf1Spec> {
+        MemWrRstCh4W::new(self, 1)
+    }
+    #[doc = "Bit 2 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
+    #[inline(always)]
+    pub fn apb_mem_rst_ch4(&mut self) -> ApbMemRstCh4W<'_, Chconf1Spec> {
+        ApbMemRstCh4W::new(self, 2)
+    }
+    #[doc = "Bit 3 - This register marks the ownership of CHANNEL%s's ram block.1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
+    #[inline(always)]
+    pub fn mem_owner_ch4(&mut self) -> MemOwnerCh4W<'_, Chconf1Spec> {
+        MemOwnerCh4W::new(self, 3)
+    }
+    #[doc = "Bit 4 - This is the receive filter's enable bit for CHANNEL%s."]
+    #[inline(always)]
+    pub fn rx_filter_en_ch4(&mut self) -> RxFilterEnCh4W<'_, Chconf1Spec> {
+        RxFilterEnCh4W::new(self, 4)
+    }
+    #[doc = "Bits 5:12 - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
+    #[inline(always)]
+    pub fn rx_filter_thres_ch4(&mut self) -> RxFilterThresCh4W<'_, Chconf1Spec> {
+        RxFilterThresCh4W::new(self, 5)
+    }
+    #[doc = "Bit 13 - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
+    #[inline(always)]
+    pub fn mem_rx_wrap_en_ch4(&mut self) -> MemRxWrapEnCh4W<'_, Chconf1Spec> {
+        MemRxWrapEnCh4W::new(self, 13)
+    }
+    #[doc = "Bit 14 - Reserved"]
+    #[inline(always)]
+    pub fn afifo_rst_ch4(&mut self) -> AfifoRstCh4W<'_, Chconf1Spec> {
+        AfifoRstCh4W::new(self, 14)
+    }
+    #[doc = "Bit 15 - synchronization bit for CHANNEL%s"]
+    #[inline(always)]
+    pub fn conf_update_ch4(&mut self) -> ConfUpdateCh4W<'_, Chconf1Spec> {
+        ConfUpdateCh4W::new(self, 15)
+    }
+}
+#[doc = "Channel %s configure register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`chconf1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chconf1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Chconf1Spec;
+impl crate::RegisterSpec for Chconf1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`chconf1::R`](R) reader structure"]
+impl crate::Readable for Chconf1Spec {}
+#[doc = "`write(|w| ..)` method takes [`chconf1::W`](W) writer structure"]
+impl crate::Writable for Chconf1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CH%sCONF1 to value 0x01e8"]
+impl crate::Resettable for Chconf1Spec {
+    const RESET_VALUE: u32 = 0x01e8;
+}

@@ -1,0 +1,49 @@
+#[doc = "Register `CCM_COEF1` reader"]
+pub type R = crate::R<CcmCoef1Spec>;
+#[doc = "Register `CCM_COEF1` writer"]
+pub type W = crate::W<CcmCoef1Spec>;
+#[doc = "Field `CCM_RB` reader - this field configures the color correction matrix coefficient"]
+pub type CcmRbR = crate::FieldReader<u16>;
+#[doc = "Field `CCM_RB` writer - this field configures the color correction matrix coefficient"]
+pub type CcmRbW<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+#[doc = "Field `CCM_GR` reader - this field configures the color correction matrix coefficient"]
+pub type CcmGrR = crate::FieldReader<u16>;
+#[doc = "Field `CCM_GR` writer - this field configures the color correction matrix coefficient"]
+pub type CcmGrW<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+impl R {
+    #[doc = "Bits 0:12 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    pub fn ccm_rb(&self) -> CcmRbR {
+        CcmRbR::new((self.bits & 0x1fff) as u16)
+    }
+    #[doc = "Bits 13:25 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    pub fn ccm_gr(&self) -> CcmGrR {
+        CcmGrR::new(((self.bits >> 13) & 0x1fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:12 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    pub fn ccm_rb(&mut self) -> CcmRbW<'_, CcmCoef1Spec> {
+        CcmRbW::new(self, 0)
+    }
+    #[doc = "Bits 13:25 - this field configures the color correction matrix coefficient"]
+    #[inline(always)]
+    pub fn ccm_gr(&mut self) -> CcmGrW<'_, CcmCoef1Spec> {
+        CcmGrW::new(self, 13)
+    }
+}
+#[doc = "ccm coef register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ccm_coef1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ccm_coef1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CcmCoef1Spec;
+impl crate::RegisterSpec for CcmCoef1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ccm_coef1::R`](R) reader structure"]
+impl crate::Readable for CcmCoef1Spec {}
+#[doc = "`write(|w| ..)` method takes [`ccm_coef1::W`](W) writer structure"]
+impl crate::Writable for CcmCoef1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CCM_COEF1 to value 0"]
+impl crate::Resettable for CcmCoef1Spec {}

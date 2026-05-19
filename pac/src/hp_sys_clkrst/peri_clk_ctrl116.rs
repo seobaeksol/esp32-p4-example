@@ -1,0 +1,121 @@
+#[doc = "Register `PERI_CLK_CTRL116` reader"]
+pub type R = crate::R<PeriClkCtrl116Spec>;
+#[doc = "Register `PERI_CLK_CTRL116` writer"]
+pub type W = crate::W<PeriClkCtrl116Spec>;
+#[doc = "Field `GPSPI2_CLK_SRC_SEL` reader - Reserved"]
+pub type Gpspi2ClkSrcSelR = crate::FieldReader;
+#[doc = "Field `GPSPI2_CLK_SRC_SEL` writer - Reserved"]
+pub type Gpspi2ClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GPSPI2_HS_CLK_EN` reader - Reserved"]
+pub type Gpspi2HsClkEnR = crate::BitReader;
+#[doc = "Field `GPSPI2_HS_CLK_EN` writer - Reserved"]
+pub type Gpspi2HsClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI2_HS_CLK_DIV_NUM` reader - Reserved"]
+pub type Gpspi2HsClkDivNumR = crate::FieldReader;
+#[doc = "Field `GPSPI2_HS_CLK_DIV_NUM` writer - Reserved"]
+pub type Gpspi2HsClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GPSPI2_MST_CLK_DIV_NUM` reader - Reserved"]
+pub type Gpspi2MstClkDivNumR = crate::FieldReader;
+#[doc = "Field `GPSPI2_MST_CLK_DIV_NUM` writer - Reserved"]
+pub type Gpspi2MstClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GPSPI2_MST_CLK_EN` reader - Reserved"]
+pub type Gpspi2MstClkEnR = crate::BitReader;
+#[doc = "Field `GPSPI2_MST_CLK_EN` writer - Reserved"]
+pub type Gpspi2MstClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI3_CLK_SRC_SEL` reader - Reserved"]
+pub type Gpspi3ClkSrcSelR = crate::FieldReader;
+#[doc = "Field `GPSPI3_CLK_SRC_SEL` writer - Reserved"]
+pub type Gpspi3ClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GPSPI3_HS_CLK_EN` reader - Reserved"]
+pub type Gpspi3HsClkEnR = crate::BitReader;
+#[doc = "Field `GPSPI3_HS_CLK_EN` writer - Reserved"]
+pub type Gpspi3HsClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:2 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_clk_src_sel(&self) -> Gpspi2ClkSrcSelR {
+        Gpspi2ClkSrcSelR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_hs_clk_en(&self) -> Gpspi2HsClkEnR {
+        Gpspi2HsClkEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:11 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_hs_clk_div_num(&self) -> Gpspi2HsClkDivNumR {
+        Gpspi2HsClkDivNumR::new(((self.bits >> 4) & 0xff) as u8)
+    }
+    #[doc = "Bits 12:19 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_mst_clk_div_num(&self) -> Gpspi2MstClkDivNumR {
+        Gpspi2MstClkDivNumR::new(((self.bits >> 12) & 0xff) as u8)
+    }
+    #[doc = "Bit 20 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_mst_clk_en(&self) -> Gpspi2MstClkEnR {
+        Gpspi2MstClkEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bits 21:23 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_clk_src_sel(&self) -> Gpspi3ClkSrcSelR {
+        Gpspi3ClkSrcSelR::new(((self.bits >> 21) & 7) as u8)
+    }
+    #[doc = "Bit 24 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_hs_clk_en(&self) -> Gpspi3HsClkEnR {
+        Gpspi3HsClkEnR::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_clk_src_sel(&mut self) -> Gpspi2ClkSrcSelW<'_, PeriClkCtrl116Spec> {
+        Gpspi2ClkSrcSelW::new(self, 0)
+    }
+    #[doc = "Bit 3 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_hs_clk_en(&mut self) -> Gpspi2HsClkEnW<'_, PeriClkCtrl116Spec> {
+        Gpspi2HsClkEnW::new(self, 3)
+    }
+    #[doc = "Bits 4:11 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_hs_clk_div_num(&mut self) -> Gpspi2HsClkDivNumW<'_, PeriClkCtrl116Spec> {
+        Gpspi2HsClkDivNumW::new(self, 4)
+    }
+    #[doc = "Bits 12:19 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_mst_clk_div_num(&mut self) -> Gpspi2MstClkDivNumW<'_, PeriClkCtrl116Spec> {
+        Gpspi2MstClkDivNumW::new(self, 12)
+    }
+    #[doc = "Bit 20 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_mst_clk_en(&mut self) -> Gpspi2MstClkEnW<'_, PeriClkCtrl116Spec> {
+        Gpspi2MstClkEnW::new(self, 20)
+    }
+    #[doc = "Bits 21:23 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_clk_src_sel(&mut self) -> Gpspi3ClkSrcSelW<'_, PeriClkCtrl116Spec> {
+        Gpspi3ClkSrcSelW::new(self, 21)
+    }
+    #[doc = "Bit 24 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_hs_clk_en(&mut self) -> Gpspi3HsClkEnW<'_, PeriClkCtrl116Spec> {
+        Gpspi3HsClkEnW::new(self, 24)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl116::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl116::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PeriClkCtrl116Spec;
+impl crate::RegisterSpec for PeriClkCtrl116Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri_clk_ctrl116::R`](R) reader structure"]
+impl crate::Readable for PeriClkCtrl116Spec {}
+#[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl116::W`](W) writer structure"]
+impl crate::Writable for PeriClkCtrl116Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI_CLK_CTRL116 to value 0x0110_0008"]
+impl crate::Resettable for PeriClkCtrl116Spec {
+    const RESET_VALUE: u32 = 0x0110_0008;
+}

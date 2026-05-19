@@ -1,0 +1,37 @@
+#[doc = "Register `SPI_SMEM_PMS%s_SIZE` reader"]
+pub type R = crate::R<SpiSmemPmsSizeSpec>;
+#[doc = "Register `SPI_SMEM_PMS%s_SIZE` writer"]
+pub type W = crate::W<SpiSmemPmsSizeSpec>;
+#[doc = "Field `SPI_SMEM_PMS_SIZE` reader - SPI1 external RAM PMS section %s address region is (SPI_SMEM_PMS%s_ADDR_S, SPI_SMEM_PMS%s_ADDR_S + SPI_SMEM_PMS%s_SIZE)"]
+pub type SpiSmemPmsSizeR = crate::FieldReader<u16>;
+#[doc = "Field `SPI_SMEM_PMS_SIZE` writer - SPI1 external RAM PMS section %s address region is (SPI_SMEM_PMS%s_ADDR_S, SPI_SMEM_PMS%s_ADDR_S + SPI_SMEM_PMS%s_SIZE)"]
+pub type SpiSmemPmsSizeW<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
+impl R {
+    #[doc = "Bits 0:14 - SPI1 external RAM PMS section %s address region is (SPI_SMEM_PMS%s_ADDR_S, SPI_SMEM_PMS%s_ADDR_S + SPI_SMEM_PMS%s_SIZE)"]
+    #[inline(always)]
+    pub fn spi_smem_pms_size(&self) -> SpiSmemPmsSizeR {
+        SpiSmemPmsSizeR::new((self.bits & 0x7fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:14 - SPI1 external RAM PMS section %s address region is (SPI_SMEM_PMS%s_ADDR_S, SPI_SMEM_PMS%s_ADDR_S + SPI_SMEM_PMS%s_SIZE)"]
+    #[inline(always)]
+    pub fn spi_smem_pms_size(&mut self) -> SpiSmemPmsSizeW<'_, SpiSmemPmsSizeSpec> {
+        SpiSmemPmsSizeW::new(self, 0)
+    }
+}
+#[doc = "SPI1 external RAM PMS section %s start address register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms_size::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms_size::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SpiSmemPmsSizeSpec;
+impl crate::RegisterSpec for SpiSmemPmsSizeSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`spi_smem_pms_size::R`](R) reader structure"]
+impl crate::Readable for SpiSmemPmsSizeSpec {}
+#[doc = "`write(|w| ..)` method takes [`spi_smem_pms_size::W`](W) writer structure"]
+impl crate::Writable for SpiSmemPmsSizeSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SPI_SMEM_PMS%s_SIZE to value 0x1000"]
+impl crate::Resettable for SpiSmemPmsSizeSpec {
+    const RESET_VALUE: u32 = 0x1000;
+}

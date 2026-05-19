@@ -1,0 +1,20 @@
+#[doc = "Register `LO` reader"]
+pub type R = crate::R<LoSpec>;
+#[doc = "Field `LO_RO` reader - actual target value value low 32bits"]
+pub type LoRoR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - actual target value value low 32bits"]
+    #[inline(always)]
+    pub fn lo_ro(&self) -> LoRoR {
+        LoRoR::new(self.bits)
+    }
+}
+#[doc = "system timer comp0 actual target value low register\n\nYou can [`read`](crate::Reg::read) this register and get [`lo::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LoSpec;
+impl crate::RegisterSpec for LoSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lo::R`](R) reader structure"]
+impl crate::Readable for LoSpec {}
+#[doc = "`reset()` method sets LO to value 0"]
+impl crate::Resettable for LoSpec {}

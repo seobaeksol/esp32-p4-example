@@ -1,0 +1,86 @@
+#[doc = "Register `RTCCALICFG` reader"]
+pub type R = crate::R<RtccalicfgSpec>;
+#[doc = "Register `RTCCALICFG` writer"]
+pub type W = crate::W<RtccalicfgSpec>;
+#[doc = "Field `RTC_CALI_START_CYCLING` reader - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
+pub type RtcCaliStartCyclingR = crate::BitReader;
+#[doc = "Field `RTC_CALI_START_CYCLING` writer - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
+pub type RtcCaliStartCyclingW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RTC_CALI_CLK_SEL` reader - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
+pub type RtcCaliClkSelR = crate::FieldReader;
+#[doc = "Field `RTC_CALI_CLK_SEL` writer - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
+pub type RtcCaliClkSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `RTC_CALI_RDY` reader - indicate one-shot frequency calculation is done."]
+pub type RtcCaliRdyR = crate::BitReader;
+#[doc = "Field `RTC_CALI_MAX` reader - Configure the time to calculate RTC slow clock's frequency."]
+pub type RtcCaliMaxR = crate::FieldReader<u16>;
+#[doc = "Field `RTC_CALI_MAX` writer - Configure the time to calculate RTC slow clock's frequency."]
+pub type RtcCaliMaxW<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
+#[doc = "Field `RTC_CALI_START` reader - Set this bit to start one-shot frequency calculation."]
+pub type RtcCaliStartR = crate::BitReader;
+#[doc = "Field `RTC_CALI_START` writer - Set this bit to start one-shot frequency calculation."]
+pub type RtcCaliStartW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 12 - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
+    #[inline(always)]
+    pub fn rtc_cali_start_cycling(&self) -> RtcCaliStartCyclingR {
+        RtcCaliStartCyclingR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bits 13:14 - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
+    #[inline(always)]
+    pub fn rtc_cali_clk_sel(&self) -> RtcCaliClkSelR {
+        RtcCaliClkSelR::new(((self.bits >> 13) & 3) as u8)
+    }
+    #[doc = "Bit 15 - indicate one-shot frequency calculation is done."]
+    #[inline(always)]
+    pub fn rtc_cali_rdy(&self) -> RtcCaliRdyR {
+        RtcCaliRdyR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bits 16:30 - Configure the time to calculate RTC slow clock's frequency."]
+    #[inline(always)]
+    pub fn rtc_cali_max(&self) -> RtcCaliMaxR {
+        RtcCaliMaxR::new(((self.bits >> 16) & 0x7fff) as u16)
+    }
+    #[doc = "Bit 31 - Set this bit to start one-shot frequency calculation."]
+    #[inline(always)]
+    pub fn rtc_cali_start(&self) -> RtcCaliStartR {
+        RtcCaliStartR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 12 - 0: one-shot frequency calculation,1: periodic frequency calculation,"]
+    #[inline(always)]
+    pub fn rtc_cali_start_cycling(&mut self) -> RtcCaliStartCyclingW<'_, RtccalicfgSpec> {
+        RtcCaliStartCyclingW::new(self, 12)
+    }
+    #[doc = "Bits 13:14 - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
+    #[inline(always)]
+    pub fn rtc_cali_clk_sel(&mut self) -> RtcCaliClkSelW<'_, RtccalicfgSpec> {
+        RtcCaliClkSelW::new(self, 13)
+    }
+    #[doc = "Bits 16:30 - Configure the time to calculate RTC slow clock's frequency."]
+    #[inline(always)]
+    pub fn rtc_cali_max(&mut self) -> RtcCaliMaxW<'_, RtccalicfgSpec> {
+        RtcCaliMaxW::new(self, 16)
+    }
+    #[doc = "Bit 31 - Set this bit to start one-shot frequency calculation."]
+    #[inline(always)]
+    pub fn rtc_cali_start(&mut self) -> RtcCaliStartW<'_, RtccalicfgSpec> {
+        RtcCaliStartW::new(self, 31)
+    }
+}
+#[doc = "RTC calibration configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`rtccalicfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtccalicfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RtccalicfgSpec;
+impl crate::RegisterSpec for RtccalicfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rtccalicfg::R`](R) reader structure"]
+impl crate::Readable for RtccalicfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`rtccalicfg::W`](W) writer structure"]
+impl crate::Writable for RtccalicfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RTCCALICFG to value 0x0001_1000"]
+impl crate::Resettable for RtccalicfgSpec {
+    const RESET_VALUE: u32 = 0x0001_1000;
+}

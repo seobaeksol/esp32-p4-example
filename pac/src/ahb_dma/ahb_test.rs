@@ -1,0 +1,49 @@
+#[doc = "Register `AHB_TEST` reader"]
+pub type R = crate::R<AhbTestSpec>;
+#[doc = "Register `AHB_TEST` writer"]
+pub type W = crate::W<AhbTestSpec>;
+#[doc = "Field `AHB_TESTMODE` reader - reserved"]
+pub type AhbTestmodeR = crate::FieldReader;
+#[doc = "Field `AHB_TESTMODE` writer - reserved"]
+pub type AhbTestmodeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `AHB_TESTADDR` reader - reserved"]
+pub type AhbTestaddrR = crate::FieldReader;
+#[doc = "Field `AHB_TESTADDR` writer - reserved"]
+pub type AhbTestaddrW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+impl R {
+    #[doc = "Bits 0:2 - reserved"]
+    #[inline(always)]
+    pub fn ahb_testmode(&self) -> AhbTestmodeR {
+        AhbTestmodeR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 4:5 - reserved"]
+    #[inline(always)]
+    pub fn ahb_testaddr(&self) -> AhbTestaddrR {
+        AhbTestaddrR::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - reserved"]
+    #[inline(always)]
+    pub fn ahb_testmode(&mut self) -> AhbTestmodeW<'_, AhbTestSpec> {
+        AhbTestmodeW::new(self, 0)
+    }
+    #[doc = "Bits 4:5 - reserved"]
+    #[inline(always)]
+    pub fn ahb_testaddr(&mut self) -> AhbTestaddrW<'_, AhbTestSpec> {
+        AhbTestaddrW::new(self, 4)
+    }
+}
+#[doc = "only for test\n\nYou can [`read`](crate::Reg::read) this register and get [`ahb_test::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahb_test::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AhbTestSpec;
+impl crate::RegisterSpec for AhbTestSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ahb_test::R`](R) reader structure"]
+impl crate::Readable for AhbTestSpec {}
+#[doc = "`write(|w| ..)` method takes [`ahb_test::W`](W) writer structure"]
+impl crate::Writable for AhbTestSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AHB_TEST to value 0"]
+impl crate::Resettable for AhbTestSpec {}

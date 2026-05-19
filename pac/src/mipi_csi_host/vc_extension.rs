@@ -1,0 +1,35 @@
+#[doc = "Register `VC_EXTENSION` reader"]
+pub type R = crate::R<VcExtensionSpec>;
+#[doc = "Register `VC_EXTENSION` writer"]
+pub type W = crate::W<VcExtensionSpec>;
+#[doc = "Field `VCX` reader - NA"]
+pub type VcxR = crate::BitReader;
+#[doc = "Field `VCX` writer - NA"]
+pub type VcxW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn vcx(&self) -> VcxR {
+        VcxR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn vcx(&mut self) -> VcxW<'_, VcExtensionSpec> {
+        VcxW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vc_extension::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vc_extension::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VcExtensionSpec;
+impl crate::RegisterSpec for VcExtensionSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vc_extension::R`](R) reader structure"]
+impl crate::Readable for VcExtensionSpec {}
+#[doc = "`write(|w| ..)` method takes [`vc_extension::W`](W) writer structure"]
+impl crate::Writable for VcExtensionSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VC_EXTENSION to value 0"]
+impl crate::Resettable for VcExtensionSpec {}

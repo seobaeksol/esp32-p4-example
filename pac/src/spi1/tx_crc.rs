@@ -1,0 +1,22 @@
+#[doc = "Register `TX_CRC` reader"]
+pub type R = crate::R<TxCrcSpec>;
+#[doc = "Field `DATA` reader - For SPI1, the value of crc32."]
+pub type DataR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - For SPI1, the value of crc32."]
+    #[inline(always)]
+    pub fn data(&self) -> DataR {
+        DataR::new(self.bits)
+    }
+}
+#[doc = "SPI1 TX CRC data register.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_crc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TxCrcSpec;
+impl crate::RegisterSpec for TxCrcSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tx_crc::R`](R) reader structure"]
+impl crate::Readable for TxCrcSpec {}
+#[doc = "`reset()` method sets TX_CRC to value 0xffff_ffff"]
+impl crate::Resettable for TxCrcSpec {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

@@ -1,0 +1,51 @@
+#[doc = "Register `DATA_BUFFER_THLD_CTRL` reader"]
+pub type R = crate::R<DataBufferThldCtrlSpec>;
+#[doc = "Register `DATA_BUFFER_THLD_CTRL` writer"]
+pub type W = crate::W<DataBufferThldCtrlSpec>;
+#[doc = "Field `REG_TX_DATA_BUF_THLD` reader - Transmit Buffer Threshold Value. This field controls the number of empty locations in the Transmit FIFO that trigger the TX_THLD_STAT interrupt. Supports values: 000:2 001:4 010:8 011:16 100:31, else:31"]
+pub type RegTxDataBufThldR = crate::FieldReader;
+#[doc = "Field `REG_TX_DATA_BUF_THLD` writer - Transmit Buffer Threshold Value. This field controls the number of empty locations in the Transmit FIFO that trigger the TX_THLD_STAT interrupt. Supports values: 000:2 001:4 010:8 011:16 100:31, else:31"]
+pub type RegTxDataBufThldW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `REG_RX_DATA_BUF_THLD` reader - Receive Buffer Threshold Value. This field controls the number of empty locations in the Receive FIFO that trigger the RX_THLD_STAT interrupt. Supports: 000:2 001:4 010:8 011:16 100:31, else:31"]
+pub type RegRxDataBufThldR = crate::FieldReader;
+#[doc = "Field `REG_RX_DATA_BUF_THLD` writer - Receive Buffer Threshold Value. This field controls the number of empty locations in the Receive FIFO that trigger the RX_THLD_STAT interrupt. Supports: 000:2 001:4 010:8 011:16 100:31, else:31"]
+pub type RegRxDataBufThldW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+impl R {
+    #[doc = "Bits 0:2 - Transmit Buffer Threshold Value. This field controls the number of empty locations in the Transmit FIFO that trigger the TX_THLD_STAT interrupt. Supports values: 000:2 001:4 010:8 011:16 100:31, else:31"]
+    #[inline(always)]
+    pub fn reg_tx_data_buf_thld(&self) -> RegTxDataBufThldR {
+        RegTxDataBufThldR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 3:5 - Receive Buffer Threshold Value. This field controls the number of empty locations in the Receive FIFO that trigger the RX_THLD_STAT interrupt. Supports: 000:2 001:4 010:8 011:16 100:31, else:31"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_thld(&self) -> RegRxDataBufThldR {
+        RegRxDataBufThldR::new(((self.bits >> 3) & 7) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Transmit Buffer Threshold Value. This field controls the number of empty locations in the Transmit FIFO that trigger the TX_THLD_STAT interrupt. Supports values: 000:2 001:4 010:8 011:16 100:31, else:31"]
+    #[inline(always)]
+    pub fn reg_tx_data_buf_thld(&mut self) -> RegTxDataBufThldW<'_, DataBufferThldCtrlSpec> {
+        RegTxDataBufThldW::new(self, 0)
+    }
+    #[doc = "Bits 3:5 - Receive Buffer Threshold Value. This field controls the number of empty locations in the Receive FIFO that trigger the RX_THLD_STAT interrupt. Supports: 000:2 001:4 010:8 011:16 100:31, else:31"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_thld(&mut self) -> RegRxDataBufThldW<'_, DataBufferThldCtrlSpec> {
+        RegRxDataBufThldW::new(self, 3)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`data_buffer_thld_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_buffer_thld_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DataBufferThldCtrlSpec;
+impl crate::RegisterSpec for DataBufferThldCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`data_buffer_thld_ctrl::R`](R) reader structure"]
+impl crate::Readable for DataBufferThldCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`data_buffer_thld_ctrl::W`](W) writer structure"]
+impl crate::Writable for DataBufferThldCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DATA_BUFFER_THLD_CTRL to value 0x09"]
+impl crate::Resettable for DataBufferThldCtrlSpec {
+    const RESET_VALUE: u32 = 0x09;
+}

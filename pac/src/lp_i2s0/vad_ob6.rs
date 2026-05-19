@@ -1,0 +1,20 @@
+#[doc = "Register `VAD_OB6` reader"]
+pub type R = crate::R<VadOb6Spec>;
+#[doc = "Field `THRESHOLD_OB` reader - Reg threshold observe signal"]
+pub type ThresholdObR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Reg threshold observe signal"]
+    #[inline(always)]
+    pub fn threshold_ob(&self) -> ThresholdObR {
+        ThresholdObR::new(self.bits)
+    }
+}
+#[doc = "I2S VAD Observe register\n\nYou can [`read`](crate::Reg::read) this register and get [`vad_ob6::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VadOb6Spec;
+impl crate::RegisterSpec for VadOb6Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vad_ob6::R`](R) reader structure"]
+impl crate::Readable for VadOb6Spec {}
+#[doc = "`reset()` method sets VAD_OB6 to value 0"]
+impl crate::Resettable for VadOb6Spec {}

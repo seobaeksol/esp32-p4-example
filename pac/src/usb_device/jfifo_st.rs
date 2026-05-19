@@ -1,0 +1,93 @@
+#[doc = "Register `JFIFO_ST` reader"]
+pub type R = crate::R<JfifoStSpec>;
+#[doc = "Register `JFIFO_ST` writer"]
+pub type W = crate::W<JfifoStSpec>;
+#[doc = "Field `IN_FIFO_CNT` reader - JTAT in fifo counter."]
+pub type InFifoCntR = crate::FieldReader;
+#[doc = "Field `IN_FIFO_EMPTY` reader - 1: JTAG in fifo is empty."]
+pub type InFifoEmptyR = crate::BitReader;
+#[doc = "Field `IN_FIFO_FULL` reader - 1: JTAG in fifo is full."]
+pub type InFifoFullR = crate::BitReader;
+#[doc = "Field `OUT_FIFO_CNT` reader - JTAT out fifo counter."]
+pub type OutFifoCntR = crate::FieldReader;
+#[doc = "Field `OUT_FIFO_EMPTY` reader - 1: JTAG out fifo is empty."]
+pub type OutFifoEmptyR = crate::BitReader;
+#[doc = "Field `OUT_FIFO_FULL` reader - 1: JTAG out fifo is full."]
+pub type OutFifoFullR = crate::BitReader;
+#[doc = "Field `IN_FIFO_RESET` reader - Write 1 to reset JTAG in fifo."]
+pub type InFifoResetR = crate::BitReader;
+#[doc = "Field `IN_FIFO_RESET` writer - Write 1 to reset JTAG in fifo."]
+pub type InFifoResetW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUT_FIFO_RESET` reader - Write 1 to reset JTAG out fifo."]
+pub type OutFifoResetR = crate::BitReader;
+#[doc = "Field `OUT_FIFO_RESET` writer - Write 1 to reset JTAG out fifo."]
+pub type OutFifoResetW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:1 - JTAT in fifo counter."]
+    #[inline(always)]
+    pub fn in_fifo_cnt(&self) -> InFifoCntR {
+        InFifoCntR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bit 2 - 1: JTAG in fifo is empty."]
+    #[inline(always)]
+    pub fn in_fifo_empty(&self) -> InFifoEmptyR {
+        InFifoEmptyR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - 1: JTAG in fifo is full."]
+    #[inline(always)]
+    pub fn in_fifo_full(&self) -> InFifoFullR {
+        InFifoFullR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:5 - JTAT out fifo counter."]
+    #[inline(always)]
+    pub fn out_fifo_cnt(&self) -> OutFifoCntR {
+        OutFifoCntR::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bit 6 - 1: JTAG out fifo is empty."]
+    #[inline(always)]
+    pub fn out_fifo_empty(&self) -> OutFifoEmptyR {
+        OutFifoEmptyR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - 1: JTAG out fifo is full."]
+    #[inline(always)]
+    pub fn out_fifo_full(&self) -> OutFifoFullR {
+        OutFifoFullR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Write 1 to reset JTAG in fifo."]
+    #[inline(always)]
+    pub fn in_fifo_reset(&self) -> InFifoResetR {
+        InFifoResetR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Write 1 to reset JTAG out fifo."]
+    #[inline(always)]
+    pub fn out_fifo_reset(&self) -> OutFifoResetR {
+        OutFifoResetR::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 8 - Write 1 to reset JTAG in fifo."]
+    #[inline(always)]
+    pub fn in_fifo_reset(&mut self) -> InFifoResetW<'_, JfifoStSpec> {
+        InFifoResetW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Write 1 to reset JTAG out fifo."]
+    #[inline(always)]
+    pub fn out_fifo_reset(&mut self) -> OutFifoResetW<'_, JfifoStSpec> {
+        OutFifoResetW::new(self, 9)
+    }
+}
+#[doc = "JTAG FIFO status and control registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`jfifo_st::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`jfifo_st::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct JfifoStSpec;
+impl crate::RegisterSpec for JfifoStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`jfifo_st::R`](R) reader structure"]
+impl crate::Readable for JfifoStSpec {}
+#[doc = "`write(|w| ..)` method takes [`jfifo_st::W`](W) writer structure"]
+impl crate::Writable for JfifoStSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets JFIFO_ST to value 0x44"]
+impl crate::Resettable for JfifoStSpec {
+    const RESET_VALUE: u32 = 0x44;
+}

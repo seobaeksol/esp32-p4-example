@@ -1,0 +1,86 @@
+#[doc = "Register `WAKEUP2` reader"]
+pub type R = crate::R<Wakeup2Spec>;
+#[doc = "Register `WAKEUP2` writer"]
+pub type W = crate::W<Wakeup2Spec>;
+#[doc = "Field `SAR2_WAKEUP_TH_LOW` reader - Lower threshold."]
+pub type Sar2WakeupThLowR = crate::FieldReader<u16>;
+#[doc = "Field `SAR2_WAKEUP_TH_LOW` writer - Lower threshold."]
+pub type Sar2WakeupThLowW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `SAR2_WAKEUP_TH_HIGH` reader - Upper threshold."]
+pub type Sar2WakeupThHighR = crate::FieldReader<u16>;
+#[doc = "Field `SAR2_WAKEUP_TH_HIGH` writer - Upper threshold."]
+pub type Sar2WakeupThHighW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `SAR2_WAKEUP_OVER_UPPER_TH` reader - Indicates that this wakeup event arose from exceeding upper threshold."]
+pub type Sar2WakeupOverUpperThR = crate::BitReader;
+#[doc = "Field `SAR2_WAKEUP_EN` reader - Wakeup function enable."]
+pub type Sar2WakeupEnR = crate::BitReader;
+#[doc = "Field `SAR2_WAKEUP_EN` writer - Wakeup function enable."]
+pub type Sar2WakeupEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SAR2_WAKEUP_MODE` reader - 0:absolute value comparison mode. 1: relative value comparison mode."]
+pub type Sar2WakeupModeR = crate::BitReader;
+#[doc = "Field `SAR2_WAKEUP_MODE` writer - 0:absolute value comparison mode. 1: relative value comparison mode."]
+pub type Sar2WakeupModeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:11 - Lower threshold."]
+    #[inline(always)]
+    pub fn sar2_wakeup_th_low(&self) -> Sar2WakeupThLowR {
+        Sar2WakeupThLowR::new((self.bits & 0x0fff) as u16)
+    }
+    #[doc = "Bits 14:25 - Upper threshold."]
+    #[inline(always)]
+    pub fn sar2_wakeup_th_high(&self) -> Sar2WakeupThHighR {
+        Sar2WakeupThHighR::new(((self.bits >> 14) & 0x0fff) as u16)
+    }
+    #[doc = "Bit 29 - Indicates that this wakeup event arose from exceeding upper threshold."]
+    #[inline(always)]
+    pub fn sar2_wakeup_over_upper_th(&self) -> Sar2WakeupOverUpperThR {
+        Sar2WakeupOverUpperThR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Wakeup function enable."]
+    #[inline(always)]
+    pub fn sar2_wakeup_en(&self) -> Sar2WakeupEnR {
+        Sar2WakeupEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - 0:absolute value comparison mode. 1: relative value comparison mode."]
+    #[inline(always)]
+    pub fn sar2_wakeup_mode(&self) -> Sar2WakeupModeR {
+        Sar2WakeupModeR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:11 - Lower threshold."]
+    #[inline(always)]
+    pub fn sar2_wakeup_th_low(&mut self) -> Sar2WakeupThLowW<'_, Wakeup2Spec> {
+        Sar2WakeupThLowW::new(self, 0)
+    }
+    #[doc = "Bits 14:25 - Upper threshold."]
+    #[inline(always)]
+    pub fn sar2_wakeup_th_high(&mut self) -> Sar2WakeupThHighW<'_, Wakeup2Spec> {
+        Sar2WakeupThHighW::new(self, 14)
+    }
+    #[doc = "Bit 30 - Wakeup function enable."]
+    #[inline(always)]
+    pub fn sar2_wakeup_en(&mut self) -> Sar2WakeupEnW<'_, Wakeup2Spec> {
+        Sar2WakeupEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - 0:absolute value comparison mode. 1: relative value comparison mode."]
+    #[inline(always)]
+    pub fn sar2_wakeup_mode(&mut self) -> Sar2WakeupModeW<'_, Wakeup2Spec> {
+        Sar2WakeupModeW::new(self, 31)
+    }
+}
+#[doc = "ADC2 wakeup configuration registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`wakeup2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakeup2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Wakeup2Spec;
+impl crate::RegisterSpec for Wakeup2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`wakeup2::R`](R) reader structure"]
+impl crate::Readable for Wakeup2Spec {}
+#[doc = "`write(|w| ..)` method takes [`wakeup2::W`](W) writer structure"]
+impl crate::Writable for Wakeup2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets WAKEUP2 to value 0x03ff_c000"]
+impl crate::Resettable for Wakeup2Spec {
+    const RESET_VALUE: u32 = 0x03ff_c000;
+}

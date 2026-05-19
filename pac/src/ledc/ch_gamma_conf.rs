@@ -1,0 +1,49 @@
+#[doc = "Register `CH%s_GAMMA_CONF` reader"]
+pub type R = crate::R<ChGammaConfSpec>;
+#[doc = "Register `CH%s_GAMMA_CONF` writer"]
+pub type W = crate::W<ChGammaConfSpec>;
+#[doc = "Field `CH_GAMMA_ENTRY_NUM` reader - Configures the number of duty cycle fading rages for LEDC ch%s."]
+pub type ChGammaEntryNumR = crate::FieldReader;
+#[doc = "Field `CH_GAMMA_ENTRY_NUM` writer - Configures the number of duty cycle fading rages for LEDC ch%s."]
+pub type ChGammaEntryNumW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `CH_GAMMA_PAUSE` writer - Configures whether or not to pause duty cycle fading of LEDC ch%s.\\\\0: Invalid. No effect\\\\1: Pause"]
+pub type ChGammaPauseW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH_GAMMA_RESUME` writer - Configures whether or nor to resume duty cycle fading of LEDC ch%s.\\\\0: Invalid. No effect\\\\1: Resume"]
+pub type ChGammaResumeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:4 - Configures the number of duty cycle fading rages for LEDC ch%s."]
+    #[inline(always)]
+    pub fn ch_gamma_entry_num(&self) -> ChGammaEntryNumR {
+        ChGammaEntryNumR::new((self.bits & 0x1f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - Configures the number of duty cycle fading rages for LEDC ch%s."]
+    #[inline(always)]
+    pub fn ch_gamma_entry_num(&mut self) -> ChGammaEntryNumW<'_, ChGammaConfSpec> {
+        ChGammaEntryNumW::new(self, 0)
+    }
+    #[doc = "Bit 5 - Configures whether or not to pause duty cycle fading of LEDC ch%s.\\\\0: Invalid. No effect\\\\1: Pause"]
+    #[inline(always)]
+    pub fn ch_gamma_pause(&mut self) -> ChGammaPauseW<'_, ChGammaConfSpec> {
+        ChGammaPauseW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Configures whether or nor to resume duty cycle fading of LEDC ch%s.\\\\0: Invalid. No effect\\\\1: Resume"]
+    #[inline(always)]
+    pub fn ch_gamma_resume(&mut self) -> ChGammaResumeW<'_, ChGammaConfSpec> {
+        ChGammaResumeW::new(self, 6)
+    }
+}
+#[doc = "Ledc ch%s gamma config register.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_gamma_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_gamma_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChGammaConfSpec;
+impl crate::RegisterSpec for ChGammaConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ch_gamma_conf::R`](R) reader structure"]
+impl crate::Readable for ChGammaConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`ch_gamma_conf::W`](W) writer structure"]
+impl crate::Writable for ChGammaConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CH%s_GAMMA_CONF to value 0"]
+impl crate::Resettable for ChGammaConfSpec {}

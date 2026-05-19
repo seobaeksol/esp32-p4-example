@@ -1,0 +1,37 @@
+#[doc = "Register `LP_TCM_ROM_RDN_ECO_HIGH` reader"]
+pub type R = crate::R<LpTcmRomRdnEcoHighSpec>;
+#[doc = "Register `LP_TCM_ROM_RDN_ECO_HIGH` writer"]
+pub type W = crate::W<LpTcmRomRdnEcoHighSpec>;
+#[doc = "Field `LP_TCM_ROM_RDN_ECO_HIGH` reader - need_des"]
+pub type LpTcmRomRdnEcoHighR = crate::FieldReader<u32>;
+#[doc = "Field `LP_TCM_ROM_RDN_ECO_HIGH` writer - need_des"]
+pub type LpTcmRomRdnEcoHighW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn lp_tcm_rom_rdn_eco_high(&self) -> LpTcmRomRdnEcoHighR {
+        LpTcmRomRdnEcoHighR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn lp_tcm_rom_rdn_eco_high(&mut self) -> LpTcmRomRdnEcoHighW<'_, LpTcmRomRdnEcoHighSpec> {
+        LpTcmRomRdnEcoHighW::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_tcm_rom_rdn_eco_high::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_tcm_rom_rdn_eco_high::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpTcmRomRdnEcoHighSpec;
+impl crate::RegisterSpec for LpTcmRomRdnEcoHighSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_tcm_rom_rdn_eco_high::R`](R) reader structure"]
+impl crate::Readable for LpTcmRomRdnEcoHighSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_tcm_rom_rdn_eco_high::W`](W) writer structure"]
+impl crate::Writable for LpTcmRomRdnEcoHighSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_TCM_ROM_RDN_ECO_HIGH to value 0xffff_ffff"]
+impl crate::Resettable for LpTcmRomRdnEcoHighSpec {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

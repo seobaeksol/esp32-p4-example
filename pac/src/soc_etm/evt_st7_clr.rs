@@ -1,0 +1,93 @@
+#[doc = "Register `EVT_ST7_CLR` writer"]
+pub type W = crate::W<EvtSt7ClrSpec>;
+#[doc = "Field `DMA2D_EVT_IN_SUC_EOF_CH1_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_in_suc_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtInSucEofCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_DONE_CH0_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_done_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutDoneCh0StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_DONE_CH1_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_done_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutDoneCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_DONE_CH2_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_done_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutDoneCh2StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_EOF_CH0_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutEofCh0StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_EOF_CH1_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutEofCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_EOF_CH2_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutEofCh2StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_TOTAL_EOF_CH0_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_total_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutTotalEofCh0StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_TOTAL_EOF_CH1_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_total_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutTotalEofCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA2D_EVT_OUT_TOTAL_EOF_CH2_ST_CLR` writer - Configures whether or not to clear DMA2D_evt_out_total_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type Dma2dEvtOutTotalEofCh2StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to clear DMA2D_evt_in_suc_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_in_suc_eof_ch1_st_clr(
+        &mut self,
+    ) -> Dma2dEvtInSucEofCh1StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtInSucEofCh1StClrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Configures whether or not to clear DMA2D_evt_out_done_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_done_ch0_st_clr(&mut self) -> Dma2dEvtOutDoneCh0StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutDoneCh0StClrW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Configures whether or not to clear DMA2D_evt_out_done_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_done_ch1_st_clr(&mut self) -> Dma2dEvtOutDoneCh1StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutDoneCh1StClrW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Configures whether or not to clear DMA2D_evt_out_done_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_done_ch2_st_clr(&mut self) -> Dma2dEvtOutDoneCh2StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutDoneCh2StClrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Configures whether or not to clear DMA2D_evt_out_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_eof_ch0_st_clr(&mut self) -> Dma2dEvtOutEofCh0StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutEofCh0StClrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Configures whether or not to clear DMA2D_evt_out_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_eof_ch1_st_clr(&mut self) -> Dma2dEvtOutEofCh1StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutEofCh1StClrW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Configures whether or not to clear DMA2D_evt_out_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_eof_ch2_st_clr(&mut self) -> Dma2dEvtOutEofCh2StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutEofCh2StClrW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Configures whether or not to clear DMA2D_evt_out_total_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_total_eof_ch0_st_clr(
+        &mut self,
+    ) -> Dma2dEvtOutTotalEofCh0StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutTotalEofCh0StClrW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Configures whether or not to clear DMA2D_evt_out_total_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_total_eof_ch1_st_clr(
+        &mut self,
+    ) -> Dma2dEvtOutTotalEofCh1StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutTotalEofCh1StClrW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Configures whether or not to clear DMA2D_evt_out_total_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn dma2d_evt_out_total_eof_ch2_st_clr(
+        &mut self,
+    ) -> Dma2dEvtOutTotalEofCh2StClrW<'_, EvtSt7ClrSpec> {
+        Dma2dEvtOutTotalEofCh2StClrW::new(self, 9)
+    }
+}
+#[doc = "Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st7_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EvtSt7ClrSpec;
+impl crate::RegisterSpec for EvtSt7ClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`evt_st7_clr::W`](W) writer structure"]
+impl crate::Writable for EvtSt7ClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets EVT_ST7_CLR to value 0"]
+impl crate::Resettable for EvtSt7ClrSpec {}

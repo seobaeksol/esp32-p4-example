@@ -1,0 +1,51 @@
+#[doc = "Register `USER2` reader"]
+pub type R = crate::R<User2Spec>;
+#[doc = "Register `USER2` writer"]
+pub type W = crate::W<User2Spec>;
+#[doc = "Field `USR_COMMAND_VALUE` reader - The value of command."]
+pub type UsrCommandValueR = crate::FieldReader<u16>;
+#[doc = "Field `USR_COMMAND_VALUE` writer - The value of command."]
+pub type UsrCommandValueW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `USR_COMMAND_BITLEN` reader - The length in bits of command phase. The register value shall be (bit_num-1)"]
+pub type UsrCommandBitlenR = crate::FieldReader;
+#[doc = "Field `USR_COMMAND_BITLEN` writer - The length in bits of command phase. The register value shall be (bit_num-1)"]
+pub type UsrCommandBitlenW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:15 - The value of command."]
+    #[inline(always)]
+    pub fn usr_command_value(&self) -> UsrCommandValueR {
+        UsrCommandValueR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 28:31 - The length in bits of command phase. The register value shall be (bit_num-1)"]
+    #[inline(always)]
+    pub fn usr_command_bitlen(&self) -> UsrCommandBitlenR {
+        UsrCommandBitlenR::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - The value of command."]
+    #[inline(always)]
+    pub fn usr_command_value(&mut self) -> UsrCommandValueW<'_, User2Spec> {
+        UsrCommandValueW::new(self, 0)
+    }
+    #[doc = "Bits 28:31 - The length in bits of command phase. The register value shall be (bit_num-1)"]
+    #[inline(always)]
+    pub fn usr_command_bitlen(&mut self) -> UsrCommandBitlenW<'_, User2Spec> {
+        UsrCommandBitlenW::new(self, 28)
+    }
+}
+#[doc = "SPI0 user2 register.\n\nYou can [`read`](crate::Reg::read) this register and get [`user2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`user2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct User2Spec;
+impl crate::RegisterSpec for User2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`user2::R`](R) reader structure"]
+impl crate::Readable for User2Spec {}
+#[doc = "`write(|w| ..)` method takes [`user2::W`](W) writer structure"]
+impl crate::Writable for User2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets USER2 to value 0x7000_0000"]
+impl crate::Resettable for User2Spec {
+    const RESET_VALUE: u32 = 0x7000_0000;
+}

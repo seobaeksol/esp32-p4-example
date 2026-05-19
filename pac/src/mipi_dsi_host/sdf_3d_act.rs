@@ -1,0 +1,48 @@
+#[doc = "Register `SDF_3D_ACT` reader"]
+pub type R = crate::R<Sdf3dActSpec>;
+#[doc = "Field `MODE_3D_ACT` reader - NA"]
+pub type Mode3dActR = crate::FieldReader;
+#[doc = "Field `FORMAT_3D_ACT` reader - NA"]
+pub type Format3dActR = crate::FieldReader;
+#[doc = "Field `SECOND_VSYNC_ACT` reader - NA"]
+pub type SecondVsyncActR = crate::BitReader;
+#[doc = "Field `RIGHT_FIRST_ACT` reader - NA"]
+pub type RightFirstActR = crate::BitReader;
+#[doc = "Field `SEND_3D_CFG_ACT` reader - NA"]
+pub type Send3dCfgActR = crate::BitReader;
+impl R {
+    #[doc = "Bits 0:1 - NA"]
+    #[inline(always)]
+    pub fn mode_3d_act(&self) -> Mode3dActR {
+        Mode3dActR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3 - NA"]
+    #[inline(always)]
+    pub fn format_3d_act(&self) -> Format3dActR {
+        Format3dActR::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn second_vsync_act(&self) -> SecondVsyncActR {
+        SecondVsyncActR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn right_first_act(&self) -> RightFirstActR {
+        RightFirstActR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn send_3d_cfg_act(&self) -> Send3dCfgActR {
+        Send3dCfgActR::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`sdf_3d_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Sdf3dActSpec;
+impl crate::RegisterSpec for Sdf3dActSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sdf_3d_act::R`](R) reader structure"]
+impl crate::Readable for Sdf3dActSpec {}
+#[doc = "`reset()` method sets SDF_3D_ACT to value 0"]
+impl crate::Resettable for Sdf3dActSpec {}

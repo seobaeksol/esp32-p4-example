@@ -1,0 +1,85 @@
+#[doc = "Register `A_DECI_SCORE_OFFSET` reader"]
+pub type R = crate::R<ADeciScoreOffsetSpec>;
+#[doc = "Register `A_DECI_SCORE_OFFSET` writer"]
+pub type W = crate::W<ADeciScoreOffsetSpec>;
+#[doc = "Field `A_I16X16_DECI_SCORE_OFFSET` reader - Configures video A i16x16 MB decimate score offset. This offset will be added to i16x16 MB score."]
+pub type AI16x16DeciScoreOffsetR = crate::FieldReader;
+#[doc = "Field `A_I16X16_DECI_SCORE_OFFSET` writer - Configures video A i16x16 MB decimate score offset. This offset will be added to i16x16 MB score."]
+pub type AI16x16DeciScoreOffsetW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `A_I_CHROMA_DECI_SCORE_OFFSET` reader - Configures video A I chroma MB decimate score offset. This offset will be added to I chroma MB score."]
+pub type AIChromaDeciScoreOffsetR = crate::FieldReader;
+#[doc = "Field `A_I_CHROMA_DECI_SCORE_OFFSET` writer - Configures video A I chroma MB decimate score offset. This offset will be added to I chroma MB score."]
+pub type AIChromaDeciScoreOffsetW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `A_P16X16_DECI_SCORE_OFFSET` reader - Configures video A p16x16 MB decimate score offset. This offset will be added to p16x16 MB score."]
+pub type AP16x16DeciScoreOffsetR = crate::FieldReader;
+#[doc = "Field `A_P16X16_DECI_SCORE_OFFSET` writer - Configures video A p16x16 MB decimate score offset. This offset will be added to p16x16 MB score."]
+pub type AP16x16DeciScoreOffsetW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `A_P_CHROMA_DECI_SCORE_OFFSET` reader - Configures video A p chroma MB decimate score offset. This offset will be added to p chroma MB score."]
+pub type APChromaDeciScoreOffsetR = crate::FieldReader;
+#[doc = "Field `A_P_CHROMA_DECI_SCORE_OFFSET` writer - Configures video A p chroma MB decimate score offset. This offset will be added to p chroma MB score."]
+pub type APChromaDeciScoreOffsetW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bits 0:5 - Configures video A i16x16 MB decimate score offset. This offset will be added to i16x16 MB score."]
+    #[inline(always)]
+    pub fn a_i16x16_deci_score_offset(&self) -> AI16x16DeciScoreOffsetR {
+        AI16x16DeciScoreOffsetR::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bits 6:11 - Configures video A I chroma MB decimate score offset. This offset will be added to I chroma MB score."]
+    #[inline(always)]
+    pub fn a_i_chroma_deci_score_offset(&self) -> AIChromaDeciScoreOffsetR {
+        AIChromaDeciScoreOffsetR::new(((self.bits >> 6) & 0x3f) as u8)
+    }
+    #[doc = "Bits 12:17 - Configures video A p16x16 MB decimate score offset. This offset will be added to p16x16 MB score."]
+    #[inline(always)]
+    pub fn a_p16x16_deci_score_offset(&self) -> AP16x16DeciScoreOffsetR {
+        AP16x16DeciScoreOffsetR::new(((self.bits >> 12) & 0x3f) as u8)
+    }
+    #[doc = "Bits 18:23 - Configures video A p chroma MB decimate score offset. This offset will be added to p chroma MB score."]
+    #[inline(always)]
+    pub fn a_p_chroma_deci_score_offset(&self) -> APChromaDeciScoreOffsetR {
+        APChromaDeciScoreOffsetR::new(((self.bits >> 18) & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - Configures video A i16x16 MB decimate score offset. This offset will be added to i16x16 MB score."]
+    #[inline(always)]
+    pub fn a_i16x16_deci_score_offset(
+        &mut self,
+    ) -> AI16x16DeciScoreOffsetW<'_, ADeciScoreOffsetSpec> {
+        AI16x16DeciScoreOffsetW::new(self, 0)
+    }
+    #[doc = "Bits 6:11 - Configures video A I chroma MB decimate score offset. This offset will be added to I chroma MB score."]
+    #[inline(always)]
+    pub fn a_i_chroma_deci_score_offset(
+        &mut self,
+    ) -> AIChromaDeciScoreOffsetW<'_, ADeciScoreOffsetSpec> {
+        AIChromaDeciScoreOffsetW::new(self, 6)
+    }
+    #[doc = "Bits 12:17 - Configures video A p16x16 MB decimate score offset. This offset will be added to p16x16 MB score."]
+    #[inline(always)]
+    pub fn a_p16x16_deci_score_offset(
+        &mut self,
+    ) -> AP16x16DeciScoreOffsetW<'_, ADeciScoreOffsetSpec> {
+        AP16x16DeciScoreOffsetW::new(self, 12)
+    }
+    #[doc = "Bits 18:23 - Configures video A p chroma MB decimate score offset. This offset will be added to p chroma MB score."]
+    #[inline(always)]
+    pub fn a_p_chroma_deci_score_offset(
+        &mut self,
+    ) -> APChromaDeciScoreOffsetW<'_, ADeciScoreOffsetSpec> {
+        APChromaDeciScoreOffsetW::new(self, 18)
+    }
+}
+#[doc = "Video A luma and chroma MB decimate score offset Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_deci_score_offset::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_deci_score_offset::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ADeciScoreOffsetSpec;
+impl crate::RegisterSpec for ADeciScoreOffsetSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`a_deci_score_offset::R`](R) reader structure"]
+impl crate::Readable for ADeciScoreOffsetSpec {}
+#[doc = "`write(|w| ..)` method takes [`a_deci_score_offset::W`](W) writer structure"]
+impl crate::Writable for ADeciScoreOffsetSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets A_DECI_SCORE_OFFSET to value 0"]
+impl crate::Resettable for ADeciScoreOffsetSpec {}

@@ -1,0 +1,53 @@
+#[doc = "Register `DPI_MISC_CONFIG` reader"]
+pub type R = crate::R<DpiMiscConfigSpec>;
+#[doc = "Register `DPI_MISC_CONFIG` writer"]
+pub type W = crate::W<DpiMiscConfigSpec>;
+#[doc = "Field `DPI_EN` reader - this bit configures enable of dpi output, 0: disable, 1: enable"]
+pub type DpiEnR = crate::BitReader;
+#[doc = "Field `DPI_EN` writer - this bit configures enable of dpi output, 0: disable, 1: enable"]
+pub type DpiEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FIFO_UNDERRUN_DISCARD_VCNT` reader - this field configures the underrun interrupt musk, when underrun occurs and line cnt is less then this field"]
+pub type FifoUnderrunDiscardVcntR = crate::FieldReader<u16>;
+#[doc = "Field `FIFO_UNDERRUN_DISCARD_VCNT` writer - this field configures the underrun interrupt musk, when underrun occurs and line cnt is less then this field"]
+pub type FifoUnderrunDiscardVcntW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+impl R {
+    #[doc = "Bit 0 - this bit configures enable of dpi output, 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn dpi_en(&self) -> DpiEnR {
+        DpiEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 4:15 - this field configures the underrun interrupt musk, when underrun occurs and line cnt is less then this field"]
+    #[inline(always)]
+    pub fn fifo_underrun_discard_vcnt(&self) -> FifoUnderrunDiscardVcntR {
+        FifoUnderrunDiscardVcntR::new(((self.bits >> 4) & 0x0fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - this bit configures enable of dpi output, 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn dpi_en(&mut self) -> DpiEnW<'_, DpiMiscConfigSpec> {
+        DpiEnW::new(self, 0)
+    }
+    #[doc = "Bits 4:15 - this field configures the underrun interrupt musk, when underrun occurs and line cnt is less then this field"]
+    #[inline(always)]
+    pub fn fifo_underrun_discard_vcnt(
+        &mut self,
+    ) -> FifoUnderrunDiscardVcntW<'_, DpiMiscConfigSpec> {
+        FifoUnderrunDiscardVcntW::new(self, 4)
+    }
+}
+#[doc = "dsi_bridge dpi misc config register\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_misc_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpi_misc_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DpiMiscConfigSpec;
+impl crate::RegisterSpec for DpiMiscConfigSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dpi_misc_config::R`](R) reader structure"]
+impl crate::Readable for DpiMiscConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`dpi_misc_config::W`](W) writer structure"]
+impl crate::Writable for DpiMiscConfigSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DPI_MISC_CONFIG to value 0x19d0"]
+impl crate::Resettable for DpiMiscConfigSpec {
+    const RESET_VALUE: u32 = 0x19d0;
+}

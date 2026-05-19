@@ -1,0 +1,135 @@
+#[doc = "Register `GAMMA_BX2` reader"]
+pub type R = crate::R<GammaBx2Spec>;
+#[doc = "Register `GAMMA_BX2` writer"]
+pub type W = crate::W<GammaBx2Spec>;
+#[doc = "Field `GAMMA_B_X0F` reader - this field configures the point 15 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0fR = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X0F` writer - this field configures the point 15 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0fW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X0E` reader - this field configures the point 14 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0eR = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X0E` writer - this field configures the point 14 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0eW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X0D` reader - this field configures the point 13 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0dR = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X0D` writer - this field configures the point 13 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0dW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X0C` reader - this field configures the point 12 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0cR = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X0C` writer - this field configures the point 12 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0cW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X0B` reader - this field configures the point 11 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0bR = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X0B` writer - this field configures the point 11 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0bW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X0A` reader - this field configures the point 10 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0aR = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X0A` writer - this field configures the point 10 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX0aW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X09` reader - this field configures the point 9 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX09R = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X09` writer - this field configures the point 9 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX09W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `GAMMA_B_X08` reader - this field configures the point 8 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX08R = crate::FieldReader;
+#[doc = "Field `GAMMA_B_X08` writer - this field configures the point 8 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+pub type GammaBX08W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+impl R {
+    #[doc = "Bits 0:2 - this field configures the point 15 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0f(&self) -> GammaBX0fR {
+        GammaBX0fR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 3:5 - this field configures the point 14 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0e(&self) -> GammaBX0eR {
+        GammaBX0eR::new(((self.bits >> 3) & 7) as u8)
+    }
+    #[doc = "Bits 6:8 - this field configures the point 13 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0d(&self) -> GammaBX0dR {
+        GammaBX0dR::new(((self.bits >> 6) & 7) as u8)
+    }
+    #[doc = "Bits 9:11 - this field configures the point 12 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0c(&self) -> GammaBX0cR {
+        GammaBX0cR::new(((self.bits >> 9) & 7) as u8)
+    }
+    #[doc = "Bits 12:14 - this field configures the point 11 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0b(&self) -> GammaBX0bR {
+        GammaBX0bR::new(((self.bits >> 12) & 7) as u8)
+    }
+    #[doc = "Bits 15:17 - this field configures the point 10 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0a(&self) -> GammaBX0aR {
+        GammaBX0aR::new(((self.bits >> 15) & 7) as u8)
+    }
+    #[doc = "Bits 18:20 - this field configures the point 9 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x09(&self) -> GammaBX09R {
+        GammaBX09R::new(((self.bits >> 18) & 7) as u8)
+    }
+    #[doc = "Bits 21:23 - this field configures the point 8 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x08(&self) -> GammaBX08R {
+        GammaBX08R::new(((self.bits >> 21) & 7) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - this field configures the point 15 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0f(&mut self) -> GammaBX0fW<'_, GammaBx2Spec> {
+        GammaBX0fW::new(self, 0)
+    }
+    #[doc = "Bits 3:5 - this field configures the point 14 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0e(&mut self) -> GammaBX0eW<'_, GammaBx2Spec> {
+        GammaBX0eW::new(self, 3)
+    }
+    #[doc = "Bits 6:8 - this field configures the point 13 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0d(&mut self) -> GammaBX0dW<'_, GammaBx2Spec> {
+        GammaBX0dW::new(self, 6)
+    }
+    #[doc = "Bits 9:11 - this field configures the point 12 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0c(&mut self) -> GammaBX0cW<'_, GammaBx2Spec> {
+        GammaBX0cW::new(self, 9)
+    }
+    #[doc = "Bits 12:14 - this field configures the point 11 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0b(&mut self) -> GammaBX0bW<'_, GammaBx2Spec> {
+        GammaBX0bW::new(self, 12)
+    }
+    #[doc = "Bits 15:17 - this field configures the point 10 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x0a(&mut self) -> GammaBX0aW<'_, GammaBx2Spec> {
+        GammaBX0aW::new(self, 15)
+    }
+    #[doc = "Bits 18:20 - this field configures the point 9 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x09(&mut self) -> GammaBX09W<'_, GammaBx2Spec> {
+        GammaBX09W::new(self, 18)
+    }
+    #[doc = "Bits 21:23 - this field configures the point 8 of X-axis of b channel gamma curve, it represents the power of the distance from the previous point"]
+    #[inline(always)]
+    pub fn gamma_b_x08(&mut self) -> GammaBX08W<'_, GammaBx2Spec> {
+        GammaBX08W::new(self, 21)
+    }
+}
+#[doc = "point of X-axis of b channel gamma curve register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`gamma_bx2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gamma_bx2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GammaBx2Spec;
+impl crate::RegisterSpec for GammaBx2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`gamma_bx2::R`](R) reader structure"]
+impl crate::Readable for GammaBx2Spec {}
+#[doc = "`write(|w| ..)` method takes [`gamma_bx2::W`](W) writer structure"]
+impl crate::Writable for GammaBx2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets GAMMA_BX2 to value 0x0092_4924"]
+impl crate::Resettable for GammaBx2Spec {
+    const RESET_VALUE: u32 = 0x0092_4924;
+}

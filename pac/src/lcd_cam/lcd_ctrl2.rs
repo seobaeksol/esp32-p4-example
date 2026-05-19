@@ -1,0 +1,121 @@
+#[doc = "Register `LCD_CTRL2` reader"]
+pub type R = crate::R<LcdCtrl2Spec>;
+#[doc = "Register `LCD_CTRL2` writer"]
+pub type W = crate::W<LcdCtrl2Spec>;
+#[doc = "Field `LCD_VSYNC_WIDTH` reader - It is the position of LCD_VSYNC active pulse in a line."]
+pub type LcdVsyncWidthR = crate::FieldReader;
+#[doc = "Field `LCD_VSYNC_WIDTH` writer - It is the position of LCD_VSYNC active pulse in a line."]
+pub type LcdVsyncWidthW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `LCD_VSYNC_IDLE_POL` reader - It is the idle value of LCD_VSYNC."]
+pub type LcdVsyncIdlePolR = crate::BitReader;
+#[doc = "Field `LCD_VSYNC_IDLE_POL` writer - It is the idle value of LCD_VSYNC."]
+pub type LcdVsyncIdlePolW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCD_DE_IDLE_POL` reader - It is the idle value of LCD_DE."]
+pub type LcdDeIdlePolR = crate::BitReader;
+#[doc = "Field `LCD_DE_IDLE_POL` writer - It is the idle value of LCD_DE."]
+pub type LcdDeIdlePolW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCD_HS_BLANK_EN` reader - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
+pub type LcdHsBlankEnR = crate::BitReader;
+#[doc = "Field `LCD_HS_BLANK_EN` writer - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
+pub type LcdHsBlankEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCD_HSYNC_WIDTH` reader - It is the position of LCD_HSYNC active pulse in a line."]
+pub type LcdHsyncWidthR = crate::FieldReader;
+#[doc = "Field `LCD_HSYNC_WIDTH` writer - It is the position of LCD_HSYNC active pulse in a line."]
+pub type LcdHsyncWidthW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `LCD_HSYNC_IDLE_POL` reader - It is the idle value of LCD_HSYNC."]
+pub type LcdHsyncIdlePolR = crate::BitReader;
+#[doc = "Field `LCD_HSYNC_IDLE_POL` writer - It is the idle value of LCD_HSYNC."]
+pub type LcdHsyncIdlePolW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCD_HSYNC_POSITION` reader - It is the position of LCD_HSYNC active pulse in a line."]
+pub type LcdHsyncPositionR = crate::FieldReader;
+#[doc = "Field `LCD_HSYNC_POSITION` writer - It is the position of LCD_HSYNC active pulse in a line."]
+pub type LcdHsyncPositionW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
+    #[inline(always)]
+    pub fn lcd_vsync_width(&self) -> LcdVsyncWidthR {
+        LcdVsyncWidthR::new((self.bits & 0x7f) as u8)
+    }
+    #[doc = "Bit 7 - It is the idle value of LCD_VSYNC."]
+    #[inline(always)]
+    pub fn lcd_vsync_idle_pol(&self) -> LcdVsyncIdlePolR {
+        LcdVsyncIdlePolR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - It is the idle value of LCD_DE."]
+    #[inline(always)]
+    pub fn lcd_de_idle_pol(&self) -> LcdDeIdlePolR {
+        LcdDeIdlePolR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
+    #[inline(always)]
+    pub fn lcd_hs_blank_en(&self) -> LcdHsBlankEnR {
+        LcdHsBlankEnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bits 16:22 - It is the position of LCD_HSYNC active pulse in a line."]
+    #[inline(always)]
+    pub fn lcd_hsync_width(&self) -> LcdHsyncWidthR {
+        LcdHsyncWidthR::new(((self.bits >> 16) & 0x7f) as u8)
+    }
+    #[doc = "Bit 23 - It is the idle value of LCD_HSYNC."]
+    #[inline(always)]
+    pub fn lcd_hsync_idle_pol(&self) -> LcdHsyncIdlePolR {
+        LcdHsyncIdlePolR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bits 24:31 - It is the position of LCD_HSYNC active pulse in a line."]
+    #[inline(always)]
+    pub fn lcd_hsync_position(&self) -> LcdHsyncPositionR {
+        LcdHsyncPositionR::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
+    #[inline(always)]
+    pub fn lcd_vsync_width(&mut self) -> LcdVsyncWidthW<'_, LcdCtrl2Spec> {
+        LcdVsyncWidthW::new(self, 0)
+    }
+    #[doc = "Bit 7 - It is the idle value of LCD_VSYNC."]
+    #[inline(always)]
+    pub fn lcd_vsync_idle_pol(&mut self) -> LcdVsyncIdlePolW<'_, LcdCtrl2Spec> {
+        LcdVsyncIdlePolW::new(self, 7)
+    }
+    #[doc = "Bit 8 - It is the idle value of LCD_DE."]
+    #[inline(always)]
+    pub fn lcd_de_idle_pol(&mut self) -> LcdDeIdlePolW<'_, LcdCtrl2Spec> {
+        LcdDeIdlePolW::new(self, 8)
+    }
+    #[doc = "Bit 9 - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
+    #[inline(always)]
+    pub fn lcd_hs_blank_en(&mut self) -> LcdHsBlankEnW<'_, LcdCtrl2Spec> {
+        LcdHsBlankEnW::new(self, 9)
+    }
+    #[doc = "Bits 16:22 - It is the position of LCD_HSYNC active pulse in a line."]
+    #[inline(always)]
+    pub fn lcd_hsync_width(&mut self) -> LcdHsyncWidthW<'_, LcdCtrl2Spec> {
+        LcdHsyncWidthW::new(self, 16)
+    }
+    #[doc = "Bit 23 - It is the idle value of LCD_HSYNC."]
+    #[inline(always)]
+    pub fn lcd_hsync_idle_pol(&mut self) -> LcdHsyncIdlePolW<'_, LcdCtrl2Spec> {
+        LcdHsyncIdlePolW::new(self, 23)
+    }
+    #[doc = "Bits 24:31 - It is the position of LCD_HSYNC active pulse in a line."]
+    #[inline(always)]
+    pub fn lcd_hsync_position(&mut self) -> LcdHsyncPositionW<'_, LcdCtrl2Spec> {
+        LcdHsyncPositionW::new(self, 24)
+    }
+}
+#[doc = "LCD config register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lcd_ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcd_ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LcdCtrl2Spec;
+impl crate::RegisterSpec for LcdCtrl2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lcd_ctrl2::R`](R) reader structure"]
+impl crate::Readable for LcdCtrl2Spec {}
+#[doc = "`write(|w| ..)` method takes [`lcd_ctrl2::W`](W) writer structure"]
+impl crate::Writable for LcdCtrl2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LCD_CTRL2 to value 0x0001_0001"]
+impl crate::Resettable for LcdCtrl2Spec {
+    const RESET_VALUE: u32 = 0x0001_0001;
+}

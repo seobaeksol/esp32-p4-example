@@ -1,0 +1,63 @@
+#[doc = "Register `INT_ENA` reader"]
+pub type R = crate::R<IntEnaSpec>;
+#[doc = "Register `INT_ENA` writer"]
+pub type W = crate::W<IntEnaSpec>;
+#[doc = "Field `TX_FIFO_REMPTY` reader - Write 1 to enable TX_FIFO_REMPTY_INT."]
+pub type TxFifoRemptyR = crate::BitReader;
+#[doc = "Field `TX_FIFO_REMPTY` writer - Write 1 to enable TX_FIFO_REMPTY_INT."]
+pub type TxFifoRemptyW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_FIFO_WOVF` reader - Write 1 to enable RX_FIFO_WOVF_INT."]
+pub type RxFifoWovfR = crate::BitReader;
+#[doc = "Field `RX_FIFO_WOVF` writer - Write 1 to enable RX_FIFO_WOVF_INT."]
+pub type RxFifoWovfW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_EOF` reader - Write 1 to enable TX_EOF_INT."]
+pub type TxEofR = crate::BitReader;
+#[doc = "Field `TX_EOF` writer - Write 1 to enable TX_EOF_INT."]
+pub type TxEofW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Write 1 to enable TX_FIFO_REMPTY_INT."]
+    #[inline(always)]
+    pub fn tx_fifo_rempty(&self) -> TxFifoRemptyR {
+        TxFifoRemptyR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Write 1 to enable RX_FIFO_WOVF_INT."]
+    #[inline(always)]
+    pub fn rx_fifo_wovf(&self) -> RxFifoWovfR {
+        RxFifoWovfR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Write 1 to enable TX_EOF_INT."]
+    #[inline(always)]
+    pub fn tx_eof(&self) -> TxEofR {
+        TxEofR::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Write 1 to enable TX_FIFO_REMPTY_INT."]
+    #[inline(always)]
+    pub fn tx_fifo_rempty(&mut self) -> TxFifoRemptyW<'_, IntEnaSpec> {
+        TxFifoRemptyW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Write 1 to enable RX_FIFO_WOVF_INT."]
+    #[inline(always)]
+    pub fn rx_fifo_wovf(&mut self) -> RxFifoWovfW<'_, IntEnaSpec> {
+        RxFifoWovfW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Write 1 to enable TX_EOF_INT."]
+    #[inline(always)]
+    pub fn tx_eof(&mut self) -> TxEofW<'_, IntEnaSpec> {
+        TxEofW::new(self, 2)
+    }
+}
+#[doc = "Parallel IO interrupt enable singal configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntEnaSpec;
+impl crate::RegisterSpec for IntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for IntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+impl crate::Writable for IntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_ENA to value 0"]
+impl crate::Resettable for IntEnaSpec {}

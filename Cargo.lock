@@ -96,6 +96,7 @@ version = "0.1.0"
 dependencies = [
  "critical-section",
  "defmt",
+ "riscv 0.16.0",
  "vcell",
 ]
 

@@ -1,0 +1,474 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    config: Config,
+    dqt_info: DqtInfo,
+    pic_size: PicSize,
+    extd_config: ExtdConfig,
+    t0qnr: T0qnr,
+    t1qnr: T1qnr,
+    t2qnr: T2qnr,
+    t3qnr: T3qnr,
+    decode_conf: DecodeConf,
+    c: [C; 4],
+    dht_info: DhtInfo,
+    int_raw: IntRaw,
+    int_ena: IntEna,
+    int_st: IntSt,
+    int_clr: IntClr,
+    status0: Status0,
+    status2: Status2,
+    status3: Status3,
+    status4: Status4,
+    dht_totlen_dc0: DhtTotlenDc0,
+    dht_val_dc0: DhtValDc0,
+    dht_totlen_ac0: DhtTotlenAc0,
+    dht_val_ac0: DhtValAc0,
+    dht_totlen_dc1: DhtTotlenDc1,
+    dht_val_dc1: DhtValDc1,
+    dht_totlen_ac1: DhtTotlenAc1,
+    dht_val_ac1: DhtValAc1,
+    dht_codemin_dc0: DhtCodeminDc0,
+    dht_codemin_ac0: DhtCodeminAc0,
+    dht_codemin_dc1: DhtCodeminDc1,
+    dht_codemin_ac1: DhtCodeminAc1,
+    decoder_status0: DecoderStatus0,
+    decoder_status1: DecoderStatus1,
+    decoder_status2: DecoderStatus2,
+    decoder_status3: DecoderStatus3,
+    decoder_status4: DecoderStatus4,
+    decoder_status5: DecoderStatus5,
+    status5: Status5,
+    eco_low: EcoLow,
+    eco_high: EcoHigh,
+    _reserved40: [u8; 0x4c],
+    sys: Sys,
+    version: Version,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn config(&self) -> &Config {
+        &self.config
+    }
+    #[doc = "0x04 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn dqt_info(&self) -> &DqtInfo {
+        &self.dqt_info
+    }
+    #[doc = "0x08 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn pic_size(&self) -> &PicSize {
+        &self.pic_size
+    }
+    #[doc = "0x0c - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn extd_config(&self) -> &ExtdConfig {
+        &self.extd_config
+    }
+    #[doc = "0x10 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn t0qnr(&self) -> &T0qnr {
+        &self.t0qnr
+    }
+    #[doc = "0x14 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn t1qnr(&self) -> &T1qnr {
+        &self.t1qnr
+    }
+    #[doc = "0x18 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn t2qnr(&self) -> &T2qnr {
+        &self.t2qnr
+    }
+    #[doc = "0x1c - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn t3qnr(&self) -> &T3qnr {
+        &self.t3qnr
+    }
+    #[doc = "0x20 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn decode_conf(&self) -> &DecodeConf {
+        &self.decode_conf
+    }
+    #[doc = "0x24..0x34 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn c(&self, n: usize) -> &C {
+        &self.c[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24..0x34 - Control and configuration registers"]
+    #[inline(always)]
+    pub fn c_iter(&self) -> impl Iterator<Item = &C> {
+        self.c.iter()
+    }
+    #[doc = "0x34 - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn dht_info(&self) -> &DhtInfo {
+        &self.dht_info
+    }
+    #[doc = "0x38 - Interrupt raw registers"]
+    #[inline(always)]
+    pub const fn int_raw(&self) -> &IntRaw {
+        &self.int_raw
+    }
+    #[doc = "0x3c - Interrupt enable registers"]
+    #[inline(always)]
+    pub const fn int_ena(&self) -> &IntEna {
+        &self.int_ena
+    }
+    #[doc = "0x40 - Interrupt status registers"]
+    #[inline(always)]
+    pub const fn int_st(&self) -> &IntSt {
+        &self.int_st
+    }
+    #[doc = "0x44 - Interrupt clear registers"]
+    #[inline(always)]
+    pub const fn int_clr(&self) -> &IntClr {
+        &self.int_clr
+    }
+    #[doc = "0x48 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn status0(&self) -> &Status0 {
+        &self.status0
+    }
+    #[doc = "0x4c - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn status2(&self) -> &Status2 {
+        &self.status2
+    }
+    #[doc = "0x50 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn status3(&self) -> &Status3 {
+        &self.status3
+    }
+    #[doc = "0x54 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn status4(&self) -> &Status4 {
+        &self.status4
+    }
+    #[doc = "0x58 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_totlen_dc0(&self) -> &DhtTotlenDc0 {
+        &self.dht_totlen_dc0
+    }
+    #[doc = "0x5c - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_val_dc0(&self) -> &DhtValDc0 {
+        &self.dht_val_dc0
+    }
+    #[doc = "0x60 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_totlen_ac0(&self) -> &DhtTotlenAc0 {
+        &self.dht_totlen_ac0
+    }
+    #[doc = "0x64 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_val_ac0(&self) -> &DhtValAc0 {
+        &self.dht_val_ac0
+    }
+    #[doc = "0x68 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_totlen_dc1(&self) -> &DhtTotlenDc1 {
+        &self.dht_totlen_dc1
+    }
+    #[doc = "0x6c - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_val_dc1(&self) -> &DhtValDc1 {
+        &self.dht_val_dc1
+    }
+    #[doc = "0x70 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_totlen_ac1(&self) -> &DhtTotlenAc1 {
+        &self.dht_totlen_ac1
+    }
+    #[doc = "0x74 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_val_ac1(&self) -> &DhtValAc1 {
+        &self.dht_val_ac1
+    }
+    #[doc = "0x78 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_codemin_dc0(&self) -> &DhtCodeminDc0 {
+        &self.dht_codemin_dc0
+    }
+    #[doc = "0x7c - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_codemin_ac0(&self) -> &DhtCodeminAc0 {
+        &self.dht_codemin_ac0
+    }
+    #[doc = "0x80 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_codemin_dc1(&self) -> &DhtCodeminDc1 {
+        &self.dht_codemin_dc1
+    }
+    #[doc = "0x84 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn dht_codemin_ac1(&self) -> &DhtCodeminAc1 {
+        &self.dht_codemin_ac1
+    }
+    #[doc = "0x88 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn decoder_status0(&self) -> &DecoderStatus0 {
+        &self.decoder_status0
+    }
+    #[doc = "0x8c - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn decoder_status1(&self) -> &DecoderStatus1 {
+        &self.decoder_status1
+    }
+    #[doc = "0x90 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn decoder_status2(&self) -> &DecoderStatus2 {
+        &self.decoder_status2
+    }
+    #[doc = "0x94 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn decoder_status3(&self) -> &DecoderStatus3 {
+        &self.decoder_status3
+    }
+    #[doc = "0x98 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn decoder_status4(&self) -> &DecoderStatus4 {
+        &self.decoder_status4
+    }
+    #[doc = "0x9c - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn decoder_status5(&self) -> &DecoderStatus5 {
+        &self.decoder_status5
+    }
+    #[doc = "0xa0 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn status5(&self) -> &Status5 {
+        &self.status5
+    }
+    #[doc = "0xa4 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn eco_low(&self) -> &EcoLow {
+        &self.eco_low
+    }
+    #[doc = "0xa8 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn eco_high(&self) -> &EcoHigh {
+        &self.eco_high
+    }
+    #[doc = "0xf8 - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn sys(&self) -> &Sys {
+        &self.sys
+    }
+    #[doc = "0xfc - Trace and Debug registers"]
+    #[inline(always)]
+    pub const fn version(&self) -> &Version {
+        &self.version
+    }
+}
+#[doc = "CONFIG (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config`] module"]
+#[doc(alias = "CONFIG")]
+pub type Config = crate::Reg<config::ConfigSpec>;
+#[doc = "Control and configuration registers"]
+pub mod config;
+#[doc = "DQT_INFO (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dqt_info::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dqt_info::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dqt_info`] module"]
+#[doc(alias = "DQT_INFO")]
+pub type DqtInfo = crate::Reg<dqt_info::DqtInfoSpec>;
+#[doc = "Control and configuration registers"]
+pub mod dqt_info;
+#[doc = "PIC_SIZE (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`pic_size::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pic_size::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pic_size`] module"]
+#[doc(alias = "PIC_SIZE")]
+pub type PicSize = crate::Reg<pic_size::PicSizeSpec>;
+#[doc = "Control and configuration registers"]
+pub mod pic_size;
+#[doc = "EXTD_CONFIG (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`extd_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`extd_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@extd_config`] module"]
+#[doc(alias = "EXTD_CONFIG")]
+pub type ExtdConfig = crate::Reg<extd_config::ExtdConfigSpec>;
+#[doc = "Control and configuration registers"]
+pub mod extd_config;
+#[doc = "T0QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t0qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0qnr`] module"]
+#[doc(alias = "T0QNR")]
+pub type T0qnr = crate::Reg<t0qnr::T0qnrSpec>;
+#[doc = "Control and configuration registers"]
+pub mod t0qnr;
+#[doc = "T1QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t1qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1qnr`] module"]
+#[doc(alias = "T1QNR")]
+pub type T1qnr = crate::Reg<t1qnr::T1qnrSpec>;
+#[doc = "Control and configuration registers"]
+pub mod t1qnr;
+#[doc = "T2QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t2qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t2qnr`] module"]
+#[doc(alias = "T2QNR")]
+pub type T2qnr = crate::Reg<t2qnr::T2qnrSpec>;
+#[doc = "Control and configuration registers"]
+pub mod t2qnr;
+#[doc = "T3QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t3qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t3qnr`] module"]
+#[doc(alias = "T3QNR")]
+pub type T3qnr = crate::Reg<t3qnr::T3qnrSpec>;
+#[doc = "Control and configuration registers"]
+pub mod t3qnr;
+#[doc = "DECODE_CONF (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decode_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`decode_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decode_conf`] module"]
+#[doc(alias = "DECODE_CONF")]
+pub type DecodeConf = crate::Reg<decode_conf::DecodeConfSpec>;
+#[doc = "Control and configuration registers"]
+pub mod decode_conf;
+#[doc = "C (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`c::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`c::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c`] module"]
+pub type C = crate::Reg<c::CSpec>;
+#[doc = "Control and configuration registers"]
+pub mod c;
+#[doc = "DHT_INFO (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_info::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dht_info::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_info`] module"]
+#[doc(alias = "DHT_INFO")]
+pub type DhtInfo = crate::Reg<dht_info::DhtInfoSpec>;
+#[doc = "Control and configuration registers"]
+pub mod dht_info;
+#[doc = "INT_RAW (rw) register accessor: Interrupt raw registers\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc(alias = "INT_RAW")]
+pub type IntRaw = crate::Reg<int_raw::IntRawSpec>;
+#[doc = "Interrupt raw registers"]
+pub mod int_raw;
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable registers\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc(alias = "INT_ENA")]
+pub type IntEna = crate::Reg<int_ena::IntEnaSpec>;
+#[doc = "Interrupt enable registers"]
+pub mod int_ena;
+#[doc = "INT_ST (r) register accessor: Interrupt status registers\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc(alias = "INT_ST")]
+pub type IntSt = crate::Reg<int_st::IntStSpec>;
+#[doc = "Interrupt status registers"]
+pub mod int_st;
+#[doc = "INT_CLR (w) register accessor: Interrupt clear registers\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc(alias = "INT_CLR")]
+pub type IntClr = crate::Reg<int_clr::IntClrSpec>;
+#[doc = "Interrupt clear registers"]
+pub mod int_clr;
+#[doc = "STATUS0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`status0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status0`] module"]
+#[doc(alias = "STATUS0")]
+pub type Status0 = crate::Reg<status0::Status0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod status0;
+#[doc = "STATUS2 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`status2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status2`] module"]
+#[doc(alias = "STATUS2")]
+pub type Status2 = crate::Reg<status2::Status2Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod status2;
+#[doc = "STATUS3 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`status3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status3`] module"]
+#[doc(alias = "STATUS3")]
+pub type Status3 = crate::Reg<status3::Status3Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod status3;
+#[doc = "STATUS4 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`status4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status4`] module"]
+#[doc(alias = "STATUS4")]
+pub type Status4 = crate::Reg<status4::Status4Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod status4;
+#[doc = "DHT_TOTLEN_DC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_totlen_dc0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_totlen_dc0`] module"]
+#[doc(alias = "DHT_TOTLEN_DC0")]
+pub type DhtTotlenDc0 = crate::Reg<dht_totlen_dc0::DhtTotlenDc0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_totlen_dc0;
+#[doc = "DHT_VAl_DC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_val_dc0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_dc0`] module"]
+#[doc(alias = "DHT_VAl_DC0")]
+pub type DhtValDc0 = crate::Reg<dht_val_dc0::DhtValDc0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_val_dc0;
+#[doc = "DHT_TOTLEN_AC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_totlen_ac0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_totlen_ac0`] module"]
+#[doc(alias = "DHT_TOTLEN_AC0")]
+pub type DhtTotlenAc0 = crate::Reg<dht_totlen_ac0::DhtTotlenAc0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_totlen_ac0;
+#[doc = "DHT_VAl_AC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_val_ac0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_ac0`] module"]
+#[doc(alias = "DHT_VAl_AC0")]
+pub type DhtValAc0 = crate::Reg<dht_val_ac0::DhtValAc0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_val_ac0;
+#[doc = "DHT_TOTLEN_DC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_totlen_dc1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_totlen_dc1`] module"]
+#[doc(alias = "DHT_TOTLEN_DC1")]
+pub type DhtTotlenDc1 = crate::Reg<dht_totlen_dc1::DhtTotlenDc1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_totlen_dc1;
+#[doc = "DHT_VAl_DC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_val_dc1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_dc1`] module"]
+#[doc(alias = "DHT_VAl_DC1")]
+pub type DhtValDc1 = crate::Reg<dht_val_dc1::DhtValDc1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_val_dc1;
+#[doc = "DHT_TOTLEN_AC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_totlen_ac1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_totlen_ac1`] module"]
+#[doc(alias = "DHT_TOTLEN_AC1")]
+pub type DhtTotlenAc1 = crate::Reg<dht_totlen_ac1::DhtTotlenAc1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_totlen_ac1;
+#[doc = "DHT_VAl_AC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_val_ac1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_val_ac1`] module"]
+#[doc(alias = "DHT_VAl_AC1")]
+pub type DhtValAc1 = crate::Reg<dht_val_ac1::DhtValAc1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_val_ac1;
+#[doc = "DHT_CODEMIN_DC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_codemin_dc0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_codemin_dc0`] module"]
+#[doc(alias = "DHT_CODEMIN_DC0")]
+pub type DhtCodeminDc0 = crate::Reg<dht_codemin_dc0::DhtCodeminDc0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_codemin_dc0;
+#[doc = "DHT_CODEMIN_AC0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_codemin_ac0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_codemin_ac0`] module"]
+#[doc(alias = "DHT_CODEMIN_AC0")]
+pub type DhtCodeminAc0 = crate::Reg<dht_codemin_ac0::DhtCodeminAc0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_codemin_ac0;
+#[doc = "DHT_CODEMIN_DC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_codemin_dc1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_codemin_dc1`] module"]
+#[doc(alias = "DHT_CODEMIN_DC1")]
+pub type DhtCodeminDc1 = crate::Reg<dht_codemin_dc1::DhtCodeminDc1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_codemin_dc1;
+#[doc = "DHT_CODEMIN_AC1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_codemin_ac1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dht_codemin_ac1`] module"]
+#[doc(alias = "DHT_CODEMIN_AC1")]
+pub type DhtCodeminAc1 = crate::Reg<dht_codemin_ac1::DhtCodeminAc1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod dht_codemin_ac1;
+#[doc = "DECODER_STATUS0 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decoder_status0`] module"]
+#[doc(alias = "DECODER_STATUS0")]
+pub type DecoderStatus0 = crate::Reg<decoder_status0::DecoderStatus0Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod decoder_status0;
+#[doc = "DECODER_STATUS1 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decoder_status1`] module"]
+#[doc(alias = "DECODER_STATUS1")]
+pub type DecoderStatus1 = crate::Reg<decoder_status1::DecoderStatus1Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod decoder_status1;
+#[doc = "DECODER_STATUS2 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decoder_status2`] module"]
+#[doc(alias = "DECODER_STATUS2")]
+pub type DecoderStatus2 = crate::Reg<decoder_status2::DecoderStatus2Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod decoder_status2;
+#[doc = "DECODER_STATUS3 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decoder_status3`] module"]
+#[doc(alias = "DECODER_STATUS3")]
+pub type DecoderStatus3 = crate::Reg<decoder_status3::DecoderStatus3Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod decoder_status3;
+#[doc = "DECODER_STATUS4 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decoder_status4`] module"]
+#[doc(alias = "DECODER_STATUS4")]
+pub type DecoderStatus4 = crate::Reg<decoder_status4::DecoderStatus4Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod decoder_status4;
+#[doc = "DECODER_STATUS5 (rw) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`decoder_status5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@decoder_status5`] module"]
+#[doc(alias = "DECODER_STATUS5")]
+pub type DecoderStatus5 = crate::Reg<decoder_status5::DecoderStatus5Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod decoder_status5;
+#[doc = "STATUS5 (r) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`status5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status5`] module"]
+#[doc(alias = "STATUS5")]
+pub type Status5 = crate::Reg<status5::Status5Spec>;
+#[doc = "Trace and Debug registers"]
+pub mod status5;
+#[doc = "ECO_LOW (rw) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`eco_low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`eco_low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@eco_low`] module"]
+#[doc(alias = "ECO_LOW")]
+pub type EcoLow = crate::Reg<eco_low::EcoLowSpec>;
+#[doc = "Trace and Debug registers"]
+pub mod eco_low;
+#[doc = "ECO_HIGH (rw) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`eco_high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`eco_high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@eco_high`] module"]
+#[doc(alias = "ECO_HIGH")]
+pub type EcoHigh = crate::Reg<eco_high::EcoHighSpec>;
+#[doc = "Trace and Debug registers"]
+pub mod eco_high;
+#[doc = "SYS (rw) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`sys::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sys::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sys`] module"]
+#[doc(alias = "SYS")]
+pub type Sys = crate::Reg<sys::SysSpec>;
+#[doc = "Trace and Debug registers"]
+pub mod sys;
+#[doc = "VERSION (rw) register accessor: Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`version::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`version::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@version`] module"]
+#[doc(alias = "VERSION")]
+pub type Version = crate::Reg<version::VersionSpec>;
+#[doc = "Trace and Debug registers"]
+pub mod version;

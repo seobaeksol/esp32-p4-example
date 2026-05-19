@@ -1,0 +1,71 @@
+#[doc = "Register `REF_CNT_RST` writer"]
+pub type W = crate::W<RefCntRstSpec>;
+#[doc = "Field `CH0` writer - This register is used to reset the clock divider of CHANNEL0."]
+pub type Ch0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1` writer - This register is used to reset the clock divider of CHANNEL1."]
+pub type Ch1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2` writer - This register is used to reset the clock divider of CHANNEL2."]
+pub type Ch2W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3` writer - This register is used to reset the clock divider of CHANNEL3."]
+pub type Ch3W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4` writer - This register is used to reset the clock divider of CHANNEL4."]
+pub type Ch4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH5` writer - This register is used to reset the clock divider of CHANNEL5."]
+pub type Ch5W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH6` writer - This register is used to reset the clock divider of CHANNEL6."]
+pub type Ch6W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH7` writer - This register is used to reset the clock divider of CHANNEL7."]
+pub type Ch7W<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
+    #[inline(always)]
+    pub fn ch0(&mut self) -> Ch0W<'_, RefCntRstSpec> {
+        Ch0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL1."]
+    #[inline(always)]
+    pub fn ch1(&mut self) -> Ch1W<'_, RefCntRstSpec> {
+        Ch1W::new(self, 1)
+    }
+    #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL2."]
+    #[inline(always)]
+    pub fn ch2(&mut self) -> Ch2W<'_, RefCntRstSpec> {
+        Ch2W::new(self, 2)
+    }
+    #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL3."]
+    #[inline(always)]
+    pub fn ch3(&mut self) -> Ch3W<'_, RefCntRstSpec> {
+        Ch3W::new(self, 3)
+    }
+    #[doc = "Bit 4 - This register is used to reset the clock divider of CHANNEL4."]
+    #[inline(always)]
+    pub fn ch4(&mut self) -> Ch4W<'_, RefCntRstSpec> {
+        Ch4W::new(self, 4)
+    }
+    #[doc = "Bit 5 - This register is used to reset the clock divider of CHANNEL5."]
+    #[inline(always)]
+    pub fn ch5(&mut self) -> Ch5W<'_, RefCntRstSpec> {
+        Ch5W::new(self, 5)
+    }
+    #[doc = "Bit 6 - This register is used to reset the clock divider of CHANNEL6."]
+    #[inline(always)]
+    pub fn ch6(&mut self) -> Ch6W<'_, RefCntRstSpec> {
+        Ch6W::new(self, 6)
+    }
+    #[doc = "Bit 7 - This register is used to reset the clock divider of CHANNEL7."]
+    #[inline(always)]
+    pub fn ch7(&mut self) -> Ch7W<'_, RefCntRstSpec> {
+        Ch7W::new(self, 7)
+    }
+}
+#[doc = "RMT clock divider reset register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ref_cnt_rst::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RefCntRstSpec;
+impl crate::RegisterSpec for RefCntRstSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`ref_cnt_rst::W`](W) writer structure"]
+impl crate::Writable for RefCntRstSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets REF_CNT_RST to value 0"]
+impl crate::Resettable for RefCntRstSpec {}

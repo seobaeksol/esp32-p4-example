@@ -1,0 +1,369 @@
+#[doc = "Register `CH_ENA_AD0` reader"]
+pub type R = crate::R<ChEnaAd0Spec>;
+#[doc = "Register `CH_ENA_AD0` writer"]
+pub type W = crate::W<ChEnaAd0Spec>;
+#[doc = "Field `CH_ENA(0-31)` reader - Represents ch%s enable status.\\\\0: Disable\\\\1: Enable"]
+pub type ChEnaR = crate::BitReader;
+#[doc = "Field `CH_ENA(0-31)` writer - Represents ch%s enable status.\\\\0: Disable\\\\1: Enable"]
+pub type ChEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Represents ch(0-31) enable status.\\\\0: Disable\\\\1: Enable"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field.</div>"]
+    #[inline(always)]
+    pub fn ch_ena(&self, n: u8) -> ChEnaR {
+        #[allow(clippy::no_effect)]
+        [(); 32][n as usize];
+        ChEnaR::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Represents ch(0-31) enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena_iter(&self) -> impl Iterator<Item = ChEnaR> + '_ {
+        (0..32).map(move |n| ChEnaR::new(((self.bits >> n) & 1) != 0))
+    }
+    #[doc = "Bit 0 - Represents ch0 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena0(&self) -> ChEnaR {
+        ChEnaR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Represents ch1 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena1(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Represents ch2 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena2(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Represents ch3 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena3(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Represents ch4 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena4(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Represents ch5 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena5(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Represents ch6 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena6(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Represents ch7 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena7(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Represents ch8 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena8(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Represents ch9 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena9(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Represents ch10 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena10(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Represents ch11 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena11(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Represents ch12 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena12(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Represents ch13 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena13(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Represents ch14 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena14(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Represents ch15 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena15(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Represents ch16 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena16(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Represents ch17 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena17(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Represents ch18 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena18(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Represents ch19 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena19(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Represents ch20 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena20(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Represents ch21 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena21(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Represents ch22 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena22(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - Represents ch23 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena23(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Represents ch24 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena24(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Represents ch25 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena25(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Represents ch26 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena26(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Represents ch27 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena27(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Represents ch28 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena28(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Represents ch29 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena29(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Represents ch30 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena30(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Represents ch31 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena31(&self) -> ChEnaR {
+        ChEnaR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Represents ch(0-31) enable status.\\\\0: Disable\\\\1: Enable"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field.</div>"]
+    #[inline(always)]
+    pub fn ch_ena(&mut self, n: u8) -> ChEnaW<'_, ChEnaAd0Spec> {
+        #[allow(clippy::no_effect)]
+        [(); 32][n as usize];
+        ChEnaW::new(self, n)
+    }
+    #[doc = "Bit 0 - Represents ch0 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena0(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Represents ch1 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena1(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Represents ch2 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena2(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Represents ch3 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena3(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Represents ch4 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena4(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Represents ch5 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena5(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Represents ch6 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena6(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Represents ch7 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena7(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Represents ch8 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena8(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Represents ch9 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena9(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Represents ch10 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena10(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Represents ch11 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena11(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Represents ch12 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena12(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Represents ch13 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena13(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Represents ch14 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena14(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Represents ch15 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena15(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Represents ch16 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena16(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Represents ch17 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena17(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Represents ch18 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena18(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Represents ch19 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena19(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Represents ch20 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena20(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Represents ch21 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena21(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Represents ch22 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena22(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Represents ch23 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena23(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Represents ch24 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena24(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Represents ch25 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena25(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Represents ch26 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena26(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Represents ch27 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena27(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Represents ch28 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena28(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Represents ch29 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena29(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Represents ch30 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena30(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Represents ch31 enable status.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn ch_ena31(&mut self) -> ChEnaW<'_, ChEnaAd0Spec> {
+        ChEnaW::new(self, 31)
+    }
+}
+#[doc = "Channel enable status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_ena_ad0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChEnaAd0Spec;
+impl crate::RegisterSpec for ChEnaAd0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ch_ena_ad0::R`](R) reader structure"]
+impl crate::Readable for ChEnaAd0Spec {}
+#[doc = "`write(|w| ..)` method takes [`ch_ena_ad0::W`](W) writer structure"]
+impl crate::Writable for ChEnaAd0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CH_ENA_AD0 to value 0"]
+impl crate::Resettable for ChEnaAd0Spec {}

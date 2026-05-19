@@ -1,0 +1,36 @@
+#[doc = "Register `ICM_INT_CLR` writer"]
+pub type W = crate::W<IcmIntClrSpec>;
+#[doc = "Field `DLOCK_INT_CLR` writer - "]
+pub type DlockIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ICM_SYS_ADDRHOLE_INT_CLR` writer - "]
+pub type IcmSysAddrholeIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ICM_CPU_ADDRHOLE_INT_CLR` writer - "]
+pub type IcmCpuAddrholeIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn dlock_int_clr(&mut self) -> DlockIntClrW<'_, IcmIntClrSpec> {
+        DlockIntClrW::new(self, 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn icm_sys_addrhole_int_clr(&mut self) -> IcmSysAddrholeIntClrW<'_, IcmIntClrSpec> {
+        IcmSysAddrholeIntClrW::new(self, 1)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn icm_cpu_addrhole_int_clr(&mut self) -> IcmCpuAddrholeIntClrW<'_, IcmIntClrSpec> {
+        IcmCpuAddrholeIntClrW::new(self, 2)
+    }
+}
+#[doc = "ICM interrupt clear\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IcmIntClrSpec;
+impl crate::RegisterSpec for IcmIntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`icm_int_clr::W`](W) writer structure"]
+impl crate::Writable for IcmIntClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ICM_INT_CLR to value 0"]
+impl crate::Resettable for IcmIntClrSpec {}

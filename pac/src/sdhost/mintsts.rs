@@ -1,0 +1,27 @@
+#[doc = "Register `MINTSTS` reader"]
+pub type R = crate::R<MintstsSpec>;
+#[doc = "Field `INT_STATUS_MSK` reader - Interrupt enabled only if corresponding bit in interrupt mask register is set. Bit 15 (EBE): End-bit error/no CRC error; Bit 14 (ACD): Auto command done; Bit 13 (SBE/BCI): RX Start Bit Error; Bit 12 (HLE): Hardware locked write error; Bit 11 (FRUN): FIFO underrun/overrun error; Bit 10 (HTO): Data starvation by host timeout (HTO); Bit 9 (DTRO): Data read timeout; Bit 8 (RTO): Response timeout; Bit 7 (DCRC): Data CRC error; Bit 6 (RCRC): Response CRC error; Bit 5 (RXDR): Receive FIFO data request; Bit 4 (TXDR): Transmit FIFO data request; Bit 3 (DTO): Data transfer over; Bit 2 (CD): Command done; Bit 1 (RE): Response error; Bit 0 (CD): Card detect."]
+pub type IntStatusMskR = crate::FieldReader<u16>;
+#[doc = "Field `SDIO_INTERRUPT_MSK` reader - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\] correspond to card1 and card0, respectively. SDIO interrupt for card is enabled only if corresponding sdhost_sdio_int_mask bit is set in Interrupt mask register (Setting mask bit enables interrupt)."]
+pub type SdioInterruptMskR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:15 - Interrupt enabled only if corresponding bit in interrupt mask register is set. Bit 15 (EBE): End-bit error/no CRC error; Bit 14 (ACD): Auto command done; Bit 13 (SBE/BCI): RX Start Bit Error; Bit 12 (HLE): Hardware locked write error; Bit 11 (FRUN): FIFO underrun/overrun error; Bit 10 (HTO): Data starvation by host timeout (HTO); Bit 9 (DTRO): Data read timeout; Bit 8 (RTO): Response timeout; Bit 7 (DCRC): Data CRC error; Bit 6 (RCRC): Response CRC error; Bit 5 (RXDR): Receive FIFO data request; Bit 4 (TXDR): Transmit FIFO data request; Bit 3 (DTO): Data transfer over; Bit 2 (CD): Command done; Bit 1 (RE): Response error; Bit 0 (CD): Card detect."]
+    #[inline(always)]
+    pub fn int_status_msk(&self) -> IntStatusMskR {
+        IntStatusMskR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:17 - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\] correspond to card1 and card0, respectively. SDIO interrupt for card is enabled only if corresponding sdhost_sdio_int_mask bit is set in Interrupt mask register (Setting mask bit enables interrupt)."]
+    #[inline(always)]
+    pub fn sdio_interrupt_msk(&self) -> SdioInterruptMskR {
+        SdioInterruptMskR::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[doc = "Masked interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`mintsts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MintstsSpec;
+impl crate::RegisterSpec for MintstsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`mintsts::R`](R) reader structure"]
+impl crate::Readable for MintstsSpec {}
+#[doc = "`reset()` method sets MINTSTS to value 0"]
+impl crate::Resettable for MintstsSpec {}

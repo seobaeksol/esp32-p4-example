@@ -1,0 +1,126 @@
+#[doc = "Register `L1_ICACHE0_AUTOLOAD_CTRL` reader"]
+pub type R = crate::R<L1Icache0AutoloadCtrlSpec>;
+#[doc = "Register `L1_ICACHE0_AUTOLOAD_CTRL` writer"]
+pub type W = crate::W<L1Icache0AutoloadCtrlSpec>;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation on L1-ICache0. 1: enable, 0: disable."]
+pub type L1Icache0AutoloadEnaR = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_ENA` writer - The bit is used to enable and disable autoload operation on L1-ICache0. 1: enable, 0: disable."]
+pub type L1Icache0AutoloadEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_DONE` reader - The bit is used to indicate whether autoload operation on L1-ICache0 is finished or not. 0: not finished. 1: finished."]
+pub type L1Icache0AutoloadDoneR = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_ORDER` reader - The bit is used to configure the direction of autoload operation on L1-ICache0. 0: ascending. 1: descending."]
+pub type L1Icache0AutoloadOrderR = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_ORDER` writer - The bit is used to configure the direction of autoload operation on L1-ICache0. 0: ascending. 1: descending."]
+pub type L1Icache0AutoloadOrderW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_TRIGGER_MODE` reader - The field is used to configure trigger mode of autoload operation on L1-ICache0. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
+pub type L1Icache0AutoloadTriggerModeR = crate::FieldReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_TRIGGER_MODE` writer - The field is used to configure trigger mode of autoload operation on L1-ICache0. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
+pub type L1Icache0AutoloadTriggerModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_SCT0_ENA` reader - The bit is used to enable the first section for autoload operation on L1-ICache0."]
+pub type L1Icache0AutoloadSct0EnaR = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_SCT0_ENA` writer - The bit is used to enable the first section for autoload operation on L1-ICache0."]
+pub type L1Icache0AutoloadSct0EnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_SCT1_ENA` reader - The bit is used to enable the second section for autoload operation on L1-ICache0."]
+pub type L1Icache0AutoloadSct1EnaR = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_SCT1_ENA` writer - The bit is used to enable the second section for autoload operation on L1-ICache0."]
+pub type L1Icache0AutoloadSct1EnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_RGID` reader - The bit is used to set the gid of l1 icache0 autoload."]
+pub type L1Icache0AutoloadRgidR = crate::FieldReader;
+#[doc = "Field `L1_ICACHE0_AUTOLOAD_RGID` writer - The bit is used to set the gid of l1 icache0 autoload."]
+pub type L1Icache0AutoloadRgidW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bit 0 - The bit is used to enable and disable autoload operation on L1-ICache0. 1: enable, 0: disable."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_ena(&self) -> L1Icache0AutoloadEnaR {
+        L1Icache0AutoloadEnaR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The bit is used to indicate whether autoload operation on L1-ICache0 is finished or not. 0: not finished. 1: finished."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_done(&self) -> L1Icache0AutoloadDoneR {
+        L1Icache0AutoloadDoneR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L1-ICache0. 0: ascending. 1: descending."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_order(&self) -> L1Icache0AutoloadOrderR {
+        L1Icache0AutoloadOrderR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L1-ICache0. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_trigger_mode(&self) -> L1Icache0AutoloadTriggerModeR {
+        L1Icache0AutoloadTriggerModeR::new(((self.bits >> 3) & 3) as u8)
+    }
+    #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L1-ICache0."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_sct0_ena(&self) -> L1Icache0AutoloadSct0EnaR {
+        L1Icache0AutoloadSct0EnaR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L1-ICache0."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_sct1_ena(&self) -> L1Icache0AutoloadSct1EnaR {
+        L1Icache0AutoloadSct1EnaR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bits 10:13 - The bit is used to set the gid of l1 icache0 autoload."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_rgid(&self) -> L1Icache0AutoloadRgidR {
+        L1Icache0AutoloadRgidR::new(((self.bits >> 10) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - The bit is used to enable and disable autoload operation on L1-ICache0. 1: enable, 0: disable."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_ena(
+        &mut self,
+    ) -> L1Icache0AutoloadEnaW<'_, L1Icache0AutoloadCtrlSpec> {
+        L1Icache0AutoloadEnaW::new(self, 0)
+    }
+    #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L1-ICache0. 0: ascending. 1: descending."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_order(
+        &mut self,
+    ) -> L1Icache0AutoloadOrderW<'_, L1Icache0AutoloadCtrlSpec> {
+        L1Icache0AutoloadOrderW::new(self, 2)
+    }
+    #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L1-ICache0. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_trigger_mode(
+        &mut self,
+    ) -> L1Icache0AutoloadTriggerModeW<'_, L1Icache0AutoloadCtrlSpec> {
+        L1Icache0AutoloadTriggerModeW::new(self, 3)
+    }
+    #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L1-ICache0."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_sct0_ena(
+        &mut self,
+    ) -> L1Icache0AutoloadSct0EnaW<'_, L1Icache0AutoloadCtrlSpec> {
+        L1Icache0AutoloadSct0EnaW::new(self, 8)
+    }
+    #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L1-ICache0."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_sct1_ena(
+        &mut self,
+    ) -> L1Icache0AutoloadSct1EnaW<'_, L1Icache0AutoloadCtrlSpec> {
+        L1Icache0AutoloadSct1EnaW::new(self, 9)
+    }
+    #[doc = "Bits 10:13 - The bit is used to set the gid of l1 icache0 autoload."]
+    #[inline(always)]
+    pub fn l1_icache0_autoload_rgid(
+        &mut self,
+    ) -> L1Icache0AutoloadRgidW<'_, L1Icache0AutoloadCtrlSpec> {
+        L1Icache0AutoloadRgidW::new(self, 10)
+    }
+}
+#[doc = "L1 instruction Cache 0 autoload-operation control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache0_autoload_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l1_icache0_autoload_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1Icache0AutoloadCtrlSpec;
+impl crate::RegisterSpec for L1Icache0AutoloadCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_icache0_autoload_ctrl::R`](R) reader structure"]
+impl crate::Readable for L1Icache0AutoloadCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`l1_icache0_autoload_ctrl::W`](W) writer structure"]
+impl crate::Writable for L1Icache0AutoloadCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L1_ICACHE0_AUTOLOAD_CTRL to value 0x02"]
+impl crate::Resettable for L1Icache0AutoloadCtrlSpec {
+    const RESET_VALUE: u32 = 0x02;
+}

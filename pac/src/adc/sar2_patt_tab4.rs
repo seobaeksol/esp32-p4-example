@@ -1,0 +1,35 @@
+#[doc = "Register `SAR2_PATT_TAB4` reader"]
+pub type R = crate::R<Sar2PattTab4Spec>;
+#[doc = "Register `SAR2_PATT_TAB4` writer"]
+pub type W = crate::W<Sar2PattTab4Spec>;
+#[doc = "Field `SAR2_PATT_TAB4` reader - Item 12 ~ 15 for pattern table 2 (each item one byte)"]
+pub type Sar2PattTab4R = crate::FieldReader<u32>;
+#[doc = "Field `SAR2_PATT_TAB4` writer - Item 12 ~ 15 for pattern table 2 (each item one byte)"]
+pub type Sar2PattTab4W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
+impl R {
+    #[doc = "Bits 0:23 - Item 12 ~ 15 for pattern table 2 (each item one byte)"]
+    #[inline(always)]
+    pub fn sar2_patt_tab4(&self) -> Sar2PattTab4R {
+        Sar2PattTab4R::new(self.bits & 0x00ff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:23 - Item 12 ~ 15 for pattern table 2 (each item one byte)"]
+    #[inline(always)]
+    pub fn sar2_patt_tab4(&mut self) -> Sar2PattTab4W<'_, Sar2PattTab4Spec> {
+        Sar2PattTab4W::new(self, 0)
+    }
+}
+#[doc = "Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sar2_patt_tab4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar2_patt_tab4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Sar2PattTab4Spec;
+impl crate::RegisterSpec for Sar2PattTab4Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sar2_patt_tab4::R`](R) reader structure"]
+impl crate::Readable for Sar2PattTab4Spec {}
+#[doc = "`write(|w| ..)` method takes [`sar2_patt_tab4::W`](W) writer structure"]
+impl crate::Writable for Sar2PattTab4Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SAR2_PATT_TAB4 to value 0"]
+impl crate::Resettable for Sar2PattTab4Spec {}

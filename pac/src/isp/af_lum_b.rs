@@ -1,0 +1,20 @@
+#[doc = "Register `AF_LUM_B` reader"]
+pub type R = crate::R<AfLumBSpec>;
+#[doc = "Field `AF_LUMB` reader - this field represents the result of accumulation of pix light of focus window b"]
+pub type AfLumbR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:27 - this field represents the result of accumulation of pix light of focus window b"]
+    #[inline(always)]
+    pub fn af_lumb(&self) -> AfLumbR {
+        AfLumbR::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[doc = "result of lum of af window b\n\nYou can [`read`](crate::Reg::read) this register and get [`af_lum_b::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AfLumBSpec;
+impl crate::RegisterSpec for AfLumBSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`af_lum_b::R`](R) reader structure"]
+impl crate::Readable for AfLumBSpec {}
+#[doc = "`reset()` method sets AF_LUM_B to value 0"]
+impl crate::Resettable for AfLumBSpec {}

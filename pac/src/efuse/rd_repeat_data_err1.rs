@@ -1,0 +1,122 @@
+#[doc = "Register `RD_REPEAT_DATA_ERR1` reader"]
+pub type R = crate::R<RdRepeatDataErr1Spec>;
+#[doc = "Field `RECOVERY_BOOTLOADER_FLASH_SECTOR_8_10_ERR` reader - Represents the programming error of EFUSE_RECOVERY_BOOTLOADER_FLASH_SECTOR_8_10"]
+pub type RecoveryBootloaderFlashSector8_10ErrR = crate::FieldReader;
+#[doc = "Field `RECOVERY_BOOTLOADER_FLASH_SECTOR_11_11_ERR` reader - Represents the programming error of EFUSE_RECOVERY_BOOTLOADER_FLASH_SECTOR_11_11"]
+pub type RecoveryBootloaderFlashSector11_11ErrR = crate::BitReader;
+#[doc = "Field `KM_RND_SWITCH_CYCLE_ERR` reader - Represents the programming error of EFUSE_KM_RND_SWITCH_CYCLE"]
+pub type KmRndSwitchCycleErrR = crate::BitReader;
+#[doc = "Field `KM_DEPLOY_ONLY_ONCE_ERR` reader - Represents the programming error of EFUSE_KM_DEPLOY_ONLY_ONCE"]
+pub type KmDeployOnlyOnceErrR = crate::FieldReader;
+#[doc = "Field `FORCE_USE_KEY_MANAGER_KEY_ERR` reader - Represents the programming error of EFUSE_FORCE_USE_KEY_MANAGER_KEY"]
+pub type ForceUseKeyManagerKeyErrR = crate::FieldReader;
+#[doc = "Field `FORCE_DISABLE_SW_INIT_KEY_ERR` reader - Represents the programming error of EFUSE_FORCE_DISABLE_SW_INIT_KEY"]
+pub type ForceDisableSwInitKeyErrR = crate::BitReader;
+#[doc = "Field `KM_XTS_KEY_LENGTH_256_ERR` reader - Represents the programming error of EFUSE_KM_XTS_KEY_LENGTH_256"]
+pub type KmXtsKeyLength256ErrR = crate::BitReader;
+#[doc = "Field `ECC_FORCE_CONST_TIME_ERR` reader - Represents the programming error of EFUSE_ECC_FORCE_CONST_TIME"]
+pub type EccForceConstTimeErrR = crate::BitReader;
+#[doc = "Field `WDT_DELAY_SEL_ERR` reader - Represents the programming error of EFUSE_WDT_DELAY_SEL"]
+pub type WdtDelaySelErrR = crate::BitReader;
+#[doc = "Field `SPI_BOOT_CRYPT_CNT_ERR` reader - Represents the programming error of EFUSE_SPI_BOOT_CRYPT_CNT"]
+pub type SpiBootCryptCntErrR = crate::FieldReader;
+#[doc = "Field `SECURE_BOOT_KEY_REVOKE0_ERR` reader - Represents the programming error of EFUSE_SECURE_BOOT_KEY_REVOKE0"]
+pub type SecureBootKeyRevoke0ErrR = crate::BitReader;
+#[doc = "Field `SECURE_BOOT_KEY_REVOKE1_ERR` reader - Represents the programming error of EFUSE_SECURE_BOOT_KEY_REVOKE1"]
+pub type SecureBootKeyRevoke1ErrR = crate::BitReader;
+#[doc = "Field `SECURE_BOOT_KEY_REVOKE2_ERR` reader - Represents the programming error of EFUSE_SECURE_BOOT_KEY_REVOKE2"]
+pub type SecureBootKeyRevoke2ErrR = crate::BitReader;
+#[doc = "Field `KEY_PURPOSE_0_ERR` reader - Represents the programming error of EFUSE_KEY_PURPOSE_0"]
+pub type KeyPurpose0ErrR = crate::FieldReader;
+#[doc = "Field `KEY_PURPOSE_1_ERR` reader - Represents the programming error of EFUSE_KEY_PURPOSE_1"]
+pub type KeyPurpose1ErrR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:2 - Represents the programming error of EFUSE_RECOVERY_BOOTLOADER_FLASH_SECTOR_8_10"]
+    #[inline(always)]
+    pub fn recovery_bootloader_flash_sector_8_10_err(
+        &self,
+    ) -> RecoveryBootloaderFlashSector8_10ErrR {
+        RecoveryBootloaderFlashSector8_10ErrR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3 - Represents the programming error of EFUSE_RECOVERY_BOOTLOADER_FLASH_SECTOR_11_11"]
+    #[inline(always)]
+    pub fn recovery_bootloader_flash_sector_11_11_err(
+        &self,
+    ) -> RecoveryBootloaderFlashSector11_11ErrR {
+        RecoveryBootloaderFlashSector11_11ErrR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Represents the programming error of EFUSE_KM_RND_SWITCH_CYCLE"]
+    #[inline(always)]
+    pub fn km_rnd_switch_cycle_err(&self) -> KmRndSwitchCycleErrR {
+        KmRndSwitchCycleErrR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 5:8 - Represents the programming error of EFUSE_KM_DEPLOY_ONLY_ONCE"]
+    #[inline(always)]
+    pub fn km_deploy_only_once_err(&self) -> KmDeployOnlyOnceErrR {
+        KmDeployOnlyOnceErrR::new(((self.bits >> 5) & 0x0f) as u8)
+    }
+    #[doc = "Bits 9:12 - Represents the programming error of EFUSE_FORCE_USE_KEY_MANAGER_KEY"]
+    #[inline(always)]
+    pub fn force_use_key_manager_key_err(&self) -> ForceUseKeyManagerKeyErrR {
+        ForceUseKeyManagerKeyErrR::new(((self.bits >> 9) & 0x0f) as u8)
+    }
+    #[doc = "Bit 13 - Represents the programming error of EFUSE_FORCE_DISABLE_SW_INIT_KEY"]
+    #[inline(always)]
+    pub fn force_disable_sw_init_key_err(&self) -> ForceDisableSwInitKeyErrR {
+        ForceDisableSwInitKeyErrR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Represents the programming error of EFUSE_KM_XTS_KEY_LENGTH_256"]
+    #[inline(always)]
+    pub fn km_xts_key_length_256_err(&self) -> KmXtsKeyLength256ErrR {
+        KmXtsKeyLength256ErrR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Represents the programming error of EFUSE_ECC_FORCE_CONST_TIME"]
+    #[inline(always)]
+    pub fn ecc_force_const_time_err(&self) -> EccForceConstTimeErrR {
+        EccForceConstTimeErrR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Represents the programming error of EFUSE_WDT_DELAY_SEL"]
+    #[inline(always)]
+    pub fn wdt_delay_sel_err(&self) -> WdtDelaySelErrR {
+        WdtDelaySelErrR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bits 18:20 - Represents the programming error of EFUSE_SPI_BOOT_CRYPT_CNT"]
+    #[inline(always)]
+    pub fn spi_boot_crypt_cnt_err(&self) -> SpiBootCryptCntErrR {
+        SpiBootCryptCntErrR::new(((self.bits >> 18) & 7) as u8)
+    }
+    #[doc = "Bit 21 - Represents the programming error of EFUSE_SECURE_BOOT_KEY_REVOKE0"]
+    #[inline(always)]
+    pub fn secure_boot_key_revoke0_err(&self) -> SecureBootKeyRevoke0ErrR {
+        SecureBootKeyRevoke0ErrR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Represents the programming error of EFUSE_SECURE_BOOT_KEY_REVOKE1"]
+    #[inline(always)]
+    pub fn secure_boot_key_revoke1_err(&self) -> SecureBootKeyRevoke1ErrR {
+        SecureBootKeyRevoke1ErrR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - Represents the programming error of EFUSE_SECURE_BOOT_KEY_REVOKE2"]
+    #[inline(always)]
+    pub fn secure_boot_key_revoke2_err(&self) -> SecureBootKeyRevoke2ErrR {
+        SecureBootKeyRevoke2ErrR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bits 24:27 - Represents the programming error of EFUSE_KEY_PURPOSE_0"]
+    #[inline(always)]
+    pub fn key_purpose_0_err(&self) -> KeyPurpose0ErrR {
+        KeyPurpose0ErrR::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+    #[doc = "Bits 28:31 - Represents the programming error of EFUSE_KEY_PURPOSE_1"]
+    #[inline(always)]
+    pub fn key_purpose_1_err(&self) -> KeyPurpose1ErrR {
+        KeyPurpose1ErrR::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[doc = "Represents rd_repeat_data_err\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data_err1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdRepeatDataErr1Spec;
+impl crate::RegisterSpec for RdRepeatDataErr1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rd_repeat_data_err1::R`](R) reader structure"]
+impl crate::Readable for RdRepeatDataErr1Spec {}
+#[doc = "`reset()` method sets RD_REPEAT_DATA_ERR1 to value 0"]
+impl crate::Resettable for RdRepeatDataErr1Spec {}

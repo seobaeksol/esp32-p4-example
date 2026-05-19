@@ -1,0 +1,70 @@
+#[doc = "Register `PMS_REJECT` reader"]
+pub type R = crate::R<PmsRejectSpec>;
+#[doc = "Register `PMS_REJECT` writer"]
+pub type W = crate::W<PmsRejectSpec>;
+#[doc = "Field `REJECT_ADDR` reader - This bits show the first SPI1 access error address. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+pub type RejectAddrR = crate::FieldReader<u32>;
+#[doc = "Field `PM_EN` reader - Set this bit to enable SPI0/1 transfer permission control function."]
+pub type PmEnR = crate::BitReader;
+#[doc = "Field `PM_EN` writer - Set this bit to enable SPI0/1 transfer permission control function."]
+pub type PmEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PMS_LD` reader - 1: SPI1 write access error. 0: No write access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+pub type PmsLdR = crate::BitReader;
+#[doc = "Field `PMS_ST` reader - 1: SPI1 read access error. 0: No read access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+pub type PmsStR = crate::BitReader;
+#[doc = "Field `PMS_MULTI_HIT` reader - 1: SPI1 access is rejected because of address miss. 0: No address miss error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+pub type PmsMultiHitR = crate::BitReader;
+#[doc = "Field `PMS_IVD` reader - 1: SPI1 access is rejected because of address multi-hit. 0: No address multi-hit error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+pub type PmsIvdR = crate::BitReader;
+impl R {
+    #[doc = "Bits 0:26 - This bits show the first SPI1 access error address. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+    #[inline(always)]
+    pub fn reject_addr(&self) -> RejectAddrR {
+        RejectAddrR::new(self.bits & 0x07ff_ffff)
+    }
+    #[doc = "Bit 27 - Set this bit to enable SPI0/1 transfer permission control function."]
+    #[inline(always)]
+    pub fn pm_en(&self) -> PmEnR {
+        PmEnR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - 1: SPI1 write access error. 0: No write access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+    #[inline(always)]
+    pub fn pms_ld(&self) -> PmsLdR {
+        PmsLdR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - 1: SPI1 read access error. 0: No read access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+    #[inline(always)]
+    pub fn pms_st(&self) -> PmsStR {
+        PmsStR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - 1: SPI1 access is rejected because of address miss. 0: No address miss error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+    #[inline(always)]
+    pub fn pms_multi_hit(&self) -> PmsMultiHitR {
+        PmsMultiHitR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - 1: SPI1 access is rejected because of address multi-hit. 0: No address multi-hit error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
+    #[inline(always)]
+    pub fn pms_ivd(&self) -> PmsIvdR {
+        PmsIvdR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 27 - Set this bit to enable SPI0/1 transfer permission control function."]
+    #[inline(always)]
+    pub fn pm_en(&mut self) -> PmEnW<'_, PmsRejectSpec> {
+        PmEnW::new(self, 27)
+    }
+}
+#[doc = "SPI1 access reject register\n\nYou can [`read`](crate::Reg::read) this register and get [`pms_reject::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pms_reject::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PmsRejectSpec;
+impl crate::RegisterSpec for PmsRejectSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`pms_reject::R`](R) reader structure"]
+impl crate::Readable for PmsRejectSpec {}
+#[doc = "`write(|w| ..)` method takes [`pms_reject::W`](W) writer structure"]
+impl crate::Writable for PmsRejectSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PMS_REJECT to value 0"]
+impl crate::Resettable for PmsRejectSpec {}

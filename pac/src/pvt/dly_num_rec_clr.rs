@@ -1,0 +1,22 @@
+#[doc = "Register `DLY_NUM_REC_CLR` writer"]
+pub type W = crate::W<DlyNumRecClrSpec>;
+#[doc = "Field `DELAY_NUM_REC_CLR` writer - needs field desc"]
+pub type DelayNumRecClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - needs field desc"]
+    #[inline(always)]
+    pub fn delay_num_rec_clr(&mut self) -> DelayNumRecClrW<'_, DlyNumRecClrSpec> {
+        DelayNumRecClrW::new(self, 0)
+    }
+}
+#[doc = "needs field desc\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dly_num_rec_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DlyNumRecClrSpec;
+impl crate::RegisterSpec for DlyNumRecClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`dly_num_rec_clr::W`](W) writer structure"]
+impl crate::Writable for DlyNumRecClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DLY_NUM_REC_CLR to value 0"]
+impl crate::Resettable for DlyNumRecClrSpec {}

@@ -1,0 +1,485 @@
+#[doc = "Register `EVT_TASK_EN0` reader"]
+pub type R = crate::R<EvtTaskEn0Spec>;
+#[doc = "Register `EVT_TASK_EN0` writer"]
+pub type W = crate::W<EvtTaskEn0Spec>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH0_EN` reader - Configures whether or not to enable the ledc_ch0_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh0EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH0_EN` writer - Configures whether or not to enable the ledc_ch0_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh0EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH1_EN` reader - Configures whether or not to enable the ledc_ch1_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh1EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH1_EN` writer - Configures whether or not to enable the ledc_ch1_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh1EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH2_EN` reader - Configures whether or not to enable the ledc_ch2_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh2EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH2_EN` writer - Configures whether or not to enable the ledc_ch2_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh2EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH3_EN` reader - Configures whether or not to enable the ledc_ch3_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh3EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH3_EN` writer - Configures whether or not to enable the ledc_ch3_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh3EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH4_EN` reader - Configures whether or not to enable the ledc_ch4_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh4EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH4_EN` writer - Configures whether or not to enable the ledc_ch4_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh4EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH5_EN` reader - Configures whether or not to enable the ledc_ch5_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh5EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH5_EN` writer - Configures whether or not to enable the ledc_ch5_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh5EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH6_EN` reader - Configures whether or not to enable the ledc_ch6_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh6EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH6_EN` writer - Configures whether or not to enable the ledc_ch6_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh6EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH7_EN` reader - Configures whether or not to enable the ledc_ch7_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh7EnR = crate::BitReader;
+#[doc = "Field `EVT_DUTY_CHNG_END_CH7_EN` writer - Configures whether or not to enable the ledc_ch7_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtDutyChngEndCh7EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH0_EN` reader - Configures whether or not to enable the ledc_ch0_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh0EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH0_EN` writer - Configures whether or not to enable the ledc_ch0_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh0EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH1_EN` reader - Configures whether or not to enable the ledc_ch1_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh1EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH1_EN` writer - Configures whether or not to enable the ledc_ch1_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh1EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH2_EN` reader - Configures whether or not to enable the ledc_ch2_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh2EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH2_EN` writer - Configures whether or not to enable the ledc_ch2_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh2EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH3_EN` reader - Configures whether or not to enable the ledc_ch3_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh3EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH3_EN` writer - Configures whether or not to enable the ledc_ch3_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh3EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH4_EN` reader - Configures whether or not to enable the ledc_ch4_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh4EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH4_EN` writer - Configures whether or not to enable the ledc_ch4_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh4EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH5_EN` reader - Configures whether or not to enable the ledc_ch5_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh5EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH5_EN` writer - Configures whether or not to enable the ledc_ch5_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh5EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH6_EN` reader - Configures whether or not to enable the ledc_ch6_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh6EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH6_EN` writer - Configures whether or not to enable the ledc_ch6_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh6EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH7_EN` reader - Configures whether or not to enable the ledc_ch7_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh7EnR = crate::BitReader;
+#[doc = "Field `EVT_OVF_CNT_PLS_CH7_EN` writer - Configures whether or not to enable the ledc_ch7_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtOvfCntPlsCh7EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME_OVF_TIMER0_EN` reader - Configures whether or not to enable the ledc_timer0_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer0EnR = crate::BitReader;
+#[doc = "Field `EVT_TIME_OVF_TIMER0_EN` writer - Configures whether or not to enable the ledc_timer0_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer0EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME_OVF_TIMER1_EN` reader - Configures whether or not to enable the ledc_timer1_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer1EnR = crate::BitReader;
+#[doc = "Field `EVT_TIME_OVF_TIMER1_EN` writer - Configures whether or not to enable the ledc_timer1_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer1EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME_OVF_TIMER2_EN` reader - Configures whether or not to enable the ledc_timer2_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer2EnR = crate::BitReader;
+#[doc = "Field `EVT_TIME_OVF_TIMER2_EN` writer - Configures whether or not to enable the ledc_timer2_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer2EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME_OVF_TIMER3_EN` reader - Configures whether or not to enable the ledc_timer3_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer3EnR = crate::BitReader;
+#[doc = "Field `EVT_TIME_OVF_TIMER3_EN` writer - Configures whether or not to enable the ledc_timer3_ovf event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTimeOvfTimer3EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME0_CMP_EN` reader - Configures whether or not to enable the ledc_timer0_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime0CmpEnR = crate::BitReader;
+#[doc = "Field `EVT_TIME0_CMP_EN` writer - Configures whether or not to enable the ledc_timer0_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime0CmpEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME1_CMP_EN` reader - Configures whether or not to enable the ledc_timer1_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime1CmpEnR = crate::BitReader;
+#[doc = "Field `EVT_TIME1_CMP_EN` writer - Configures whether or not to enable the ledc_timer1_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime1CmpEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME2_CMP_EN` reader - Configures whether or not to enable the ledc_timer2_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime2CmpEnR = crate::BitReader;
+#[doc = "Field `EVT_TIME2_CMP_EN` writer - Configures whether or not to enable the ledc_timer2_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime2CmpEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EVT_TIME3_CMP_EN` reader - Configures whether or not to enable the ledc_timer3_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime3CmpEnR = crate::BitReader;
+#[doc = "Field `EVT_TIME3_CMP_EN` writer - Configures whether or not to enable the ledc_timer3_cmp event.\\\\0: Disable\\\\1: Enable"]
+pub type EvtTime3CmpEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH0_EN` reader - Configures whether or not to enable the ledc_ch0_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh0EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH0_EN` writer - Configures whether or not to enable the ledc_ch0_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh0EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH1_EN` reader - Configures whether or not to enable the ledc_ch1_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh1EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH1_EN` writer - Configures whether or not to enable the ledc_ch1_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh1EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH2_EN` reader - Configures whether or not to enable the ledc_ch2_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh2EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH2_EN` writer - Configures whether or not to enable the ledc_ch2_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh2EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH3_EN` reader - Configures whether or not to enable the ledc_ch3_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh3EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH3_EN` writer - Configures whether or not to enable the ledc_ch3_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh3EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH4_EN` reader - Configures whether or not to enable the ledc_ch4_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh4EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH4_EN` writer - Configures whether or not to enable the ledc_ch4_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh4EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH5_EN` reader - Configures whether or not to enable the ledc_ch5_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh5EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH5_EN` writer - Configures whether or not to enable the ledc_ch5_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh5EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH6_EN` reader - Configures whether or not to enable the ledc_ch6_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh6EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH6_EN` writer - Configures whether or not to enable the ledc_ch6_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh6EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH7_EN` reader - Configures whether or not to enable the ledc_ch7_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh7EnR = crate::BitReader;
+#[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH7_EN` writer - Configures whether or not to enable the ledc_ch7_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+pub type TaskDutyScaleUpdateCh7EnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Configures whether or not to enable the ledc_ch0_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch0_en(&self) -> EvtDutyChngEndCh0EnR {
+        EvtDutyChngEndCh0EnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Configures whether or not to enable the ledc_ch1_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch1_en(&self) -> EvtDutyChngEndCh1EnR {
+        EvtDutyChngEndCh1EnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Configures whether or not to enable the ledc_ch2_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch2_en(&self) -> EvtDutyChngEndCh2EnR {
+        EvtDutyChngEndCh2EnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Configures whether or not to enable the ledc_ch3_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch3_en(&self) -> EvtDutyChngEndCh3EnR {
+        EvtDutyChngEndCh3EnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Configures whether or not to enable the ledc_ch4_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch4_en(&self) -> EvtDutyChngEndCh4EnR {
+        EvtDutyChngEndCh4EnR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Configures whether or not to enable the ledc_ch5_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch5_en(&self) -> EvtDutyChngEndCh5EnR {
+        EvtDutyChngEndCh5EnR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Configures whether or not to enable the ledc_ch6_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch6_en(&self) -> EvtDutyChngEndCh6EnR {
+        EvtDutyChngEndCh6EnR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Configures whether or not to enable the ledc_ch7_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch7_en(&self) -> EvtDutyChngEndCh7EnR {
+        EvtDutyChngEndCh7EnR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Configures whether or not to enable the ledc_ch0_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch0_en(&self) -> EvtOvfCntPlsCh0EnR {
+        EvtOvfCntPlsCh0EnR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Configures whether or not to enable the ledc_ch1_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch1_en(&self) -> EvtOvfCntPlsCh1EnR {
+        EvtOvfCntPlsCh1EnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Configures whether or not to enable the ledc_ch2_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch2_en(&self) -> EvtOvfCntPlsCh2EnR {
+        EvtOvfCntPlsCh2EnR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Configures whether or not to enable the ledc_ch3_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch3_en(&self) -> EvtOvfCntPlsCh3EnR {
+        EvtOvfCntPlsCh3EnR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Configures whether or not to enable the ledc_ch4_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch4_en(&self) -> EvtOvfCntPlsCh4EnR {
+        EvtOvfCntPlsCh4EnR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Configures whether or not to enable the ledc_ch5_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch5_en(&self) -> EvtOvfCntPlsCh5EnR {
+        EvtOvfCntPlsCh5EnR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Configures whether or not to enable the ledc_ch6_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch6_en(&self) -> EvtOvfCntPlsCh6EnR {
+        EvtOvfCntPlsCh6EnR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Configures whether or not to enable the ledc_ch7_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch7_en(&self) -> EvtOvfCntPlsCh7EnR {
+        EvtOvfCntPlsCh7EnR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Configures whether or not to enable the ledc_timer0_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer0_en(&self) -> EvtTimeOvfTimer0EnR {
+        EvtTimeOvfTimer0EnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Configures whether or not to enable the ledc_timer1_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer1_en(&self) -> EvtTimeOvfTimer1EnR {
+        EvtTimeOvfTimer1EnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Configures whether or not to enable the ledc_timer2_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer2_en(&self) -> EvtTimeOvfTimer2EnR {
+        EvtTimeOvfTimer2EnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Configures whether or not to enable the ledc_timer3_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer3_en(&self) -> EvtTimeOvfTimer3EnR {
+        EvtTimeOvfTimer3EnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Configures whether or not to enable the ledc_timer0_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time0_cmp_en(&self) -> EvtTime0CmpEnR {
+        EvtTime0CmpEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Configures whether or not to enable the ledc_timer1_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time1_cmp_en(&self) -> EvtTime1CmpEnR {
+        EvtTime1CmpEnR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Configures whether or not to enable the ledc_timer2_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time2_cmp_en(&self) -> EvtTime2CmpEnR {
+        EvtTime2CmpEnR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - Configures whether or not to enable the ledc_timer3_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time3_cmp_en(&self) -> EvtTime3CmpEnR {
+        EvtTime3CmpEnR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Configures whether or not to enable the ledc_ch0_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch0_en(&self) -> TaskDutyScaleUpdateCh0EnR {
+        TaskDutyScaleUpdateCh0EnR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Configures whether or not to enable the ledc_ch1_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch1_en(&self) -> TaskDutyScaleUpdateCh1EnR {
+        TaskDutyScaleUpdateCh1EnR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Configures whether or not to enable the ledc_ch2_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch2_en(&self) -> TaskDutyScaleUpdateCh2EnR {
+        TaskDutyScaleUpdateCh2EnR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Configures whether or not to enable the ledc_ch3_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch3_en(&self) -> TaskDutyScaleUpdateCh3EnR {
+        TaskDutyScaleUpdateCh3EnR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Configures whether or not to enable the ledc_ch4_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch4_en(&self) -> TaskDutyScaleUpdateCh4EnR {
+        TaskDutyScaleUpdateCh4EnR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Configures whether or not to enable the ledc_ch5_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch5_en(&self) -> TaskDutyScaleUpdateCh5EnR {
+        TaskDutyScaleUpdateCh5EnR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Configures whether or not to enable the ledc_ch6_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch6_en(&self) -> TaskDutyScaleUpdateCh6EnR {
+        TaskDutyScaleUpdateCh6EnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Configures whether or not to enable the ledc_ch7_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch7_en(&self) -> TaskDutyScaleUpdateCh7EnR {
+        TaskDutyScaleUpdateCh7EnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to enable the ledc_ch0_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch0_en(&mut self) -> EvtDutyChngEndCh0EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh0EnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Configures whether or not to enable the ledc_ch1_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch1_en(&mut self) -> EvtDutyChngEndCh1EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh1EnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Configures whether or not to enable the ledc_ch2_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch2_en(&mut self) -> EvtDutyChngEndCh2EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh2EnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Configures whether or not to enable the ledc_ch3_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch3_en(&mut self) -> EvtDutyChngEndCh3EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh3EnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Configures whether or not to enable the ledc_ch4_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch4_en(&mut self) -> EvtDutyChngEndCh4EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh4EnW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Configures whether or not to enable the ledc_ch5_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch5_en(&mut self) -> EvtDutyChngEndCh5EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh5EnW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Configures whether or not to enable the ledc_ch6_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch6_en(&mut self) -> EvtDutyChngEndCh6EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh6EnW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Configures whether or not to enable the ledc_ch7_duty_chng_end event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_duty_chng_end_ch7_en(&mut self) -> EvtDutyChngEndCh7EnW<'_, EvtTaskEn0Spec> {
+        EvtDutyChngEndCh7EnW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Configures whether or not to enable the ledc_ch0_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch0_en(&mut self) -> EvtOvfCntPlsCh0EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh0EnW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Configures whether or not to enable the ledc_ch1_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch1_en(&mut self) -> EvtOvfCntPlsCh1EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh1EnW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Configures whether or not to enable the ledc_ch2_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch2_en(&mut self) -> EvtOvfCntPlsCh2EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh2EnW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Configures whether or not to enable the ledc_ch3_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch3_en(&mut self) -> EvtOvfCntPlsCh3EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh3EnW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Configures whether or not to enable the ledc_ch4_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch4_en(&mut self) -> EvtOvfCntPlsCh4EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh4EnW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Configures whether or not to enable the ledc_ch5_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch5_en(&mut self) -> EvtOvfCntPlsCh5EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh5EnW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Configures whether or not to enable the ledc_ch6_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch6_en(&mut self) -> EvtOvfCntPlsCh6EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh6EnW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Configures whether or not to enable the ledc_ch7_ovf_cnt_pls event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_ovf_cnt_pls_ch7_en(&mut self) -> EvtOvfCntPlsCh7EnW<'_, EvtTaskEn0Spec> {
+        EvtOvfCntPlsCh7EnW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Configures whether or not to enable the ledc_timer0_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer0_en(&mut self) -> EvtTimeOvfTimer0EnW<'_, EvtTaskEn0Spec> {
+        EvtTimeOvfTimer0EnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Configures whether or not to enable the ledc_timer1_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer1_en(&mut self) -> EvtTimeOvfTimer1EnW<'_, EvtTaskEn0Spec> {
+        EvtTimeOvfTimer1EnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Configures whether or not to enable the ledc_timer2_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer2_en(&mut self) -> EvtTimeOvfTimer2EnW<'_, EvtTaskEn0Spec> {
+        EvtTimeOvfTimer2EnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Configures whether or not to enable the ledc_timer3_ovf event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time_ovf_timer3_en(&mut self) -> EvtTimeOvfTimer3EnW<'_, EvtTaskEn0Spec> {
+        EvtTimeOvfTimer3EnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Configures whether or not to enable the ledc_timer0_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time0_cmp_en(&mut self) -> EvtTime0CmpEnW<'_, EvtTaskEn0Spec> {
+        EvtTime0CmpEnW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Configures whether or not to enable the ledc_timer1_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time1_cmp_en(&mut self) -> EvtTime1CmpEnW<'_, EvtTaskEn0Spec> {
+        EvtTime1CmpEnW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Configures whether or not to enable the ledc_timer2_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time2_cmp_en(&mut self) -> EvtTime2CmpEnW<'_, EvtTaskEn0Spec> {
+        EvtTime2CmpEnW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Configures whether or not to enable the ledc_timer3_cmp event.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn evt_time3_cmp_en(&mut self) -> EvtTime3CmpEnW<'_, EvtTaskEn0Spec> {
+        EvtTime3CmpEnW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Configures whether or not to enable the ledc_ch0_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch0_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh0EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh0EnW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Configures whether or not to enable the ledc_ch1_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch1_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh1EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh1EnW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Configures whether or not to enable the ledc_ch2_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch2_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh2EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh2EnW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Configures whether or not to enable the ledc_ch3_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch3_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh3EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh3EnW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Configures whether or not to enable the ledc_ch4_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch4_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh4EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh4EnW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Configures whether or not to enable the ledc_ch5_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch5_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh5EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh5EnW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Configures whether or not to enable the ledc_ch6_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch6_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh6EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh6EnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Configures whether or not to enable the ledc_ch7_duty_scale_update task.\\\\0: Disable\\\\1: Enable"]
+    #[inline(always)]
+    pub fn task_duty_scale_update_ch7_en(
+        &mut self,
+    ) -> TaskDutyScaleUpdateCh7EnW<'_, EvtTaskEn0Spec> {
+        TaskDutyScaleUpdateCh7EnW::new(self, 31)
+    }
+}
+#[doc = "Ledc event task enable bit register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_task_en0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_task_en0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EvtTaskEn0Spec;
+impl crate::RegisterSpec for EvtTaskEn0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`evt_task_en0::R`](R) reader structure"]
+impl crate::Readable for EvtTaskEn0Spec {}
+#[doc = "`write(|w| ..)` method takes [`evt_task_en0::W`](W) writer structure"]
+impl crate::Writable for EvtTaskEn0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets EVT_TASK_EN0 to value 0"]
+impl crate::Resettable for EvtTaskEn0Spec {}

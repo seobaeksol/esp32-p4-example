@@ -1,0 +1,37 @@
+#[doc = "Register `DEMOSAIC_GRAD_RATIO` reader"]
+pub type R = crate::R<DemosaicGradRatioSpec>;
+#[doc = "Register `DEMOSAIC_GRAD_RATIO` writer"]
+pub type W = crate::W<DemosaicGradRatioSpec>;
+#[doc = "Field `DEMOSAIC_GRAD_RATIO` reader - this field configures demosaic gradient select ratio"]
+pub type DemosaicGradRatioR = crate::FieldReader;
+#[doc = "Field `DEMOSAIC_GRAD_RATIO` writer - this field configures demosaic gradient select ratio"]
+pub type DemosaicGradRatioW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+impl R {
+    #[doc = "Bits 0:5 - this field configures demosaic gradient select ratio"]
+    #[inline(always)]
+    pub fn demosaic_grad_ratio(&self) -> DemosaicGradRatioR {
+        DemosaicGradRatioR::new((self.bits & 0x3f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - this field configures demosaic gradient select ratio"]
+    #[inline(always)]
+    pub fn demosaic_grad_ratio(&mut self) -> DemosaicGradRatioW<'_, DemosaicGradRatioSpec> {
+        DemosaicGradRatioW::new(self, 0)
+    }
+}
+#[doc = "demosaic gradient select ratio\n\nYou can [`read`](crate::Reg::read) this register and get [`demosaic_grad_ratio::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`demosaic_grad_ratio::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DemosaicGradRatioSpec;
+impl crate::RegisterSpec for DemosaicGradRatioSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`demosaic_grad_ratio::R`](R) reader structure"]
+impl crate::Readable for DemosaicGradRatioSpec {}
+#[doc = "`write(|w| ..)` method takes [`demosaic_grad_ratio::W`](W) writer structure"]
+impl crate::Writable for DemosaicGradRatioSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DEMOSAIC_GRAD_RATIO to value 0x10"]
+impl crate::Resettable for DemosaicGradRatioSpec {
+    const RESET_VALUE: u32 = 0x10;
+}

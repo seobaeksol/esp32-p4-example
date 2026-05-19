@@ -1,0 +1,23 @@
+#[doc = "Register `PX_MEM%s` reader"]
+pub type R = crate::R<PxMemSpec>;
+#[doc = "Register `PX_MEM%s` writer"]
+pub type W = crate::W<PxMemSpec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl W {}
+#[doc = "The memory that stores Px.\n\nYou can [`read`](crate::Reg::read) this register and get [`px_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`px_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PxMemSpec;
+impl crate::RegisterSpec for PxMemSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`px_mem::R`](R) reader structure"]
+impl crate::Readable for PxMemSpec {}
+#[doc = "`write(|w| ..)` method takes [`px_mem::W`](W) writer structure"]
+impl crate::Writable for PxMemSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PX_MEM%s to value 0"]
+impl crate::Resettable for PxMemSpec {}

@@ -1,0 +1,35 @@
+#[doc = "Register `GDMA_CTRL` reader"]
+pub type R = crate::R<GdmaCtrlSpec>;
+#[doc = "Register `GDMA_CTRL` writer"]
+pub type W = crate::W<GdmaCtrlSpec>;
+#[doc = "Field `DEBUG_CH_NUM` reader - N/A"]
+pub type DebugChNumR = crate::FieldReader;
+#[doc = "Field `DEBUG_CH_NUM` writer - N/A"]
+pub type DebugChNumW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+impl R {
+    #[doc = "Bits 0:1 - N/A"]
+    #[inline(always)]
+    pub fn debug_ch_num(&self) -> DebugChNumR {
+        DebugChNumR::new((self.bits & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:1 - N/A"]
+    #[inline(always)]
+    pub fn debug_ch_num(&mut self) -> DebugChNumW<'_, GdmaCtrlSpec> {
+        DebugChNumW::new(self, 0)
+    }
+}
+#[doc = "N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`gdma_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gdma_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GdmaCtrlSpec;
+impl crate::RegisterSpec for GdmaCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`gdma_ctrl::R`](R) reader structure"]
+impl crate::Readable for GdmaCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`gdma_ctrl::W`](W) writer structure"]
+impl crate::Writable for GdmaCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets GDMA_CTRL to value 0"]
+impl crate::Resettable for GdmaCtrlSpec {}

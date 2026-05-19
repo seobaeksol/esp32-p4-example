@@ -1,0 +1,107 @@
+#[doc = "Register `PERI_CLK_CTRL117` reader"]
+pub type R = crate::R<PeriClkCtrl117Spec>;
+#[doc = "Register `PERI_CLK_CTRL117` writer"]
+pub type W = crate::W<PeriClkCtrl117Spec>;
+#[doc = "Field `GPSPI3_HS_CLK_DIV_NUM` reader - Reserved"]
+pub type Gpspi3HsClkDivNumR = crate::FieldReader;
+#[doc = "Field `GPSPI3_HS_CLK_DIV_NUM` writer - Reserved"]
+pub type Gpspi3HsClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GPSPI3_MST_CLK_DIV_NUM` reader - Reserved"]
+pub type Gpspi3MstClkDivNumR = crate::FieldReader;
+#[doc = "Field `GPSPI3_MST_CLK_DIV_NUM` writer - Reserved"]
+pub type Gpspi3MstClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `GPSPI3_MST_CLK_EN` reader - Reserved"]
+pub type Gpspi3MstClkEnR = crate::BitReader;
+#[doc = "Field `GPSPI3_MST_CLK_EN` writer - Reserved"]
+pub type Gpspi3MstClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PARLIO_RX_CLK_SRC_SEL` reader - Reserved"]
+pub type ParlioRxClkSrcSelR = crate::FieldReader;
+#[doc = "Field `PARLIO_RX_CLK_SRC_SEL` writer - Reserved"]
+pub type ParlioRxClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `PARLIO_RX_CLK_EN` reader - Reserved"]
+pub type ParlioRxClkEnR = crate::BitReader;
+#[doc = "Field `PARLIO_RX_CLK_EN` writer - Reserved"]
+pub type ParlioRxClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PARLIO_RX_CLK_DIV_NUM` reader - Reserved"]
+pub type ParlioRxClkDivNumR = crate::FieldReader;
+#[doc = "Field `PARLIO_RX_CLK_DIV_NUM` writer - Reserved"]
+pub type ParlioRxClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_hs_clk_div_num(&self) -> Gpspi3HsClkDivNumR {
+        Gpspi3HsClkDivNumR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_mst_clk_div_num(&self) -> Gpspi3MstClkDivNumR {
+        Gpspi3MstClkDivNumR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bit 16 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_mst_clk_en(&self) -> Gpspi3MstClkEnR {
+        Gpspi3MstClkEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bits 17:18 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_rx_clk_src_sel(&self) -> ParlioRxClkSrcSelR {
+        ParlioRxClkSrcSelR::new(((self.bits >> 17) & 3) as u8)
+    }
+    #[doc = "Bit 19 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_rx_clk_en(&self) -> ParlioRxClkEnR {
+        ParlioRxClkEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bits 20:27 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_rx_clk_div_num(&self) -> ParlioRxClkDivNumR {
+        ParlioRxClkDivNumR::new(((self.bits >> 20) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_hs_clk_div_num(&mut self) -> Gpspi3HsClkDivNumW<'_, PeriClkCtrl117Spec> {
+        Gpspi3HsClkDivNumW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_mst_clk_div_num(&mut self) -> Gpspi3MstClkDivNumW<'_, PeriClkCtrl117Spec> {
+        Gpspi3MstClkDivNumW::new(self, 8)
+    }
+    #[doc = "Bit 16 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_mst_clk_en(&mut self) -> Gpspi3MstClkEnW<'_, PeriClkCtrl117Spec> {
+        Gpspi3MstClkEnW::new(self, 16)
+    }
+    #[doc = "Bits 17:18 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_rx_clk_src_sel(&mut self) -> ParlioRxClkSrcSelW<'_, PeriClkCtrl117Spec> {
+        ParlioRxClkSrcSelW::new(self, 17)
+    }
+    #[doc = "Bit 19 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_rx_clk_en(&mut self) -> ParlioRxClkEnW<'_, PeriClkCtrl117Spec> {
+        ParlioRxClkEnW::new(self, 19)
+    }
+    #[doc = "Bits 20:27 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_rx_clk_div_num(&mut self) -> ParlioRxClkDivNumW<'_, PeriClkCtrl117Spec> {
+        ParlioRxClkDivNumW::new(self, 20)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl117::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl117::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PeriClkCtrl117Spec;
+impl crate::RegisterSpec for PeriClkCtrl117Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri_clk_ctrl117::R`](R) reader structure"]
+impl crate::Readable for PeriClkCtrl117Spec {}
+#[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl117::W`](W) writer structure"]
+impl crate::Writable for PeriClkCtrl117Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI_CLK_CTRL117 to value 0x0001_0000"]
+impl crate::Resettable for PeriClkCtrl117Spec {
+    const RESET_VALUE: u32 = 0x0001_0000;
+}

@@ -1,0 +1,34 @@
+#[doc = "Register `VAD_OB0` reader"]
+pub type R = crate::R<VadOb0Spec>;
+#[doc = "Field `SPEECH_COUNT_OB` reader - Reg silent count observe"]
+pub type SpeechCountObR = crate::FieldReader;
+#[doc = "Field `SILENT_COUNT_OB` reader - Reg speech count observe"]
+pub type SilentCountObR = crate::FieldReader;
+#[doc = "Field `MAX_SIGNAL0_OB` reader - Reg max signal0 observe"]
+pub type MaxSignal0ObR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:7 - Reg silent count observe"]
+    #[inline(always)]
+    pub fn speech_count_ob(&self) -> SpeechCountObR {
+        SpeechCountObR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Reg speech count observe"]
+    #[inline(always)]
+    pub fn silent_count_ob(&self) -> SilentCountObR {
+        SilentCountObR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:31 - Reg max signal0 observe"]
+    #[inline(always)]
+    pub fn max_signal0_ob(&self) -> MaxSignal0ObR {
+        MaxSignal0ObR::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[doc = "I2S VAD Observe register\n\nYou can [`read`](crate::Reg::read) this register and get [`vad_ob0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VadOb0Spec;
+impl crate::RegisterSpec for VadOb0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vad_ob0::R`](R) reader structure"]
+impl crate::Readable for VadOb0Spec {}
+#[doc = "`reset()` method sets VAD_OB0 to value 0"]
+impl crate::Resettable for VadOb0Spec {}

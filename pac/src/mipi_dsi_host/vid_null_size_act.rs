@@ -1,0 +1,20 @@
+#[doc = "Register `VID_NULL_SIZE_ACT` reader"]
+pub type R = crate::R<VidNullSizeActSpec>;
+#[doc = "Field `VID_NULL_SIZE_ACT` reader - NA"]
+pub type VidNullSizeActR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:12 - NA"]
+    #[inline(always)]
+    pub fn vid_null_size_act(&self) -> VidNullSizeActR {
+        VidNullSizeActR::new((self.bits & 0x1fff) as u16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vid_null_size_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VidNullSizeActSpec;
+impl crate::RegisterSpec for VidNullSizeActSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vid_null_size_act::R`](R) reader structure"]
+impl crate::Readable for VidNullSizeActSpec {}
+#[doc = "`reset()` method sets VID_NULL_SIZE_ACT to value 0"]
+impl crate::Resettable for VidNullSizeActSpec {}

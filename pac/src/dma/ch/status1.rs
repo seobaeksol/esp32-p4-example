@@ -1,0 +1,20 @@
+#[doc = "Register `STATUS1` reader"]
+pub type R = crate::R<Status1Spec>;
+#[doc = "Field `CH1_DATA_LEFT_IN_FIFO` reader - NA"]
+pub type Ch1DataLeftInFifoR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:14 - NA"]
+    #[inline(always)]
+    pub fn ch1_data_left_in_fifo(&self) -> Ch1DataLeftInFifoR {
+        Ch1DataLeftInFifoR::new((self.bits & 0x7fff) as u16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`status1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Status1Spec;
+impl crate::RegisterSpec for Status1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status1::R`](R) reader structure"]
+impl crate::Readable for Status1Spec {}
+#[doc = "`reset()` method sets STATUS1 to value 0"]
+impl crate::Resettable for Status1Spec {}

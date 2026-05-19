@@ -1,0 +1,77 @@
+#[doc = "Register `LP_SLEEP_BIAS` reader"]
+pub type R = crate::R<LpSleepBiasSpec>;
+#[doc = "Register `LP_SLEEP_BIAS` writer"]
+pub type W = crate::W<LpSleepBiasSpec>;
+#[doc = "Field `LP_SLEEP_XPD_BIAS` reader - need_des"]
+pub type LpSleepXpdBiasR = crate::BitReader;
+#[doc = "Field `LP_SLEEP_XPD_BIAS` writer - need_des"]
+pub type LpSleepXpdBiasW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_SLEEP_DBG_ATTEN` reader - need_des"]
+pub type LpSleepDbgAttenR = crate::FieldReader;
+#[doc = "Field `LP_SLEEP_DBG_ATTEN` writer - need_des"]
+pub type LpSleepDbgAttenW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `LP_SLEEP_PD_CUR` reader - need_des"]
+pub type LpSleepPdCurR = crate::BitReader;
+#[doc = "Field `LP_SLEEP_PD_CUR` writer - need_des"]
+pub type LpSleepPdCurW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLEEP` reader - need_des"]
+pub type SleepR = crate::BitReader;
+#[doc = "Field `SLEEP` writer - need_des"]
+pub type SleepW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 25 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_xpd_bias(&self) -> LpSleepXpdBiasR {
+        LpSleepXpdBiasR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bits 26:29 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_dbg_atten(&self) -> LpSleepDbgAttenR {
+        LpSleepDbgAttenR::new(((self.bits >> 26) & 0x0f) as u8)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_pd_cur(&self) -> LpSleepPdCurR {
+        LpSleepPdCurR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn sleep(&self) -> SleepR {
+        SleepR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 25 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_xpd_bias(&mut self) -> LpSleepXpdBiasW<'_, LpSleepBiasSpec> {
+        LpSleepXpdBiasW::new(self, 25)
+    }
+    #[doc = "Bits 26:29 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_dbg_atten(&mut self) -> LpSleepDbgAttenW<'_, LpSleepBiasSpec> {
+        LpSleepDbgAttenW::new(self, 26)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_sleep_pd_cur(&mut self) -> LpSleepPdCurW<'_, LpSleepBiasSpec> {
+        LpSleepPdCurW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn sleep(&mut self) -> SleepW<'_, LpSleepBiasSpec> {
+        SleepW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_sleep_bias::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_sleep_bias::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpSleepBiasSpec;
+impl crate::RegisterSpec for LpSleepBiasSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_sleep_bias::R`](R) reader structure"]
+impl crate::Readable for LpSleepBiasSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_sleep_bias::W`](W) writer structure"]
+impl crate::Writable for LpSleepBiasSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_SLEEP_BIAS to value 0"]
+impl crate::Resettable for LpSleepBiasSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `RD_KEY3_DATA%s` reader"]
+pub type R = crate::R<RdKey3DataSpec>;
+#[doc = "Field `KEY3_DATA` reader - Represents the zeroth 32-bit of key3."]
+pub type Key3DataR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Represents the zeroth 32-bit of key3."]
+    #[inline(always)]
+    pub fn key3_data(&self) -> Key3DataR {
+        Key3DataR::new(self.bits)
+    }
+}
+#[doc = "Represents rd_key3_data%s\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_key3_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdKey3DataSpec;
+impl crate::RegisterSpec for RdKey3DataSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rd_key3_data::R`](R) reader structure"]
+impl crate::Readable for RdKey3DataSpec {}
+#[doc = "`reset()` method sets RD_KEY3_DATA%s to value 0"]
+impl crate::Resettable for RdKey3DataSpec {}

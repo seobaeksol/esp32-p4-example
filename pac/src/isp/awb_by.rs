@@ -1,0 +1,49 @@
+#[doc = "Register `AWB_BY` reader"]
+pub type R = crate::R<AwbBySpec>;
+#[doc = "Register `AWB_BY` writer"]
+pub type W = crate::W<AwbBySpec>;
+#[doc = "Field `AWB_Y_BSIZE` reader - Configures every block y size"]
+pub type AwbYBsizeR = crate::FieldReader<u16>;
+#[doc = "Field `AWB_Y_BSIZE` writer - Configures every block y size"]
+pub type AwbYBsizeW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `AWB_Y_START` reader - Configures first block start y address"]
+pub type AwbYStartR = crate::FieldReader<u16>;
+#[doc = "Field `AWB_Y_START` writer - Configures first block start y address"]
+pub type AwbYStartW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+impl R {
+    #[doc = "Bits 0:11 - Configures every block y size"]
+    #[inline(always)]
+    pub fn awb_y_bsize(&self) -> AwbYBsizeR {
+        AwbYBsizeR::new((self.bits & 0x0fff) as u16)
+    }
+    #[doc = "Bits 12:23 - Configures first block start y address"]
+    #[inline(always)]
+    pub fn awb_y_start(&self) -> AwbYStartR {
+        AwbYStartR::new(((self.bits >> 12) & 0x0fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:11 - Configures every block y size"]
+    #[inline(always)]
+    pub fn awb_y_bsize(&mut self) -> AwbYBsizeW<'_, AwbBySpec> {
+        AwbYBsizeW::new(self, 0)
+    }
+    #[doc = "Bits 12:23 - Configures first block start y address"]
+    #[inline(always)]
+    pub fn awb_y_start(&mut self) -> AwbYStartW<'_, AwbBySpec> {
+        AwbYStartW::new(self, 12)
+    }
+}
+#[doc = "awb window register in y-direction\n\nYou can [`read`](crate::Reg::read) this register and get [`awb_by::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`awb_by::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AwbBySpec;
+impl crate::RegisterSpec for AwbBySpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`awb_by::R`](R) reader structure"]
+impl crate::Readable for AwbBySpec {}
+#[doc = "`write(|w| ..)` method takes [`awb_by::W`](W) writer structure"]
+impl crate::Writable for AwbBySpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AWB_BY to value 0"]
+impl crate::Resettable for AwbBySpec {}

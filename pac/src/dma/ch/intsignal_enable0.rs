@@ -1,0 +1,436 @@
+#[doc = "Register `INTSIGNAL_ENABLE0` reader"]
+pub type R = crate::R<IntsignalEnable0Spec>;
+#[doc = "Register `INTSIGNAL_ENABLE0` writer"]
+pub type W = crate::W<IntsignalEnable0Spec>;
+#[doc = "Field `CH1_ENABLE_BLOCK_TFR_DONE_INTSIGNAL` reader - NA"]
+pub type Ch1EnableBlockTfrDoneIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_BLOCK_TFR_DONE_INTSIGNAL` writer - NA"]
+pub type Ch1EnableBlockTfrDoneIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_DMA_TFR_DONE_INTSIGNAL` reader - NA"]
+pub type Ch1EnableDmaTfrDoneIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_DMA_TFR_DONE_INTSIGNAL` writer - NA"]
+pub type Ch1EnableDmaTfrDoneIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SRC_TRANSCOMP_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSrcTranscompIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SRC_TRANSCOMP_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSrcTranscompIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_DST_TRANSCOMP_INTSIGNAL` reader - NA"]
+pub type Ch1EnableDstTranscompIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_DST_TRANSCOMP_INTSIGNAL` writer - NA"]
+pub type Ch1EnableDstTranscompIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SRC_DEC_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSrcDecErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SRC_DEC_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSrcDecErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_DST_DEC_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableDstDecErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_DST_DEC_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableDstDecErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SRC_SLV_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSrcSlvErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SRC_SLV_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSrcSlvErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_DST_SLV_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableDstSlvErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_DST_SLV_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableDstSlvErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_LLI_RD_DEC_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableLliRdDecErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_LLI_RD_DEC_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableLliRdDecErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_LLI_WR_DEC_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableLliWrDecErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_LLI_WR_DEC_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableLliWrDecErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_LLI_RD_SLV_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableLliRdSlvErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_LLI_RD_SLV_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableLliRdSlvErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_LLI_WR_SLV_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableLliWrSlvErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_LLI_WR_SLV_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableLliWrSlvErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SHADOWREG_OR_LLI_INVALID_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableShadowregOrLliInvalidErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SHADOWREG_OR_LLI_INVALID_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableShadowregOrLliInvalidErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_MULTIBLKTYPE_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifMultiblktypeErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_MULTIBLKTYPE_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifMultiblktypeErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_DEC_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifDecErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_DEC_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifDecErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_WR2RO_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifWr2roErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_WR2RO_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifWr2roErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_RD2RWO_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifRd2rwoErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_RD2RWO_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifRd2rwoErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_WRONCHEN_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifWronchenErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_WRONCHEN_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifWronchenErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_SHADOWREG_WRON_VALID_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifShadowregWronValidErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_SHADOWREG_WRON_VALID_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifShadowregWronValidErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_WRONHOLD_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifWronholdErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_SLVIF_WRONHOLD_ERR_INTSIGNAL` writer - NA"]
+pub type Ch1EnableSlvifWronholdErrIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_SLVIF_WRPARITY_ERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableSlvifWrparityErrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_CH_LOCK_CLEARED_INTSIGNAL` reader - NA"]
+pub type Ch1EnableChLockClearedIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_CH_LOCK_CLEARED_INTSIGNAL` writer - NA"]
+pub type Ch1EnableChLockClearedIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_CH_SRC_SUSPENDED_INTSIGNAL` reader - NA"]
+pub type Ch1EnableChSrcSuspendedIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_CH_SRC_SUSPENDED_INTSIGNAL` writer - NA"]
+pub type Ch1EnableChSrcSuspendedIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_CH_SUSPENDED_INTSIGNAL` reader - NA"]
+pub type Ch1EnableChSuspendedIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_CH_SUSPENDED_INTSIGNAL` writer - NA"]
+pub type Ch1EnableChSuspendedIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_CH_DISABLED_INTSIGNAL` reader - NA"]
+pub type Ch1EnableChDisabledIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_CH_DISABLED_INTSIGNAL` writer - NA"]
+pub type Ch1EnableChDisabledIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ENABLE_CH_ABORTED_INTSIGNAL` reader - NA"]
+pub type Ch1EnableChAbortedIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_CH_ABORTED_INTSIGNAL` writer - NA"]
+pub type Ch1EnableChAbortedIntsignalW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_block_tfr_done_intsignal(&self) -> Ch1EnableBlockTfrDoneIntsignalR {
+        Ch1EnableBlockTfrDoneIntsignalR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dma_tfr_done_intsignal(&self) -> Ch1EnableDmaTfrDoneIntsignalR {
+        Ch1EnableDmaTfrDoneIntsignalR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_src_transcomp_intsignal(&self) -> Ch1EnableSrcTranscompIntsignalR {
+        Ch1EnableSrcTranscompIntsignalR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dst_transcomp_intsignal(&self) -> Ch1EnableDstTranscompIntsignalR {
+        Ch1EnableDstTranscompIntsignalR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_src_dec_err_intsignal(&self) -> Ch1EnableSrcDecErrIntsignalR {
+        Ch1EnableSrcDecErrIntsignalR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dst_dec_err_intsignal(&self) -> Ch1EnableDstDecErrIntsignalR {
+        Ch1EnableDstDecErrIntsignalR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_src_slv_err_intsignal(&self) -> Ch1EnableSrcSlvErrIntsignalR {
+        Ch1EnableSrcSlvErrIntsignalR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dst_slv_err_intsignal(&self) -> Ch1EnableDstSlvErrIntsignalR {
+        Ch1EnableDstSlvErrIntsignalR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_rd_dec_err_intsignal(&self) -> Ch1EnableLliRdDecErrIntsignalR {
+        Ch1EnableLliRdDecErrIntsignalR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_wr_dec_err_intsignal(&self) -> Ch1EnableLliWrDecErrIntsignalR {
+        Ch1EnableLliWrDecErrIntsignalR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_rd_slv_err_intsignal(&self) -> Ch1EnableLliRdSlvErrIntsignalR {
+        Ch1EnableLliRdSlvErrIntsignalR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_wr_slv_err_intsignal(&self) -> Ch1EnableLliWrSlvErrIntsignalR {
+        Ch1EnableLliWrSlvErrIntsignalR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_shadowreg_or_lli_invalid_err_intsignal(
+        &self,
+    ) -> Ch1EnableShadowregOrLliInvalidErrIntsignalR {
+        Ch1EnableShadowregOrLliInvalidErrIntsignalR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_multiblktype_err_intsignal(
+        &self,
+    ) -> Ch1EnableSlvifMultiblktypeErrIntsignalR {
+        Ch1EnableSlvifMultiblktypeErrIntsignalR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_dec_err_intsignal(&self) -> Ch1EnableSlvifDecErrIntsignalR {
+        Ch1EnableSlvifDecErrIntsignalR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wr2ro_err_intsignal(&self) -> Ch1EnableSlvifWr2roErrIntsignalR {
+        Ch1EnableSlvifWr2roErrIntsignalR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_rd2rwo_err_intsignal(&self) -> Ch1EnableSlvifRd2rwoErrIntsignalR {
+        Ch1EnableSlvifRd2rwoErrIntsignalR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wronchen_err_intsignal(&self) -> Ch1EnableSlvifWronchenErrIntsignalR {
+        Ch1EnableSlvifWronchenErrIntsignalR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_shadowreg_wron_valid_err_intsignal(
+        &self,
+    ) -> Ch1EnableSlvifShadowregWronValidErrIntsignalR {
+        Ch1EnableSlvifShadowregWronValidErrIntsignalR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wronhold_err_intsignal(&self) -> Ch1EnableSlvifWronholdErrIntsignalR {
+        Ch1EnableSlvifWronholdErrIntsignalR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 25 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wrparity_err_intsignal(&self) -> Ch1EnableSlvifWrparityErrIntsignalR {
+        Ch1EnableSlvifWrparityErrIntsignalR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 27 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_lock_cleared_intsignal(&self) -> Ch1EnableChLockClearedIntsignalR {
+        Ch1EnableChLockClearedIntsignalR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_src_suspended_intsignal(&self) -> Ch1EnableChSrcSuspendedIntsignalR {
+        Ch1EnableChSrcSuspendedIntsignalR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_suspended_intsignal(&self) -> Ch1EnableChSuspendedIntsignalR {
+        Ch1EnableChSuspendedIntsignalR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_disabled_intsignal(&self) -> Ch1EnableChDisabledIntsignalR {
+        Ch1EnableChDisabledIntsignalR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_aborted_intsignal(&self) -> Ch1EnableChAbortedIntsignalR {
+        Ch1EnableChAbortedIntsignalR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_block_tfr_done_intsignal(
+        &mut self,
+    ) -> Ch1EnableBlockTfrDoneIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableBlockTfrDoneIntsignalW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dma_tfr_done_intsignal(
+        &mut self,
+    ) -> Ch1EnableDmaTfrDoneIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableDmaTfrDoneIntsignalW::new(self, 1)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_src_transcomp_intsignal(
+        &mut self,
+    ) -> Ch1EnableSrcTranscompIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSrcTranscompIntsignalW::new(self, 3)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dst_transcomp_intsignal(
+        &mut self,
+    ) -> Ch1EnableDstTranscompIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableDstTranscompIntsignalW::new(self, 4)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_src_dec_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSrcDecErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSrcDecErrIntsignalW::new(self, 5)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dst_dec_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableDstDecErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableDstDecErrIntsignalW::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_src_slv_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSrcSlvErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSrcSlvErrIntsignalW::new(self, 7)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_dst_slv_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableDstSlvErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableDstSlvErrIntsignalW::new(self, 8)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_rd_dec_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableLliRdDecErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableLliRdDecErrIntsignalW::new(self, 9)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_wr_dec_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableLliWrDecErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableLliWrDecErrIntsignalW::new(self, 10)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_rd_slv_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableLliRdSlvErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableLliRdSlvErrIntsignalW::new(self, 11)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_lli_wr_slv_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableLliWrSlvErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableLliWrSlvErrIntsignalW::new(self, 12)
+    }
+    #[doc = "Bit 13 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_shadowreg_or_lli_invalid_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableShadowregOrLliInvalidErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableShadowregOrLliInvalidErrIntsignalW::new(self, 13)
+    }
+    #[doc = "Bit 14 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_multiblktype_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifMultiblktypeErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifMultiblktypeErrIntsignalW::new(self, 14)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_dec_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifDecErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifDecErrIntsignalW::new(self, 16)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wr2ro_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifWr2roErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifWr2roErrIntsignalW::new(self, 17)
+    }
+    #[doc = "Bit 18 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_rd2rwo_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifRd2rwoErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifRd2rwoErrIntsignalW::new(self, 18)
+    }
+    #[doc = "Bit 19 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wronchen_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifWronchenErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifWronchenErrIntsignalW::new(self, 19)
+    }
+    #[doc = "Bit 20 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_shadowreg_wron_valid_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifShadowregWronValidErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifShadowregWronValidErrIntsignalW::new(self, 20)
+    }
+    #[doc = "Bit 21 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_slvif_wronhold_err_intsignal(
+        &mut self,
+    ) -> Ch1EnableSlvifWronholdErrIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableSlvifWronholdErrIntsignalW::new(self, 21)
+    }
+    #[doc = "Bit 27 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_lock_cleared_intsignal(
+        &mut self,
+    ) -> Ch1EnableChLockClearedIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableChLockClearedIntsignalW::new(self, 27)
+    }
+    #[doc = "Bit 28 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_src_suspended_intsignal(
+        &mut self,
+    ) -> Ch1EnableChSrcSuspendedIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableChSrcSuspendedIntsignalW::new(self, 28)
+    }
+    #[doc = "Bit 29 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_suspended_intsignal(
+        &mut self,
+    ) -> Ch1EnableChSuspendedIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableChSuspendedIntsignalW::new(self, 29)
+    }
+    #[doc = "Bit 30 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_disabled_intsignal(
+        &mut self,
+    ) -> Ch1EnableChDisabledIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableChDisabledIntsignalW::new(self, 30)
+    }
+    #[doc = "Bit 31 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ch_aborted_intsignal(
+        &mut self,
+    ) -> Ch1EnableChAbortedIntsignalW<'_, IntsignalEnable0Spec> {
+        Ch1EnableChAbortedIntsignalW::new(self, 31)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intsignal_enable0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intsignal_enable0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntsignalEnable0Spec;
+impl crate::RegisterSpec for IntsignalEnable0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`intsignal_enable0::R`](R) reader structure"]
+impl crate::Readable for IntsignalEnable0Spec {}
+#[doc = "`write(|w| ..)` method takes [`intsignal_enable0::W`](W) writer structure"]
+impl crate::Writable for IntsignalEnable0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INTSIGNAL_ENABLE0 to value 0xfa3f_7ffb"]
+impl crate::Resettable for IntsignalEnable0Spec {
+    const RESET_VALUE: u32 = 0xfa3f_7ffb;
+}

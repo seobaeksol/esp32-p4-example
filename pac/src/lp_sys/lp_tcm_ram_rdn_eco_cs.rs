@@ -1,0 +1,42 @@
+#[doc = "Register `LP_TCM_RAM_RDN_ECO_CS` reader"]
+pub type R = crate::R<LpTcmRamRdnEcoCsSpec>;
+#[doc = "Register `LP_TCM_RAM_RDN_ECO_CS` writer"]
+pub type W = crate::W<LpTcmRamRdnEcoCsSpec>;
+#[doc = "Field `LP_TCM_RAM_RDN_ECO_EN` reader - need_des"]
+pub type LpTcmRamRdnEcoEnR = crate::BitReader;
+#[doc = "Field `LP_TCM_RAM_RDN_ECO_EN` writer - need_des"]
+pub type LpTcmRamRdnEcoEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_TCM_RAM_RDN_ECO_RESULT` reader - need_des"]
+pub type LpTcmRamRdnEcoResultR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn lp_tcm_ram_rdn_eco_en(&self) -> LpTcmRamRdnEcoEnR {
+        LpTcmRamRdnEcoEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn lp_tcm_ram_rdn_eco_result(&self) -> LpTcmRamRdnEcoResultR {
+        LpTcmRamRdnEcoResultR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn lp_tcm_ram_rdn_eco_en(&mut self) -> LpTcmRamRdnEcoEnW<'_, LpTcmRamRdnEcoCsSpec> {
+        LpTcmRamRdnEcoEnW::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_tcm_ram_rdn_eco_cs::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_tcm_ram_rdn_eco_cs::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpTcmRamRdnEcoCsSpec;
+impl crate::RegisterSpec for LpTcmRamRdnEcoCsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_tcm_ram_rdn_eco_cs::R`](R) reader structure"]
+impl crate::Readable for LpTcmRamRdnEcoCsSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_tcm_ram_rdn_eco_cs::W`](W) writer structure"]
+impl crate::Writable for LpTcmRamRdnEcoCsSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_TCM_RAM_RDN_ECO_CS to value 0"]
+impl crate::Resettable for LpTcmRamRdnEcoCsSpec {}

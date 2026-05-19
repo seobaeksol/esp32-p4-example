@@ -1,0 +1,20 @@
+#[doc = "Register `IDBUS_ADDRHOLE_ADDR` reader"]
+pub type R = crate::R<IdbusAddrholeAddrSpec>;
+#[doc = "Field `IDBUS_ADDRHOLE_ADDR` reader - need_des"]
+pub type IdbusAddrholeAddrR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn idbus_addrhole_addr(&self) -> IdbusAddrholeAddrR {
+        IdbusAddrholeAddrR::new(self.bits)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`idbus_addrhole_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IdbusAddrholeAddrSpec;
+impl crate::RegisterSpec for IdbusAddrholeAddrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`idbus_addrhole_addr::R`](R) reader structure"]
+impl crate::Readable for IdbusAddrholeAddrSpec {}
+#[doc = "`reset()` method sets IDBUS_ADDRHOLE_ADDR to value 0"]
+impl crate::Resettable for IdbusAddrholeAddrSpec {}

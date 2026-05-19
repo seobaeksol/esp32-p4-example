@@ -1,0 +1,35 @@
+#[doc = "Register `XTS_PLAIN_BASE` reader"]
+pub type R = crate::R<XtsPlainBaseSpec>;
+#[doc = "Register `XTS_PLAIN_BASE` writer"]
+pub type W = crate::W<XtsPlainBaseSpec>;
+#[doc = "Field `SPI_XTS_PLAIN` reader - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
+pub type SpiXtsPlainR = crate::FieldReader<u32>;
+#[doc = "Field `SPI_XTS_PLAIN` writer - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
+pub type SpiXtsPlainW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
+    #[inline(always)]
+    pub fn spi_xts_plain(&self) -> SpiXtsPlainR {
+        SpiXtsPlainR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
+    #[inline(always)]
+    pub fn spi_xts_plain(&mut self) -> SpiXtsPlainW<'_, XtsPlainBaseSpec> {
+        SpiXtsPlainW::new(self, 0)
+    }
+}
+#[doc = "The base address of the memory that stores plaintext in Manual Encryption\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_plain_base::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_plain_base::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct XtsPlainBaseSpec;
+impl crate::RegisterSpec for XtsPlainBaseSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`xts_plain_base::R`](R) reader structure"]
+impl crate::Readable for XtsPlainBaseSpec {}
+#[doc = "`write(|w| ..)` method takes [`xts_plain_base::W`](W) writer structure"]
+impl crate::Writable for XtsPlainBaseSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets XTS_PLAIN_BASE to value 0"]
+impl crate::Resettable for XtsPlainBaseSpec {}

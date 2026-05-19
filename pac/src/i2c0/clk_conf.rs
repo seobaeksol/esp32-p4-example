@@ -1,0 +1,93 @@
+#[doc = "Register `CLK_CONF` reader"]
+pub type R = crate::R<ClkConfSpec>;
+#[doc = "Register `CLK_CONF` writer"]
+pub type W = crate::W<ClkConfSpec>;
+#[doc = "Field `SCLK_DIV_NUM` reader - the integral part of the fractional divisor for i2c module"]
+pub type SclkDivNumR = crate::FieldReader;
+#[doc = "Field `SCLK_DIV_NUM` writer - the integral part of the fractional divisor for i2c module"]
+pub type SclkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor for i2c module"]
+pub type SclkDivAR = crate::FieldReader;
+#[doc = "Field `SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor for i2c module"]
+pub type SclkDivAW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor for i2c module"]
+pub type SclkDivBR = crate::FieldReader;
+#[doc = "Field `SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor for i2c module"]
+pub type SclkDivBW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SCLK_SEL` reader - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
+pub type SclkSelR = crate::BitReader;
+#[doc = "Field `SCLK_SEL` writer - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
+pub type SclkSelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SCLK_ACTIVE` reader - The clock switch for i2c module"]
+pub type SclkActiveR = crate::BitReader;
+#[doc = "Field `SCLK_ACTIVE` writer - The clock switch for i2c module"]
+pub type SclkActiveW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
+    #[inline(always)]
+    pub fn sclk_div_num(&self) -> SclkDivNumR {
+        SclkDivNumR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:13 - the numerator of the fractional part of the fractional divisor for i2c module"]
+    #[inline(always)]
+    pub fn sclk_div_a(&self) -> SclkDivAR {
+        SclkDivAR::new(((self.bits >> 8) & 0x3f) as u8)
+    }
+    #[doc = "Bits 14:19 - the denominator of the fractional part of the fractional divisor for i2c module"]
+    #[inline(always)]
+    pub fn sclk_div_b(&self) -> SclkDivBR {
+        SclkDivBR::new(((self.bits >> 14) & 0x3f) as u8)
+    }
+    #[doc = "Bit 20 - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
+    #[inline(always)]
+    pub fn sclk_sel(&self) -> SclkSelR {
+        SclkSelR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - The clock switch for i2c module"]
+    #[inline(always)]
+    pub fn sclk_active(&self) -> SclkActiveR {
+        SclkActiveR::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
+    #[inline(always)]
+    pub fn sclk_div_num(&mut self) -> SclkDivNumW<'_, ClkConfSpec> {
+        SclkDivNumW::new(self, 0)
+    }
+    #[doc = "Bits 8:13 - the numerator of the fractional part of the fractional divisor for i2c module"]
+    #[inline(always)]
+    pub fn sclk_div_a(&mut self) -> SclkDivAW<'_, ClkConfSpec> {
+        SclkDivAW::new(self, 8)
+    }
+    #[doc = "Bits 14:19 - the denominator of the fractional part of the fractional divisor for i2c module"]
+    #[inline(always)]
+    pub fn sclk_div_b(&mut self) -> SclkDivBW<'_, ClkConfSpec> {
+        SclkDivBW::new(self, 14)
+    }
+    #[doc = "Bit 20 - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
+    #[inline(always)]
+    pub fn sclk_sel(&mut self) -> SclkSelW<'_, ClkConfSpec> {
+        SclkSelW::new(self, 20)
+    }
+    #[doc = "Bit 21 - The clock switch for i2c module"]
+    #[inline(always)]
+    pub fn sclk_active(&mut self) -> SclkActiveW<'_, ClkConfSpec> {
+        SclkActiveW::new(self, 21)
+    }
+}
+#[doc = "I2C CLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClkConfSpec;
+impl crate::RegisterSpec for ClkConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clk_conf::R`](R) reader structure"]
+impl crate::Readable for ClkConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`clk_conf::W`](W) writer structure"]
+impl crate::Writable for ClkConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CLK_CONF to value 0x0020_0000"]
+impl crate::Resettable for ClkConfSpec {
+    const RESET_VALUE: u32 = 0x0020_0000;
+}

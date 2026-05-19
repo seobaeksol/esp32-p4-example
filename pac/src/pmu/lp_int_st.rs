@@ -1,0 +1,146 @@
+#[doc = "Register `LP_INT_ST` reader"]
+pub type R = crate::R<LpIntStSpec>;
+#[doc = "Field `LP_CPU_SLEEP_REJECT` reader - need_des"]
+pub type LpCpuSleepRejectR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET0_REACH_0_LP` reader - reg_0p1a_0_counter after xpd reach target0"]
+pub type _0p1aCntTarget0Reach0LpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET1_REACH_0_LP` reader - reg_0p1a_1_counter after xpd reach target1"]
+pub type _0p1aCntTarget1Reach0LpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET0_REACH_1_LP` reader - reg_0p1a_0 counter after xpd reach target0"]
+pub type _0p1aCntTarget0Reach1LpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET1_REACH_1_LP` reader - reg_0p1a_1_counter after xpd reach target1"]
+pub type _0p1aCntTarget1Reach1LpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET0_REACH_0_LP` reader - reg_0p2a_0 counter after xpd reach target0"]
+pub type _0p2aCntTarget0Reach0LpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET1_REACH_0_LP` reader - reg_0p2a_1_counter after xpd reach target1"]
+pub type _0p2aCntTarget1Reach0LpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET0_REACH_1_LP` reader - reg_0p2a_0 counter after xpd reach target0"]
+pub type _0p2aCntTarget0Reach1LpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET1_REACH_1_LP` reader - reg_0p2a_1_counter after xpd reach target1"]
+pub type _0p2aCntTarget1Reach1LpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET0_REACH_0_LP` reader - reg_0p3a_0 counter after xpd reach target0"]
+pub type _0p3aCntTarget0Reach0LpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET1_REACH_0_LP` reader - reg_0p3a_1_counter after xpd reach target1"]
+pub type _0p3aCntTarget1Reach0LpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET0_REACH_1_LP` reader - reg_0p3a_0_counter after xpd reach target0"]
+pub type _0p3aCntTarget0Reach1LpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET1_REACH_1_LP` reader - reg_0p3a_1_counter after xpd reach target1"]
+pub type _0p3aCntTarget1Reach1LpR = crate::BitReader;
+#[doc = "Field `LP_CPU_WAKEUP` reader - need_des"]
+pub type LpCpuWakeupR = crate::BitReader;
+#[doc = "Field `SLEEP_SWITCH_ACTIVE_END` reader - need_des"]
+pub type SleepSwitchActiveEndR = crate::BitReader;
+#[doc = "Field `ACTIVE_SWITCH_SLEEP_END` reader - need_des"]
+pub type ActiveSwitchSleepEndR = crate::BitReader;
+#[doc = "Field `SLEEP_SWITCH_ACTIVE_START` reader - need_des"]
+pub type SleepSwitchActiveStartR = crate::BitReader;
+#[doc = "Field `ACTIVE_SWITCH_SLEEP_START` reader - need_des"]
+pub type ActiveSwitchSleepStartR = crate::BitReader;
+#[doc = "Field `HP_SW_TRIGGER` reader - need_des"]
+pub type HpSwTriggerR = crate::BitReader;
+impl R {
+    #[doc = "Bit 13 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_sleep_reject(&self) -> LpCpuSleepRejectR {
+        LpCpuSleepRejectR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - reg_0p1a_0_counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target0_reach_0_lp(&self) -> _0p1aCntTarget0Reach0LpR {
+        _0p1aCntTarget0Reach0LpR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - reg_0p1a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target1_reach_0_lp(&self) -> _0p1aCntTarget1Reach0LpR {
+        _0p1aCntTarget1Reach0LpR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - reg_0p1a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target0_reach_1_lp(&self) -> _0p1aCntTarget0Reach1LpR {
+        _0p1aCntTarget0Reach1LpR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - reg_0p1a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target1_reach_1_lp(&self) -> _0p1aCntTarget1Reach1LpR {
+        _0p1aCntTarget1Reach1LpR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - reg_0p2a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target0_reach_0_lp(&self) -> _0p2aCntTarget0Reach0LpR {
+        _0p2aCntTarget0Reach0LpR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - reg_0p2a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target1_reach_0_lp(&self) -> _0p2aCntTarget1Reach0LpR {
+        _0p2aCntTarget1Reach0LpR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - reg_0p2a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target0_reach_1_lp(&self) -> _0p2aCntTarget0Reach1LpR {
+        _0p2aCntTarget0Reach1LpR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - reg_0p2a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target1_reach_1_lp(&self) -> _0p2aCntTarget1Reach1LpR {
+        _0p2aCntTarget1Reach1LpR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - reg_0p3a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target0_reach_0_lp(&self) -> _0p3aCntTarget0Reach0LpR {
+        _0p3aCntTarget0Reach0LpR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - reg_0p3a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target1_reach_0_lp(&self) -> _0p3aCntTarget1Reach0LpR {
+        _0p3aCntTarget1Reach0LpR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - reg_0p3a_0_counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target0_reach_1_lp(&self) -> _0p3aCntTarget0Reach1LpR {
+        _0p3aCntTarget0Reach1LpR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - reg_0p3a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target1_reach_1_lp(&self) -> _0p3aCntTarget1Reach1LpR {
+        _0p3aCntTarget1Reach1LpR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_wakeup(&self) -> LpCpuWakeupR {
+        LpCpuWakeupR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn sleep_switch_active_end(&self) -> SleepSwitchActiveEndR {
+        SleepSwitchActiveEndR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn active_switch_sleep_end(&self) -> ActiveSwitchSleepEndR {
+        ActiveSwitchSleepEndR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn sleep_switch_active_start(&self) -> SleepSwitchActiveStartR {
+        SleepSwitchActiveStartR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn active_switch_sleep_start(&self) -> ActiveSwitchSleepStartR {
+        ActiveSwitchSleepStartR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn hp_sw_trigger(&self) -> HpSwTriggerR {
+        HpSwTriggerR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpIntStSpec;
+impl crate::RegisterSpec for LpIntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_int_st::R`](R) reader structure"]
+impl crate::Readable for LpIntStSpec {}
+#[doc = "`reset()` method sets LP_INT_ST to value 0"]
+impl crate::Resettable for LpIntStSpec {}

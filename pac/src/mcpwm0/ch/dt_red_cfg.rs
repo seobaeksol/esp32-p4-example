@@ -1,0 +1,35 @@
+#[doc = "Register `DT_RED_CFG` reader"]
+pub type R = crate::R<DtRedCfgSpec>;
+#[doc = "Register `DT_RED_CFG` writer"]
+pub type W = crate::W<DtRedCfgSpec>;
+#[doc = "Field `RED` reader - Configures shadow register for RED."]
+pub type RedR = crate::FieldReader<u16>;
+#[doc = "Field `RED` writer - Configures shadow register for RED."]
+pub type RedW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - Configures shadow register for RED."]
+    #[inline(always)]
+    pub fn red(&self) -> RedR {
+        RedR::new((self.bits & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Configures shadow register for RED."]
+    #[inline(always)]
+    pub fn red(&mut self) -> RedW<'_, DtRedCfgSpec> {
+        RedW::new(self, 0)
+    }
+}
+#[doc = "Rising edge delay (RED) shadow register\n\nYou can [`read`](crate::Reg::read) this register and get [`dt_red_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dt_red_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DtRedCfgSpec;
+impl crate::RegisterSpec for DtRedCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dt_red_cfg::R`](R) reader structure"]
+impl crate::Readable for DtRedCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`dt_red_cfg::W`](W) writer structure"]
+impl crate::Writable for DtRedCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DT_RED_CFG to value 0"]
+impl crate::Resettable for DtRedCfgSpec {}

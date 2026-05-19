@@ -1,0 +1,49 @@
+#[doc = "Register `DPI_COLOR_CODING` reader"]
+pub type R = crate::R<DpiColorCodingSpec>;
+#[doc = "Register `DPI_COLOR_CODING` writer"]
+pub type W = crate::W<DpiColorCodingSpec>;
+#[doc = "Field `DPI_COLOR_CODING` reader - NA"]
+pub type DpiColorCodingR = crate::FieldReader;
+#[doc = "Field `DPI_COLOR_CODING` writer - NA"]
+pub type DpiColorCodingW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `LOOSELY18_EN` reader - NA"]
+pub type Loosely18EnR = crate::BitReader;
+#[doc = "Field `LOOSELY18_EN` writer - NA"]
+pub type Loosely18EnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:3 - NA"]
+    #[inline(always)]
+    pub fn dpi_color_coding(&self) -> DpiColorCodingR {
+        DpiColorCodingR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn loosely18_en(&self) -> Loosely18EnR {
+        Loosely18EnR::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - NA"]
+    #[inline(always)]
+    pub fn dpi_color_coding(&mut self) -> DpiColorCodingW<'_, DpiColorCodingSpec> {
+        DpiColorCodingW::new(self, 0)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn loosely18_en(&mut self) -> Loosely18EnW<'_, DpiColorCodingSpec> {
+        Loosely18EnW::new(self, 8)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_color_coding::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpi_color_coding::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DpiColorCodingSpec;
+impl crate::RegisterSpec for DpiColorCodingSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dpi_color_coding::R`](R) reader structure"]
+impl crate::Readable for DpiColorCodingSpec {}
+#[doc = "`write(|w| ..)` method takes [`dpi_color_coding::W`](W) writer structure"]
+impl crate::Writable for DpiColorCodingSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DPI_COLOR_CODING to value 0"]
+impl crate::Resettable for DpiColorCodingSpec {}

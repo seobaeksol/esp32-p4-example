@@ -1,0 +1,112 @@
+#[doc = "Register `RESET_CTRL` reader"]
+pub type R = crate::R<ResetCtrlSpec>;
+#[doc = "Register `RESET_CTRL` writer"]
+pub type W = crate::W<ResetCtrlSpec>;
+#[doc = "Field `REG_CORE_SOFT_RST` writer - NA"]
+pub type RegCoreSoftRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_CMD_BUF_RST` reader - NA"]
+pub type RegCmdBufRstR = crate::BitReader;
+#[doc = "Field `REG_CMD_BUF_RST` writer - NA"]
+pub type RegCmdBufRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_RESP_BUF_RST` reader - NA"]
+pub type RegRespBufRstR = crate::BitReader;
+#[doc = "Field `REG_RESP_BUF_RST` writer - NA"]
+pub type RegRespBufRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_TX_DATA_BUF_BUF_RST` reader - NA"]
+pub type RegTxDataBufBufRstR = crate::BitReader;
+#[doc = "Field `REG_TX_DATA_BUF_BUF_RST` writer - NA"]
+pub type RegTxDataBufBufRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_RX_DATA_BUF_RST` reader - NA"]
+pub type RegRxDataBufRstR = crate::BitReader;
+#[doc = "Field `REG_RX_DATA_BUF_RST` writer - NA"]
+pub type RegRxDataBufRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_IBI_DATA_BUF_RST` reader - NA"]
+pub type RegIbiDataBufRstR = crate::BitReader;
+#[doc = "Field `REG_IBI_DATA_BUF_RST` writer - NA"]
+pub type RegIbiDataBufRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `REG_IBI_STATUS_BUF_RST` reader - NA"]
+pub type RegIbiStatusBufRstR = crate::BitReader;
+#[doc = "Field `REG_IBI_STATUS_BUF_RST` writer - NA"]
+pub type RegIbiStatusBufRstW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn reg_cmd_buf_rst(&self) -> RegCmdBufRstR {
+        RegCmdBufRstR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn reg_resp_buf_rst(&self) -> RegRespBufRstR {
+        RegRespBufRstR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn reg_tx_data_buf_buf_rst(&self) -> RegTxDataBufBufRstR {
+        RegTxDataBufBufRstR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_rst(&self) -> RegRxDataBufRstR {
+        RegRxDataBufRstR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_data_buf_rst(&self) -> RegIbiDataBufRstR {
+        RegIbiDataBufRstR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_status_buf_rst(&self) -> RegIbiStatusBufRstR {
+        RegIbiStatusBufRstR::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn reg_core_soft_rst(&mut self) -> RegCoreSoftRstW<'_, ResetCtrlSpec> {
+        RegCoreSoftRstW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn reg_cmd_buf_rst(&mut self) -> RegCmdBufRstW<'_, ResetCtrlSpec> {
+        RegCmdBufRstW::new(self, 1)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn reg_resp_buf_rst(&mut self) -> RegRespBufRstW<'_, ResetCtrlSpec> {
+        RegRespBufRstW::new(self, 2)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn reg_tx_data_buf_buf_rst(&mut self) -> RegTxDataBufBufRstW<'_, ResetCtrlSpec> {
+        RegTxDataBufBufRstW::new(self, 3)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn reg_rx_data_buf_rst(&mut self) -> RegRxDataBufRstW<'_, ResetCtrlSpec> {
+        RegRxDataBufRstW::new(self, 4)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_data_buf_rst(&mut self) -> RegIbiDataBufRstW<'_, ResetCtrlSpec> {
+        RegIbiDataBufRstW::new(self, 5)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn reg_ibi_status_buf_rst(&mut self) -> RegIbiStatusBufRstW<'_, ResetCtrlSpec> {
+        RegIbiStatusBufRstW::new(self, 6)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`reset_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reset_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ResetCtrlSpec;
+impl crate::RegisterSpec for ResetCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`reset_ctrl::R`](R) reader structure"]
+impl crate::Readable for ResetCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`reset_ctrl::W`](W) writer structure"]
+impl crate::Writable for ResetCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RESET_CTRL to value 0"]
+impl crate::Resettable for ResetCtrlSpec {}

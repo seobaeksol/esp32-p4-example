@@ -21,7 +21,8 @@ fn print_uart0(uart0: &pac::uart0::RegisterBlock, msg: &str) {
 
 #[entry]
 fn main() -> ! {
-    let uart0 = unsafe { &pac::UART0::steal() };
+    let dp = pac::Peripherals::take().unwrap();
+    let uart0 = &dp.uart0;
 
     print_uart0(uart0, "ESP32-P4 Real Bare-metal Started!\r\n");
     print_uart0(uart0, "ESP32-P4 Real Bare-metal Started!\r\n");

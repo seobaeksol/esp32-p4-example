@@ -1,0 +1,65 @@
+#[doc = "Register `POWER_WAIT_TIMER0` reader"]
+pub type R = crate::R<PowerWaitTimer0Spec>;
+#[doc = "Register `POWER_WAIT_TIMER0` writer"]
+pub type W = crate::W<PowerWaitTimer0Spec>;
+#[doc = "Field `DG_HP_POWERDOWN_TIMER` reader - need_des"]
+pub type DgHpPowerdownTimerR = crate::FieldReader<u16>;
+#[doc = "Field `DG_HP_POWERDOWN_TIMER` writer - need_des"]
+pub type DgHpPowerdownTimerW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `DG_HP_POWERUP_TIMER` reader - need_des"]
+pub type DgHpPowerupTimerR = crate::FieldReader<u16>;
+#[doc = "Field `DG_HP_POWERUP_TIMER` writer - need_des"]
+pub type DgHpPowerupTimerW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `DG_HP_WAIT_TIMER` reader - need_des"]
+pub type DgHpWaitTimerR = crate::FieldReader<u16>;
+#[doc = "Field `DG_HP_WAIT_TIMER` writer - need_des"]
+pub type DgHpWaitTimerW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+impl R {
+    #[doc = "Bits 5:13 - need_des"]
+    #[inline(always)]
+    pub fn dg_hp_powerdown_timer(&self) -> DgHpPowerdownTimerR {
+        DgHpPowerdownTimerR::new(((self.bits >> 5) & 0x01ff) as u16)
+    }
+    #[doc = "Bits 14:22 - need_des"]
+    #[inline(always)]
+    pub fn dg_hp_powerup_timer(&self) -> DgHpPowerupTimerR {
+        DgHpPowerupTimerR::new(((self.bits >> 14) & 0x01ff) as u16)
+    }
+    #[doc = "Bits 23:31 - need_des"]
+    #[inline(always)]
+    pub fn dg_hp_wait_timer(&self) -> DgHpWaitTimerR {
+        DgHpWaitTimerR::new(((self.bits >> 23) & 0x01ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 5:13 - need_des"]
+    #[inline(always)]
+    pub fn dg_hp_powerdown_timer(&mut self) -> DgHpPowerdownTimerW<'_, PowerWaitTimer0Spec> {
+        DgHpPowerdownTimerW::new(self, 5)
+    }
+    #[doc = "Bits 14:22 - need_des"]
+    #[inline(always)]
+    pub fn dg_hp_powerup_timer(&mut self) -> DgHpPowerupTimerW<'_, PowerWaitTimer0Spec> {
+        DgHpPowerupTimerW::new(self, 14)
+    }
+    #[doc = "Bits 23:31 - need_des"]
+    #[inline(always)]
+    pub fn dg_hp_wait_timer(&mut self) -> DgHpWaitTimerW<'_, PowerWaitTimer0Spec> {
+        DgHpWaitTimerW::new(self, 23)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_wait_timer0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_wait_timer0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PowerWaitTimer0Spec;
+impl crate::RegisterSpec for PowerWaitTimer0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`power_wait_timer0::R`](R) reader structure"]
+impl crate::Readable for PowerWaitTimer0Spec {}
+#[doc = "`write(|w| ..)` method takes [`power_wait_timer0::W`](W) writer structure"]
+impl crate::Writable for PowerWaitTimer0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets POWER_WAIT_TIMER0 to value 0x7fbf_dfe0"]
+impl crate::Resettable for PowerWaitTimer0Spec {
+    const RESET_VALUE: u32 = 0x7fbf_dfe0;
+}

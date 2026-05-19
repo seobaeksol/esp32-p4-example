@@ -1,0 +1,16 @@
+#[doc = "Register `DMARXCURRADDR_BUF` reader"]
+pub type R = crate::R<DmarxcurraddrBufSpec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+#[doc = "The address of the current receive descriptor list. Cleared on Reset.Pointer updated by the DMA during operation.\n\nYou can [`read`](crate::Reg::read) this register and get [`dmarxcurraddr_buf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmarxcurraddrBufSpec;
+impl crate::RegisterSpec for DmarxcurraddrBufSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dmarxcurraddr_buf::R`](R) reader structure"]
+impl crate::Readable for DmarxcurraddrBufSpec {}
+#[doc = "`reset()` method sets DMARXCURRADDR_BUF to value 0"]
+impl crate::Resettable for DmarxcurraddrBufSpec {}

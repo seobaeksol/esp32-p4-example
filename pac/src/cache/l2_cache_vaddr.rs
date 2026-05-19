@@ -1,0 +1,37 @@
+#[doc = "Register `L2_CACHE_VADDR` reader"]
+pub type R = crate::R<L2CacheVaddrSpec>;
+#[doc = "Register `L2_CACHE_VADDR` writer"]
+pub type W = crate::W<L2CacheVaddrSpec>;
+#[doc = "Field `L2_CACHE_VADDR` reader - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
+pub type L2CacheVaddrR = crate::FieldReader<u32>;
+#[doc = "Field `L2_CACHE_VADDR` writer - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
+pub type L2CacheVaddrW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
+    #[inline(always)]
+    pub fn l2_cache_vaddr(&self) -> L2CacheVaddrR {
+        L2CacheVaddrR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
+    #[inline(always)]
+    pub fn l2_cache_vaddr(&mut self) -> L2CacheVaddrW<'_, L2CacheVaddrSpec> {
+        L2CacheVaddrW::new(self, 0)
+    }
+}
+#[doc = "Cache Vaddr register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_vaddr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_vaddr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CacheVaddrSpec;
+impl crate::RegisterSpec for L2CacheVaddrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_vaddr::R`](R) reader structure"]
+impl crate::Readable for L2CacheVaddrSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_cache_vaddr::W`](W) writer structure"]
+impl crate::Writable for L2CacheVaddrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_CACHE_VADDR to value 0x4000_0000"]
+impl crate::Resettable for L2CacheVaddrSpec {
+    const RESET_VALUE: u32 = 0x4000_0000;
+}

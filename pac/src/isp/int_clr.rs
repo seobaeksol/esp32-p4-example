@@ -1,0 +1,240 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<IntClrSpec>;
+#[doc = "Field `ISP_DATA_TYPE_ERR` writer - write 1 to clear input data type error"]
+pub type IspDataTypeErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ISP_ASYNC_FIFO_OVF` writer - write 1 to clear isp input fifo overflow"]
+pub type IspAsyncFifoOvfW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ISP_BUF_FULL` writer - write 1 to clear isp input buffer full"]
+pub type IspBufFullW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ISP_HVNUM_SETTING_ERR` writer - write 1 to clear hnum and vnum setting format error"]
+pub type IspHvnumSettingErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ISP_DATA_TYPE_SETTING_ERR` writer - write 1 to clear setting invalid reg_data_type"]
+pub type IspDataTypeSettingErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `ISP_MIPI_HNUM_UNMATCH` writer - write 1 to clear hnum setting unmatch with mipi input"]
+pub type IspMipiHnumUnmatchW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `DPC_CHECK_DONE` writer - write 1 to clear dpc check done"]
+pub type DpcCheckDoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `GAMMA_XCOORD_ERR` writer - write 1 to clear gamma setting error"]
+pub type GammaXcoordErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `AE_MONITOR` writer - write 1 to clear ae monitor"]
+pub type AeMonitorW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `AE_FRAME_DONE` writer - write 1 to clear ae"]
+pub type AeFrameDoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `AF_FDONE` writer - write 1 to clear af statistic"]
+pub type AfFdoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `AF_ENV` writer - write 1 to clear af monitor"]
+pub type AfEnvW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `AWB_FDONE` writer - write 1 to clear awb"]
+pub type AwbFdoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `HIST_FDONE` writer - write 1 to clear histogram"]
+pub type HistFdoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `FRAME` writer - write 1 to clear isp frame end"]
+pub type FrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `BLC_FRAME` writer - write 1 to clear blc frame done"]
+pub type BlcFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `LSC_FRAME` writer - write 1 to clear lsc frame done"]
+pub type LscFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `DPC_FRAME` writer - write 1 to clear dpc frame done"]
+pub type DpcFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `BF_FRAME` writer - write 1 to clear bf frame done"]
+pub type BfFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `DEMOSAIC_FRAME` writer - write 1 to clear demosaic frame done"]
+pub type DemosaicFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `MEDIAN_FRAME` writer - write 1 to clear median frame done"]
+pub type MedianFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CCM_FRAME` writer - write 1 to clear ccm frame done"]
+pub type CcmFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `GAMMA_FRAME` writer - write 1 to clear gamma frame done"]
+pub type GammaFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `RGB2YUV_FRAME` writer - write 1 to clear rgb2yuv frame done"]
+pub type Rgb2yuvFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SHARP_FRAME` writer - write 1 to clear sharp frame done"]
+pub type SharpFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `COLOR_FRAME` writer - write 1 to clear color frame done"]
+pub type ColorFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `YUV2RGB_FRAME` writer - write 1 to clear yuv2rgb frame done"]
+pub type Yuv2rgbFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TAIL_IDI_FRAME` writer - write 1 to clear isp_tail idi frame_end"]
+pub type TailIdiFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `HEADER_IDI_FRAME` writer - write 1 to clear real input frame end of isp_input"]
+pub type HeaderIdiFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CROP_FRAME` writer - write 1 to clear crop frame done"]
+pub type CropFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `WBG_FRAME` writer - write 1 to clear wbg frame done"]
+pub type WbgFrameW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CROP_ERR` writer - write 1 to clear crop error"]
+pub type CropErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - write 1 to clear input data type error"]
+    #[inline(always)]
+    pub fn isp_data_type_err(&mut self) -> IspDataTypeErrW<'_, IntClrSpec> {
+        IspDataTypeErrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - write 1 to clear isp input fifo overflow"]
+    #[inline(always)]
+    pub fn isp_async_fifo_ovf(&mut self) -> IspAsyncFifoOvfW<'_, IntClrSpec> {
+        IspAsyncFifoOvfW::new(self, 1)
+    }
+    #[doc = "Bit 2 - write 1 to clear isp input buffer full"]
+    #[inline(always)]
+    pub fn isp_buf_full(&mut self) -> IspBufFullW<'_, IntClrSpec> {
+        IspBufFullW::new(self, 2)
+    }
+    #[doc = "Bit 3 - write 1 to clear hnum and vnum setting format error"]
+    #[inline(always)]
+    pub fn isp_hvnum_setting_err(&mut self) -> IspHvnumSettingErrW<'_, IntClrSpec> {
+        IspHvnumSettingErrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - write 1 to clear setting invalid reg_data_type"]
+    #[inline(always)]
+    pub fn isp_data_type_setting_err(&mut self) -> IspDataTypeSettingErrW<'_, IntClrSpec> {
+        IspDataTypeSettingErrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - write 1 to clear hnum setting unmatch with mipi input"]
+    #[inline(always)]
+    pub fn isp_mipi_hnum_unmatch(&mut self) -> IspMipiHnumUnmatchW<'_, IntClrSpec> {
+        IspMipiHnumUnmatchW::new(self, 5)
+    }
+    #[doc = "Bit 6 - write 1 to clear dpc check done"]
+    #[inline(always)]
+    pub fn dpc_check_done(&mut self) -> DpcCheckDoneW<'_, IntClrSpec> {
+        DpcCheckDoneW::new(self, 6)
+    }
+    #[doc = "Bit 7 - write 1 to clear gamma setting error"]
+    #[inline(always)]
+    pub fn gamma_xcoord_err(&mut self) -> GammaXcoordErrW<'_, IntClrSpec> {
+        GammaXcoordErrW::new(self, 7)
+    }
+    #[doc = "Bit 8 - write 1 to clear ae monitor"]
+    #[inline(always)]
+    pub fn ae_monitor(&mut self) -> AeMonitorW<'_, IntClrSpec> {
+        AeMonitorW::new(self, 8)
+    }
+    #[doc = "Bit 9 - write 1 to clear ae"]
+    #[inline(always)]
+    pub fn ae_frame_done(&mut self) -> AeFrameDoneW<'_, IntClrSpec> {
+        AeFrameDoneW::new(self, 9)
+    }
+    #[doc = "Bit 10 - write 1 to clear af statistic"]
+    #[inline(always)]
+    pub fn af_fdone(&mut self) -> AfFdoneW<'_, IntClrSpec> {
+        AfFdoneW::new(self, 10)
+    }
+    #[doc = "Bit 11 - write 1 to clear af monitor"]
+    #[inline(always)]
+    pub fn af_env(&mut self) -> AfEnvW<'_, IntClrSpec> {
+        AfEnvW::new(self, 11)
+    }
+    #[doc = "Bit 12 - write 1 to clear awb"]
+    #[inline(always)]
+    pub fn awb_fdone(&mut self) -> AwbFdoneW<'_, IntClrSpec> {
+        AwbFdoneW::new(self, 12)
+    }
+    #[doc = "Bit 13 - write 1 to clear histogram"]
+    #[inline(always)]
+    pub fn hist_fdone(&mut self) -> HistFdoneW<'_, IntClrSpec> {
+        HistFdoneW::new(self, 13)
+    }
+    #[doc = "Bit 14 - write 1 to clear isp frame end"]
+    #[inline(always)]
+    pub fn frame(&mut self) -> FrameW<'_, IntClrSpec> {
+        FrameW::new(self, 14)
+    }
+    #[doc = "Bit 15 - write 1 to clear blc frame done"]
+    #[inline(always)]
+    pub fn blc_frame(&mut self) -> BlcFrameW<'_, IntClrSpec> {
+        BlcFrameW::new(self, 15)
+    }
+    #[doc = "Bit 16 - write 1 to clear lsc frame done"]
+    #[inline(always)]
+    pub fn lsc_frame(&mut self) -> LscFrameW<'_, IntClrSpec> {
+        LscFrameW::new(self, 16)
+    }
+    #[doc = "Bit 17 - write 1 to clear dpc frame done"]
+    #[inline(always)]
+    pub fn dpc_frame(&mut self) -> DpcFrameW<'_, IntClrSpec> {
+        DpcFrameW::new(self, 17)
+    }
+    #[doc = "Bit 18 - write 1 to clear bf frame done"]
+    #[inline(always)]
+    pub fn bf_frame(&mut self) -> BfFrameW<'_, IntClrSpec> {
+        BfFrameW::new(self, 18)
+    }
+    #[doc = "Bit 19 - write 1 to clear demosaic frame done"]
+    #[inline(always)]
+    pub fn demosaic_frame(&mut self) -> DemosaicFrameW<'_, IntClrSpec> {
+        DemosaicFrameW::new(self, 19)
+    }
+    #[doc = "Bit 20 - write 1 to clear median frame done"]
+    #[inline(always)]
+    pub fn median_frame(&mut self) -> MedianFrameW<'_, IntClrSpec> {
+        MedianFrameW::new(self, 20)
+    }
+    #[doc = "Bit 21 - write 1 to clear ccm frame done"]
+    #[inline(always)]
+    pub fn ccm_frame(&mut self) -> CcmFrameW<'_, IntClrSpec> {
+        CcmFrameW::new(self, 21)
+    }
+    #[doc = "Bit 22 - write 1 to clear gamma frame done"]
+    #[inline(always)]
+    pub fn gamma_frame(&mut self) -> GammaFrameW<'_, IntClrSpec> {
+        GammaFrameW::new(self, 22)
+    }
+    #[doc = "Bit 23 - write 1 to clear rgb2yuv frame done"]
+    #[inline(always)]
+    pub fn rgb2yuv_frame(&mut self) -> Rgb2yuvFrameW<'_, IntClrSpec> {
+        Rgb2yuvFrameW::new(self, 23)
+    }
+    #[doc = "Bit 24 - write 1 to clear sharp frame done"]
+    #[inline(always)]
+    pub fn sharp_frame(&mut self) -> SharpFrameW<'_, IntClrSpec> {
+        SharpFrameW::new(self, 24)
+    }
+    #[doc = "Bit 25 - write 1 to clear color frame done"]
+    #[inline(always)]
+    pub fn color_frame(&mut self) -> ColorFrameW<'_, IntClrSpec> {
+        ColorFrameW::new(self, 25)
+    }
+    #[doc = "Bit 26 - write 1 to clear yuv2rgb frame done"]
+    #[inline(always)]
+    pub fn yuv2rgb_frame(&mut self) -> Yuv2rgbFrameW<'_, IntClrSpec> {
+        Yuv2rgbFrameW::new(self, 26)
+    }
+    #[doc = "Bit 27 - write 1 to clear isp_tail idi frame_end"]
+    #[inline(always)]
+    pub fn tail_idi_frame(&mut self) -> TailIdiFrameW<'_, IntClrSpec> {
+        TailIdiFrameW::new(self, 27)
+    }
+    #[doc = "Bit 28 - write 1 to clear real input frame end of isp_input"]
+    #[inline(always)]
+    pub fn header_idi_frame(&mut self) -> HeaderIdiFrameW<'_, IntClrSpec> {
+        HeaderIdiFrameW::new(self, 28)
+    }
+    #[doc = "Bit 29 - write 1 to clear crop frame done"]
+    #[inline(always)]
+    pub fn crop_frame(&mut self) -> CropFrameW<'_, IntClrSpec> {
+        CropFrameW::new(self, 29)
+    }
+    #[doc = "Bit 30 - write 1 to clear wbg frame done"]
+    #[inline(always)]
+    pub fn wbg_frame(&mut self) -> WbgFrameW<'_, IntClrSpec> {
+        WbgFrameW::new(self, 30)
+    }
+    #[doc = "Bit 31 - write 1 to clear crop error"]
+    #[inline(always)]
+    pub fn crop_err(&mut self) -> CropErrW<'_, IntClrSpec> {
+        CropErrW::new(self, 31)
+    }
+}
+#[doc = "interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntClrSpec;
+impl crate::RegisterSpec for IntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for IntClrSpec {
+    type Safety = crate::Unsafe;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff_ffff;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for IntClrSpec {}

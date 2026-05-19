@@ -1,0 +1,104 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `SLV_ST_END` reader - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
+pub type SlvStEndR = crate::BitReader;
+#[doc = "Field `MST_ST_END` reader - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
+pub type MstStEndR = crate::BitReader;
+#[doc = "Field `ECC_ERR` reader - The status bit for SPI_MEM_ECC_ERR_INT interrupt."]
+pub type EccErrR = crate::BitReader;
+#[doc = "Field `PMS_REJECT` reader - The status bit for SPI_MEM_PMS_REJECT_INT interrupt."]
+pub type PmsRejectR = crate::BitReader;
+#[doc = "Field `AXI_RADDR_ERR` reader - The enable bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
+pub type AxiRaddrErrR = crate::BitReader;
+#[doc = "Field `AXI_WR_FLASH_ERR` reader - The enable bit for SPI_MEM_AXI_WR_FALSH_ERR_INT interrupt."]
+pub type AxiWrFlashErrR = crate::BitReader;
+#[doc = "Field `AXI_WADDR_ERR` reader - The enable bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
+pub type AxiWaddrErrR = crate::BitReader;
+#[doc = "Field `RX_TRANS_OVF` reader - The status bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+pub type RxTransOvfR = crate::BitReader;
+#[doc = "Field `TX_TRANS_UDF` reader - The status bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+pub type TxTransUdfR = crate::BitReader;
+#[doc = "Field `DQS0_AFIFO_OVF` reader - The status bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
+pub type Dqs0AfifoOvfR = crate::BitReader;
+#[doc = "Field `DQS1_AFIFO_OVF` reader - The status bit for SPI_MEM_DQS1_AFIFO_OVF_INT interrupt."]
+pub type Dqs1AfifoOvfR = crate::BitReader;
+#[doc = "Field `BUS_FIFO1_UDF` reader - The status bit for SPI_MEM_BUS_FIFO1_UDF_INT interrupt."]
+pub type BusFifo1UdfR = crate::BitReader;
+#[doc = "Field `BUS_FIFO0_UDF` reader - The status bit for SPI_MEM_BUS_FIFO0_UDF_INT interrupt."]
+pub type BusFifo0UdfR = crate::BitReader;
+impl R {
+    #[doc = "Bit 3 - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_st_end(&self) -> SlvStEndR {
+        SlvStEndR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
+    #[inline(always)]
+    pub fn mst_st_end(&self) -> MstStEndR {
+        MstStEndR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - The status bit for SPI_MEM_ECC_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn ecc_err(&self) -> EccErrR {
+        EccErrR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The status bit for SPI_MEM_PMS_REJECT_INT interrupt."]
+    #[inline(always)]
+    pub fn pms_reject(&self) -> PmsRejectR {
+        PmsRejectR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - The enable bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn axi_raddr_err(&self) -> AxiRaddrErrR {
+        AxiRaddrErrR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - The enable bit for SPI_MEM_AXI_WR_FALSH_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn axi_wr_flash_err(&self) -> AxiWrFlashErrR {
+        AxiWrFlashErrR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The enable bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn axi_waddr_err(&self) -> AxiWaddrErrR {
+        AxiWaddrErrR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 26 - The status bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+    #[inline(always)]
+    pub fn rx_trans_ovf(&self) -> RxTransOvfR {
+        RxTransOvfR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - The status bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+    #[inline(always)]
+    pub fn tx_trans_udf(&self) -> TxTransUdfR {
+        TxTransUdfR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - The status bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
+    #[inline(always)]
+    pub fn dqs0_afifo_ovf(&self) -> Dqs0AfifoOvfR {
+        Dqs0AfifoOvfR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - The status bit for SPI_MEM_DQS1_AFIFO_OVF_INT interrupt."]
+    #[inline(always)]
+    pub fn dqs1_afifo_ovf(&self) -> Dqs1AfifoOvfR {
+        Dqs1AfifoOvfR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - The status bit for SPI_MEM_BUS_FIFO1_UDF_INT interrupt."]
+    #[inline(always)]
+    pub fn bus_fifo1_udf(&self) -> BusFifo1UdfR {
+        BusFifo1UdfR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - The status bit for SPI_MEM_BUS_FIFO0_UDF_INT interrupt."]
+    #[inline(always)]
+    pub fn bus_fifo0_udf(&self) -> BusFifo0UdfR {
+        BusFifo0UdfR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[doc = "SPI0 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `ARB_LOST_CAP` reader"]
+pub type R = crate::R<ArbLostCapSpec>;
+#[doc = "Field `ARBITRATION_LOST_CAPTURE` reader - This register contains information about the bit position of losing arbitration."]
+pub type ArbitrationLostCaptureR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:4 - This register contains information about the bit position of losing arbitration."]
+    #[inline(always)]
+    pub fn arbitration_lost_capture(&self) -> ArbitrationLostCaptureR {
+        ArbitrationLostCaptureR::new((self.bits & 0x1f) as u8)
+    }
+}
+#[doc = "TWAI arbiter lost capture register.\n\nYou can [`read`](crate::Reg::read) this register and get [`arb_lost_cap::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ArbLostCapSpec;
+impl crate::RegisterSpec for ArbLostCapSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`arb_lost_cap::R`](R) reader structure"]
+impl crate::Readable for ArbLostCapSpec {}
+#[doc = "`reset()` method sets ARB_LOST_CAP to value 0"]
+impl crate::Resettable for ArbLostCapSpec {}

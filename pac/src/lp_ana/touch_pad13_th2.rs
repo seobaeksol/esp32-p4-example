@@ -1,0 +1,35 @@
+#[doc = "Register `TOUCH_PAD13_TH2` reader"]
+pub type R = crate::R<TouchPad13Th2Spec>;
+#[doc = "Register `TOUCH_PAD13_TH2` writer"]
+pub type W = crate::W<TouchPad13Th2Spec>;
+#[doc = "Field `TOUCH_PAD13_TH2` reader - Reserved"]
+pub type TouchPad13Th2R = crate::FieldReader<u16>;
+#[doc = "Field `TOUCH_PAD13_TH2` writer - Reserved"]
+pub type TouchPad13Th2W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 16:31 - Reserved"]
+    #[inline(always)]
+    pub fn touch_pad13_th2(&self) -> TouchPad13Th2R {
+        TouchPad13Th2R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 16:31 - Reserved"]
+    #[inline(always)]
+    pub fn touch_pad13_th2(&mut self) -> TouchPad13Th2W<'_, TouchPad13Th2Spec> {
+        TouchPad13Th2W::new(self, 16)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad13_th2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad13_th2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TouchPad13Th2Spec;
+impl crate::RegisterSpec for TouchPad13Th2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`touch_pad13_th2::R`](R) reader structure"]
+impl crate::Readable for TouchPad13Th2Spec {}
+#[doc = "`write(|w| ..)` method takes [`touch_pad13_th2::W`](W) writer structure"]
+impl crate::Writable for TouchPad13Th2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TOUCH_PAD13_TH2 to value 0"]
+impl crate::Resettable for TouchPad13Th2Spec {}

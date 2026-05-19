@@ -1,0 +1,20 @@
+#[doc = "Register `CORE_1_RCD_PDEBUGPC` reader"]
+pub type R = crate::R<Core1RcdPdebugpcSpec>;
+#[doc = "Field `CORE_1_RCD_PDEBUGPC` reader - recorded PC"]
+pub type Core1RcdPdebugpcR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - recorded PC"]
+    #[inline(always)]
+    pub fn core_1_rcd_pdebugpc(&self) -> Core1RcdPdebugpcR {
+        Core1RcdPdebugpcR::new(self.bits)
+    }
+}
+#[doc = "record status regsiter\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_rcd_pdebugpc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core1RcdPdebugpcSpec;
+impl crate::RegisterSpec for Core1RcdPdebugpcSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_1_rcd_pdebugpc::R`](R) reader structure"]
+impl crate::Readable for Core1RcdPdebugpcSpec {}
+#[doc = "`reset()` method sets CORE_1_RCD_PDEBUGPC to value 0"]
+impl crate::Resettable for Core1RcdPdebugpcSpec {}

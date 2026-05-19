@@ -1,0 +1,35 @@
+#[doc = "Register `EXT_WAKEUP_SEL` reader"]
+pub type R = crate::R<ExtWakeupSelSpec>;
+#[doc = "Register `EXT_WAKEUP_SEL` writer"]
+pub type W = crate::W<ExtWakeupSelSpec>;
+#[doc = "Field `EXT_WAKEUP_SEL` reader - need_des"]
+pub type ExtWakeupSelR = crate::FieldReader<u32>;
+#[doc = "Field `EXT_WAKEUP_SEL` writer - need_des"]
+pub type ExtWakeupSelW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn ext_wakeup_sel(&self) -> ExtWakeupSelR {
+        ExtWakeupSelR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn ext_wakeup_sel(&mut self) -> ExtWakeupSelW<'_, ExtWakeupSelSpec> {
+        ExtWakeupSelW::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ext_wakeup_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext_wakeup_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ExtWakeupSelSpec;
+impl crate::RegisterSpec for ExtWakeupSelSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ext_wakeup_sel::R`](R) reader structure"]
+impl crate::Readable for ExtWakeupSelSpec {}
+#[doc = "`write(|w| ..)` method takes [`ext_wakeup_sel::W`](W) writer structure"]
+impl crate::Writable for ExtWakeupSelSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets EXT_WAKEUP_SEL to value 0"]
+impl crate::Resettable for ExtWakeupSelSpec {}

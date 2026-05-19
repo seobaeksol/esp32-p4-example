@@ -1,0 +1,29 @@
+#[doc = "Register `HP_LP_CPU_COMM` writer"]
+pub type W = crate::W<HpLpCpuCommSpec>;
+#[doc = "Field `LP_TRIGGER_HP` writer - need_des"]
+pub type LpTriggerHpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_TRIGGER_LP` writer - need_des"]
+pub type HpTriggerLpW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_trigger_hp(&mut self) -> LpTriggerHpW<'_, HpLpCpuCommSpec> {
+        LpTriggerHpW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn hp_trigger_lp(&mut self) -> HpTriggerLpW<'_, HpLpCpuCommSpec> {
+        HpTriggerLpW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_lp_cpu_comm::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HpLpCpuCommSpec;
+impl crate::RegisterSpec for HpLpCpuCommSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`hp_lp_cpu_comm::W`](W) writer structure"]
+impl crate::Writable for HpLpCpuCommSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HP_LP_CPU_COMM to value 0"]
+impl crate::Resettable for HpLpCpuCommSpec {}

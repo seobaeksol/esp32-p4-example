@@ -1,0 +1,189 @@
+#[doc = "Register `CHEN0` reader"]
+pub type R = crate::R<Chen0Spec>;
+#[doc = "Register `CHEN0` writer"]
+pub type W = crate::W<Chen0Spec>;
+#[doc = "Field `CH1_EN` reader - NA"]
+pub type Ch1EnR = crate::BitReader;
+#[doc = "Field `CH1_EN` writer - NA"]
+pub type Ch1EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_EN` reader - NA"]
+pub type Ch2EnR = crate::BitReader;
+#[doc = "Field `CH2_EN` writer - NA"]
+pub type Ch2EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_EN` reader - NA"]
+pub type Ch3EnR = crate::BitReader;
+#[doc = "Field `CH3_EN` writer - NA"]
+pub type Ch3EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4_EN` reader - NA"]
+pub type Ch4EnR = crate::BitReader;
+#[doc = "Field `CH4_EN` writer - NA"]
+pub type Ch4EnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_EN_WE` writer - NA"]
+pub type Ch1EnWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_EN_WE` writer - NA"]
+pub type Ch2EnWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_EN_WE` writer - NA"]
+pub type Ch3EnWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4_EN_WE` writer - NA"]
+pub type Ch4EnWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SUSP` reader - NA"]
+pub type Ch1SuspR = crate::BitReader;
+#[doc = "Field `CH1_SUSP` writer - NA"]
+pub type Ch1SuspW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_SUSP` reader - NA"]
+pub type Ch2SuspR = crate::BitReader;
+#[doc = "Field `CH2_SUSP` writer - NA"]
+pub type Ch2SuspW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_SUSP` reader - NA"]
+pub type Ch3SuspR = crate::BitReader;
+#[doc = "Field `CH3_SUSP` writer - NA"]
+pub type Ch3SuspW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4_SUSP` reader - NA"]
+pub type Ch4SuspR = crate::BitReader;
+#[doc = "Field `CH4_SUSP` writer - NA"]
+pub type Ch4SuspW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SUSP_WE` writer - NA"]
+pub type Ch1SuspWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_SUSP_WE` writer - NA"]
+pub type Ch2SuspWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_SUSP_WE` writer - NA"]
+pub type Ch3SuspWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH4_SUSP_WE` writer - NA"]
+pub type Ch4SuspWeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_en(&self) -> Ch1EnR {
+        Ch1EnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch2_en(&self) -> Ch2EnR {
+        Ch2EnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch3_en(&self) -> Ch3EnR {
+        Ch3EnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch4_en(&self) -> Ch4EnR {
+        Ch4EnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn ch1_susp(&self) -> Ch1SuspR {
+        Ch1SuspR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn ch2_susp(&self) -> Ch2SuspR {
+        Ch2SuspR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - NA"]
+    #[inline(always)]
+    pub fn ch3_susp(&self) -> Ch3SuspR {
+        Ch3SuspR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - NA"]
+    #[inline(always)]
+    pub fn ch4_susp(&self) -> Ch4SuspR {
+        Ch4SuspR::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_en(&mut self) -> Ch1EnW<'_, Chen0Spec> {
+        Ch1EnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch2_en(&mut self) -> Ch2EnW<'_, Chen0Spec> {
+        Ch2EnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch3_en(&mut self) -> Ch3EnW<'_, Chen0Spec> {
+        Ch3EnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch4_en(&mut self) -> Ch4EnW<'_, Chen0Spec> {
+        Ch4EnW::new(self, 3)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn ch1_en_we(&mut self) -> Ch1EnWeW<'_, Chen0Spec> {
+        Ch1EnWeW::new(self, 8)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn ch2_en_we(&mut self) -> Ch2EnWeW<'_, Chen0Spec> {
+        Ch2EnWeW::new(self, 9)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn ch3_en_we(&mut self) -> Ch3EnWeW<'_, Chen0Spec> {
+        Ch3EnWeW::new(self, 10)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn ch4_en_we(&mut self) -> Ch4EnWeW<'_, Chen0Spec> {
+        Ch4EnWeW::new(self, 11)
+    }
+    #[doc = "Bit 16 - NA"]
+    #[inline(always)]
+    pub fn ch1_susp(&mut self) -> Ch1SuspW<'_, Chen0Spec> {
+        Ch1SuspW::new(self, 16)
+    }
+    #[doc = "Bit 17 - NA"]
+    #[inline(always)]
+    pub fn ch2_susp(&mut self) -> Ch2SuspW<'_, Chen0Spec> {
+        Ch2SuspW::new(self, 17)
+    }
+    #[doc = "Bit 18 - NA"]
+    #[inline(always)]
+    pub fn ch3_susp(&mut self) -> Ch3SuspW<'_, Chen0Spec> {
+        Ch3SuspW::new(self, 18)
+    }
+    #[doc = "Bit 19 - NA"]
+    #[inline(always)]
+    pub fn ch4_susp(&mut self) -> Ch4SuspW<'_, Chen0Spec> {
+        Ch4SuspW::new(self, 19)
+    }
+    #[doc = "Bit 24 - NA"]
+    #[inline(always)]
+    pub fn ch1_susp_we(&mut self) -> Ch1SuspWeW<'_, Chen0Spec> {
+        Ch1SuspWeW::new(self, 24)
+    }
+    #[doc = "Bit 25 - NA"]
+    #[inline(always)]
+    pub fn ch2_susp_we(&mut self) -> Ch2SuspWeW<'_, Chen0Spec> {
+        Ch2SuspWeW::new(self, 25)
+    }
+    #[doc = "Bit 26 - NA"]
+    #[inline(always)]
+    pub fn ch3_susp_we(&mut self) -> Ch3SuspWeW<'_, Chen0Spec> {
+        Ch3SuspWeW::new(self, 26)
+    }
+    #[doc = "Bit 27 - NA"]
+    #[inline(always)]
+    pub fn ch4_susp_we(&mut self) -> Ch4SuspWeW<'_, Chen0Spec> {
+        Ch4SuspWeW::new(self, 27)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`chen0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chen0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Chen0Spec;
+impl crate::RegisterSpec for Chen0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`chen0::R`](R) reader structure"]
+impl crate::Readable for Chen0Spec {}
+#[doc = "`write(|w| ..)` method takes [`chen0::W`](W) writer structure"]
+impl crate::Writable for Chen0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CHEN0 to value 0"]
+impl crate::Resettable for Chen0Spec {}

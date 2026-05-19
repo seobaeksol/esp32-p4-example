@@ -1,0 +1,20 @@
+#[doc = "Register `L2_CACHE_SYNC_PRELOAD_EXCEPTION` reader"]
+pub type R = crate::R<L2CacheSyncPreloadExceptionSpec>;
+#[doc = "Field `L2_CACHE_PLD_ERR_CODE` reader - The value 2 is Only available which means preload size is error in L2-Cache."]
+pub type L2CachePldErrCodeR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 10:11 - The value 2 is Only available which means preload size is error in L2-Cache."]
+    #[inline(always)]
+    pub fn l2_cache_pld_err_code(&self) -> L2CachePldErrCodeR {
+        L2CachePldErrCodeR::new(((self.bits >> 10) & 3) as u8)
+    }
+}
+#[doc = "Cache Sync/Preload Operation exception register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_sync_preload_exception::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CacheSyncPreloadExceptionSpec;
+impl crate::RegisterSpec for L2CacheSyncPreloadExceptionSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_sync_preload_exception::R`](R) reader structure"]
+impl crate::Readable for L2CacheSyncPreloadExceptionSpec {}
+#[doc = "`reset()` method sets L2_CACHE_SYNC_PRELOAD_EXCEPTION to value 0"]
+impl crate::Resettable for L2CacheSyncPreloadExceptionSpec {}

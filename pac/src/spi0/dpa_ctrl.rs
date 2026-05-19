@@ -1,0 +1,65 @@
+#[doc = "Register `DPA_CTRL` reader"]
+pub type R = crate::R<DpaCtrlSpec>;
+#[doc = "Register `DPA_CTRL` writer"]
+pub type W = crate::W<DpaCtrlSpec>;
+#[doc = "Field `SPI_CRYPT_SECURITY_LEVEL` reader - Set the security level of spi mem cryption. 0: Shut off cryption DPA funtion. 1-7: The bigger the number is, the more secure the cryption is. (Note that the performance of cryption will decrease together with this number increasing)"]
+pub type SpiCryptSecurityLevelR = crate::FieldReader;
+#[doc = "Field `SPI_CRYPT_SECURITY_LEVEL` writer - Set the security level of spi mem cryption. 0: Shut off cryption DPA funtion. 1-7: The bigger the number is, the more secure the cryption is. (Note that the performance of cryption will decrease together with this number increasing)"]
+pub type SpiCryptSecurityLevelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_CRYPT_CALC_D_DPA_EN` reader - Only available when SPI_CRYPT_SECURITY_LEVEL is not 0. 1: Enable DPA in the calculation that using key 1 or key 2. 0: Enable DPA only in the calculation that using key 1."]
+pub type SpiCryptCalcDDpaEnR = crate::BitReader;
+#[doc = "Field `SPI_CRYPT_CALC_D_DPA_EN` writer - Only available when SPI_CRYPT_SECURITY_LEVEL is not 0. 1: Enable DPA in the calculation that using key 1 or key 2. 0: Enable DPA only in the calculation that using key 1."]
+pub type SpiCryptCalcDDpaEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_CRYPT_DPA_SELECT_REGISTER` reader - 1: MSPI XTS DPA clock gate is controlled by SPI_CRYPT_CALC_D_DPA_EN and SPI_CRYPT_SECURITY_LEVEL. 0: Controlled by efuse bits."]
+pub type SpiCryptDpaSelectRegisterR = crate::BitReader;
+#[doc = "Field `SPI_CRYPT_DPA_SELECT_REGISTER` writer - 1: MSPI XTS DPA clock gate is controlled by SPI_CRYPT_CALC_D_DPA_EN and SPI_CRYPT_SECURITY_LEVEL. 0: Controlled by efuse bits."]
+pub type SpiCryptDpaSelectRegisterW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:2 - Set the security level of spi mem cryption. 0: Shut off cryption DPA funtion. 1-7: The bigger the number is, the more secure the cryption is. (Note that the performance of cryption will decrease together with this number increasing)"]
+    #[inline(always)]
+    pub fn spi_crypt_security_level(&self) -> SpiCryptSecurityLevelR {
+        SpiCryptSecurityLevelR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3 - Only available when SPI_CRYPT_SECURITY_LEVEL is not 0. 1: Enable DPA in the calculation that using key 1 or key 2. 0: Enable DPA only in the calculation that using key 1."]
+    #[inline(always)]
+    pub fn spi_crypt_calc_d_dpa_en(&self) -> SpiCryptCalcDDpaEnR {
+        SpiCryptCalcDDpaEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - 1: MSPI XTS DPA clock gate is controlled by SPI_CRYPT_CALC_D_DPA_EN and SPI_CRYPT_SECURITY_LEVEL. 0: Controlled by efuse bits."]
+    #[inline(always)]
+    pub fn spi_crypt_dpa_select_register(&self) -> SpiCryptDpaSelectRegisterR {
+        SpiCryptDpaSelectRegisterR::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Set the security level of spi mem cryption. 0: Shut off cryption DPA funtion. 1-7: The bigger the number is, the more secure the cryption is. (Note that the performance of cryption will decrease together with this number increasing)"]
+    #[inline(always)]
+    pub fn spi_crypt_security_level(&mut self) -> SpiCryptSecurityLevelW<'_, DpaCtrlSpec> {
+        SpiCryptSecurityLevelW::new(self, 0)
+    }
+    #[doc = "Bit 3 - Only available when SPI_CRYPT_SECURITY_LEVEL is not 0. 1: Enable DPA in the calculation that using key 1 or key 2. 0: Enable DPA only in the calculation that using key 1."]
+    #[inline(always)]
+    pub fn spi_crypt_calc_d_dpa_en(&mut self) -> SpiCryptCalcDDpaEnW<'_, DpaCtrlSpec> {
+        SpiCryptCalcDDpaEnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - 1: MSPI XTS DPA clock gate is controlled by SPI_CRYPT_CALC_D_DPA_EN and SPI_CRYPT_SECURITY_LEVEL. 0: Controlled by efuse bits."]
+    #[inline(always)]
+    pub fn spi_crypt_dpa_select_register(&mut self) -> SpiCryptDpaSelectRegisterW<'_, DpaCtrlSpec> {
+        SpiCryptDpaSelectRegisterW::new(self, 4)
+    }
+}
+#[doc = "SPI memory cryption DPA register\n\nYou can [`read`](crate::Reg::read) this register and get [`dpa_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpa_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DpaCtrlSpec;
+impl crate::RegisterSpec for DpaCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dpa_ctrl::R`](R) reader structure"]
+impl crate::Readable for DpaCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`dpa_ctrl::W`](W) writer structure"]
+impl crate::Writable for DpaCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DPA_CTRL to value 0x0f"]
+impl crate::Resettable for DpaCtrlSpec {
+    const RESET_VALUE: u32 = 0x0f;
+}

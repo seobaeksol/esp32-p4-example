@@ -1,0 +1,35 @@
+#[doc = "Register `CLK_CONF` reader"]
+pub type R = crate::R<ClkConfSpec>;
+#[doc = "Register `CLK_CONF` writer"]
+pub type W = crate::W<ClkConfSpec>;
+#[doc = "Field `CLK_EN` reader - Tsens regbank clock gating enable."]
+pub type ClkEnR = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - Tsens regbank clock gating enable."]
+pub type ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Tsens regbank clock gating enable."]
+    #[inline(always)]
+    pub fn clk_en(&self) -> ClkEnR {
+        ClkEnR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Tsens regbank clock gating enable."]
+    #[inline(always)]
+    pub fn clk_en(&mut self) -> ClkEnW<'_, ClkConfSpec> {
+        ClkEnW::new(self, 0)
+    }
+}
+#[doc = "Tsens regbank configuration registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClkConfSpec;
+impl crate::RegisterSpec for ClkConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clk_conf::R`](R) reader structure"]
+impl crate::Readable for ClkConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`clk_conf::W`](W) writer structure"]
+impl crate::Writable for ClkConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CLK_CONF to value 0"]
+impl crate::Resettable for ClkConfSpec {}

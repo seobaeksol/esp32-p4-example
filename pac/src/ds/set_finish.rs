@@ -1,0 +1,22 @@
+#[doc = "Register `SET_FINISH` writer"]
+pub type W = crate::W<SetFinishSpec>;
+#[doc = "Field `SET_FINISH` writer - Configures whether or not to end DS operation. \\\\ 0: Invalid\\\\ 1: End DS operation\\\\"]
+pub type SetFinishW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to end DS operation. \\\\ 0: Invalid\\\\ 1: End DS operation\\\\"]
+    #[inline(always)]
+    pub fn set_finish(&mut self) -> SetFinishW<'_, SetFinishSpec> {
+        SetFinishW::new(self, 0)
+    }
+}
+#[doc = "Ends DS operation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_finish::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SetFinishSpec;
+impl crate::RegisterSpec for SetFinishSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`set_finish::W`](W) writer structure"]
+impl crate::Writable for SetFinishSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SET_FINISH to value 0"]
+impl crate::Resettable for SetFinishSpec {}

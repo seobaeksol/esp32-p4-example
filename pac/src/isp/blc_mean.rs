@@ -1,0 +1,41 @@
+#[doc = "Register `BLC_MEAN` reader"]
+pub type R = crate::R<BlcMeanSpec>;
+#[doc = "Field `BLC_R3_MEAN` reader - this field represents the average black value of bottom right channel"]
+pub type BlcR3MeanR = crate::FieldReader;
+#[doc = "Field `BLC_R2_MEAN` reader - this field represents the average black value of bottom left channel"]
+pub type BlcR2MeanR = crate::FieldReader;
+#[doc = "Field `BLC_R1_MEAN` reader - this field represents the average black value of top right channel"]
+pub type BlcR1MeanR = crate::FieldReader;
+#[doc = "Field `BLC_R0_MEAN` reader - this field represents the average black value of top left channel"]
+pub type BlcR0MeanR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:7 - this field represents the average black value of bottom right channel"]
+    #[inline(always)]
+    pub fn blc_r3_mean(&self) -> BlcR3MeanR {
+        BlcR3MeanR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field represents the average black value of bottom left channel"]
+    #[inline(always)]
+    pub fn blc_r2_mean(&self) -> BlcR2MeanR {
+        BlcR2MeanR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field represents the average black value of top right channel"]
+    #[inline(always)]
+    pub fn blc_r1_mean(&self) -> BlcR1MeanR {
+        BlcR1MeanR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - this field represents the average black value of top left channel"]
+    #[inline(always)]
+    pub fn blc_r0_mean(&self) -> BlcR0MeanR {
+        BlcR0MeanR::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[doc = "results of the average of black window\n\nYou can [`read`](crate::Reg::read) this register and get [`blc_mean::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BlcMeanSpec;
+impl crate::RegisterSpec for BlcMeanSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`blc_mean::R`](R) reader structure"]
+impl crate::Readable for BlcMeanSpec {}
+#[doc = "`reset()` method sets BLC_MEAN to value 0"]
+impl crate::Resettable for BlcMeanSpec {}

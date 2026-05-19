@@ -1,0 +1,91 @@
+#[doc = "Register `ROOT_CLK_CTRL0` reader"]
+pub type R = crate::R<RootClkCtrl0Spec>;
+#[doc = "Register `ROOT_CLK_CTRL0` writer"]
+pub type W = crate::W<RootClkCtrl0Spec>;
+#[doc = "Field `CPUICM_DELAY_NUM` reader - Reserved"]
+pub type CpuicmDelayNumR = crate::FieldReader;
+#[doc = "Field `CPUICM_DELAY_NUM` writer - Reserved"]
+pub type CpuicmDelayNumW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SOC_CLK_DIV_UPDATE` reader - Reserved"]
+pub type SocClkDivUpdateR = crate::BitReader;
+#[doc = "Field `SOC_CLK_DIV_UPDATE` writer - Reserved"]
+pub type SocClkDivUpdateW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CPU_CLK_DIV_NUM` reader - Reserved"]
+pub type CpuClkDivNumR = crate::FieldReader;
+#[doc = "Field `CPU_CLK_DIV_NUM` writer - Reserved"]
+pub type CpuClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `CPU_CLK_DIV_NUMERATOR` reader - Reserved"]
+pub type CpuClkDivNumeratorR = crate::FieldReader;
+#[doc = "Field `CPU_CLK_DIV_NUMERATOR` writer - Reserved"]
+pub type CpuClkDivNumeratorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `CPU_CLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type CpuClkDivDenominatorR = crate::FieldReader;
+#[doc = "Field `CPU_CLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type CpuClkDivDenominatorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:3 - Reserved"]
+    #[inline(always)]
+    pub fn cpuicm_delay_num(&self) -> CpuicmDelayNumR {
+        CpuicmDelayNumR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn soc_clk_div_update(&self) -> SocClkDivUpdateR {
+        SocClkDivUpdateR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 5:12 - Reserved"]
+    #[inline(always)]
+    pub fn cpu_clk_div_num(&self) -> CpuClkDivNumR {
+        CpuClkDivNumR::new(((self.bits >> 5) & 0xff) as u8)
+    }
+    #[doc = "Bits 13:20 - Reserved"]
+    #[inline(always)]
+    pub fn cpu_clk_div_numerator(&self) -> CpuClkDivNumeratorR {
+        CpuClkDivNumeratorR::new(((self.bits >> 13) & 0xff) as u8)
+    }
+    #[doc = "Bits 21:28 - Reserved"]
+    #[inline(always)]
+    pub fn cpu_clk_div_denominator(&self) -> CpuClkDivDenominatorR {
+        CpuClkDivDenominatorR::new(((self.bits >> 21) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - Reserved"]
+    #[inline(always)]
+    pub fn cpuicm_delay_num(&mut self) -> CpuicmDelayNumW<'_, RootClkCtrl0Spec> {
+        CpuicmDelayNumW::new(self, 0)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn soc_clk_div_update(&mut self) -> SocClkDivUpdateW<'_, RootClkCtrl0Spec> {
+        SocClkDivUpdateW::new(self, 4)
+    }
+    #[doc = "Bits 5:12 - Reserved"]
+    #[inline(always)]
+    pub fn cpu_clk_div_num(&mut self) -> CpuClkDivNumW<'_, RootClkCtrl0Spec> {
+        CpuClkDivNumW::new(self, 5)
+    }
+    #[doc = "Bits 13:20 - Reserved"]
+    #[inline(always)]
+    pub fn cpu_clk_div_numerator(&mut self) -> CpuClkDivNumeratorW<'_, RootClkCtrl0Spec> {
+        CpuClkDivNumeratorW::new(self, 13)
+    }
+    #[doc = "Bits 21:28 - Reserved"]
+    #[inline(always)]
+    pub fn cpu_clk_div_denominator(&mut self) -> CpuClkDivDenominatorW<'_, RootClkCtrl0Spec> {
+        CpuClkDivDenominatorW::new(self, 21)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`root_clk_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`root_clk_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RootClkCtrl0Spec;
+impl crate::RegisterSpec for RootClkCtrl0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`root_clk_ctrl0::R`](R) reader structure"]
+impl crate::Readable for RootClkCtrl0Spec {}
+#[doc = "`write(|w| ..)` method takes [`root_clk_ctrl0::W`](W) writer structure"]
+impl crate::Writable for RootClkCtrl0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ROOT_CLK_CTRL0 to value 0"]
+impl crate::Resettable for RootClkCtrl0Spec {}

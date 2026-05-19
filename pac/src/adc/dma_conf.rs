@@ -1,0 +1,65 @@
+#[doc = "Register `DMA_CONF` reader"]
+pub type R = crate::R<DmaConfSpec>;
+#[doc = "Register `DMA_CONF` writer"]
+pub type W = crate::W<DmaConfSpec>;
+#[doc = "Field `ADC_EOF_NUM` reader - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
+pub type AdcEofNumR = crate::FieldReader<u16>;
+#[doc = "Field `ADC_EOF_NUM` writer - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
+pub type AdcEofNumW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `ADC_RESET_FSM` reader - reset_apb_adc_state"]
+pub type AdcResetFsmR = crate::BitReader;
+#[doc = "Field `ADC_RESET_FSM` writer - reset_apb_adc_state"]
+pub type AdcResetFsmW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_TRANS` reader - enable apb_adc use spi_dma"]
+pub type AdcTransR = crate::BitReader;
+#[doc = "Field `ADC_TRANS` writer - enable apb_adc use spi_dma"]
+pub type AdcTransW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:15 - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
+    #[inline(always)]
+    pub fn adc_eof_num(&self) -> AdcEofNumR {
+        AdcEofNumR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bit 30 - reset_apb_adc_state"]
+    #[inline(always)]
+    pub fn adc_reset_fsm(&self) -> AdcResetFsmR {
+        AdcResetFsmR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - enable apb_adc use spi_dma"]
+    #[inline(always)]
+    pub fn adc_trans(&self) -> AdcTransR {
+        AdcTransR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - the dma_in_suc_eof gen when sample cnt = spi_eof_num"]
+    #[inline(always)]
+    pub fn adc_eof_num(&mut self) -> AdcEofNumW<'_, DmaConfSpec> {
+        AdcEofNumW::new(self, 0)
+    }
+    #[doc = "Bit 30 - reset_apb_adc_state"]
+    #[inline(always)]
+    pub fn adc_reset_fsm(&mut self) -> AdcResetFsmW<'_, DmaConfSpec> {
+        AdcResetFsmW::new(self, 30)
+    }
+    #[doc = "Bit 31 - enable apb_adc use spi_dma"]
+    #[inline(always)]
+    pub fn adc_trans(&mut self) -> AdcTransW<'_, DmaConfSpec> {
+        AdcTransW::new(self, 31)
+    }
+}
+#[doc = "Register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmaConfSpec;
+impl crate::RegisterSpec for DmaConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dma_conf::R`](R) reader structure"]
+impl crate::Readable for DmaConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`dma_conf::W`](W) writer structure"]
+impl crate::Writable for DmaConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DMA_CONF to value 0xff"]
+impl crate::Resettable for DmaConfSpec {
+    const RESET_VALUE: u32 = 0xff;
+}

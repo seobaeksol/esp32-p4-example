@@ -1,0 +1,107 @@
+#[doc = "Register `VAD_PARAM1` reader"]
+pub type R = crate::R<VadParam1Spec>;
+#[doc = "Register `VAD_PARAM1` writer"]
+pub type W = crate::W<VadParam1Spec>;
+#[doc = "Field `PARAM_MIN_SPEECH_COUNT` reader - VAD parameter"]
+pub type ParamMinSpeechCountR = crate::FieldReader;
+#[doc = "Field `PARAM_MIN_SPEECH_COUNT` writer - VAD parameter"]
+pub type ParamMinSpeechCountW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `PARAM_MAX_SPEECH_COUNT` reader - VAD parameter"]
+pub type ParamMaxSpeechCountR = crate::FieldReader;
+#[doc = "Field `PARAM_MAX_SPEECH_COUNT` writer - VAD parameter"]
+pub type ParamMaxSpeechCountW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `PARAM_HANGOVER_SPEECH` reader - VAD parameter"]
+pub type ParamHangoverSpeechR = crate::FieldReader;
+#[doc = "Field `PARAM_HANGOVER_SPEECH` writer - VAD parameter"]
+pub type ParamHangoverSpeechW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `PARAM_HANGOVER_SILENT` reader - VAD parameter"]
+pub type ParamHangoverSilentR = crate::FieldReader;
+#[doc = "Field `PARAM_HANGOVER_SILENT` writer - VAD parameter"]
+pub type ParamHangoverSilentW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PARAM_MAX_OFFSET` reader - VAD parameter"]
+pub type ParamMaxOffsetR = crate::FieldReader;
+#[doc = "Field `PARAM_MAX_OFFSET` writer - VAD parameter"]
+pub type ParamMaxOffsetW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+#[doc = "Field `PARAM_SKIP_BAND_ENERGY` reader - Set 1 to skip band energy check."]
+pub type ParamSkipBandEnergyR = crate::BitReader;
+#[doc = "Field `PARAM_SKIP_BAND_ENERGY` writer - Set 1 to skip band energy check."]
+pub type ParamSkipBandEnergyW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:3 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_min_speech_count(&self) -> ParamMinSpeechCountR {
+        ParamMinSpeechCountR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:10 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_max_speech_count(&self) -> ParamMaxSpeechCountR {
+        ParamMaxSpeechCountR::new(((self.bits >> 4) & 0x7f) as u8)
+    }
+    #[doc = "Bits 11:15 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_hangover_speech(&self) -> ParamHangoverSpeechR {
+        ParamHangoverSpeechR::new(((self.bits >> 11) & 0x1f) as u8)
+    }
+    #[doc = "Bits 16:23 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_hangover_silent(&self) -> ParamHangoverSilentR {
+        ParamHangoverSilentR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:30 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_max_offset(&self) -> ParamMaxOffsetR {
+        ParamMaxOffsetR::new(((self.bits >> 24) & 0x7f) as u8)
+    }
+    #[doc = "Bit 31 - Set 1 to skip band energy check."]
+    #[inline(always)]
+    pub fn param_skip_band_energy(&self) -> ParamSkipBandEnergyR {
+        ParamSkipBandEnergyR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_min_speech_count(&mut self) -> ParamMinSpeechCountW<'_, VadParam1Spec> {
+        ParamMinSpeechCountW::new(self, 0)
+    }
+    #[doc = "Bits 4:10 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_max_speech_count(&mut self) -> ParamMaxSpeechCountW<'_, VadParam1Spec> {
+        ParamMaxSpeechCountW::new(self, 4)
+    }
+    #[doc = "Bits 11:15 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_hangover_speech(&mut self) -> ParamHangoverSpeechW<'_, VadParam1Spec> {
+        ParamHangoverSpeechW::new(self, 11)
+    }
+    #[doc = "Bits 16:23 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_hangover_silent(&mut self) -> ParamHangoverSilentW<'_, VadParam1Spec> {
+        ParamHangoverSilentW::new(self, 16)
+    }
+    #[doc = "Bits 24:30 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_max_offset(&mut self) -> ParamMaxOffsetW<'_, VadParam1Spec> {
+        ParamMaxOffsetW::new(self, 24)
+    }
+    #[doc = "Bit 31 - Set 1 to skip band energy check."]
+    #[inline(always)]
+    pub fn param_skip_band_energy(&mut self) -> ParamSkipBandEnergyW<'_, VadParam1Spec> {
+        ParamSkipBandEnergyW::new(self, 31)
+    }
+}
+#[doc = "I2S VAD Parameter register\n\nYou can [`read`](crate::Reg::read) this register and get [`vad_param1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vad_param1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VadParam1Spec;
+impl crate::RegisterSpec for VadParam1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vad_param1::R`](R) reader structure"]
+impl crate::Readable for VadParam1Spec {}
+#[doc = "`write(|w| ..)` method takes [`vad_param1::W`](W) writer structure"]
+impl crate::Writable for VadParam1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VAD_PARAM1 to value 0x281e_1e43"]
+impl crate::Resettable for VadParam1Spec {
+    const RESET_VALUE: u32 = 0x281e_1e43;
+}

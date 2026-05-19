@@ -1,0 +1,183 @@
+#[repr(C)]
+#[doc = "Cluster IN_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?, IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK1_CH?, IN_LINK2_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, IN_CRC_INIT_DATA_CH?, RX_CRC_WIDTH_CH?, IN_CRC_CLEAR_CH?, IN_CRC_FINAL_RESULT_CH?, RX_CRC_EN_WR_DATA_CH?, RX_CRC_EN_ADDR_CH?, RX_CRC_DATA_EN_WR_DATA_CH?, RX_CRC_DATA_EN_ADDR_CH?"]
+#[doc(alias = "IN_CH")]
+pub struct InCh {
+    in_int: InInt,
+    in_conf0: InConf0,
+    in_conf1: InConf1,
+    infifo_status: InfifoStatus,
+    in_pop: InPop,
+    in_link1: InLink1,
+    in_link2: InLink2,
+    in_state: InState,
+    in_suc_eof_des_addr: InSucEofDesAddr,
+    in_err_eof_des_addr: InErrEofDesAddr,
+    in_dscr: InDscr,
+    in_dscr_bf0: InDscrBf0,
+    in_dscr_bf1: InDscrBf1,
+    in_pri: InPri,
+    in_peri_sel: InPeriSel,
+    crc: Crc,
+}
+impl InCh {
+    #[doc = "0x00..0x10 - Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+    #[inline(always)]
+    pub const fn in_int(&self) -> &InInt {
+        &self.in_int
+    }
+    #[doc = "0x10 - Configure 0 register of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_conf0(&self) -> &InConf0 {
+        &self.in_conf0
+    }
+    #[doc = "0x14 - Configure 1 register of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_conf1(&self) -> &InConf1 {
+        &self.in_conf1
+    }
+    #[doc = "0x18 - Receive FIFO status of Rx channel 0"]
+    #[inline(always)]
+    pub const fn infifo_status(&self) -> &InfifoStatus {
+        &self.infifo_status
+    }
+    #[doc = "0x1c - Pop control register of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_pop(&self) -> &InPop {
+        &self.in_pop
+    }
+    #[doc = "0x20 - Link descriptor configure and control register of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_link1(&self) -> &InLink1 {
+        &self.in_link1
+    }
+    #[doc = "0x24 - Link descriptor configure and control register of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_link2(&self) -> &InLink2 {
+        &self.in_link2
+    }
+    #[doc = "0x28 - Receive status of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_state(&self) -> &InState {
+        &self.in_state
+    }
+    #[doc = "0x2c - Inlink descriptor address when EOF occurs of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_suc_eof_des_addr(&self) -> &InSucEofDesAddr {
+        &self.in_suc_eof_des_addr
+    }
+    #[doc = "0x30 - Inlink descriptor address when errors occur of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_err_eof_des_addr(&self) -> &InErrEofDesAddr {
+        &self.in_err_eof_des_addr
+    }
+    #[doc = "0x34 - Current inlink descriptor address of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_dscr(&self) -> &InDscr {
+        &self.in_dscr
+    }
+    #[doc = "0x38 - The last inlink descriptor address of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_dscr_bf0(&self) -> &InDscrBf0 {
+        &self.in_dscr_bf0
+    }
+    #[doc = "0x3c - The second-to-last inlink descriptor address of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_dscr_bf1(&self) -> &InDscrBf1 {
+        &self.in_dscr_bf1
+    }
+    #[doc = "0x40 - Priority register of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_pri(&self) -> &InPri {
+        &self.in_pri
+    }
+    #[doc = "0x44 - Peripheral selection of Rx channel 0"]
+    #[inline(always)]
+    pub const fn in_peri_sel(&self) -> &InPeriSel {
+        &self.in_peri_sel
+    }
+    #[doc = "0x48..0x68 - Cluster CRC, containing IN_CRC_INIT_DATA, RX_CRC_WIDTH, IN_CRC_CLEAR, IN_CRC_FINAL_RESULT, RX_CRC_EN_WR_DATA, RX_CRC_EN_ADDR, RX_CRC_DATA_EN_WR_DATA, RX_CRC_DATA_EN_ADDR"]
+    #[inline(always)]
+    pub const fn crc(&self) -> &Crc {
+        &self.crc
+    }
+}
+#[doc = "Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+pub use self::in_int::InInt;
+#[doc = r"Cluster"]
+#[doc = "Cluster IN_INT, containing IN_INT_RAW, IN_INT_ST, IN_INT_ENA, IN_INT_CLR"]
+pub mod in_int;
+#[doc = "IN_CONF0 (rw) register accessor: Configure 0 register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf0`] module"]
+#[doc(alias = "IN_CONF0")]
+pub type InConf0 = crate::Reg<in_conf0::InConf0Spec>;
+#[doc = "Configure 0 register of Rx channel 0"]
+pub mod in_conf0;
+#[doc = "IN_CONF1 (rw) register accessor: Configure 1 register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_conf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_conf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf1`] module"]
+#[doc(alias = "IN_CONF1")]
+pub type InConf1 = crate::Reg<in_conf1::InConf1Spec>;
+#[doc = "Configure 1 register of Rx channel 0"]
+pub mod in_conf1;
+#[doc = "INFIFO_STATUS (r) register accessor: Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@infifo_status`] module"]
+#[doc(alias = "INFIFO_STATUS")]
+pub type InfifoStatus = crate::Reg<infifo_status::InfifoStatusSpec>;
+#[doc = "Receive FIFO status of Rx channel 0"]
+pub mod infifo_status;
+#[doc = "IN_POP (rw) register accessor: Pop control register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_pop::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_pop::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_pop`] module"]
+#[doc(alias = "IN_POP")]
+pub type InPop = crate::Reg<in_pop::InPopSpec>;
+#[doc = "Pop control register of Rx channel 0"]
+pub mod in_pop;
+#[doc = "IN_LINK1 (rw) register accessor: Link descriptor configure and control register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link1`] module"]
+#[doc(alias = "IN_LINK1")]
+pub type InLink1 = crate::Reg<in_link1::InLink1Spec>;
+#[doc = "Link descriptor configure and control register of Rx channel 0"]
+pub mod in_link1;
+#[doc = "IN_LINK2 (rw) register accessor: Link descriptor configure and control register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link2`] module"]
+#[doc(alias = "IN_LINK2")]
+pub type InLink2 = crate::Reg<in_link2::InLink2Spec>;
+#[doc = "Link descriptor configure and control register of Rx channel 0"]
+pub mod in_link2;
+#[doc = "IN_STATE (r) register accessor: Receive status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_state`] module"]
+#[doc(alias = "IN_STATE")]
+pub type InState = crate::Reg<in_state::InStateSpec>;
+#[doc = "Receive status of Rx channel 0"]
+pub mod in_state;
+#[doc = "IN_SUC_EOF_DES_ADDR (r) register accessor: Inlink descriptor address when EOF occurs of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_suc_eof_des_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_suc_eof_des_addr`] module"]
+#[doc(alias = "IN_SUC_EOF_DES_ADDR")]
+pub type InSucEofDesAddr = crate::Reg<in_suc_eof_des_addr::InSucEofDesAddrSpec>;
+#[doc = "Inlink descriptor address when EOF occurs of Rx channel 0"]
+pub mod in_suc_eof_des_addr;
+#[doc = "IN_ERR_EOF_DES_ADDR (r) register accessor: Inlink descriptor address when errors occur of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_err_eof_des_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_err_eof_des_addr`] module"]
+#[doc(alias = "IN_ERR_EOF_DES_ADDR")]
+pub type InErrEofDesAddr = crate::Reg<in_err_eof_des_addr::InErrEofDesAddrSpec>;
+#[doc = "Inlink descriptor address when errors occur of Rx channel 0"]
+pub mod in_err_eof_des_addr;
+#[doc = "IN_DSCR (r) register accessor: Current inlink descriptor address of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_dscr`] module"]
+#[doc(alias = "IN_DSCR")]
+pub type InDscr = crate::Reg<in_dscr::InDscrSpec>;
+#[doc = "Current inlink descriptor address of Rx channel 0"]
+pub mod in_dscr;
+#[doc = "IN_DSCR_BF0 (r) register accessor: The last inlink descriptor address of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr_bf0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_dscr_bf0`] module"]
+#[doc(alias = "IN_DSCR_BF0")]
+pub type InDscrBf0 = crate::Reg<in_dscr_bf0::InDscrBf0Spec>;
+#[doc = "The last inlink descriptor address of Rx channel 0"]
+pub mod in_dscr_bf0;
+#[doc = "IN_DSCR_BF1 (r) register accessor: The second-to-last inlink descriptor address of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr_bf1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_dscr_bf1`] module"]
+#[doc(alias = "IN_DSCR_BF1")]
+pub type InDscrBf1 = crate::Reg<in_dscr_bf1::InDscrBf1Spec>;
+#[doc = "The second-to-last inlink descriptor address of Rx channel 0"]
+pub mod in_dscr_bf1;
+#[doc = "IN_PRI (rw) register accessor: Priority register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_pri::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_pri::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_pri`] module"]
+#[doc(alias = "IN_PRI")]
+pub type InPri = crate::Reg<in_pri::InPriSpec>;
+#[doc = "Priority register of Rx channel 0"]
+pub mod in_pri;
+#[doc = "IN_PERI_SEL (rw) register accessor: Peripheral selection of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_peri_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_peri_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_peri_sel`] module"]
+#[doc(alias = "IN_PERI_SEL")]
+pub type InPeriSel = crate::Reg<in_peri_sel::InPeriSelSpec>;
+#[doc = "Peripheral selection of Rx channel 0"]
+pub mod in_peri_sel;
+#[doc = "Cluster CRC, containing IN_CRC_INIT_DATA, RX_CRC_WIDTH, IN_CRC_CLEAR, IN_CRC_FINAL_RESULT, RX_CRC_EN_WR_DATA, RX_CRC_EN_ADDR, RX_CRC_DATA_EN_WR_DATA, RX_CRC_DATA_EN_ADDR"]
+pub use self::crc::Crc;
+#[doc = r"Cluster"]
+#[doc = "Cluster CRC, containing IN_CRC_INIT_DATA, RX_CRC_WIDTH, IN_CRC_CLEAR, IN_CRC_FINAL_RESULT, RX_CRC_EN_WR_DATA, RX_CRC_EN_ADDR, RX_CRC_DATA_EN_WR_DATA, RX_CRC_DATA_EN_ADDR"]
+pub mod crc;

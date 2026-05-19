@@ -1,0 +1,128 @@
+#[doc = "Register `CONF1` reader"]
+pub type R = crate::R<Conf1Spec>;
+#[doc = "Register `CONF1` writer"]
+pub type W = crate::W<Conf1Spec>;
+#[doc = "Field `CHECK_SUM_EN` reader - Set this bit to enable head checksum check when receiving."]
+pub type CheckSumEnR = crate::BitReader;
+#[doc = "Field `CHECK_SUM_EN` writer - Set this bit to enable head checksum check when receiving."]
+pub type CheckSumEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CHECK_SEQ_EN` reader - Set this bit to enable sequence number check when receiving."]
+pub type CheckSeqEnR = crate::BitReader;
+#[doc = "Field `CHECK_SEQ_EN` writer - Set this bit to enable sequence number check when receiving."]
+pub type CheckSeqEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CRC_DISABLE` reader - Set this bit to support CRC calculation, and data integrity check bit should 1."]
+pub type CrcDisableR = crate::BitReader;
+#[doc = "Field `CRC_DISABLE` writer - Set this bit to support CRC calculation, and data integrity check bit should 1."]
+pub type CrcDisableW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SAVE_HEAD` reader - Set this bit to save data packet head when UHCI receive data."]
+pub type SaveHeadR = crate::BitReader;
+#[doc = "Field `SAVE_HEAD` writer - Set this bit to save data packet head when UHCI receive data."]
+pub type SaveHeadW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_CHECK_SUM_RE` reader - Set this bit to encode data packet with checksum."]
+pub type TxCheckSumReR = crate::BitReader;
+#[doc = "Field `TX_CHECK_SUM_RE` writer - Set this bit to encode data packet with checksum."]
+pub type TxCheckSumReW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_ACK_NUM_RE` reader - Set this bit to encode data packet with ACK when reliable data packet is ready."]
+pub type TxAckNumReR = crate::BitReader;
+#[doc = "Field `TX_ACK_NUM_RE` writer - Set this bit to encode data packet with ACK when reliable data packet is ready."]
+pub type TxAckNumReW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WAIT_SW_START` reader - Set this bit to enable UHCI encoder transfer to ST_SW_WAIT status."]
+pub type WaitSwStartR = crate::BitReader;
+#[doc = "Field `WAIT_SW_START` writer - Set this bit to enable UHCI encoder transfer to ST_SW_WAIT status."]
+pub type WaitSwStartW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SW_START` writer - Set this bit to transmit data packet if UCHI_ENCODE_STATE is ST_SW_WAIT."]
+pub type SwStartW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Set this bit to enable head checksum check when receiving."]
+    #[inline(always)]
+    pub fn check_sum_en(&self) -> CheckSumEnR {
+        CheckSumEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set this bit to enable sequence number check when receiving."]
+    #[inline(always)]
+    pub fn check_seq_en(&self) -> CheckSeqEnR {
+        CheckSeqEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Set this bit to support CRC calculation, and data integrity check bit should 1."]
+    #[inline(always)]
+    pub fn crc_disable(&self) -> CrcDisableR {
+        CrcDisableR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Set this bit to save data packet head when UHCI receive data."]
+    #[inline(always)]
+    pub fn save_head(&self) -> SaveHeadR {
+        SaveHeadR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Set this bit to encode data packet with checksum."]
+    #[inline(always)]
+    pub fn tx_check_sum_re(&self) -> TxCheckSumReR {
+        TxCheckSumReR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Set this bit to encode data packet with ACK when reliable data packet is ready."]
+    #[inline(always)]
+    pub fn tx_ack_num_re(&self) -> TxAckNumReR {
+        TxAckNumReR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Set this bit to enable UHCI encoder transfer to ST_SW_WAIT status."]
+    #[inline(always)]
+    pub fn wait_sw_start(&self) -> WaitSwStartR {
+        WaitSwStartR::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set this bit to enable head checksum check when receiving."]
+    #[inline(always)]
+    pub fn check_sum_en(&mut self) -> CheckSumEnW<'_, Conf1Spec> {
+        CheckSumEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to enable sequence number check when receiving."]
+    #[inline(always)]
+    pub fn check_seq_en(&mut self) -> CheckSeqEnW<'_, Conf1Spec> {
+        CheckSeqEnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Set this bit to support CRC calculation, and data integrity check bit should 1."]
+    #[inline(always)]
+    pub fn crc_disable(&mut self) -> CrcDisableW<'_, Conf1Spec> {
+        CrcDisableW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Set this bit to save data packet head when UHCI receive data."]
+    #[inline(always)]
+    pub fn save_head(&mut self) -> SaveHeadW<'_, Conf1Spec> {
+        SaveHeadW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Set this bit to encode data packet with checksum."]
+    #[inline(always)]
+    pub fn tx_check_sum_re(&mut self) -> TxCheckSumReW<'_, Conf1Spec> {
+        TxCheckSumReW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Set this bit to encode data packet with ACK when reliable data packet is ready."]
+    #[inline(always)]
+    pub fn tx_ack_num_re(&mut self) -> TxAckNumReW<'_, Conf1Spec> {
+        TxAckNumReW::new(self, 5)
+    }
+    #[doc = "Bit 7 - Set this bit to enable UHCI encoder transfer to ST_SW_WAIT status."]
+    #[inline(always)]
+    pub fn wait_sw_start(&mut self) -> WaitSwStartW<'_, Conf1Spec> {
+        WaitSwStartW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Set this bit to transmit data packet if UCHI_ENCODE_STATE is ST_SW_WAIT."]
+    #[inline(always)]
+    pub fn sw_start(&mut self) -> SwStartW<'_, Conf1Spec> {
+        SwStartW::new(self, 8)
+    }
+}
+#[doc = "UHCI Configuration Register1\n\nYou can [`read`](crate::Reg::read) this register and get [`conf1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Conf1Spec;
+impl crate::RegisterSpec for Conf1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`conf1::R`](R) reader structure"]
+impl crate::Readable for Conf1Spec {}
+#[doc = "`write(|w| ..)` method takes [`conf1::W`](W) writer structure"]
+impl crate::Writable for Conf1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CONF1 to value 0x33"]
+impl crate::Resettable for Conf1Spec {
+    const RESET_VALUE: u32 = 0x33;
+}

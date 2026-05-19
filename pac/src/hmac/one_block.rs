@@ -1,0 +1,22 @@
+#[doc = "Register `ONE_BLOCK` writer"]
+pub type W = crate::W<OneBlockSpec>;
+#[doc = "Field `SET_ONE_BLOCK` writer - Write 1 to indicate there is only one block which already contains padding bits and there is no need for padding."]
+pub type SetOneBlockW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Write 1 to indicate there is only one block which already contains padding bits and there is no need for padding."]
+    #[inline(always)]
+    pub fn set_one_block(&mut self) -> SetOneBlockW<'_, OneBlockSpec> {
+        SetOneBlockW::new(self, 0)
+    }
+}
+#[doc = "One block message register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`one_block::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OneBlockSpec;
+impl crate::RegisterSpec for OneBlockSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`one_block::W`](W) writer structure"]
+impl crate::Writable for OneBlockSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ONE_BLOCK to value 0"]
+impl crate::Resettable for OneBlockSpec {}

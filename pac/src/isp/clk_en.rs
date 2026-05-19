@@ -1,0 +1,315 @@
+#[doc = "Register `CLK_EN` reader"]
+pub type R = crate::R<ClkEnSpec>;
+#[doc = "Register `CLK_EN` writer"]
+pub type W = crate::W<ClkEnSpec>;
+#[doc = "Field `CLK_EN` reader - this bit configures the clk force on of isp reg. 0: disable, 1: enable"]
+pub type ClkEnR = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - this bit configures the clk force on of isp reg. 0: disable, 1: enable"]
+pub type ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_BLC_FORCE_ON` reader - this bit configures the clk force on of blc. 0: disable, 1: enable"]
+pub type ClkBlcForceOnR = crate::BitReader;
+#[doc = "Field `CLK_BLC_FORCE_ON` writer - this bit configures the clk force on of blc. 0: disable, 1: enable"]
+pub type ClkBlcForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_DPC_FORCE_ON` reader - this bit configures the clk force on of dpc. 0: disable, 1: enable"]
+pub type ClkDpcForceOnR = crate::BitReader;
+#[doc = "Field `CLK_DPC_FORCE_ON` writer - this bit configures the clk force on of dpc. 0: disable, 1: enable"]
+pub type ClkDpcForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_BF_FORCE_ON` reader - this bit configures the clk force on of bf. 0: disable, 1: enable"]
+pub type ClkBfForceOnR = crate::BitReader;
+#[doc = "Field `CLK_BF_FORCE_ON` writer - this bit configures the clk force on of bf. 0: disable, 1: enable"]
+pub type ClkBfForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_LSC_FORCE_ON` reader - this bit configures the clk force on of lsc. 0: disable, 1: enable"]
+pub type ClkLscForceOnR = crate::BitReader;
+#[doc = "Field `CLK_LSC_FORCE_ON` writer - this bit configures the clk force on of lsc. 0: disable, 1: enable"]
+pub type ClkLscForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_DEMOSAIC_FORCE_ON` reader - this bit configures the clk force on of demosaic. 0: disable, 1: enable"]
+pub type ClkDemosaicForceOnR = crate::BitReader;
+#[doc = "Field `CLK_DEMOSAIC_FORCE_ON` writer - this bit configures the clk force on of demosaic. 0: disable, 1: enable"]
+pub type ClkDemosaicForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_MEDIAN_FORCE_ON` reader - this bit configures the clk force on of median. 0: disable, 1: enable"]
+pub type ClkMedianForceOnR = crate::BitReader;
+#[doc = "Field `CLK_MEDIAN_FORCE_ON` writer - this bit configures the clk force on of median. 0: disable, 1: enable"]
+pub type ClkMedianForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_CCM_FORCE_ON` reader - this bit configures the clk force on of ccm. 0: disable, 1: enable"]
+pub type ClkCcmForceOnR = crate::BitReader;
+#[doc = "Field `CLK_CCM_FORCE_ON` writer - this bit configures the clk force on of ccm. 0: disable, 1: enable"]
+pub type ClkCcmForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_GAMMA_FORCE_ON` reader - this bit configures the clk force on of gamma. 0: disable, 1: enable"]
+pub type ClkGammaForceOnR = crate::BitReader;
+#[doc = "Field `CLK_GAMMA_FORCE_ON` writer - this bit configures the clk force on of gamma. 0: disable, 1: enable"]
+pub type ClkGammaForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_RGB2YUV_FORCE_ON` reader - this bit configures the clk force on of rgb2yuv. 0: disable, 1: enable"]
+pub type ClkRgb2yuvForceOnR = crate::BitReader;
+#[doc = "Field `CLK_RGB2YUV_FORCE_ON` writer - this bit configures the clk force on of rgb2yuv. 0: disable, 1: enable"]
+pub type ClkRgb2yuvForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_SHARP_FORCE_ON` reader - this bit configures the clk force on of sharp. 0: disable, 1: enable"]
+pub type ClkSharpForceOnR = crate::BitReader;
+#[doc = "Field `CLK_SHARP_FORCE_ON` writer - this bit configures the clk force on of sharp. 0: disable, 1: enable"]
+pub type ClkSharpForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_COLOR_FORCE_ON` reader - this bit configures the clk force on of color. 0: disable, 1: enable"]
+pub type ClkColorForceOnR = crate::BitReader;
+#[doc = "Field `CLK_COLOR_FORCE_ON` writer - this bit configures the clk force on of color. 0: disable, 1: enable"]
+pub type ClkColorForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_YUV2RGB_FORCE_ON` reader - this bit configures the clk force on of yuv2rgb. 0: disable, 1: enable"]
+pub type ClkYuv2rgbForceOnR = crate::BitReader;
+#[doc = "Field `CLK_YUV2RGB_FORCE_ON` writer - this bit configures the clk force on of yuv2rgb. 0: disable, 1: enable"]
+pub type ClkYuv2rgbForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_AE_FORCE_ON` reader - this bit configures the clk force on of ae. 0: disable, 1: enable"]
+pub type ClkAeForceOnR = crate::BitReader;
+#[doc = "Field `CLK_AE_FORCE_ON` writer - this bit configures the clk force on of ae. 0: disable, 1: enable"]
+pub type ClkAeForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_AF_FORCE_ON` reader - this bit configures the clk force on of af. 0: disable, 1: enable"]
+pub type ClkAfForceOnR = crate::BitReader;
+#[doc = "Field `CLK_AF_FORCE_ON` writer - this bit configures the clk force on of af. 0: disable, 1: enable"]
+pub type ClkAfForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_AWB_FORCE_ON` reader - this bit configures the clk force on of awb. 0: disable, 1: enable"]
+pub type ClkAwbForceOnR = crate::BitReader;
+#[doc = "Field `CLK_AWB_FORCE_ON` writer - this bit configures the clk force on of awb. 0: disable, 1: enable"]
+pub type ClkAwbForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_HIST_FORCE_ON` reader - this bit configures the clk force on of hist. 0: disable, 1: enable"]
+pub type ClkHistForceOnR = crate::BitReader;
+#[doc = "Field `CLK_HIST_FORCE_ON` writer - this bit configures the clk force on of hist. 0: disable, 1: enable"]
+pub type ClkHistForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_MIPI_IDI_FORCE_ON` reader - this bit configures the clk force on of mipi idi input. 0: disable, 1: enable"]
+pub type ClkMipiIdiForceOnR = crate::BitReader;
+#[doc = "Field `CLK_MIPI_IDI_FORCE_ON` writer - this bit configures the clk force on of mipi idi input. 0: disable, 1: enable"]
+pub type ClkMipiIdiForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ISP_MEM_CLK_FORCE_ON` reader - this bit configures the clk force on of all isp memory. 0: disable, 1: enable"]
+pub type IspMemClkForceOnR = crate::BitReader;
+#[doc = "Field `ISP_MEM_CLK_FORCE_ON` writer - this bit configures the clk force on of all isp memory. 0: disable, 1: enable"]
+pub type IspMemClkForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_CROP_FORCE_ON` reader - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+pub type ClkCropForceOnR = crate::BitReader;
+#[doc = "Field `CLK_CROP_FORCE_ON` writer - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+pub type ClkCropForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_WBG_FORCE_ON` reader - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+pub type ClkWbgForceOnR = crate::BitReader;
+#[doc = "Field `CLK_WBG_FORCE_ON` writer - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+pub type ClkWbgForceOnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - this bit configures the clk force on of isp reg. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_en(&self) -> ClkEnR {
+        ClkEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - this bit configures the clk force on of blc. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_blc_force_on(&self) -> ClkBlcForceOnR {
+        ClkBlcForceOnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - this bit configures the clk force on of dpc. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_dpc_force_on(&self) -> ClkDpcForceOnR {
+        ClkDpcForceOnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - this bit configures the clk force on of bf. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_bf_force_on(&self) -> ClkBfForceOnR {
+        ClkBfForceOnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - this bit configures the clk force on of lsc. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_lsc_force_on(&self) -> ClkLscForceOnR {
+        ClkLscForceOnR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - this bit configures the clk force on of demosaic. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_demosaic_force_on(&self) -> ClkDemosaicForceOnR {
+        ClkDemosaicForceOnR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - this bit configures the clk force on of median. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_median_force_on(&self) -> ClkMedianForceOnR {
+        ClkMedianForceOnR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - this bit configures the clk force on of ccm. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_ccm_force_on(&self) -> ClkCcmForceOnR {
+        ClkCcmForceOnR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - this bit configures the clk force on of gamma. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_gamma_force_on(&self) -> ClkGammaForceOnR {
+        ClkGammaForceOnR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - this bit configures the clk force on of rgb2yuv. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_rgb2yuv_force_on(&self) -> ClkRgb2yuvForceOnR {
+        ClkRgb2yuvForceOnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - this bit configures the clk force on of sharp. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_sharp_force_on(&self) -> ClkSharpForceOnR {
+        ClkSharpForceOnR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - this bit configures the clk force on of color. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_color_force_on(&self) -> ClkColorForceOnR {
+        ClkColorForceOnR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - this bit configures the clk force on of yuv2rgb. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_yuv2rgb_force_on(&self) -> ClkYuv2rgbForceOnR {
+        ClkYuv2rgbForceOnR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - this bit configures the clk force on of ae. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_ae_force_on(&self) -> ClkAeForceOnR {
+        ClkAeForceOnR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - this bit configures the clk force on of af. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_af_force_on(&self) -> ClkAfForceOnR {
+        ClkAfForceOnR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - this bit configures the clk force on of awb. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_awb_force_on(&self) -> ClkAwbForceOnR {
+        ClkAwbForceOnR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - this bit configures the clk force on of hist. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_hist_force_on(&self) -> ClkHistForceOnR {
+        ClkHistForceOnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - this bit configures the clk force on of mipi idi input. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_mipi_idi_force_on(&self) -> ClkMipiIdiForceOnR {
+        ClkMipiIdiForceOnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - this bit configures the clk force on of all isp memory. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn isp_mem_clk_force_on(&self) -> IspMemClkForceOnR {
+        IspMemClkForceOnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_crop_force_on(&self) -> ClkCropForceOnR {
+        ClkCropForceOnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_wbg_force_on(&self) -> ClkWbgForceOnR {
+        ClkWbgForceOnR::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - this bit configures the clk force on of isp reg. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_en(&mut self) -> ClkEnW<'_, ClkEnSpec> {
+        ClkEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - this bit configures the clk force on of blc. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_blc_force_on(&mut self) -> ClkBlcForceOnW<'_, ClkEnSpec> {
+        ClkBlcForceOnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - this bit configures the clk force on of dpc. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_dpc_force_on(&mut self) -> ClkDpcForceOnW<'_, ClkEnSpec> {
+        ClkDpcForceOnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - this bit configures the clk force on of bf. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_bf_force_on(&mut self) -> ClkBfForceOnW<'_, ClkEnSpec> {
+        ClkBfForceOnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - this bit configures the clk force on of lsc. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_lsc_force_on(&mut self) -> ClkLscForceOnW<'_, ClkEnSpec> {
+        ClkLscForceOnW::new(self, 4)
+    }
+    #[doc = "Bit 5 - this bit configures the clk force on of demosaic. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_demosaic_force_on(&mut self) -> ClkDemosaicForceOnW<'_, ClkEnSpec> {
+        ClkDemosaicForceOnW::new(self, 5)
+    }
+    #[doc = "Bit 6 - this bit configures the clk force on of median. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_median_force_on(&mut self) -> ClkMedianForceOnW<'_, ClkEnSpec> {
+        ClkMedianForceOnW::new(self, 6)
+    }
+    #[doc = "Bit 7 - this bit configures the clk force on of ccm. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_ccm_force_on(&mut self) -> ClkCcmForceOnW<'_, ClkEnSpec> {
+        ClkCcmForceOnW::new(self, 7)
+    }
+    #[doc = "Bit 8 - this bit configures the clk force on of gamma. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_gamma_force_on(&mut self) -> ClkGammaForceOnW<'_, ClkEnSpec> {
+        ClkGammaForceOnW::new(self, 8)
+    }
+    #[doc = "Bit 9 - this bit configures the clk force on of rgb2yuv. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_rgb2yuv_force_on(&mut self) -> ClkRgb2yuvForceOnW<'_, ClkEnSpec> {
+        ClkRgb2yuvForceOnW::new(self, 9)
+    }
+    #[doc = "Bit 10 - this bit configures the clk force on of sharp. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_sharp_force_on(&mut self) -> ClkSharpForceOnW<'_, ClkEnSpec> {
+        ClkSharpForceOnW::new(self, 10)
+    }
+    #[doc = "Bit 11 - this bit configures the clk force on of color. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_color_force_on(&mut self) -> ClkColorForceOnW<'_, ClkEnSpec> {
+        ClkColorForceOnW::new(self, 11)
+    }
+    #[doc = "Bit 12 - this bit configures the clk force on of yuv2rgb. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_yuv2rgb_force_on(&mut self) -> ClkYuv2rgbForceOnW<'_, ClkEnSpec> {
+        ClkYuv2rgbForceOnW::new(self, 12)
+    }
+    #[doc = "Bit 13 - this bit configures the clk force on of ae. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_ae_force_on(&mut self) -> ClkAeForceOnW<'_, ClkEnSpec> {
+        ClkAeForceOnW::new(self, 13)
+    }
+    #[doc = "Bit 14 - this bit configures the clk force on of af. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_af_force_on(&mut self) -> ClkAfForceOnW<'_, ClkEnSpec> {
+        ClkAfForceOnW::new(self, 14)
+    }
+    #[doc = "Bit 15 - this bit configures the clk force on of awb. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_awb_force_on(&mut self) -> ClkAwbForceOnW<'_, ClkEnSpec> {
+        ClkAwbForceOnW::new(self, 15)
+    }
+    #[doc = "Bit 16 - this bit configures the clk force on of hist. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_hist_force_on(&mut self) -> ClkHistForceOnW<'_, ClkEnSpec> {
+        ClkHistForceOnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - this bit configures the clk force on of mipi idi input. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_mipi_idi_force_on(&mut self) -> ClkMipiIdiForceOnW<'_, ClkEnSpec> {
+        ClkMipiIdiForceOnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - this bit configures the clk force on of all isp memory. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn isp_mem_clk_force_on(&mut self) -> IspMemClkForceOnW<'_, ClkEnSpec> {
+        IspMemClkForceOnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_crop_force_on(&mut self) -> ClkCropForceOnW<'_, ClkEnSpec> {
+        ClkCropForceOnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_wbg_force_on(&mut self) -> ClkWbgForceOnW<'_, ClkEnSpec> {
+        ClkWbgForceOnW::new(self, 20)
+    }
+}
+#[doc = "isp clk control register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClkEnSpec;
+impl crate::RegisterSpec for ClkEnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clk_en::R`](R) reader structure"]
+impl crate::Readable for ClkEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`clk_en::W`](W) writer structure"]
+impl crate::Writable for ClkEnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CLK_EN to value 0"]
+impl crate::Resettable for ClkEnSpec {}

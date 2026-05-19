@@ -1,0 +1,35 @@
+#[doc = "Register `CLK160M` reader"]
+pub type R = crate::R<Clk160mSpec>;
+#[doc = "Register `CLK160M` writer"]
+pub type W = crate::W<Clk160mSpec>;
+#[doc = "Field `CLK_I2C_MST_SEL_160M` reader - need des"]
+pub type ClkI2cMstSel160mR = crate::BitReader;
+#[doc = "Field `CLK_I2C_MST_SEL_160M` writer - need des"]
+pub type ClkI2cMstSel160mW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need des"]
+    #[inline(always)]
+    pub fn clk_i2c_mst_sel_160m(&self) -> ClkI2cMstSel160mR {
+        ClkI2cMstSel160mR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need des"]
+    #[inline(always)]
+    pub fn clk_i2c_mst_sel_160m(&mut self) -> ClkI2cMstSel160mW<'_, Clk160mSpec> {
+        ClkI2cMstSel160mW::new(self, 0)
+    }
+}
+#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`clk160m::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk160m::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Clk160mSpec;
+impl crate::RegisterSpec for Clk160mSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`clk160m::R`](R) reader structure"]
+impl crate::Readable for Clk160mSpec {}
+#[doc = "`write(|w| ..)` method takes [`clk160m::W`](W) writer structure"]
+impl crate::Writable for Clk160mSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CLK160M to value 0"]
+impl crate::Resettable for Clk160mSpec {}

@@ -1,0 +1,175 @@
+#[doc = "Register `CH_DBG_EN` reader"]
+pub type R = crate::R<ChDbgEnSpec>;
+#[doc = "Register `CH_DBG_EN` writer"]
+pub type W = crate::W<ChDbgEnSpec>;
+#[doc = "Field `H264_OUT_CH0_DBG_EN` reader - configures whether to enable out channel 0 debug. 0: disable, 1: enable"]
+pub type H264OutCh0DbgEnR = crate::BitReader;
+#[doc = "Field `H264_OUT_CH0_DBG_EN` writer - configures whether to enable out channel 0 debug. 0: disable, 1: enable"]
+pub type H264OutCh0DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_OUT_CH1_DBG_EN` reader - configures whether to enable out channel 1 debug. 0: disable, 1: enable"]
+pub type H264OutCh1DbgEnR = crate::BitReader;
+#[doc = "Field `H264_OUT_CH1_DBG_EN` writer - configures whether to enable out channel 1 debug. 0: disable, 1: enable"]
+pub type H264OutCh1DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_OUT_CH2_DBG_EN` reader - configures whether to enable out channel 2 debug. 0: disable, 1: enable"]
+pub type H264OutCh2DbgEnR = crate::BitReader;
+#[doc = "Field `H264_OUT_CH2_DBG_EN` writer - configures whether to enable out channel 2 debug. 0: disable, 1: enable"]
+pub type H264OutCh2DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_OUT_CH3_DBG_EN` reader - configures whether to enable out channel 3 debug. 0: disable, 1: enable"]
+pub type H264OutCh3DbgEnR = crate::BitReader;
+#[doc = "Field `H264_OUT_CH3_DBG_EN` writer - configures whether to enable out channel 3 debug. 0: disable, 1: enable"]
+pub type H264OutCh3DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_OUT_CH4_DBG_EN` reader - configures whether to enable out channel 4 debug. 0: disable, 1: enable"]
+pub type H264OutCh4DbgEnR = crate::BitReader;
+#[doc = "Field `H264_OUT_CH4_DBG_EN` writer - configures whether to enable out channel 4 debug. 0: disable, 1: enable"]
+pub type H264OutCh4DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_IN_CH0_DBG_EN` reader - configures whether to enable in channel 0 debug. 0: disable, 1: enable"]
+pub type H264InCh0DbgEnR = crate::BitReader;
+#[doc = "Field `H264_IN_CH0_DBG_EN` writer - configures whether to enable in channel 0 debug. 0: disable, 1: enable"]
+pub type H264InCh0DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_IN_CH1_DBG_EN` reader - configures whether to enable in channel 1 debug. 0: disable, 1: enable"]
+pub type H264InCh1DbgEnR = crate::BitReader;
+#[doc = "Field `H264_IN_CH1_DBG_EN` writer - configures whether to enable in channel 1 debug. 0: disable, 1: enable"]
+pub type H264InCh1DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_IN_CH2_DBG_EN` reader - configures whether to enable in channel 2 debug. 0: disable, 1: enable"]
+pub type H264InCh2DbgEnR = crate::BitReader;
+#[doc = "Field `H264_IN_CH2_DBG_EN` writer - configures whether to enable in channel 2 debug. 0: disable, 1: enable"]
+pub type H264InCh2DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_IN_CH3_DBG_EN` reader - configures whether to enable in channel 3 debug. 0: disable, 1: enable"]
+pub type H264InCh3DbgEnR = crate::BitReader;
+#[doc = "Field `H264_IN_CH3_DBG_EN` writer - configures whether to enable in channel 3 debug. 0: disable, 1: enable"]
+pub type H264InCh3DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_IN_CH4_DBG_EN` reader - configures whether to enable in channel 4 debug. 0: disable, 1: enable"]
+pub type H264InCh4DbgEnR = crate::BitReader;
+#[doc = "Field `H264_IN_CH4_DBG_EN` writer - configures whether to enable in channel 4 debug. 0: disable, 1: enable"]
+pub type H264InCh4DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `H264_IN_CH5_DBG_EN` reader - configures whether to enable in channel 5 debug. 0: disable, 1: enable"]
+pub type H264InCh5DbgEnR = crate::BitReader;
+#[doc = "Field `H264_IN_CH5_DBG_EN` writer - configures whether to enable in channel 5 debug. 0: disable, 1: enable"]
+pub type H264InCh5DbgEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - configures whether to enable out channel 0 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch0_dbg_en(&self) -> H264OutCh0DbgEnR {
+        H264OutCh0DbgEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - configures whether to enable out channel 1 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch1_dbg_en(&self) -> H264OutCh1DbgEnR {
+        H264OutCh1DbgEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - configures whether to enable out channel 2 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch2_dbg_en(&self) -> H264OutCh2DbgEnR {
+        H264OutCh2DbgEnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - configures whether to enable out channel 3 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch3_dbg_en(&self) -> H264OutCh3DbgEnR {
+        H264OutCh3DbgEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - configures whether to enable out channel 4 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch4_dbg_en(&self) -> H264OutCh4DbgEnR {
+        H264OutCh4DbgEnR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 16 - configures whether to enable in channel 0 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch0_dbg_en(&self) -> H264InCh0DbgEnR {
+        H264InCh0DbgEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - configures whether to enable in channel 1 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch1_dbg_en(&self) -> H264InCh1DbgEnR {
+        H264InCh1DbgEnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - configures whether to enable in channel 2 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch2_dbg_en(&self) -> H264InCh2DbgEnR {
+        H264InCh2DbgEnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - configures whether to enable in channel 3 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch3_dbg_en(&self) -> H264InCh3DbgEnR {
+        H264InCh3DbgEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - configures whether to enable in channel 4 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch4_dbg_en(&self) -> H264InCh4DbgEnR {
+        H264InCh4DbgEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - configures whether to enable in channel 5 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch5_dbg_en(&self) -> H264InCh5DbgEnR {
+        H264InCh5DbgEnR::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - configures whether to enable out channel 0 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch0_dbg_en(&mut self) -> H264OutCh0DbgEnW<'_, ChDbgEnSpec> {
+        H264OutCh0DbgEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - configures whether to enable out channel 1 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch1_dbg_en(&mut self) -> H264OutCh1DbgEnW<'_, ChDbgEnSpec> {
+        H264OutCh1DbgEnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - configures whether to enable out channel 2 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch2_dbg_en(&mut self) -> H264OutCh2DbgEnW<'_, ChDbgEnSpec> {
+        H264OutCh2DbgEnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - configures whether to enable out channel 3 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch3_dbg_en(&mut self) -> H264OutCh3DbgEnW<'_, ChDbgEnSpec> {
+        H264OutCh3DbgEnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - configures whether to enable out channel 4 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_out_ch4_dbg_en(&mut self) -> H264OutCh4DbgEnW<'_, ChDbgEnSpec> {
+        H264OutCh4DbgEnW::new(self, 4)
+    }
+    #[doc = "Bit 16 - configures whether to enable in channel 0 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch0_dbg_en(&mut self) -> H264InCh0DbgEnW<'_, ChDbgEnSpec> {
+        H264InCh0DbgEnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - configures whether to enable in channel 1 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch1_dbg_en(&mut self) -> H264InCh1DbgEnW<'_, ChDbgEnSpec> {
+        H264InCh1DbgEnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - configures whether to enable in channel 2 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch2_dbg_en(&mut self) -> H264InCh2DbgEnW<'_, ChDbgEnSpec> {
+        H264InCh2DbgEnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - configures whether to enable in channel 3 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch3_dbg_en(&mut self) -> H264InCh3DbgEnW<'_, ChDbgEnSpec> {
+        H264InCh3DbgEnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - configures whether to enable in channel 4 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch4_dbg_en(&mut self) -> H264InCh4DbgEnW<'_, ChDbgEnSpec> {
+        H264InCh4DbgEnW::new(self, 20)
+    }
+    #[doc = "Bit 21 - configures whether to enable in channel 5 debug. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn h264_in_ch5_dbg_en(&mut self) -> H264InCh5DbgEnW<'_, ChDbgEnSpec> {
+        H264InCh5DbgEnW::new(self, 21)
+    }
+}
+#[doc = "channel debug enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_dbg_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_dbg_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChDbgEnSpec;
+impl crate::RegisterSpec for ChDbgEnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ch_dbg_en::R`](R) reader structure"]
+impl crate::Readable for ChDbgEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`ch_dbg_en::W`](W) writer structure"]
+impl crate::Writable for ChDbgEnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CH_DBG_EN to value 0"]
+impl crate::Resettable for ChDbgEnSpec {}

@@ -1,0 +1,35 @@
+#[doc = "Register `L2_CACHE_ACS_FAIL_INT_RAW` reader"]
+pub type R = crate::R<L2CacheAcsFailIntRawSpec>;
+#[doc = "Register `L2_CACHE_ACS_FAIL_INT_RAW` writer"]
+pub type W = crate::W<L2CacheAcsFailIntRawSpec>;
+#[doc = "Field `L2_CACHE_FAIL_INT_RAW` reader - The raw bit of the interrupt of access fail that occurs in L2-Cache."]
+pub type L2CacheFailIntRawR = crate::BitReader;
+#[doc = "Field `L2_CACHE_FAIL_INT_RAW` writer - The raw bit of the interrupt of access fail that occurs in L2-Cache."]
+pub type L2CacheFailIntRawW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 5 - The raw bit of the interrupt of access fail that occurs in L2-Cache."]
+    #[inline(always)]
+    pub fn l2_cache_fail_int_raw(&self) -> L2CacheFailIntRawR {
+        L2CacheFailIntRawR::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 5 - The raw bit of the interrupt of access fail that occurs in L2-Cache."]
+    #[inline(always)]
+    pub fn l2_cache_fail_int_raw(&mut self) -> L2CacheFailIntRawW<'_, L2CacheAcsFailIntRawSpec> {
+        L2CacheFailIntRawW::new(self, 5)
+    }
+}
+#[doc = "Cache Access Fail Interrupt raw register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_acs_fail_int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_acs_fail_int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CacheAcsFailIntRawSpec;
+impl crate::RegisterSpec for L2CacheAcsFailIntRawSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_acs_fail_int_raw::R`](R) reader structure"]
+impl crate::Readable for L2CacheAcsFailIntRawSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_cache_acs_fail_int_raw::W`](W) writer structure"]
+impl crate::Writable for L2CacheAcsFailIntRawSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_CACHE_ACS_FAIL_INT_RAW to value 0"]
+impl crate::Resettable for L2CacheAcsFailIntRawSpec {}

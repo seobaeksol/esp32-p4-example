@@ -1,0 +1,20 @@
+#[doc = "Register `L1_DBUS3_ACS_MISS_CNT` reader"]
+pub type R = crate::R<L1Dbus3AcsMissCntSpec>;
+#[doc = "Field `L1_DBUS3_MISS_CNT` reader - The register records the number of missing when bus3 accesses L1-DCache."]
+pub type L1Dbus3MissCntR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - The register records the number of missing when bus3 accesses L1-DCache."]
+    #[inline(always)]
+    pub fn l1_dbus3_miss_cnt(&self) -> L1Dbus3MissCntR {
+        L1Dbus3MissCntR::new(self.bits)
+    }
+}
+#[doc = "L1-DCache bus3 Miss-Access Counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_dbus3_acs_miss_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1Dbus3AcsMissCntSpec;
+impl crate::RegisterSpec for L1Dbus3AcsMissCntSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_dbus3_acs_miss_cnt::R`](R) reader structure"]
+impl crate::Readable for L1Dbus3AcsMissCntSpec {}
+#[doc = "`reset()` method sets L1_DBUS3_ACS_MISS_CNT to value 0"]
+impl crate::Resettable for L1Dbus3AcsMissCntSpec {}

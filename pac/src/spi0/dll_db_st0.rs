@@ -1,0 +1,20 @@
+#[doc = "Register `DLL_DB_ST0` reader"]
+pub type R = crate::R<DllDbSt0Spec>;
+#[doc = "Field `DB_FIFO_CNT_H` reader - Debug for DLL FIFO pointer. Use a 64bits shift register to record pointer changes during the debug window. db_fifo_cnt\\[63:32\\]"]
+pub type DbFifoCntHR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Debug for DLL FIFO pointer. Use a 64bits shift register to record pointer changes during the debug window. db_fifo_cnt\\[63:32\\]"]
+    #[inline(always)]
+    pub fn db_fifo_cnt_h(&self) -> DbFifoCntHR {
+        DbFifoCntHR::new(self.bits)
+    }
+}
+#[doc = "MSPI DLL debug status0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`dll_db_st0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DllDbSt0Spec;
+impl crate::RegisterSpec for DllDbSt0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dll_db_st0::R`](R) reader structure"]
+impl crate::Readable for DllDbSt0Spec {}
+#[doc = "`reset()` method sets DLL_DB_ST0 to value 0"]
+impl crate::Resettable for DllDbSt0Spec {}

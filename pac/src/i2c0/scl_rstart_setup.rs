@@ -1,0 +1,37 @@
+#[doc = "Register `SCL_RSTART_SETUP` reader"]
+pub type R = crate::R<SclRstartSetupSpec>;
+#[doc = "Register `SCL_RSTART_SETUP` writer"]
+pub type W = crate::W<SclRstartSetupSpec>;
+#[doc = "Field `TIME` reader - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type TimeR = crate::FieldReader<u16>;
+#[doc = "Field `TIME` writer - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type TimeW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+impl R {
+    #[doc = "Bits 0:8 - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn time(&self) -> TimeR {
+        TimeR::new((self.bits & 0x01ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:8 - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn time(&mut self) -> TimeW<'_, SclRstartSetupSpec> {
+        TimeW::new(self, 0)
+    }
+}
+#[doc = "Configures the delay between the positive edge of SCL and the negative edge of SDA\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_rstart_setup::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_rstart_setup::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SclRstartSetupSpec;
+impl crate::RegisterSpec for SclRstartSetupSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`scl_rstart_setup::R`](R) reader structure"]
+impl crate::Readable for SclRstartSetupSpec {}
+#[doc = "`write(|w| ..)` method takes [`scl_rstart_setup::W`](W) writer structure"]
+impl crate::Writable for SclRstartSetupSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SCL_RSTART_SETUP to value 0x08"]
+impl crate::Resettable for SclRstartSetupSpec {
+    const RESET_VALUE: u32 = 0x08;
+}

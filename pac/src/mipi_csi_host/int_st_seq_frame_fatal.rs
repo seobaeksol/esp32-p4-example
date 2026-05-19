@@ -1,0 +1,125 @@
+#[doc = "Register `INT_ST_SEQ_FRAME_FATAL` reader"]
+pub type R = crate::R<IntStSeqFrameFatalSpec>;
+#[doc = "Field `ST_ERR_F_SEQ_VC0` reader - NA"]
+pub type StErrFSeqVc0R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC1` reader - NA"]
+pub type StErrFSeqVc1R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC2` reader - NA"]
+pub type StErrFSeqVc2R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC3` reader - NA"]
+pub type StErrFSeqVc3R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC4` reader - NA"]
+pub type StErrFSeqVc4R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC5` reader - NA"]
+pub type StErrFSeqVc5R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC6` reader - NA"]
+pub type StErrFSeqVc6R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC7` reader - NA"]
+pub type StErrFSeqVc7R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC8` reader - NA"]
+pub type StErrFSeqVc8R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC9` reader - NA"]
+pub type StErrFSeqVc9R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC10` reader - NA"]
+pub type StErrFSeqVc10R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC11` reader - NA"]
+pub type StErrFSeqVc11R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC12` reader - NA"]
+pub type StErrFSeqVc12R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC13` reader - NA"]
+pub type StErrFSeqVc13R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC14` reader - NA"]
+pub type StErrFSeqVc14R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_SEQ_VC15` reader - NA"]
+pub type StErrFSeqVc15R = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc0(&self) -> StErrFSeqVc0R {
+        StErrFSeqVc0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc1(&self) -> StErrFSeqVc1R {
+        StErrFSeqVc1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc2(&self) -> StErrFSeqVc2R {
+        StErrFSeqVc2R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc3(&self) -> StErrFSeqVc3R {
+        StErrFSeqVc3R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc4(&self) -> StErrFSeqVc4R {
+        StErrFSeqVc4R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc5(&self) -> StErrFSeqVc5R {
+        StErrFSeqVc5R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc6(&self) -> StErrFSeqVc6R {
+        StErrFSeqVc6R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc7(&self) -> StErrFSeqVc7R {
+        StErrFSeqVc7R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc8(&self) -> StErrFSeqVc8R {
+        StErrFSeqVc8R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc9(&self) -> StErrFSeqVc9R {
+        StErrFSeqVc9R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc10(&self) -> StErrFSeqVc10R {
+        StErrFSeqVc10R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc11(&self) -> StErrFSeqVc11R {
+        StErrFSeqVc11R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc12(&self) -> StErrFSeqVc12R {
+        StErrFSeqVc12R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc13(&self) -> StErrFSeqVc13R {
+        StErrFSeqVc13R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc14(&self) -> StErrFSeqVc14R {
+        StErrFSeqVc14R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_seq_vc15(&self) -> StErrFSeqVc15R {
+        StErrFSeqVc15R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st_seq_frame_fatal::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSeqFrameFatalSpec;
+impl crate::RegisterSpec for IntStSeqFrameFatalSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st_seq_frame_fatal::R`](R) reader structure"]
+impl crate::Readable for IntStSeqFrameFatalSpec {}
+#[doc = "`reset()` method sets INT_ST_SEQ_FRAME_FATAL to value 0"]
+impl crate::Resettable for IntStSeqFrameFatalSpec {}

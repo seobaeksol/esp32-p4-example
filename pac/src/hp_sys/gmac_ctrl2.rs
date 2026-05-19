@@ -1,0 +1,20 @@
+#[doc = "Register `GMAC_CTRL2` reader"]
+pub type R = crate::R<GmacCtrl2Spec>;
+#[doc = "Field `PTP_TIMESTAMP_H` reader - N/A"]
+pub type PtpTimestampHR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - N/A"]
+    #[inline(always)]
+    pub fn ptp_timestamp_h(&self) -> PtpTimestampHR {
+        PtpTimestampHR::new(self.bits)
+    }
+}
+#[doc = "N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`gmac_ctrl2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GmacCtrl2Spec;
+impl crate::RegisterSpec for GmacCtrl2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`gmac_ctrl2::R`](R) reader structure"]
+impl crate::Readable for GmacCtrl2Spec {}
+#[doc = "`reset()` method sets GMAC_CTRL2 to value 0"]
+impl crate::Resettable for GmacCtrl2Spec {}

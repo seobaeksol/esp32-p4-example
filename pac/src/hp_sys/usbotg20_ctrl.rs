@@ -1,0 +1,184 @@
+#[doc = "Register `USBOTG20_CTRL` reader"]
+pub type R = crate::R<Usbotg20CtrlSpec>;
+#[doc = "Register `USBOTG20_CTRL` writer"]
+pub type W = crate::W<Usbotg20CtrlSpec>;
+#[doc = "Field `OTG_PHY_TEST_DONE` reader - N/A"]
+pub type OtgPhyTestDoneR = crate::BitReader;
+#[doc = "Field `USB_MEM_AUX_CTRL` reader - N/A"]
+pub type UsbMemAuxCtrlR = crate::FieldReader<u16>;
+#[doc = "Field `USB_MEM_AUX_CTRL` writer - N/A"]
+pub type UsbMemAuxCtrlW<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
+#[doc = "Field `PHY_SUSPENDM` reader - N/A"]
+pub type PhySuspendmR = crate::BitReader;
+#[doc = "Field `PHY_SUSPENDM` writer - N/A"]
+pub type PhySuspendmW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_SUSPEND_FORCE_EN` reader - N/A"]
+pub type PhySuspendForceEnR = crate::BitReader;
+#[doc = "Field `PHY_SUSPEND_FORCE_EN` writer - N/A"]
+pub type PhySuspendForceEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_RSTN` reader - N/A"]
+pub type PhyRstnR = crate::BitReader;
+#[doc = "Field `PHY_RSTN` writer - N/A"]
+pub type PhyRstnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_RESET_FORCE_EN` reader - N/A"]
+pub type PhyResetForceEnR = crate::BitReader;
+#[doc = "Field `PHY_RESET_FORCE_EN` writer - N/A"]
+pub type PhyResetForceEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_PLL_FORCE_EN` reader - N/A"]
+pub type PhyPllForceEnR = crate::BitReader;
+#[doc = "Field `PHY_PLL_FORCE_EN` writer - N/A"]
+pub type PhyPllForceEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PHY_PLL_EN` reader - N/A"]
+pub type PhyPllEnR = crate::BitReader;
+#[doc = "Field `PHY_PLL_EN` writer - N/A"]
+pub type PhyPllEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OTG_SUSPENDM` reader - N/A"]
+pub type OtgSuspendmR = crate::BitReader;
+#[doc = "Field `OTG_SUSPENDM` writer - N/A"]
+pub type OtgSuspendmW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OTG_PHY_TXBITSTUFF_EN` reader - N/A"]
+pub type OtgPhyTxbitstuffEnR = crate::BitReader;
+#[doc = "Field `OTG_PHY_TXBITSTUFF_EN` writer - N/A"]
+pub type OtgPhyTxbitstuffEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OTG_PHY_REFCLK_MODE` reader - N/A"]
+pub type OtgPhyRefclkModeR = crate::BitReader;
+#[doc = "Field `OTG_PHY_REFCLK_MODE` writer - N/A"]
+pub type OtgPhyRefclkModeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OTG_PHY_BISTEN` reader - N/A"]
+pub type OtgPhyBistenR = crate::BitReader;
+#[doc = "Field `OTG_PHY_BISTEN` writer - N/A"]
+pub type OtgPhyBistenW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_test_done(&self) -> OtgPhyTestDoneR {
+        OtgPhyTestDoneR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 1:14 - N/A"]
+    #[inline(always)]
+    pub fn usb_mem_aux_ctrl(&self) -> UsbMemAuxCtrlR {
+        UsbMemAuxCtrlR::new(((self.bits >> 1) & 0x3fff) as u16)
+    }
+    #[doc = "Bit 15 - N/A"]
+    #[inline(always)]
+    pub fn phy_suspendm(&self) -> PhySuspendmR {
+        PhySuspendmR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - N/A"]
+    #[inline(always)]
+    pub fn phy_suspend_force_en(&self) -> PhySuspendForceEnR {
+        PhySuspendForceEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - N/A"]
+    #[inline(always)]
+    pub fn phy_rstn(&self) -> PhyRstnR {
+        PhyRstnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - N/A"]
+    #[inline(always)]
+    pub fn phy_reset_force_en(&self) -> PhyResetForceEnR {
+        PhyResetForceEnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - N/A"]
+    #[inline(always)]
+    pub fn phy_pll_force_en(&self) -> PhyPllForceEnR {
+        PhyPllForceEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - N/A"]
+    #[inline(always)]
+    pub fn phy_pll_en(&self) -> PhyPllEnR {
+        PhyPllEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - N/A"]
+    #[inline(always)]
+    pub fn otg_suspendm(&self) -> OtgSuspendmR {
+        OtgSuspendmR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_txbitstuff_en(&self) -> OtgPhyTxbitstuffEnR {
+        OtgPhyTxbitstuffEnR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_refclk_mode(&self) -> OtgPhyRefclkModeR {
+        OtgPhyRefclkModeR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_bisten(&self) -> OtgPhyBistenR {
+        OtgPhyBistenR::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 1:14 - N/A"]
+    #[inline(always)]
+    pub fn usb_mem_aux_ctrl(&mut self) -> UsbMemAuxCtrlW<'_, Usbotg20CtrlSpec> {
+        UsbMemAuxCtrlW::new(self, 1)
+    }
+    #[doc = "Bit 15 - N/A"]
+    #[inline(always)]
+    pub fn phy_suspendm(&mut self) -> PhySuspendmW<'_, Usbotg20CtrlSpec> {
+        PhySuspendmW::new(self, 15)
+    }
+    #[doc = "Bit 16 - N/A"]
+    #[inline(always)]
+    pub fn phy_suspend_force_en(&mut self) -> PhySuspendForceEnW<'_, Usbotg20CtrlSpec> {
+        PhySuspendForceEnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - N/A"]
+    #[inline(always)]
+    pub fn phy_rstn(&mut self) -> PhyRstnW<'_, Usbotg20CtrlSpec> {
+        PhyRstnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - N/A"]
+    #[inline(always)]
+    pub fn phy_reset_force_en(&mut self) -> PhyResetForceEnW<'_, Usbotg20CtrlSpec> {
+        PhyResetForceEnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - N/A"]
+    #[inline(always)]
+    pub fn phy_pll_force_en(&mut self) -> PhyPllForceEnW<'_, Usbotg20CtrlSpec> {
+        PhyPllForceEnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - N/A"]
+    #[inline(always)]
+    pub fn phy_pll_en(&mut self) -> PhyPllEnW<'_, Usbotg20CtrlSpec> {
+        PhyPllEnW::new(self, 20)
+    }
+    #[doc = "Bit 21 - N/A"]
+    #[inline(always)]
+    pub fn otg_suspendm(&mut self) -> OtgSuspendmW<'_, Usbotg20CtrlSpec> {
+        OtgSuspendmW::new(self, 21)
+    }
+    #[doc = "Bit 22 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_txbitstuff_en(&mut self) -> OtgPhyTxbitstuffEnW<'_, Usbotg20CtrlSpec> {
+        OtgPhyTxbitstuffEnW::new(self, 22)
+    }
+    #[doc = "Bit 23 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_refclk_mode(&mut self) -> OtgPhyRefclkModeW<'_, Usbotg20CtrlSpec> {
+        OtgPhyRefclkModeW::new(self, 23)
+    }
+    #[doc = "Bit 24 - N/A"]
+    #[inline(always)]
+    pub fn otg_phy_bisten(&mut self) -> OtgPhyBistenW<'_, Usbotg20CtrlSpec> {
+        OtgPhyBistenW::new(self, 24)
+    }
+}
+#[doc = "N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`usbotg20_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usbotg20_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Usbotg20CtrlSpec;
+impl crate::RegisterSpec for Usbotg20CtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`usbotg20_ctrl::R`](R) reader structure"]
+impl crate::Readable for Usbotg20CtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`usbotg20_ctrl::W`](W) writer structure"]
+impl crate::Writable for Usbotg20CtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets USBOTG20_CTRL to value 0x0082_2640"]
+impl crate::Resettable for Usbotg20CtrlSpec {
+    const RESET_VALUE: u32 = 0x0082_2640;
+}

@@ -1,0 +1,121 @@
+#[doc = "Register `AMP_CTRL3` reader"]
+pub type R = crate::R<AmpCtrl3Spec>;
+#[doc = "Register `AMP_CTRL3` writer"]
+pub type W = crate::W<AmpCtrl3Spec>;
+#[doc = "Field `SAR1_DAC_XPD_FSM` reader - N/A"]
+pub type Sar1DacXpdFsmR = crate::FieldReader;
+#[doc = "Field `SAR1_DAC_XPD_FSM` writer - N/A"]
+pub type Sar1DacXpdFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `XPD_SAR_AMP_FSM` reader - N/A"]
+pub type XpdSarAmpFsmR = crate::FieldReader;
+#[doc = "Field `XPD_SAR_AMP_FSM` writer - N/A"]
+pub type XpdSarAmpFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `AMP_RST_FB_FSM` reader - N/A"]
+pub type AmpRstFbFsmR = crate::FieldReader;
+#[doc = "Field `AMP_RST_FB_FSM` writer - N/A"]
+pub type AmpRstFbFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `AMP_SHORT_REF_FSM` reader - N/A"]
+pub type AmpShortRefFsmR = crate::FieldReader;
+#[doc = "Field `AMP_SHORT_REF_FSM` writer - N/A"]
+pub type AmpShortRefFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `AMP_SHORT_REF_GND_FSM` reader - N/A"]
+pub type AmpShortRefGndFsmR = crate::FieldReader;
+#[doc = "Field `AMP_SHORT_REF_GND_FSM` writer - N/A"]
+pub type AmpShortRefGndFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `XPD_SAR_FSM` reader - N/A"]
+pub type XpdSarFsmR = crate::FieldReader;
+#[doc = "Field `XPD_SAR_FSM` writer - N/A"]
+pub type XpdSarFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `SAR_RSTB_FSM` reader - N/A"]
+pub type SarRstbFsmR = crate::FieldReader;
+#[doc = "Field `SAR_RSTB_FSM` writer - N/A"]
+pub type SarRstbFsmW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:3 - N/A"]
+    #[inline(always)]
+    pub fn sar1_dac_xpd_fsm(&self) -> Sar1DacXpdFsmR {
+        Sar1DacXpdFsmR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:7 - N/A"]
+    #[inline(always)]
+    pub fn xpd_sar_amp_fsm(&self) -> XpdSarAmpFsmR {
+        XpdSarAmpFsmR::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+    #[doc = "Bits 8:11 - N/A"]
+    #[inline(always)]
+    pub fn amp_rst_fb_fsm(&self) -> AmpRstFbFsmR {
+        AmpRstFbFsmR::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:15 - N/A"]
+    #[inline(always)]
+    pub fn amp_short_ref_fsm(&self) -> AmpShortRefFsmR {
+        AmpShortRefFsmR::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bits 16:19 - N/A"]
+    #[inline(always)]
+    pub fn amp_short_ref_gnd_fsm(&self) -> AmpShortRefGndFsmR {
+        AmpShortRefGndFsmR::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+    #[doc = "Bits 20:23 - N/A"]
+    #[inline(always)]
+    pub fn xpd_sar_fsm(&self) -> XpdSarFsmR {
+        XpdSarFsmR::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:27 - N/A"]
+    #[inline(always)]
+    pub fn sar_rstb_fsm(&self) -> SarRstbFsmR {
+        SarRstbFsmR::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - N/A"]
+    #[inline(always)]
+    pub fn sar1_dac_xpd_fsm(&mut self) -> Sar1DacXpdFsmW<'_, AmpCtrl3Spec> {
+        Sar1DacXpdFsmW::new(self, 0)
+    }
+    #[doc = "Bits 4:7 - N/A"]
+    #[inline(always)]
+    pub fn xpd_sar_amp_fsm(&mut self) -> XpdSarAmpFsmW<'_, AmpCtrl3Spec> {
+        XpdSarAmpFsmW::new(self, 4)
+    }
+    #[doc = "Bits 8:11 - N/A"]
+    #[inline(always)]
+    pub fn amp_rst_fb_fsm(&mut self) -> AmpRstFbFsmW<'_, AmpCtrl3Spec> {
+        AmpRstFbFsmW::new(self, 8)
+    }
+    #[doc = "Bits 12:15 - N/A"]
+    #[inline(always)]
+    pub fn amp_short_ref_fsm(&mut self) -> AmpShortRefFsmW<'_, AmpCtrl3Spec> {
+        AmpShortRefFsmW::new(self, 12)
+    }
+    #[doc = "Bits 16:19 - N/A"]
+    #[inline(always)]
+    pub fn amp_short_ref_gnd_fsm(&mut self) -> AmpShortRefGndFsmW<'_, AmpCtrl3Spec> {
+        AmpShortRefGndFsmW::new(self, 16)
+    }
+    #[doc = "Bits 20:23 - N/A"]
+    #[inline(always)]
+    pub fn xpd_sar_fsm(&mut self) -> XpdSarFsmW<'_, AmpCtrl3Spec> {
+        XpdSarFsmW::new(self, 20)
+    }
+    #[doc = "Bits 24:27 - N/A"]
+    #[inline(always)]
+    pub fn sar_rstb_fsm(&mut self) -> SarRstbFsmW<'_, AmpCtrl3Spec> {
+        SarRstbFsmW::new(self, 24)
+    }
+}
+#[doc = "N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`amp_ctrl3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`amp_ctrl3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AmpCtrl3Spec;
+impl crate::RegisterSpec for AmpCtrl3Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`amp_ctrl3::R`](R) reader structure"]
+impl crate::Readable for AmpCtrl3Spec {}
+#[doc = "`write(|w| ..)` method takes [`amp_ctrl3::W`](W) writer structure"]
+impl crate::Writable for AmpCtrl3Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AMP_CTRL3 to value 0x0073_38f3"]
+impl crate::Resettable for AmpCtrl3Spec {
+    const RESET_VALUE: u32 = 0x0073_38f3;
+}

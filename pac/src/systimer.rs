@@ -1,0 +1,279 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    conf: Conf,
+    unit_op: [UnitOp; 2],
+    unitload: [Unitload; 2],
+    trgt: [Trgt; 3],
+    target_conf: [TargetConf; 3],
+    unit_value: [UnitValue; 2],
+    comp_load: [CompLoad; 3],
+    unit_load: [UnitLoad; 2],
+    int_ena: IntEna,
+    int_raw: IntRaw,
+    int_clr: IntClr,
+    int_st: IntSt,
+    real_target: [RealTarget; 3],
+    _reserved13: [u8; 0x70],
+    date: Date,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Configure system timer clock"]
+    #[inline(always)]
+    pub const fn conf(&self) -> &Conf {
+        &self.conf
+    }
+    #[doc = "0x04..0x0c - system timer unit%s value update register"]
+    #[inline(always)]
+    pub const fn unit_op(&self, n: usize) -> &UnitOp {
+        &self.unit_op[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x0c - system timer unit%s value update register"]
+    #[inline(always)]
+    pub fn unit_op_iter(&self) -> impl Iterator<Item = &UnitOp> {
+        self.unit_op.iter()
+    }
+    #[doc = "0x04 - system timer unit0 value update register"]
+    #[inline(always)]
+    pub const fn unit0_op(&self) -> &UnitOp {
+        self.unit_op(0)
+    }
+    #[doc = "0x08 - system timer unit1 value update register"]
+    #[inline(always)]
+    pub const fn unit1_op(&self) -> &UnitOp {
+        self.unit_op(1)
+    }
+    #[doc = "0x0c..0x1c - Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+    #[inline(always)]
+    pub const fn unitload(&self, n: usize) -> &Unitload {
+        &self.unitload[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x1c - Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+    #[inline(always)]
+    pub fn unitload_iter(&self) -> impl Iterator<Item = &Unitload> {
+        self.unitload.iter()
+    }
+    #[doc = "0x0c..0x14 - Cluster UNIT0LOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+    #[inline(always)]
+    pub const fn unit0load(&self) -> &Unitload {
+        self.unitload(0)
+    }
+    #[doc = "0x14..0x1c - Cluster UNIT1LOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+    #[inline(always)]
+    pub const fn unit1load(&self) -> &Unitload {
+        self.unitload(1)
+    }
+    #[doc = "0x1c..0x34 - Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+    #[inline(always)]
+    pub const fn trgt(&self, n: usize) -> &Trgt {
+        &self.trgt[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1c..0x34 - Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+    #[inline(always)]
+    pub fn trgt_iter(&self) -> impl Iterator<Item = &Trgt> {
+        self.trgt.iter()
+    }
+    #[doc = "0x34..0x40 - system timer comp%s target mode register"]
+    #[inline(always)]
+    pub const fn target_conf(&self, n: usize) -> &TargetConf {
+        &self.target_conf[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x34..0x40 - system timer comp%s target mode register"]
+    #[inline(always)]
+    pub fn target_conf_iter(&self) -> impl Iterator<Item = &TargetConf> {
+        self.target_conf.iter()
+    }
+    #[doc = "0x34 - system timer comp0 target mode register"]
+    #[inline(always)]
+    pub const fn target0_conf(&self) -> &TargetConf {
+        self.target_conf(0)
+    }
+    #[doc = "0x38 - system timer comp1 target mode register"]
+    #[inline(always)]
+    pub const fn target1_conf(&self) -> &TargetConf {
+        self.target_conf(1)
+    }
+    #[doc = "0x3c - system timer comp2 target mode register"]
+    #[inline(always)]
+    pub const fn target2_conf(&self) -> &TargetConf {
+        self.target_conf(2)
+    }
+    #[doc = "0x40..0x50 - Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub const fn unit_value(&self, n: usize) -> &UnitValue {
+        &self.unit_value[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x40..0x50 - Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub fn unit_value_iter(&self) -> impl Iterator<Item = &UnitValue> {
+        self.unit_value.iter()
+    }
+    #[doc = "0x40..0x48 - Cluster UNIT0_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub const fn unit0_value(&self) -> &UnitValue {
+        self.unit_value(0)
+    }
+    #[doc = "0x48..0x50 - Cluster UNIT1_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+    #[inline(always)]
+    pub const fn unit1_value(&self) -> &UnitValue {
+        self.unit_value(1)
+    }
+    #[doc = "0x50..0x5c - system timer comp%s conf sync register"]
+    #[inline(always)]
+    pub const fn comp_load(&self, n: usize) -> &CompLoad {
+        &self.comp_load[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x5c - system timer comp%s conf sync register"]
+    #[inline(always)]
+    pub fn comp_load_iter(&self) -> impl Iterator<Item = &CompLoad> {
+        self.comp_load.iter()
+    }
+    #[doc = "0x50 - system timer comp0 conf sync register"]
+    #[inline(always)]
+    pub const fn comp0_load(&self) -> &CompLoad {
+        self.comp_load(0)
+    }
+    #[doc = "0x54 - system timer comp1 conf sync register"]
+    #[inline(always)]
+    pub const fn comp1_load(&self) -> &CompLoad {
+        self.comp_load(1)
+    }
+    #[doc = "0x58 - system timer comp2 conf sync register"]
+    #[inline(always)]
+    pub const fn comp2_load(&self) -> &CompLoad {
+        self.comp_load(2)
+    }
+    #[doc = "0x5c..0x64 - system timer unit%s conf sync register"]
+    #[inline(always)]
+    pub const fn unit_load(&self, n: usize) -> &UnitLoad {
+        &self.unit_load[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x5c..0x64 - system timer unit%s conf sync register"]
+    #[inline(always)]
+    pub fn unit_load_iter(&self) -> impl Iterator<Item = &UnitLoad> {
+        self.unit_load.iter()
+    }
+    #[doc = "0x5c - system timer unit0 conf sync register"]
+    #[inline(always)]
+    pub const fn unit0_load(&self) -> &UnitLoad {
+        self.unit_load(0)
+    }
+    #[doc = "0x60 - system timer unit1 conf sync register"]
+    #[inline(always)]
+    pub const fn unit1_load(&self) -> &UnitLoad {
+        self.unit_load(1)
+    }
+    #[doc = "0x64 - systimer interrupt enable register"]
+    #[inline(always)]
+    pub const fn int_ena(&self) -> &IntEna {
+        &self.int_ena
+    }
+    #[doc = "0x68 - systimer interrupt raw register"]
+    #[inline(always)]
+    pub const fn int_raw(&self) -> &IntRaw {
+        &self.int_raw
+    }
+    #[doc = "0x6c - systimer interrupt clear register"]
+    #[inline(always)]
+    pub const fn int_clr(&self) -> &IntClr {
+        &self.int_clr
+    }
+    #[doc = "0x70 - systimer interrupt status register"]
+    #[inline(always)]
+    pub const fn int_st(&self) -> &IntSt {
+        &self.int_st
+    }
+    #[doc = "0x74..0x8c - Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
+    #[inline(always)]
+    pub const fn real_target(&self, n: usize) -> &RealTarget {
+        &self.real_target[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x74..0x8c - Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
+    #[inline(always)]
+    pub fn real_target_iter(&self) -> impl Iterator<Item = &RealTarget> {
+        self.real_target.iter()
+    }
+    #[doc = "0xfc - system timer version control register"]
+    #[inline(always)]
+    pub const fn date(&self) -> &Date {
+        &self.date
+    }
+}
+#[doc = "CONF (rw) register accessor: Configure system timer clock\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
+#[doc(alias = "CONF")]
+pub type Conf = crate::Reg<conf::ConfSpec>;
+#[doc = "Configure system timer clock"]
+pub mod conf;
+#[doc = "UNIT_OP (rw) register accessor: system timer unit%s value update register\n\nYou can [`read`](crate::Reg::read) this register and get [`unit_op::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit_op::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit_op`] module"]
+#[doc(alias = "UNIT_OP")]
+pub type UnitOp = crate::Reg<unit_op::UnitOpSpec>;
+#[doc = "system timer unit%s value update register"]
+pub mod unit_op;
+#[doc = "Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+pub use self::unitload::Unitload;
+#[doc = r"Cluster"]
+#[doc = "Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+pub mod unitload;
+#[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+pub use self::trgt::Trgt;
+#[doc = r"Cluster"]
+#[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+pub mod trgt;
+#[doc = "TARGET_CONF (rw) register accessor: system timer comp%s target mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`target_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target_conf`] module"]
+#[doc(alias = "TARGET_CONF")]
+pub type TargetConf = crate::Reg<target_conf::TargetConfSpec>;
+#[doc = "system timer comp%s target mode register"]
+pub mod target_conf;
+#[doc = "Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+pub use self::unit_value::UnitValue;
+#[doc = r"Cluster"]
+#[doc = "Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+pub mod unit_value;
+#[doc = "COMP_LOAD (w) register accessor: system timer comp%s conf sync register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comp_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comp_load`] module"]
+#[doc(alias = "COMP_LOAD")]
+pub type CompLoad = crate::Reg<comp_load::CompLoadSpec>;
+#[doc = "system timer comp%s conf sync register"]
+pub mod comp_load;
+#[doc = "UNIT_LOAD (w) register accessor: system timer unit%s conf sync register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit_load`] module"]
+#[doc(alias = "UNIT_LOAD")]
+pub type UnitLoad = crate::Reg<unit_load::UnitLoadSpec>;
+#[doc = "system timer unit%s conf sync register"]
+pub mod unit_load;
+#[doc = "INT_ENA (rw) register accessor: systimer interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc(alias = "INT_ENA")]
+pub type IntEna = crate::Reg<int_ena::IntEnaSpec>;
+#[doc = "systimer interrupt enable register"]
+pub mod int_ena;
+#[doc = "INT_RAW (rw) register accessor: systimer interrupt raw register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc(alias = "INT_RAW")]
+pub type IntRaw = crate::Reg<int_raw::IntRawSpec>;
+#[doc = "systimer interrupt raw register"]
+pub mod int_raw;
+#[doc = "INT_CLR (w) register accessor: systimer interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc(alias = "INT_CLR")]
+pub type IntClr = crate::Reg<int_clr::IntClrSpec>;
+#[doc = "systimer interrupt clear register"]
+pub mod int_clr;
+#[doc = "INT_ST (r) register accessor: systimer interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc(alias = "INT_ST")]
+pub type IntSt = crate::Reg<int_st::IntStSpec>;
+#[doc = "systimer interrupt status register"]
+pub mod int_st;
+#[doc = "Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
+pub use self::real_target::RealTarget;
+#[doc = r"Cluster"]
+#[doc = "Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
+pub mod real_target;
+#[doc = "DATE (rw) register accessor: system timer version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc(alias = "DATE")]
+pub type Date = crate::Reg<date::DateSpec>;
+#[doc = "system timer version control register"]
+pub mod date;

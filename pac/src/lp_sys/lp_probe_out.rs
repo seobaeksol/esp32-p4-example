@@ -1,0 +1,20 @@
+#[doc = "Register `LP_PROBE_OUT` reader"]
+pub type R = crate::R<LpProbeOutSpec>;
+#[doc = "Field `PROBE_TOP_OUT` reader - need_des"]
+pub type ProbeTopOutR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn probe_top_out(&self) -> ProbeTopOutR {
+        ProbeTopOutR::new(self.bits)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_probe_out::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpProbeOutSpec;
+impl crate::RegisterSpec for LpProbeOutSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_probe_out::R`](R) reader structure"]
+impl crate::Readable for LpProbeOutSpec {}
+#[doc = "`reset()` method sets LP_PROBE_OUT to value 0"]
+impl crate::Resettable for LpProbeOutSpec {}

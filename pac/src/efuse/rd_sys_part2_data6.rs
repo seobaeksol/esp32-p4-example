@@ -1,0 +1,34 @@
+#[doc = "Register `RD_SYS_PART2_DATA6` reader"]
+pub type R = crate::R<RdSysPart2Data6Spec>;
+#[doc = "Field `PVT_LIMIT` reader - Power glitch monitor threthold."]
+pub type PvtLimitR = crate::FieldReader<u16>;
+#[doc = "Field `PVT_PUMP_LIMIT` reader - Use to configure voltage monitor limit for charge pump"]
+pub type PvtPumpLimitR = crate::FieldReader;
+#[doc = "Field `PVT_CELL_SELECT` reader - Power glitch monitor PVT cell select."]
+pub type PvtCellSelectR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:15 - Power glitch monitor threthold."]
+    #[inline(always)]
+    pub fn pvt_limit(&self) -> PvtLimitR {
+        PvtLimitR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:23 - Use to configure voltage monitor limit for charge pump"]
+    #[inline(always)]
+    pub fn pvt_pump_limit(&self) -> PvtPumpLimitR {
+        PvtPumpLimitR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:30 - Power glitch monitor PVT cell select."]
+    #[inline(always)]
+    pub fn pvt_cell_select(&self) -> PvtCellSelectR {
+        PvtCellSelectR::new(((self.bits >> 24) & 0x7f) as u8)
+    }
+}
+#[doc = "Represents rd_sys_part2_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_sys_part2_data6::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdSysPart2Data6Spec;
+impl crate::RegisterSpec for RdSysPart2Data6Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rd_sys_part2_data6::R`](R) reader structure"]
+impl crate::Readable for RdSysPart2Data6Spec {}
+#[doc = "`reset()` method sets RD_SYS_PART2_DATA6 to value 0"]
+impl crate::Resettable for RdSysPart2Data6Spec {}

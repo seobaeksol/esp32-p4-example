@@ -1,0 +1,100 @@
+#[doc = "Register `TEST` reader"]
+pub type R = crate::R<TestSpec>;
+#[doc = "Register `TEST` writer"]
+pub type W = crate::W<TestSpec>;
+#[doc = "Field `TEST_ENABLE` reader - Enable test of the USB pad"]
+pub type TestEnableR = crate::BitReader;
+#[doc = "Field `TEST_ENABLE` writer - Enable test of the USB pad"]
+pub type TestEnableW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TEST_USB_OE` reader - USB pad oen in test"]
+pub type TestUsbOeR = crate::BitReader;
+#[doc = "Field `TEST_USB_OE` writer - USB pad oen in test"]
+pub type TestUsbOeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TEST_TX_DP` reader - USB D+ tx value in test"]
+pub type TestTxDpR = crate::BitReader;
+#[doc = "Field `TEST_TX_DP` writer - USB D+ tx value in test"]
+pub type TestTxDpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TEST_TX_DM` reader - USB D- tx value in test"]
+pub type TestTxDmR = crate::BitReader;
+#[doc = "Field `TEST_TX_DM` writer - USB D- tx value in test"]
+pub type TestTxDmW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TEST_RX_RCV` reader - USB RCV value in test"]
+pub type TestRxRcvR = crate::BitReader;
+#[doc = "Field `TEST_RX_DP` reader - USB D+ rx value in test"]
+pub type TestRxDpR = crate::BitReader;
+#[doc = "Field `TEST_RX_DM` reader - USB D- rx value in test"]
+pub type TestRxDmR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - Enable test of the USB pad"]
+    #[inline(always)]
+    pub fn test_enable(&self) -> TestEnableR {
+        TestEnableR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - USB pad oen in test"]
+    #[inline(always)]
+    pub fn test_usb_oe(&self) -> TestUsbOeR {
+        TestUsbOeR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - USB D+ tx value in test"]
+    #[inline(always)]
+    pub fn test_tx_dp(&self) -> TestTxDpR {
+        TestTxDpR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - USB D- tx value in test"]
+    #[inline(always)]
+    pub fn test_tx_dm(&self) -> TestTxDmR {
+        TestTxDmR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - USB RCV value in test"]
+    #[inline(always)]
+    pub fn test_rx_rcv(&self) -> TestRxRcvR {
+        TestRxRcvR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - USB D+ rx value in test"]
+    #[inline(always)]
+    pub fn test_rx_dp(&self) -> TestRxDpR {
+        TestRxDpR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - USB D- rx value in test"]
+    #[inline(always)]
+    pub fn test_rx_dm(&self) -> TestRxDmR {
+        TestRxDmR::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Enable test of the USB pad"]
+    #[inline(always)]
+    pub fn test_enable(&mut self) -> TestEnableW<'_, TestSpec> {
+        TestEnableW::new(self, 0)
+    }
+    #[doc = "Bit 1 - USB pad oen in test"]
+    #[inline(always)]
+    pub fn test_usb_oe(&mut self) -> TestUsbOeW<'_, TestSpec> {
+        TestUsbOeW::new(self, 1)
+    }
+    #[doc = "Bit 2 - USB D+ tx value in test"]
+    #[inline(always)]
+    pub fn test_tx_dp(&mut self) -> TestTxDpW<'_, TestSpec> {
+        TestTxDpW::new(self, 2)
+    }
+    #[doc = "Bit 3 - USB D- tx value in test"]
+    #[inline(always)]
+    pub fn test_tx_dm(&mut self) -> TestTxDmW<'_, TestSpec> {
+        TestTxDmW::new(self, 3)
+    }
+}
+#[doc = "Registers used for debugging the PHY.\n\nYou can [`read`](crate::Reg::read) this register and get [`test::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`test::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TestSpec;
+impl crate::RegisterSpec for TestSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`test::R`](R) reader structure"]
+impl crate::Readable for TestSpec {}
+#[doc = "`write(|w| ..)` method takes [`test::W`](W) writer structure"]
+impl crate::Writable for TestSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TEST to value 0x30"]
+impl crate::Resettable for TestSpec {
+    const RESET_VALUE: u32 = 0x30;
+}

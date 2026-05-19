@@ -1,0 +1,49 @@
+#[doc = "Register `SRAM_DWR_CMD` reader"]
+pub type R = crate::R<SramDwrCmdSpec>;
+#[doc = "Register `SRAM_DWR_CMD` writer"]
+pub type W = crate::W<SramDwrCmdSpec>;
+#[doc = "Field `CACHE_SRAM_USR_WR_CMD_VALUE` reader - For SPI0,When cache mode is enable it is the write command value of command phase for sram."]
+pub type CacheSramUsrWrCmdValueR = crate::FieldReader<u16>;
+#[doc = "Field `CACHE_SRAM_USR_WR_CMD_VALUE` writer - For SPI0,When cache mode is enable it is the write command value of command phase for sram."]
+pub type CacheSramUsrWrCmdValueW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `CACHE_SRAM_USR_WR_CMD_BITLEN` reader - For SPI0,When cache mode is enable it is the in bits of command phase for sram. The register value shall be (bit_num-1)."]
+pub type CacheSramUsrWrCmdBitlenR = crate::FieldReader;
+#[doc = "Field `CACHE_SRAM_USR_WR_CMD_BITLEN` writer - For SPI0,When cache mode is enable it is the in bits of command phase for sram. The register value shall be (bit_num-1)."]
+pub type CacheSramUsrWrCmdBitlenW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:15 - For SPI0,When cache mode is enable it is the write command value of command phase for sram."]
+    #[inline(always)]
+    pub fn cache_sram_usr_wr_cmd_value(&self) -> CacheSramUsrWrCmdValueR {
+        CacheSramUsrWrCmdValueR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 28:31 - For SPI0,When cache mode is enable it is the in bits of command phase for sram. The register value shall be (bit_num-1)."]
+    #[inline(always)]
+    pub fn cache_sram_usr_wr_cmd_bitlen(&self) -> CacheSramUsrWrCmdBitlenR {
+        CacheSramUsrWrCmdBitlenR::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - For SPI0,When cache mode is enable it is the write command value of command phase for sram."]
+    #[inline(always)]
+    pub fn cache_sram_usr_wr_cmd_value(&mut self) -> CacheSramUsrWrCmdValueW<'_, SramDwrCmdSpec> {
+        CacheSramUsrWrCmdValueW::new(self, 0)
+    }
+    #[doc = "Bits 28:31 - For SPI0,When cache mode is enable it is the in bits of command phase for sram. The register value shall be (bit_num-1)."]
+    #[inline(always)]
+    pub fn cache_sram_usr_wr_cmd_bitlen(&mut self) -> CacheSramUsrWrCmdBitlenW<'_, SramDwrCmdSpec> {
+        CacheSramUsrWrCmdBitlenW::new(self, 28)
+    }
+}
+#[doc = "SPI0 external RAM DDR write command control register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_dwr_cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_dwr_cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SramDwrCmdSpec;
+impl crate::RegisterSpec for SramDwrCmdSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sram_dwr_cmd::R`](R) reader structure"]
+impl crate::Readable for SramDwrCmdSpec {}
+#[doc = "`write(|w| ..)` method takes [`sram_dwr_cmd::W`](W) writer structure"]
+impl crate::Writable for SramDwrCmdSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SRAM_DWR_CMD to value 0"]
+impl crate::Resettable for SramDwrCmdSpec {}

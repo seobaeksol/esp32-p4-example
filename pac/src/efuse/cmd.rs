@@ -1,0 +1,63 @@
+#[doc = "Register `CMD` reader"]
+pub type R = crate::R<CmdSpec>;
+#[doc = "Register `CMD` writer"]
+pub type W = crate::W<CmdSpec>;
+#[doc = "Field `READ_CMD` reader - Set this bit to send read command."]
+pub type ReadCmdR = crate::BitReader;
+#[doc = "Field `READ_CMD` writer - Set this bit to send read command."]
+pub type ReadCmdW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PGM_CMD` reader - Set this bit to send programming command."]
+pub type PgmCmdR = crate::BitReader;
+#[doc = "Field `PGM_CMD` writer - Set this bit to send programming command."]
+pub type PgmCmdW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLK_NUM` reader - The serial number of the block to be programmed. Value 0-10 corresponds to block number 0-10, respectively."]
+pub type BlkNumR = crate::FieldReader;
+#[doc = "Field `BLK_NUM` writer - The serial number of the block to be programmed. Value 0-10 corresponds to block number 0-10, respectively."]
+pub type BlkNumW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bit 0 - Set this bit to send read command."]
+    #[inline(always)]
+    pub fn read_cmd(&self) -> ReadCmdR {
+        ReadCmdR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set this bit to send programming command."]
+    #[inline(always)]
+    pub fn pgm_cmd(&self) -> PgmCmdR {
+        PgmCmdR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:5 - The serial number of the block to be programmed. Value 0-10 corresponds to block number 0-10, respectively."]
+    #[inline(always)]
+    pub fn blk_num(&self) -> BlkNumR {
+        BlkNumR::new(((self.bits >> 2) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set this bit to send read command."]
+    #[inline(always)]
+    pub fn read_cmd(&mut self) -> ReadCmdW<'_, CmdSpec> {
+        ReadCmdW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to send programming command."]
+    #[inline(always)]
+    pub fn pgm_cmd(&mut self) -> PgmCmdW<'_, CmdSpec> {
+        PgmCmdW::new(self, 1)
+    }
+    #[doc = "Bits 2:5 - The serial number of the block to be programmed. Value 0-10 corresponds to block number 0-10, respectively."]
+    #[inline(always)]
+    pub fn blk_num(&mut self) -> BlkNumW<'_, CmdSpec> {
+        BlkNumW::new(self, 2)
+    }
+}
+#[doc = "eFuse command register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CmdSpec;
+impl crate::RegisterSpec for CmdSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cmd::R`](R) reader structure"]
+impl crate::Readable for CmdSpec {}
+#[doc = "`write(|w| ..)` method takes [`cmd::W`](W) writer structure"]
+impl crate::Writable for CmdSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CMD to value 0"]
+impl crate::Resettable for CmdSpec {}

@@ -1,0 +1,137 @@
+#[doc = "Register `LP_AONCLKRST_RESET_CAUSE` reader"]
+pub type R = crate::R<LpAonclkrstResetCauseSpec>;
+#[doc = "Register `LP_AONCLKRST_RESET_CAUSE` writer"]
+pub type W = crate::W<LpAonclkrstResetCauseSpec>;
+#[doc = "Field `LP_AONCLKRST_LPCORE_RESET_CAUSE` reader - 6'h1: POR reset 6'h9: PMU LP PERI power down reset 6'ha: PMU LP CPU reset 6'hf: brown out reset 6'h10: LP watchdog chip reset 6'h12: super watch dog reset 6'h13: glitch reset 6'h14: software reset"]
+pub type LpAonclkrstLpcoreResetCauseR = crate::FieldReader;
+#[doc = "Field `LP_AONCLKRST_LPCORE_RESET_FLAG` reader - need_des"]
+pub type LpAonclkrstLpcoreResetFlagR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_HPCORE0_RESET_CAUSE` reader - 6'h1: POR reset 6'h3: digital system software reset 6'h5: PMU HP system power down reset 6'h7: HP system reset from HP watchdog 6'h9: HP system reset from LP watchdog 6'hb: HP core reset from HP watchdog 6'hc: HP core software reset 6'hd: HP core reset from LP watchdog 6'hf: brown out reset 6'h10: LP watchdog chip reset 6'h12: super watch dog reset 6'h13: glitch reset 6'h14: efuse crc error reset 6'h16: HP usb jtag chip reset 6'h17: HP usb uart chip reset 6'h18: HP jtag reset 6'h1a: HP core lockup"]
+pub type LpAonclkrstHpcore0ResetCauseR = crate::FieldReader;
+#[doc = "Field `LP_AONCLKRST_HPCORE0_RESET_FLAG` reader - need_des"]
+pub type LpAonclkrstHpcore0ResetFlagR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_HPCORE1_RESET_CAUSE` reader - 6'h1: POR reset 6'h3: digital system software reset 6'h5: PMU HP system power down reset 6'h7: HP system reset from HP watchdog 6'h9: HP system reset from LP watchdog 6'hb: HP core reset from HP watchdog 6'hc: HP core software reset 6'hd: HP core reset from LP watchdog 6'hf: brown out reset 6'h10: LP watchdog chip reset 6'h12: super watch dog reset 6'h13: glitch reset 6'h14: efuse crc error reset 6'h16: HP usb jtag chip reset 6'h17: HP usb uart chip reset 6'h18: HP jtag reset 6'h1a: HP core lockup"]
+pub type LpAonclkrstHpcore1ResetCauseR = crate::FieldReader;
+#[doc = "Field `LP_AONCLKRST_HPCORE1_RESET_FLAG` reader - need_des"]
+pub type LpAonclkrstHpcore1ResetFlagR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_LPCORE_RESET_CAUSE_PMU_LP_CPU_MASK` reader - 1'b0: enable lpcore pmu_lp_cpu_reset reset_cause, 1'b1: disable lpcore pmu_lp_cpu_reset reset_cause"]
+pub type LpAonclkrstLpcoreResetCausePmuLpCpuMaskR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_LPCORE_RESET_CAUSE_PMU_LP_CPU_MASK` writer - 1'b0: enable lpcore pmu_lp_cpu_reset reset_cause, 1'b1: disable lpcore pmu_lp_cpu_reset reset_cause"]
+pub type LpAonclkrstLpcoreResetCausePmuLpCpuMaskW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_LPCORE_RESET_CAUSE_CLR` writer - need_des"]
+pub type LpAonclkrstLpcoreResetCauseClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_LPCORE_RESET_FLAG_CLR` writer - need_des"]
+pub type LpAonclkrstLpcoreResetFlagClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_HPCORE0_RESET_CAUSE_CLR` writer - need_des"]
+pub type LpAonclkrstHpcore0ResetCauseClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_HPCORE0_RESET_FLAG_CLR` writer - need_des"]
+pub type LpAonclkrstHpcore0ResetFlagClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_HPCORE1_RESET_CAUSE_CLR` writer - need_des"]
+pub type LpAonclkrstHpcore1ResetCauseClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_HPCORE1_RESET_FLAG_CLR` writer - need_des"]
+pub type LpAonclkrstHpcore1ResetFlagClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:5 - 6'h1: POR reset 6'h9: PMU LP PERI power down reset 6'ha: PMU LP CPU reset 6'hf: brown out reset 6'h10: LP watchdog chip reset 6'h12: super watch dog reset 6'h13: glitch reset 6'h14: software reset"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_lpcore_reset_cause(&self) -> LpAonclkrstLpcoreResetCauseR {
+        LpAonclkrstLpcoreResetCauseR::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_lpcore_reset_flag(&self) -> LpAonclkrstLpcoreResetFlagR {
+        LpAonclkrstLpcoreResetFlagR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bits 7:12 - 6'h1: POR reset 6'h3: digital system software reset 6'h5: PMU HP system power down reset 6'h7: HP system reset from HP watchdog 6'h9: HP system reset from LP watchdog 6'hb: HP core reset from HP watchdog 6'hc: HP core software reset 6'hd: HP core reset from LP watchdog 6'hf: brown out reset 6'h10: LP watchdog chip reset 6'h12: super watch dog reset 6'h13: glitch reset 6'h14: efuse crc error reset 6'h16: HP usb jtag chip reset 6'h17: HP usb uart chip reset 6'h18: HP jtag reset 6'h1a: HP core lockup"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore0_reset_cause(&self) -> LpAonclkrstHpcore0ResetCauseR {
+        LpAonclkrstHpcore0ResetCauseR::new(((self.bits >> 7) & 0x3f) as u8)
+    }
+    #[doc = "Bit 13 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore0_reset_flag(&self) -> LpAonclkrstHpcore0ResetFlagR {
+        LpAonclkrstHpcore0ResetFlagR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bits 14:19 - 6'h1: POR reset 6'h3: digital system software reset 6'h5: PMU HP system power down reset 6'h7: HP system reset from HP watchdog 6'h9: HP system reset from LP watchdog 6'hb: HP core reset from HP watchdog 6'hc: HP core software reset 6'hd: HP core reset from LP watchdog 6'hf: brown out reset 6'h10: LP watchdog chip reset 6'h12: super watch dog reset 6'h13: glitch reset 6'h14: efuse crc error reset 6'h16: HP usb jtag chip reset 6'h17: HP usb uart chip reset 6'h18: HP jtag reset 6'h1a: HP core lockup"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore1_reset_cause(&self) -> LpAonclkrstHpcore1ResetCauseR {
+        LpAonclkrstHpcore1ResetCauseR::new(((self.bits >> 14) & 0x3f) as u8)
+    }
+    #[doc = "Bit 20 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore1_reset_flag(&self) -> LpAonclkrstHpcore1ResetFlagR {
+        LpAonclkrstHpcore1ResetFlagR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 25 - 1'b0: enable lpcore pmu_lp_cpu_reset reset_cause, 1'b1: disable lpcore pmu_lp_cpu_reset reset_cause"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask(
+        &self,
+    ) -> LpAonclkrstLpcoreResetCausePmuLpCpuMaskR {
+        LpAonclkrstLpcoreResetCausePmuLpCpuMaskR::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 25 - 1'b0: enable lpcore pmu_lp_cpu_reset reset_cause, 1'b1: disable lpcore pmu_lp_cpu_reset reset_cause"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask(
+        &mut self,
+    ) -> LpAonclkrstLpcoreResetCausePmuLpCpuMaskW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstLpcoreResetCausePmuLpCpuMaskW::new(self, 25)
+    }
+    #[doc = "Bit 26 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_lpcore_reset_cause_clr(
+        &mut self,
+    ) -> LpAonclkrstLpcoreResetCauseClrW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstLpcoreResetCauseClrW::new(self, 26)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_lpcore_reset_flag_clr(
+        &mut self,
+    ) -> LpAonclkrstLpcoreResetFlagClrW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstLpcoreResetFlagClrW::new(self, 27)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore0_reset_cause_clr(
+        &mut self,
+    ) -> LpAonclkrstHpcore0ResetCauseClrW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstHpcore0ResetCauseClrW::new(self, 28)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore0_reset_flag_clr(
+        &mut self,
+    ) -> LpAonclkrstHpcore0ResetFlagClrW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstHpcore0ResetFlagClrW::new(self, 29)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore1_reset_cause_clr(
+        &mut self,
+    ) -> LpAonclkrstHpcore1ResetCauseClrW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstHpcore1ResetCauseClrW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_hpcore1_reset_flag_clr(
+        &mut self,
+    ) -> LpAonclkrstHpcore1ResetFlagClrW<'_, LpAonclkrstResetCauseSpec> {
+        LpAonclkrstHpcore1ResetFlagClrW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_aonclkrst_reset_cause::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_aonclkrst_reset_cause::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpAonclkrstResetCauseSpec;
+impl crate::RegisterSpec for LpAonclkrstResetCauseSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_aonclkrst_reset_cause::R`](R) reader structure"]
+impl crate::Readable for LpAonclkrstResetCauseSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_reset_cause::W`](W) writer structure"]
+impl crate::Writable for LpAonclkrstResetCauseSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_AONCLKRST_RESET_CAUSE to value 0x0200_0000"]
+impl crate::Resettable for LpAonclkrstResetCauseSpec {
+    const RESET_VALUE: u32 = 0x0200_0000;
+}

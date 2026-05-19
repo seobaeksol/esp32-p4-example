@@ -1,0 +1,78 @@
+#[doc = "Register `FIFO_STATUS` reader"]
+pub type R = crate::R<FifoStatusSpec>;
+#[doc = "Field `OUTFIFO_FULL_L2` reader - Tx FIFO full signal for Tx channel 0."]
+pub type OutfifoFullL2R = crate::BitReader;
+#[doc = "Field `OUTFIFO_EMPTY_L2` reader - Tx FIFO empty signal for Tx channel 0."]
+pub type OutfifoEmptyL2R = crate::BitReader;
+#[doc = "Field `OUTFIFO_CNT_L2` reader - The register stores the byte number of the data in Tx FIFO for Tx channel 0."]
+pub type OutfifoCntL2R = crate::FieldReader;
+#[doc = "Field `OUTFIFO_FULL_L1` reader - Tx FIFO full signal for Tx channel 0."]
+pub type OutfifoFullL1R = crate::BitReader;
+#[doc = "Field `OUTFIFO_EMPTY_L1` reader - Tx FIFO empty signal for Tx channel 0."]
+pub type OutfifoEmptyL1R = crate::BitReader;
+#[doc = "Field `OUTFIFO_CNT_L1` reader - The register stores the byte number of the data in Tx FIFO for Tx channel 0."]
+pub type OutfifoCntL1R = crate::FieldReader;
+#[doc = "Field `OUTFIFO_FULL_L3` reader - Tx FIFO full signal for Tx channel 0."]
+pub type OutfifoFullL3R = crate::BitReader;
+#[doc = "Field `OUTFIFO_EMPTY_L3` reader - Tx FIFO empty signal for Tx channel 0."]
+pub type OutfifoEmptyL3R = crate::BitReader;
+#[doc = "Field `OUTFIFO_CNT_L3` reader - The register stores the 8byte number of the data in Tx FIFO for Tx channel 0."]
+pub type OutfifoCntL3R = crate::FieldReader;
+impl R {
+    #[doc = "Bit 0 - Tx FIFO full signal for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_full_l2(&self) -> OutfifoFullL2R {
+        OutfifoFullL2R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Tx FIFO empty signal for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_empty_l2(&self) -> OutfifoEmptyL2R {
+        OutfifoEmptyL2R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:5 - The register stores the byte number of the data in Tx FIFO for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_cnt_l2(&self) -> OutfifoCntL2R {
+        OutfifoCntL2R::new(((self.bits >> 2) & 0x0f) as u8)
+    }
+    #[doc = "Bit 6 - Tx FIFO full signal for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_full_l1(&self) -> OutfifoFullL1R {
+        OutfifoFullL1R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Tx FIFO empty signal for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_empty_l1(&self) -> OutfifoEmptyL1R {
+        OutfifoEmptyL1R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bits 8:12 - The register stores the byte number of the data in Tx FIFO for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_cnt_l1(&self) -> OutfifoCntL1R {
+        OutfifoCntL1R::new(((self.bits >> 8) & 0x1f) as u8)
+    }
+    #[doc = "Bit 16 - Tx FIFO full signal for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_full_l3(&self) -> OutfifoFullL3R {
+        OutfifoFullL3R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Tx FIFO empty signal for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_empty_l3(&self) -> OutfifoEmptyL3R {
+        OutfifoEmptyL3R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bits 18:19 - The register stores the 8byte number of the data in Tx FIFO for Tx channel 0."]
+    #[inline(always)]
+    pub fn outfifo_cnt_l3(&self) -> OutfifoCntL3R {
+        OutfifoCntL3R::new(((self.bits >> 18) & 3) as u8)
+    }
+}
+#[doc = "TX CHx outfifo status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FifoStatusSpec;
+impl crate::RegisterSpec for FifoStatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`fifo_status::R`](R) reader structure"]
+impl crate::Readable for FifoStatusSpec {}
+#[doc = "`reset()` method sets FIFO_STATUS to value 0x0002_0082"]
+impl crate::Resettable for FifoStatusSpec {
+    const RESET_VALUE: u32 = 0x0002_0082;
+}

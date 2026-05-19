@@ -1,0 +1,22 @@
+#[doc = "Register `CAPABILITIES2` reader"]
+pub type R = crate::R<Capabilities2Spec>;
+#[doc = "Field `CAPABLITIES2` reader - NA"]
+pub type Capablities2R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn capablities2(&self) -> Capablities2R {
+        Capablities2R::new(self.bits)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`capabilities2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Capabilities2Spec;
+impl crate::RegisterSpec for Capabilities2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`capabilities2::R`](R) reader structure"]
+impl crate::Readable for Capabilities2Spec {}
+#[doc = "`reset()` method sets CAPABILITIES2 to value 0x0100"]
+impl crate::Resettable for Capabilities2Spec {
+    const RESET_VALUE: u32 = 0x0100;
+}

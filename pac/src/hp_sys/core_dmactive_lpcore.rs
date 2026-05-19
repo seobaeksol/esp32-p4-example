@@ -1,0 +1,20 @@
+#[doc = "Register `CORE_DMACTIVE_LPCORE` reader"]
+pub type R = crate::R<CoreDmactiveLpcoreSpec>;
+#[doc = "Field `CORE_DMACTIVE_LPCORE` reader - hp core dmactive_lpcore value"]
+pub type CoreDmactiveLpcoreR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - hp core dmactive_lpcore value"]
+    #[inline(always)]
+    pub fn core_dmactive_lpcore(&self) -> CoreDmactiveLpcoreR {
+        CoreDmactiveLpcoreR::new((self.bits & 1) != 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`core_dmactive_lpcore::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CoreDmactiveLpcoreSpec;
+impl crate::RegisterSpec for CoreDmactiveLpcoreSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_dmactive_lpcore::R`](R) reader structure"]
+impl crate::Readable for CoreDmactiveLpcoreSpec {}
+#[doc = "`reset()` method sets CORE_DMACTIVE_LPCORE to value 0"]
+impl crate::Resettable for CoreDmactiveLpcoreSpec {}

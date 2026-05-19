@@ -1,0 +1,315 @@
+#[doc = "Register `DMA_INT_ENA` reader"]
+pub type R = crate::R<DmaIntEnaSpec>;
+#[doc = "Register `DMA_INT_ENA` writer"]
+pub type W = crate::W<DmaIntEnaSpec>;
+#[doc = "Field `DMA_INFIFO_FULL_ERR` reader - The enable bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
+pub type DmaInfifoFullErrR = crate::BitReader;
+#[doc = "Field `DMA_INFIFO_FULL_ERR` writer - The enable bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
+pub type DmaInfifoFullErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA_OUTFIFO_EMPTY_ERR` reader - The enable bit for SPI_DMA_OUTFIFO_EMPTY_ERR_INT interrupt."]
+pub type DmaOutfifoEmptyErrR = crate::BitReader;
+#[doc = "Field `DMA_OUTFIFO_EMPTY_ERR` writer - The enable bit for SPI_DMA_OUTFIFO_EMPTY_ERR_INT interrupt."]
+pub type DmaOutfifoEmptyErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_EX_QPI` reader - The enable bit for SPI slave Ex_QPI interrupt."]
+pub type SlvExQpiR = crate::BitReader;
+#[doc = "Field `SLV_EX_QPI` writer - The enable bit for SPI slave Ex_QPI interrupt."]
+pub type SlvExQpiW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_EN_QPI` reader - The enable bit for SPI slave En_QPI interrupt."]
+pub type SlvEnQpiR = crate::BitReader;
+#[doc = "Field `SLV_EN_QPI` writer - The enable bit for SPI slave En_QPI interrupt."]
+pub type SlvEnQpiW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_CMD7` reader - The enable bit for SPI slave CMD7 interrupt."]
+pub type SlvCmd7R = crate::BitReader;
+#[doc = "Field `SLV_CMD7` writer - The enable bit for SPI slave CMD7 interrupt."]
+pub type SlvCmd7W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_CMD8` reader - The enable bit for SPI slave CMD8 interrupt."]
+pub type SlvCmd8R = crate::BitReader;
+#[doc = "Field `SLV_CMD8` writer - The enable bit for SPI slave CMD8 interrupt."]
+pub type SlvCmd8W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_CMD9` reader - The enable bit for SPI slave CMD9 interrupt."]
+pub type SlvCmd9R = crate::BitReader;
+#[doc = "Field `SLV_CMD9` writer - The enable bit for SPI slave CMD9 interrupt."]
+pub type SlvCmd9W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_CMDA` reader - The enable bit for SPI slave CMDA interrupt."]
+pub type SlvCmdaR = crate::BitReader;
+#[doc = "Field `SLV_CMDA` writer - The enable bit for SPI slave CMDA interrupt."]
+pub type SlvCmdaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_RD_DMA_DONE` reader - The enable bit for SPI_SLV_RD_DMA_DONE_INT interrupt."]
+pub type SlvRdDmaDoneR = crate::BitReader;
+#[doc = "Field `SLV_RD_DMA_DONE` writer - The enable bit for SPI_SLV_RD_DMA_DONE_INT interrupt."]
+pub type SlvRdDmaDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_WR_DMA_DONE` reader - The enable bit for SPI_SLV_WR_DMA_DONE_INT interrupt."]
+pub type SlvWrDmaDoneR = crate::BitReader;
+#[doc = "Field `SLV_WR_DMA_DONE` writer - The enable bit for SPI_SLV_WR_DMA_DONE_INT interrupt."]
+pub type SlvWrDmaDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_RD_BUF_DONE` reader - The enable bit for SPI_SLV_RD_BUF_DONE_INT interrupt."]
+pub type SlvRdBufDoneR = crate::BitReader;
+#[doc = "Field `SLV_RD_BUF_DONE` writer - The enable bit for SPI_SLV_RD_BUF_DONE_INT interrupt."]
+pub type SlvRdBufDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_WR_BUF_DONE` reader - The enable bit for SPI_SLV_WR_BUF_DONE_INT interrupt."]
+pub type SlvWrBufDoneR = crate::BitReader;
+#[doc = "Field `SLV_WR_BUF_DONE` writer - The enable bit for SPI_SLV_WR_BUF_DONE_INT interrupt."]
+pub type SlvWrBufDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TRANS_DONE` reader - The enable bit for SPI_TRANS_DONE_INT interrupt."]
+pub type TransDoneR = crate::BitReader;
+#[doc = "Field `TRANS_DONE` writer - The enable bit for SPI_TRANS_DONE_INT interrupt."]
+pub type TransDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA_SEG_TRANS_DONE` reader - The enable bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt."]
+pub type DmaSegTransDoneR = crate::BitReader;
+#[doc = "Field `DMA_SEG_TRANS_DONE` writer - The enable bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt."]
+pub type DmaSegTransDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SEG_MAGIC_ERR` reader - The enable bit for SPI_SEG_MAGIC_ERR_INT interrupt."]
+pub type SegMagicErrR = crate::BitReader;
+#[doc = "Field `SEG_MAGIC_ERR` writer - The enable bit for SPI_SEG_MAGIC_ERR_INT interrupt."]
+pub type SegMagicErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_BUF_ADDR_ERR` reader - The enable bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt."]
+pub type SlvBufAddrErrR = crate::BitReader;
+#[doc = "Field `SLV_BUF_ADDR_ERR` writer - The enable bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt."]
+pub type SlvBufAddrErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_CMD_ERR` reader - The enable bit for SPI_SLV_CMD_ERR_INT interrupt."]
+pub type SlvCmdErrR = crate::BitReader;
+#[doc = "Field `SLV_CMD_ERR` writer - The enable bit for SPI_SLV_CMD_ERR_INT interrupt."]
+pub type SlvCmdErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MST_RX_AFIFO_WFULL_ERR` reader - The enable bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt."]
+pub type MstRxAfifoWfullErrR = crate::BitReader;
+#[doc = "Field `MST_RX_AFIFO_WFULL_ERR` writer - The enable bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt."]
+pub type MstRxAfifoWfullErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MST_TX_AFIFO_REMPTY_ERR` reader - The enable bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt."]
+pub type MstTxAfifoRemptyErrR = crate::BitReader;
+#[doc = "Field `MST_TX_AFIFO_REMPTY_ERR` writer - The enable bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt."]
+pub type MstTxAfifoRemptyErrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APP2` reader - The enable bit for SPI_APP2_INT interrupt."]
+pub type App2R = crate::BitReader;
+#[doc = "Field `APP2` writer - The enable bit for SPI_APP2_INT interrupt."]
+pub type App2W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APP1` reader - The enable bit for SPI_APP1_INT interrupt."]
+pub type App1R = crate::BitReader;
+#[doc = "Field `APP1` writer - The enable bit for SPI_APP1_INT interrupt."]
+pub type App1W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - The enable bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn dma_infifo_full_err(&self) -> DmaInfifoFullErrR {
+        DmaInfifoFullErrR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The enable bit for SPI_DMA_OUTFIFO_EMPTY_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn dma_outfifo_empty_err(&self) -> DmaOutfifoEmptyErrR {
+        DmaOutfifoEmptyErrR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The enable bit for SPI slave Ex_QPI interrupt."]
+    #[inline(always)]
+    pub fn slv_ex_qpi(&self) -> SlvExQpiR {
+        SlvExQpiR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - The enable bit for SPI slave En_QPI interrupt."]
+    #[inline(always)]
+    pub fn slv_en_qpi(&self) -> SlvEnQpiR {
+        SlvEnQpiR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - The enable bit for SPI slave CMD7 interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd7(&self) -> SlvCmd7R {
+        SlvCmd7R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - The enable bit for SPI slave CMD8 interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd8(&self) -> SlvCmd8R {
+        SlvCmd8R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The enable bit for SPI slave CMD9 interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd9(&self) -> SlvCmd9R {
+        SlvCmd9R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - The enable bit for SPI slave CMDA interrupt."]
+    #[inline(always)]
+    pub fn slv_cmda(&self) -> SlvCmdaR {
+        SlvCmdaR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - The enable bit for SPI_SLV_RD_DMA_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_rd_dma_done(&self) -> SlvRdDmaDoneR {
+        SlvRdDmaDoneR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The enable bit for SPI_SLV_WR_DMA_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_dma_done(&self) -> SlvWrDmaDoneR {
+        SlvWrDmaDoneR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - The enable bit for SPI_SLV_RD_BUF_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_rd_buf_done(&self) -> SlvRdBufDoneR {
+        SlvRdBufDoneR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - The enable bit for SPI_SLV_WR_BUF_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_buf_done(&self) -> SlvWrBufDoneR {
+        SlvWrBufDoneR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - The enable bit for SPI_TRANS_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn trans_done(&self) -> TransDoneR {
+        TransDoneR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - The enable bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn dma_seg_trans_done(&self) -> DmaSegTransDoneR {
+        DmaSegTransDoneR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - The enable bit for SPI_SEG_MAGIC_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn seg_magic_err(&self) -> SegMagicErrR {
+        SegMagicErrR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - The enable bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_buf_addr_err(&self) -> SlvBufAddrErrR {
+        SlvBufAddrErrR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - The enable bit for SPI_SLV_CMD_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd_err(&self) -> SlvCmdErrR {
+        SlvCmdErrR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - The enable bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn mst_rx_afifo_wfull_err(&self) -> MstRxAfifoWfullErrR {
+        MstRxAfifoWfullErrR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - The enable bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn mst_tx_afifo_rempty_err(&self) -> MstTxAfifoRemptyErrR {
+        MstTxAfifoRemptyErrR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - The enable bit for SPI_APP2_INT interrupt."]
+    #[inline(always)]
+    pub fn app2(&self) -> App2R {
+        App2R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - The enable bit for SPI_APP1_INT interrupt."]
+    #[inline(always)]
+    pub fn app1(&self) -> App1R {
+        App1R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - The enable bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn dma_infifo_full_err(&mut self) -> DmaInfifoFullErrW<'_, DmaIntEnaSpec> {
+        DmaInfifoFullErrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - The enable bit for SPI_DMA_OUTFIFO_EMPTY_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn dma_outfifo_empty_err(&mut self) -> DmaOutfifoEmptyErrW<'_, DmaIntEnaSpec> {
+        DmaOutfifoEmptyErrW::new(self, 1)
+    }
+    #[doc = "Bit 2 - The enable bit for SPI slave Ex_QPI interrupt."]
+    #[inline(always)]
+    pub fn slv_ex_qpi(&mut self) -> SlvExQpiW<'_, DmaIntEnaSpec> {
+        SlvExQpiW::new(self, 2)
+    }
+    #[doc = "Bit 3 - The enable bit for SPI slave En_QPI interrupt."]
+    #[inline(always)]
+    pub fn slv_en_qpi(&mut self) -> SlvEnQpiW<'_, DmaIntEnaSpec> {
+        SlvEnQpiW::new(self, 3)
+    }
+    #[doc = "Bit 4 - The enable bit for SPI slave CMD7 interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd7(&mut self) -> SlvCmd7W<'_, DmaIntEnaSpec> {
+        SlvCmd7W::new(self, 4)
+    }
+    #[doc = "Bit 5 - The enable bit for SPI slave CMD8 interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd8(&mut self) -> SlvCmd8W<'_, DmaIntEnaSpec> {
+        SlvCmd8W::new(self, 5)
+    }
+    #[doc = "Bit 6 - The enable bit for SPI slave CMD9 interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd9(&mut self) -> SlvCmd9W<'_, DmaIntEnaSpec> {
+        SlvCmd9W::new(self, 6)
+    }
+    #[doc = "Bit 7 - The enable bit for SPI slave CMDA interrupt."]
+    #[inline(always)]
+    pub fn slv_cmda(&mut self) -> SlvCmdaW<'_, DmaIntEnaSpec> {
+        SlvCmdaW::new(self, 7)
+    }
+    #[doc = "Bit 8 - The enable bit for SPI_SLV_RD_DMA_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_rd_dma_done(&mut self) -> SlvRdDmaDoneW<'_, DmaIntEnaSpec> {
+        SlvRdDmaDoneW::new(self, 8)
+    }
+    #[doc = "Bit 9 - The enable bit for SPI_SLV_WR_DMA_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_dma_done(&mut self) -> SlvWrDmaDoneW<'_, DmaIntEnaSpec> {
+        SlvWrDmaDoneW::new(self, 9)
+    }
+    #[doc = "Bit 10 - The enable bit for SPI_SLV_RD_BUF_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_rd_buf_done(&mut self) -> SlvRdBufDoneW<'_, DmaIntEnaSpec> {
+        SlvRdBufDoneW::new(self, 10)
+    }
+    #[doc = "Bit 11 - The enable bit for SPI_SLV_WR_BUF_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_buf_done(&mut self) -> SlvWrBufDoneW<'_, DmaIntEnaSpec> {
+        SlvWrBufDoneW::new(self, 11)
+    }
+    #[doc = "Bit 12 - The enable bit for SPI_TRANS_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn trans_done(&mut self) -> TransDoneW<'_, DmaIntEnaSpec> {
+        TransDoneW::new(self, 12)
+    }
+    #[doc = "Bit 13 - The enable bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn dma_seg_trans_done(&mut self) -> DmaSegTransDoneW<'_, DmaIntEnaSpec> {
+        DmaSegTransDoneW::new(self, 13)
+    }
+    #[doc = "Bit 14 - The enable bit for SPI_SEG_MAGIC_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn seg_magic_err(&mut self) -> SegMagicErrW<'_, DmaIntEnaSpec> {
+        SegMagicErrW::new(self, 14)
+    }
+    #[doc = "Bit 15 - The enable bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_buf_addr_err(&mut self) -> SlvBufAddrErrW<'_, DmaIntEnaSpec> {
+        SlvBufAddrErrW::new(self, 15)
+    }
+    #[doc = "Bit 16 - The enable bit for SPI_SLV_CMD_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_cmd_err(&mut self) -> SlvCmdErrW<'_, DmaIntEnaSpec> {
+        SlvCmdErrW::new(self, 16)
+    }
+    #[doc = "Bit 17 - The enable bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn mst_rx_afifo_wfull_err(&mut self) -> MstRxAfifoWfullErrW<'_, DmaIntEnaSpec> {
+        MstRxAfifoWfullErrW::new(self, 17)
+    }
+    #[doc = "Bit 18 - The enable bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn mst_tx_afifo_rempty_err(&mut self) -> MstTxAfifoRemptyErrW<'_, DmaIntEnaSpec> {
+        MstTxAfifoRemptyErrW::new(self, 18)
+    }
+    #[doc = "Bit 19 - The enable bit for SPI_APP2_INT interrupt."]
+    #[inline(always)]
+    pub fn app2(&mut self) -> App2W<'_, DmaIntEnaSpec> {
+        App2W::new(self, 19)
+    }
+    #[doc = "Bit 20 - The enable bit for SPI_APP1_INT interrupt."]
+    #[inline(always)]
+    pub fn app1(&mut self) -> App1W<'_, DmaIntEnaSpec> {
+        App1W::new(self, 20)
+    }
+}
+#[doc = "SPI interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmaIntEnaSpec;
+impl crate::RegisterSpec for DmaIntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dma_int_ena::R`](R) reader structure"]
+impl crate::Readable for DmaIntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`dma_int_ena::W`](W) writer structure"]
+impl crate::Writable for DmaIntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DMA_INT_ENA to value 0"]
+impl crate::Resettable for DmaIntEnaSpec {}

@@ -1,0 +1,79 @@
+#[doc = "Register `HIST_WEIGHT1` reader"]
+pub type R = crate::R<HistWeight1Spec>;
+#[doc = "Register `HIST_WEIGHT1` writer"]
+pub type W = crate::W<HistWeight1Spec>;
+#[doc = "Field `HIST_WEIGHT_12` reader - this field configures weight of subwindow 12"]
+pub type HistWeight12R = crate::FieldReader;
+#[doc = "Field `HIST_WEIGHT_12` writer - this field configures weight of subwindow 12"]
+pub type HistWeight12W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HIST_WEIGHT_11` reader - this field configures weight of subwindow 11"]
+pub type HistWeight11R = crate::FieldReader;
+#[doc = "Field `HIST_WEIGHT_11` writer - this field configures weight of subwindow 11"]
+pub type HistWeight11W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HIST_WEIGHT_10` reader - this field configures weight of subwindow 10"]
+pub type HistWeight10R = crate::FieldReader;
+#[doc = "Field `HIST_WEIGHT_10` writer - this field configures weight of subwindow 10"]
+pub type HistWeight10W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HIST_WEIGHT_04` reader - this field configures weight of subwindow 04"]
+pub type HistWeight04R = crate::FieldReader;
+#[doc = "Field `HIST_WEIGHT_04` writer - this field configures weight of subwindow 04"]
+pub type HistWeight04W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - this field configures weight of subwindow 12"]
+    #[inline(always)]
+    pub fn hist_weight_12(&self) -> HistWeight12R {
+        HistWeight12R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field configures weight of subwindow 11"]
+    #[inline(always)]
+    pub fn hist_weight_11(&self) -> HistWeight11R {
+        HistWeight11R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field configures weight of subwindow 10"]
+    #[inline(always)]
+    pub fn hist_weight_10(&self) -> HistWeight10R {
+        HistWeight10R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - this field configures weight of subwindow 04"]
+    #[inline(always)]
+    pub fn hist_weight_04(&self) -> HistWeight04R {
+        HistWeight04R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - this field configures weight of subwindow 12"]
+    #[inline(always)]
+    pub fn hist_weight_12(&mut self) -> HistWeight12W<'_, HistWeight1Spec> {
+        HistWeight12W::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - this field configures weight of subwindow 11"]
+    #[inline(always)]
+    pub fn hist_weight_11(&mut self) -> HistWeight11W<'_, HistWeight1Spec> {
+        HistWeight11W::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - this field configures weight of subwindow 10"]
+    #[inline(always)]
+    pub fn hist_weight_10(&mut self) -> HistWeight10W<'_, HistWeight1Spec> {
+        HistWeight10W::new(self, 16)
+    }
+    #[doc = "Bits 24:31 - this field configures weight of subwindow 04"]
+    #[inline(always)]
+    pub fn hist_weight_04(&mut self) -> HistWeight04W<'_, HistWeight1Spec> {
+        HistWeight04W::new(self, 24)
+    }
+}
+#[doc = "histogram sub-window weight register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`hist_weight1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hist_weight1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HistWeight1Spec;
+impl crate::RegisterSpec for HistWeight1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hist_weight1::R`](R) reader structure"]
+impl crate::Readable for HistWeight1Spec {}
+#[doc = "`write(|w| ..)` method takes [`hist_weight1::W`](W) writer structure"]
+impl crate::Writable for HistWeight1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HIST_WEIGHT1 to value 0x0101_0101"]
+impl crate::Resettable for HistWeight1Spec {
+    const RESET_VALUE: u32 = 0x0101_0101;
+}

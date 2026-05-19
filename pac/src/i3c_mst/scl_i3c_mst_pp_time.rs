@@ -1,0 +1,53 @@
+#[doc = "Register `SCL_I3C_MST_PP_TIME` reader"]
+pub type R = crate::R<SclI3cMstPpTimeSpec>;
+#[doc = "Register `SCL_I3C_MST_PP_TIME` writer"]
+pub type W = crate::W<SclI3cMstPpTimeSpec>;
+#[doc = "Field `REG_I3C_MST_PP_LOW_PERIOD` reader - NA"]
+pub type RegI3cMstPpLowPeriodR = crate::FieldReader;
+#[doc = "Field `REG_I3C_MST_PP_LOW_PERIOD` writer - NA"]
+pub type RegI3cMstPpLowPeriodW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REG_I3C_MST_PP_HIGH_PERIOD` reader - NA"]
+pub type RegI3cMstPpHighPeriodR = crate::FieldReader;
+#[doc = "Field `REG_I3C_MST_PP_HIGH_PERIOD` writer - NA"]
+pub type RegI3cMstPpHighPeriodW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_pp_low_period(&self) -> RegI3cMstPpLowPeriodR {
+        RegI3cMstPpLowPeriodR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_pp_high_period(&self) -> RegI3cMstPpHighPeriodR {
+        RegI3cMstPpHighPeriodR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_pp_low_period(&mut self) -> RegI3cMstPpLowPeriodW<'_, SclI3cMstPpTimeSpec> {
+        RegI3cMstPpLowPeriodW::new(self, 0)
+    }
+    #[doc = "Bits 16:23 - NA"]
+    #[inline(always)]
+    pub fn reg_i3c_mst_pp_high_period(
+        &mut self,
+    ) -> RegI3cMstPpHighPeriodW<'_, SclI3cMstPpTimeSpec> {
+        RegI3cMstPpHighPeriodW::new(self, 16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_i3c_mst_pp_time::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_i3c_mst_pp_time::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SclI3cMstPpTimeSpec;
+impl crate::RegisterSpec for SclI3cMstPpTimeSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`scl_i3c_mst_pp_time::R`](R) reader structure"]
+impl crate::Readable for SclI3cMstPpTimeSpec {}
+#[doc = "`write(|w| ..)` method takes [`scl_i3c_mst_pp_time::W`](W) writer structure"]
+impl crate::Writable for SclI3cMstPpTimeSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SCL_I3C_MST_PP_TIME to value 0x0005_0005"]
+impl crate::Resettable for SclI3cMstPpTimeSpec {
+    const RESET_VALUE: u32 = 0x0005_0005;
+}

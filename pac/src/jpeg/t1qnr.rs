@@ -1,0 +1,20 @@
+#[doc = "Register `T1QNR` reader"]
+pub type R = crate::R<T1qnrSpec>;
+#[doc = "Field `T1_QNR_VAL` reader - write this reg to configure 64 quantization coefficient in t1 table"]
+pub type T1QnrValR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - write this reg to configure 64 quantization coefficient in t1 table"]
+    #[inline(always)]
+    pub fn t1_qnr_val(&self) -> T1QnrValR {
+        T1QnrValR::new(self.bits)
+    }
+}
+#[doc = "Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t1qnr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct T1qnrSpec;
+impl crate::RegisterSpec for T1qnrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`t1qnr::R`](R) reader structure"]
+impl crate::Readable for T1qnrSpec {}
+#[doc = "`reset()` method sets T1QNR to value 0"]
+impl crate::Resettable for T1qnrSpec {}

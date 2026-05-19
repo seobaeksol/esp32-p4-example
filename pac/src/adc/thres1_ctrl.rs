@@ -1,0 +1,65 @@
+#[doc = "Register `THRES1_CTRL` reader"]
+pub type R = crate::R<Thres1CtrlSpec>;
+#[doc = "Register `THRES1_CTRL` writer"]
+pub type W = crate::W<Thres1CtrlSpec>;
+#[doc = "Field `THRES1_CHANNEL` reader - need_des"]
+pub type Thres1ChannelR = crate::FieldReader;
+#[doc = "Field `THRES1_CHANNEL` writer - need_des"]
+pub type Thres1ChannelW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `THRES1_HIGH` reader - saradc1's thres0 monitor thres"]
+pub type Thres1HighR = crate::FieldReader<u16>;
+#[doc = "Field `THRES1_HIGH` writer - saradc1's thres0 monitor thres"]
+pub type Thres1HighW<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+#[doc = "Field `THRES1_LOW` reader - saradc1's thres0 monitor thres"]
+pub type Thres1LowR = crate::FieldReader<u16>;
+#[doc = "Field `THRES1_LOW` writer - saradc1's thres0 monitor thres"]
+pub type Thres1LowW<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
+impl R {
+    #[doc = "Bits 0:4 - need_des"]
+    #[inline(always)]
+    pub fn thres1_channel(&self) -> Thres1ChannelR {
+        Thres1ChannelR::new((self.bits & 0x1f) as u8)
+    }
+    #[doc = "Bits 5:17 - saradc1's thres0 monitor thres"]
+    #[inline(always)]
+    pub fn thres1_high(&self) -> Thres1HighR {
+        Thres1HighR::new(((self.bits >> 5) & 0x1fff) as u16)
+    }
+    #[doc = "Bits 18:30 - saradc1's thres0 monitor thres"]
+    #[inline(always)]
+    pub fn thres1_low(&self) -> Thres1LowR {
+        Thres1LowR::new(((self.bits >> 18) & 0x1fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - need_des"]
+    #[inline(always)]
+    pub fn thres1_channel(&mut self) -> Thres1ChannelW<'_, Thres1CtrlSpec> {
+        Thres1ChannelW::new(self, 0)
+    }
+    #[doc = "Bits 5:17 - saradc1's thres0 monitor thres"]
+    #[inline(always)]
+    pub fn thres1_high(&mut self) -> Thres1HighW<'_, Thres1CtrlSpec> {
+        Thres1HighW::new(self, 5)
+    }
+    #[doc = "Bits 18:30 - saradc1's thres0 monitor thres"]
+    #[inline(always)]
+    pub fn thres1_low(&mut self) -> Thres1LowW<'_, Thres1CtrlSpec> {
+        Thres1LowW::new(self, 18)
+    }
+}
+#[doc = "Register\n\nYou can [`read`](crate::Reg::read) this register and get [`thres1_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`thres1_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Thres1CtrlSpec;
+impl crate::RegisterSpec for Thres1CtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`thres1_ctrl::R`](R) reader structure"]
+impl crate::Readable for Thres1CtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`thres1_ctrl::W`](W) writer structure"]
+impl crate::Writable for Thres1CtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets THRES1_CTRL to value 0x0003_ffed"]
+impl crate::Resettable for Thres1CtrlSpec {
+    const RESET_VALUE: u32 = 0x0003_ffed;
+}

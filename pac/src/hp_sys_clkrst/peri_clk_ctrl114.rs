@@ -1,0 +1,95 @@
+#[doc = "Register `PERI_CLK_CTRL114` reader"]
+pub type R = crate::R<PeriClkCtrl114Spec>;
+#[doc = "Register `PERI_CLK_CTRL114` writer"]
+pub type W = crate::W<PeriClkCtrl114Spec>;
+#[doc = "Field `UART3_SCLK_DIV_NUM` reader - Reserved"]
+pub type Uart3SclkDivNumR = crate::FieldReader;
+#[doc = "Field `UART3_SCLK_DIV_NUM` writer - Reserved"]
+pub type Uart3SclkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `UART3_SCLK_DIV_NUMERATOR` reader - Reserved"]
+pub type Uart3SclkDivNumeratorR = crate::FieldReader;
+#[doc = "Field `UART3_SCLK_DIV_NUMERATOR` writer - Reserved"]
+pub type Uart3SclkDivNumeratorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `UART3_SCLK_DIV_DENOMINATOR` reader - Reserved"]
+pub type Uart3SclkDivDenominatorR = crate::FieldReader;
+#[doc = "Field `UART3_SCLK_DIV_DENOMINATOR` writer - Reserved"]
+pub type Uart3SclkDivDenominatorW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `UART4_CLK_SRC_SEL` reader - Reserved"]
+pub type Uart4ClkSrcSelR = crate::FieldReader;
+#[doc = "Field `UART4_CLK_SRC_SEL` writer - Reserved"]
+pub type Uart4ClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `UART4_CLK_EN` reader - Reserved"]
+pub type Uart4ClkEnR = crate::BitReader;
+#[doc = "Field `UART4_CLK_EN` writer - Reserved"]
+pub type Uart4ClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_sclk_div_num(&self) -> Uart3SclkDivNumR {
+        Uart3SclkDivNumR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_sclk_div_numerator(&self) -> Uart3SclkDivNumeratorR {
+        Uart3SclkDivNumeratorR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_sclk_div_denominator(&self) -> Uart3SclkDivDenominatorR {
+        Uart3SclkDivDenominatorR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:25 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_clk_src_sel(&self) -> Uart4ClkSrcSelR {
+        Uart4ClkSrcSelR::new(((self.bits >> 24) & 3) as u8)
+    }
+    #[doc = "Bit 26 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_clk_en(&self) -> Uart4ClkEnR {
+        Uart4ClkEnR::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_sclk_div_num(&mut self) -> Uart3SclkDivNumW<'_, PeriClkCtrl114Spec> {
+        Uart3SclkDivNumW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_sclk_div_numerator(&mut self) -> Uart3SclkDivNumeratorW<'_, PeriClkCtrl114Spec> {
+        Uart3SclkDivNumeratorW::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_sclk_div_denominator(
+        &mut self,
+    ) -> Uart3SclkDivDenominatorW<'_, PeriClkCtrl114Spec> {
+        Uart3SclkDivDenominatorW::new(self, 16)
+    }
+    #[doc = "Bits 24:25 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_clk_src_sel(&mut self) -> Uart4ClkSrcSelW<'_, PeriClkCtrl114Spec> {
+        Uart4ClkSrcSelW::new(self, 24)
+    }
+    #[doc = "Bit 26 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_clk_en(&mut self) -> Uart4ClkEnW<'_, PeriClkCtrl114Spec> {
+        Uart4ClkEnW::new(self, 26)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl114::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl114::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PeriClkCtrl114Spec;
+impl crate::RegisterSpec for PeriClkCtrl114Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`peri_clk_ctrl114::R`](R) reader structure"]
+impl crate::Readable for PeriClkCtrl114Spec {}
+#[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl114::W`](W) writer structure"]
+impl crate::Writable for PeriClkCtrl114Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PERI_CLK_CTRL114 to value 0x0400_0000"]
+impl crate::Resettable for PeriClkCtrl114Spec {
+    const RESET_VALUE: u32 = 0x0400_0000;
+}

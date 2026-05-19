@@ -1,0 +1,79 @@
+#[doc = "Register `INT_RAW` reader"]
+pub type R = crate::R<IntRawSpec>;
+#[doc = "Register `INT_RAW` writer"]
+pub type W = crate::W<IntRawSpec>;
+#[doc = "Field `TARGET(0-2)` reader - interupt%s raw"]
+pub type TargetR = crate::BitReader;
+#[doc = "Field `TARGET(0-2)` writer - interupt%s raw"]
+pub type TargetW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "interupt(0-2) raw"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
+    #[inline(always)]
+    pub fn target(&self, n: u8) -> TargetR {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TargetR::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "interupt(0-2) raw"]
+    #[inline(always)]
+    pub fn target_iter(&self) -> impl Iterator<Item = TargetR> + '_ {
+        (0..3).map(move |n| TargetR::new(((self.bits >> n) & 1) != 0))
+    }
+    #[doc = "Bit 0 - interupt0 raw"]
+    #[inline(always)]
+    pub fn target0(&self) -> TargetR {
+        TargetR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - interupt1 raw"]
+    #[inline(always)]
+    pub fn target1(&self) -> TargetR {
+        TargetR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - interupt2 raw"]
+    #[inline(always)]
+    pub fn target2(&self) -> TargetR {
+        TargetR::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "interupt(0-2) raw"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
+    #[inline(always)]
+    pub fn target(&mut self, n: u8) -> TargetW<'_, IntRawSpec> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TargetW::new(self, n)
+    }
+    #[doc = "Bit 0 - interupt0 raw"]
+    #[inline(always)]
+    pub fn target0(&mut self) -> TargetW<'_, IntRawSpec> {
+        TargetW::new(self, 0)
+    }
+    #[doc = "Bit 1 - interupt1 raw"]
+    #[inline(always)]
+    pub fn target1(&mut self) -> TargetW<'_, IntRawSpec> {
+        TargetW::new(self, 1)
+    }
+    #[doc = "Bit 2 - interupt2 raw"]
+    #[inline(always)]
+    pub fn target2(&mut self) -> TargetW<'_, IntRawSpec> {
+        TargetW::new(self, 2)
+    }
+}
+#[doc = "systimer interrupt raw register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntRawSpec;
+impl crate::RegisterSpec for IntRawSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_raw::R`](R) reader structure"]
+impl crate::Readable for IntRawSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_raw::W`](W) writer structure"]
+impl crate::Writable for IntRawSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_RAW to value 0"]
+impl crate::Resettable for IntRawSpec {}

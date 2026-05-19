@@ -1,0 +1,245 @@
+#[doc = "Register `INT_FORCE_DATA_ID` reader"]
+pub type R = crate::R<IntForceDataIdSpec>;
+#[doc = "Register `INT_FORCE_DATA_ID` writer"]
+pub type W = crate::W<IntForceDataIdSpec>;
+#[doc = "Field `FORCE_ERR_ID_VC0` reader - NA"]
+pub type ForceErrIdVc0R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC0` writer - NA"]
+pub type ForceErrIdVc0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC1` reader - NA"]
+pub type ForceErrIdVc1R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC1` writer - NA"]
+pub type ForceErrIdVc1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC2` reader - NA"]
+pub type ForceErrIdVc2R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC2` writer - NA"]
+pub type ForceErrIdVc2W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC3` reader - NA"]
+pub type ForceErrIdVc3R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC3` writer - NA"]
+pub type ForceErrIdVc3W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC4` reader - NA"]
+pub type ForceErrIdVc4R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC4` writer - NA"]
+pub type ForceErrIdVc4W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC5` reader - NA"]
+pub type ForceErrIdVc5R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC5` writer - NA"]
+pub type ForceErrIdVc5W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC6` reader - NA"]
+pub type ForceErrIdVc6R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC6` writer - NA"]
+pub type ForceErrIdVc6W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC7` reader - NA"]
+pub type ForceErrIdVc7R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC7` writer - NA"]
+pub type ForceErrIdVc7W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC8` reader - NA"]
+pub type ForceErrIdVc8R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC8` writer - NA"]
+pub type ForceErrIdVc8W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC9` reader - NA"]
+pub type ForceErrIdVc9R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC9` writer - NA"]
+pub type ForceErrIdVc9W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC10` reader - NA"]
+pub type ForceErrIdVc10R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC10` writer - NA"]
+pub type ForceErrIdVc10W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC11` reader - NA"]
+pub type ForceErrIdVc11R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC11` writer - NA"]
+pub type ForceErrIdVc11W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC12` reader - NA"]
+pub type ForceErrIdVc12R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC12` writer - NA"]
+pub type ForceErrIdVc12W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC13` reader - NA"]
+pub type ForceErrIdVc13R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC13` writer - NA"]
+pub type ForceErrIdVc13W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC14` reader - NA"]
+pub type ForceErrIdVc14R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC14` writer - NA"]
+pub type ForceErrIdVc14W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_ERR_ID_VC15` reader - NA"]
+pub type ForceErrIdVc15R = crate::BitReader;
+#[doc = "Field `FORCE_ERR_ID_VC15` writer - NA"]
+pub type ForceErrIdVc15W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc0(&self) -> ForceErrIdVc0R {
+        ForceErrIdVc0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc1(&self) -> ForceErrIdVc1R {
+        ForceErrIdVc1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc2(&self) -> ForceErrIdVc2R {
+        ForceErrIdVc2R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc3(&self) -> ForceErrIdVc3R {
+        ForceErrIdVc3R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc4(&self) -> ForceErrIdVc4R {
+        ForceErrIdVc4R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc5(&self) -> ForceErrIdVc5R {
+        ForceErrIdVc5R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc6(&self) -> ForceErrIdVc6R {
+        ForceErrIdVc6R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc7(&self) -> ForceErrIdVc7R {
+        ForceErrIdVc7R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc8(&self) -> ForceErrIdVc8R {
+        ForceErrIdVc8R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc9(&self) -> ForceErrIdVc9R {
+        ForceErrIdVc9R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc10(&self) -> ForceErrIdVc10R {
+        ForceErrIdVc10R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc11(&self) -> ForceErrIdVc11R {
+        ForceErrIdVc11R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc12(&self) -> ForceErrIdVc12R {
+        ForceErrIdVc12R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc13(&self) -> ForceErrIdVc13R {
+        ForceErrIdVc13R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc14(&self) -> ForceErrIdVc14R {
+        ForceErrIdVc14R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc15(&self) -> ForceErrIdVc15R {
+        ForceErrIdVc15R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc0(&mut self) -> ForceErrIdVc0W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc1(&mut self) -> ForceErrIdVc1W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc1W::new(self, 1)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc2(&mut self) -> ForceErrIdVc2W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc2W::new(self, 2)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc3(&mut self) -> ForceErrIdVc3W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc3W::new(self, 3)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc4(&mut self) -> ForceErrIdVc4W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc4W::new(self, 4)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc5(&mut self) -> ForceErrIdVc5W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc5W::new(self, 5)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc6(&mut self) -> ForceErrIdVc6W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc6W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc7(&mut self) -> ForceErrIdVc7W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc7W::new(self, 7)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc8(&mut self) -> ForceErrIdVc8W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc8W::new(self, 8)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc9(&mut self) -> ForceErrIdVc9W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc9W::new(self, 9)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc10(&mut self) -> ForceErrIdVc10W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc10W::new(self, 10)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc11(&mut self) -> ForceErrIdVc11W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc11W::new(self, 11)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc12(&mut self) -> ForceErrIdVc12W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc12W::new(self, 12)
+    }
+    #[doc = "Bit 13 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc13(&mut self) -> ForceErrIdVc13W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc13W::new(self, 13)
+    }
+    #[doc = "Bit 14 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc14(&mut self) -> ForceErrIdVc14W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc14W::new(self, 14)
+    }
+    #[doc = "Bit 15 - NA"]
+    #[inline(always)]
+    pub fn force_err_id_vc15(&mut self) -> ForceErrIdVc15W<'_, IntForceDataIdSpec> {
+        ForceErrIdVc15W::new(self, 15)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`int_force_data_id::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_force_data_id::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntForceDataIdSpec;
+impl crate::RegisterSpec for IntForceDataIdSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_force_data_id::R`](R) reader structure"]
+impl crate::Readable for IntForceDataIdSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_force_data_id::W`](W) writer structure"]
+impl crate::Writable for IntForceDataIdSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_FORCE_DATA_ID to value 0"]
+impl crate::Resettable for IntForceDataIdSpec {}

@@ -1,0 +1,471 @@
+#[doc = "Register `SOC_CLK_CTRL2` reader"]
+pub type R = crate::R<SocClkCtrl2Spec>;
+#[doc = "Register `SOC_CLK_CTRL2` writer"]
+pub type W = crate::W<SocClkCtrl2Spec>;
+#[doc = "Field `RMT_SYS_CLK_EN` reader - Reserved"]
+pub type RmtSysClkEnR = crate::BitReader;
+#[doc = "Field `RMT_SYS_CLK_EN` writer - Reserved"]
+pub type RmtSysClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_CLKRST_APB_CLK_EN` reader - Reserved"]
+pub type HpClkrstApbClkEnR = crate::BitReader;
+#[doc = "Field `HP_CLKRST_APB_CLK_EN` writer - Reserved"]
+pub type HpClkrstApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYSREG_APB_CLK_EN` reader - Reserved"]
+pub type SysregApbClkEnR = crate::BitReader;
+#[doc = "Field `SYSREG_APB_CLK_EN` writer - Reserved"]
+pub type SysregApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ICM_APB_CLK_EN` reader - Reserved"]
+pub type IcmApbClkEnR = crate::BitReader;
+#[doc = "Field `ICM_APB_CLK_EN` writer - Reserved"]
+pub type IcmApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INTRMTX_APB_CLK_EN` reader - Reserved"]
+pub type IntrmtxApbClkEnR = crate::BitReader;
+#[doc = "Field `INTRMTX_APB_CLK_EN` writer - Reserved"]
+pub type IntrmtxApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC_APB_CLK_EN` reader - Reserved"]
+pub type AdcApbClkEnR = crate::BitReader;
+#[doc = "Field `ADC_APB_CLK_EN` writer - Reserved"]
+pub type AdcApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UHCI_APB_CLK_EN` reader - Reserved"]
+pub type UhciApbClkEnR = crate::BitReader;
+#[doc = "Field `UHCI_APB_CLK_EN` writer - Reserved"]
+pub type UhciApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UART0_APB_CLK_EN` reader - Reserved"]
+pub type Uart0ApbClkEnR = crate::BitReader;
+#[doc = "Field `UART0_APB_CLK_EN` writer - Reserved"]
+pub type Uart0ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UART1_APB_CLK_EN` reader - Reserved"]
+pub type Uart1ApbClkEnR = crate::BitReader;
+#[doc = "Field `UART1_APB_CLK_EN` writer - Reserved"]
+pub type Uart1ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UART2_APB_CLK_EN` reader - Reserved"]
+pub type Uart2ApbClkEnR = crate::BitReader;
+#[doc = "Field `UART2_APB_CLK_EN` writer - Reserved"]
+pub type Uart2ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UART3_APB_CLK_EN` reader - Reserved"]
+pub type Uart3ApbClkEnR = crate::BitReader;
+#[doc = "Field `UART3_APB_CLK_EN` writer - Reserved"]
+pub type Uart3ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UART4_APB_CLK_EN` reader - Reserved"]
+pub type Uart4ApbClkEnR = crate::BitReader;
+#[doc = "Field `UART4_APB_CLK_EN` writer - Reserved"]
+pub type Uart4ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2C0_APB_CLK_EN` reader - Reserved"]
+pub type I2c0ApbClkEnR = crate::BitReader;
+#[doc = "Field `I2C0_APB_CLK_EN` writer - Reserved"]
+pub type I2c0ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2C1_APB_CLK_EN` reader - Reserved"]
+pub type I2c1ApbClkEnR = crate::BitReader;
+#[doc = "Field `I2C1_APB_CLK_EN` writer - Reserved"]
+pub type I2c1ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2S0_APB_CLK_EN` reader - Reserved"]
+pub type I2s0ApbClkEnR = crate::BitReader;
+#[doc = "Field `I2S0_APB_CLK_EN` writer - Reserved"]
+pub type I2s0ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2S1_APB_CLK_EN` reader - Reserved"]
+pub type I2s1ApbClkEnR = crate::BitReader;
+#[doc = "Field `I2S1_APB_CLK_EN` writer - Reserved"]
+pub type I2s1ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2S2_APB_CLK_EN` reader - Reserved"]
+pub type I2s2ApbClkEnR = crate::BitReader;
+#[doc = "Field `I2S2_APB_CLK_EN` writer - Reserved"]
+pub type I2s2ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I3C_MST_APB_CLK_EN` reader - Reserved"]
+pub type I3cMstApbClkEnR = crate::BitReader;
+#[doc = "Field `I3C_MST_APB_CLK_EN` writer - Reserved"]
+pub type I3cMstApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I3C_SLV_APB_CLK_EN` reader - Reserved"]
+pub type I3cSlvApbClkEnR = crate::BitReader;
+#[doc = "Field `I3C_SLV_APB_CLK_EN` writer - Reserved"]
+pub type I3cSlvApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI2_APB_CLK_EN` reader - Reserved"]
+pub type Gpspi2ApbClkEnR = crate::BitReader;
+#[doc = "Field `GPSPI2_APB_CLK_EN` writer - Reserved"]
+pub type Gpspi2ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPSPI3_APB_CLK_EN` reader - Reserved"]
+pub type Gpspi3ApbClkEnR = crate::BitReader;
+#[doc = "Field `GPSPI3_APB_CLK_EN` writer - Reserved"]
+pub type Gpspi3ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_APB_CLK_EN` reader - Reserved"]
+pub type Timergrp0ApbClkEnR = crate::BitReader;
+#[doc = "Field `TIMERGRP0_APB_CLK_EN` writer - Reserved"]
+pub type Timergrp0ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP1_APB_CLK_EN` reader - Reserved"]
+pub type Timergrp1ApbClkEnR = crate::BitReader;
+#[doc = "Field `TIMERGRP1_APB_CLK_EN` writer - Reserved"]
+pub type Timergrp1ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYSTIMER_APB_CLK_EN` reader - Reserved"]
+pub type SystimerApbClkEnR = crate::BitReader;
+#[doc = "Field `SYSTIMER_APB_CLK_EN` writer - Reserved"]
+pub type SystimerApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI0_APB_CLK_EN` reader - Reserved"]
+pub type Twai0ApbClkEnR = crate::BitReader;
+#[doc = "Field `TWAI0_APB_CLK_EN` writer - Reserved"]
+pub type Twai0ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI1_APB_CLK_EN` reader - Reserved"]
+pub type Twai1ApbClkEnR = crate::BitReader;
+#[doc = "Field `TWAI1_APB_CLK_EN` writer - Reserved"]
+pub type Twai1ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TWAI2_APB_CLK_EN` reader - Reserved"]
+pub type Twai2ApbClkEnR = crate::BitReader;
+#[doc = "Field `TWAI2_APB_CLK_EN` writer - Reserved"]
+pub type Twai2ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM0_APB_CLK_EN` reader - Reserved"]
+pub type Mcpwm0ApbClkEnR = crate::BitReader;
+#[doc = "Field `MCPWM0_APB_CLK_EN` writer - Reserved"]
+pub type Mcpwm0ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MCPWM1_APB_CLK_EN` reader - Reserved"]
+pub type Mcpwm1ApbClkEnR = crate::BitReader;
+#[doc = "Field `MCPWM1_APB_CLK_EN` writer - Reserved"]
+pub type Mcpwm1ApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USB_DEVICE_APB_CLK_EN` reader - Reserved"]
+pub type UsbDeviceApbClkEnR = crate::BitReader;
+#[doc = "Field `USB_DEVICE_APB_CLK_EN` writer - Reserved"]
+pub type UsbDeviceApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PCNT_APB_CLK_EN` reader - Reserved"]
+pub type PcntApbClkEnR = crate::BitReader;
+#[doc = "Field `PCNT_APB_CLK_EN` writer - Reserved"]
+pub type PcntApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PARLIO_APB_CLK_EN` reader - Reserved"]
+pub type ParlioApbClkEnR = crate::BitReader;
+#[doc = "Field `PARLIO_APB_CLK_EN` writer - Reserved"]
+pub type ParlioApbClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn rmt_sys_clk_en(&self) -> RmtSysClkEnR {
+        RmtSysClkEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Reserved"]
+    #[inline(always)]
+    pub fn hp_clkrst_apb_clk_en(&self) -> HpClkrstApbClkEnR {
+        HpClkrstApbClkEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn sysreg_apb_clk_en(&self) -> SysregApbClkEnR {
+        SysregApbClkEnR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Reserved"]
+    #[inline(always)]
+    pub fn icm_apb_clk_en(&self) -> IcmApbClkEnR {
+        IcmApbClkEnR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn intrmtx_apb_clk_en(&self) -> IntrmtxApbClkEnR {
+        IntrmtxApbClkEnR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Reserved"]
+    #[inline(always)]
+    pub fn adc_apb_clk_en(&self) -> AdcApbClkEnR {
+        AdcApbClkEnR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Reserved"]
+    #[inline(always)]
+    pub fn uhci_apb_clk_en(&self) -> UhciApbClkEnR {
+        UhciApbClkEnR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Reserved"]
+    #[inline(always)]
+    pub fn uart0_apb_clk_en(&self) -> Uart0ApbClkEnR {
+        Uart0ApbClkEnR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Reserved"]
+    #[inline(always)]
+    pub fn uart1_apb_clk_en(&self) -> Uart1ApbClkEnR {
+        Uart1ApbClkEnR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Reserved"]
+    #[inline(always)]
+    pub fn uart2_apb_clk_en(&self) -> Uart2ApbClkEnR {
+        Uart2ApbClkEnR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_apb_clk_en(&self) -> Uart3ApbClkEnR {
+        Uart3ApbClkEnR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_apb_clk_en(&self) -> Uart4ApbClkEnR {
+        Uart4ApbClkEnR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Reserved"]
+    #[inline(always)]
+    pub fn i2c0_apb_clk_en(&self) -> I2c0ApbClkEnR {
+        I2c0ApbClkEnR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Reserved"]
+    #[inline(always)]
+    pub fn i2c1_apb_clk_en(&self) -> I2c1ApbClkEnR {
+        I2c1ApbClkEnR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Reserved"]
+    #[inline(always)]
+    pub fn i2s0_apb_clk_en(&self) -> I2s0ApbClkEnR {
+        I2s0ApbClkEnR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Reserved"]
+    #[inline(always)]
+    pub fn i2s1_apb_clk_en(&self) -> I2s1ApbClkEnR {
+        I2s1ApbClkEnR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Reserved"]
+    #[inline(always)]
+    pub fn i2s2_apb_clk_en(&self) -> I2s2ApbClkEnR {
+        I2s2ApbClkEnR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Reserved"]
+    #[inline(always)]
+    pub fn i3c_mst_apb_clk_en(&self) -> I3cMstApbClkEnR {
+        I3cMstApbClkEnR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - Reserved"]
+    #[inline(always)]
+    pub fn i3c_slv_apb_clk_en(&self) -> I3cSlvApbClkEnR {
+        I3cSlvApbClkEnR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_apb_clk_en(&self) -> Gpspi2ApbClkEnR {
+        Gpspi2ApbClkEnR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_apb_clk_en(&self) -> Gpspi3ApbClkEnR {
+        Gpspi3ApbClkEnR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - Reserved"]
+    #[inline(always)]
+    pub fn timergrp0_apb_clk_en(&self) -> Timergrp0ApbClkEnR {
+        Timergrp0ApbClkEnR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - Reserved"]
+    #[inline(always)]
+    pub fn timergrp1_apb_clk_en(&self) -> Timergrp1ApbClkEnR {
+        Timergrp1ApbClkEnR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - Reserved"]
+    #[inline(always)]
+    pub fn systimer_apb_clk_en(&self) -> SystimerApbClkEnR {
+        SystimerApbClkEnR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Reserved"]
+    #[inline(always)]
+    pub fn twai0_apb_clk_en(&self) -> Twai0ApbClkEnR {
+        Twai0ApbClkEnR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - Reserved"]
+    #[inline(always)]
+    pub fn twai1_apb_clk_en(&self) -> Twai1ApbClkEnR {
+        Twai1ApbClkEnR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Reserved"]
+    #[inline(always)]
+    pub fn twai2_apb_clk_en(&self) -> Twai2ApbClkEnR {
+        Twai2ApbClkEnR::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Reserved"]
+    #[inline(always)]
+    pub fn mcpwm0_apb_clk_en(&self) -> Mcpwm0ApbClkEnR {
+        Mcpwm0ApbClkEnR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Reserved"]
+    #[inline(always)]
+    pub fn mcpwm1_apb_clk_en(&self) -> Mcpwm1ApbClkEnR {
+        Mcpwm1ApbClkEnR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Reserved"]
+    #[inline(always)]
+    pub fn usb_device_apb_clk_en(&self) -> UsbDeviceApbClkEnR {
+        UsbDeviceApbClkEnR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Reserved"]
+    #[inline(always)]
+    pub fn pcnt_apb_clk_en(&self) -> PcntApbClkEnR {
+        PcntApbClkEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_apb_clk_en(&self) -> ParlioApbClkEnR {
+        ParlioApbClkEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Reserved"]
+    #[inline(always)]
+    pub fn rmt_sys_clk_en(&mut self) -> RmtSysClkEnW<'_, SocClkCtrl2Spec> {
+        RmtSysClkEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Reserved"]
+    #[inline(always)]
+    pub fn hp_clkrst_apb_clk_en(&mut self) -> HpClkrstApbClkEnW<'_, SocClkCtrl2Spec> {
+        HpClkrstApbClkEnW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn sysreg_apb_clk_en(&mut self) -> SysregApbClkEnW<'_, SocClkCtrl2Spec> {
+        SysregApbClkEnW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Reserved"]
+    #[inline(always)]
+    pub fn icm_apb_clk_en(&mut self) -> IcmApbClkEnW<'_, SocClkCtrl2Spec> {
+        IcmApbClkEnW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn intrmtx_apb_clk_en(&mut self) -> IntrmtxApbClkEnW<'_, SocClkCtrl2Spec> {
+        IntrmtxApbClkEnW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Reserved"]
+    #[inline(always)]
+    pub fn adc_apb_clk_en(&mut self) -> AdcApbClkEnW<'_, SocClkCtrl2Spec> {
+        AdcApbClkEnW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Reserved"]
+    #[inline(always)]
+    pub fn uhci_apb_clk_en(&mut self) -> UhciApbClkEnW<'_, SocClkCtrl2Spec> {
+        UhciApbClkEnW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Reserved"]
+    #[inline(always)]
+    pub fn uart0_apb_clk_en(&mut self) -> Uart0ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Uart0ApbClkEnW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Reserved"]
+    #[inline(always)]
+    pub fn uart1_apb_clk_en(&mut self) -> Uart1ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Uart1ApbClkEnW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Reserved"]
+    #[inline(always)]
+    pub fn uart2_apb_clk_en(&mut self) -> Uart2ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Uart2ApbClkEnW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Reserved"]
+    #[inline(always)]
+    pub fn uart3_apb_clk_en(&mut self) -> Uart3ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Uart3ApbClkEnW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Reserved"]
+    #[inline(always)]
+    pub fn uart4_apb_clk_en(&mut self) -> Uart4ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Uart4ApbClkEnW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Reserved"]
+    #[inline(always)]
+    pub fn i2c0_apb_clk_en(&mut self) -> I2c0ApbClkEnW<'_, SocClkCtrl2Spec> {
+        I2c0ApbClkEnW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Reserved"]
+    #[inline(always)]
+    pub fn i2c1_apb_clk_en(&mut self) -> I2c1ApbClkEnW<'_, SocClkCtrl2Spec> {
+        I2c1ApbClkEnW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Reserved"]
+    #[inline(always)]
+    pub fn i2s0_apb_clk_en(&mut self) -> I2s0ApbClkEnW<'_, SocClkCtrl2Spec> {
+        I2s0ApbClkEnW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Reserved"]
+    #[inline(always)]
+    pub fn i2s1_apb_clk_en(&mut self) -> I2s1ApbClkEnW<'_, SocClkCtrl2Spec> {
+        I2s1ApbClkEnW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Reserved"]
+    #[inline(always)]
+    pub fn i2s2_apb_clk_en(&mut self) -> I2s2ApbClkEnW<'_, SocClkCtrl2Spec> {
+        I2s2ApbClkEnW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Reserved"]
+    #[inline(always)]
+    pub fn i3c_mst_apb_clk_en(&mut self) -> I3cMstApbClkEnW<'_, SocClkCtrl2Spec> {
+        I3cMstApbClkEnW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Reserved"]
+    #[inline(always)]
+    pub fn i3c_slv_apb_clk_en(&mut self) -> I3cSlvApbClkEnW<'_, SocClkCtrl2Spec> {
+        I3cSlvApbClkEnW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi2_apb_clk_en(&mut self) -> Gpspi2ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Gpspi2ApbClkEnW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Reserved"]
+    #[inline(always)]
+    pub fn gpspi3_apb_clk_en(&mut self) -> Gpspi3ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Gpspi3ApbClkEnW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Reserved"]
+    #[inline(always)]
+    pub fn timergrp0_apb_clk_en(&mut self) -> Timergrp0ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Timergrp0ApbClkEnW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Reserved"]
+    #[inline(always)]
+    pub fn timergrp1_apb_clk_en(&mut self) -> Timergrp1ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Timergrp1ApbClkEnW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Reserved"]
+    #[inline(always)]
+    pub fn systimer_apb_clk_en(&mut self) -> SystimerApbClkEnW<'_, SocClkCtrl2Spec> {
+        SystimerApbClkEnW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Reserved"]
+    #[inline(always)]
+    pub fn twai0_apb_clk_en(&mut self) -> Twai0ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Twai0ApbClkEnW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Reserved"]
+    #[inline(always)]
+    pub fn twai1_apb_clk_en(&mut self) -> Twai1ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Twai1ApbClkEnW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Reserved"]
+    #[inline(always)]
+    pub fn twai2_apb_clk_en(&mut self) -> Twai2ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Twai2ApbClkEnW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Reserved"]
+    #[inline(always)]
+    pub fn mcpwm0_apb_clk_en(&mut self) -> Mcpwm0ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Mcpwm0ApbClkEnW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Reserved"]
+    #[inline(always)]
+    pub fn mcpwm1_apb_clk_en(&mut self) -> Mcpwm1ApbClkEnW<'_, SocClkCtrl2Spec> {
+        Mcpwm1ApbClkEnW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Reserved"]
+    #[inline(always)]
+    pub fn usb_device_apb_clk_en(&mut self) -> UsbDeviceApbClkEnW<'_, SocClkCtrl2Spec> {
+        UsbDeviceApbClkEnW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Reserved"]
+    #[inline(always)]
+    pub fn pcnt_apb_clk_en(&mut self) -> PcntApbClkEnW<'_, SocClkCtrl2Spec> {
+        PcntApbClkEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Reserved"]
+    #[inline(always)]
+    pub fn parlio_apb_clk_en(&mut self) -> ParlioApbClkEnW<'_, SocClkCtrl2Spec> {
+        ParlioApbClkEnW::new(self, 31)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`soc_clk_ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`soc_clk_ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SocClkCtrl2Spec;
+impl crate::RegisterSpec for SocClkCtrl2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`soc_clk_ctrl2::R`](R) reader structure"]
+impl crate::Readable for SocClkCtrl2Spec {}
+#[doc = "`write(|w| ..)` method takes [`soc_clk_ctrl2::W`](W) writer structure"]
+impl crate::Writable for SocClkCtrl2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SOC_CLK_CTRL2 to value 0x20f8_0fde"]
+impl crate::Resettable for SocClkCtrl2Spec {
+    const RESET_VALUE: u32 = 0x20f8_0fde;
+}

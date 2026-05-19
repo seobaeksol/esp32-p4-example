@@ -1,0 +1,79 @@
+#[doc = "Register `HP_MODEM_DIG_POWER` reader"]
+pub type R = crate::R<HpModemDigPowerSpec>;
+#[doc = "Register `HP_MODEM_DIG_POWER` writer"]
+pub type W = crate::W<HpModemDigPowerSpec>;
+#[doc = "Field `HP_MODEM_DCDC_SWITCH_PD_EN` reader - need_des"]
+pub type HpModemDcdcSwitchPdEnR = crate::BitReader;
+#[doc = "Field `HP_MODEM_DCDC_SWITCH_PD_EN` writer - need_des"]
+pub type HpModemDcdcSwitchPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_HP_MEM_DSLP` writer - need_des"]
+pub type HpModemHpMemDslpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_PD_HP_MEM_PD_EN` writer - need_des"]
+pub type HpModemPdHpMemPdEnW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `HP_MODEM_PD_HP_WIFI_PD_EN` writer - need_des"]
+pub type HpModemPdHpWifiPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_PD_HP_CPU_PD_EN` writer - need_des"]
+pub type HpModemPdHpCpuPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_PD_CNNT_PD_EN` writer - need_des"]
+pub type HpModemPdCnntPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_PD_TOP_PD_EN` writer - need_des"]
+pub type HpModemPdTopPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 21 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_dcdc_switch_pd_en(&self) -> HpModemDcdcSwitchPdEnR {
+        HpModemDcdcSwitchPdEnR::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 21 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_dcdc_switch_pd_en(
+        &mut self,
+    ) -> HpModemDcdcSwitchPdEnW<'_, HpModemDigPowerSpec> {
+        HpModemDcdcSwitchPdEnW::new(self, 21)
+    }
+    #[doc = "Bit 22 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_hp_mem_dslp(&mut self) -> HpModemHpMemDslpW<'_, HpModemDigPowerSpec> {
+        HpModemHpMemDslpW::new(self, 22)
+    }
+    #[doc = "Bits 23:26 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_pd_hp_mem_pd_en(&mut self) -> HpModemPdHpMemPdEnW<'_, HpModemDigPowerSpec> {
+        HpModemPdHpMemPdEnW::new(self, 23)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_pd_hp_wifi_pd_en(&mut self) -> HpModemPdHpWifiPdEnW<'_, HpModemDigPowerSpec> {
+        HpModemPdHpWifiPdEnW::new(self, 27)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_pd_hp_cpu_pd_en(&mut self) -> HpModemPdHpCpuPdEnW<'_, HpModemDigPowerSpec> {
+        HpModemPdHpCpuPdEnW::new(self, 29)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_pd_cnnt_pd_en(&mut self) -> HpModemPdCnntPdEnW<'_, HpModemDigPowerSpec> {
+        HpModemPdCnntPdEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn hp_modem_pd_top_pd_en(&mut self) -> HpModemPdTopPdEnW<'_, HpModemDigPowerSpec> {
+        HpModemPdTopPdEnW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_modem_dig_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_modem_dig_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HpModemDigPowerSpec;
+impl crate::RegisterSpec for HpModemDigPowerSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hp_modem_dig_power::R`](R) reader structure"]
+impl crate::Readable for HpModemDigPowerSpec {}
+#[doc = "`write(|w| ..)` method takes [`hp_modem_dig_power::W`](W) writer structure"]
+impl crate::Writable for HpModemDigPowerSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HP_MODEM_DIG_POWER to value 0"]
+impl crate::Resettable for HpModemDigPowerSpec {}

@@ -1,0 +1,91 @@
+#[doc = "Register `PROBEA_CTRL` reader"]
+pub type R = crate::R<ProbeaCtrlSpec>;
+#[doc = "Register `PROBEA_CTRL` writer"]
+pub type W = crate::W<ProbeaCtrlSpec>;
+#[doc = "Field `REG_PROBE_A_MOD_SEL` reader - Tihs field is used to selec probe_group from probe_group0 to probe_group15 for module's probe_out\\[31:0\\] in a mode"]
+pub type RegProbeAModSelR = crate::FieldReader<u16>;
+#[doc = "Field `REG_PROBE_A_MOD_SEL` writer - Tihs field is used to selec probe_group from probe_group0 to probe_group15 for module's probe_out\\[31:0\\] in a mode"]
+pub type RegProbeAModSelW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `REG_PROBE_A_TOP_SEL` reader - Tihs field is used to selec module's probe_out\\[31:0\\] as probe out in a mode"]
+pub type RegProbeATopSelR = crate::FieldReader;
+#[doc = "Field `REG_PROBE_A_TOP_SEL` writer - Tihs field is used to selec module's probe_out\\[31:0\\] as probe out in a mode"]
+pub type RegProbeATopSelW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `REG_PROBE_L_SEL` reader - Tihs field is used to selec probe_out\\[31:16\\]"]
+pub type RegProbeLSelR = crate::FieldReader;
+#[doc = "Field `REG_PROBE_L_SEL` writer - Tihs field is used to selec probe_out\\[31:16\\]"]
+pub type RegProbeLSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `REG_PROBE_H_SEL` reader - Tihs field is used to selec probe_out\\[31:16\\]"]
+pub type RegProbeHSelR = crate::FieldReader;
+#[doc = "Field `REG_PROBE_H_SEL` writer - Tihs field is used to selec probe_out\\[31:16\\]"]
+pub type RegProbeHSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `REG_PROBE_GLOBAL_EN` reader - Set this bit to enable global debug probe in hp system."]
+pub type RegProbeGlobalEnR = crate::BitReader;
+#[doc = "Field `REG_PROBE_GLOBAL_EN` writer - Set this bit to enable global debug probe in hp system."]
+pub type RegProbeGlobalEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:15 - Tihs field is used to selec probe_group from probe_group0 to probe_group15 for module's probe_out\\[31:0\\] in a mode"]
+    #[inline(always)]
+    pub fn reg_probe_a_mod_sel(&self) -> RegProbeAModSelR {
+        RegProbeAModSelR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:23 - Tihs field is used to selec module's probe_out\\[31:0\\] as probe out in a mode"]
+    #[inline(always)]
+    pub fn reg_probe_a_top_sel(&self) -> RegProbeATopSelR {
+        RegProbeATopSelR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:25 - Tihs field is used to selec probe_out\\[31:16\\]"]
+    #[inline(always)]
+    pub fn reg_probe_l_sel(&self) -> RegProbeLSelR {
+        RegProbeLSelR::new(((self.bits >> 24) & 3) as u8)
+    }
+    #[doc = "Bits 26:27 - Tihs field is used to selec probe_out\\[31:16\\]"]
+    #[inline(always)]
+    pub fn reg_probe_h_sel(&self) -> RegProbeHSelR {
+        RegProbeHSelR::new(((self.bits >> 26) & 3) as u8)
+    }
+    #[doc = "Bit 28 - Set this bit to enable global debug probe in hp system."]
+    #[inline(always)]
+    pub fn reg_probe_global_en(&self) -> RegProbeGlobalEnR {
+        RegProbeGlobalEnR::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Tihs field is used to selec probe_group from probe_group0 to probe_group15 for module's probe_out\\[31:0\\] in a mode"]
+    #[inline(always)]
+    pub fn reg_probe_a_mod_sel(&mut self) -> RegProbeAModSelW<'_, ProbeaCtrlSpec> {
+        RegProbeAModSelW::new(self, 0)
+    }
+    #[doc = "Bits 16:23 - Tihs field is used to selec module's probe_out\\[31:0\\] as probe out in a mode"]
+    #[inline(always)]
+    pub fn reg_probe_a_top_sel(&mut self) -> RegProbeATopSelW<'_, ProbeaCtrlSpec> {
+        RegProbeATopSelW::new(self, 16)
+    }
+    #[doc = "Bits 24:25 - Tihs field is used to selec probe_out\\[31:16\\]"]
+    #[inline(always)]
+    pub fn reg_probe_l_sel(&mut self) -> RegProbeLSelW<'_, ProbeaCtrlSpec> {
+        RegProbeLSelW::new(self, 24)
+    }
+    #[doc = "Bits 26:27 - Tihs field is used to selec probe_out\\[31:16\\]"]
+    #[inline(always)]
+    pub fn reg_probe_h_sel(&mut self) -> RegProbeHSelW<'_, ProbeaCtrlSpec> {
+        RegProbeHSelW::new(self, 26)
+    }
+    #[doc = "Bit 28 - Set this bit to enable global debug probe in hp system."]
+    #[inline(always)]
+    pub fn reg_probe_global_en(&mut self) -> RegProbeGlobalEnW<'_, ProbeaCtrlSpec> {
+        RegProbeGlobalEnW::new(self, 28)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`probea_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`probea_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ProbeaCtrlSpec;
+impl crate::RegisterSpec for ProbeaCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`probea_ctrl::R`](R) reader structure"]
+impl crate::Readable for ProbeaCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`probea_ctrl::W`](W) writer structure"]
+impl crate::Writable for ProbeaCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets PROBEA_CTRL to value 0"]
+impl crate::Resettable for ProbeaCtrlSpec {}

@@ -1,0 +1,128 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<IntClrSpec>;
+#[doc = "Field `JTAG_IN_FLUSH` writer - Set this bit to clear the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
+pub type JtagInFlushW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SOF` writer - Set this bit to clear the USB_DEVICE_JTAG_SOF_INT interrupt."]
+pub type SofW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SERIAL_OUT_RECV_PKT` writer - Set this bit to clear the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
+pub type SerialOutRecvPktW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SERIAL_IN_EMPTY` writer - Set this bit to clear the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
+pub type SerialInEmptyW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `PID_ERR` writer - Set this bit to clear the USB_DEVICE_PID_ERR_INT interrupt."]
+pub type PidErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CRC5_ERR` writer - Set this bit to clear the USB_DEVICE_CRC5_ERR_INT interrupt."]
+pub type Crc5ErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CRC16_ERR` writer - Set this bit to clear the USB_DEVICE_CRC16_ERR_INT interrupt."]
+pub type Crc16ErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `STUFF_ERR` writer - Set this bit to clear the USB_DEVICE_STUFF_ERR_INT interrupt."]
+pub type StuffErrW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `IN_TOKEN_REC_IN_EP1` writer - Set this bit to clear the USB_DEVICE_IN_TOKEN_IN_EP1_INT interrupt."]
+pub type InTokenRecInEp1W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `USB_BUS_RESET` writer - Set this bit to clear the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
+pub type UsbBusResetW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `OUT_EP1_ZERO_PAYLOAD` writer - Set this bit to clear the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
+pub type OutEp1ZeroPayloadW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `OUT_EP2_ZERO_PAYLOAD` writer - Set this bit to clear the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
+pub type OutEp2ZeroPayloadW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `RTS_CHG` writer - Set this bit to clear the USB_DEVICE_RTS_CHG_INT interrupt."]
+pub type RtsChgW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `DTR_CHG` writer - Set this bit to clear the USB_DEVICE_DTR_CHG_INT interrupt."]
+pub type DtrChgW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `GET_LINE_CODE` writer - Set this bit to clear the USB_DEVICE_GET_LINE_CODE_INT interrupt."]
+pub type GetLineCodeW<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SET_LINE_CODE` writer - Set this bit to clear the USB_DEVICE_SET_LINE_CODE_INT interrupt."]
+pub type SetLineCodeW<'a, REG> = crate::BitWriter1C<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Set this bit to clear the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
+    #[inline(always)]
+    pub fn jtag_in_flush(&mut self) -> JtagInFlushW<'_, IntClrSpec> {
+        JtagInFlushW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to clear the USB_DEVICE_JTAG_SOF_INT interrupt."]
+    #[inline(always)]
+    pub fn sof(&mut self) -> SofW<'_, IntClrSpec> {
+        SofW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Set this bit to clear the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
+    #[inline(always)]
+    pub fn serial_out_recv_pkt(&mut self) -> SerialOutRecvPktW<'_, IntClrSpec> {
+        SerialOutRecvPktW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Set this bit to clear the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
+    #[inline(always)]
+    pub fn serial_in_empty(&mut self) -> SerialInEmptyW<'_, IntClrSpec> {
+        SerialInEmptyW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Set this bit to clear the USB_DEVICE_PID_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn pid_err(&mut self) -> PidErrW<'_, IntClrSpec> {
+        PidErrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Set this bit to clear the USB_DEVICE_CRC5_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn crc5_err(&mut self) -> Crc5ErrW<'_, IntClrSpec> {
+        Crc5ErrW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Set this bit to clear the USB_DEVICE_CRC16_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn crc16_err(&mut self) -> Crc16ErrW<'_, IntClrSpec> {
+        Crc16ErrW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Set this bit to clear the USB_DEVICE_STUFF_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn stuff_err(&mut self) -> StuffErrW<'_, IntClrSpec> {
+        StuffErrW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Set this bit to clear the USB_DEVICE_IN_TOKEN_IN_EP1_INT interrupt."]
+    #[inline(always)]
+    pub fn in_token_rec_in_ep1(&mut self) -> InTokenRecInEp1W<'_, IntClrSpec> {
+        InTokenRecInEp1W::new(self, 8)
+    }
+    #[doc = "Bit 9 - Set this bit to clear the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
+    #[inline(always)]
+    pub fn usb_bus_reset(&mut self) -> UsbBusResetW<'_, IntClrSpec> {
+        UsbBusResetW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Set this bit to clear the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
+    #[inline(always)]
+    pub fn out_ep1_zero_payload(&mut self) -> OutEp1ZeroPayloadW<'_, IntClrSpec> {
+        OutEp1ZeroPayloadW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Set this bit to clear the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
+    #[inline(always)]
+    pub fn out_ep2_zero_payload(&mut self) -> OutEp2ZeroPayloadW<'_, IntClrSpec> {
+        OutEp2ZeroPayloadW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Set this bit to clear the USB_DEVICE_RTS_CHG_INT interrupt."]
+    #[inline(always)]
+    pub fn rts_chg(&mut self) -> RtsChgW<'_, IntClrSpec> {
+        RtsChgW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Set this bit to clear the USB_DEVICE_DTR_CHG_INT interrupt."]
+    #[inline(always)]
+    pub fn dtr_chg(&mut self) -> DtrChgW<'_, IntClrSpec> {
+        DtrChgW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Set this bit to clear the USB_DEVICE_GET_LINE_CODE_INT interrupt."]
+    #[inline(always)]
+    pub fn get_line_code(&mut self) -> GetLineCodeW<'_, IntClrSpec> {
+        GetLineCodeW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Set this bit to clear the USB_DEVICE_SET_LINE_CODE_INT interrupt."]
+    #[inline(always)]
+    pub fn set_line_code(&mut self) -> SetLineCodeW<'_, IntClrSpec> {
+        SetLineCodeW::new(self, 15)
+    }
+}
+#[doc = "Interrupt clear status register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntClrSpec;
+impl crate::RegisterSpec for IntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for IntClrSpec {
+    type Safety = crate::Unsafe;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for IntClrSpec {}

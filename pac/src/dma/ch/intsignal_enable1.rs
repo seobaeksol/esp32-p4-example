@@ -1,0 +1,51 @@
+#[doc = "Register `INTSIGNAL_ENABLE1` reader"]
+pub type R = crate::R<IntsignalEnable1Spec>;
+#[doc = "Field `CH1_ENABLE_ECC_PROT_CHMEM_CORRERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableEccProtChmemCorrerrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_ECC_PROT_CHMEM_UNCORRERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableEccProtChmemUncorrerrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_ECC_PROT_UIDMEM_CORRERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableEccProtUidmemCorrerrIntsignalR = crate::BitReader;
+#[doc = "Field `CH1_ENABLE_ECC_PROT_UIDMEM_UNCORRERR_INTSIGNAL` reader - NA"]
+pub type Ch1EnableEccProtUidmemUncorrerrIntsignalR = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ecc_prot_chmem_correrr_intsignal(
+        &self,
+    ) -> Ch1EnableEccProtChmemCorrerrIntsignalR {
+        Ch1EnableEccProtChmemCorrerrIntsignalR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ecc_prot_chmem_uncorrerr_intsignal(
+        &self,
+    ) -> Ch1EnableEccProtChmemUncorrerrIntsignalR {
+        Ch1EnableEccProtChmemUncorrerrIntsignalR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ecc_prot_uidmem_correrr_intsignal(
+        &self,
+    ) -> Ch1EnableEccProtUidmemCorrerrIntsignalR {
+        Ch1EnableEccProtUidmemCorrerrIntsignalR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch1_enable_ecc_prot_uidmem_uncorrerr_intsignal(
+        &self,
+    ) -> Ch1EnableEccProtUidmemUncorrerrIntsignalR {
+        Ch1EnableEccProtUidmemUncorrerrIntsignalR::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intsignal_enable1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntsignalEnable1Spec;
+impl crate::RegisterSpec for IntsignalEnable1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`intsignal_enable1::R`](R) reader structure"]
+impl crate::Readable for IntsignalEnable1Spec {}
+#[doc = "`reset()` method sets INTSIGNAL_ENABLE1 to value 0x0f"]
+impl crate::Resettable for IntsignalEnable1Spec {
+    const RESET_VALUE: u32 = 0x0f;
+}

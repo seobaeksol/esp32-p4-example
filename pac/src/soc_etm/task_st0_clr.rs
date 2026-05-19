@@ -1,0 +1,255 @@
+#[doc = "Register `TASK_ST0_CLR` writer"]
+pub type W = crate::W<TaskSt0ClrSpec>;
+#[doc = "Field `GPIO_TASK_CH0_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch0_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh0SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH1_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch1_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh1SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH2_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch2_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh2SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH3_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch3_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh3SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH4_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch4_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh4SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH5_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch5_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh5SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH6_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch6_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh6SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH7_SET_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch7_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh7SetStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH0_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch0_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh0ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH1_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch1_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh1ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH2_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch2_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh2ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH3_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch3_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh3ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH4_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch4_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh4ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH5_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch5_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh5ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH6_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch6_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh6ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH7_CLEAR_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch7_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh7ClearStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH0_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch0_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh0ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH1_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch1_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh1ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH2_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch2_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh2ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH3_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch3_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh3ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH4_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch4_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh4ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH5_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch5_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh5ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH6_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch6_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh6ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_TASK_CH7_TOGGLE_ST_CLR` writer - Configures whether or not to clear GPIO_task_ch7_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type GpioTaskCh7ToggleStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER0_RES_UPDATE_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer0_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer0ResUpdateStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER1_RES_UPDATE_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer1_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer1ResUpdateStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER2_RES_UPDATE_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer2_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer2ResUpdateStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_TIMER3_RES_UPDATE_ST_CLR` writer - Configures whether or not to clear LEDC_task_timer3_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskTimer3ResUpdateStClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH0_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh0StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH1_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh1StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH2_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh2StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_TASK_DUTY_SCALE_UPDATE_CH3_ST_CLR` writer - Configures whether or not to clear LEDC_task_duty_scale_update_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+pub type LedcTaskDutyScaleUpdateCh3StClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - Configures whether or not to clear GPIO_task_ch0_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch0_set_st_clr(&mut self) -> GpioTaskCh0SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh0SetStClrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Configures whether or not to clear GPIO_task_ch1_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch1_set_st_clr(&mut self) -> GpioTaskCh1SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh1SetStClrW::new(self, 1)
+    }
+    #[doc = "Bit 2 - Configures whether or not to clear GPIO_task_ch2_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch2_set_st_clr(&mut self) -> GpioTaskCh2SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh2SetStClrW::new(self, 2)
+    }
+    #[doc = "Bit 3 - Configures whether or not to clear GPIO_task_ch3_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch3_set_st_clr(&mut self) -> GpioTaskCh3SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh3SetStClrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Configures whether or not to clear GPIO_task_ch4_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch4_set_st_clr(&mut self) -> GpioTaskCh4SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh4SetStClrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - Configures whether or not to clear GPIO_task_ch5_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch5_set_st_clr(&mut self) -> GpioTaskCh5SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh5SetStClrW::new(self, 5)
+    }
+    #[doc = "Bit 6 - Configures whether or not to clear GPIO_task_ch6_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch6_set_st_clr(&mut self) -> GpioTaskCh6SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh6SetStClrW::new(self, 6)
+    }
+    #[doc = "Bit 7 - Configures whether or not to clear GPIO_task_ch7_set trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch7_set_st_clr(&mut self) -> GpioTaskCh7SetStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh7SetStClrW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Configures whether or not to clear GPIO_task_ch0_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch0_clear_st_clr(&mut self) -> GpioTaskCh0ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh0ClearStClrW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Configures whether or not to clear GPIO_task_ch1_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch1_clear_st_clr(&mut self) -> GpioTaskCh1ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh1ClearStClrW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Configures whether or not to clear GPIO_task_ch2_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch2_clear_st_clr(&mut self) -> GpioTaskCh2ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh2ClearStClrW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Configures whether or not to clear GPIO_task_ch3_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch3_clear_st_clr(&mut self) -> GpioTaskCh3ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh3ClearStClrW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Configures whether or not to clear GPIO_task_ch4_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch4_clear_st_clr(&mut self) -> GpioTaskCh4ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh4ClearStClrW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Configures whether or not to clear GPIO_task_ch5_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch5_clear_st_clr(&mut self) -> GpioTaskCh5ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh5ClearStClrW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Configures whether or not to clear GPIO_task_ch6_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch6_clear_st_clr(&mut self) -> GpioTaskCh6ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh6ClearStClrW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Configures whether or not to clear GPIO_task_ch7_clear trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch7_clear_st_clr(&mut self) -> GpioTaskCh7ClearStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh7ClearStClrW::new(self, 15)
+    }
+    #[doc = "Bit 16 - Configures whether or not to clear GPIO_task_ch0_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch0_toggle_st_clr(&mut self) -> GpioTaskCh0ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh0ToggleStClrW::new(self, 16)
+    }
+    #[doc = "Bit 17 - Configures whether or not to clear GPIO_task_ch1_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch1_toggle_st_clr(&mut self) -> GpioTaskCh1ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh1ToggleStClrW::new(self, 17)
+    }
+    #[doc = "Bit 18 - Configures whether or not to clear GPIO_task_ch2_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch2_toggle_st_clr(&mut self) -> GpioTaskCh2ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh2ToggleStClrW::new(self, 18)
+    }
+    #[doc = "Bit 19 - Configures whether or not to clear GPIO_task_ch3_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch3_toggle_st_clr(&mut self) -> GpioTaskCh3ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh3ToggleStClrW::new(self, 19)
+    }
+    #[doc = "Bit 20 - Configures whether or not to clear GPIO_task_ch4_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch4_toggle_st_clr(&mut self) -> GpioTaskCh4ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh4ToggleStClrW::new(self, 20)
+    }
+    #[doc = "Bit 21 - Configures whether or not to clear GPIO_task_ch5_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch5_toggle_st_clr(&mut self) -> GpioTaskCh5ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh5ToggleStClrW::new(self, 21)
+    }
+    #[doc = "Bit 22 - Configures whether or not to clear GPIO_task_ch6_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch6_toggle_st_clr(&mut self) -> GpioTaskCh6ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh6ToggleStClrW::new(self, 22)
+    }
+    #[doc = "Bit 23 - Configures whether or not to clear GPIO_task_ch7_toggle trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn gpio_task_ch7_toggle_st_clr(&mut self) -> GpioTaskCh7ToggleStClrW<'_, TaskSt0ClrSpec> {
+        GpioTaskCh7ToggleStClrW::new(self, 23)
+    }
+    #[doc = "Bit 24 - Configures whether or not to clear LEDC_task_timer0_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer0_res_update_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer0ResUpdateStClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskTimer0ResUpdateStClrW::new(self, 24)
+    }
+    #[doc = "Bit 25 - Configures whether or not to clear LEDC_task_timer1_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer1_res_update_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer1ResUpdateStClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskTimer1ResUpdateStClrW::new(self, 25)
+    }
+    #[doc = "Bit 26 - Configures whether or not to clear LEDC_task_timer2_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer2_res_update_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer2ResUpdateStClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskTimer2ResUpdateStClrW::new(self, 26)
+    }
+    #[doc = "Bit 27 - Configures whether or not to clear LEDC_task_timer3_res_update trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_timer3_res_update_st_clr(
+        &mut self,
+    ) -> LedcTaskTimer3ResUpdateStClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskTimer3ResUpdateStClrW::new(self, 27)
+    }
+    #[doc = "Bit 28 - Configures whether or not to clear LEDC_task_duty_scale_update_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch0_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh0StClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskDutyScaleUpdateCh0StClrW::new(self, 28)
+    }
+    #[doc = "Bit 29 - Configures whether or not to clear LEDC_task_duty_scale_update_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch1_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh1StClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskDutyScaleUpdateCh1StClrW::new(self, 29)
+    }
+    #[doc = "Bit 30 - Configures whether or not to clear LEDC_task_duty_scale_update_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch2_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh2StClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskDutyScaleUpdateCh2StClrW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Configures whether or not to clear LEDC_task_duty_scale_update_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
+    #[inline(always)]
+    pub fn ledc_task_duty_scale_update_ch3_st_clr(
+        &mut self,
+    ) -> LedcTaskDutyScaleUpdateCh3StClrW<'_, TaskSt0ClrSpec> {
+        LedcTaskDutyScaleUpdateCh3StClrW::new(self, 31)
+    }
+}
+#[doc = "Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st0_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TaskSt0ClrSpec;
+impl crate::RegisterSpec for TaskSt0ClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`task_st0_clr::W`](W) writer structure"]
+impl crate::Writable for TaskSt0ClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TASK_ST0_CLR to value 0"]
+impl crate::Resettable for TaskSt0ClrSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `VERID_FILEDS` reader"]
+pub type R = crate::R<VeridFiledsSpec>;
+#[doc = "Field `VERID` reader - "]
+pub type VeridR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn verid(&self) -> VeridR {
+        VeridR::new(self.bits)
+    }
+}
+#[doc = "QoS block version ID (typo matches IDF symbol)\n\nYou can [`read`](crate::Reg::read) this register and get [`verid_fileds::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VeridFiledsSpec;
+impl crate::RegisterSpec for VeridFiledsSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`verid_fileds::R`](R) reader structure"]
+impl crate::Readable for VeridFiledsSpec {}
+#[doc = "`reset()` method sets VERID_FILEDS to value 0"]
+impl crate::Resettable for VeridFiledsSpec {}

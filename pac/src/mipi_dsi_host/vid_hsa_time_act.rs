@@ -1,0 +1,20 @@
+#[doc = "Register `VID_HSA_TIME_ACT` reader"]
+pub type R = crate::R<VidHsaTimeActSpec>;
+#[doc = "Field `VID_HSA_TIME_ACT` reader - NA"]
+pub type VidHsaTimeActR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:11 - NA"]
+    #[inline(always)]
+    pub fn vid_hsa_time_act(&self) -> VidHsaTimeActR {
+        VidHsaTimeActR::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vid_hsa_time_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VidHsaTimeActSpec;
+impl crate::RegisterSpec for VidHsaTimeActSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vid_hsa_time_act::R`](R) reader structure"]
+impl crate::Readable for VidHsaTimeActSpec {}
+#[doc = "`reset()` method sets VID_HSA_TIME_ACT to value 0"]
+impl crate::Resettable for VidHsaTimeActSpec {}

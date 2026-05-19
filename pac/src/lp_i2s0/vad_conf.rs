@@ -1,0 +1,49 @@
+#[doc = "Register `VAD_CONF` reader"]
+pub type R = crate::R<VadConfSpec>;
+#[doc = "Register `VAD_CONF` writer"]
+pub type W = crate::W<VadConfSpec>;
+#[doc = "Field `VAD_EN` reader - VAD enable register"]
+pub type VadEnR = crate::BitReader;
+#[doc = "Field `VAD_EN` writer - VAD enable register"]
+pub type VadEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VAD_RESET` writer - VAD reset register"]
+pub type VadResetW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VAD_FORCE_START` writer - VAD force start register."]
+pub type VadForceStartW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - VAD enable register"]
+    #[inline(always)]
+    pub fn vad_en(&self) -> VadEnR {
+        VadEnR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - VAD enable register"]
+    #[inline(always)]
+    pub fn vad_en(&mut self) -> VadEnW<'_, VadConfSpec> {
+        VadEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - VAD reset register"]
+    #[inline(always)]
+    pub fn vad_reset(&mut self) -> VadResetW<'_, VadConfSpec> {
+        VadResetW::new(self, 1)
+    }
+    #[doc = "Bit 2 - VAD force start register."]
+    #[inline(always)]
+    pub fn vad_force_start(&mut self) -> VadForceStartW<'_, VadConfSpec> {
+        VadForceStartW::new(self, 2)
+    }
+}
+#[doc = "I2S VAD Configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`vad_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vad_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VadConfSpec;
+impl crate::RegisterSpec for VadConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vad_conf::R`](R) reader structure"]
+impl crate::Readable for VadConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`vad_conf::W`](W) writer structure"]
+impl crate::Writable for VadConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VAD_CONF to value 0"]
+impl crate::Resettable for VadConfSpec {}

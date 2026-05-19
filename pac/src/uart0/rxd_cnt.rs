@@ -1,0 +1,20 @@
+#[doc = "Register `RXD_CNT` reader"]
+pub type R = crate::R<RxdCntSpec>;
+#[doc = "Field `RXD_EDGE_CNT` reader - This register stores the count of rxd edge change. It is used in baud rate-detect process."]
+pub type RxdEdgeCntR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:9 - This register stores the count of rxd edge change. It is used in baud rate-detect process."]
+    #[inline(always)]
+    pub fn rxd_edge_cnt(&self) -> RxdEdgeCntR {
+        RxdEdgeCntR::new((self.bits & 0x03ff) as u16)
+    }
+}
+#[doc = "Autobaud edge change count register\n\nYou can [`read`](crate::Reg::read) this register and get [`rxd_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RxdCntSpec;
+impl crate::RegisterSpec for RxdCntSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rxd_cnt::R`](R) reader structure"]
+impl crate::Readable for RxdCntSpec {}
+#[doc = "`reset()` method sets RXD_CNT to value 0"]
+impl crate::Resettable for RxdCntSpec {}

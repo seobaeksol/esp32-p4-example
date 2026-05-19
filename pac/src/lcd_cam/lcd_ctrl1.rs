@@ -1,0 +1,63 @@
+#[doc = "Register `LCD_CTRL1` reader"]
+pub type R = crate::R<LcdCtrl1Spec>;
+#[doc = "Register `LCD_CTRL1` writer"]
+pub type W = crate::W<LcdCtrl1Spec>;
+#[doc = "Field `LCD_VB_FRONT` reader - It is the vertical blank front porch of a frame."]
+pub type LcdVbFrontR = crate::FieldReader;
+#[doc = "Field `LCD_VB_FRONT` writer - It is the vertical blank front porch of a frame."]
+pub type LcdVbFrontW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `LCD_HA_WIDTH` reader - It is the horizontal active width of a frame."]
+pub type LcdHaWidthR = crate::FieldReader<u16>;
+#[doc = "Field `LCD_HA_WIDTH` writer - It is the horizontal active width of a frame."]
+pub type LcdHaWidthW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+#[doc = "Field `LCD_HT_WIDTH` reader - It is the horizontal total width of a frame."]
+pub type LcdHtWidthR = crate::FieldReader<u16>;
+#[doc = "Field `LCD_HT_WIDTH` writer - It is the horizontal total width of a frame."]
+pub type LcdHtWidthW<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+impl R {
+    #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame."]
+    #[inline(always)]
+    pub fn lcd_vb_front(&self) -> LcdVbFrontR {
+        LcdVbFrontR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:19 - It is the horizontal active width of a frame."]
+    #[inline(always)]
+    pub fn lcd_ha_width(&self) -> LcdHaWidthR {
+        LcdHaWidthR::new(((self.bits >> 8) & 0x0fff) as u16)
+    }
+    #[doc = "Bits 20:31 - It is the horizontal total width of a frame."]
+    #[inline(always)]
+    pub fn lcd_ht_width(&self) -> LcdHtWidthR {
+        LcdHtWidthR::new(((self.bits >> 20) & 0x0fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame."]
+    #[inline(always)]
+    pub fn lcd_vb_front(&mut self) -> LcdVbFrontW<'_, LcdCtrl1Spec> {
+        LcdVbFrontW::new(self, 0)
+    }
+    #[doc = "Bits 8:19 - It is the horizontal active width of a frame."]
+    #[inline(always)]
+    pub fn lcd_ha_width(&mut self) -> LcdHaWidthW<'_, LcdCtrl1Spec> {
+        LcdHaWidthW::new(self, 8)
+    }
+    #[doc = "Bits 20:31 - It is the horizontal total width of a frame."]
+    #[inline(always)]
+    pub fn lcd_ht_width(&mut self) -> LcdHtWidthW<'_, LcdCtrl1Spec> {
+        LcdHtWidthW::new(self, 20)
+    }
+}
+#[doc = "LCD config register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lcd_ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcd_ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LcdCtrl1Spec;
+impl crate::RegisterSpec for LcdCtrl1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lcd_ctrl1::R`](R) reader structure"]
+impl crate::Readable for LcdCtrl1Spec {}
+#[doc = "`write(|w| ..)` method takes [`lcd_ctrl1::W`](W) writer structure"]
+impl crate::Writable for LcdCtrl1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LCD_CTRL1 to value 0"]
+impl crate::Resettable for LcdCtrl1Spec {}

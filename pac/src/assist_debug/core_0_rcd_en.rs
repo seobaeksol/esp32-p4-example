@@ -1,0 +1,49 @@
+#[doc = "Register `CORE_0_RCD_EN` reader"]
+pub type R = crate::R<Core0RcdEnSpec>;
+#[doc = "Register `CORE_0_RCD_EN` writer"]
+pub type W = crate::W<Core0RcdEnSpec>;
+#[doc = "Field `CORE_0_RCD_RECORDEN` reader - Set 1 to enable record PC"]
+pub type Core0RcdRecordenR = crate::BitReader;
+#[doc = "Field `CORE_0_RCD_RECORDEN` writer - Set 1 to enable record PC"]
+pub type Core0RcdRecordenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_0_RCD_PDEBUGEN` reader - Set 1 to enable cpu pdebug function, must set this bit can get cpu PC"]
+pub type Core0RcdPdebugenR = crate::BitReader;
+#[doc = "Field `CORE_0_RCD_PDEBUGEN` writer - Set 1 to enable cpu pdebug function, must set this bit can get cpu PC"]
+pub type Core0RcdPdebugenW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Set 1 to enable record PC"]
+    #[inline(always)]
+    pub fn core_0_rcd_recorden(&self) -> Core0RcdRecordenR {
+        Core0RcdRecordenR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set 1 to enable cpu pdebug function, must set this bit can get cpu PC"]
+    #[inline(always)]
+    pub fn core_0_rcd_pdebugen(&self) -> Core0RcdPdebugenR {
+        Core0RcdPdebugenR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set 1 to enable record PC"]
+    #[inline(always)]
+    pub fn core_0_rcd_recorden(&mut self) -> Core0RcdRecordenW<'_, Core0RcdEnSpec> {
+        Core0RcdRecordenW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set 1 to enable cpu pdebug function, must set this bit can get cpu PC"]
+    #[inline(always)]
+    pub fn core_0_rcd_pdebugen(&mut self) -> Core0RcdPdebugenW<'_, Core0RcdEnSpec> {
+        Core0RcdPdebugenW::new(self, 1)
+    }
+}
+#[doc = "record enable configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_rcd_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_0_rcd_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Core0RcdEnSpec;
+impl crate::RegisterSpec for Core0RcdEnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`core_0_rcd_en::R`](R) reader structure"]
+impl crate::Readable for Core0RcdEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`core_0_rcd_en::W`](W) writer structure"]
+impl crate::Writable for Core0RcdEnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CORE_0_RCD_EN to value 0"]
+impl crate::Resettable for Core0RcdEnSpec {}

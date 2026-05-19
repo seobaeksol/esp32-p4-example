@@ -1,0 +1,133 @@
+#[doc = "Register `ICM_MST_ARQOS` reader"]
+pub type R = crate::R<IcmMstArqosSpec>;
+#[doc = "Register `ICM_MST_ARQOS` writer"]
+pub type W = crate::W<IcmMstArqosSpec>;
+#[doc = "Field `CPU_ARQOS` reader - "]
+pub type CpuArqosR = crate::FieldReader;
+#[doc = "Field `CPU_ARQOS` writer - "]
+pub type CpuArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CACHE_ARQOS` reader - "]
+pub type CacheArqosR = crate::FieldReader;
+#[doc = "Field `CACHE_ARQOS` writer - "]
+pub type CacheArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `DMA2D_ARQOS` reader - "]
+pub type Dma2dArqosR = crate::FieldReader;
+#[doc = "Field `DMA2D_ARQOS` writer - "]
+pub type Dma2dArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `GDMA_MST1_ARQOS` reader - "]
+pub type GdmaMst1ArqosR = crate::FieldReader;
+#[doc = "Field `GDMA_MST1_ARQOS` writer - "]
+pub type GdmaMst1ArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `GDMA_MST2_ARQOS` reader - "]
+pub type GdmaMst2ArqosR = crate::FieldReader;
+#[doc = "Field `GDMA_MST2_ARQOS` writer - "]
+pub type GdmaMst2ArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `H264_DMA2D_M1_ARQOS` reader - "]
+pub type H264Dma2dM1ArqosR = crate::FieldReader;
+#[doc = "Field `H264_DMA2D_M1_ARQOS` writer - "]
+pub type H264Dma2dM1ArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `H264_DMA2D_M2_ARQOS` reader - "]
+pub type H264Dma2dM2ArqosR = crate::FieldReader;
+#[doc = "Field `H264_DMA2D_M2_ARQOS` writer - "]
+pub type H264Dma2dM2ArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `AXI_PDMA_INT_ARQOS` reader - "]
+pub type AxiPdmaIntArqosR = crate::FieldReader;
+#[doc = "Field `AXI_PDMA_INT_ARQOS` writer - "]
+pub type AxiPdmaIntArqosW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:3"]
+    #[inline(always)]
+    pub fn cpu_arqos(&self) -> CpuArqosR {
+        CpuArqosR::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    pub fn cache_arqos(&self) -> CacheArqosR {
+        CacheArqosR::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+    #[doc = "Bits 8:11"]
+    #[inline(always)]
+    pub fn dma2d_arqos(&self) -> Dma2dArqosR {
+        Dma2dArqosR::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:15"]
+    #[inline(always)]
+    pub fn gdma_mst1_arqos(&self) -> GdmaMst1ArqosR {
+        GdmaMst1ArqosR::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bits 16:19"]
+    #[inline(always)]
+    pub fn gdma_mst2_arqos(&self) -> GdmaMst2ArqosR {
+        GdmaMst2ArqosR::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+    #[doc = "Bits 20:23"]
+    #[inline(always)]
+    pub fn h264_dma2d_m1_arqos(&self) -> H264Dma2dM1ArqosR {
+        H264Dma2dM1ArqosR::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:27"]
+    #[inline(always)]
+    pub fn h264_dma2d_m2_arqos(&self) -> H264Dma2dM2ArqosR {
+        H264Dma2dM2ArqosR::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+    #[doc = "Bits 28:31"]
+    #[inline(always)]
+    pub fn axi_pdma_int_arqos(&self) -> AxiPdmaIntArqosR {
+        AxiPdmaIntArqosR::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3"]
+    #[inline(always)]
+    pub fn cpu_arqos(&mut self) -> CpuArqosW<'_, IcmMstArqosSpec> {
+        CpuArqosW::new(self, 0)
+    }
+    #[doc = "Bits 4:7"]
+    #[inline(always)]
+    pub fn cache_arqos(&mut self) -> CacheArqosW<'_, IcmMstArqosSpec> {
+        CacheArqosW::new(self, 4)
+    }
+    #[doc = "Bits 8:11"]
+    #[inline(always)]
+    pub fn dma2d_arqos(&mut self) -> Dma2dArqosW<'_, IcmMstArqosSpec> {
+        Dma2dArqosW::new(self, 8)
+    }
+    #[doc = "Bits 12:15"]
+    #[inline(always)]
+    pub fn gdma_mst1_arqos(&mut self) -> GdmaMst1ArqosW<'_, IcmMstArqosSpec> {
+        GdmaMst1ArqosW::new(self, 12)
+    }
+    #[doc = "Bits 16:19"]
+    #[inline(always)]
+    pub fn gdma_mst2_arqos(&mut self) -> GdmaMst2ArqosW<'_, IcmMstArqosSpec> {
+        GdmaMst2ArqosW::new(self, 16)
+    }
+    #[doc = "Bits 20:23"]
+    #[inline(always)]
+    pub fn h264_dma2d_m1_arqos(&mut self) -> H264Dma2dM1ArqosW<'_, IcmMstArqosSpec> {
+        H264Dma2dM1ArqosW::new(self, 20)
+    }
+    #[doc = "Bits 24:27"]
+    #[inline(always)]
+    pub fn h264_dma2d_m2_arqos(&mut self) -> H264Dma2dM2ArqosW<'_, IcmMstArqosSpec> {
+        H264Dma2dM2ArqosW::new(self, 24)
+    }
+    #[doc = "Bits 28:31"]
+    #[inline(always)]
+    pub fn axi_pdma_int_arqos(&mut self) -> AxiPdmaIntArqosW<'_, IcmMstArqosSpec> {
+        AxiPdmaIntArqosW::new(self, 28)
+    }
+}
+#[doc = "Master read QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arqos::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arqos::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IcmMstArqosSpec;
+impl crate::RegisterSpec for IcmMstArqosSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`icm_mst_arqos::R`](R) reader structure"]
+impl crate::Readable for IcmMstArqosSpec {}
+#[doc = "`write(|w| ..)` method takes [`icm_mst_arqos::W`](W) writer structure"]
+impl crate::Writable for IcmMstArqosSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ICM_MST_ARQOS to value 0"]
+impl crate::Resettable for IcmMstArqosSpec {}

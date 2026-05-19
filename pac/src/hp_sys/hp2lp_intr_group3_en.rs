@@ -1,0 +1,37 @@
+#[doc = "Register `HP2LP_INTR_GROUP3_EN` reader"]
+pub type R = crate::R<Hp2lpIntrGroup3EnSpec>;
+#[doc = "Register `HP2LP_INTR_GROUP3_EN` writer"]
+pub type W = crate::W<Hp2lpIntrGroup3EnSpec>;
+#[doc = "Field `H2LP_INTR_GROUP3_EN` reader - Set each bit to enable corresponding peripheral interrupt to LP CPU."]
+pub type H2lpIntrGroup3EnR = crate::FieldReader<u16>;
+#[doc = "Field `H2LP_INTR_GROUP3_EN` writer - Set each bit to enable corresponding peripheral interrupt to LP CPU."]
+pub type H2lpIntrGroup3EnW<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
+impl R {
+    #[doc = "Bits 0:13 - Set each bit to enable corresponding peripheral interrupt to LP CPU."]
+    #[inline(always)]
+    pub fn h2lp_intr_group3_en(&self) -> H2lpIntrGroup3EnR {
+        H2lpIntrGroup3EnR::new((self.bits & 0x3fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:13 - Set each bit to enable corresponding peripheral interrupt to LP CPU."]
+    #[inline(always)]
+    pub fn h2lp_intr_group3_en(&mut self) -> H2lpIntrGroup3EnW<'_, Hp2lpIntrGroup3EnSpec> {
+        H2lpIntrGroup3EnW::new(self, 0)
+    }
+}
+#[doc = "HpP2LP Interrupt Enable Register Group3\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group3_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_intr_group3_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Hp2lpIntrGroup3EnSpec;
+impl crate::RegisterSpec for Hp2lpIntrGroup3EnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hp2lp_intr_group3_en::R`](R) reader structure"]
+impl crate::Readable for Hp2lpIntrGroup3EnSpec {}
+#[doc = "`write(|w| ..)` method takes [`hp2lp_intr_group3_en::W`](W) writer structure"]
+impl crate::Writable for Hp2lpIntrGroup3EnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HP2LP_INTR_GROUP3_EN to value 0x3fff"]
+impl crate::Resettable for Hp2lpIntrGroup3EnSpec {
+    const RESET_VALUE: u32 = 0x3fff;
+}

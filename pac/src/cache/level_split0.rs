@@ -1,0 +1,22 @@
+#[doc = "Register `LEVEL_SPLIT0` reader"]
+pub type R = crate::R<LevelSplit0Spec>;
+#[doc = "Field `LEVEL_SPLIT0` reader - Reserved"]
+pub type LevelSplit0R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Reserved"]
+    #[inline(always)]
+    pub fn level_split0(&self) -> LevelSplit0R {
+        LevelSplit0R::new(self.bits)
+    }
+}
+#[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nYou can [`read`](crate::Reg::read) this register and get [`level_split0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LevelSplit0Spec;
+impl crate::RegisterSpec for LevelSplit0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`level_split0::R`](R) reader structure"]
+impl crate::Readable for LevelSplit0Spec {}
+#[doc = "`reset()` method sets LEVEL_SPLIT0 to value 0x026c"]
+impl crate::Resettable for LevelSplit0Spec {
+    const RESET_VALUE: u32 = 0x026c;
+}

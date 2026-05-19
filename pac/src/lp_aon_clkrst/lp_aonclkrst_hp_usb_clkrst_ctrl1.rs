@@ -1,0 +1,151 @@
+#[doc = "Register `LP_AONCLKRST_HP_USB_CLKRST_CTRL1` reader"]
+pub type R = crate::R<LpAonclkrstHpUsbClkrstCtrl1Spec>;
+#[doc = "Register `LP_AONCLKRST_HP_USB_CLKRST_CTRL1` writer"]
+pub type W = crate::W<LpAonclkrstHpUsbClkrstCtrl1Spec>;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG20_ADP` reader - usb otg20 adp reset en"]
+pub type LpAonclkrstRstEnUsbOtg20AdpR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG20_ADP` writer - usb otg20 adp reset en"]
+pub type LpAonclkrstRstEnUsbOtg20AdpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG20_PHY` reader - usb otg20 phy reset en"]
+pub type LpAonclkrstRstEnUsbOtg20PhyR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG20_PHY` writer - usb otg20 phy reset en"]
+pub type LpAonclkrstRstEnUsbOtg20PhyW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG20` reader - usb otg20 reset en"]
+pub type LpAonclkrstRstEnUsbOtg20R = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG20` writer - usb otg20 reset en"]
+pub type LpAonclkrstRstEnUsbOtg20W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG11` reader - usb org11 reset en"]
+pub type LpAonclkrstRstEnUsbOtg11R = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_OTG11` writer - usb org11 reset en"]
+pub type LpAonclkrstRstEnUsbOtg11W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_DEVICE` reader - usb device reset en"]
+pub type LpAonclkrstRstEnUsbDeviceR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_RST_EN_USB_DEVICE` writer - usb device reset en"]
+pub type LpAonclkrstRstEnUsbDeviceW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_USB_OTG20_PHYREF_CLK_SRC_SEL` reader - usb otg20 hs phy src sel. 2'd0: 12m, 2'd1: 25m, 2'd2: pad_hsphy_refclk."]
+pub type LpAonclkrstUsbOtg20PhyrefClkSrcSelR = crate::FieldReader;
+#[doc = "Field `LP_AONCLKRST_USB_OTG20_PHYREF_CLK_SRC_SEL` writer - usb otg20 hs phy src sel. 2'd0: 12m, 2'd1: 25m, 2'd2: pad_hsphy_refclk."]
+pub type LpAonclkrstUsbOtg20PhyrefClkSrcSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `LP_AONCLKRST_USB_OTG20_PHYREF_CLK_EN` reader - usb otg20 hs phy refclk enable."]
+pub type LpAonclkrstUsbOtg20PhyrefClkEnR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_USB_OTG20_PHYREF_CLK_EN` writer - usb otg20 hs phy refclk enable."]
+pub type LpAonclkrstUsbOtg20PhyrefClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_USB_OTG20_ULPI_CLK_EN` reader - usb otg20 ulpi clock enable."]
+pub type LpAonclkrstUsbOtg20UlpiClkEnR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_USB_OTG20_ULPI_CLK_EN` writer - usb otg20 ulpi clock enable."]
+pub type LpAonclkrstUsbOtg20UlpiClkEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - usb otg20 adp reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg20_adp(&self) -> LpAonclkrstRstEnUsbOtg20AdpR {
+        LpAonclkrstRstEnUsbOtg20AdpR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - usb otg20 phy reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg20_phy(&self) -> LpAonclkrstRstEnUsbOtg20PhyR {
+        LpAonclkrstRstEnUsbOtg20PhyR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - usb otg20 reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg20(&self) -> LpAonclkrstRstEnUsbOtg20R {
+        LpAonclkrstRstEnUsbOtg20R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - usb org11 reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg11(&self) -> LpAonclkrstRstEnUsbOtg11R {
+        LpAonclkrstRstEnUsbOtg11R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - usb device reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_device(&self) -> LpAonclkrstRstEnUsbDeviceR {
+        LpAonclkrstRstEnUsbDeviceR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 28:29 - usb otg20 hs phy src sel. 2'd0: 12m, 2'd1: 25m, 2'd2: pad_hsphy_refclk."]
+    #[inline(always)]
+    pub fn lp_aonclkrst_usb_otg20_phyref_clk_src_sel(&self) -> LpAonclkrstUsbOtg20PhyrefClkSrcSelR {
+        LpAonclkrstUsbOtg20PhyrefClkSrcSelR::new(((self.bits >> 28) & 3) as u8)
+    }
+    #[doc = "Bit 30 - usb otg20 hs phy refclk enable."]
+    #[inline(always)]
+    pub fn lp_aonclkrst_usb_otg20_phyref_clk_en(&self) -> LpAonclkrstUsbOtg20PhyrefClkEnR {
+        LpAonclkrstUsbOtg20PhyrefClkEnR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - usb otg20 ulpi clock enable."]
+    #[inline(always)]
+    pub fn lp_aonclkrst_usb_otg20_ulpi_clk_en(&self) -> LpAonclkrstUsbOtg20UlpiClkEnR {
+        LpAonclkrstUsbOtg20UlpiClkEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - usb otg20 adp reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg20_adp(
+        &mut self,
+    ) -> LpAonclkrstRstEnUsbOtg20AdpW<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstRstEnUsbOtg20AdpW::new(self, 0)
+    }
+    #[doc = "Bit 1 - usb otg20 phy reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg20_phy(
+        &mut self,
+    ) -> LpAonclkrstRstEnUsbOtg20PhyW<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstRstEnUsbOtg20PhyW::new(self, 1)
+    }
+    #[doc = "Bit 2 - usb otg20 reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg20(
+        &mut self,
+    ) -> LpAonclkrstRstEnUsbOtg20W<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstRstEnUsbOtg20W::new(self, 2)
+    }
+    #[doc = "Bit 3 - usb org11 reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_otg11(
+        &mut self,
+    ) -> LpAonclkrstRstEnUsbOtg11W<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstRstEnUsbOtg11W::new(self, 3)
+    }
+    #[doc = "Bit 4 - usb device reset en"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_rst_en_usb_device(
+        &mut self,
+    ) -> LpAonclkrstRstEnUsbDeviceW<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstRstEnUsbDeviceW::new(self, 4)
+    }
+    #[doc = "Bits 28:29 - usb otg20 hs phy src sel. 2'd0: 12m, 2'd1: 25m, 2'd2: pad_hsphy_refclk."]
+    #[inline(always)]
+    pub fn lp_aonclkrst_usb_otg20_phyref_clk_src_sel(
+        &mut self,
+    ) -> LpAonclkrstUsbOtg20PhyrefClkSrcSelW<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstUsbOtg20PhyrefClkSrcSelW::new(self, 28)
+    }
+    #[doc = "Bit 30 - usb otg20 hs phy refclk enable."]
+    #[inline(always)]
+    pub fn lp_aonclkrst_usb_otg20_phyref_clk_en(
+        &mut self,
+    ) -> LpAonclkrstUsbOtg20PhyrefClkEnW<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstUsbOtg20PhyrefClkEnW::new(self, 30)
+    }
+    #[doc = "Bit 31 - usb otg20 ulpi clock enable."]
+    #[inline(always)]
+    pub fn lp_aonclkrst_usb_otg20_ulpi_clk_en(
+        &mut self,
+    ) -> LpAonclkrstUsbOtg20UlpiClkEnW<'_, LpAonclkrstHpUsbClkrstCtrl1Spec> {
+        LpAonclkrstUsbOtg20UlpiClkEnW::new(self, 31)
+    }
+}
+#[doc = "HP USB Clock Reset Control Register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_aonclkrst_hp_usb_clkrst_ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_aonclkrst_hp_usb_clkrst_ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpAonclkrstHpUsbClkrstCtrl1Spec;
+impl crate::RegisterSpec for LpAonclkrstHpUsbClkrstCtrl1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_aonclkrst_hp_usb_clkrst_ctrl1::R`](R) reader structure"]
+impl crate::Readable for LpAonclkrstHpUsbClkrstCtrl1Spec {}
+#[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_hp_usb_clkrst_ctrl1::W`](W) writer structure"]
+impl crate::Writable for LpAonclkrstHpUsbClkrstCtrl1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_AONCLKRST_HP_USB_CLKRST_CTRL1 to value 0xc000_0000"]
+impl crate::Resettable for LpAonclkrstHpUsbClkrstCtrl1Spec {
+    const RESET_VALUE: u32 = 0xc000_0000;
+}

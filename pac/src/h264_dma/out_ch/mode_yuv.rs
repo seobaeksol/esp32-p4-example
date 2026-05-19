@@ -1,0 +1,63 @@
+#[doc = "Register `MODE_YUV` reader"]
+pub type R = crate::R<ModeYuvSpec>;
+#[doc = "Register `MODE_YUV` writer"]
+pub type W = crate::W<ModeYuvSpec>;
+#[doc = "Field `OUT_TEST_Y_VALUE` reader - tx CH0 test mode y value"]
+pub type OutTestYValueR = crate::FieldReader;
+#[doc = "Field `OUT_TEST_Y_VALUE` writer - tx CH0 test mode y value"]
+pub type OutTestYValueW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `OUT_TEST_U_VALUE` reader - tx CH0 test mode u value"]
+pub type OutTestUValueR = crate::FieldReader;
+#[doc = "Field `OUT_TEST_U_VALUE` writer - tx CH0 test mode u value"]
+pub type OutTestUValueW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `OUT_TEST_V_VALUE` reader - tx CH0 test mode v value"]
+pub type OutTestVValueR = crate::FieldReader;
+#[doc = "Field `OUT_TEST_V_VALUE` writer - tx CH0 test mode v value"]
+pub type OutTestVValueW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - tx CH0 test mode y value"]
+    #[inline(always)]
+    pub fn out_test_y_value(&self) -> OutTestYValueR {
+        OutTestYValueR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - tx CH0 test mode u value"]
+    #[inline(always)]
+    pub fn out_test_u_value(&self) -> OutTestUValueR {
+        OutTestUValueR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - tx CH0 test mode v value"]
+    #[inline(always)]
+    pub fn out_test_v_value(&self) -> OutTestVValueR {
+        OutTestVValueR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - tx CH0 test mode y value"]
+    #[inline(always)]
+    pub fn out_test_y_value(&mut self) -> OutTestYValueW<'_, ModeYuvSpec> {
+        OutTestYValueW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - tx CH0 test mode u value"]
+    #[inline(always)]
+    pub fn out_test_u_value(&mut self) -> OutTestUValueW<'_, ModeYuvSpec> {
+        OutTestUValueW::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - tx CH0 test mode v value"]
+    #[inline(always)]
+    pub fn out_test_v_value(&mut self) -> OutTestVValueW<'_, ModeYuvSpec> {
+        OutTestVValueW::new(self, 16)
+    }
+}
+#[doc = "TX CHx test mode yuv value register. Available on CH0\n\nYou can [`read`](crate::Reg::read) this register and get [`mode_yuv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode_yuv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ModeYuvSpec;
+impl crate::RegisterSpec for ModeYuvSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`mode_yuv::R`](R) reader structure"]
+impl crate::Readable for ModeYuvSpec {}
+#[doc = "`write(|w| ..)` method takes [`mode_yuv::W`](W) writer structure"]
+impl crate::Writable for ModeYuvSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets MODE_YUV to value 0"]
+impl crate::Resettable for ModeYuvSpec {}

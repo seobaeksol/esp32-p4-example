@@ -1,0 +1,163 @@
+#[doc = "Register `CFG1` reader"]
+pub type R = crate::R<Cfg1Spec>;
+#[doc = "Register `CFG1` writer"]
+pub type W = crate::W<Cfg1Spec>;
+#[doc = "Field `CH1_TT_FC` reader - NA"]
+pub type Ch1TtFcR = crate::FieldReader;
+#[doc = "Field `CH1_TT_FC` writer - NA"]
+pub type Ch1TtFcW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `CH1_HS_SEL_SRC` reader - NA"]
+pub type Ch1HsSelSrcR = crate::BitReader;
+#[doc = "Field `CH1_HS_SEL_SRC` writer - NA"]
+pub type Ch1HsSelSrcW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_HS_SEL_DST` reader - NA"]
+pub type Ch1HsSelDstR = crate::BitReader;
+#[doc = "Field `CH1_HS_SEL_DST` writer - NA"]
+pub type Ch1HsSelDstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SRC_HWHS_POL` reader - NA"]
+pub type Ch1SrcHwhsPolR = crate::BitReader;
+#[doc = "Field `CH1_DST_HWHS_POL` reader - NA"]
+pub type Ch1DstHwhsPolR = crate::BitReader;
+#[doc = "Field `CH1_SRC_PER` reader - NA"]
+pub type Ch1SrcPerR = crate::FieldReader;
+#[doc = "Field `CH1_SRC_PER` writer - NA"]
+pub type Ch1SrcPerW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `CH1_DST_PER` reader - NA"]
+pub type Ch1DstPerR = crate::FieldReader;
+#[doc = "Field `CH1_DST_PER` writer - NA"]
+pub type Ch1DstPerW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `CH1_CH_PRIOR` reader - NA"]
+pub type Ch1ChPriorR = crate::FieldReader;
+#[doc = "Field `CH1_CH_PRIOR` writer - NA"]
+pub type Ch1ChPriorW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `CH1_LOCK_CH` reader - NA"]
+pub type Ch1LockChR = crate::BitReader;
+#[doc = "Field `CH1_LOCK_CH_L` reader - NA"]
+pub type Ch1LockChLR = crate::FieldReader;
+#[doc = "Field `CH1_SRC_OSR_LMT` reader - NA"]
+pub type Ch1SrcOsrLmtR = crate::FieldReader;
+#[doc = "Field `CH1_SRC_OSR_LMT` writer - NA"]
+pub type Ch1SrcOsrLmtW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CH1_DST_OSR_LMT` reader - NA"]
+pub type Ch1DstOsrLmtR = crate::FieldReader;
+#[doc = "Field `CH1_DST_OSR_LMT` writer - NA"]
+pub type Ch1DstOsrLmtW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:2 - NA"]
+    #[inline(always)]
+    pub fn ch1_tt_fc(&self) -> Ch1TtFcR {
+        Ch1TtFcR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch1_hs_sel_src(&self) -> Ch1HsSelSrcR {
+        Ch1HsSelSrcR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_hs_sel_dst(&self) -> Ch1HsSelDstR {
+        Ch1HsSelDstR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_hwhs_pol(&self) -> Ch1SrcHwhsPolR {
+        Ch1SrcHwhsPolR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_hwhs_pol(&self) -> Ch1DstHwhsPolR {
+        Ch1DstHwhsPolR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bits 7:8 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_per(&self) -> Ch1SrcPerR {
+        Ch1SrcPerR::new(((self.bits >> 7) & 3) as u8)
+    }
+    #[doc = "Bits 12:13 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_per(&self) -> Ch1DstPerR {
+        Ch1DstPerR::new(((self.bits >> 12) & 3) as u8)
+    }
+    #[doc = "Bits 17:19 - NA"]
+    #[inline(always)]
+    pub fn ch1_ch_prior(&self) -> Ch1ChPriorR {
+        Ch1ChPriorR::new(((self.bits >> 17) & 7) as u8)
+    }
+    #[doc = "Bit 20 - NA"]
+    #[inline(always)]
+    pub fn ch1_lock_ch(&self) -> Ch1LockChR {
+        Ch1LockChR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bits 21:22 - NA"]
+    #[inline(always)]
+    pub fn ch1_lock_ch_l(&self) -> Ch1LockChLR {
+        Ch1LockChLR::new(((self.bits >> 21) & 3) as u8)
+    }
+    #[doc = "Bits 23:26 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_osr_lmt(&self) -> Ch1SrcOsrLmtR {
+        Ch1SrcOsrLmtR::new(((self.bits >> 23) & 0x0f) as u8)
+    }
+    #[doc = "Bits 27:30 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_osr_lmt(&self) -> Ch1DstOsrLmtR {
+        Ch1DstOsrLmtR::new(((self.bits >> 27) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - NA"]
+    #[inline(always)]
+    pub fn ch1_tt_fc(&mut self) -> Ch1TtFcW<'_, Cfg1Spec> {
+        Ch1TtFcW::new(self, 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch1_hs_sel_src(&mut self) -> Ch1HsSelSrcW<'_, Cfg1Spec> {
+        Ch1HsSelSrcW::new(self, 3)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_hs_sel_dst(&mut self) -> Ch1HsSelDstW<'_, Cfg1Spec> {
+        Ch1HsSelDstW::new(self, 4)
+    }
+    #[doc = "Bits 7:8 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_per(&mut self) -> Ch1SrcPerW<'_, Cfg1Spec> {
+        Ch1SrcPerW::new(self, 7)
+    }
+    #[doc = "Bits 12:13 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_per(&mut self) -> Ch1DstPerW<'_, Cfg1Spec> {
+        Ch1DstPerW::new(self, 12)
+    }
+    #[doc = "Bits 17:19 - NA"]
+    #[inline(always)]
+    pub fn ch1_ch_prior(&mut self) -> Ch1ChPriorW<'_, Cfg1Spec> {
+        Ch1ChPriorW::new(self, 17)
+    }
+    #[doc = "Bits 23:26 - NA"]
+    #[inline(always)]
+    pub fn ch1_src_osr_lmt(&mut self) -> Ch1SrcOsrLmtW<'_, Cfg1Spec> {
+        Ch1SrcOsrLmtW::new(self, 23)
+    }
+    #[doc = "Bits 27:30 - NA"]
+    #[inline(always)]
+    pub fn ch1_dst_osr_lmt(&mut self) -> Ch1DstOsrLmtW<'_, Cfg1Spec> {
+        Ch1DstOsrLmtW::new(self, 27)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cfg1Spec;
+impl crate::RegisterSpec for Cfg1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cfg1::R`](R) reader structure"]
+impl crate::Readable for Cfg1Spec {}
+#[doc = "`write(|w| ..)` method takes [`cfg1::W`](W) writer structure"]
+impl crate::Writable for Cfg1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CFG1 to value 0x0006_001b"]
+impl crate::Resettable for Cfg1Spec {
+    const RESET_VALUE: u32 = 0x0006_001b;
+}

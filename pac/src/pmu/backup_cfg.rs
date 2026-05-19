@@ -1,0 +1,37 @@
+#[doc = "Register `BACKUP_CFG` reader"]
+pub type R = crate::R<BackupCfgSpec>;
+#[doc = "Register `BACKUP_CFG` writer"]
+pub type W = crate::W<BackupCfgSpec>;
+#[doc = "Field `BACKUP_SYS_CLK_NO_DIV` reader - need_des"]
+pub type BackupSysClkNoDivR = crate::BitReader;
+#[doc = "Field `BACKUP_SYS_CLK_NO_DIV` writer - need_des"]
+pub type BackupSysClkNoDivW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn backup_sys_clk_no_div(&self) -> BackupSysClkNoDivR {
+        BackupSysClkNoDivR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn backup_sys_clk_no_div(&mut self) -> BackupSysClkNoDivW<'_, BackupCfgSpec> {
+        BackupSysClkNoDivW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`backup_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`backup_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BackupCfgSpec;
+impl crate::RegisterSpec for BackupCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`backup_cfg::R`](R) reader structure"]
+impl crate::Readable for BackupCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`backup_cfg::W`](W) writer structure"]
+impl crate::Writable for BackupCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BACKUP_CFG to value 0x8000_0000"]
+impl crate::Resettable for BackupCfgSpec {
+    const RESET_VALUE: u32 = 0x8000_0000;
+}

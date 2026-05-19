@@ -1,0 +1,219 @@
+#[doc = "Register `CONF0` reader"]
+pub type R = crate::R<Conf0Spec>;
+#[doc = "Register `CONF0` writer"]
+pub type W = crate::W<Conf0Spec>;
+#[doc = "Field `PHY_SEL` reader - Select internal/external PHY"]
+pub type PhySelR = crate::BitReader;
+#[doc = "Field `PHY_SEL` writer - Select internal/external PHY"]
+pub type PhySelW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EXCHG_PINS_OVERRIDE` reader - Enable software control USB D+ D- exchange"]
+pub type ExchgPinsOverrideR = crate::BitReader;
+#[doc = "Field `EXCHG_PINS_OVERRIDE` writer - Enable software control USB D+ D- exchange"]
+pub type ExchgPinsOverrideW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EXCHG_PINS` reader - USB D+ D- exchange"]
+pub type ExchgPinsR = crate::BitReader;
+#[doc = "Field `EXCHG_PINS` writer - USB D+ D- exchange"]
+pub type ExchgPinsW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VREFH` reader - Control single-end input high threshold,1.76V to 2V, step 80mV"]
+pub type VrefhR = crate::FieldReader;
+#[doc = "Field `VREFH` writer - Control single-end input high threshold,1.76V to 2V, step 80mV"]
+pub type VrefhW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `VREFL` reader - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
+pub type VreflR = crate::FieldReader;
+#[doc = "Field `VREFL` writer - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
+pub type VreflW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `VREF_OVERRIDE` reader - Enable software control input threshold"]
+pub type VrefOverrideR = crate::BitReader;
+#[doc = "Field `VREF_OVERRIDE` writer - Enable software control input threshold"]
+pub type VrefOverrideW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PAD_PULL_OVERRIDE` reader - Enable software control USB D+ D- pullup pulldown"]
+pub type PadPullOverrideR = crate::BitReader;
+#[doc = "Field `PAD_PULL_OVERRIDE` writer - Enable software control USB D+ D- pullup pulldown"]
+pub type PadPullOverrideW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DP_PULLUP` reader - Control USB D+ pull up."]
+pub type DpPullupR = crate::BitReader;
+#[doc = "Field `DP_PULLUP` writer - Control USB D+ pull up."]
+pub type DpPullupW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DP_PULLDOWN` reader - Control USB D+ pull down."]
+pub type DpPulldownR = crate::BitReader;
+#[doc = "Field `DP_PULLDOWN` writer - Control USB D+ pull down."]
+pub type DpPulldownW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DM_PULLUP` reader - Control USB D- pull up."]
+pub type DmPullupR = crate::BitReader;
+#[doc = "Field `DM_PULLUP` writer - Control USB D- pull up."]
+pub type DmPullupW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DM_PULLDOWN` reader - Control USB D- pull down."]
+pub type DmPulldownR = crate::BitReader;
+#[doc = "Field `DM_PULLDOWN` writer - Control USB D- pull down."]
+pub type DmPulldownW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PULLUP_VALUE` reader - Control pull up value."]
+pub type PullupValueR = crate::BitReader;
+#[doc = "Field `PULLUP_VALUE` writer - Control pull up value."]
+pub type PullupValueW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USB_PAD_ENABLE` reader - Enable USB pad function."]
+pub type UsbPadEnableR = crate::BitReader;
+#[doc = "Field `USB_PAD_ENABLE` writer - Enable USB pad function."]
+pub type UsbPadEnableW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USB_JTAG_BRIDGE_EN` reader - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
+pub type UsbJtagBridgeEnR = crate::BitReader;
+#[doc = "Field `USB_JTAG_BRIDGE_EN` writer - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
+pub type UsbJtagBridgeEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Select internal/external PHY"]
+    #[inline(always)]
+    pub fn phy_sel(&self) -> PhySelR {
+        PhySelR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Enable software control USB D+ D- exchange"]
+    #[inline(always)]
+    pub fn exchg_pins_override(&self) -> ExchgPinsOverrideR {
+        ExchgPinsOverrideR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - USB D+ D- exchange"]
+    #[inline(always)]
+    pub fn exchg_pins(&self) -> ExchgPinsR {
+        ExchgPinsR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:4 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
+    #[inline(always)]
+    pub fn vrefh(&self) -> VrefhR {
+        VrefhR::new(((self.bits >> 3) & 3) as u8)
+    }
+    #[doc = "Bits 5:6 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
+    #[inline(always)]
+    pub fn vrefl(&self) -> VreflR {
+        VreflR::new(((self.bits >> 5) & 3) as u8)
+    }
+    #[doc = "Bit 7 - Enable software control input threshold"]
+    #[inline(always)]
+    pub fn vref_override(&self) -> VrefOverrideR {
+        VrefOverrideR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Enable software control USB D+ D- pullup pulldown"]
+    #[inline(always)]
+    pub fn pad_pull_override(&self) -> PadPullOverrideR {
+        PadPullOverrideR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Control USB D+ pull up."]
+    #[inline(always)]
+    pub fn dp_pullup(&self) -> DpPullupR {
+        DpPullupR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Control USB D+ pull down."]
+    #[inline(always)]
+    pub fn dp_pulldown(&self) -> DpPulldownR {
+        DpPulldownR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Control USB D- pull up."]
+    #[inline(always)]
+    pub fn dm_pullup(&self) -> DmPullupR {
+        DmPullupR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Control USB D- pull down."]
+    #[inline(always)]
+    pub fn dm_pulldown(&self) -> DmPulldownR {
+        DmPulldownR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Control pull up value."]
+    #[inline(always)]
+    pub fn pullup_value(&self) -> PullupValueR {
+        PullupValueR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Enable USB pad function."]
+    #[inline(always)]
+    pub fn usb_pad_enable(&self) -> UsbPadEnableR {
+        UsbPadEnableR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
+    #[inline(always)]
+    pub fn usb_jtag_bridge_en(&self) -> UsbJtagBridgeEnR {
+        UsbJtagBridgeEnR::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Select internal/external PHY"]
+    #[inline(always)]
+    pub fn phy_sel(&mut self) -> PhySelW<'_, Conf0Spec> {
+        PhySelW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Enable software control USB D+ D- exchange"]
+    #[inline(always)]
+    pub fn exchg_pins_override(&mut self) -> ExchgPinsOverrideW<'_, Conf0Spec> {
+        ExchgPinsOverrideW::new(self, 1)
+    }
+    #[doc = "Bit 2 - USB D+ D- exchange"]
+    #[inline(always)]
+    pub fn exchg_pins(&mut self) -> ExchgPinsW<'_, Conf0Spec> {
+        ExchgPinsW::new(self, 2)
+    }
+    #[doc = "Bits 3:4 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
+    #[inline(always)]
+    pub fn vrefh(&mut self) -> VrefhW<'_, Conf0Spec> {
+        VrefhW::new(self, 3)
+    }
+    #[doc = "Bits 5:6 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
+    #[inline(always)]
+    pub fn vrefl(&mut self) -> VreflW<'_, Conf0Spec> {
+        VreflW::new(self, 5)
+    }
+    #[doc = "Bit 7 - Enable software control input threshold"]
+    #[inline(always)]
+    pub fn vref_override(&mut self) -> VrefOverrideW<'_, Conf0Spec> {
+        VrefOverrideW::new(self, 7)
+    }
+    #[doc = "Bit 8 - Enable software control USB D+ D- pullup pulldown"]
+    #[inline(always)]
+    pub fn pad_pull_override(&mut self) -> PadPullOverrideW<'_, Conf0Spec> {
+        PadPullOverrideW::new(self, 8)
+    }
+    #[doc = "Bit 9 - Control USB D+ pull up."]
+    #[inline(always)]
+    pub fn dp_pullup(&mut self) -> DpPullupW<'_, Conf0Spec> {
+        DpPullupW::new(self, 9)
+    }
+    #[doc = "Bit 10 - Control USB D+ pull down."]
+    #[inline(always)]
+    pub fn dp_pulldown(&mut self) -> DpPulldownW<'_, Conf0Spec> {
+        DpPulldownW::new(self, 10)
+    }
+    #[doc = "Bit 11 - Control USB D- pull up."]
+    #[inline(always)]
+    pub fn dm_pullup(&mut self) -> DmPullupW<'_, Conf0Spec> {
+        DmPullupW::new(self, 11)
+    }
+    #[doc = "Bit 12 - Control USB D- pull down."]
+    #[inline(always)]
+    pub fn dm_pulldown(&mut self) -> DmPulldownW<'_, Conf0Spec> {
+        DmPulldownW::new(self, 12)
+    }
+    #[doc = "Bit 13 - Control pull up value."]
+    #[inline(always)]
+    pub fn pullup_value(&mut self) -> PullupValueW<'_, Conf0Spec> {
+        PullupValueW::new(self, 13)
+    }
+    #[doc = "Bit 14 - Enable USB pad function."]
+    #[inline(always)]
+    pub fn usb_pad_enable(&mut self) -> UsbPadEnableW<'_, Conf0Spec> {
+        UsbPadEnableW::new(self, 14)
+    }
+    #[doc = "Bit 15 - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
+    #[inline(always)]
+    pub fn usb_jtag_bridge_en(&mut self) -> UsbJtagBridgeEnW<'_, Conf0Spec> {
+        UsbJtagBridgeEnW::new(self, 15)
+    }
+}
+#[doc = "PHY hardware configuration.\n\nYou can [`read`](crate::Reg::read) this register and get [`conf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Conf0Spec;
+impl crate::RegisterSpec for Conf0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`conf0::R`](R) reader structure"]
+impl crate::Readable for Conf0Spec {}
+#[doc = "`write(|w| ..)` method takes [`conf0::W`](W) writer structure"]
+impl crate::Writable for Conf0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CONF0 to value 0x4200"]
+impl crate::Resettable for Conf0Spec {
+    const RESET_VALUE: u32 = 0x4200;
+}

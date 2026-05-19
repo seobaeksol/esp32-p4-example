@@ -1,0 +1,35 @@
+#[doc = "Register `BACKUP_DMA_CFG1` reader"]
+pub type R = crate::R<BackupDmaCfg1Spec>;
+#[doc = "Register `BACKUP_DMA_CFG1` writer"]
+pub type W = crate::W<BackupDmaCfg1Spec>;
+#[doc = "Field `AON_BYPASS` reader - need_des"]
+pub type AonBypassR = crate::BitReader;
+#[doc = "Field `AON_BYPASS` writer - need_des"]
+pub type AonBypassW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn aon_bypass(&self) -> AonBypassR {
+        AonBypassR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn aon_bypass(&mut self) -> AonBypassW<'_, BackupDmaCfg1Spec> {
+        AonBypassW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`backup_dma_cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`backup_dma_cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BackupDmaCfg1Spec;
+impl crate::RegisterSpec for BackupDmaCfg1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`backup_dma_cfg1::R`](R) reader structure"]
+impl crate::Readable for BackupDmaCfg1Spec {}
+#[doc = "`write(|w| ..)` method takes [`backup_dma_cfg1::W`](W) writer structure"]
+impl crate::Writable for BackupDmaCfg1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BACKUP_DMA_CFG1 to value 0"]
+impl crate::Resettable for BackupDmaCfg1Spec {}

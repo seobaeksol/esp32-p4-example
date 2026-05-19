@@ -1,0 +1,51 @@
+#[doc = "Register `POWER_CK_WAIT_CNTL` reader"]
+pub type R = crate::R<PowerCkWaitCntlSpec>;
+#[doc = "Register `POWER_CK_WAIT_CNTL` writer"]
+pub type W = crate::W<PowerCkWaitCntlSpec>;
+#[doc = "Field `PMU_WAIT_XTL_STABLE` reader - need_des"]
+pub type PmuWaitXtlStableR = crate::FieldReader<u16>;
+#[doc = "Field `PMU_WAIT_XTL_STABLE` writer - need_des"]
+pub type PmuWaitXtlStableW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `PMU_WAIT_PLL_STABLE` reader - need_des"]
+pub type PmuWaitPllStableR = crate::FieldReader<u16>;
+#[doc = "Field `PMU_WAIT_PLL_STABLE` writer - need_des"]
+pub type PmuWaitPllStableW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - need_des"]
+    #[inline(always)]
+    pub fn pmu_wait_xtl_stable(&self) -> PmuWaitXtlStableR {
+        PmuWaitXtlStableR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:31 - need_des"]
+    #[inline(always)]
+    pub fn pmu_wait_pll_stable(&self) -> PmuWaitPllStableR {
+        PmuWaitPllStableR::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - need_des"]
+    #[inline(always)]
+    pub fn pmu_wait_xtl_stable(&mut self) -> PmuWaitXtlStableW<'_, PowerCkWaitCntlSpec> {
+        PmuWaitXtlStableW::new(self, 0)
+    }
+    #[doc = "Bits 16:31 - need_des"]
+    #[inline(always)]
+    pub fn pmu_wait_pll_stable(&mut self) -> PmuWaitPllStableW<'_, PowerCkWaitCntlSpec> {
+        PmuWaitPllStableW::new(self, 16)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_ck_wait_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_ck_wait_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PowerCkWaitCntlSpec;
+impl crate::RegisterSpec for PowerCkWaitCntlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`power_ck_wait_cntl::R`](R) reader structure"]
+impl crate::Readable for PowerCkWaitCntlSpec {}
+#[doc = "`write(|w| ..)` method takes [`power_ck_wait_cntl::W`](W) writer structure"]
+impl crate::Writable for PowerCkWaitCntlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets POWER_CK_WAIT_CNTL to value 0x0100_0100"]
+impl crate::Resettable for PowerCkWaitCntlSpec {
+    const RESET_VALUE: u32 = 0x0100_0100;
+}

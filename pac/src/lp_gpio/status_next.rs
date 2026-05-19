@@ -1,0 +1,20 @@
+#[doc = "Register `STATUS_NEXT` reader"]
+pub type R = crate::R<StatusNextSpec>;
+#[doc = "Field `REG_GPIO_STATUS_INTERRUPT_NEXT` reader - Reserved"]
+pub type RegGpioStatusInterruptNextR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:15 - Reserved"]
+    #[inline(always)]
+    pub fn reg_gpio_status_interrupt_next(&self) -> RegGpioStatusInterruptNextR {
+        RegGpioStatusInterruptNextR::new((self.bits & 0xffff) as u16)
+    }
+}
+#[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct StatusNextSpec;
+impl crate::RegisterSpec for StatusNextSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status_next::R`](R) reader structure"]
+impl crate::Readable for StatusNextSpec {}
+#[doc = "`reset()` method sets STATUS_NEXT to value 0"]
+impl crate::Resettable for StatusNextSpec {}

@@ -1,0 +1,135 @@
+#[doc = "Register `ARB_CTRL` reader"]
+pub type R = crate::R<ArbCtrlSpec>;
+#[doc = "Register `ARB_CTRL` writer"]
+pub type W = crate::W<ArbCtrlSpec>;
+#[doc = "Field `APB_FORCE` reader - adc2 arbiter force to enableapb controller"]
+pub type ApbForceR = crate::BitReader;
+#[doc = "Field `APB_FORCE` writer - adc2 arbiter force to enableapb controller"]
+pub type ApbForceW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RTC_FORCE` reader - adc2 arbiter force to enable rtc controller"]
+pub type RtcForceR = crate::BitReader;
+#[doc = "Field `RTC_FORCE` writer - adc2 arbiter force to enable rtc controller"]
+pub type RtcForceW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WIFI_FORCE` reader - adc2 arbiter force to enable wifi controller"]
+pub type WifiForceR = crate::BitReader;
+#[doc = "Field `WIFI_FORCE` writer - adc2 arbiter force to enable wifi controller"]
+pub type WifiForceW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GRANT_FORCE` reader - adc2 arbiter force grant"]
+pub type GrantForceR = crate::BitReader;
+#[doc = "Field `GRANT_FORCE` writer - adc2 arbiter force grant"]
+pub type GrantForceW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_PRIORITY` reader - Set adc2 arbiterapb priority"]
+pub type ApbPriorityR = crate::FieldReader;
+#[doc = "Field `APB_PRIORITY` writer - Set adc2 arbiterapb priority"]
+pub type ApbPriorityW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `RTC_PRIORITY` reader - Set adc2 arbiter rtc priority"]
+pub type RtcPriorityR = crate::FieldReader;
+#[doc = "Field `RTC_PRIORITY` writer - Set adc2 arbiter rtc priority"]
+pub type RtcPriorityW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `WIFI_PRIORITY` reader - Set adc2 arbiter wifi priority"]
+pub type WifiPriorityR = crate::FieldReader;
+#[doc = "Field `WIFI_PRIORITY` writer - Set adc2 arbiter wifi priority"]
+pub type WifiPriorityW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `FIX_PRIORITY` reader - adc2 arbiter uses fixed priority"]
+pub type FixPriorityR = crate::BitReader;
+#[doc = "Field `FIX_PRIORITY` writer - adc2 arbiter uses fixed priority"]
+pub type FixPriorityW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
+    #[inline(always)]
+    pub fn apb_force(&self) -> ApbForceR {
+        ApbForceR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - adc2 arbiter force to enable rtc controller"]
+    #[inline(always)]
+    pub fn rtc_force(&self) -> RtcForceR {
+        RtcForceR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - adc2 arbiter force to enable wifi controller"]
+    #[inline(always)]
+    pub fn wifi_force(&self) -> WifiForceR {
+        WifiForceR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - adc2 arbiter force grant"]
+    #[inline(always)]
+    pub fn grant_force(&self) -> GrantForceR {
+        GrantForceR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bits 6:7 - Set adc2 arbiterapb priority"]
+    #[inline(always)]
+    pub fn apb_priority(&self) -> ApbPriorityR {
+        ApbPriorityR::new(((self.bits >> 6) & 3) as u8)
+    }
+    #[doc = "Bits 8:9 - Set adc2 arbiter rtc priority"]
+    #[inline(always)]
+    pub fn rtc_priority(&self) -> RtcPriorityR {
+        RtcPriorityR::new(((self.bits >> 8) & 3) as u8)
+    }
+    #[doc = "Bits 10:11 - Set adc2 arbiter wifi priority"]
+    #[inline(always)]
+    pub fn wifi_priority(&self) -> WifiPriorityR {
+        WifiPriorityR::new(((self.bits >> 10) & 3) as u8)
+    }
+    #[doc = "Bit 12 - adc2 arbiter uses fixed priority"]
+    #[inline(always)]
+    pub fn fix_priority(&self) -> FixPriorityR {
+        FixPriorityR::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
+    #[inline(always)]
+    pub fn apb_force(&mut self) -> ApbForceW<'_, ArbCtrlSpec> {
+        ApbForceW::new(self, 2)
+    }
+    #[doc = "Bit 3 - adc2 arbiter force to enable rtc controller"]
+    #[inline(always)]
+    pub fn rtc_force(&mut self) -> RtcForceW<'_, ArbCtrlSpec> {
+        RtcForceW::new(self, 3)
+    }
+    #[doc = "Bit 4 - adc2 arbiter force to enable wifi controller"]
+    #[inline(always)]
+    pub fn wifi_force(&mut self) -> WifiForceW<'_, ArbCtrlSpec> {
+        WifiForceW::new(self, 4)
+    }
+    #[doc = "Bit 5 - adc2 arbiter force grant"]
+    #[inline(always)]
+    pub fn grant_force(&mut self) -> GrantForceW<'_, ArbCtrlSpec> {
+        GrantForceW::new(self, 5)
+    }
+    #[doc = "Bits 6:7 - Set adc2 arbiterapb priority"]
+    #[inline(always)]
+    pub fn apb_priority(&mut self) -> ApbPriorityW<'_, ArbCtrlSpec> {
+        ApbPriorityW::new(self, 6)
+    }
+    #[doc = "Bits 8:9 - Set adc2 arbiter rtc priority"]
+    #[inline(always)]
+    pub fn rtc_priority(&mut self) -> RtcPriorityW<'_, ArbCtrlSpec> {
+        RtcPriorityW::new(self, 8)
+    }
+    #[doc = "Bits 10:11 - Set adc2 arbiter wifi priority"]
+    #[inline(always)]
+    pub fn wifi_priority(&mut self) -> WifiPriorityW<'_, ArbCtrlSpec> {
+        WifiPriorityW::new(self, 10)
+    }
+    #[doc = "Bit 12 - adc2 arbiter uses fixed priority"]
+    #[inline(always)]
+    pub fn fix_priority(&mut self) -> FixPriorityW<'_, ArbCtrlSpec> {
+        FixPriorityW::new(self, 12)
+    }
+}
+#[doc = "Register\n\nYou can [`read`](crate::Reg::read) this register and get [`arb_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`arb_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ArbCtrlSpec;
+impl crate::RegisterSpec for ArbCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`arb_ctrl::R`](R) reader structure"]
+impl crate::Readable for ArbCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`arb_ctrl::W`](W) writer structure"]
+impl crate::Writable for ArbCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ARB_CTRL to value 0x0900"]
+impl crate::Resettable for ArbCtrlSpec {
+    const RESET_VALUE: u32 = 0x0900;
+}

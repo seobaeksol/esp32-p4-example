@@ -1,0 +1,20 @@
+#[doc = "Register `HP2LP_INTR_GROUP0_ST` reader"]
+pub type R = crate::R<Hp2lpIntrGroup0StSpec>;
+#[doc = "Field `H2LP_INTR_GROUP0_ST` reader - Each bit indicates the status of corresponding peripheral interrupt to LP CPU."]
+pub type H2lpIntrGroup0StR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Each bit indicates the status of corresponding peripheral interrupt to LP CPU."]
+    #[inline(always)]
+    pub fn h2lp_intr_group0_st(&self) -> H2lpIntrGroup0StR {
+        H2lpIntrGroup0StR::new(self.bits)
+    }
+}
+#[doc = "HpP2LP Interrupt Status Register Group0\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group0_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Hp2lpIntrGroup0StSpec;
+impl crate::RegisterSpec for Hp2lpIntrGroup0StSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hp2lp_intr_group0_st::R`](R) reader structure"]
+impl crate::Readable for Hp2lpIntrGroup0StSpec {}
+#[doc = "`reset()` method sets HP2LP_INTR_GROUP0_ST to value 0"]
+impl crate::Resettable for Hp2lpIntrGroup0StSpec {}

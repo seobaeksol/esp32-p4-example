@@ -1,0 +1,65 @@
+#[doc = "Register `DCM_WAIT_DELAY` reader"]
+pub type R = crate::R<DcmWaitDelaySpec>;
+#[doc = "Register `DCM_WAIT_DELAY` writer"]
+pub type W = crate::W<DcmWaitDelaySpec>;
+#[doc = "Field `DCDC_PRE_DELAY` reader - DCDC pre-on/post off delay"]
+pub type DcdcPreDelayR = crate::FieldReader;
+#[doc = "Field `DCDC_PRE_DELAY` writer - DCDC pre-on/post off delay"]
+pub type DcdcPreDelayW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `DCDC_RES_OFF_DELAY` reader - DCDC fb res off delay"]
+pub type DcdcResOffDelayR = crate::FieldReader;
+#[doc = "Field `DCDC_RES_OFF_DELAY` writer - DCDC fb res off delay"]
+pub type DcdcResOffDelayW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `DCDC_STABLE_DELAY` reader - DCDC stable delay"]
+pub type DcdcStableDelayR = crate::FieldReader<u16>;
+#[doc = "Field `DCDC_STABLE_DELAY` writer - DCDC stable delay"]
+pub type DcdcStableDelayW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+impl R {
+    #[doc = "Bits 0:7 - DCDC pre-on/post off delay"]
+    #[inline(always)]
+    pub fn dcdc_pre_delay(&self) -> DcdcPreDelayR {
+        DcdcPreDelayR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - DCDC fb res off delay"]
+    #[inline(always)]
+    pub fn dcdc_res_off_delay(&self) -> DcdcResOffDelayR {
+        DcdcResOffDelayR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:25 - DCDC stable delay"]
+    #[inline(always)]
+    pub fn dcdc_stable_delay(&self) -> DcdcStableDelayR {
+        DcdcStableDelayR::new(((self.bits >> 16) & 0x03ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - DCDC pre-on/post off delay"]
+    #[inline(always)]
+    pub fn dcdc_pre_delay(&mut self) -> DcdcPreDelayW<'_, DcmWaitDelaySpec> {
+        DcdcPreDelayW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - DCDC fb res off delay"]
+    #[inline(always)]
+    pub fn dcdc_res_off_delay(&mut self) -> DcdcResOffDelayW<'_, DcmWaitDelaySpec> {
+        DcdcResOffDelayW::new(self, 8)
+    }
+    #[doc = "Bits 16:25 - DCDC stable delay"]
+    #[inline(always)]
+    pub fn dcdc_stable_delay(&mut self) -> DcdcStableDelayW<'_, DcmWaitDelaySpec> {
+        DcdcStableDelayW::new(self, 16)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`dcm_wait_delay::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dcm_wait_delay::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DcmWaitDelaySpec;
+impl crate::RegisterSpec for DcmWaitDelaySpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dcm_wait_delay::R`](R) reader structure"]
+impl crate::Readable for DcmWaitDelaySpec {}
+#[doc = "`write(|w| ..)` method takes [`dcm_wait_delay::W`](W) writer structure"]
+impl crate::Writable for DcmWaitDelaySpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DCM_WAIT_DELAY to value 0x004b_0205"]
+impl crate::Resettable for DcmWaitDelaySpec {
+    const RESET_VALUE: u32 = 0x004b_0205;
+}

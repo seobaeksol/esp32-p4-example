@@ -1,0 +1,42 @@
+#[doc = "Register `OUT_PUSH` reader"]
+pub type R = crate::R<OutPushSpec>;
+#[doc = "Register `OUT_PUSH` writer"]
+pub type W = crate::W<OutPushSpec>;
+#[doc = "Field `OUTFIFO_WDATA` reader - This register stores the data that need to be pushed into AXI_DMA FIFO."]
+pub type OutfifoWdataR = crate::FieldReader<u16>;
+#[doc = "Field `OUTFIFO_WDATA` writer - This register stores the data that need to be pushed into AXI_DMA FIFO."]
+pub type OutfifoWdataW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `OUTFIFO_PUSH` writer - Set this bit to push data into AXI_DMA FIFO."]
+pub type OutfifoPushW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:8 - This register stores the data that need to be pushed into AXI_DMA FIFO."]
+    #[inline(always)]
+    pub fn outfifo_wdata(&self) -> OutfifoWdataR {
+        OutfifoWdataR::new((self.bits & 0x01ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:8 - This register stores the data that need to be pushed into AXI_DMA FIFO."]
+    #[inline(always)]
+    pub fn outfifo_wdata(&mut self) -> OutfifoWdataW<'_, OutPushSpec> {
+        OutfifoWdataW::new(self, 0)
+    }
+    #[doc = "Bit 9 - Set this bit to push data into AXI_DMA FIFO."]
+    #[inline(always)]
+    pub fn outfifo_push(&mut self) -> OutfifoPushW<'_, OutPushSpec> {
+        OutfifoPushW::new(self, 9)
+    }
+}
+#[doc = "Push control register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_push::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_push::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutPushSpec;
+impl crate::RegisterSpec for OutPushSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_push::R`](R) reader structure"]
+impl crate::Readable for OutPushSpec {}
+#[doc = "`write(|w| ..)` method takes [`out_push::W`](W) writer structure"]
+impl crate::Writable for OutPushSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets OUT_PUSH to value 0"]
+impl crate::Resettable for OutPushSpec {}

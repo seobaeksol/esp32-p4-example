@@ -1,0 +1,37 @@
+#[doc = "Register `CPU` reader"]
+pub type R = crate::R<CpuSpec>;
+#[doc = "Register `CPU` writer"]
+pub type W = crate::W<CpuSpec>;
+#[doc = "Field `LPCORE_DBGM_UNAVAILABLE` reader - need_des"]
+pub type LpcoreDbgmUnavailableR = crate::BitReader;
+#[doc = "Field `LPCORE_DBGM_UNAVAILABLE` writer - need_des"]
+pub type LpcoreDbgmUnavailableW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lpcore_dbgm_unavailable(&self) -> LpcoreDbgmUnavailableR {
+        LpcoreDbgmUnavailableR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn lpcore_dbgm_unavailable(&mut self) -> LpcoreDbgmUnavailableW<'_, CpuSpec> {
+        LpcoreDbgmUnavailableW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CpuSpec;
+impl crate::RegisterSpec for CpuSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cpu::R`](R) reader structure"]
+impl crate::Readable for CpuSpec {}
+#[doc = "`write(|w| ..)` method takes [`cpu::W`](W) writer structure"]
+impl crate::Writable for CpuSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CPU to value 0x8000_0000"]
+impl crate::Resettable for CpuSpec {
+    const RESET_VALUE: u32 = 0x8000_0000;
+}

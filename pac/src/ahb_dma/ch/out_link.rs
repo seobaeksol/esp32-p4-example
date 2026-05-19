@@ -1,0 +1,51 @@
+#[doc = "Register `OUT_LINK` reader"]
+pub type R = crate::R<OutLinkSpec>;
+#[doc = "Register `OUT_LINK` writer"]
+pub type W = crate::W<OutLinkSpec>;
+#[doc = "Field `OUTLINK_STOP_CH0` writer - Configures whether to stop AHB_DMA's TX channel 0 from transmitting data.\\\\0: Invalid. No effect\\\\1: Stop\\\\"]
+pub type OutlinkStopCh0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUTLINK_START_CH0` writer - Configures whether to enable AHB_DMA's TX channel 0 for data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
+pub type OutlinkStartCh0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUTLINK_RESTART_CH0` writer - Configures whether to restart TX channel 0 for AHB_DMA transfer.\\\\0: Invalid. No effect\\\\1: Restart\\\\"]
+pub type OutlinkRestartCh0W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUTLINK_PARK_CH0` reader - Represents the status of the transmit descriptor's FSM.\\\\0: Running\\\\1: Idle\\\\"]
+pub type OutlinkParkCh0R = crate::BitReader;
+impl R {
+    #[doc = "Bit 3 - Represents the status of the transmit descriptor's FSM.\\\\0: Running\\\\1: Idle\\\\"]
+    #[inline(always)]
+    pub fn outlink_park_ch0(&self) -> OutlinkParkCh0R {
+        OutlinkParkCh0R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Configures whether to stop AHB_DMA's TX channel 0 from transmitting data.\\\\0: Invalid. No effect\\\\1: Stop\\\\"]
+    #[inline(always)]
+    pub fn outlink_stop_ch0(&mut self) -> OutlinkStopCh0W<'_, OutLinkSpec> {
+        OutlinkStopCh0W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Configures whether to enable AHB_DMA's TX channel 0 for data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[inline(always)]
+    pub fn outlink_start_ch0(&mut self) -> OutlinkStartCh0W<'_, OutLinkSpec> {
+        OutlinkStartCh0W::new(self, 1)
+    }
+    #[doc = "Bit 2 - Configures whether to restart TX channel 0 for AHB_DMA transfer.\\\\0: Invalid. No effect\\\\1: Restart\\\\"]
+    #[inline(always)]
+    pub fn outlink_restart_ch0(&mut self) -> OutlinkRestartCh0W<'_, OutLinkSpec> {
+        OutlinkRestartCh0W::new(self, 2)
+    }
+}
+#[doc = "Push control register of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutLinkSpec;
+impl crate::RegisterSpec for OutLinkSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_link::R`](R) reader structure"]
+impl crate::Readable for OutLinkSpec {}
+#[doc = "`write(|w| ..)` method takes [`out_link::W`](W) writer structure"]
+impl crate::Writable for OutLinkSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets OUT_LINK to value 0x08"]
+impl crate::Resettable for OutLinkSpec {
+    const RESET_VALUE: u32 = 0x08;
+}

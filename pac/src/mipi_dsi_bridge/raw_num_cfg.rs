@@ -1,0 +1,58 @@
+#[doc = "Register `RAW_NUM_CFG` reader"]
+pub type R = crate::R<RawNumCfgSpec>;
+#[doc = "Register `RAW_NUM_CFG` writer"]
+pub type W = crate::W<RawNumCfgSpec>;
+#[doc = "Field `RAW_NUM_TOTAL` reader - this field configures number of total pix bits/64"]
+pub type RawNumTotalR = crate::FieldReader<u32>;
+#[doc = "Field `RAW_NUM_TOTAL` writer - this field configures number of total pix bits/64"]
+pub type RawNumTotalW<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
+#[doc = "Field `UNALIGN_64BIT_EN` reader - this field configures whether the total pix bits is a multiple of 64bits. 0: align to 64-bit, 1: unalign to 64-bit"]
+pub type Unalign64bitEnR = crate::BitReader;
+#[doc = "Field `UNALIGN_64BIT_EN` writer - this field configures whether the total pix bits is a multiple of 64bits. 0: align to 64-bit, 1: unalign to 64-bit"]
+pub type Unalign64bitEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RAW_NUM_TOTAL_SET` writer - this bit configures enable of reload reg_raw_num_total to internal cnt. 0: disable, 1: enable. valid only when dsi_bridge as flow controller"]
+pub type RawNumTotalSetW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:21 - this field configures number of total pix bits/64"]
+    #[inline(always)]
+    pub fn raw_num_total(&self) -> RawNumTotalR {
+        RawNumTotalR::new(self.bits & 0x003f_ffff)
+    }
+    #[doc = "Bit 22 - this field configures whether the total pix bits is a multiple of 64bits. 0: align to 64-bit, 1: unalign to 64-bit"]
+    #[inline(always)]
+    pub fn unalign_64bit_en(&self) -> Unalign64bitEnR {
+        Unalign64bitEnR::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:21 - this field configures number of total pix bits/64"]
+    #[inline(always)]
+    pub fn raw_num_total(&mut self) -> RawNumTotalW<'_, RawNumCfgSpec> {
+        RawNumTotalW::new(self, 0)
+    }
+    #[doc = "Bit 22 - this field configures whether the total pix bits is a multiple of 64bits. 0: align to 64-bit, 1: unalign to 64-bit"]
+    #[inline(always)]
+    pub fn unalign_64bit_en(&mut self) -> Unalign64bitEnW<'_, RawNumCfgSpec> {
+        Unalign64bitEnW::new(self, 22)
+    }
+    #[doc = "Bit 31 - this bit configures enable of reload reg_raw_num_total to internal cnt. 0: disable, 1: enable. valid only when dsi_bridge as flow controller"]
+    #[inline(always)]
+    pub fn raw_num_total_set(&mut self) -> RawNumTotalSetW<'_, RawNumCfgSpec> {
+        RawNumTotalSetW::new(self, 31)
+    }
+}
+#[doc = "dsi bridge raw number control register\n\nYou can [`read`](crate::Reg::read) this register and get [`raw_num_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`raw_num_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RawNumCfgSpec;
+impl crate::RegisterSpec for RawNumCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`raw_num_cfg::R`](R) reader structure"]
+impl crate::Readable for RawNumCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`raw_num_cfg::W`](W) writer structure"]
+impl crate::Writable for RawNumCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RAW_NUM_CFG to value 0x0003_8400"]
+impl crate::Resettable for RawNumCfgSpec {
+    const RESET_VALUE: u32 = 0x0003_8400;
+}

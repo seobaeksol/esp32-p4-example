@@ -1,0 +1,20 @@
+#[doc = "Register `HIST_BIN13` reader"]
+pub type R = crate::R<HistBin13Spec>;
+#[doc = "Field `HIST_BIN_13` reader - this field represents result of histogram bin 13"]
+pub type HistBin13R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:16 - this field represents result of histogram bin 13"]
+    #[inline(always)]
+    pub fn hist_bin_13(&self) -> HistBin13R {
+        HistBin13R::new(self.bits & 0x0001_ffff)
+    }
+}
+#[doc = "result of histogram bin 13\n\nYou can [`read`](crate::Reg::read) this register and get [`hist_bin13::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HistBin13Spec;
+impl crate::RegisterSpec for HistBin13Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hist_bin13::R`](R) reader structure"]
+impl crate::Readable for HistBin13Spec {}
+#[doc = "`reset()` method sets HIST_BIN13 to value 0"]
+impl crate::Resettable for HistBin13Spec {}

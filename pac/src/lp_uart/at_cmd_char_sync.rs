@@ -1,0 +1,51 @@
+#[doc = "Register `AT_CMD_CHAR_SYNC` reader"]
+pub type R = crate::R<AtCmdCharSyncSpec>;
+#[doc = "Register `AT_CMD_CHAR_SYNC` writer"]
+pub type W = crate::W<AtCmdCharSyncSpec>;
+#[doc = "Field `AT_CMD_CHAR` reader - This register is used to configure the content of at_cmd char."]
+pub type AtCmdCharR = crate::FieldReader;
+#[doc = "Field `AT_CMD_CHAR` writer - This register is used to configure the content of at_cmd char."]
+pub type AtCmdCharW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `CHAR_NUM` reader - This register is used to configure the num of continuous at_cmd chars received by receiver."]
+pub type CharNumR = crate::FieldReader;
+#[doc = "Field `CHAR_NUM` writer - This register is used to configure the num of continuous at_cmd chars received by receiver."]
+pub type CharNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - This register is used to configure the content of at_cmd char."]
+    #[inline(always)]
+    pub fn at_cmd_char(&self) -> AtCmdCharR {
+        AtCmdCharR::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - This register is used to configure the num of continuous at_cmd chars received by receiver."]
+    #[inline(always)]
+    pub fn char_num(&self) -> CharNumR {
+        CharNumR::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - This register is used to configure the content of at_cmd char."]
+    #[inline(always)]
+    pub fn at_cmd_char(&mut self) -> AtCmdCharW<'_, AtCmdCharSyncSpec> {
+        AtCmdCharW::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - This register is used to configure the num of continuous at_cmd chars received by receiver."]
+    #[inline(always)]
+    pub fn char_num(&mut self) -> CharNumW<'_, AtCmdCharSyncSpec> {
+        CharNumW::new(self, 8)
+    }
+}
+#[doc = "AT escape sequence detection configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`at_cmd_char_sync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`at_cmd_char_sync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AtCmdCharSyncSpec;
+impl crate::RegisterSpec for AtCmdCharSyncSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`at_cmd_char_sync::R`](R) reader structure"]
+impl crate::Readable for AtCmdCharSyncSpec {}
+#[doc = "`write(|w| ..)` method takes [`at_cmd_char_sync::W`](W) writer structure"]
+impl crate::Writable for AtCmdCharSyncSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AT_CMD_CHAR_SYNC to value 0x032b"]
+impl crate::Resettable for AtCmdCharSyncSpec {
+    const RESET_VALUE: u32 = 0x032b;
+}

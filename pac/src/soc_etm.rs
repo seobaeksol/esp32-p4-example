@@ -1,0 +1,441 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    ch_ena_ad0: ChEnaAd0,
+    ch_ena_ad0_set: ChEnaAd0Set,
+    ch_ena_ad0_clr: ChEnaAd0Clr,
+    ch_ena_ad1: ChEnaAd1,
+    ch_ena_ad1_set: ChEnaAd1Set,
+    ch_ena_ad1_clr: ChEnaAd1Clr,
+    ch: [Ch; 50],
+    evt_st0: EvtSt0,
+    evt_st0_clr: EvtSt0Clr,
+    evt_st1: EvtSt1,
+    evt_st1_clr: EvtSt1Clr,
+    evt_st2: EvtSt2,
+    evt_st2_clr: EvtSt2Clr,
+    evt_st3: EvtSt3,
+    evt_st3_clr: EvtSt3Clr,
+    evt_st4: EvtSt4,
+    evt_st4_clr: EvtSt4Clr,
+    evt_st5: EvtSt5,
+    evt_st5_clr: EvtSt5Clr,
+    evt_st6: EvtSt6,
+    evt_st6_clr: EvtSt6Clr,
+    evt_st7: EvtSt7,
+    evt_st7_clr: EvtSt7Clr,
+    task_st0: TaskSt0,
+    task_st0_clr: TaskSt0Clr,
+    task_st1: TaskSt1,
+    task_st1_clr: TaskSt1Clr,
+    task_st2: TaskSt2,
+    task_st2_clr: TaskSt2Clr,
+    task_st3: TaskSt3,
+    task_st3_clr: TaskSt3Clr,
+    task_st4: TaskSt4,
+    task_st4_clr: TaskSt4Clr,
+    task_st5: TaskSt5,
+    task_st5_clr: TaskSt5Clr,
+    task_st6: TaskSt6,
+    task_st6_clr: TaskSt6Clr,
+    clk_en: ClkEn,
+    date: Date,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Channel enable status register"]
+    #[inline(always)]
+    pub const fn ch_ena_ad0(&self) -> &ChEnaAd0 {
+        &self.ch_ena_ad0
+    }
+    #[doc = "0x04 - Channel enable set register"]
+    #[inline(always)]
+    pub const fn ch_ena_ad0_set(&self) -> &ChEnaAd0Set {
+        &self.ch_ena_ad0_set
+    }
+    #[doc = "0x08 - Channel enable clear register"]
+    #[inline(always)]
+    pub const fn ch_ena_ad0_clr(&self) -> &ChEnaAd0Clr {
+        &self.ch_ena_ad0_clr
+    }
+    #[doc = "0x0c - Channel enable status register"]
+    #[inline(always)]
+    pub const fn ch_ena_ad1(&self) -> &ChEnaAd1 {
+        &self.ch_ena_ad1
+    }
+    #[doc = "0x10 - Channel enable set register"]
+    #[inline(always)]
+    pub const fn ch_ena_ad1_set(&self) -> &ChEnaAd1Set {
+        &self.ch_ena_ad1_set
+    }
+    #[doc = "0x14 - Channel enable clear register"]
+    #[inline(always)]
+    pub const fn ch_ena_ad1_clr(&self) -> &ChEnaAd1Clr {
+        &self.ch_ena_ad1_clr
+    }
+    #[doc = "0x18..0x1a8 - Cluster CH%s, containing CH*_EVT_ID, CH*_TASK_ID"]
+    #[inline(always)]
+    pub const fn ch(&self, n: usize) -> &Ch {
+        &self.ch[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x18..0x1a8 - Cluster CH%s, containing CH*_EVT_ID, CH*_TASK_ID"]
+    #[inline(always)]
+    pub fn ch_iter(&self) -> impl Iterator<Item = &Ch> {
+        self.ch.iter()
+    }
+    #[doc = "0x1a8 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st0(&self) -> &EvtSt0 {
+        &self.evt_st0
+    }
+    #[doc = "0x1ac - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st0_clr(&self) -> &EvtSt0Clr {
+        &self.evt_st0_clr
+    }
+    #[doc = "0x1b0 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st1(&self) -> &EvtSt1 {
+        &self.evt_st1
+    }
+    #[doc = "0x1b4 - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st1_clr(&self) -> &EvtSt1Clr {
+        &self.evt_st1_clr
+    }
+    #[doc = "0x1b8 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st2(&self) -> &EvtSt2 {
+        &self.evt_st2
+    }
+    #[doc = "0x1bc - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st2_clr(&self) -> &EvtSt2Clr {
+        &self.evt_st2_clr
+    }
+    #[doc = "0x1c0 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st3(&self) -> &EvtSt3 {
+        &self.evt_st3
+    }
+    #[doc = "0x1c4 - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st3_clr(&self) -> &EvtSt3Clr {
+        &self.evt_st3_clr
+    }
+    #[doc = "0x1c8 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st4(&self) -> &EvtSt4 {
+        &self.evt_st4
+    }
+    #[doc = "0x1cc - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st4_clr(&self) -> &EvtSt4Clr {
+        &self.evt_st4_clr
+    }
+    #[doc = "0x1d0 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st5(&self) -> &EvtSt5 {
+        &self.evt_st5
+    }
+    #[doc = "0x1d4 - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st5_clr(&self) -> &EvtSt5Clr {
+        &self.evt_st5_clr
+    }
+    #[doc = "0x1d8 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st6(&self) -> &EvtSt6 {
+        &self.evt_st6
+    }
+    #[doc = "0x1dc - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st6_clr(&self) -> &EvtSt6Clr {
+        &self.evt_st6_clr
+    }
+    #[doc = "0x1e0 - Events trigger status register"]
+    #[inline(always)]
+    pub const fn evt_st7(&self) -> &EvtSt7 {
+        &self.evt_st7
+    }
+    #[doc = "0x1e4 - Events trigger status clear register"]
+    #[inline(always)]
+    pub const fn evt_st7_clr(&self) -> &EvtSt7Clr {
+        &self.evt_st7_clr
+    }
+    #[doc = "0x1e8 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st0(&self) -> &TaskSt0 {
+        &self.task_st0
+    }
+    #[doc = "0x1ec - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st0_clr(&self) -> &TaskSt0Clr {
+        &self.task_st0_clr
+    }
+    #[doc = "0x1f0 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st1(&self) -> &TaskSt1 {
+        &self.task_st1
+    }
+    #[doc = "0x1f4 - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st1_clr(&self) -> &TaskSt1Clr {
+        &self.task_st1_clr
+    }
+    #[doc = "0x1f8 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st2(&self) -> &TaskSt2 {
+        &self.task_st2
+    }
+    #[doc = "0x1fc - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st2_clr(&self) -> &TaskSt2Clr {
+        &self.task_st2_clr
+    }
+    #[doc = "0x200 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st3(&self) -> &TaskSt3 {
+        &self.task_st3
+    }
+    #[doc = "0x204 - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st3_clr(&self) -> &TaskSt3Clr {
+        &self.task_st3_clr
+    }
+    #[doc = "0x208 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st4(&self) -> &TaskSt4 {
+        &self.task_st4
+    }
+    #[doc = "0x20c - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st4_clr(&self) -> &TaskSt4Clr {
+        &self.task_st4_clr
+    }
+    #[doc = "0x210 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st5(&self) -> &TaskSt5 {
+        &self.task_st5
+    }
+    #[doc = "0x214 - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st5_clr(&self) -> &TaskSt5Clr {
+        &self.task_st5_clr
+    }
+    #[doc = "0x218 - Tasks trigger status register"]
+    #[inline(always)]
+    pub const fn task_st6(&self) -> &TaskSt6 {
+        &self.task_st6
+    }
+    #[doc = "0x21c - Tasks trigger status clear register"]
+    #[inline(always)]
+    pub const fn task_st6_clr(&self) -> &TaskSt6Clr {
+        &self.task_st6_clr
+    }
+    #[doc = "0x220 - ETM clock enable register"]
+    #[inline(always)]
+    pub const fn clk_en(&self) -> &ClkEn {
+        &self.clk_en
+    }
+    #[doc = "0x224 - ETM date register"]
+    #[inline(always)]
+    pub const fn date(&self) -> &Date {
+        &self.date
+    }
+}
+#[doc = "CH_ENA_AD0 (rw) register accessor: Channel enable status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_ena_ad0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_ena_ad0`] module"]
+#[doc(alias = "CH_ENA_AD0")]
+pub type ChEnaAd0 = crate::Reg<ch_ena_ad0::ChEnaAd0Spec>;
+#[doc = "Channel enable status register"]
+pub mod ch_ena_ad0;
+#[doc = "CH_ENA_AD0_SET (w) register accessor: Channel enable set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad0_set::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_ena_ad0_set`] module"]
+#[doc(alias = "CH_ENA_AD0_SET")]
+pub type ChEnaAd0Set = crate::Reg<ch_ena_ad0_set::ChEnaAd0SetSpec>;
+#[doc = "Channel enable set register"]
+pub mod ch_ena_ad0_set;
+#[doc = "CH_ENA_AD0_CLR (w) register accessor: Channel enable clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad0_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_ena_ad0_clr`] module"]
+#[doc(alias = "CH_ENA_AD0_CLR")]
+pub type ChEnaAd0Clr = crate::Reg<ch_ena_ad0_clr::ChEnaAd0ClrSpec>;
+#[doc = "Channel enable clear register"]
+pub mod ch_ena_ad0_clr;
+#[doc = "CH_ENA_AD1 (rw) register accessor: Channel enable status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_ena_ad1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_ena_ad1`] module"]
+#[doc(alias = "CH_ENA_AD1")]
+pub type ChEnaAd1 = crate::Reg<ch_ena_ad1::ChEnaAd1Spec>;
+#[doc = "Channel enable status register"]
+pub mod ch_ena_ad1;
+#[doc = "CH_ENA_AD1_SET (w) register accessor: Channel enable set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad1_set::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_ena_ad1_set`] module"]
+#[doc(alias = "CH_ENA_AD1_SET")]
+pub type ChEnaAd1Set = crate::Reg<ch_ena_ad1_set::ChEnaAd1SetSpec>;
+#[doc = "Channel enable set register"]
+pub mod ch_ena_ad1_set;
+#[doc = "CH_ENA_AD1_CLR (w) register accessor: Channel enable clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad1_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_ena_ad1_clr`] module"]
+#[doc(alias = "CH_ENA_AD1_CLR")]
+pub type ChEnaAd1Clr = crate::Reg<ch_ena_ad1_clr::ChEnaAd1ClrSpec>;
+#[doc = "Channel enable clear register"]
+pub mod ch_ena_ad1_clr;
+#[doc = "Cluster CH%s, containing CH*_EVT_ID, CH*_TASK_ID"]
+pub use self::ch::Ch;
+#[doc = r"Cluster"]
+#[doc = "Cluster CH%s, containing CH*_EVT_ID, CH*_TASK_ID"]
+pub mod ch;
+#[doc = "EVT_ST0 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st0`] module"]
+#[doc(alias = "EVT_ST0")]
+pub type EvtSt0 = crate::Reg<evt_st0::EvtSt0Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st0;
+#[doc = "EVT_ST0_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st0_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st0_clr`] module"]
+#[doc(alias = "EVT_ST0_CLR")]
+pub type EvtSt0Clr = crate::Reg<evt_st0_clr::EvtSt0ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st0_clr;
+#[doc = "EVT_ST1 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st1`] module"]
+#[doc(alias = "EVT_ST1")]
+pub type EvtSt1 = crate::Reg<evt_st1::EvtSt1Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st1;
+#[doc = "EVT_ST1_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st1_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st1_clr`] module"]
+#[doc(alias = "EVT_ST1_CLR")]
+pub type EvtSt1Clr = crate::Reg<evt_st1_clr::EvtSt1ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st1_clr;
+#[doc = "EVT_ST2 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st2`] module"]
+#[doc(alias = "EVT_ST2")]
+pub type EvtSt2 = crate::Reg<evt_st2::EvtSt2Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st2;
+#[doc = "EVT_ST2_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st2_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st2_clr`] module"]
+#[doc(alias = "EVT_ST2_CLR")]
+pub type EvtSt2Clr = crate::Reg<evt_st2_clr::EvtSt2ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st2_clr;
+#[doc = "EVT_ST3 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st3`] module"]
+#[doc(alias = "EVT_ST3")]
+pub type EvtSt3 = crate::Reg<evt_st3::EvtSt3Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st3;
+#[doc = "EVT_ST3_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st3_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st3_clr`] module"]
+#[doc(alias = "EVT_ST3_CLR")]
+pub type EvtSt3Clr = crate::Reg<evt_st3_clr::EvtSt3ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st3_clr;
+#[doc = "EVT_ST4 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st4`] module"]
+#[doc(alias = "EVT_ST4")]
+pub type EvtSt4 = crate::Reg<evt_st4::EvtSt4Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st4;
+#[doc = "EVT_ST4_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st4_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st4_clr`] module"]
+#[doc(alias = "EVT_ST4_CLR")]
+pub type EvtSt4Clr = crate::Reg<evt_st4_clr::EvtSt4ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st4_clr;
+#[doc = "EVT_ST5 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st5`] module"]
+#[doc(alias = "EVT_ST5")]
+pub type EvtSt5 = crate::Reg<evt_st5::EvtSt5Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st5;
+#[doc = "EVT_ST5_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st5_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st5_clr`] module"]
+#[doc(alias = "EVT_ST5_CLR")]
+pub type EvtSt5Clr = crate::Reg<evt_st5_clr::EvtSt5ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st5_clr;
+#[doc = "EVT_ST6 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st6`] module"]
+#[doc(alias = "EVT_ST6")]
+pub type EvtSt6 = crate::Reg<evt_st6::EvtSt6Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st6;
+#[doc = "EVT_ST6_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st6_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st6_clr`] module"]
+#[doc(alias = "EVT_ST6_CLR")]
+pub type EvtSt6Clr = crate::Reg<evt_st6_clr::EvtSt6ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st6_clr;
+#[doc = "EVT_ST7 (rw) register accessor: Events trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`evt_st7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st7`] module"]
+#[doc(alias = "EVT_ST7")]
+pub type EvtSt7 = crate::Reg<evt_st7::EvtSt7Spec>;
+#[doc = "Events trigger status register"]
+pub mod evt_st7;
+#[doc = "EVT_ST7_CLR (w) register accessor: Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st7_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@evt_st7_clr`] module"]
+#[doc(alias = "EVT_ST7_CLR")]
+pub type EvtSt7Clr = crate::Reg<evt_st7_clr::EvtSt7ClrSpec>;
+#[doc = "Events trigger status clear register"]
+pub mod evt_st7_clr;
+#[doc = "TASK_ST0 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st0`] module"]
+#[doc(alias = "TASK_ST0")]
+pub type TaskSt0 = crate::Reg<task_st0::TaskSt0Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st0;
+#[doc = "TASK_ST0_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st0_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st0_clr`] module"]
+#[doc(alias = "TASK_ST0_CLR")]
+pub type TaskSt0Clr = crate::Reg<task_st0_clr::TaskSt0ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st0_clr;
+#[doc = "TASK_ST1 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st1`] module"]
+#[doc(alias = "TASK_ST1")]
+pub type TaskSt1 = crate::Reg<task_st1::TaskSt1Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st1;
+#[doc = "TASK_ST1_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st1_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st1_clr`] module"]
+#[doc(alias = "TASK_ST1_CLR")]
+pub type TaskSt1Clr = crate::Reg<task_st1_clr::TaskSt1ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st1_clr;
+#[doc = "TASK_ST2 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st2`] module"]
+#[doc(alias = "TASK_ST2")]
+pub type TaskSt2 = crate::Reg<task_st2::TaskSt2Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st2;
+#[doc = "TASK_ST2_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st2_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st2_clr`] module"]
+#[doc(alias = "TASK_ST2_CLR")]
+pub type TaskSt2Clr = crate::Reg<task_st2_clr::TaskSt2ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st2_clr;
+#[doc = "TASK_ST3 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st3`] module"]
+#[doc(alias = "TASK_ST3")]
+pub type TaskSt3 = crate::Reg<task_st3::TaskSt3Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st3;
+#[doc = "TASK_ST3_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st3_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st3_clr`] module"]
+#[doc(alias = "TASK_ST3_CLR")]
+pub type TaskSt3Clr = crate::Reg<task_st3_clr::TaskSt3ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st3_clr;
+#[doc = "TASK_ST4 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st4`] module"]
+#[doc(alias = "TASK_ST4")]
+pub type TaskSt4 = crate::Reg<task_st4::TaskSt4Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st4;
+#[doc = "TASK_ST4_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st4_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st4_clr`] module"]
+#[doc(alias = "TASK_ST4_CLR")]
+pub type TaskSt4Clr = crate::Reg<task_st4_clr::TaskSt4ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st4_clr;
+#[doc = "TASK_ST5 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st5`] module"]
+#[doc(alias = "TASK_ST5")]
+pub type TaskSt5 = crate::Reg<task_st5::TaskSt5Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st5;
+#[doc = "TASK_ST5_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st5_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st5_clr`] module"]
+#[doc(alias = "TASK_ST5_CLR")]
+pub type TaskSt5Clr = crate::Reg<task_st5_clr::TaskSt5ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st5_clr;
+#[doc = "TASK_ST6 (rw) register accessor: Tasks trigger status register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_st6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st6`] module"]
+#[doc(alias = "TASK_ST6")]
+pub type TaskSt6 = crate::Reg<task_st6::TaskSt6Spec>;
+#[doc = "Tasks trigger status register"]
+pub mod task_st6;
+#[doc = "TASK_ST6_CLR (w) register accessor: Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st6_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@task_st6_clr`] module"]
+#[doc(alias = "TASK_ST6_CLR")]
+pub type TaskSt6Clr = crate::Reg<task_st6_clr::TaskSt6ClrSpec>;
+#[doc = "Tasks trigger status clear register"]
+pub mod task_st6_clr;
+#[doc = "CLK_EN (rw) register accessor: ETM clock enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en`] module"]
+#[doc(alias = "CLK_EN")]
+pub type ClkEn = crate::Reg<clk_en::ClkEnSpec>;
+#[doc = "ETM clock enable register"]
+pub mod clk_en;
+#[doc = "DATE (rw) register accessor: ETM date register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc(alias = "DATE")]
+pub type Date = crate::Reg<date::DateSpec>;
+#[doc = "ETM date register"]
+pub mod date;

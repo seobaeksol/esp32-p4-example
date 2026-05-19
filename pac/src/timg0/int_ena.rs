@@ -1,0 +1,83 @@
+#[doc = "Register `INT_ENA` reader"]
+pub type R = crate::R<IntEnaSpec>;
+#[doc = "Register `INT_ENA` writer"]
+pub type W = crate::W<IntEnaSpec>;
+#[doc = "Field `T(0-1)` reader - The interrupt enable bit for the TIMG_T%s_INT interrupt."]
+pub type TR = crate::BitReader;
+#[doc = "Field `T(0-1)` writer - The interrupt enable bit for the TIMG_T%s_INT interrupt."]
+pub type TW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WDT` reader - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
+pub type WdtR = crate::BitReader;
+#[doc = "Field `WDT` writer - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
+pub type WdtW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "The interrupt enable bit for the TIMG_T(0-1)_INT interrupt."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
+    #[inline(always)]
+    pub fn t(&self, n: u8) -> TR {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TR::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the TIMG_T(0-1)_INT interrupt."]
+    #[inline(always)]
+    pub fn t_iter(&self) -> impl Iterator<Item = TR> + '_ {
+        (0..2).map(move |n| TR::new(((self.bits >> n) & 1) != 0))
+    }
+    #[doc = "Bit 0 - The interrupt enable bit for the TIMG_T0_INT interrupt."]
+    #[inline(always)]
+    pub fn t0(&self) -> TR {
+        TR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - The interrupt enable bit for the TIMG_T1_INT interrupt."]
+    #[inline(always)]
+    pub fn t1(&self) -> TR {
+        TR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
+    #[inline(always)]
+    pub fn wdt(&self) -> WdtR {
+        WdtR::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "The interrupt enable bit for the TIMG_T(0-1)_INT interrupt."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
+    #[inline(always)]
+    pub fn t(&mut self, n: u8) -> TW<'_, IntEnaSpec> {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TW::new(self, n)
+    }
+    #[doc = "Bit 0 - The interrupt enable bit for the TIMG_T0_INT interrupt."]
+    #[inline(always)]
+    pub fn t0(&mut self) -> TW<'_, IntEnaSpec> {
+        TW::new(self, 0)
+    }
+    #[doc = "Bit 1 - The interrupt enable bit for the TIMG_T1_INT interrupt."]
+    #[inline(always)]
+    pub fn t1(&mut self) -> TW<'_, IntEnaSpec> {
+        TW::new(self, 1)
+    }
+    #[doc = "Bit 2 - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
+    #[inline(always)]
+    pub fn wdt(&mut self) -> WdtW<'_, IntEnaSpec> {
+        WdtW::new(self, 2)
+    }
+}
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntEnaSpec;
+impl crate::RegisterSpec for IntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+impl crate::Readable for IntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+impl crate::Writable for IntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_ENA to value 0"]
+impl crate::Resettable for IntEnaSpec {}

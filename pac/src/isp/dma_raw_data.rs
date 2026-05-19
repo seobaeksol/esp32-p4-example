@@ -1,0 +1,42 @@
+#[doc = "Register `DMA_RAW_DATA` reader"]
+pub type R = crate::R<DmaRawDataSpec>;
+#[doc = "Register `DMA_RAW_DATA` writer"]
+pub type W = crate::W<DmaRawDataSpec>;
+#[doc = "Field `DMA_RAW_NUM_TOTAL` reader - this field configures the the number of 64bits in a frame"]
+pub type DmaRawNumTotalR = crate::FieldReader<u32>;
+#[doc = "Field `DMA_RAW_NUM_TOTAL` writer - this field configures the the number of 64bits in a frame"]
+pub type DmaRawNumTotalW<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
+#[doc = "Field `DMA_RAW_NUM_TOTAL_SET` writer - write 1 to update reg_dma_raw_num_total"]
+pub type DmaRawNumTotalSetW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:21 - this field configures the the number of 64bits in a frame"]
+    #[inline(always)]
+    pub fn dma_raw_num_total(&self) -> DmaRawNumTotalR {
+        DmaRawNumTotalR::new(self.bits & 0x003f_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:21 - this field configures the the number of 64bits in a frame"]
+    #[inline(always)]
+    pub fn dma_raw_num_total(&mut self) -> DmaRawNumTotalW<'_, DmaRawDataSpec> {
+        DmaRawNumTotalW::new(self, 0)
+    }
+    #[doc = "Bit 31 - write 1 to update reg_dma_raw_num_total"]
+    #[inline(always)]
+    pub fn dma_raw_num_total_set(&mut self) -> DmaRawNumTotalSetW<'_, DmaRawDataSpec> {
+        DmaRawNumTotalSetW::new(self, 31)
+    }
+}
+#[doc = "isp dma source total raw number set register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_raw_data::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_raw_data::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmaRawDataSpec;
+impl crate::RegisterSpec for DmaRawDataSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dma_raw_data::R`](R) reader structure"]
+impl crate::Readable for DmaRawDataSpec {}
+#[doc = "`write(|w| ..)` method takes [`dma_raw_data::W`](W) writer structure"]
+impl crate::Writable for DmaRawDataSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DMA_RAW_DATA to value 0"]
+impl crate::Resettable for DmaRawDataSpec {}

@@ -1,0 +1,42 @@
+#[doc = "Register `RDN_ECO` reader"]
+pub type R = crate::R<RdnEcoSpec>;
+#[doc = "Register `RDN_ECO` writer"]
+pub type W = crate::W<RdnEcoSpec>;
+#[doc = "Field `PMU_RDN_ECO_RESULT` reader - need_des"]
+pub type PmuRdnEcoResultR = crate::BitReader;
+#[doc = "Field `PMU_RDN_ECO_EN` reader - need_des"]
+pub type PmuRdnEcoEnR = crate::BitReader;
+#[doc = "Field `PMU_RDN_ECO_EN` writer - need_des"]
+pub type PmuRdnEcoEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn pmu_rdn_eco_result(&self) -> PmuRdnEcoResultR {
+        PmuRdnEcoResultR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn pmu_rdn_eco_en(&self) -> PmuRdnEcoEnR {
+        PmuRdnEcoEnR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn pmu_rdn_eco_en(&mut self) -> PmuRdnEcoEnW<'_, RdnEcoSpec> {
+        PmuRdnEcoEnW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`rdn_eco::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rdn_eco::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RdnEcoSpec;
+impl crate::RegisterSpec for RdnEcoSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rdn_eco::R`](R) reader structure"]
+impl crate::Readable for RdnEcoSpec {}
+#[doc = "`write(|w| ..)` method takes [`rdn_eco::W`](W) writer structure"]
+impl crate::Writable for RdnEcoSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RDN_ECO to value 0"]
+impl crate::Resettable for RdnEcoSpec {}

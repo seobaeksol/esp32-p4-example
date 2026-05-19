@@ -1,0 +1,105 @@
+#[doc = "Register `L2_CACHE_ACS_CNT_INT_ENA` reader"]
+pub type R = crate::R<L2CacheAcsCntIntEnaSpec>;
+#[doc = "Register `L2_CACHE_ACS_CNT_INT_ENA` writer"]
+pub type W = crate::W<L2CacheAcsCntIntEnaSpec>;
+#[doc = "Field `L2_IBUS0_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+pub type L2Ibus0OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_IBUS0_OVF_INT_ENA` writer - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+pub type L2Ibus0OvfIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_IBUS1_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+pub type L2Ibus1OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_IBUS1_OVF_INT_ENA` writer - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+pub type L2Ibus1OvfIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_IBUS2_OVF_INT_ENA` reader - Reserved"]
+pub type L2Ibus2OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_IBUS3_OVF_INT_ENA` reader - Reserved"]
+pub type L2Ibus3OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_DBUS0_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+pub type L2Dbus0OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_DBUS0_OVF_INT_ENA` writer - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+pub type L2Dbus0OvfIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_DBUS1_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+pub type L2Dbus1OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_DBUS1_OVF_INT_ENA` writer - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+pub type L2Dbus1OvfIntEnaW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_DBUS2_OVF_INT_ENA` reader - Reserved"]
+pub type L2Dbus2OvfIntEnaR = crate::BitReader;
+#[doc = "Field `L2_DBUS3_OVF_INT_ENA` reader - Reserved"]
+pub type L2Dbus3OvfIntEnaR = crate::BitReader;
+impl R {
+    #[doc = "Bit 8 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_ibus0_ovf_int_ena(&self) -> L2Ibus0OvfIntEnaR {
+        L2Ibus0OvfIntEnaR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_ibus1_ovf_int_ena(&self) -> L2Ibus1OvfIntEnaR {
+        L2Ibus1OvfIntEnaR::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Reserved"]
+    #[inline(always)]
+    pub fn l2_ibus2_ovf_int_ena(&self) -> L2Ibus2OvfIntEnaR {
+        L2Ibus2OvfIntEnaR::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Reserved"]
+    #[inline(always)]
+    pub fn l2_ibus3_ovf_int_ena(&self) -> L2Ibus3OvfIntEnaR {
+        L2Ibus3OvfIntEnaR::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_dbus0_ovf_int_ena(&self) -> L2Dbus0OvfIntEnaR {
+        L2Dbus0OvfIntEnaR::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_dbus1_ovf_int_ena(&self) -> L2Dbus1OvfIntEnaR {
+        L2Dbus1OvfIntEnaR::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Reserved"]
+    #[inline(always)]
+    pub fn l2_dbus2_ovf_int_ena(&self) -> L2Dbus2OvfIntEnaR {
+        L2Dbus2OvfIntEnaR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Reserved"]
+    #[inline(always)]
+    pub fn l2_dbus3_ovf_int_ena(&self) -> L2Dbus3OvfIntEnaR {
+        L2Dbus3OvfIntEnaR::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 8 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_ibus0_ovf_int_ena(&mut self) -> L2Ibus0OvfIntEnaW<'_, L2CacheAcsCntIntEnaSpec> {
+        L2Ibus0OvfIntEnaW::new(self, 8)
+    }
+    #[doc = "Bit 9 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_ibus1_ovf_int_ena(&mut self) -> L2Ibus1OvfIntEnaW<'_, L2CacheAcsCntIntEnaSpec> {
+        L2Ibus1OvfIntEnaW::new(self, 9)
+    }
+    #[doc = "Bit 12 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_dbus0_ovf_int_ena(&mut self) -> L2Dbus0OvfIntEnaW<'_, L2CacheAcsCntIntEnaSpec> {
+        L2Dbus0OvfIntEnaW::new(self, 12)
+    }
+    #[doc = "Bit 13 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
+    #[inline(always)]
+    pub fn l2_dbus1_ovf_int_ena(&mut self) -> L2Dbus1OvfIntEnaW<'_, L2CacheAcsCntIntEnaSpec> {
+        L2Dbus1OvfIntEnaW::new(self, 13)
+    }
+}
+#[doc = "Cache Access Counter Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_acs_cnt_int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_acs_cnt_int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2CacheAcsCntIntEnaSpec;
+impl crate::RegisterSpec for L2CacheAcsCntIntEnaSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_cache_acs_cnt_int_ena::R`](R) reader structure"]
+impl crate::Readable for L2CacheAcsCntIntEnaSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_cache_acs_cnt_int_ena::W`](W) writer structure"]
+impl crate::Writable for L2CacheAcsCntIntEnaSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_CACHE_ACS_CNT_INT_ENA to value 0"]
+impl crate::Resettable for L2CacheAcsCntIntEnaSpec {}

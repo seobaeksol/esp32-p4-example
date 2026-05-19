@@ -1,0 +1,35 @@
+#[doc = "Register `AAD_BLOCK_NUM` reader"]
+pub type R = crate::R<AadBlockNumSpec>;
+#[doc = "Register `AAD_BLOCK_NUM` writer"]
+pub type W = crate::W<AadBlockNumSpec>;
+#[doc = "Field `AAD_BLOCK_NUM` reader - Those bits stores the number of AAD block."]
+pub type AadBlockNumR = crate::FieldReader<u32>;
+#[doc = "Field `AAD_BLOCK_NUM` writer - Those bits stores the number of AAD block."]
+pub type AadBlockNumW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - Those bits stores the number of AAD block."]
+    #[inline(always)]
+    pub fn aad_block_num(&self) -> AadBlockNumR {
+        AadBlockNumR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - Those bits stores the number of AAD block."]
+    #[inline(always)]
+    pub fn aad_block_num(&mut self) -> AadBlockNumW<'_, AadBlockNumSpec> {
+        AadBlockNumW::new(self, 0)
+    }
+}
+#[doc = "Additional Authential Data block number register\n\nYou can [`read`](crate::Reg::read) this register and get [`aad_block_num::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`aad_block_num::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AadBlockNumSpec;
+impl crate::RegisterSpec for AadBlockNumSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`aad_block_num::R`](R) reader structure"]
+impl crate::Readable for AadBlockNumSpec {}
+#[doc = "`write(|w| ..)` method takes [`aad_block_num::W`](W) writer structure"]
+impl crate::Writable for AadBlockNumSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AAD_BLOCK_NUM to value 0"]
+impl crate::Resettable for AadBlockNumSpec {}

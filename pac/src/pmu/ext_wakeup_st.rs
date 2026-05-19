@@ -1,0 +1,20 @@
+#[doc = "Register `EXT_WAKEUP_ST` reader"]
+pub type R = crate::R<ExtWakeupStSpec>;
+#[doc = "Field `EXT_WAKEUP_STATUS` reader - need_des"]
+pub type ExtWakeupStatusR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn ext_wakeup_status(&self) -> ExtWakeupStatusR {
+        ExtWakeupStatusR::new(self.bits)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ext_wakeup_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ExtWakeupStSpec;
+impl crate::RegisterSpec for ExtWakeupStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ext_wakeup_st::R`](R) reader structure"]
+impl crate::Readable for ExtWakeupStSpec {}
+#[doc = "`reset()` method sets EXT_WAKEUP_ST to value 0"]
+impl crate::Resettable for ExtWakeupStSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `INTR_SRC_PASS_IN_SEC_STATUS_4` reader"]
+pub type R = crate::R<IntrSrcPassInSecStatus4Spec>;
+#[doc = "Field `CORE1_INTR_SRC_PASS_IN_SEC_STATUS_4` reader - NA"]
+pub type Core1IntrSrcPassInSecStatus4R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn core1_intr_src_pass_in_sec_status_4(&self) -> Core1IntrSrcPassInSecStatus4R {
+        Core1IntrSrcPassInSecStatus4R::new(self.bits)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_src_pass_in_sec_status_4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntrSrcPassInSecStatus4Spec;
+impl crate::RegisterSpec for IntrSrcPassInSecStatus4Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`intr_src_pass_in_sec_status_4::R`](R) reader structure"]
+impl crate::Readable for IntrSrcPassInSecStatus4Spec {}
+#[doc = "`reset()` method sets INTR_SRC_PASS_IN_SEC_STATUS_4 to value 0"]
+impl crate::Resettable for IntrSrcPassInSecStatus4Spec {}

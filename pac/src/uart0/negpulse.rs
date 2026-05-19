@@ -1,0 +1,22 @@
+#[doc = "Register `NEGPULSE` reader"]
+pub type R = crate::R<NegpulseSpec>;
+#[doc = "Field `NEGEDGE_MIN_CNT` reader - This register stores the minimal input clock count between two negative edges. It is used in boudrate-detect process."]
+pub type NegedgeMinCntR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:11 - This register stores the minimal input clock count between two negative edges. It is used in boudrate-detect process."]
+    #[inline(always)]
+    pub fn negedge_min_cnt(&self) -> NegedgeMinCntR {
+        NegedgeMinCntR::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[doc = "Autobaud low pulse register\n\nYou can [`read`](crate::Reg::read) this register and get [`negpulse::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct NegpulseSpec;
+impl crate::RegisterSpec for NegpulseSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`negpulse::R`](R) reader structure"]
+impl crate::Readable for NegpulseSpec {}
+#[doc = "`reset()` method sets NEGPULSE to value 0x0fff"]
+impl crate::Resettable for NegpulseSpec {
+    const RESET_VALUE: u32 = 0x0fff;
+}

@@ -1,0 +1,49 @@
+#[doc = "Register `L2_MEM_AHB_BUFFER_CTRL` reader"]
+pub type R = crate::R<L2MemAhbBufferCtrlSpec>;
+#[doc = "Register `L2_MEM_AHB_BUFFER_CTRL` writer"]
+pub type W = crate::W<L2MemAhbBufferCtrlSpec>;
+#[doc = "Field `L2_MEM_AHB_WRBUFFER_EN` reader - Set 1 to turn on l2mem ahb wr buffer"]
+pub type L2MemAhbWrbufferEnR = crate::BitReader;
+#[doc = "Field `L2_MEM_AHB_WRBUFFER_EN` writer - Set 1 to turn on l2mem ahb wr buffer"]
+pub type L2MemAhbWrbufferEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2_MEM_AHB_RDBUFFER_EN` reader - Set 1 to turn on l2mem ahb rd buffer"]
+pub type L2MemAhbRdbufferEnR = crate::BitReader;
+#[doc = "Field `L2_MEM_AHB_RDBUFFER_EN` writer - Set 1 to turn on l2mem ahb rd buffer"]
+pub type L2MemAhbRdbufferEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - Set 1 to turn on l2mem ahb wr buffer"]
+    #[inline(always)]
+    pub fn l2_mem_ahb_wrbuffer_en(&self) -> L2MemAhbWrbufferEnR {
+        L2MemAhbWrbufferEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set 1 to turn on l2mem ahb rd buffer"]
+    #[inline(always)]
+    pub fn l2_mem_ahb_rdbuffer_en(&self) -> L2MemAhbRdbufferEnR {
+        L2MemAhbRdbufferEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set 1 to turn on l2mem ahb wr buffer"]
+    #[inline(always)]
+    pub fn l2_mem_ahb_wrbuffer_en(&mut self) -> L2MemAhbWrbufferEnW<'_, L2MemAhbBufferCtrlSpec> {
+        L2MemAhbWrbufferEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set 1 to turn on l2mem ahb rd buffer"]
+    #[inline(always)]
+    pub fn l2_mem_ahb_rdbuffer_en(&mut self) -> L2MemAhbRdbufferEnW<'_, L2MemAhbBufferCtrlSpec> {
+        L2MemAhbRdbufferEnW::new(self, 1)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_mem_ahb_buffer_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_mem_ahb_buffer_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L2MemAhbBufferCtrlSpec;
+impl crate::RegisterSpec for L2MemAhbBufferCtrlSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l2_mem_ahb_buffer_ctrl::R`](R) reader structure"]
+impl crate::Readable for L2MemAhbBufferCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`l2_mem_ahb_buffer_ctrl::W`](W) writer structure"]
+impl crate::Writable for L2MemAhbBufferCtrlSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L2_MEM_AHB_BUFFER_CTRL to value 0"]
+impl crate::Resettable for L2MemAhbBufferCtrlSpec {}

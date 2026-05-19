@@ -1,0 +1,35 @@
+#[doc = "Register `STATUS1` reader"]
+pub type R = crate::R<Status1Spec>;
+#[doc = "Register `STATUS1` writer"]
+pub type W = crate::W<Status1Spec>;
+#[doc = "Field `INTERRUPT` reader - GPIO interrupt status register for GPIO32-56"]
+pub type InterruptR = crate::FieldReader<u32>;
+#[doc = "Field `INTERRUPT` writer - GPIO interrupt status register for GPIO32-56"]
+pub type InterruptW<'a, REG> = crate::FieldWriter<'a, REG, 25, u32>;
+impl R {
+    #[doc = "Bits 0:24 - GPIO interrupt status register for GPIO32-56"]
+    #[inline(always)]
+    pub fn interrupt(&self) -> InterruptR {
+        InterruptR::new(self.bits & 0x01ff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:24 - GPIO interrupt status register for GPIO32-56"]
+    #[inline(always)]
+    pub fn interrupt(&mut self) -> InterruptW<'_, Status1Spec> {
+        InterruptW::new(self, 0)
+    }
+}
+#[doc = "GPIO interrupt status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`status1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Status1Spec;
+impl crate::RegisterSpec for Status1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`status1::R`](R) reader structure"]
+impl crate::Readable for Status1Spec {}
+#[doc = "`write(|w| ..)` method takes [`status1::W`](W) writer structure"]
+impl crate::Writable for Status1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets STATUS1 to value 0"]
+impl crate::Resettable for Status1Spec {}

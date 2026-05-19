@@ -1,0 +1,259 @@
+#[doc = "Register `INT_RAW` reader"]
+pub type R = crate::R<IntRawSpec>;
+#[doc = "Register `INT_RAW` writer"]
+pub type W = crate::W<IntRawSpec>;
+#[doc = "Field `_0P1A_CNT_TARGET0_REACH_0_HP` reader - reg_0p1a_0_counter after xpd reach target0"]
+pub type _0p1aCntTarget0Reach0HpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET0_REACH_0_HP` writer - reg_0p1a_0_counter after xpd reach target0"]
+pub type _0p1aCntTarget0Reach0HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P1A_CNT_TARGET1_REACH_0_HP` reader - reg_0p1a_1_counter after xpd reach target1"]
+pub type _0p1aCntTarget1Reach0HpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET1_REACH_0_HP` writer - reg_0p1a_1_counter after xpd reach target1"]
+pub type _0p1aCntTarget1Reach0HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P1A_CNT_TARGET0_REACH_1_HP` reader - reg_0p1a_0 counter after xpd reach target0"]
+pub type _0p1aCntTarget0Reach1HpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET0_REACH_1_HP` writer - reg_0p1a_0 counter after xpd reach target0"]
+pub type _0p1aCntTarget0Reach1HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P1A_CNT_TARGET1_REACH_1_HP` reader - reg_0p1a_1_counter after xpd reach target1"]
+pub type _0p1aCntTarget1Reach1HpR = crate::BitReader;
+#[doc = "Field `_0P1A_CNT_TARGET1_REACH_1_HP` writer - reg_0p1a_1_counter after xpd reach target1"]
+pub type _0p1aCntTarget1Reach1HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_CNT_TARGET0_REACH_0_HP` reader - reg_0p2a_0 counter after xpd reach target0"]
+pub type _0p2aCntTarget0Reach0HpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET0_REACH_0_HP` writer - reg_0p2a_0 counter after xpd reach target0"]
+pub type _0p2aCntTarget0Reach0HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_CNT_TARGET1_REACH_0_HP` reader - reg_0p2a_1_counter after xpd reach target1"]
+pub type _0p2aCntTarget1Reach0HpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET1_REACH_0_HP` writer - reg_0p2a_1_counter after xpd reach target1"]
+pub type _0p2aCntTarget1Reach0HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_CNT_TARGET0_REACH_1_HP` reader - reg_0p2a_0 counter after xpd reach target0"]
+pub type _0p2aCntTarget0Reach1HpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET0_REACH_1_HP` writer - reg_0p2a_0 counter after xpd reach target0"]
+pub type _0p2aCntTarget0Reach1HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P2A_CNT_TARGET1_REACH_1_HP` reader - reg_0p2a_1_counter after xpd reach target1"]
+pub type _0p2aCntTarget1Reach1HpR = crate::BitReader;
+#[doc = "Field `_0P2A_CNT_TARGET1_REACH_1_HP` writer - reg_0p2a_1_counter after xpd reach target1"]
+pub type _0p2aCntTarget1Reach1HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P3A_CNT_TARGET0_REACH_0_HP` reader - reg_0p3a_0 counter after xpd reach target0"]
+pub type _0p3aCntTarget0Reach0HpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET0_REACH_0_HP` writer - reg_0p3a_0 counter after xpd reach target0"]
+pub type _0p3aCntTarget0Reach0HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P3A_CNT_TARGET1_REACH_0_HP` reader - reg_0p3a_1_counter after xpd reach target1"]
+pub type _0p3aCntTarget1Reach0HpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET1_REACH_0_HP` writer - reg_0p3a_1_counter after xpd reach target1"]
+pub type _0p3aCntTarget1Reach0HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P3A_CNT_TARGET0_REACH_1_HP` reader - reg_0p3a_0_counter after xpd reach target0"]
+pub type _0p3aCntTarget0Reach1HpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET0_REACH_1_HP` writer - reg_0p3a_0_counter after xpd reach target0"]
+pub type _0p3aCntTarget0Reach1HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `_0P3A_CNT_TARGET1_REACH_1_HP` reader - reg_0p3a_1_counter after xpd reach target1"]
+pub type _0p3aCntTarget1Reach1HpR = crate::BitReader;
+#[doc = "Field `_0P3A_CNT_TARGET1_REACH_1_HP` writer - reg_0p3a_1_counter after xpd reach target1"]
+pub type _0p3aCntTarget1Reach1HpW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_CPU_EXC` reader - need_des"]
+pub type LpCpuExcR = crate::BitReader;
+#[doc = "Field `LP_CPU_EXC` writer - need_des"]
+pub type LpCpuExcW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SDIO_IDLE` reader - need_des"]
+pub type SdioIdleR = crate::BitReader;
+#[doc = "Field `SDIO_IDLE` writer - need_des"]
+pub type SdioIdleW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SW` reader - need_des"]
+pub type SwR = crate::BitReader;
+#[doc = "Field `SW` writer - need_des"]
+pub type SwW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SOC_SLEEP_REJECT` reader - need_des"]
+pub type SocSleepRejectR = crate::BitReader;
+#[doc = "Field `SOC_SLEEP_REJECT` writer - need_des"]
+pub type SocSleepRejectW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SOC_WAKEUP` reader - need_des"]
+pub type SocWakeupR = crate::BitReader;
+#[doc = "Field `SOC_WAKEUP` writer - need_des"]
+pub type SocWakeupW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 14 - reg_0p1a_0_counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target0_reach_0_hp(&self) -> _0p1aCntTarget0Reach0HpR {
+        _0p1aCntTarget0Reach0HpR::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - reg_0p1a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target1_reach_0_hp(&self) -> _0p1aCntTarget1Reach0HpR {
+        _0p1aCntTarget1Reach0HpR::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - reg_0p1a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target0_reach_1_hp(&self) -> _0p1aCntTarget0Reach1HpR {
+        _0p1aCntTarget0Reach1HpR::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - reg_0p1a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target1_reach_1_hp(&self) -> _0p1aCntTarget1Reach1HpR {
+        _0p1aCntTarget1Reach1HpR::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bit 18 - reg_0p2a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target0_reach_0_hp(&self) -> _0p2aCntTarget0Reach0HpR {
+        _0p2aCntTarget0Reach0HpR::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - reg_0p2a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target1_reach_0_hp(&self) -> _0p2aCntTarget1Reach0HpR {
+        _0p2aCntTarget1Reach0HpR::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - reg_0p2a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target0_reach_1_hp(&self) -> _0p2aCntTarget0Reach1HpR {
+        _0p2aCntTarget0Reach1HpR::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21 - reg_0p2a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target1_reach_1_hp(&self) -> _0p2aCntTarget1Reach1HpR {
+        _0p2aCntTarget1Reach1HpR::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - reg_0p3a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target0_reach_0_hp(&self) -> _0p3aCntTarget0Reach0HpR {
+        _0p3aCntTarget0Reach0HpR::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - reg_0p3a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target1_reach_0_hp(&self) -> _0p3aCntTarget1Reach0HpR {
+        _0p3aCntTarget1Reach0HpR::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - reg_0p3a_0_counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target0_reach_1_hp(&self) -> _0p3aCntTarget0Reach1HpR {
+        _0p3aCntTarget0Reach1HpR::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - reg_0p3a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target1_reach_1_hp(&self) -> _0p3aCntTarget1Reach1HpR {
+        _0p3aCntTarget1Reach1HpR::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_exc(&self) -> LpCpuExcR {
+        LpCpuExcR::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn sdio_idle(&self) -> SdioIdleR {
+        SdioIdleR::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn sw(&self) -> SwR {
+        SwR::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn soc_sleep_reject(&self) -> SocSleepRejectR {
+        SocSleepRejectR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn soc_wakeup(&self) -> SocWakeupR {
+        SocWakeupR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 14 - reg_0p1a_0_counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target0_reach_0_hp(&mut self) -> _0p1aCntTarget0Reach0HpW<'_, IntRawSpec> {
+        _0p1aCntTarget0Reach0HpW::new(self, 14)
+    }
+    #[doc = "Bit 15 - reg_0p1a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target1_reach_0_hp(&mut self) -> _0p1aCntTarget1Reach0HpW<'_, IntRawSpec> {
+        _0p1aCntTarget1Reach0HpW::new(self, 15)
+    }
+    #[doc = "Bit 16 - reg_0p1a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target0_reach_1_hp(&mut self) -> _0p1aCntTarget0Reach1HpW<'_, IntRawSpec> {
+        _0p1aCntTarget0Reach1HpW::new(self, 16)
+    }
+    #[doc = "Bit 17 - reg_0p1a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p1a_cnt_target1_reach_1_hp(&mut self) -> _0p1aCntTarget1Reach1HpW<'_, IntRawSpec> {
+        _0p1aCntTarget1Reach1HpW::new(self, 17)
+    }
+    #[doc = "Bit 18 - reg_0p2a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target0_reach_0_hp(&mut self) -> _0p2aCntTarget0Reach0HpW<'_, IntRawSpec> {
+        _0p2aCntTarget0Reach0HpW::new(self, 18)
+    }
+    #[doc = "Bit 19 - reg_0p2a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target1_reach_0_hp(&mut self) -> _0p2aCntTarget1Reach0HpW<'_, IntRawSpec> {
+        _0p2aCntTarget1Reach0HpW::new(self, 19)
+    }
+    #[doc = "Bit 20 - reg_0p2a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target0_reach_1_hp(&mut self) -> _0p2aCntTarget0Reach1HpW<'_, IntRawSpec> {
+        _0p2aCntTarget0Reach1HpW::new(self, 20)
+    }
+    #[doc = "Bit 21 - reg_0p2a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_target1_reach_1_hp(&mut self) -> _0p2aCntTarget1Reach1HpW<'_, IntRawSpec> {
+        _0p2aCntTarget1Reach1HpW::new(self, 21)
+    }
+    #[doc = "Bit 22 - reg_0p3a_0 counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target0_reach_0_hp(&mut self) -> _0p3aCntTarget0Reach0HpW<'_, IntRawSpec> {
+        _0p3aCntTarget0Reach0HpW::new(self, 22)
+    }
+    #[doc = "Bit 23 - reg_0p3a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target1_reach_0_hp(&mut self) -> _0p3aCntTarget1Reach0HpW<'_, IntRawSpec> {
+        _0p3aCntTarget1Reach0HpW::new(self, 23)
+    }
+    #[doc = "Bit 24 - reg_0p3a_0_counter after xpd reach target0"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target0_reach_1_hp(&mut self) -> _0p3aCntTarget0Reach1HpW<'_, IntRawSpec> {
+        _0p3aCntTarget0Reach1HpW::new(self, 24)
+    }
+    #[doc = "Bit 25 - reg_0p3a_1_counter after xpd reach target1"]
+    #[inline(always)]
+    pub fn _0p3a_cnt_target1_reach_1_hp(&mut self) -> _0p3aCntTarget1Reach1HpW<'_, IntRawSpec> {
+        _0p3aCntTarget1Reach1HpW::new(self, 25)
+    }
+    #[doc = "Bit 27 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_exc(&mut self) -> LpCpuExcW<'_, IntRawSpec> {
+        LpCpuExcW::new(self, 27)
+    }
+    #[doc = "Bit 28 - need_des"]
+    #[inline(always)]
+    pub fn sdio_idle(&mut self) -> SdioIdleW<'_, IntRawSpec> {
+        SdioIdleW::new(self, 28)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn sw(&mut self) -> SwW<'_, IntRawSpec> {
+        SwW::new(self, 29)
+    }
+    #[doc = "Bit 30 - need_des"]
+    #[inline(always)]
+    pub fn soc_sleep_reject(&mut self) -> SocSleepRejectW<'_, IntRawSpec> {
+        SocSleepRejectW::new(self, 30)
+    }
+    #[doc = "Bit 31 - need_des"]
+    #[inline(always)]
+    pub fn soc_wakeup(&mut self) -> SocWakeupW<'_, IntRawSpec> {
+        SocWakeupW::new(self, 31)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntRawSpec;
+impl crate::RegisterSpec for IntRawSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_raw::R`](R) reader structure"]
+impl crate::Readable for IntRawSpec {}
+#[doc = "`write(|w| ..)` method takes [`int_raw::W`](W) writer structure"]
+impl crate::Writable for IntRawSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_RAW to value 0"]
+impl crate::Resettable for IntRawSpec {}

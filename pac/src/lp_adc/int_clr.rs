@@ -1,0 +1,57 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<IntClrSpec>;
+#[doc = "Field `COCPU_SARADC1_INT_CLR` writer - ADC1 Conversion is done, int clear."]
+pub type CocpuSaradc1IntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_INT_CLR` writer - ADC2 Conversion is done, int clear."]
+pub type CocpuSaradc2IntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC1_ERROR_INT_CLR` writer - An errro occurs from ADC1, int clear."]
+pub type CocpuSaradc1ErrorIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_ERROR_INT_CLR` writer - An errro occurs from ADC2, int clear."]
+pub type CocpuSaradc2ErrorIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC1_WAKE_INT_CLR` writer - A wakeup event is triggered from ADC1, int clear."]
+pub type CocpuSaradc1WakeIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COCPU_SARADC2_WAKE_INT_CLR` writer - A wakeup event is triggered from ADC2, int clear."]
+pub type CocpuSaradc2WakeIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - ADC1 Conversion is done, int clear."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_int_clr(&mut self) -> CocpuSaradc1IntClrW<'_, IntClrSpec> {
+        CocpuSaradc1IntClrW::new(self, 0)
+    }
+    #[doc = "Bit 1 - ADC2 Conversion is done, int clear."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_int_clr(&mut self) -> CocpuSaradc2IntClrW<'_, IntClrSpec> {
+        CocpuSaradc2IntClrW::new(self, 1)
+    }
+    #[doc = "Bit 2 - An errro occurs from ADC1, int clear."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_error_int_clr(&mut self) -> CocpuSaradc1ErrorIntClrW<'_, IntClrSpec> {
+        CocpuSaradc1ErrorIntClrW::new(self, 2)
+    }
+    #[doc = "Bit 3 - An errro occurs from ADC2, int clear."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_error_int_clr(&mut self) -> CocpuSaradc2ErrorIntClrW<'_, IntClrSpec> {
+        CocpuSaradc2ErrorIntClrW::new(self, 3)
+    }
+    #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int clear."]
+    #[inline(always)]
+    pub fn cocpu_saradc1_wake_int_clr(&mut self) -> CocpuSaradc1WakeIntClrW<'_, IntClrSpec> {
+        CocpuSaradc1WakeIntClrW::new(self, 4)
+    }
+    #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int clear."]
+    #[inline(always)]
+    pub fn cocpu_saradc2_wake_int_clr(&mut self) -> CocpuSaradc2WakeIntClrW<'_, IntClrSpec> {
+        CocpuSaradc2WakeIntClrW::new(self, 5)
+    }
+}
+#[doc = "Interrupt clear registers.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntClrSpec;
+impl crate::RegisterSpec for IntClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for IntClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for IntClrSpec {}

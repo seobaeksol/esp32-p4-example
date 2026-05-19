@@ -1,0 +1,49 @@
+#[doc = "Register `CFG0` reader"]
+pub type R = crate::R<Cfg0Spec>;
+#[doc = "Register `CFG0` writer"]
+pub type W = crate::W<Cfg0Spec>;
+#[doc = "Field `DMAC_EN` reader - NA"]
+pub type DmacEnR = crate::BitReader;
+#[doc = "Field `DMAC_EN` writer - NA"]
+pub type DmacEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INT_EN` reader - NA"]
+pub type IntEnR = crate::BitReader;
+#[doc = "Field `INT_EN` writer - NA"]
+pub type IntEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn dmac_en(&self) -> DmacEnR {
+        DmacEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn int_en(&self) -> IntEnR {
+        IntEnR::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn dmac_en(&mut self) -> DmacEnW<'_, Cfg0Spec> {
+        DmacEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn int_en(&mut self) -> IntEnW<'_, Cfg0Spec> {
+        IntEnW::new(self, 1)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cfg0Spec;
+impl crate::RegisterSpec for Cfg0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cfg0::R`](R) reader structure"]
+impl crate::Readable for Cfg0Spec {}
+#[doc = "`write(|w| ..)` method takes [`cfg0::W`](W) writer structure"]
+impl crate::Writable for Cfg0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CFG0 to value 0"]
+impl crate::Resettable for Cfg0Spec {}

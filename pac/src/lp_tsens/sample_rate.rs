@@ -1,0 +1,37 @@
+#[doc = "Register `SAMPLE_RATE` reader"]
+pub type R = crate::R<SampleRateSpec>;
+#[doc = "Register `SAMPLE_RATE` writer"]
+pub type W = crate::W<SampleRateSpec>;
+#[doc = "Field `SAMPLE_RATE` reader - Hardware automatic sampling rate."]
+pub type SampleRateR = crate::FieldReader<u16>;
+#[doc = "Field `SAMPLE_RATE` writer - Hardware automatic sampling rate."]
+pub type SampleRateW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - Hardware automatic sampling rate."]
+    #[inline(always)]
+    pub fn sample_rate(&self) -> SampleRateR {
+        SampleRateR::new((self.bits & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Hardware automatic sampling rate."]
+    #[inline(always)]
+    pub fn sample_rate(&mut self) -> SampleRateW<'_, SampleRateSpec> {
+        SampleRateW::new(self, 0)
+    }
+}
+#[doc = "Hardware automatic sampling control registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`sample_rate::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sample_rate::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SampleRateSpec;
+impl crate::RegisterSpec for SampleRateSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sample_rate::R`](R) reader structure"]
+impl crate::Readable for SampleRateSpec {}
+#[doc = "`write(|w| ..)` method takes [`sample_rate::W`](W) writer structure"]
+impl crate::Writable for SampleRateSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SAMPLE_RATE to value 0x14"]
+impl crate::Resettable for SampleRateSpec {
+    const RESET_VALUE: u32 = 0x14;
+}

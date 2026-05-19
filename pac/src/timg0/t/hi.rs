@@ -1,0 +1,20 @@
+#[doc = "Register `HI` reader"]
+pub type R = crate::R<HiSpec>;
+#[doc = "Field `HI` reader - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
+pub type HiR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:21 - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
+    #[inline(always)]
+    pub fn hi(&self) -> HiR {
+        HiR::new(self.bits & 0x003f_ffff)
+    }
+}
+#[doc = "Timer 0 current value, high 22 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`hi::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HiSpec;
+impl crate::RegisterSpec for HiSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hi::R`](R) reader structure"]
+impl crate::Readable for HiSpec {}
+#[doc = "`reset()` method sets HI to value 0"]
+impl crate::Resettable for HiSpec {}

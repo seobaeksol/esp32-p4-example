@@ -1,0 +1,20 @@
+#[doc = "Register `DEV_CHAR_TABLE6_LOC3` reader"]
+pub type R = crate::R<DevCharTable6Loc3Spec>;
+#[doc = "Field `DCT_DEV6_LOC3` reader - NA"]
+pub type DctDev6Loc3R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - NA"]
+    #[inline(always)]
+    pub fn dct_dev6_loc3(&self) -> DctDev6Loc3R {
+        DctDev6Loc3R::new(self.bits)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dev_char_table6_loc3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DevCharTable6Loc3Spec;
+impl crate::RegisterSpec for DevCharTable6Loc3Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dev_char_table6_loc3::R`](R) reader structure"]
+impl crate::Readable for DevCharTable6Loc3Spec {}
+#[doc = "`reset()` method sets DEV_CHAR_TABLE6_LOC3 to value 0"]
+impl crate::Resettable for DevCharTable6Loc3Spec {}

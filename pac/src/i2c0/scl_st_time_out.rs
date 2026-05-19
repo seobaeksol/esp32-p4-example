@@ -1,0 +1,37 @@
+#[doc = "Register `SCL_ST_TIME_OUT` reader"]
+pub type R = crate::R<SclStTimeOutSpec>;
+#[doc = "Register `SCL_ST_TIME_OUT` writer"]
+pub type W = crate::W<SclStTimeOutSpec>;
+#[doc = "Field `SCL_ST_TO` reader - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type SclStToR = crate::FieldReader;
+#[doc = "Field `SCL_ST_TO` writer - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
+pub type SclStToW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+impl R {
+    #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn scl_st_to(&self) -> SclStToR {
+        SclStToR::new((self.bits & 0x1f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
+    #[inline(always)]
+    pub fn scl_st_to(&mut self) -> SclStToW<'_, SclStTimeOutSpec> {
+        SclStToW::new(self, 0)
+    }
+}
+#[doc = "SCL status time out register\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_st_time_out::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_st_time_out::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SclStTimeOutSpec;
+impl crate::RegisterSpec for SclStTimeOutSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`scl_st_time_out::R`](R) reader structure"]
+impl crate::Readable for SclStTimeOutSpec {}
+#[doc = "`write(|w| ..)` method takes [`scl_st_time_out::W`](W) writer structure"]
+impl crate::Writable for SclStTimeOutSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SCL_ST_TIME_OUT to value 0x10"]
+impl crate::Resettable for SclStTimeOutSpec {
+    const RESET_VALUE: u32 = 0x10;
+}

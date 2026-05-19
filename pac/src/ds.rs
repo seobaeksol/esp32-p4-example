@@ -1,0 +1,216 @@
+#[repr(C)]
+#[doc = "Register block"]
+pub struct RegisterBlock {
+    y_mem: [YMem; 128],
+    m_mem: [MMem; 128],
+    rb_mem: [RbMem; 128],
+    box_mem: [BoxMem; 12],
+    iv_mem: [IvMem; 4],
+    _reserved5: [u8; 0x01c0],
+    x_mem: [XMem; 128],
+    z_mem: [ZMem; 128],
+    _reserved7: [u8; 0x0200],
+    set_start: SetStart,
+    set_continue: SetContinue,
+    set_finish: SetFinish,
+    query_busy: QueryBusy,
+    query_key_wrong: QueryKeyWrong,
+    query_check: QueryCheck,
+    key_source: KeySource,
+    _reserved14: [u8; 0x04],
+    date: Date,
+}
+impl RegisterBlock {
+    #[doc = "0x00..0x200 - memory that stores Y"]
+    #[inline(always)]
+    pub const fn y_mem(&self, n: usize) -> &YMem {
+        &self.y_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x200 - memory that stores Y"]
+    #[inline(always)]
+    pub fn y_mem_iter(&self) -> impl Iterator<Item = &YMem> {
+        self.y_mem.iter()
+    }
+    #[doc = "0x200..0x400 - memory that stores M"]
+    #[inline(always)]
+    pub const fn m_mem(&self, n: usize) -> &MMem {
+        &self.m_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x200..0x400 - memory that stores M"]
+    #[inline(always)]
+    pub fn m_mem_iter(&self) -> impl Iterator<Item = &MMem> {
+        self.m_mem.iter()
+    }
+    #[doc = "0x400..0x600 - memory that stores Rb"]
+    #[inline(always)]
+    pub const fn rb_mem(&self, n: usize) -> &RbMem {
+        &self.rb_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x600 - memory that stores Rb"]
+    #[inline(always)]
+    pub fn rb_mem_iter(&self) -> impl Iterator<Item = &RbMem> {
+        self.rb_mem.iter()
+    }
+    #[doc = "0x600..0x630 - memory that stores BOX"]
+    #[inline(always)]
+    pub const fn box_mem(&self, n: usize) -> &BoxMem {
+        &self.box_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x600..0x630 - memory that stores BOX"]
+    #[inline(always)]
+    pub fn box_mem_iter(&self) -> impl Iterator<Item = &BoxMem> {
+        self.box_mem.iter()
+    }
+    #[doc = "0x630..0x640 - memory that stores IV"]
+    #[inline(always)]
+    pub const fn iv_mem(&self, n: usize) -> &IvMem {
+        &self.iv_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x630..0x640 - memory that stores IV"]
+    #[inline(always)]
+    pub fn iv_mem_iter(&self) -> impl Iterator<Item = &IvMem> {
+        self.iv_mem.iter()
+    }
+    #[doc = "0x800..0xa00 - memory that stores X"]
+    #[inline(always)]
+    pub const fn x_mem(&self, n: usize) -> &XMem {
+        &self.x_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x800..0xa00 - memory that stores X"]
+    #[inline(always)]
+    pub fn x_mem_iter(&self) -> impl Iterator<Item = &XMem> {
+        self.x_mem.iter()
+    }
+    #[doc = "0xa00..0xc00 - memory that stores Z"]
+    #[inline(always)]
+    pub const fn z_mem(&self, n: usize) -> &ZMem {
+        &self.z_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa00..0xc00 - memory that stores Z"]
+    #[inline(always)]
+    pub fn z_mem_iter(&self) -> impl Iterator<Item = &ZMem> {
+        self.z_mem.iter()
+    }
+    #[doc = "0xe00 - Activates the DS module"]
+    #[inline(always)]
+    pub const fn set_start(&self) -> &SetStart {
+        &self.set_start
+    }
+    #[doc = "0xe04 - DS continue control register"]
+    #[inline(always)]
+    pub const fn set_continue(&self) -> &SetContinue {
+        &self.set_continue
+    }
+    #[doc = "0xe08 - Ends DS operation"]
+    #[inline(always)]
+    pub const fn set_finish(&self) -> &SetFinish {
+        &self.set_finish
+    }
+    #[doc = "0xe0c - Status of the DS module"]
+    #[inline(always)]
+    pub const fn query_busy(&self) -> &QueryBusy {
+        &self.query_busy
+    }
+    #[doc = "0xe10 - Checks the reason why \\begin{math}DS_KEY\\end{math} is not ready"]
+    #[inline(always)]
+    pub const fn query_key_wrong(&self) -> &QueryKeyWrong {
+        &self.query_key_wrong
+    }
+    #[doc = "0xe14 - Queries DS check result"]
+    #[inline(always)]
+    pub const fn query_check(&self) -> &QueryCheck {
+        &self.query_check
+    }
+    #[doc = "0xe18 - DS configure key source register"]
+    #[inline(always)]
+    pub const fn key_source(&self) -> &KeySource {
+        &self.key_source
+    }
+    #[doc = "0xe20 - DS version control register"]
+    #[inline(always)]
+    pub const fn date(&self) -> &Date {
+        &self.date
+    }
+}
+#[doc = "Y_MEM (rw) register accessor: memory that stores Y\n\nYou can [`read`](crate::Reg::read) this register and get [`y_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`y_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@y_mem`] module"]
+#[doc(alias = "Y_MEM")]
+pub type YMem = crate::Reg<y_mem::YMemSpec>;
+#[doc = "memory that stores Y"]
+pub mod y_mem;
+#[doc = "M_MEM (rw) register accessor: memory that stores M\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
+#[doc(alias = "M_MEM")]
+pub type MMem = crate::Reg<m_mem::MMemSpec>;
+#[doc = "memory that stores M"]
+pub mod m_mem;
+#[doc = "RB_MEM (rw) register accessor: memory that stores Rb\n\nYou can [`read`](crate::Reg::read) this register and get [`rb_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rb_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rb_mem`] module"]
+#[doc(alias = "RB_MEM")]
+pub type RbMem = crate::Reg<rb_mem::RbMemSpec>;
+#[doc = "memory that stores Rb"]
+pub mod rb_mem;
+#[doc = "BOX_MEM (rw) register accessor: memory that stores BOX\n\nYou can [`read`](crate::Reg::read) this register and get [`box_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`box_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@box_mem`] module"]
+#[doc(alias = "BOX_MEM")]
+pub type BoxMem = crate::Reg<box_mem::BoxMemSpec>;
+#[doc = "memory that stores BOX"]
+pub mod box_mem;
+#[doc = "IV_MEM (rw) register accessor: memory that stores IV\n\nYou can [`read`](crate::Reg::read) this register and get [`iv_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iv_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_mem`] module"]
+#[doc(alias = "IV_MEM")]
+pub type IvMem = crate::Reg<iv_mem::IvMemSpec>;
+#[doc = "memory that stores IV"]
+pub mod iv_mem;
+#[doc = "X_MEM (rw) register accessor: memory that stores X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
+#[doc(alias = "X_MEM")]
+pub type XMem = crate::Reg<x_mem::XMemSpec>;
+#[doc = "memory that stores X"]
+pub mod x_mem;
+#[doc = "Z_MEM (rw) register accessor: memory that stores Z\n\nYou can [`read`](crate::Reg::read) this register and get [`z_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`z_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@z_mem`] module"]
+#[doc(alias = "Z_MEM")]
+pub type ZMem = crate::Reg<z_mem::ZMemSpec>;
+#[doc = "memory that stores Z"]
+pub mod z_mem;
+#[doc = "SET_START (w) register accessor: Activates the DS module\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start`] module"]
+#[doc(alias = "SET_START")]
+pub type SetStart = crate::Reg<set_start::SetStartSpec>;
+#[doc = "Activates the DS module"]
+pub mod set_start;
+#[doc = "SET_CONTINUE (w) register accessor: DS continue control register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_continue::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_continue`] module"]
+#[doc(alias = "SET_CONTINUE")]
+pub type SetContinue = crate::Reg<set_continue::SetContinueSpec>;
+#[doc = "DS continue control register"]
+pub mod set_continue;
+#[doc = "SET_FINISH (w) register accessor: Ends DS operation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_finish::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_finish`] module"]
+#[doc(alias = "SET_FINISH")]
+pub type SetFinish = crate::Reg<set_finish::SetFinishSpec>;
+#[doc = "Ends DS operation"]
+pub mod set_finish;
+#[doc = "QUERY_BUSY (r) register accessor: Status of the DS module\n\nYou can [`read`](crate::Reg::read) this register and get [`query_busy::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_busy`] module"]
+#[doc(alias = "QUERY_BUSY")]
+pub type QueryBusy = crate::Reg<query_busy::QueryBusySpec>;
+#[doc = "Status of the DS module"]
+pub mod query_busy;
+#[doc = "QUERY_KEY_WRONG (r) register accessor: Checks the reason why \\begin{math}DS_KEY\\end{math} is not ready\n\nYou can [`read`](crate::Reg::read) this register and get [`query_key_wrong::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_key_wrong`] module"]
+#[doc(alias = "QUERY_KEY_WRONG")]
+pub type QueryKeyWrong = crate::Reg<query_key_wrong::QueryKeyWrongSpec>;
+#[doc = "Checks the reason why \\begin{math}DS_KEY\\end{math} is not ready"]
+pub mod query_key_wrong;
+#[doc = "QUERY_CHECK (r) register accessor: Queries DS check result\n\nYou can [`read`](crate::Reg::read) this register and get [`query_check::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_check`] module"]
+#[doc(alias = "QUERY_CHECK")]
+pub type QueryCheck = crate::Reg<query_check::QueryCheckSpec>;
+#[doc = "Queries DS check result"]
+pub mod query_check;
+#[doc = "KEY_SOURCE (rw) register accessor: DS configure key source register\n\nYou can [`read`](crate::Reg::read) this register and get [`key_source::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_source::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_source`] module"]
+#[doc(alias = "KEY_SOURCE")]
+pub type KeySource = crate::Reg<key_source::KeySourceSpec>;
+#[doc = "DS configure key source register"]
+pub mod key_source;
+#[doc = "DATE (rw) register accessor: DS version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc(alias = "DATE")]
+pub type Date = crate::Reg<date::DateSpec>;
+#[doc = "DS version control register"]
+pub mod date;

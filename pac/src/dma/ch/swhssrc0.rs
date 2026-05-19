@@ -1,0 +1,84 @@
+#[doc = "Register `SWHSSRC0` reader"]
+pub type R = crate::R<Swhssrc0Spec>;
+#[doc = "Register `SWHSSRC0` writer"]
+pub type W = crate::W<Swhssrc0Spec>;
+#[doc = "Field `CH1_SWHS_REQ_SRC` reader - NA"]
+pub type Ch1SwhsReqSrcR = crate::BitReader;
+#[doc = "Field `CH1_SWHS_REQ_SRC` writer - NA"]
+pub type Ch1SwhsReqSrcW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SWHS_REQ_SRC_WE` writer - NA"]
+pub type Ch1SwhsReqSrcWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SWHS_SGLREQ_SRC` reader - NA"]
+pub type Ch1SwhsSglreqSrcR = crate::BitReader;
+#[doc = "Field `CH1_SWHS_SGLREQ_SRC` writer - NA"]
+pub type Ch1SwhsSglreqSrcW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SWHS_SGLREQ_SRC_WE` writer - NA"]
+pub type Ch1SwhsSglreqSrcWeW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SWHS_LST_SRC` reader - NA"]
+pub type Ch1SwhsLstSrcR = crate::BitReader;
+#[doc = "Field `CH1_SWHS_LST_SRC` writer - NA"]
+pub type Ch1SwhsLstSrcW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_SWHS_LST_SRC_WE` writer - NA"]
+pub type Ch1SwhsLstSrcWeW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_req_src(&self) -> Ch1SwhsReqSrcR {
+        Ch1SwhsReqSrcR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_sglreq_src(&self) -> Ch1SwhsSglreqSrcR {
+        Ch1SwhsSglreqSrcR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_lst_src(&self) -> Ch1SwhsLstSrcR {
+        Ch1SwhsLstSrcR::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_req_src(&mut self) -> Ch1SwhsReqSrcW<'_, Swhssrc0Spec> {
+        Ch1SwhsReqSrcW::new(self, 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_req_src_we(&mut self) -> Ch1SwhsReqSrcWeW<'_, Swhssrc0Spec> {
+        Ch1SwhsReqSrcWeW::new(self, 1)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_sglreq_src(&mut self) -> Ch1SwhsSglreqSrcW<'_, Swhssrc0Spec> {
+        Ch1SwhsSglreqSrcW::new(self, 2)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_sglreq_src_we(&mut self) -> Ch1SwhsSglreqSrcWeW<'_, Swhssrc0Spec> {
+        Ch1SwhsSglreqSrcWeW::new(self, 3)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_lst_src(&mut self) -> Ch1SwhsLstSrcW<'_, Swhssrc0Spec> {
+        Ch1SwhsLstSrcW::new(self, 4)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn ch1_swhs_lst_src_we(&mut self) -> Ch1SwhsLstSrcWeW<'_, Swhssrc0Spec> {
+        Ch1SwhsLstSrcWeW::new(self, 5)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`swhssrc0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swhssrc0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Swhssrc0Spec;
+impl crate::RegisterSpec for Swhssrc0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`swhssrc0::R`](R) reader structure"]
+impl crate::Readable for Swhssrc0Spec {}
+#[doc = "`write(|w| ..)` method takes [`swhssrc0::W`](W) writer structure"]
+impl crate::Writable for Swhssrc0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SWHSSRC0 to value 0"]
+impl crate::Resettable for Swhssrc0Spec {}

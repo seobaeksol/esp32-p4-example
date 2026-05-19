@@ -1,0 +1,181 @@
+#[doc = "Register `LP_AONCLKRST_LP_CLK_PO_EN` reader"]
+pub type R = crate::R<LpAonclkrstLpClkPoEnSpec>;
+#[doc = "Register `LP_AONCLKRST_LP_CLK_PO_EN` writer"]
+pub type W = crate::W<LpAonclkrstLpClkPoEnSpec>;
+#[doc = "Field `LP_AONCLKRST_CLK_CORE_EFUSE_OEN` reader - need_des"]
+pub type LpAonclkrstClkCoreEfuseOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_CORE_EFUSE_OEN` writer - need_des"]
+pub type LpAonclkrstClkCoreEfuseOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_LP_BUS_OEN` reader - need_des"]
+pub type LpAonclkrstClkLpBusOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_LP_BUS_OEN` writer - need_des"]
+pub type LpAonclkrstClkLpBusOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_AON_SLOW_OEN` reader - need_des"]
+pub type LpAonclkrstClkAonSlowOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_AON_SLOW_OEN` writer - need_des"]
+pub type LpAonclkrstClkAonSlowOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_AON_FAST_OEN` reader - need_des"]
+pub type LpAonclkrstClkAonFastOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_AON_FAST_OEN` writer - need_des"]
+pub type LpAonclkrstClkAonFastOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_SLOW_OEN` reader - need_des"]
+pub type LpAonclkrstClkSlowOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_SLOW_OEN` writer - need_des"]
+pub type LpAonclkrstClkSlowOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_FAST_OEN` reader - need_des"]
+pub type LpAonclkrstClkFastOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_FAST_OEN` writer - need_des"]
+pub type LpAonclkrstClkFastOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_FOSC_OEN` reader - need_des"]
+pub type LpAonclkrstClkFoscOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_FOSC_OEN` writer - need_des"]
+pub type LpAonclkrstClkFoscOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_RC32K_OEN` reader - need_des"]
+pub type LpAonclkrstClkRc32kOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_RC32K_OEN` writer - need_des"]
+pub type LpAonclkrstClkRc32kOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_SXTAL_OEN` reader - need_des"]
+pub type LpAonclkrstClkSxtalOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_SXTAL_OEN` writer - need_des"]
+pub type LpAonclkrstClkSxtalOenW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_AONCLKRST_CLK_SOSC_OEN` reader - 1'b1: probe sosc clk on 1'b0: probe sosc clk off"]
+pub type LpAonclkrstClkSoscOenR = crate::BitReader;
+#[doc = "Field `LP_AONCLKRST_CLK_SOSC_OEN` writer - 1'b1: probe sosc clk on 1'b0: probe sosc clk off"]
+pub type LpAonclkrstClkSoscOenW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_core_efuse_oen(&self) -> LpAonclkrstClkCoreEfuseOenR {
+        LpAonclkrstClkCoreEfuseOenR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_lp_bus_oen(&self) -> LpAonclkrstClkLpBusOenR {
+        LpAonclkrstClkLpBusOenR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_aon_slow_oen(&self) -> LpAonclkrstClkAonSlowOenR {
+        LpAonclkrstClkAonSlowOenR::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_aon_fast_oen(&self) -> LpAonclkrstClkAonFastOenR {
+        LpAonclkrstClkAonFastOenR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_slow_oen(&self) -> LpAonclkrstClkSlowOenR {
+        LpAonclkrstClkSlowOenR::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_fast_oen(&self) -> LpAonclkrstClkFastOenR {
+        LpAonclkrstClkFastOenR::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_fosc_oen(&self) -> LpAonclkrstClkFoscOenR {
+        LpAonclkrstClkFoscOenR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_rc32k_oen(&self) -> LpAonclkrstClkRc32kOenR {
+        LpAonclkrstClkRc32kOenR::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_sxtal_oen(&self) -> LpAonclkrstClkSxtalOenR {
+        LpAonclkrstClkSxtalOenR::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - 1'b1: probe sosc clk on 1'b0: probe sosc clk off"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_sosc_oen(&self) -> LpAonclkrstClkSoscOenR {
+        LpAonclkrstClkSoscOenR::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_core_efuse_oen(
+        &mut self,
+    ) -> LpAonclkrstClkCoreEfuseOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkCoreEfuseOenW::new(self, 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_lp_bus_oen(
+        &mut self,
+    ) -> LpAonclkrstClkLpBusOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkLpBusOenW::new(self, 1)
+    }
+    #[doc = "Bit 2 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_aon_slow_oen(
+        &mut self,
+    ) -> LpAonclkrstClkAonSlowOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkAonSlowOenW::new(self, 2)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_aon_fast_oen(
+        &mut self,
+    ) -> LpAonclkrstClkAonFastOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkAonFastOenW::new(self, 3)
+    }
+    #[doc = "Bit 4 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_slow_oen(
+        &mut self,
+    ) -> LpAonclkrstClkSlowOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkSlowOenW::new(self, 4)
+    }
+    #[doc = "Bit 5 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_fast_oen(
+        &mut self,
+    ) -> LpAonclkrstClkFastOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkFastOenW::new(self, 5)
+    }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_fosc_oen(
+        &mut self,
+    ) -> LpAonclkrstClkFoscOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkFoscOenW::new(self, 6)
+    }
+    #[doc = "Bit 7 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_rc32k_oen(
+        &mut self,
+    ) -> LpAonclkrstClkRc32kOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkRc32kOenW::new(self, 7)
+    }
+    #[doc = "Bit 8 - need_des"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_sxtal_oen(
+        &mut self,
+    ) -> LpAonclkrstClkSxtalOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkSxtalOenW::new(self, 8)
+    }
+    #[doc = "Bit 9 - 1'b1: probe sosc clk on 1'b0: probe sosc clk off"]
+    #[inline(always)]
+    pub fn lp_aonclkrst_clk_sosc_oen(
+        &mut self,
+    ) -> LpAonclkrstClkSoscOenW<'_, LpAonclkrstLpClkPoEnSpec> {
+        LpAonclkrstClkSoscOenW::new(self, 9)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_aonclkrst_lp_clk_po_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_aonclkrst_lp_clk_po_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpAonclkrstLpClkPoEnSpec;
+impl crate::RegisterSpec for LpAonclkrstLpClkPoEnSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_aonclkrst_lp_clk_po_en::R`](R) reader structure"]
+impl crate::Readable for LpAonclkrstLpClkPoEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_lp_clk_po_en::W`](W) writer structure"]
+impl crate::Writable for LpAonclkrstLpClkPoEnSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets LP_AONCLKRST_LP_CLK_PO_EN to value 0"]
+impl crate::Resettable for LpAonclkrstLpClkPoEnSpec {}

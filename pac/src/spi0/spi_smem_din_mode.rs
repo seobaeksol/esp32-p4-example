@@ -1,0 +1,147 @@
+#[doc = "Register `SPI_SMEM_DIN_MODE` reader"]
+pub type R = crate::R<SpiSmemDinModeSpec>;
+#[doc = "Register `SPI_SMEM_DIN_MODE` writer"]
+pub type W = crate::W<SpiSmemDinModeSpec>;
+#[doc = "Field `SPI_SMEM_DIN0_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin0ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN0_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin0ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN1_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin1ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN1_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin1ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN2_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin2ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN2_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin2ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN3_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin3ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN3_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin3ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN4_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin4ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN4_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin4ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN5_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin5ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN5_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin5ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN6_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin6ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN6_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin6ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DIN7_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin7ModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DIN7_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDin7ModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `SPI_SMEM_DINS_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDinsModeR = crate::FieldReader;
+#[doc = "Field `SPI_SMEM_DINS_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+pub type SpiSmemDinsModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+impl R {
+    #[doc = "Bits 0:2 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din0_mode(&self) -> SpiSmemDin0ModeR {
+        SpiSmemDin0ModeR::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 3:5 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din1_mode(&self) -> SpiSmemDin1ModeR {
+        SpiSmemDin1ModeR::new(((self.bits >> 3) & 7) as u8)
+    }
+    #[doc = "Bits 6:8 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din2_mode(&self) -> SpiSmemDin2ModeR {
+        SpiSmemDin2ModeR::new(((self.bits >> 6) & 7) as u8)
+    }
+    #[doc = "Bits 9:11 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din3_mode(&self) -> SpiSmemDin3ModeR {
+        SpiSmemDin3ModeR::new(((self.bits >> 9) & 7) as u8)
+    }
+    #[doc = "Bits 12:14 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din4_mode(&self) -> SpiSmemDin4ModeR {
+        SpiSmemDin4ModeR::new(((self.bits >> 12) & 7) as u8)
+    }
+    #[doc = "Bits 15:17 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din5_mode(&self) -> SpiSmemDin5ModeR {
+        SpiSmemDin5ModeR::new(((self.bits >> 15) & 7) as u8)
+    }
+    #[doc = "Bits 18:20 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din6_mode(&self) -> SpiSmemDin6ModeR {
+        SpiSmemDin6ModeR::new(((self.bits >> 18) & 7) as u8)
+    }
+    #[doc = "Bits 21:23 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din7_mode(&self) -> SpiSmemDin7ModeR {
+        SpiSmemDin7ModeR::new(((self.bits >> 21) & 7) as u8)
+    }
+    #[doc = "Bits 24:26 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_dins_mode(&self) -> SpiSmemDinsModeR {
+        SpiSmemDinsModeR::new(((self.bits >> 24) & 7) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din0_mode(&mut self) -> SpiSmemDin0ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin0ModeW::new(self, 0)
+    }
+    #[doc = "Bits 3:5 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din1_mode(&mut self) -> SpiSmemDin1ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin1ModeW::new(self, 3)
+    }
+    #[doc = "Bits 6:8 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din2_mode(&mut self) -> SpiSmemDin2ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin2ModeW::new(self, 6)
+    }
+    #[doc = "Bits 9:11 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din3_mode(&mut self) -> SpiSmemDin3ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin3ModeW::new(self, 9)
+    }
+    #[doc = "Bits 12:14 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din4_mode(&mut self) -> SpiSmemDin4ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin4ModeW::new(self, 12)
+    }
+    #[doc = "Bits 15:17 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din5_mode(&mut self) -> SpiSmemDin5ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin5ModeW::new(self, 15)
+    }
+    #[doc = "Bits 18:20 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din6_mode(&mut self) -> SpiSmemDin6ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin6ModeW::new(self, 18)
+    }
+    #[doc = "Bits 21:23 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_din7_mode(&mut self) -> SpiSmemDin7ModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDin7ModeW::new(self, 21)
+    }
+    #[doc = "Bits 24:26 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
+    #[inline(always)]
+    pub fn spi_smem_dins_mode(&mut self) -> SpiSmemDinsModeW<'_, SpiSmemDinModeSpec> {
+        SpiSmemDinsModeW::new(self, 24)
+    }
+}
+#[doc = "MSPI external RAM input timing delay mode control register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_din_mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_din_mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SpiSmemDinModeSpec;
+impl crate::RegisterSpec for SpiSmemDinModeSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`spi_smem_din_mode::R`](R) reader structure"]
+impl crate::Readable for SpiSmemDinModeSpec {}
+#[doc = "`write(|w| ..)` method takes [`spi_smem_din_mode::W`](W) writer structure"]
+impl crate::Writable for SpiSmemDinModeSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets SPI_SMEM_DIN_MODE to value 0"]
+impl crate::Resettable for SpiSmemDinModeSpec {}

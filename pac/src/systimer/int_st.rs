@@ -1,0 +1,45 @@
+#[doc = "Register `INT_ST` reader"]
+pub type R = crate::R<IntStSpec>;
+#[doc = "Field `TARGET(0-2)` reader - interupt%s status"]
+pub type TargetR = crate::BitReader;
+impl R {
+    #[doc = "interupt(0-2) status"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
+    #[inline(always)]
+    pub fn target(&self, n: u8) -> TargetR {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TargetR::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "interupt(0-2) status"]
+    #[inline(always)]
+    pub fn target_iter(&self) -> impl Iterator<Item = TargetR> + '_ {
+        (0..3).map(move |n| TargetR::new(((self.bits >> n) & 1) != 0))
+    }
+    #[doc = "Bit 0 - interupt0 status"]
+    #[inline(always)]
+    pub fn target0(&self) -> TargetR {
+        TargetR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - interupt1 status"]
+    #[inline(always)]
+    pub fn target1(&self) -> TargetR {
+        TargetR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - interupt2 status"]
+    #[inline(always)]
+    pub fn target2(&self) -> TargetR {
+        TargetR::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[doc = "systimer interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStSpec;
+impl crate::RegisterSpec for IntStSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
+impl crate::Readable for IntStSpec {}
+#[doc = "`reset()` method sets INT_ST to value 0"]
+impl crate::Resettable for IntStSpec {}

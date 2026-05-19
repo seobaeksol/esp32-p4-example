@@ -1,0 +1,20 @@
+#[doc = "Register `OUT_DONE_DES_ADDR_CH2` reader"]
+pub type R = crate::R<OutDoneDesAddrCh2Spec>;
+#[doc = "Field `OUT_DONE_DES_ADDR_CH2` reader - Represents the address of the outlink descriptor when this descriptor is completed."]
+pub type OutDoneDesAddrCh2R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Represents the address of the outlink descriptor when this descriptor is completed."]
+    #[inline(always)]
+    pub fn out_done_des_addr_ch2(&self) -> OutDoneDesAddrCh2R {
+        OutDoneDesAddrCh2R::new(self.bits)
+    }
+}
+#[doc = "TX done outlink descriptor address of TX channel 2\n\nYou can [`read`](crate::Reg::read) this register and get [`out_done_des_addr_ch2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct OutDoneDesAddrCh2Spec;
+impl crate::RegisterSpec for OutDoneDesAddrCh2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`out_done_des_addr_ch2::R`](R) reader structure"]
+impl crate::Readable for OutDoneDesAddrCh2Spec {}
+#[doc = "`reset()` method sets OUT_DONE_DES_ADDR_CH2 to value 0"]
+impl crate::Resettable for OutDoneDesAddrCh2Spec {}

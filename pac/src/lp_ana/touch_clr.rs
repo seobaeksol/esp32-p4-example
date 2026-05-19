@@ -1,0 +1,29 @@
+#[doc = "Register `TOUCH_CLR` writer"]
+pub type W = crate::W<TouchClrSpec>;
+#[doc = "Field `TOUCH_CHANNEL_CLR` writer - need_des"]
+pub type TouchChannelClrW<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
+#[doc = "Field `TOUCH_STATUS_CLR` writer - need_des"]
+pub type TouchStatusClrW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bits 0:14 - need_des"]
+    #[inline(always)]
+    pub fn touch_channel_clr(&mut self) -> TouchChannelClrW<'_, TouchClrSpec> {
+        TouchChannelClrW::new(self, 0)
+    }
+    #[doc = "Bit 15 - need_des"]
+    #[inline(always)]
+    pub fn touch_status_clr(&mut self) -> TouchStatusClrW<'_, TouchClrSpec> {
+        TouchStatusClrW::new(self, 15)
+    }
+}
+#[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TouchClrSpec;
+impl crate::RegisterSpec for TouchClrSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`touch_clr::W`](W) writer structure"]
+impl crate::Writable for TouchClrSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TOUCH_CLR to value 0"]
+impl crate::Resettable for TouchClrSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `LP_CPU_PWR3` reader"]
+pub type R = crate::R<LpCpuPwr3Spec>;
+#[doc = "Field `LP_CPU_WAKEUP_CAUSE` reader - need_des"]
+pub type LpCpuWakeupCauseR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:30 - need_des"]
+    #[inline(always)]
+    pub fn lp_cpu_wakeup_cause(&self) -> LpCpuWakeupCauseR {
+        LpCpuWakeupCauseR::new(self.bits & 0x7fff_ffff)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_cpu_pwr3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct LpCpuPwr3Spec;
+impl crate::RegisterSpec for LpCpuPwr3Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`lp_cpu_pwr3::R`](R) reader structure"]
+impl crate::Readable for LpCpuPwr3Spec {}
+#[doc = "`reset()` method sets LP_CPU_PWR3 to value 0"]
+impl crate::Resettable for LpCpuPwr3Spec {}

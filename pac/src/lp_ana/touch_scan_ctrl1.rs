@@ -1,0 +1,81 @@
+#[doc = "Register `TOUCH_SCAN_CTRL1` reader"]
+pub type R = crate::R<TouchScanCtrl1Spec>;
+#[doc = "Register `TOUCH_SCAN_CTRL1` writer"]
+pub type W = crate::W<TouchScanCtrl1Spec>;
+#[doc = "Field `TOUCH_SHIELD_PAD_EN` reader - need_des"]
+pub type TouchShieldPadEnR = crate::BitReader;
+#[doc = "Field `TOUCH_SHIELD_PAD_EN` writer - need_des"]
+pub type TouchShieldPadEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_INACTIVE_CONNECTION` reader - need_des"]
+pub type TouchInactiveConnectionR = crate::BitReader;
+#[doc = "Field `TOUCH_INACTIVE_CONNECTION` writer - need_des"]
+pub type TouchInactiveConnectionW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TOUCH_SCAN_PAD_MAP` reader - need_des"]
+pub type TouchScanPadMapR = crate::FieldReader<u16>;
+#[doc = "Field `TOUCH_SCAN_PAD_MAP` writer - need_des"]
+pub type TouchScanPadMapW<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
+#[doc = "Field `TOUCH_XPD_WAIT` reader - need_des"]
+pub type TouchXpdWaitR = crate::FieldReader<u16>;
+#[doc = "Field `TOUCH_XPD_WAIT` writer - need_des"]
+pub type TouchXpdWaitW<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn touch_shield_pad_en(&self) -> TouchShieldPadEnR {
+        TouchShieldPadEnR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn touch_inactive_connection(&self) -> TouchInactiveConnectionR {
+        TouchInactiveConnectionR::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:16 - need_des"]
+    #[inline(always)]
+    pub fn touch_scan_pad_map(&self) -> TouchScanPadMapR {
+        TouchScanPadMapR::new(((self.bits >> 2) & 0x7fff) as u16)
+    }
+    #[doc = "Bits 17:31 - need_des"]
+    #[inline(always)]
+    pub fn touch_xpd_wait(&self) -> TouchXpdWaitR {
+        TouchXpdWaitR::new(((self.bits >> 17) & 0x7fff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn touch_shield_pad_en(&mut self) -> TouchShieldPadEnW<'_, TouchScanCtrl1Spec> {
+        TouchShieldPadEnW::new(self, 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn touch_inactive_connection(
+        &mut self,
+    ) -> TouchInactiveConnectionW<'_, TouchScanCtrl1Spec> {
+        TouchInactiveConnectionW::new(self, 1)
+    }
+    #[doc = "Bits 2:16 - need_des"]
+    #[inline(always)]
+    pub fn touch_scan_pad_map(&mut self) -> TouchScanPadMapW<'_, TouchScanCtrl1Spec> {
+        TouchScanPadMapW::new(self, 2)
+    }
+    #[doc = "Bits 17:31 - need_des"]
+    #[inline(always)]
+    pub fn touch_xpd_wait(&mut self) -> TouchXpdWaitW<'_, TouchScanCtrl1Spec> {
+        TouchXpdWaitW::new(self, 17)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_scan_ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_scan_ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TouchScanCtrl1Spec;
+impl crate::RegisterSpec for TouchScanCtrl1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`touch_scan_ctrl1::R`](R) reader structure"]
+impl crate::Readable for TouchScanCtrl1Spec {}
+#[doc = "`write(|w| ..)` method takes [`touch_scan_ctrl1::W`](W) writer structure"]
+impl crate::Writable for TouchScanCtrl1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TOUCH_SCAN_CTRL1 to value 0x0008_0000"]
+impl crate::Resettable for TouchScanCtrl1Spec {
+    const RESET_VALUE: u32 = 0x0008_0000;
+}

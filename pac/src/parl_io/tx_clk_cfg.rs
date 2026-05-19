@@ -1,0 +1,49 @@
+#[doc = "Register `TX_CLK_CFG` reader"]
+pub type R = crate::R<TxClkCfgSpec>;
+#[doc = "Register `TX_CLK_CFG` writer"]
+pub type W = crate::W<TxClkCfgSpec>;
+#[doc = "Field `TX_CLK_I_INV` reader - Write 1 to invert the input Tx core clock."]
+pub type TxClkIInvR = crate::BitReader;
+#[doc = "Field `TX_CLK_I_INV` writer - Write 1 to invert the input Tx core clock."]
+pub type TxClkIInvW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_CLK_O_INV` reader - Write 1 to invert the output Tx core clock."]
+pub type TxClkOInvR = crate::BitReader;
+#[doc = "Field `TX_CLK_O_INV` writer - Write 1 to invert the output Tx core clock."]
+pub type TxClkOInvW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 30 - Write 1 to invert the input Tx core clock."]
+    #[inline(always)]
+    pub fn tx_clk_i_inv(&self) -> TxClkIInvR {
+        TxClkIInvR::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Write 1 to invert the output Tx core clock."]
+    #[inline(always)]
+    pub fn tx_clk_o_inv(&self) -> TxClkOInvR {
+        TxClkOInvR::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 30 - Write 1 to invert the input Tx core clock."]
+    #[inline(always)]
+    pub fn tx_clk_i_inv(&mut self) -> TxClkIInvW<'_, TxClkCfgSpec> {
+        TxClkIInvW::new(self, 30)
+    }
+    #[doc = "Bit 31 - Write 1 to invert the output Tx core clock."]
+    #[inline(always)]
+    pub fn tx_clk_o_inv(&mut self) -> TxClkOInvW<'_, TxClkCfgSpec> {
+        TxClkOInvW::new(self, 31)
+    }
+}
+#[doc = "Parallel IO TX clk configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_clk_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_clk_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TxClkCfgSpec;
+impl crate::RegisterSpec for TxClkCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tx_clk_cfg::R`](R) reader structure"]
+impl crate::Readable for TxClkCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`tx_clk_cfg::W`](W) writer structure"]
+impl crate::Writable for TxClkCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TX_CLK_CFG to value 0"]
+impl crate::Resettable for TxClkCfgSpec {}

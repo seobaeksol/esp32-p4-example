@@ -1,0 +1,51 @@
+#[doc = "Register `RESYNC_PROLONGED` reader"]
+pub type R = crate::R<ResyncProlongedSpec>;
+#[doc = "Register `RESYNC_PROLONGED` writer"]
+pub type W = crate::W<ResyncProlongedSpec>;
+#[doc = "Field `RESYNC_PROLONGED` reader - count number, when count to this value, send a sync package"]
+pub type ResyncProlongedR = crate::FieldReader<u32>;
+#[doc = "Field `RESYNC_PROLONGED` writer - count number, when count to this value, send a sync package"]
+pub type ResyncProlongedW<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
+#[doc = "Field `RESYNC_MODE` reader - resyc mode sel: \\\\0: off, \\\\2: cycle count \\\\3: package num count"]
+pub type ResyncModeR = crate::FieldReader;
+#[doc = "Field `RESYNC_MODE` writer - resyc mode sel: \\\\0: off, \\\\2: cycle count \\\\3: package num count"]
+pub type ResyncModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+impl R {
+    #[doc = "Bits 0:23 - count number, when count to this value, send a sync package"]
+    #[inline(always)]
+    pub fn resync_prolonged(&self) -> ResyncProlongedR {
+        ResyncProlongedR::new(self.bits & 0x00ff_ffff)
+    }
+    #[doc = "Bits 24:25 - resyc mode sel: \\\\0: off, \\\\2: cycle count \\\\3: package num count"]
+    #[inline(always)]
+    pub fn resync_mode(&self) -> ResyncModeR {
+        ResyncModeR::new(((self.bits >> 24) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:23 - count number, when count to this value, send a sync package"]
+    #[inline(always)]
+    pub fn resync_prolonged(&mut self) -> ResyncProlongedW<'_, ResyncProlongedSpec> {
+        ResyncProlongedW::new(self, 0)
+    }
+    #[doc = "Bits 24:25 - resyc mode sel: \\\\0: off, \\\\2: cycle count \\\\3: package num count"]
+    #[inline(always)]
+    pub fn resync_mode(&mut self) -> ResyncModeW<'_, ResyncProlongedSpec> {
+        ResyncModeW::new(self, 24)
+    }
+}
+#[doc = "resync configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`resync_prolonged::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`resync_prolonged::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ResyncProlongedSpec;
+impl crate::RegisterSpec for ResyncProlongedSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`resync_prolonged::R`](R) reader structure"]
+impl crate::Readable for ResyncProlongedSpec {}
+#[doc = "`write(|w| ..)` method takes [`resync_prolonged::W`](W) writer structure"]
+impl crate::Writable for ResyncProlongedSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RESYNC_PROLONGED to value 0x80"]
+impl crate::Resettable for ResyncProlongedSpec {
+    const RESET_VALUE: u32 = 0x80;
+}

@@ -1,0 +1,22 @@
+#[doc = "Register `BLK_TFR_RESUMEREQ0` writer"]
+pub type W = crate::W<BlkTfrResumereq0Spec>;
+#[doc = "Field `CH1_BLK_TFR_RESUMEREQ` writer - NA"]
+pub type Ch1BlkTfrResumereqW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn ch1_blk_tfr_resumereq(&mut self) -> Ch1BlkTfrResumereqW<'_, BlkTfrResumereq0Spec> {
+        Ch1BlkTfrResumereqW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blk_tfr_resumereq0::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BlkTfrResumereq0Spec;
+impl crate::RegisterSpec for BlkTfrResumereq0Spec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`blk_tfr_resumereq0::W`](W) writer structure"]
+impl crate::Writable for BlkTfrResumereq0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets BLK_TFR_RESUMEREQ0 to value 0"]
+impl crate::Resettable for BlkTfrResumereq0Spec {}

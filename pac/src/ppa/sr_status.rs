@@ -1,0 +1,41 @@
+#[doc = "Register `SR_STATUS` reader"]
+pub type R = crate::R<SrStatusSpec>;
+#[doc = "Field `SR_RX_DSCR_SAMPLE_STATE` reader - Reserved."]
+pub type SrRxDscrSampleStateR = crate::FieldReader;
+#[doc = "Field `SR_RX_SCAN_STATE` reader - Reserved."]
+pub type SrRxScanStateR = crate::FieldReader;
+#[doc = "Field `SR_TX_DSCR_SAMPLE_STATE` reader - Reserved."]
+pub type SrTxDscrSampleStateR = crate::FieldReader;
+#[doc = "Field `SR_TX_SCAN_STATE` reader - Reserved."]
+pub type SrTxScanStateR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:1 - Reserved."]
+    #[inline(always)]
+    pub fn sr_rx_dscr_sample_state(&self) -> SrRxDscrSampleStateR {
+        SrRxDscrSampleStateR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3 - Reserved."]
+    #[inline(always)]
+    pub fn sr_rx_scan_state(&self) -> SrRxScanStateR {
+        SrRxScanStateR::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5 - Reserved."]
+    #[inline(always)]
+    pub fn sr_tx_dscr_sample_state(&self) -> SrTxDscrSampleStateR {
+        SrTxDscrSampleStateR::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bits 6:8 - Reserved."]
+    #[inline(always)]
+    pub fn sr_tx_scan_state(&self) -> SrTxScanStateR {
+        SrTxScanStateR::new(((self.bits >> 6) & 7) as u8)
+    }
+}
+#[doc = "SR FSM register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SrStatusSpec;
+impl crate::RegisterSpec for SrStatusSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`sr_status::R`](R) reader structure"]
+impl crate::Readable for SrStatusSpec {}
+#[doc = "`reset()` method sets SR_STATUS to value 0"]
+impl crate::Resettable for SrStatusSpec {}

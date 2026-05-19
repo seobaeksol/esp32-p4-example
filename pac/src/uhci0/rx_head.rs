@@ -1,0 +1,20 @@
+#[doc = "Register `RX_HEAD` reader"]
+pub type R = crate::R<RxHeadSpec>;
+#[doc = "Field `RX_HEAD` reader - Stores the head of received packet."]
+pub type RxHeadR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Stores the head of received packet."]
+    #[inline(always)]
+    pub fn rx_head(&self) -> RxHeadR {
+        RxHeadR::new(self.bits)
+    }
+}
+#[doc = "UHCI Head Register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_head::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RxHeadSpec;
+impl crate::RegisterSpec for RxHeadSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rx_head::R`](R) reader structure"]
+impl crate::Readable for RxHeadSpec {}
+#[doc = "`reset()` method sets RX_HEAD to value 0"]
+impl crate::Resettable for RxHeadSpec {}

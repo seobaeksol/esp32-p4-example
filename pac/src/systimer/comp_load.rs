@@ -1,0 +1,22 @@
+#[doc = "Register `COMP%s_LOAD` writer"]
+pub type W = crate::W<CompLoadSpec>;
+#[doc = "Field `LOAD` writer - timer comp0 sync enable signal"]
+pub type LoadW<'a, REG> = crate::BitWriter<'a, REG>;
+impl W {
+    #[doc = "Bit 0 - timer comp0 sync enable signal"]
+    #[inline(always)]
+    pub fn load(&mut self) -> LoadW<'_, CompLoadSpec> {
+        LoadW::new(self, 0)
+    }
+}
+#[doc = "system timer comp%s conf sync register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comp_load::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CompLoadSpec;
+impl crate::RegisterSpec for CompLoadSpec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`comp_load::W`](W) writer structure"]
+impl crate::Writable for CompLoadSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets COMP%s_LOAD to value 0"]
+impl crate::Resettable for CompLoadSpec {}

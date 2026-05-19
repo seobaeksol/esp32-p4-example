@@ -1,0 +1,35 @@
+#[doc = "Register `IN_PERI` reader"]
+pub type R = crate::R<InPeriSpec>;
+#[doc = "Register `IN_PERI` writer"]
+pub type W = crate::W<InPeriSpec>;
+#[doc = "Field `RX_PRI_CH0` reader - Configures the priority of RX channel 0.The larger of the value, the higher of the priority.."]
+pub type RxPriCh0R = crate::FieldReader;
+#[doc = "Field `RX_PRI_CH0` writer - Configures the priority of RX channel 0.The larger of the value, the higher of the priority.."]
+pub type RxPriCh0W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:3 - Configures the priority of RX channel 0.The larger of the value, the higher of the priority.."]
+    #[inline(always)]
+    pub fn rx_pri_ch0(&self) -> RxPriCh0R {
+        RxPriCh0R::new((self.bits & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - Configures the priority of RX channel 0.The larger of the value, the higher of the priority.."]
+    #[inline(always)]
+    pub fn rx_pri_ch0(&mut self) -> RxPriCh0W<'_, InPeriSpec> {
+        RxPriCh0W::new(self, 0)
+    }
+}
+#[doc = "Priority register of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_peri::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_peri::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InPeriSpec;
+impl crate::RegisterSpec for InPeriSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_peri::R`](R) reader structure"]
+impl crate::Readable for InPeriSpec {}
+#[doc = "`write(|w| ..)` method takes [`in_peri::W`](W) writer structure"]
+impl crate::Writable for InPeriSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets IN_PERI to value 0"]
+impl crate::Resettable for InPeriSpec {}

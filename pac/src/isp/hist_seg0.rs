@@ -1,0 +1,79 @@
+#[doc = "Register `HIST_SEG0` reader"]
+pub type R = crate::R<HistSeg0Spec>;
+#[doc = "Register `HIST_SEG0` writer"]
+pub type W = crate::W<HistSeg0Spec>;
+#[doc = "Field `HIST_SEG_3_4` reader - this field configures threshold of histogram bin 3 and bin 4"]
+pub type HistSeg3_4R = crate::FieldReader;
+#[doc = "Field `HIST_SEG_3_4` writer - this field configures threshold of histogram bin 3 and bin 4"]
+pub type HistSeg3_4W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HIST_SEG_2_3` reader - this field configures threshold of histogram bin 2 and bin 3"]
+pub type HistSeg2_3R = crate::FieldReader;
+#[doc = "Field `HIST_SEG_2_3` writer - this field configures threshold of histogram bin 2 and bin 3"]
+pub type HistSeg2_3W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HIST_SEG_1_2` reader - this field configures threshold of histogram bin 1 and bin 2"]
+pub type HistSeg1_2R = crate::FieldReader;
+#[doc = "Field `HIST_SEG_1_2` writer - this field configures threshold of histogram bin 1 and bin 2"]
+pub type HistSeg1_2W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `HIST_SEG_0_1` reader - this field configures threshold of histogram bin 0 and bin 1"]
+pub type HistSeg0_1R = crate::FieldReader;
+#[doc = "Field `HIST_SEG_0_1` writer - this field configures threshold of histogram bin 0 and bin 1"]
+pub type HistSeg0_1W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - this field configures threshold of histogram bin 3 and bin 4"]
+    #[inline(always)]
+    pub fn hist_seg_3_4(&self) -> HistSeg3_4R {
+        HistSeg3_4R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - this field configures threshold of histogram bin 2 and bin 3"]
+    #[inline(always)]
+    pub fn hist_seg_2_3(&self) -> HistSeg2_3R {
+        HistSeg2_3R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - this field configures threshold of histogram bin 1 and bin 2"]
+    #[inline(always)]
+    pub fn hist_seg_1_2(&self) -> HistSeg1_2R {
+        HistSeg1_2R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - this field configures threshold of histogram bin 0 and bin 1"]
+    #[inline(always)]
+    pub fn hist_seg_0_1(&self) -> HistSeg0_1R {
+        HistSeg0_1R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - this field configures threshold of histogram bin 3 and bin 4"]
+    #[inline(always)]
+    pub fn hist_seg_3_4(&mut self) -> HistSeg3_4W<'_, HistSeg0Spec> {
+        HistSeg3_4W::new(self, 0)
+    }
+    #[doc = "Bits 8:15 - this field configures threshold of histogram bin 2 and bin 3"]
+    #[inline(always)]
+    pub fn hist_seg_2_3(&mut self) -> HistSeg2_3W<'_, HistSeg0Spec> {
+        HistSeg2_3W::new(self, 8)
+    }
+    #[doc = "Bits 16:23 - this field configures threshold of histogram bin 1 and bin 2"]
+    #[inline(always)]
+    pub fn hist_seg_1_2(&mut self) -> HistSeg1_2W<'_, HistSeg0Spec> {
+        HistSeg1_2W::new(self, 16)
+    }
+    #[doc = "Bits 24:31 - this field configures threshold of histogram bin 0 and bin 1"]
+    #[inline(always)]
+    pub fn hist_seg_0_1(&mut self) -> HistSeg0_1W<'_, HistSeg0Spec> {
+        HistSeg0_1W::new(self, 24)
+    }
+}
+#[doc = "histogram bin control register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`hist_seg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hist_seg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HistSeg0Spec;
+impl crate::RegisterSpec for HistSeg0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hist_seg0::R`](R) reader structure"]
+impl crate::Readable for HistSeg0Spec {}
+#[doc = "`write(|w| ..)` method takes [`hist_seg0::W`](W) writer structure"]
+impl crate::Writable for HistSeg0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HIST_SEG0 to value 0x1020_3040"]
+impl crate::Resettable for HistSeg0Spec {
+    const RESET_VALUE: u32 = 0x1020_3040;
+}

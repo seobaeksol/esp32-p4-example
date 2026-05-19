@@ -1,0 +1,42 @@
+#[doc = "Register `ACK_NUM` reader"]
+pub type R = crate::R<AckNumSpec>;
+#[doc = "Register `ACK_NUM` writer"]
+pub type W = crate::W<AckNumSpec>;
+#[doc = "Field `ACK_NUM` reader - Indicates the ACK number during software flow control."]
+pub type AckNumR = crate::FieldReader;
+#[doc = "Field `ACK_NUM` writer - Indicates the ACK number during software flow control."]
+pub type AckNumW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `LOAD` writer - Set this bit to load the ACK value of UHCI_ACK_NUM."]
+pub type LoadW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:2 - Indicates the ACK number during software flow control."]
+    #[inline(always)]
+    pub fn ack_num(&self) -> AckNumR {
+        AckNumR::new((self.bits & 7) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2 - Indicates the ACK number during software flow control."]
+    #[inline(always)]
+    pub fn ack_num(&mut self) -> AckNumW<'_, AckNumSpec> {
+        AckNumW::new(self, 0)
+    }
+    #[doc = "Bit 3 - Set this bit to load the ACK value of UHCI_ACK_NUM."]
+    #[inline(always)]
+    pub fn load(&mut self) -> LoadW<'_, AckNumSpec> {
+        LoadW::new(self, 3)
+    }
+}
+#[doc = "UHCI Ack Value Configuration Register0\n\nYou can [`read`](crate::Reg::read) this register and get [`ack_num::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ack_num::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AckNumSpec;
+impl crate::RegisterSpec for AckNumSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`ack_num::R`](R) reader structure"]
+impl crate::Readable for AckNumSpec {}
+#[doc = "`write(|w| ..)` method takes [`ack_num::W`](W) writer structure"]
+impl crate::Writable for AckNumSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ACK_NUM to value 0"]
+impl crate::Resettable for AckNumSpec {}

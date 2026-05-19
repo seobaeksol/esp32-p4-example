@@ -1,0 +1,37 @@
+#[doc = "Register `FIB_ENABLE` reader"]
+pub type R = crate::R<FibEnableSpec>;
+#[doc = "Register `FIB_ENABLE` writer"]
+pub type W = crate::W<FibEnableSpec>;
+#[doc = "Field `ANA_FIB_ENA` reader - need_des"]
+pub type AnaFibEnaR = crate::FieldReader<u32>;
+#[doc = "Field `ANA_FIB_ENA` writer - need_des"]
+pub type AnaFibEnaW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn ana_fib_ena(&self) -> AnaFibEnaR {
+        AnaFibEnaR::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - need_des"]
+    #[inline(always)]
+    pub fn ana_fib_ena(&mut self) -> AnaFibEnaW<'_, FibEnableSpec> {
+        AnaFibEnaW::new(self, 0)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`fib_enable::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fib_enable::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FibEnableSpec;
+impl crate::RegisterSpec for FibEnableSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`fib_enable::R`](R) reader structure"]
+impl crate::Readable for FibEnableSpec {}
+#[doc = "`write(|w| ..)` method takes [`fib_enable::W`](W) writer structure"]
+impl crate::Writable for FibEnableSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets FIB_ENABLE to value 0xffff_ffff"]
+impl crate::Resettable for FibEnableSpec {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

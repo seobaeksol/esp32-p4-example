@@ -1,0 +1,49 @@
+#[doc = "Register `RNG_CFG` reader"]
+pub type R = crate::R<RngCfgSpec>;
+#[doc = "Register `RNG_CFG` writer"]
+pub type W = crate::W<RngCfgSpec>;
+#[doc = "Field `RNG_SAMPLE_ENABLE` reader - reserved"]
+pub type RngSampleEnableR = crate::BitReader;
+#[doc = "Field `RNG_SAMPLE_ENABLE` writer - reserved"]
+pub type RngSampleEnableW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RNG_CHAIN_CLK_DIV_NUM` reader - chain clk div num to pad for debug"]
+pub type RngChainClkDivNumR = crate::FieldReader;
+#[doc = "Field `RNG_CHAIN_CLK_DIV_NUM` writer - chain clk div num to pad for debug"]
+pub type RngChainClkDivNumW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bit 0 - reserved"]
+    #[inline(always)]
+    pub fn rng_sample_enable(&self) -> RngSampleEnableR {
+        RngSampleEnableR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bits 16:23 - chain clk div num to pad for debug"]
+    #[inline(always)]
+    pub fn rng_chain_clk_div_num(&self) -> RngChainClkDivNumR {
+        RngChainClkDivNumR::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - reserved"]
+    #[inline(always)]
+    pub fn rng_sample_enable(&mut self) -> RngSampleEnableW<'_, RngCfgSpec> {
+        RngSampleEnableW::new(self, 0)
+    }
+    #[doc = "Bits 16:23 - chain clk div num to pad for debug"]
+    #[inline(always)]
+    pub fn rng_chain_clk_div_num(&mut self) -> RngChainClkDivNumW<'_, RngCfgSpec> {
+        RngChainClkDivNumW::new(self, 16)
+    }
+}
+#[doc = "rng cfg register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rng_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RngCfgSpec;
+impl crate::RegisterSpec for RngCfgSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`rng_cfg::R`](R) reader structure"]
+impl crate::Readable for RngCfgSpec {}
+#[doc = "`write(|w| ..)` method takes [`rng_cfg::W`](W) writer structure"]
+impl crate::Writable for RngCfgSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets RNG_CFG to value 0"]
+impl crate::Resettable for RngCfgSpec {}

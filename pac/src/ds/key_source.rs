@@ -1,0 +1,35 @@
+#[doc = "Register `KEY_SOURCE` reader"]
+pub type R = crate::R<KeySourceSpec>;
+#[doc = "Register `KEY_SOURCE` writer"]
+pub type W = crate::W<KeySourceSpec>;
+#[doc = "Field `KEY_SOURCE` reader - digital signature key source bit. \\\\ 1'b0: key is from hmac.\\\\ 1'b1: key is from key manager. \\\\"]
+pub type KeySourceR = crate::BitReader;
+#[doc = "Field `KEY_SOURCE` writer - digital signature key source bit. \\\\ 1'b0: key is from hmac.\\\\ 1'b1: key is from key manager. \\\\"]
+pub type KeySourceW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - digital signature key source bit. \\\\ 1'b0: key is from hmac.\\\\ 1'b1: key is from key manager. \\\\"]
+    #[inline(always)]
+    pub fn key_source(&self) -> KeySourceR {
+        KeySourceR::new((self.bits & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - digital signature key source bit. \\\\ 1'b0: key is from hmac.\\\\ 1'b1: key is from key manager. \\\\"]
+    #[inline(always)]
+    pub fn key_source(&mut self) -> KeySourceW<'_, KeySourceSpec> {
+        KeySourceW::new(self, 0)
+    }
+}
+#[doc = "DS configure key source register\n\nYou can [`read`](crate::Reg::read) this register and get [`key_source::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_source::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct KeySourceSpec;
+impl crate::RegisterSpec for KeySourceSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`key_source::R`](R) reader structure"]
+impl crate::Readable for KeySourceSpec {}
+#[doc = "`write(|w| ..)` method takes [`key_source::W`](W) writer structure"]
+impl crate::Writable for KeySourceSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets KEY_SOURCE to value 0"]
+impl crate::Resettable for KeySourceSpec {}

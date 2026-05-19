@@ -1,0 +1,35 @@
+#[doc = "Register `VID_VSA_LINES` reader"]
+pub type R = crate::R<VidVsaLinesSpec>;
+#[doc = "Register `VID_VSA_LINES` writer"]
+pub type W = crate::W<VidVsaLinesSpec>;
+#[doc = "Field `VSA_LINES` reader - NA"]
+pub type VsaLinesR = crate::FieldReader<u16>;
+#[doc = "Field `VSA_LINES` writer - NA"]
+pub type VsaLinesW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+impl R {
+    #[doc = "Bits 0:9 - NA"]
+    #[inline(always)]
+    pub fn vsa_lines(&self) -> VsaLinesR {
+        VsaLinesR::new((self.bits & 0x03ff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:9 - NA"]
+    #[inline(always)]
+    pub fn vsa_lines(&mut self) -> VsaLinesW<'_, VidVsaLinesSpec> {
+        VsaLinesW::new(self, 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vid_vsa_lines::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vid_vsa_lines::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VidVsaLinesSpec;
+impl crate::RegisterSpec for VidVsaLinesSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vid_vsa_lines::R`](R) reader structure"]
+impl crate::Readable for VidVsaLinesSpec {}
+#[doc = "`write(|w| ..)` method takes [`vid_vsa_lines::W`](W) writer structure"]
+impl crate::Writable for VidVsaLinesSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VID_VSA_LINES to value 0"]
+impl crate::Resettable for VidVsaLinesSpec {}

@@ -1,0 +1,20 @@
+#[doc = "Register `TCM_PARITY_INT_RECORD` reader"]
+pub type R = crate::R<TcmParityIntRecordSpec>;
+#[doc = "Field `TCM_PARITY_ERR_INT_ADDR` reader - hp tcm_parity_err_addr"]
+pub type TcmParityErrIntAddrR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:12 - hp tcm_parity_err_addr"]
+    #[inline(always)]
+    pub fn tcm_parity_err_int_addr(&self) -> TcmParityErrIntAddrR {
+        TcmParityErrIntAddrR::new((self.bits & 0x1fff) as u16)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_parity_int_record::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TcmParityIntRecordSpec;
+impl crate::RegisterSpec for TcmParityIntRecordSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`tcm_parity_int_record::R`](R) reader structure"]
+impl crate::Readable for TcmParityIntRecordSpec {}
+#[doc = "`reset()` method sets TCM_PARITY_INT_RECORD to value 0"]
+impl crate::Resettable for TcmParityIntRecordSpec {}

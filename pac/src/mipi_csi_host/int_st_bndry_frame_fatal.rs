@@ -1,0 +1,125 @@
+#[doc = "Register `INT_ST_BNDRY_FRAME_FATAL` reader"]
+pub type R = crate::R<IntStBndryFrameFatalSpec>;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC0` reader - NA"]
+pub type StErrFBndryMatchVc0R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC1` reader - NA"]
+pub type StErrFBndryMatchVc1R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC2` reader - NA"]
+pub type StErrFBndryMatchVc2R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC3` reader - NA"]
+pub type StErrFBndryMatchVc3R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC4` reader - NA"]
+pub type StErrFBndryMatchVc4R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC5` reader - NA"]
+pub type StErrFBndryMatchVc5R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC6` reader - NA"]
+pub type StErrFBndryMatchVc6R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC7` reader - NA"]
+pub type StErrFBndryMatchVc7R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC8` reader - NA"]
+pub type StErrFBndryMatchVc8R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC9` reader - NA"]
+pub type StErrFBndryMatchVc9R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC10` reader - NA"]
+pub type StErrFBndryMatchVc10R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC11` reader - NA"]
+pub type StErrFBndryMatchVc11R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC12` reader - NA"]
+pub type StErrFBndryMatchVc12R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC13` reader - NA"]
+pub type StErrFBndryMatchVc13R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC14` reader - NA"]
+pub type StErrFBndryMatchVc14R = crate::BitReader;
+#[doc = "Field `ST_ERR_F_BNDRY_MATCH_VC15` reader - NA"]
+pub type StErrFBndryMatchVc15R = crate::BitReader;
+impl R {
+    #[doc = "Bit 0 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc0(&self) -> StErrFBndryMatchVc0R {
+        StErrFBndryMatchVc0R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc1(&self) -> StErrFBndryMatchVc1R {
+        StErrFBndryMatchVc1R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc2(&self) -> StErrFBndryMatchVc2R {
+        StErrFBndryMatchVc2R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc3(&self) -> StErrFBndryMatchVc3R {
+        StErrFBndryMatchVc3R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc4(&self) -> StErrFBndryMatchVc4R {
+        StErrFBndryMatchVc4R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc5(&self) -> StErrFBndryMatchVc5R {
+        StErrFBndryMatchVc5R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc6(&self) -> StErrFBndryMatchVc6R {
+        StErrFBndryMatchVc6R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc7(&self) -> StErrFBndryMatchVc7R {
+        StErrFBndryMatchVc7R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc8(&self) -> StErrFBndryMatchVc8R {
+        StErrFBndryMatchVc8R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc9(&self) -> StErrFBndryMatchVc9R {
+        StErrFBndryMatchVc9R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc10(&self) -> StErrFBndryMatchVc10R {
+        StErrFBndryMatchVc10R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc11(&self) -> StErrFBndryMatchVc11R {
+        StErrFBndryMatchVc11R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc12(&self) -> StErrFBndryMatchVc12R {
+        StErrFBndryMatchVc12R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc13(&self) -> StErrFBndryMatchVc13R {
+        StErrFBndryMatchVc13R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc14(&self) -> StErrFBndryMatchVc14R {
+        StErrFBndryMatchVc14R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - NA"]
+    #[inline(always)]
+    pub fn st_err_f_bndry_match_vc15(&self) -> StErrFBndryMatchVc15R {
+        StErrFBndryMatchVc15R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st_bndry_frame_fatal::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IntStBndryFrameFatalSpec;
+impl crate::RegisterSpec for IntStBndryFrameFatalSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_st_bndry_frame_fatal::R`](R) reader structure"]
+impl crate::Readable for IntStBndryFrameFatalSpec {}
+#[doc = "`reset()` method sets INT_ST_BNDRY_FRAME_FATAL to value 0"]
+impl crate::Resettable for IntStBndryFrameFatalSpec {}

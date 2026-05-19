@@ -1,0 +1,20 @@
+#[doc = "Register `L1_ICACHE3_PRELOAD_SIZE` reader"]
+pub type R = crate::R<L1Icache3PreloadSizeSpec>;
+#[doc = "Field `L1_ICACHE3_PRELOAD_SIZE` reader - Those bits are used to configure the size of the first section of prelock on L1-ICache3, which should be used together with L1_ICACHE3_PRELOAD_ADDR_REG"]
+pub type L1Icache3PreloadSizeR = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-ICache3, which should be used together with L1_ICACHE3_PRELOAD_ADDR_REG"]
+    #[inline(always)]
+    pub fn l1_icache3_preload_size(&self) -> L1Icache3PreloadSizeR {
+        L1Icache3PreloadSizeR::new((self.bits & 0x3fff) as u16)
+    }
+}
+#[doc = "L1 instruction Cache 3 preload size configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache3_preload_size::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1Icache3PreloadSizeSpec;
+impl crate::RegisterSpec for L1Icache3PreloadSizeSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_icache3_preload_size::R`](R) reader structure"]
+impl crate::Readable for L1Icache3PreloadSizeSpec {}
+#[doc = "`reset()` method sets L1_ICACHE3_PRELOAD_SIZE to value 0"]
+impl crate::Resettable for L1Icache3PreloadSizeSpec {}

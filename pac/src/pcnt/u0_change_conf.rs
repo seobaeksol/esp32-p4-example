@@ -1,0 +1,49 @@
+#[doc = "Register `U0_CHANGE_CONF` reader"]
+pub type R = crate::R<U0ChangeConfSpec>;
+#[doc = "Register `U0_CHANGE_CONF` writer"]
+pub type W = crate::W<U0ChangeConfSpec>;
+#[doc = "Field `CNT_STEP_U0` reader - Configures the step value for unit 0."]
+pub type CntStepU0R = crate::FieldReader<u16>;
+#[doc = "Field `CNT_STEP_U0` writer - Configures the step value for unit 0."]
+pub type CntStepU0W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `CNT_STEP_LIM_U0` reader - Configures the step limit value for unit 0."]
+pub type CntStepLimU0R = crate::FieldReader<u16>;
+#[doc = "Field `CNT_STEP_LIM_U0` writer - Configures the step limit value for unit 0."]
+pub type CntStepLimU0W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - Configures the step value for unit 0."]
+    #[inline(always)]
+    pub fn cnt_step_u0(&self) -> CntStepU0R {
+        CntStepU0R::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:31 - Configures the step limit value for unit 0."]
+    #[inline(always)]
+    pub fn cnt_step_lim_u0(&self) -> CntStepLimU0R {
+        CntStepLimU0R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - Configures the step value for unit 0."]
+    #[inline(always)]
+    pub fn cnt_step_u0(&mut self) -> CntStepU0W<'_, U0ChangeConfSpec> {
+        CntStepU0W::new(self, 0)
+    }
+    #[doc = "Bits 16:31 - Configures the step limit value for unit 0."]
+    #[inline(always)]
+    pub fn cnt_step_lim_u0(&mut self) -> CntStepLimU0W<'_, U0ChangeConfSpec> {
+        CntStepLimU0W::new(self, 16)
+    }
+}
+#[doc = "Configuration register for unit $n's step value.\n\nYou can [`read`](crate::Reg::read) this register and get [`u0_change_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`u0_change_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct U0ChangeConfSpec;
+impl crate::RegisterSpec for U0ChangeConfSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`u0_change_conf::R`](R) reader structure"]
+impl crate::Readable for U0ChangeConfSpec {}
+#[doc = "`write(|w| ..)` method takes [`u0_change_conf::W`](W) writer structure"]
+impl crate::Writable for U0ChangeConfSpec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets U0_CHANGE_CONF to value 0"]
+impl crate::Resettable for U0ChangeConfSpec {}

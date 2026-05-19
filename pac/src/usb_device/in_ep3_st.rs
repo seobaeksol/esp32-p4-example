@@ -1,0 +1,36 @@
+#[doc = "Register `IN_EP3_ST` reader"]
+pub type R = crate::R<InEp3StSpec>;
+#[doc = "Field `IN_EP3_STATE` reader - State of IN Endpoint 3."]
+pub type InEp3StateR = crate::FieldReader;
+#[doc = "Field `IN_EP3_WR_ADDR` reader - Write data address of IN endpoint 3."]
+pub type InEp3WrAddrR = crate::FieldReader;
+#[doc = "Field `IN_EP3_RD_ADDR` reader - Read data address of IN endpoint 3."]
+pub type InEp3RdAddrR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:1 - State of IN Endpoint 3."]
+    #[inline(always)]
+    pub fn in_ep3_state(&self) -> InEp3StateR {
+        InEp3StateR::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:8 - Write data address of IN endpoint 3."]
+    #[inline(always)]
+    pub fn in_ep3_wr_addr(&self) -> InEp3WrAddrR {
+        InEp3WrAddrR::new(((self.bits >> 2) & 0x7f) as u8)
+    }
+    #[doc = "Bits 9:15 - Read data address of IN endpoint 3."]
+    #[inline(always)]
+    pub fn in_ep3_rd_addr(&self) -> InEp3RdAddrR {
+        InEp3RdAddrR::new(((self.bits >> 9) & 0x7f) as u8)
+    }
+}
+#[doc = "JTAG IN endpoint status information.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ep3_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InEp3StSpec;
+impl crate::RegisterSpec for InEp3StSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`in_ep3_st::R`](R) reader structure"]
+impl crate::Readable for InEp3StSpec {}
+#[doc = "`reset()` method sets IN_EP3_ST to value 0x01"]
+impl crate::Resettable for InEp3StSpec {
+    const RESET_VALUE: u32 = 0x01;
+}

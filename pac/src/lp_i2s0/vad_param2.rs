@@ -1,0 +1,51 @@
+#[doc = "Register `VAD_PARAM2` reader"]
+pub type R = crate::R<VadParam2Spec>;
+#[doc = "Register `VAD_PARAM2` writer"]
+pub type W = crate::W<VadParam2Spec>;
+#[doc = "Field `PARAM_NOISE_AMP_DOWN` reader - VAD parameter"]
+pub type ParamNoiseAmpDownR = crate::FieldReader<u16>;
+#[doc = "Field `PARAM_NOISE_AMP_DOWN` writer - VAD parameter"]
+pub type ParamNoiseAmpDownW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `PARAM_NOISE_AMP_UP` reader - VAD parameter"]
+pub type ParamNoiseAmpUpR = crate::FieldReader<u16>;
+#[doc = "Field `PARAM_NOISE_AMP_UP` writer - VAD parameter"]
+pub type ParamNoiseAmpUpW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_noise_amp_down(&self) -> ParamNoiseAmpDownR {
+        ParamNoiseAmpDownR::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:31 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_noise_amp_up(&self) -> ParamNoiseAmpUpR {
+        ParamNoiseAmpUpR::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_noise_amp_down(&mut self) -> ParamNoiseAmpDownW<'_, VadParam2Spec> {
+        ParamNoiseAmpDownW::new(self, 0)
+    }
+    #[doc = "Bits 16:31 - VAD parameter"]
+    #[inline(always)]
+    pub fn param_noise_amp_up(&mut self) -> ParamNoiseAmpUpW<'_, VadParam2Spec> {
+        ParamNoiseAmpUpW::new(self, 16)
+    }
+}
+#[doc = "I2S VAD Parameter register\n\nYou can [`read`](crate::Reg::read) this register and get [`vad_param2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vad_param2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct VadParam2Spec;
+impl crate::RegisterSpec for VadParam2Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`vad_param2::R`](R) reader structure"]
+impl crate::Readable for VadParam2Spec {}
+#[doc = "`write(|w| ..)` method takes [`vad_param2::W`](W) writer structure"]
+impl crate::Writable for VadParam2Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets VAD_PARAM2 to value 0x7eb8_6666"]
+impl crate::Resettable for VadParam2Spec {
+    const RESET_VALUE: u32 = 0x7eb8_6666;
+}

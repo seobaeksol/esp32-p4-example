@@ -1,0 +1,39 @@
+#[doc = "Register `INTER_MEM_END_ADDR1` reader"]
+pub type R = crate::R<InterMemEndAddr1Spec>;
+#[doc = "Register `INTER_MEM_END_ADDR1` writer"]
+pub type W = crate::W<InterMemEndAddr1Spec>;
+#[doc = "Field `ACCESS_INTER_MEM_END_ADDR1` reader - The end address of accessible address space. The access address beyond this range would lead to descriptor error."]
+pub type AccessInterMemEndAddr1R = crate::FieldReader<u32>;
+#[doc = "Field `ACCESS_INTER_MEM_END_ADDR1` writer - The end address of accessible address space. The access address beyond this range would lead to descriptor error."]
+pub type AccessInterMemEndAddr1W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - The end address of accessible address space. The access address beyond this range would lead to descriptor error."]
+    #[inline(always)]
+    pub fn access_inter_mem_end_addr1(&self) -> AccessInterMemEndAddr1R {
+        AccessInterMemEndAddr1R::new(self.bits)
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - The end address of accessible address space. The access address beyond this range would lead to descriptor error."]
+    #[inline(always)]
+    pub fn access_inter_mem_end_addr1(
+        &mut self,
+    ) -> AccessInterMemEndAddr1W<'_, InterMemEndAddr1Spec> {
+        AccessInterMemEndAddr1W::new(self, 0)
+    }
+}
+#[doc = "end address of inter memory range1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`inter_mem_end_addr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inter_mem_end_addr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct InterMemEndAddr1Spec;
+impl crate::RegisterSpec for InterMemEndAddr1Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`inter_mem_end_addr1::R`](R) reader structure"]
+impl crate::Readable for InterMemEndAddr1Spec {}
+#[doc = "`write(|w| ..)` method takes [`inter_mem_end_addr1::W`](W) writer structure"]
+impl crate::Writable for InterMemEndAddr1Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INTER_MEM_END_ADDR1 to value 0x8fff_ffff"]
+impl crate::Resettable for InterMemEndAddr1Spec {
+    const RESET_VALUE: u32 = 0x8fff_ffff;
+}

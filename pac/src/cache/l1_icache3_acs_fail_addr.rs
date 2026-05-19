@@ -1,0 +1,20 @@
+#[doc = "Register `L1_ICACHE3_ACS_FAIL_ADDR` reader"]
+pub type R = crate::R<L1Icache3AcsFailAddrSpec>;
+#[doc = "Field `L1_ICACHE3_FAIL_ADDR` reader - The register records the address of fail-access when cache3 accesses L1-ICache."]
+pub type L1Icache3FailAddrR = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - The register records the address of fail-access when cache3 accesses L1-ICache."]
+    #[inline(always)]
+    pub fn l1_icache3_fail_addr(&self) -> L1Icache3FailAddrR {
+        L1Icache3FailAddrR::new(self.bits)
+    }
+}
+#[doc = "L1-ICache0 Access Fail Address information register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache3_acs_fail_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1Icache3AcsFailAddrSpec;
+impl crate::RegisterSpec for L1Icache3AcsFailAddrSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_icache3_acs_fail_addr::R`](R) reader structure"]
+impl crate::Readable for L1Icache3AcsFailAddrSpec {}
+#[doc = "`reset()` method sets L1_ICACHE3_ACS_FAIL_ADDR to value 0"]
+impl crate::Resettable for L1Icache3AcsFailAddrSpec {}

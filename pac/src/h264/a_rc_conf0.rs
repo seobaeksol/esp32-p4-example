@@ -1,0 +1,63 @@
+#[doc = "Register `A_RC_CONF0` reader"]
+pub type R = crate::R<ARcConf0Spec>;
+#[doc = "Register `A_RC_CONF0` writer"]
+pub type W = crate::W<ARcConf0Spec>;
+#[doc = "Field `A_QP` reader - Configures video A frame level initial luma QP value."]
+pub type AQpR = crate::FieldReader;
+#[doc = "Field `A_QP` writer - Configures video A frame level initial luma QP value."]
+pub type AQpW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `A_RATE_CTRL_U` reader - Configures video A parameter U value. U = int((float) u << 8)."]
+pub type ARateCtrlUR = crate::FieldReader<u16>;
+#[doc = "Field `A_RATE_CTRL_U` writer - Configures video A parameter U value. U = int((float) u << 8)."]
+pub type ARateCtrlUW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `A_MB_RATE_CTRL_EN` reader - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
+pub type AMbRateCtrlEnR = crate::BitReader;
+#[doc = "Field `A_MB_RATE_CTRL_EN` writer - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
+pub type AMbRateCtrlEnW<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:5 - Configures video A frame level initial luma QP value."]
+    #[inline(always)]
+    pub fn a_qp(&self) -> AQpR {
+        AQpR::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bits 6:21 - Configures video A parameter U value. U = int((float) u << 8)."]
+    #[inline(always)]
+    pub fn a_rate_ctrl_u(&self) -> ARateCtrlUR {
+        ARateCtrlUR::new(((self.bits >> 6) & 0xffff) as u16)
+    }
+    #[doc = "Bit 22 - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
+    #[inline(always)]
+    pub fn a_mb_rate_ctrl_en(&self) -> AMbRateCtrlEnR {
+        AMbRateCtrlEnR::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - Configures video A frame level initial luma QP value."]
+    #[inline(always)]
+    pub fn a_qp(&mut self) -> AQpW<'_, ARcConf0Spec> {
+        AQpW::new(self, 0)
+    }
+    #[doc = "Bits 6:21 - Configures video A parameter U value. U = int((float) u << 8)."]
+    #[inline(always)]
+    pub fn a_rate_ctrl_u(&mut self) -> ARateCtrlUW<'_, ARcConf0Spec> {
+        ARateCtrlUW::new(self, 6)
+    }
+    #[doc = "Bit 22 - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
+    #[inline(always)]
+    pub fn a_mb_rate_ctrl_en(&mut self) -> AMbRateCtrlEnW<'_, ARcConf0Spec> {
+        AMbRateCtrlEnW::new(self, 22)
+    }
+}
+#[doc = "Video A rate control configuration register0.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_rc_conf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_rc_conf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ARcConf0Spec;
+impl crate::RegisterSpec for ARcConf0Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`a_rc_conf0::R`](R) reader structure"]
+impl crate::Readable for ARcConf0Spec {}
+#[doc = "`write(|w| ..)` method takes [`a_rc_conf0::W`](W) writer structure"]
+impl crate::Writable for ARcConf0Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets A_RC_CONF0 to value 0"]
+impl crate::Resettable for ARcConf0Spec {}
