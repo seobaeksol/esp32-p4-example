@@ -1,6 +1,8 @@
 #![no_std]
 #![no_main]
 
+mod esp_app_desc;
+
 // include panic handler
 use panic_halt as _;
 
