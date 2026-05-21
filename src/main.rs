@@ -31,12 +31,30 @@ fn print_uart0(uart0: &pac::uart0::RegisterBlock, msg: &str) {
     }
 }
 
+fn print_usb_serial_jtag(usb_device: &pac::usb_device::RegisterBlock, msg: &str) {
+    for chunk in msg.as_bytes().chunks(64) {
+        while !usb_device.ep1_conf().read().serial_in_ep_data_free().bit() {
+            unsafe { core::arch::asm!("nop") };
+        }
+
+        for &byte in chunk {
+            usb_device
+                .ep1()
+                .write(|w| unsafe { w.rdwr_byte().bits(byte) });
+        }
+
+        usb_device.ep1_conf().write(|w| w.wr_done().set_bit());
+    }
+}
+
 #[entry]
 fn main() -> ! {
     let dp = pac::Peripherals::take().unwrap();
     let uart0 = &dp.uart0;
+    let usb_device = &dp.usb_device;
 
     print_uart0(uart0, "ESP32-P4 Real Bare-metal Started!\r\n");
+    print_usb_serial_jtag(usb_device, "ESP32-P4 USB Serial/JTAG Started!\r\n");
     print_uart0(uart0, "Reading GPIO5 status\r\n");
 
     loop {
